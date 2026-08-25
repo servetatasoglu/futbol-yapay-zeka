@@ -48,8 +48,8 @@ BETEXPLORER_LIGLER = {
     "DED": "soccer/netherlands/eredivisie",
     "PPL": "soccer/portugal/superliga",
     "ELC": "soccer/england/championship",
-    "CL":  "soccer/europe/champions-league",
 }
+
 
 
 # ══════════════════════════════════════════════════════════════
@@ -1048,8 +1048,9 @@ def _demo_oranlar():
 
 SPORTMONKS_LIG_MAP = {
     "PL": 8, "PD": 564, "BL1": 82, "SA": 384, "FL1": 301,
-    "DED": 72, "PPL": 462, "CL": 2, "EL": 5, "TSL": 600
+    "DED": 72, "PPL": 462, "TSL": 600
 }
+
 
 def _sportmonks_oranlar(gun: int, hareket_db: dict) -> list:
     if not SPORTMONKS_API_KEY or len(SPORTMONKS_API_KEY) < 10:
