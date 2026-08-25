@@ -1,0 +1,671 @@
+{
+  "zaman": 1776699629.9740338,
+  "kaynak": "kendi_veri",
+  "takimlar": {
+    "Fulham FC": {
+      "xg": 1.286,
+      "xga": 1.39,
+      "mac": 24,
+      "lig": "PL",
+      "kaynak": "kendi_veri"
+    },
+    "Chelsea FC": {
+      "xg": 1.593,
+      "xga": 1.45,
+      "mac": 31,
+      "lig": "PL",
+      "kaynak": "kendi_veri"
+    },
+    "Arsenal FC": {
+      "xg": 1.934,
+      "xga": 0.765,
+      "mac": 33,
+      "lig": "PL",
+      "kaynak": "kendi_veri"
+    },
+    "Manchester United FC": {
+      "xg": 1.734,
+      "xga": 1.328,
+      "mac": 24,
+      "lig": "PL",
+      "kaynak": "kendi_veri"
+    },
+    "Wolverhampton Wanderers FC": {
+      "xg": 0.772,
+      "xga": 1.787,
+      "mac": 24,
+      "lig": "PL",
+      "kaynak": "kendi_veri"
+    },
+    "Liverpool FC": {
+      "xg": 1.722,
+      "xga": 1.229,
+      "mac": 33,
+      "lig": "PL",
+      "kaynak": "kendi_veri"
+    },
+    "Tottenham Hotspur FC": {
+      "xg": 1.407,
+      "xga": 1.724,
+      "mac": 31,
+      "lig": "PL",
+      "kaynak": "kendi_veri"
+    },
+    "Nottingham Forest FC": {
+      "xg": 1.148,
+      "xga": 1.29,
+      "mac": 24,
+      "lig": "PL",
+      "kaynak": "kendi_veri"
+    },
+    "Manchester City FC": {
+      "xg": 1.869,
+      "xga": 1.026,
+      "mac": 30,
+      "lig": "PL",
+      "kaynak": "kendi_veri"
+    },
+    "Aston Villa FC": {
+      "xg": 1.447,
+      "xga": 1.286,
+      "mac": 24,
+      "lig": "PL",
+      "kaynak": "kendi_veri"
+    },
+    "Crystal Palace FC": {
+      "xg": 1.163,
+      "xga": 1.205,
+      "mac": 22,
+      "lig": "PL",
+      "kaynak": "kendi_veri"
+    },
+    "Everton FC": {
+      "xg": 1.261,
+      "xga": 1.183,
+      "mac": 24,
+      "lig": "PL",
+      "kaynak": "kendi_veri"
+    },
+    "Brighton & Hove Albion FC": {
+      "xg": 1.399,
+      "xga": 1.13,
+      "mac": 24,
+      "lig": "PL",
+      "kaynak": "kendi_veri"
+    },
+    "West Ham United FC": {
+      "xg": 1.322,
+      "xga": 1.677,
+      "mac": 23,
+      "lig": "PL",
+      "kaynak": "kendi_veri"
+    },
+    "Newcastle United FC": {
+      "xg": 1.687,
+      "xga": 1.56,
+      "mac": 32,
+      "lig": "PL",
+      "kaynak": "kendi_veri"
+    },
+    "AFC Bournemouth": {
+      "xg": 1.486,
+      "xga": 1.449,
+      "mac": 24,
+      "lig": "PL",
+      "kaynak": "kendi_veri"
+    },
+    "Brentford FC": {
+      "xg": 1.46,
+      "xga": 1.293,
+      "mac": 24,
+      "lig": "PL",
+      "kaynak": "kendi_veri"
+    },
+    "Sunderland AFC": {
+      "xg": 1.092,
+      "xga": 1.274,
+      "mac": 23,
+      "lig": "PL",
+      "kaynak": "kendi_veri"
+    },
+    "Burnley FC": {
+      "xg": 1.006,
+      "xga": 2.059,
+      "mac": 23,
+      "lig": "PL",
+      "kaynak": "kendi_veri"
+    },
+    "Leeds United FC": {
+      "xg": 1.298,
+      "xga": 1.399,
+      "mac": 23,
+      "lig": "PL",
+      "kaynak": "kendi_veri"
+    },
+    "CA Osasuna": {
+      "xg": 1.289,
+      "xga": 1.246,
+      "mac": 22,
+      "lig": "PD",
+      "kaynak": "kendi_veri"
+    },
+    "Villarreal CF": {
+      "xg": 1.584,
+      "xga": 1.428,
+      "mac": 28,
+      "lig": "PD",
+      "kaynak": "kendi_veri"
+    },
+    "Real Sociedad de Fútbol": {
+      "xg": 1.627,
+      "xga": 1.593,
+      "mac": 22,
+      "lig": "PD",
+      "kaynak": "kendi_veri"
+    },
+    "Sevilla FC": {
+      "xg": 1.201,
+      "xga": 1.672,
+      "mac": 23,
+      "lig": "PD",
+      "kaynak": "kendi_veri"
+    },
+    "Deportivo Alavés": {
+      "xg": 1.189,
+      "xga": 1.533,
+      "mac": 22,
+      "lig": "PD",
+      "kaynak": "kendi_veri"
+    },
+    "Real Madrid CF": {
+      "xg": 2.158,
+      "xga": 1.145,
+      "mac": 33,
+      "lig": "PD",
+      "kaynak": "kendi_veri"
+    },
+    "Athletic Club": {
+      "xg": 1.082,
+      "xga": 1.498,
+      "mac": 27,
+      "lig": "PD",
+      "kaynak": "kendi_veri"
+    },
+    "Girona FC": {
+      "xg": 1.1,
+      "xga": 1.33,
+      "mac": 22,
+      "lig": "PD",
+      "kaynak": "kendi_veri"
+    },
+    "Real Betis Balompié": {
+      "xg": 1.443,
+      "xga": 1.259,
+      "mac": 22,
+      "lig": "PD",
+      "kaynak": "kendi_veri"
+    },
+    "Valencia CF": {
+      "xg": 1.135,
+      "xga": 1.428,
+      "mac": 22,
+      "lig": "PD",
+      "kaynak": "kendi_veri"
+    },
+    "RCD Espanyol de Barcelona": {
+      "xg": 1.142,
+      "xga": 1.654,
+      "mac": 22,
+      "lig": "PD",
+      "kaynak": "kendi_veri"
+    },
+    "FC Barcelona": {
+      "xg": 2.681,
+      "xga": 1.172,
+      "mac": 31,
+      "lig": "PD",
+      "kaynak": "kendi_veri"
+    },
+    "RCD Mallorca": {
+      "xg": 1.286,
+      "xga": 1.516,
+      "mac": 22,
+      "lig": "PD",
+      "kaynak": "kendi_veri"
+    },
+    "RC Celta de Vigo": {
+      "xg": 1.513,
+      "xga": 1.341,
+      "mac": 22,
+      "lig": "PD",
+      "kaynak": "kendi_veri"
+    },
+    "Getafe CF": {
+      "xg": 0.849,
+      "xga": 1.009,
+      "mac": 22,
+      "lig": "PD",
+      "kaynak": "kendi_veri"
+    },
+    "Club Atlético de Madrid": {
+      "xg": 1.898,
+      "xga": 1.291,
+      "mac": 33,
+      "lig": "PD",
+      "kaynak": "kendi_veri"
+    },
+    "Rayo Vallecano de Madrid": {
+      "xg": 0.939,
+      "xga": 1.22,
+      "mac": 22,
+      "lig": "PD",
+      "kaynak": "kendi_veri"
+    },
+    "Real Oviedo": {
+      "xg": 0.867,
+      "xga": 1.521,
+      "mac": 21,
+      "lig": "PD",
+      "kaynak": "kendi_veri"
+    },
+    "Levante UD": {
+      "xg": 1.108,
+      "xga": 1.552,
+      "mac": 21,
+      "lig": "PD",
+      "kaynak": "kendi_veri"
+    },
+    "Elche CF": {
+      "xg": 1.248,
+      "xga": 1.588,
+      "mac": 21,
+      "lig": "PD",
+      "kaynak": "kendi_veri"
+    },
+    "FC Augsburg": {
+      "xg": 1.229,
+      "xga": 1.771,
+      "mac": 22,
+      "lig": "BL1",
+      "kaynak": "kendi_veri"
+    },
+    "Eintracht Frankfurt": {
+      "xg": 1.628,
+      "xga": 1.94,
+      "mac": 27,
+      "lig": "BL1",
+      "kaynak": "kendi_veri"
+    },
+    "Borussia Dortmund": {
+      "xg": 2.073,
+      "xga": 1.306,
+      "mac": 29,
+      "lig": "BL1",
+      "kaynak": "kendi_veri"
+    },
+    "Borussia Mönchengladbach": {
+      "xg": 1.241,
+      "xga": 1.709,
+      "mac": 22,
+      "lig": "BL1",
+      "kaynak": "kendi_veri"
+    },
+    "FC St. Pauli 1910": {
+      "xg": 0.821,
+      "xga": 1.669,
+      "mac": 22,
+      "lig": "BL1",
+      "kaynak": "kendi_veri"
+    },
+    "Bayer 04 Leverkusen": {
+      "xg": 1.775,
+      "xga": 1.355,
+      "mac": 31,
+      "lig": "BL1",
+      "kaynak": "kendi_veri"
+    },
+    "VfB Stuttgart": {
+      "xg": 2.155,
+      "xga": 1.399,
+      "mac": 22,
+      "lig": "BL1",
+      "kaynak": "kendi_veri"
+    },
+    "1. FC Heidenheim 1846": {
+      "xg": 1.179,
+      "xga": 2.152,
+      "mac": 22,
+      "lig": "BL1",
+      "kaynak": "kendi_veri"
+    },
+    "TSG 1899 Hoffenheim": {
+      "xg": 1.949,
+      "xga": 1.549,
+      "mac": 22,
+      "lig": "BL1",
+      "kaynak": "kendi_veri"
+    },
+    "VfL Wolfsburg": {
+      "xg": 1.337,
+      "xga": 2.254,
+      "mac": 22,
+      "lig": "BL1",
+      "kaynak": "kendi_veri"
+    },
+    "SC Freiburg": {
+      "xg": 1.455,
+      "xga": 1.568,
+      "mac": 22,
+      "lig": "BL1",
+      "kaynak": "kendi_veri"
+    },
+    "FC Bayern München": {
+      "xg": 3.468,
+      "xga": 1.073,
+      "mac": 31,
+      "lig": "BL1",
+      "kaynak": "kendi_veri"
+    },
+    "1. FSV Mainz 05": {
+      "xg": 1.267,
+      "xga": 1.449,
+      "mac": 22,
+      "lig": "BL1",
+      "kaynak": "kendi_veri"
+    },
+    "RB Leipzig": {
+      "xg": 1.965,
+      "xga": 1.245,
+      "mac": 22,
+      "lig": "BL1",
+      "kaynak": "kendi_veri"
+    },
+    "1. FC Union Berlin": {
+      "xg": 1.089,
+      "xga": 1.756,
+      "mac": 22,
+      "lig": "BL1",
+      "kaynak": "kendi_veri"
+    },
+    "SV Werder Bremen": {
+      "xg": 1.163,
+      "xga": 1.678,
+      "mac": 22,
+      "lig": "BL1",
+      "kaynak": "kendi_veri"
+    },
+    "1. FC Köln": {
+      "xg": 1.447,
+      "xga": 1.724,
+      "mac": 21,
+      "lig": "BL1",
+      "kaynak": "kendi_veri"
+    },
+    "Hamburger SV": {
+      "xg": 1.128,
+      "xga": 1.631,
+      "mac": 21,
+      "lig": "BL1",
+      "kaynak": "kendi_veri"
+    },
+    "FC Internazionale Milano": {
+      "xg": 1.567,
+      "xga": 1.43,
+      "mac": 8,
+      "lig": "SA",
+      "kaynak": "kendi_veri"
+    },
+    "Atalanta BC": {
+      "xg": 1.47,
+      "xga": 1.975,
+      "mac": 10,
+      "lig": "SA",
+      "kaynak": "kendi_veri"
+    },
+    "Juventus FC": {
+      "xg": 1.816,
+      "xga": 1.547,
+      "mac": 8,
+      "lig": "SA",
+      "kaynak": "kendi_veri"
+    },
+    "SSC Napoli": {
+      "xg": 1.193,
+      "xga": 1.611,
+      "mac": 6,
+      "lig": "SA",
+      "kaynak": "kendi_veri"
+    },
+    "Paris Saint-Germain FC": {
+      "xg": 2.576,
+      "xga": 1.165,
+      "mac": 12,
+      "lig": "FL1",
+      "kaynak": "kendi_veri"
+    },
+    "AS Monaco FC": {
+      "xg": 1.254,
+      "xga": 1.904,
+      "mac": 7,
+      "lig": "FL1",
+      "kaynak": "kendi_veri"
+    },
+    "Olympique de Marseille": {
+      "xg": 1.503,
+      "xga": 1.785,
+      "mac": 6,
+      "lig": "FL1",
+      "kaynak": "kendi_veri"
+    },
+    "FC Utrecht": {
+      "xg": 1.632,
+      "xga": 1.15,
+      "mac": 21,
+      "lig": "DED",
+      "kaynak": "kendi_veri"
+    },
+    "AFC Ajax": {
+      "xg": 1.716,
+      "xga": 1.485,
+      "mac": 26,
+      "lig": "DED",
+      "kaynak": "kendi_veri"
+    },
+    "FC Groningen": {
+      "xg": 1.425,
+      "xga": 1.203,
+      "mac": 21,
+      "lig": "DED",
+      "kaynak": "kendi_veri"
+    },
+    "Heracles Almelo": {
+      "xg": 1.079,
+      "xga": 2.564,
+      "mac": 21,
+      "lig": "DED",
+      "kaynak": "kendi_veri"
+    },
+    "AZ": {
+      "xg": 1.705,
+      "xga": 1.436,
+      "mac": 21,
+      "lig": "DED",
+      "kaynak": "kendi_veri"
+    },
+    "NAC Breda": {
+      "xg": 0.968,
+      "xga": 1.725,
+      "mac": 21,
+      "lig": "DED",
+      "kaynak": "kendi_veri"
+    },
+    "FC Twente '65": {
+      "xg": 1.734,
+      "xga": 1.031,
+      "mac": 21,
+      "lig": "DED",
+      "kaynak": "kendi_veri"
+    },
+    "PSV": {
+      "xg": 2.578,
+      "xga": 1.483,
+      "mac": 26,
+      "lig": "DED",
+      "kaynak": "kendi_veri"
+    },
+    "Feyenoord Rotterdam": {
+      "xg": 1.95,
+      "xga": 1.408,
+      "mac": 21,
+      "lig": "DED",
+      "kaynak": "kendi_veri"
+    },
+    "PEC Zwolle": {
+      "xg": 1.369,
+      "xga": 1.963,
+      "mac": 21,
+      "lig": "DED",
+      "kaynak": "kendi_veri"
+    },
+    "Fortuna Sittard": {
+      "xg": 1.417,
+      "xga": 1.831,
+      "mac": 21,
+      "lig": "DED",
+      "kaynak": "kendi_veri"
+    },
+    "Sparta Rotterdam": {
+      "xg": 1.138,
+      "xga": 1.522,
+      "mac": 21,
+      "lig": "DED",
+      "kaynak": "kendi_veri"
+    },
+    "SC Heerenveen": {
+      "xg": 1.788,
+      "xga": 1.648,
+      "mac": 21,
+      "lig": "DED",
+      "kaynak": "kendi_veri"
+    },
+    "NEC": {
+      "xg": 2.292,
+      "xga": 1.519,
+      "mac": 21,
+      "lig": "DED",
+      "kaynak": "kendi_veri"
+    },
+    "Go Ahead Eagles": {
+      "xg": 1.667,
+      "xga": 1.44,
+      "mac": 21,
+      "lig": "DED",
+      "kaynak": "kendi_veri"
+    },
+    "SBV Excelsior": {
+      "xg": 1.053,
+      "xga": 1.651,
+      "mac": 20,
+      "lig": "DED",
+      "kaynak": "kendi_veri"
+    },
+    "FC Volendam": {
+      "xg": 0.983,
+      "xga": 1.648,
+      "mac": 20,
+      "lig": "DED",
+      "kaynak": "kendi_veri"
+    },
+    "Telstar 1963": {
+      "xg": 1.339,
+      "xga": 1.75,
+      "mac": 20,
+      "lig": "DED",
+      "kaynak": "kendi_veri"
+    },
+    "Sport Lisboa e Benfica": {
+      "xg": 1.281,
+      "xga": 1.394,
+      "mac": 7,
+      "lig": "PPL",
+      "kaynak": "kendi_veri"
+    },
+    "Sporting Clube de Portugal": {
+      "xg": 1.795,
+      "xga": 1.156,
+      "mac": 10,
+      "lig": "PPL",
+      "kaynak": "kendi_veri"
+    },
+    "Royale Union Saint-Gilloise": {
+      "xg": 0.953,
+      "xga": 2.005,
+      "mac": 5,
+      "lig": "CL",
+      "kaynak": "kendi_veri"
+    },
+    "Qarabağ Ağdam FK": {
+      "xg": 1.548,
+      "xga": 3.247,
+      "mac": 7,
+      "lig": "CL",
+      "kaynak": "kendi_veri"
+    },
+    "SK Slavia Praha": {
+      "xg": 0.659,
+      "xga": 2.508,
+      "mac": 5,
+      "lig": "CL",
+      "kaynak": "kendi_veri"
+    },
+    "FK Bodø/Glimt": {
+      "xg": 1.88,
+      "xga": 1.796,
+      "mac": 8,
+      "lig": "CL",
+      "kaynak": "kendi_veri"
+    },
+    "PAE Olympiakos SFP": {
+      "xg": 1.026,
+      "xga": 1.483,
+      "mac": 7,
+      "lig": "CL",
+      "kaynak": "kendi_veri"
+    },
+    "Paphos FC": {
+      "xg": 1.113,
+      "xga": 1.341,
+      "mac": 5,
+      "lig": "CL",
+      "kaynak": "kendi_veri"
+    },
+    "FC København": {
+      "xg": 1.513,
+      "xga": 2.618,
+      "mac": 5,
+      "lig": "CL",
+      "kaynak": "kendi_veri"
+    },
+    "Club Brugge KV": {
+      "xg": 1.945,
+      "xga": 2.409,
+      "mac": 7,
+      "lig": "CL",
+      "kaynak": "kendi_veri"
+    },
+    "Galatasaray SK": {
+      "xg": 1.412,
+      "xga": 1.707,
+      "mac": 8,
+      "lig": "CL",
+      "kaynak": "kendi_veri"
+    },
+    "FK Kairat": {
+      "xg": 0.944,
+      "xga": 2.731,
+      "mac": 5,
+      "lig": "CL",
+      "kaynak": "kendi_veri"
+    }
+  }
+}

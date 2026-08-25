@@ -1,0 +1,14 @@
+{
+  "FL1": {
+    "accuracy": 0.4839,
+    "n": 31,
+    "faktor": 0.8631,
+    "guvenilir": false
+  },
+  "DED": {
+    "accuracy": 0.6286,
+    "n": 35,
+    "faktor": 1.1212,
+    "guvenilir": false
+  }
+}

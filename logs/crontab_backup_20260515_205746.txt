@@ -1,0 +1,1 @@
+0 2 * * * cd '/Users/servet/Desktop/claod futbol' && /opt/homebrew/bin/python3 -m data.collectors.daily_sync >> logs/daily_sync.log 2>&1

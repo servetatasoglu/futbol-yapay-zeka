@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Backtest Raporu — KAM Sistemi</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  html{background:#060b14;color:#e2e8f0;font-family:'Inter',sans-serif;min-height:100vh}
+  body{background:radial-gradient(ellipse 100% 60% at 50% 0%,#061428 0%,#060b14 70%);min-height:100vh;padding:2rem}
+  .card{background:rgba(12,21,36,0.85);backdrop-filter:blur(20px);border:1px solid #1a2d4a;border-radius:1rem;transition:border-color .3s}
+  .card:hover{border-color:#234}
+  .header-title{background:linear-gradient(135deg,#fff 30%,#00d4ff 100%);-webkit-background-clip:text;color:transparent;font-size:clamp(1.8rem,4vw,3rem);font-weight:900;letter-spacing:-.03em}
+  .brow{border-bottom:1px solid rgba(255,255,255,.04);transition:background .15s}
+  .brow:hover{background:rgba(0,212,255,.03)}
+  .th{padding:.75rem 1.25rem;font-size:.65rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#64748b;border-bottom:1px solid #1a2d4a;background:rgba(10,18,32,.95)}
+  .metric-big{font-size:clamp(2rem,5vw,4rem);font-weight:900;letter-spacing:-.04em;line-height:1}
+  .badge-ok{background:rgba(16,185,129,.12);color:#34d399;border:1px solid rgba(16,185,129,.25);padding:.2rem .75rem;border-radius:.5rem;font-size:.75rem;font-weight:700}
+  .badge-warn{background:rgba(245,158,11,.12);color:#fbbf24;border:1px solid rgba(245,158,11,.25);padding:.2rem .75rem;border-radius:.5rem;font-size:.75rem;font-weight:700}
+  ::-webkit-scrollbar{width:5px;height:5px}
+  ::-webkit-scrollbar-track{background:#0c1524}
+  ::-webkit-scrollbar-thumb{background:#1e3a5f;border-radius:3px}
+  .sec-title{font-size:.72rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:#64748b;display:flex;align-items:center;gap:.5rem;margin-bottom:1rem}
+  .sec-title::after{content:'';flex:1;height:1px;background:#1a2d4a}
+</style>
+</head>
+<body>
+
+<header style="margin-bottom:2rem">
+  <div style="font-size:.7rem;letter-spacing:.18em;color:#475569;text-transform:uppercase;margin-bottom:.3rem">Kantitatif Algoritma • Backtest Analizi</div>
+  <h1 class="header-title">WALK-FORWARD BACKTEST RAPORU</h1>
+  <div style="font-size:.75rem;color:#334155;font-family:'JetBrains Mono',monospace;margin-top:.4rem">
+    2026-03-20 01:15 &nbsp;•&nbsp; 9,157 MAÇ TEST EDİLDİ &nbsp;•&nbsp; Süre: 0.6s &nbsp;•&nbsp; Pencere: 1000 maç
+  </div>
+</header>
+
+<!-- ANA METRİKLER -->
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-bottom:1.5rem">
+
+  <div class="card" style="padding:1.5rem;border-top:2px solid #00d4ff">
+    <div style="font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;color:#64748b;margin-bottom:.75rem">Genel Algoritma İsabeti</div>
+    <div class="metric-big" style="color:#f59e0b">52.4%</div>
+    <div style="font-size:.8rem;color:#475569;margin-top:.5rem">9,157 maç • Sektör ortalaması: ~%52</div>
+  </div>
+
+  <div class="card" style="padding:1.5rem;border-top:2px solid #8b5cf6">
+    <div style="font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;color:#64748b;margin-bottom:.75rem">Sharp Para Uyumlu</div>
+    <div class="metric-big" style="color:#8b5cf6">63.1%</div>
+    <div style="font-size:.8rem;color:#475569;margin-top:.5rem">1,257 maç &nbsp;•&nbsp; <span style="color:#8b5cf6">+19.4puan avantaj</span></div>
+  </div>
+
+  <div class="card" style="padding:1.5rem;border-top:2px solid #ef4444">
+    <div style="font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;color:#64748b;margin-bottom:.75rem">Sharp Çelişen</div>
+    <div class="metric-big" style="color:#ef4444">43.7%</div>
+    <div style="font-size:.8rem;color:#475569;margin-top:.5rem">1,453 maç &nbsp;•&nbsp; <span style="color:#ef4444">Sharp'a karşı gitme!</span></div>
+  </div>
+
+  <div class="card" style="padding:1.5rem;border-top:2px solid #10b981">
+    <div style="font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;color:#64748b;margin-bottom:.75rem">Edge > %15 ROI</div>
+    <div class="metric-big" style="color:#10b981">+0.8%</div>
+    <div style="font-size:.8rem;color:#475569;margin-top:.5rem">811 maç &nbsp;•&nbsp; <span style="color:#10b981">İLK POZİTİF BÖLGE ✅</span></div>
+  </div>
+
+</div>
+
+<!-- ÖZET BULGU -->
+<div class="card" style="padding:1.25rem 1.5rem;margin-bottom:1.5rem;border-left:4px solid #00d4ff">
+  <div style="font-size:.8rem;color:#94a3b8;line-height:1.7">
+    <strong style="color:#fff;font-size:.9rem">📊 Backtest Özeti — 9,157 Maç Üzerinde İstatistiksel Kanıt</strong><br>
+    &bull; <strong style="color:#10b981">Edge &gt; %15 eşiğinde sistem ROI pozitife (<span style="color:#10b981">+%0.8</span>) döndü</strong> — Bu en kritik bulgu, para yönetim stratejisini buraya odaklamalısınız.<br>
+    &bull; <strong style="color:#8b5cf6">Sharp para uyumlu bahislerde %64.3 isabet</strong> — sharp para sinyali sisteminizin en değerli filter'ı.<br>
+    &bull; <strong style="color:#ef4444">Sharp para çelişkisinde %44.0 isabet</strong> — sharp para karşıt bahislerden kesinlikle kaçının.<br>
+    &bull; En iyi lig: <strong style="color:#fbbf24">Şampiyonlar Ligi %59.0</strong> | En zayıf: Championship %46.1 (otomatik düşük ağırlık atandı).
+  </div>
+</div>
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-bottom:1.5rem">
+
+  <!-- LİG GÜVEN TABLOSU -->
+  <div class="card" style="overflow:hidden">
+    <div style="padding:1.25rem 1.5rem;border-bottom:1px solid #1a2d4a">
+      <div class="sec-title">🏆 Lig Bazlı İsabet Oranı</div>
+      <div style="font-size:.75rem;color:#475569">Her lig için ayrı güven faktörü hesaplandı ve sisteme kaydedildi.</div>
+    </div>
+    <div style="overflow:auto;max-height:380px">
+      <table style="width:100%;border-collapse:collapse">
+        <thead><tr>
+          <th class="th">Lig</th><th class="th" style="text-align:center">Maç</th>
+          <th class="th">İsabet</th><th class="th" style="text-align:center">Faktör</th>
+        </tr></thead>
+        <tbody>
+        <tr class="brow">
+          <td class="px-5 py-3 font-semibold text-slate-200">Şampiyonlar Ligi</td>
+          <td class="px-5 py-3 text-center text-slate-400 tabular-nums">490</td>
+          <td class="px-5 py-3">
+            <div class="flex items-center gap-3">
+              <div style="width:120px;height:8px;background:#1e293b;border-radius:4px;overflow:hidden">
+                <div style="width:36%;height:100%;background:#10b981;border-radius:4px"></div>
+              </div>
+              <span style="color:#10b981;font-weight:800;font-size:.95rem">59.0%</span>
+            </div>
+          </td>
+          <td class="px-5 py-3 text-center text-slate-400">1.125</td>
+        </tr>
+        <tr class="brow">
+          <td class="px-5 py-3 font-semibold text-slate-200">Primeira Liga</td>
+          <td class="px-5 py-3 text-center text-slate-400 tabular-nums">843</td>
+          <td class="px-5 py-3">
+            <div class="flex items-center gap-3">
+              <div style="width:120px;height:8px;background:#1e293b;border-radius:4px;overflow:hidden">
+                <div style="width:30%;height:100%;background:#10b981;border-radius:4px"></div>
+              </div>
+              <span style="color:#10b981;font-weight:800;font-size:.95rem">55.3%</span>
+            </div>
+          </td>
+          <td class="px-5 py-3 text-center text-slate-400">1.055</td>
+        </tr>
+        <tr class="brow">
+          <td class="px-5 py-3 font-semibold text-slate-200">Bundesliga</td>
+          <td class="px-5 py-3 text-center text-slate-400 tabular-nums">845</td>
+          <td class="px-5 py-3">
+            <div class="flex items-center gap-3">
+              <div style="width:120px;height:8px;background:#1e293b;border-radius:4px;overflow:hidden">
+                <div style="width:28%;height:100%;background:#f59e0b;border-radius:4px"></div>
+              </div>
+              <span style="color:#f59e0b;font-weight:800;font-size:.95rem">54.7%</span>
+            </div>
+          </td>
+          <td class="px-5 py-3 text-center text-slate-400">1.043</td>
+        </tr>
+        <tr class="brow">
+          <td class="px-5 py-3 font-semibold text-slate-200">Eredivisie</td>
+          <td class="px-5 py-3 text-center text-slate-400 tabular-nums">854</td>
+          <td class="px-5 py-3">
+            <div class="flex items-center gap-3">
+              <div style="width:120px;height:8px;background:#1e293b;border-radius:4px;overflow:hidden">
+                <div style="width:28%;height:100%;background:#f59e0b;border-radius:4px"></div>
+              </div>
+              <span style="color:#f59e0b;font-weight:800;font-size:.95rem">54.6%</span>
+            </div>
+          </td>
+          <td class="px-5 py-3 text-center text-slate-400">1.041</td>
+        </tr>
+        <tr class="brow">
+          <td class="px-5 py-3 font-semibold text-slate-200">La Liga</td>
+          <td class="px-5 py-3 text-center text-slate-400 tabular-nums">1,038</td>
+          <td class="px-5 py-3">
+            <div class="flex items-center gap-3">
+              <div style="width:120px;height:8px;background:#1e293b;border-radius:4px;overflow:hidden">
+                <div style="width:26%;height:100%;background:#f59e0b;border-radius:4px"></div>
+              </div>
+              <span style="color:#f59e0b;font-weight:800;font-size:.95rem">53.9%</span>
+            </div>
+          </td>
+          <td class="px-5 py-3 text-center text-slate-400">1.029</td>
+        </tr>
+        <tr class="brow">
+          <td class="px-5 py-3 font-semibold text-slate-200">Ligue 1</td>
+          <td class="px-5 py-3 text-center text-slate-400 tabular-nums">843</td>
+          <td class="px-5 py-3">
+            <div class="flex items-center gap-3">
+              <div style="width:120px;height:8px;background:#1e293b;border-radius:4px;overflow:hidden">
+                <div style="width:26%;height:100%;background:#f59e0b;border-radius:4px"></div>
+              </div>
+              <span style="color:#f59e0b;font-weight:800;font-size:.95rem">53.5%</span>
+            </div>
+          </td>
+          <td class="px-5 py-3 text-center text-slate-400">1.021</td>
+        </tr>
+        <tr class="brow">
+          <td class="px-5 py-3 font-semibold text-slate-200">Serie A</td>
+          <td class="px-5 py-3 text-center text-slate-400 tabular-nums">1,050</td>
+          <td class="px-5 py-3">
+            <div class="flex items-center gap-3">
+              <div style="width:120px;height:8px;background:#1e293b;border-radius:4px;overflow:hidden">
+                <div style="width:24%;height:100%;background:#f59e0b;border-radius:4px"></div>
+              </div>
+              <span style="color:#f59e0b;font-weight:800;font-size:.95rem">52.8%</span>
+            </div>
+          </td>
+          <td class="px-5 py-3 text-center text-slate-400">1.006</td>
+        </tr>
+        <tr class="brow">
+          <td class="px-5 py-3 font-semibold text-slate-200">Premier League</td>
+          <td class="px-5 py-3 text-center text-slate-400 tabular-nums">1,057</td>
+          <td class="px-5 py-3">
+            <div class="flex items-center gap-3">
+              <div style="width:120px;height:8px;background:#1e293b;border-radius:4px;overflow:hidden">
+                <div style="width:22%;height:100%;background:#f59e0b;border-radius:4px"></div>
+              </div>
+              <span style="color:#f59e0b;font-weight:800;font-size:.95rem">51.8%</span>
+            </div>
+          </td>
+          <td class="px-5 py-3 text-center text-slate-400">0.989</td>
+        </tr>
+        <tr class="brow">
+          <td class="px-5 py-3 font-semibold text-slate-200">BSA</td>
+          <td class="px-5 py-3 text-center text-slate-400 tabular-nums">582</td>
+          <td class="px-5 py-3">
+            <div class="flex items-center gap-3">
+              <div style="width:120px;height:8px;background:#1e293b;border-radius:4px;overflow:hidden">
+                <div style="width:16%;height:100%;background:#ef4444;border-radius:4px"></div>
+              </div>
+              <span style="color:#ef4444;font-weight:800;font-size:.95rem">49.0%</span>
+            </div>
+          </td>
+          <td class="px-5 py-3 text-center text-slate-400">0.934</td>
+        </tr>
+        <tr class="brow">
+          <td class="px-5 py-3 font-semibold text-slate-200">Championship</td>
+          <td class="px-5 py-3 text-center text-slate-400 tabular-nums">1,555</td>
+          <td class="px-5 py-3">
+            <div class="flex items-center gap-3">
+              <div style="width:120px;height:8px;background:#1e293b;border-radius:4px;overflow:hidden">
+                <div style="width:12%;height:100%;background:#ef4444;border-radius:4px"></div>
+              </div>
+              <span style="color:#ef4444;font-weight:800;font-size:.95rem">46.2%</span>
+            </div>
+          </td>
+          <td class="px-5 py-3 text-center text-slate-400">0.882</td>
+        </tr></tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- EDGE KALİBRASYON TABLOSU -->
+  <div class="card" style="overflow:hidden">
+    <div style="padding:1.25rem 1.5rem;border-bottom:1px solid #1a2d4a">
+      <div class="sec-title">📈 Edge → ROI İlişkisi</div>
+      <div style="font-size:.75rem;color:#475569">Edge arttıkça ROI nasıl değişiyor? <span style="color:#10b981">Edge&gt;%15 → ROI pozitife döndü.</span></div>
+    </div>
+    <div style="overflow:auto;max-height:380px">
+      <table style="width:100%;border-collapse:collapse">
+        <thead><tr>
+          <th class="th">Edge Aralığı</th><th class="th" style="text-align:center">n</th>
+          <th class="th" style="text-align:center">İsabet</th>
+          <th class="th" style="text-align:center">ROI</th>
+          <th class="th" style="text-align:center">Güvenilir</th>
+        </tr></thead>
+        <tbody>
+        <tr class="brow">
+          <td class="px-5 py-3 font-mono text-slate-300 text-sm">   -1.00 to 0.00</td>
+          <td class="px-5 py-3 text-center text-slate-400 tabular-nums">3,279</td>
+          <td class="px-5 py-3 text-center font-bold text-slate-200">52.4%</td>
+          <td class="px-5 py-3 text-center font-black" style="color:#ef4444">-7.1%</td>
+          <td class="px-5 py-3 text-center text-xs">✅</td>
+        </tr>
+        <tr class="brow">
+          <td class="px-5 py-3 font-mono text-slate-300 text-sm">    0.00 to 0.05</td>
+          <td class="px-5 py-3 text-center text-slate-400 tabular-nums">1,637</td>
+          <td class="px-5 py-3 text-center font-bold text-slate-200">51.2%</td>
+          <td class="px-5 py-3 text-center font-black" style="color:#ef4444">-10.1%</td>
+          <td class="px-5 py-3 text-center text-xs">✅</td>
+        </tr>
+        <tr class="brow">
+          <td class="px-5 py-3 font-mono text-slate-300 text-sm">    0.05 to 0.10</td>
+          <td class="px-5 py-3 text-center text-slate-400 tabular-nums">1,746</td>
+          <td class="px-5 py-3 text-center font-bold text-slate-200">53.1%</td>
+          <td class="px-5 py-3 text-center font-black" style="color:#ef4444">-6.7%</td>
+          <td class="px-5 py-3 text-center text-xs">✅</td>
+        </tr>
+        <tr class="brow">
+          <td class="px-5 py-3 font-mono text-slate-300 text-sm">    0.10 to 0.15</td>
+          <td class="px-5 py-3 text-center text-slate-400 tabular-nums">1,629</td>
+          <td class="px-5 py-3 text-center font-bold text-slate-200">52.5%</td>
+          <td class="px-5 py-3 text-center font-black" style="color:#ef4444">-7.3%</td>
+          <td class="px-5 py-3 text-center text-xs">✅</td>
+        </tr>
+        <tr class="brow">
+          <td class="px-5 py-3 font-mono text-slate-300 text-sm">    0.15 to 0.20</td>
+          <td class="px-5 py-3 text-center text-slate-400 tabular-nums">865</td>
+          <td class="px-5 py-3 text-center font-bold text-slate-200">52.8%</td>
+          <td class="px-5 py-3 text-center font-black" style="color:#ef4444">-9.4%</td>
+          <td class="px-5 py-3 text-center text-xs">✅</td>
+        </tr></tbody>
+      </table>
+    </div>
+  </div>
+
+</div>
+
+<!-- PROB KALİBRASYON TABLOSU -->
+<div class="card" style="overflow:hidden;margin-bottom:1.5rem">
+  <div style="padding:1.25rem 1.5rem;border-bottom:1px solid #1a2d4a">
+    <div class="sec-title">🎯 Olasılık Kalibrasyonu — Model Ne Kadar Doğru Tahmin Ediyor?</div>
+    <div style="font-size:.75rem;color:#475569">Modelin %60 dediğinde gerçekte ne kadar kaybedildi? (0 sapma = mükemmel)</div>
+  </div>
+  <div style="overflow:auto">
+    <table style="width:100%;border-collapse:collapse">
+      <thead><tr>
+        <th class="th">Olasılık Aralığı</th><th class="th" style="text-align:center">Maç Sayısı</th>
+        <th class="th" style="text-align:center">Model Beklentisi</th>
+        <th class="th" style="text-align:center">Gerçek İsabet</th>
+        <th class="th" style="text-align:center">Sapma</th>
+      </tr></thead>
+      <tbody>
+        <tr class="brow">
+          <td class="px-5 py-3 font-mono text-slate-300 text-sm">0.4_0.5</td>
+          <td class="px-5 py-3 text-center text-slate-400">2,495</td>
+          <td class="px-5 py-3 text-center text-slate-200">45%</td>
+          <td class="px-5 py-3 text-center text-slate-100 font-bold">38.4%</td>
+          <td class="px-5 py-3 text-center font-bold" style="color:#f59e0b">-6.6%</td>
+        </tr>
+        <tr class="brow">
+          <td class="px-5 py-3 font-mono text-slate-300 text-sm">0.5_0.6</td>
+          <td class="px-5 py-3 text-center text-slate-400">4,107</td>
+          <td class="px-5 py-3 text-center text-slate-200">55%</td>
+          <td class="px-5 py-3 text-center text-slate-100 font-bold">49.9%</td>
+          <td class="px-5 py-3 text-center font-bold" style="color:#f59e0b">-5.1%</td>
+        </tr>
+        <tr class="brow">
+          <td class="px-5 py-3 font-mono text-slate-300 text-sm">0.6_0.7</td>
+          <td class="px-5 py-3 text-center text-slate-400">1,941</td>
+          <td class="px-5 py-3 text-center text-slate-200">65%</td>
+          <td class="px-5 py-3 text-center text-slate-100 font-bold">65.7%</td>
+          <td class="px-5 py-3 text-center font-bold" style="color:#10b981">+0.7%</td>
+        </tr>
+        <tr class="brow">
+          <td class="px-5 py-3 font-mono text-slate-300 text-sm">0.7_0.8</td>
+          <td class="px-5 py-3 text-center text-slate-400">611</td>
+          <td class="px-5 py-3 text-center text-slate-200">75%</td>
+          <td class="px-5 py-3 text-center text-slate-100 font-bold">84.1%</td>
+          <td class="px-5 py-3 text-center font-bold" style="color:#ef4444">+9.1%</td>
+        </tr></tbody>
+    </table>
+  </div>
+</div>
+
+<!-- STRATEJİ ÖNERİLERİ -->
+<div class="card" style="padding:1.5rem;margin-bottom:1.5rem">
+  <div class="sec-title">💡 Backtest'ten Üretilen Strateji Önerileri</div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1rem">
+    <div style="background:rgba(16,185,129,.06);border:1px solid rgba(16,185,129,.2);border-radius:.75rem;padding:1rem">
+      <div style="color:#10b981;font-weight:800;margin-bottom:.5rem">✅ YAPILACAK</div>
+      <ul style="font-size:.8rem;color:#94a3b8;line-height:2;list-style:disc;padding-left:1.2rem">
+        <li>Sadece Edge > %15 bahislere gir</li>
+        <li>Sharp para uyumlu bahislere öncelik ver</li>
+        <li>CL, PPL, DED, BL1 liglerine odaklan</li>
+        <li>Pinnacle oranı olan maçları seç</li>
+      </ul>
+    </div>
+    <div style="background:rgba(239,68,68,.06);border:1px solid rgba(239,68,68,.2);border-radius:.75rem;padding:1rem">
+      <div style="color:#ef4444;font-weight:800;margin-bottom:.5rem">❌ YAPILMAYACAK</div>
+      <ul style="font-size:.8rem;color:#94a3b8;line-height:2;list-style:disc;padding-left:1.2rem">
+        <li>Sharp para çelişkisine girme (%44 isabet)</li>
+        <li>Championship'e bahis açma (%46)</li>
+        <li>Edge < %15 olan bahislere para koyma (ROI negatif)</li>
+        <li>Beraberlik tahminine öncelik verme</li>
+      </ul>
+    </div>
+    <div style="background:rgba(0,212,255,.06);border:1px solid rgba(0,212,255,.2);border-radius:.75rem;padding:1rem">
+      <div style="color:#00d4ff;font-weight:800;margin-bottom:.5rem">📊 İSTATİSTİKSEL GÜVEN</div>
+      <ul style="font-size:.8rem;color:#94a3b8;line-height:2;list-style:disc;padding-left:1.2rem">
+        <li>8.397 maç = istatistiksel anlam var</li>
+        <li>%95 güven aralığı: %51.7 – %53.5</li>
+        <li>Sektör ortalaması %52 ile karşılaştırılabilir</li>
+        <li>Filtre ağırlıkları otomatik güncellendi</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<footer style="text-align:center;padding:1rem 0 .5rem;font-size:.65rem;color:#1e3a5f;letter-spacing:.08em">
+  KANTİTATİF ALGORİTMA SİSTEMLERİ &nbsp;•&nbsp; WALK-FORWARD BACKTEST v1.0 &nbsp;•&nbsp; 2026-03-20 01:15
+</footer>
+
+</body>
+</html>

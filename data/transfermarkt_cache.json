@@ -1,0 +1,3432 @@
+{
+  "kadro_Bournemouth_Manchester Unit": {
+    "zaman": 1773844879.529613,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Brighton and Ho_Liverpool": {
+    "zaman": 1773844913.530696,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Fulham_Burnley": {
+    "zaman": 1773844925.2083101,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Everton_Chelsea": {
+    "zaman": 1773844957.256243,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Leeds United_Brentford": {
+    "zaman": 1773844984.7686741,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Newcastle Unite_Sunderland": {
+    "zaman": 1773845007.539793,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Aston Villa_West Ham United": {
+    "zaman": 1773845034.374381,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Tottenham Hotsp_Nottingham Fore": {
+    "zaman": 1774047246.767943,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Villarreal_Real Sociedad": {
+    "zaman": 1773845088.563188,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Elche CF_Mallorca": {
+    "zaman": 1773845100.3780239,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Espanyol_Getafe": {
+    "zaman": 1773845114.035429,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_CA Osasuna_Girona": {
+    "zaman": 1773845119.257287,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Levante_Oviedo": {
+    "zaman": 1773845125.891273,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Sevilla_Valencia": {
+    "zaman": 1773845131.1410089,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Barcelona_Rayo Vallecano": {
+    "zaman": 1773847132.136081,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Celta Vigo_Alavés": {
+    "zaman": 1773847133.798947,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Athletic Bilbao_Real Betis": {
+    "zaman": 1773847134.6930728,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Real Madrid_Atlético Madrid": {
+    "zaman": 1773847135.6659682,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_RB Leipzig_TSG Hoffenheim": {
+    "zaman": 1773859408.9531431,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_1. FC Heidenhei_Bayer Leverkuse": {
+    "zaman": 1773859419.839709,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_1. FC Köln_Borussia Monche": {
+    "zaman": 1773859436.946214,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Bayern Munich_Union Berlin": {
+    "zaman": 1773859441.8514502,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_VfL Wolfsburg_Werder Bremen": {
+    "zaman": 1773859461.046011,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Borussia Dortmu_Hamburger SV": {
+    "zaman": 1773943002.295667,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_FSV Mainz 05_Eintracht Frank": {
+    "zaman": 1773859468.776424,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_FC St. Pauli_SC Freiburg": {
+    "zaman": 1773859472.140623,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Augsburg_VfB Stuttgart": {
+    "zaman": 1773859484.870519,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Cagliari_Napoli": {
+    "zaman": 1773859488.83148,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Genoa_Udinese": {
+    "zaman": 1773859504.60665,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Parma_Cremonese": {
+    "zaman": 1773859508.4678028,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_AC Milan_Torino": {
+    "zaman": 1773859512.402465,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Juventus_Sassuolo": {
+    "zaman": 1773859519.607755,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Como_Pisa": {
+    "zaman": 1773859523.786473,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Atalanta BC_Hellas Verona": {
+    "zaman": 1773859526.609047,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Bologna_Lazio": {
+    "zaman": 1773859532.058701,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_AS Roma_Lecce": {
+    "zaman": 1773859540.780027,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Fiorentina_Inter Milan": {
+    "zaman": 1773859547.380779,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_RC Lens_Angers": {
+    "zaman": 1773859550.8978891,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Toulouse_Lorient": {
+    "zaman": 1773859554.333097,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Auxerre_Brest": {
+    "zaman": 1773859563.348845,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Nice_Paris Saint Ger": {
+    "zaman": 1773859571.023961,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Lyon_AS Monaco": {
+    "zaman": 1773859574.650723,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Paris FC_Le Havre": {
+    "zaman": 1773859586.8874292,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Marseille_Lille": {
+    "zaman": 1773859598.3412611,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Rennes_Metz": {
+    "zaman": 1773859602.912137,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Nantes_Strasbourg": {
+    "zaman": 1773859606.747683,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Heracles Almelo_Excelsior": {
+    "zaman": 1773859618.404162,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Fortuna Sittard_FC Twente Ensch": {
+    "zaman": 1773859627.657383,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Sparta Rotterda_FC Volendam": {
+    "zaman": 1773943123.3558679,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_FC Zwolle_NAC Breda": {
+    "zaman": 1773859647.344855,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_NEC Nijmegen_Heerenveen": {
+    "zaman": 1773859648.207252,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Feyenoord_Ajax": {
+    "zaman": 1773859648.813188,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_FC Utrecht_Go Ahead Eagles": {
+    "zaman": 1773943143.4877188,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Groningen_AZ Alkmaar": {
+    "zaman": 1773859649.8866649,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_SC Telstar_PSV Eindhoven": {
+    "zaman": 1773859650.427062,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_CF Estrela_Casa Pia": {
+    "zaman": 1773859664.0558422,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Moreirense FC_Arouca": {
+    "zaman": 1773859666.0279849,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Famalicão_Nacional": {
+    "zaman": 1773859675.7559009,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Benfica_Vitória SC": {
+    "zaman": 1773859681.6090271,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Santa Clara_Gil Vicente": {
+    "zaman": 1773859683.914786,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Tondela_AVS Futebol SAD": {
+    "zaman": 1773859689.1994429,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Estoril_Rio Ave FC": {
+    "zaman": 1773859693.3024352,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Alverca_Sporting Lisbon": {
+    "zaman": 1773859707.324343,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Braga_FC Porto": {
+    "zaman": 1773859723.067189,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Bahia_Bragantino-SP": {
+    "zaman": 1773859730.017652,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Palmeiras_Botafogo": {
+    "zaman": 1773859735.493851,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Atletico Parana_Cruzeiro": {
+    "zaman": 1773859738.724279,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Atletico Mineir_Sao Paulo": {
+    "zaman": 1773859751.355188,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Mirassol_Coritiba": {
+    "zaman": 1773859758.642445,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Vasco da Gama_Fluminense": {
+    "zaman": 1773859765.5392551,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Santos_Internacional": {
+    "zaman": 1773859778.165767,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Grêmio_Vitoria": {
+    "zaman": 1773859781.596172,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Flamengo_Remo": {
+    "zaman": 1773859788.89412,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Chapecoense_Corinthians": {
+    "zaman": 1773859795.449106,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Bragantino-SP_Botafogo": {
+    "zaman": 1773859806.388067,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Fluminense_Atletico Mineir": {
+    "zaman": 1773859809.855106,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Sao Paulo_Palmeiras": {
+    "zaman": 1773859814.528317,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Atletico Parana_Coritiba": {
+    "zaman": 1773859819.037573,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Remo_Bahia": {
+    "zaman": 1773859834.092986,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Cruzeiro_Santos": {
+    "zaman": 1773859853.510904,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Vasco da Gama_Grêmio": {
+    "zaman": 1773859857.76882,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Internacional_Chapecoense": {
+    "zaman": 1773859861.068531,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Vitoria_Mirassol": {
+    "zaman": 1773859873.192468,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Corinthians_Flamengo": {
+    "zaman": 1773859885.923605,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Sporting Lisbon_Bodø/Glimt": {
+    "zaman": 1773710468.373363,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Arsenal_Bayer Leverkuse": {
+    "zaman": 1773710473.174446,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Chelsea_Paris Saint Ger": {
+    "zaman": 1773710478.239838,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Manchester City_Real Madrid": {
+    "zaman": 1773710483.34912,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Barcelona_Newcastle Unite": {
+    "zaman": 1773710488.3191628,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Bayern Munich_Atalanta BC": {
+    "zaman": 1773859893.529176,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Tottenham Hotsp_Atlético Madrid": {
+    "zaman": 1773859900.371794,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Liverpool_Galatasaray": {
+    "zaman": 1773859904.0868878,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_SC Braga_Ferencváros TC": {
+    "zaman": 1773710510.571669,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Lyon_Celta Vigo": {
+    "zaman": 1773859907.7815769,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_FC Midtjylland_Nottingham Fore": {
+    "zaman": 1773859911.925206,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_SC Freiburg_KRC Genk": {
+    "zaman": 1773859915.293626,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_AS Roma_Bologna": {
+    "zaman": 1773859921.921303,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Aston Villa_Lille": {
+    "zaman": 1773859929.389478,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Real Betis_Panathinaikos F": {
+    "zaman": 1773859933.3524961,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Porto_VfB Stuttgart": {
+    "zaman": 1773859951.590272,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "tm_sakatlık_bournemouth": {
+    "zaman": 1773844860.139267,
+    "veri": []
+  },
+  "tm_sakatlık_manchester united": {
+    "zaman": 1773844879.5206988,
+    "veri": []
+  },
+  "tm_sakatlık_everton": {
+    "zaman": 1773844941.201123,
+    "veri": []
+  },
+  "tm_sakatlık_chelsea": {
+    "zaman": 1773844957.2486,
+    "veri": []
+  },
+  "tm_sakatlık_leeds united": {
+    "zaman": 1773844968.321116,
+    "veri": []
+  },
+  "tm_sakatlık_brentford": {
+    "zaman": 1773844984.760594,
+    "veri": []
+  },
+  "tm_sakatlık_newcastle united": {
+    "zaman": 1773844994.818673,
+    "veri": []
+  },
+  "tm_sakatlık_sunderland": {
+    "zaman": 1773845007.5324879,
+    "veri": []
+  },
+  "tm_sakatlık_west ham united": {
+    "zaman": 1773845034.365812,
+    "veri": []
+  },
+  "tm_sakatlık_nottingham forest": {
+    "zaman": 1773845072.813236,
+    "veri": []
+  },
+  "tm_sakatlık_real sociedad": {
+    "zaman": 1773845088.5600488,
+    "veri": []
+  },
+  "tm_sakatlık_liverpool": {
+    "zaman": 1773846647.831174,
+    "veri": []
+  },
+  "tm_sakatlık_arsenal": {
+    "zaman": 1773846672.7648718,
+    "veri": []
+  },
+  "kadro_Liverpool_Arsenal": {
+    "zaman": 1773846672.77159,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "tm_sakatlık_nac breda": {
+    "zaman": 1773859647.302515,
+    "veri": []
+  },
+  "tm_sakatlık_nec nijmegen": {
+    "zaman": 1773859647.680991,
+    "veri": []
+  },
+  "tm_sakatlık_heerenveen": {
+    "zaman": 1773859648.200616,
+    "veri": []
+  },
+  "tm_sakatlık_feyenoord": {
+    "zaman": 1773859648.2147222,
+    "veri": []
+  },
+  "tm_sakatlık_ajax": {
+    "zaman": 1773859648.739179,
+    "veri": []
+  },
+  "tm_sakatlık_fc utrecht": {
+    "zaman": 1773859648.824403,
+    "veri": []
+  },
+  "tm_sakatlık_go ahead eagles": {
+    "zaman": 1773859649.338609,
+    "veri": []
+  },
+  "tm_sakatlık_groningen": {
+    "zaman": 1773859649.360678,
+    "veri": []
+  },
+  "tm_sakatlık_az alkmaar": {
+    "zaman": 1773859649.8783119,
+    "veri": []
+  },
+  "tm_sakatlık_sc telstar": {
+    "zaman": 1773859649.898732,
+    "veri": []
+  },
+  "tm_sakatlık_psv eindhoven": {
+    "zaman": 1773859650.419158,
+    "veri": []
+  },
+  "tm_sakatlık_cf estrela": {
+    "zaman": 1773859650.438928,
+    "veri": []
+  },
+  "tm_sakatlık_sporting lisbon": {
+    "zaman": 1773859707.311289,
+    "veri": []
+  },
+  "tm_sakatlık_braga": {
+    "zaman": 1773859717.929442,
+    "veri": []
+  },
+  "tm_sakatlık_bahia": {
+    "zaman": 1773859834.080829,
+    "veri": []
+  },
+  "tm_sakatlık_cruzeiro": {
+    "zaman": 1773859845.23146,
+    "veri": []
+  },
+  "tm_sakatlık_flamengo": {
+    "zaman": 1773859885.9107158,
+    "veri": []
+  },
+  "tm_sakatlık_porto": {
+    "zaman": 1773859945.52247,
+    "veri": []
+  },
+  "kadro_AFC Bournemouth_Manchester Unit": {
+    "zaman": 1773942810.035745,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Brighton & Hove_Liverpool FC": {
+    "zaman": 1774047216.17697,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Fulham FC_Burnley FC": {
+    "zaman": 1774047228.220175,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Everton FC_Chelsea FC": {
+    "zaman": 1774047236.3258932,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Leeds United FC_Brentford FC": {
+    "zaman": 1774047238.489322,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "tm_sakatlık_sunderland afc": {
+    "zaman": 1773873328.572269,
+    "veri": []
+  },
+  "kadro_Newcastle Unite_Sunderland AFC": {
+    "zaman": 1774047240.442369,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Aston Villa FC_West Ham United": {
+    "zaman": 1774047245.460456,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "tm_sakatlık_real sociedad de fút": {
+    "zaman": 1773873344.208261,
+    "veri": []
+  },
+  "kadro_Villarreal CF_Real Sociedad d": {
+    "zaman": 1773942866.160655,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Elche CF_RCD Mallorca": {
+    "zaman": 1774047248.7704089,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_RCD Espanyol de_Getafe CF": {
+    "zaman": 1774047250.805515,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Levante UD_Real Oviedo": {
+    "zaman": 1774047260.259027,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_CA Osasuna_Girona FC": {
+    "zaman": 1774047271.786156,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Sevilla FC_Valencia CF": {
+    "zaman": 1774047284.232478,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "tm_sakatlık_fc barcelona": {
+    "zaman": 1773942937.733929,
+    "veri": []
+  },
+  "kadro_FC Barcelona_Rayo Vallecano ": {
+    "zaman": 1774047286.39134,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_RC Celta de Vig_Deportivo Alavé": {
+    "zaman": 1774047301.936905,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Athletic Club_Real Betis Balo": {
+    "zaman": 1774047308.130239,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Real Madrid CF_Club Atlético d": {
+    "zaman": 1773942955.4298298,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_RB Leipzig_TSG 1899 Hoffen": {
+    "zaman": 1773942957.2412071,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_1. FC Heidenhei_Bayer 04 Leverk": {
+    "zaman": 1773942969.19193,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_VfL Wolfsburg_SV Werder Breme": {
+    "zaman": 1773942971.1358411,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_1. FC Köln_Borussia Mönche": {
+    "zaman": 1773942975.966447,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "tm_sakatlık_fc bayern münchen": {
+    "zaman": 1773873420.2526999,
+    "veri": []
+  },
+  "kadro_FC Bayern Münch_1. FC Union Ber": {
+    "zaman": 1773942988.583242,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_1. FSV Mainz 05_Eintracht Frank": {
+    "zaman": 1773943008.5133991,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_FC St. Pauli 19_SC Freiburg": {
+    "zaman": 1773943010.130861,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_FC Augsburg_VfB Stuttgart": {
+    "zaman": 1773943022.376213,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Cagliari Calcio_SSC Napoli": {
+    "zaman": 1773943031.9657679,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "tm_sakatlık_udinese calcio": {
+    "zaman": 1773873461.167692,
+    "veri": []
+  },
+  "kadro_Genoa CFC_Udinese Calcio": {
+    "zaman": 1773943035.259905,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Parma Calcio 19_US Cremonese": {
+    "zaman": 1773943038.9696069,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_AC Milan_Torino FC": {
+    "zaman": 1773943044.430689,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Juventus FC_US Sassuolo Cal": {
+    "zaman": 1773943046.1734772,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Como 1907_AC Pisa 1909": {
+    "zaman": 1773943052.352677,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "tm_sakatlık_atalanta bc": {
+    "zaman": 1773873498.579136,
+    "veri": []
+  },
+  "kadro_Atalanta BC_Hellas Verona F": {
+    "zaman": 1773943054.033581,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Bologna FC 1909_SS Lazio": {
+    "zaman": 1773943058.382529,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_AS Roma_US Lecce": {
+    "zaman": 1773943062.3581529,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_ACF Fiorentina_FC Internaziona": {
+    "zaman": 1773943071.6787012,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Racing Club de _Angers SCO": {
+    "zaman": 1773943077.4450371,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Toulouse FC_FC Lorient": {
+    "zaman": 1773943082.544941,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_AJ Auxerre_Stade Brestois ": {
+    "zaman": 1773943084.437021,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "tm_sakatlık_paris saint-germain ": {
+    "zaman": 1773873549.452367,
+    "veri": []
+  },
+  "kadro_OGC Nice_Paris Saint-Ger": {
+    "zaman": 1773943086.6538072,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Olympique Lyonn_AS Monaco FC": {
+    "zaman": 1773943088.239444,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Paris FC_Le Havre AC": {
+    "zaman": 1773943104.3165572,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Olympique de Ma_Lille OSC": {
+    "zaman": 1773943105.790668,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Stade Rennais F_FC Metz": {
+    "zaman": 1773943107.6132412,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_FC Nantes_RC Strasbourg A": {
+    "zaman": 1773943112.712353,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Heracles Almelo_SBV Excelsior": {
+    "zaman": 1773943114.672441,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Fortuna Sittard_FC Twente '65": {
+    "zaman": 1773943121.2954528,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_PEC Zwolle_NAC Breda": {
+    "zaman": 1773943128.280728,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_NEC_SC Heerenveen": {
+    "zaman": 1773943131.308533,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Feyenoord Rotte_AFC Ajax": {
+    "zaman": 1773943161.3641028,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_FC Groningen_AZ": {
+    "zaman": 1773943177.209876,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Telstar 1963_PSV": {
+    "zaman": 1773943188.7749782,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_CF Estrela da A_Casa Pia AC": {
+    "zaman": 1773943193.8094862,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "tm_sakatlık_fc arouca": {
+    "zaman": 1773873623.302675,
+    "veri": []
+  },
+  "kadro_Moreirense FC_FC Arouca": {
+    "zaman": 1773943199.3825521,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_FC Famalicão_CD Nacional": {
+    "zaman": 1773943216.660727,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_CD Santa Clara_Gil Vicente FC": {
+    "zaman": 1773943219.652938,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Sport Lisboa e _Vitória SC": {
+    "zaman": 1773943230.597051,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_CD Tondela_AVS": {
+    "zaman": 1773943236.672105,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_GD Estoril Prai_Rio Ave FC": {
+    "zaman": 1773943242.044401,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_FC Alverca_Sporting Clube ": {
+    "zaman": 1773943250.149961,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Sporting Clube _FC Porto": {
+    "zaman": 1773943265.689263,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Preston North E_Stoke City FC": {
+    "zaman": 1773943267.636232,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Blackburn Rover_Middlesbrough F": {
+    "zaman": 1773943281.966947,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Derby County FC_Birmingham City": {
+    "zaman": 1773943283.784408,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Ipswich Town FC_Millwall FC": {
+    "zaman": 1773943295.408232,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Bristol City FC_West Bromwich A": {
+    "zaman": 1773943299.1200142,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Charlton Athlet_Norwich City FC": {
+    "zaman": 1773943300.412334,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Hull City AFC_Sheffield Wedne": {
+    "zaman": 1773943301.782677,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Queens Park Ran_Portsmouth FC": {
+    "zaman": 1773943304.719473,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "tm_sakatlık_wrexham afc": {
+    "zaman": 1773873690.301557,
+    "veri": []
+  },
+  "kadro_Sheffield Unite_Wrexham AFC": {
+    "zaman": 1773943306.3979678,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Southampton FC_Oxford United F": {
+    "zaman": 1773943307.903237,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Watford FC_Leicester City ": {
+    "zaman": 1773943309.8629582,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Swansea City AF_Coventry City F": {
+    "zaman": 1773943314.4216871,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "tm_sakatlık_afc bournemouth": {
+    "zaman": 1773942798.755688,
+    "veri": []
+  },
+  "tm_sakatlık_manchester united fc": {
+    "zaman": 1773942810.019868,
+    "veri": []
+  },
+  "tm_sakatlık_burnley fc": {
+    "zaman": 1774047228.193862,
+    "veri": []
+  },
+  "tm_sakatlık_leeds united fc": {
+    "zaman": 1773942845.3207839,
+    "veri": []
+  },
+  "tm_sakatlık_getafe cf": {
+    "zaman": 1773942881.3881862,
+    "veri": []
+  },
+  "tm_sakatlık_ca osasuna": {
+    "zaman": 1773942909.1295738,
+    "veri": []
+  },
+  "tm_sakatlık_rayo vallecano de ma": {
+    "zaman": 1773942948.705499,
+    "veri": []
+  },
+  "tm_sakatlık_hamburger sv": {
+    "zaman": 1773943002.280996,
+    "veri": []
+  },
+  "tm_sakatlık_feyenoord rotterdam": {
+    "zaman": 1773943153.829965,
+    "veri": []
+  },
+  "tm_sakatlık_psv": {
+    "zaman": 1773943188.763617,
+    "veri": []
+  },
+  "tm_sakatlık_fc famalicão": {
+    "zaman": 1773943210.073691,
+    "veri": []
+  },
+  "tm_sakatlık_fc porto": {
+    "zaman": 1773943265.67518,
+    "veri": []
+  },
+  "tm_sakatlık_middlesbrough fc": {
+    "zaman": 1773943281.954853,
+    "veri": []
+  },
+  "tm_sakatlık_sevilla fc": {
+    "zaman": 1774047282.809529,
+    "veri": []
+  },
+  "kadro_Atletico Parana_Botafogo": {
+    "zaman": 1774794721.702018,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Gil Vicente_AVS Futebol SAD": {
+    "zaman": 1774794696.9910588,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Vitória SC_Tondela": {
+    "zaman": 1774794701.159765,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Botafogo_Mirassol": {
+    "zaman": 1774794724.6129,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Internacional_Sao Paulo": {
+    "zaman": 1774794728.2824,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Bahia_Atletico Parana": {
+    "zaman": 1774794731.953592,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Cruzeiro_Vitoria": {
+    "zaman": 1774794736.379333,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Coritiba_Vasco da Gama": {
+    "zaman": 1774794739.913454,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Fluminense_Corinthians": {
+    "zaman": 1774794743.364236,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Chapecoense_Atletico Mineir": {
+    "zaman": 1774794746.9871402,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Santos_Remo": {
+    "zaman": 1774794751.841171,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Bragantino-SP_Flamengo": {
+    "zaman": 1774794754.596164,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Palmeiras_Grêmio": {
+    "zaman": 1774794757.9654982,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Rayo Vallecano_Elche CF": {
+    "zaman": 1774904302.652551,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt",
+      "injury_data": null
+    }
+  },
+  "kadro_Paris Saint Ger_Toulouse": {
+    "zaman": 1774794664.01782,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Sporting Lisbon_Santa Clara": {
+    "zaman": 1774794704.3007512,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Real Sociedad_Levante": {
+    "zaman": 1774904306.554285,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt",
+      "injury_data": null
+    }
+  },
+  "kadro_Mallorca_Real Madrid": {
+    "zaman": 1774904310.075284,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt",
+      "injury_data": null
+    }
+  },
+  "kadro_Real Betis_Espanyol": {
+    "zaman": 1774904315.575401,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt",
+      "injury_data": null
+    }
+  },
+  "kadro_Atlético Madrid_Barcelona": {
+    "zaman": 1774904321.03527,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt",
+      "injury_data": null
+    }
+  },
+  "kadro_Borussia Monche_1. FC Heidenhei": {
+    "zaman": 1774794628.879814,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Hamburger SV_Augsburg": {
+    "zaman": 1774794632.085366,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Bayer Leverkuse_VfL Wolfsburg": {
+    "zaman": 1774794635.2656698,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_SC Freiburg_Bayern Munich": {
+    "zaman": 1774794638.626096,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_TSG Hoffenheim_FSV Mainz 05": {
+    "zaman": 1774794641.947204,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Werder Bremen_RB Leipzig": {
+    "zaman": 1774794645.558192,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_VfB Stuttgart_Borussia Dortmu": {
+    "zaman": 1774794649.379071,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Sassuolo_Cagliari": {
+    "zaman": 1774794652.823471,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Hellas Verona_Fiorentina": {
+    "zaman": 1774794656.2739892,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Lazio_Parma": {
+    "zaman": 1774794660.238082,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Strasbourg_Nice": {
+    "zaman": 1774794667.7167628,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Brest_Rennes": {
+    "zaman": 1774794672.015,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Lille_RC Lens": {
+    "zaman": 1774794676.371181,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_PSV Eindhoven_FC Utrecht": {
+    "zaman": 1774794679.811499,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_AZ Alkmaar_Fortuna Sittard": {
+    "zaman": 1774794683.282927,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_SC Telstar_Groningen": {
+    "zaman": 1774794686.521906,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Ajax_FC Twente Ensch": {
+    "zaman": 1774794690.059445,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Excelsior_NEC Nijmegen": {
+    "zaman": 1774794693.621705,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Nacional_CF Estrela": {
+    "zaman": 1774794707.458792,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Rio Ave FC_Alverca": {
+    "zaman": 1774794710.930461,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Moreirense FC_Braga": {
+    "zaman": 1774794714.731495,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_FC Porto_Famalicão": {
+    "zaman": 1774794718.05116,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Sao Paulo_Cruzeiro": {
+    "zaman": 1774794761.037632,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Coritiba_Fluminense": {
+    "zaman": 1774794764.9735339,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Vasco da Gama_Botafogo": {
+    "zaman": 1774794769.087444,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Genclerbirligi _Goztepe": {
+    "zaman": 1774794772.62171,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Kasimpasa SK_Kayserispor": {
+    "zaman": 1774794775.573268,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Gazişehir Gazia_Alanyaspor": {
+    "zaman": 1774794779.0108318,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Trabzonspor_Galatasaray": {
+    "zaman": 1774794783.2247949,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_1. FC Kaisersla_Fortuna Düsseld": {
+    "zaman": 1774794787.1837819,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_1. FC Magdeburg_VfL Bochum": {
+    "zaman": 1774794791.156066,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Arminia Bielefe_SV Darmstadt 98": {
+    "zaman": 1774794794.4189591,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Dynamo Dresden_Hertha Berlin": {
+    "zaman": 1774794798.188823,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt"
+    }
+  },
+  "kadro_Getafe_Athletic Bilbao": {
+    "zaman": 1774904324.736783,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt",
+      "injury_data": null
+    }
+  },
+  "kadro_Valencia_Celta Vigo": {
+    "zaman": 1774904328.499879,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt",
+      "injury_data": null
+    }
+  },
+  "kadro_Oviedo_Sevilla": {
+    "zaman": 1774904331.7093718,
+    "veri": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksikler": [],
+      "dep_eksikler": [],
+      "ev_ozet": "Tam kadro",
+      "dep_ozet": "Tam kadro",
+      "ozet": "",
+      "veri_var": false,
+      "kaynak": "transfermarkt",
+      "injury_data": null
+    }
+  }
+}

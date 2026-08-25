@@ -1,0 +1,80 @@
+{
+  "tarih": "2026-03-25 00:27",
+  "toplam_incelenen": 5138,
+  "secilen_bahis": 2201,
+  "secim_orani": 42.8,
+  "genel": {
+    "n": 2201,
+    "acc": 0.3894,
+    "roi": -0.1085,
+    "roi_yuzde": -10.85
+  },
+  "kasa_baslangic": 1000.0,
+  "kasa_final": 0.78,
+  "kasa_getiri_yuzde": -99.92,
+  "max_drawdown_yuzde": 99.96,
+  "lig_roi": {
+    "ELC": {
+      "n": 553,
+      "acc": 0.349,
+      "roi": -0.1803,
+      "roi_yuzde": -18.03
+    },
+    "PL": {
+      "n": 268,
+      "acc": 0.4104,
+      "roi": -0.0863,
+      "roi_yuzde": -8.63
+    },
+    "PD": {
+      "n": 302,
+      "acc": 0.4073,
+      "roi": -0.0627,
+      "roi_yuzde": -6.27
+    },
+    "FL1": {
+      "n": 67,
+      "acc": 0.4328,
+      "roi": 0.06,
+      "roi_yuzde": 6.0
+    },
+    "DED": {
+      "n": 233,
+      "acc": 0.4034,
+      "roi": -0.1238,
+      "roi_yuzde": -12.38
+    },
+    "PPL": {
+      "n": 218,
+      "acc": 0.3807,
+      "roi": -0.1233,
+      "roi_yuzde": -12.33
+    },
+    "SA": {
+      "n": 296,
+      "acc": 0.4155,
+      "roi": -0.0806,
+      "roi_yuzde": -8.06
+    },
+    "BL1": {
+      "n": 264,
+      "acc": 0.3864,
+      "roi": -0.0817,
+      "roi_yuzde": -8.17
+    }
+  },
+  "yon_roi": {
+    "ev": {
+      "n": 892,
+      "acc": 0.4439,
+      "roi": -0.1073,
+      "roi_yuzde": -10.73
+    },
+    "dep": {
+      "n": 1309,
+      "acc": 0.3522,
+      "roi": -0.1093,
+      "roi_yuzde": -10.93
+    }
+  }
+}

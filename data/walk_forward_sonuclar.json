@@ -1,0 +1,71 @@
+{
+  "ozet": {
+    "toplam_tahmin": 66,
+    "genel_accuracy": 0.5606,
+    "brier_score": 0.226676,
+    "brier_rolling": 0.226676,
+    "tarih": "2026-08-25 15:44",
+    "pencere": 1000
+  },
+  "edge_kalibrasyon": {
+    "0.15_0.20": {
+      "alt": 0.15,
+      "ust": 0.2,
+      "n": 14,
+      "accuracy": 0.6429,
+      "roi": 0.1207,
+      "guvenilir": false
+    },
+    "0.30_0.40": {
+      "alt": 0.3,
+      "ust": 0.4,
+      "n": 13,
+      "accuracy": 0.5385,
+      "roi": -0.0731,
+      "guvenilir": false
+    }
+  },
+  "lig_guven": {
+    "FL1": {
+      "accuracy": 0.4839,
+      "n": 31,
+      "faktor": 0.8631,
+      "guvenilir": false
+    },
+    "DED": {
+      "accuracy": 0.6286,
+      "n": 35,
+      "faktor": 1.1212,
+      "guvenilir": false
+    }
+  },
+  "sharp_etki": {
+    "sharp_uyumlu_acc": 0.0,
+    "sharp_celisi_acc": 0.0,
+    "sharp_yok_acc": 0.5606,
+    "sharp_uyumlu_n": 0,
+    "sharp_celisi_n": 0,
+    "sharp_yok_n": 66,
+    "uyumlu_avantaj": 0.0
+  },
+  "prob_kalibrasyon": {
+    "0.4_0.5": {
+      "model_beklenti": 0.45,
+      "gercek_acc": 0.3125,
+      "n": 16,
+      "sapma": -0.1375
+    },
+    "0.5_0.6": {
+      "model_beklenti": 0.55,
+      "gercek_acc": 0.5938,
+      "n": 32,
+      "sapma": 0.0437
+    },
+    "0.6_0.7": {
+      "model_beklenti": 0.65,
+      "gercek_acc": 0.6154,
+      "n": 13,
+      "sapma": -0.0346
+    }
+  }
+}

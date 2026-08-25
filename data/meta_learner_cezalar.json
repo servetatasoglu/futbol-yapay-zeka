@@ -1,0 +1,149 @@
+{
+    "son_guncelleme": "2026-03-28T02:20:31.505397",
+    "kurallar": {
+        "Serie A|Deplasman Kazan\u0131r": {
+            "toplam_mac": 14,
+            "hit_rate": 0.357,
+            "roi": 0.021,
+            "ceza_katsayisi": 1.0
+        },
+        "Primeira Liga|Deplasman Kazan\u0131r": {
+            "toplam_mac": 5,
+            "hit_rate": 0.8,
+            "roi": 1.388,
+            "ceza_katsayisi": 0.9
+        },
+        "La Liga|Ev Sahibi Kazan\u0131r": {
+            "toplam_mac": 12,
+            "hit_rate": 0.75,
+            "roi": 0.517,
+            "ceza_katsayisi": 0.9
+        },
+        "Premier League|Ev Sahibi Kazan\u0131r": {
+            "toplam_mac": 12,
+            "hit_rate": 0.417,
+            "roi": -0.011,
+            "ceza_katsayisi": 1.0
+        },
+        "Ligue 1|Ev Sahibi Kazan\u0131r": {
+            "toplam_mac": 11,
+            "hit_rate": 0.636,
+            "roi": 0.326,
+            "ceza_katsayisi": 0.9
+        },
+        "Premier League|Deplasman Kazan\u0131r": {
+            "toplam_mac": 9,
+            "hit_rate": 0.222,
+            "roi": -0.069,
+            "ceza_katsayisi": 1.1
+        },
+        "La Liga|Deplasman Kazan\u0131r": {
+            "toplam_mac": 11,
+            "hit_rate": 0.182,
+            "roi": -0.341,
+            "ceza_katsayisi": 1.25
+        },
+        "Serie A|Ev Sahibi Kazan\u0131r": {
+            "toplam_mac": 25,
+            "hit_rate": 0.68,
+            "roi": 0.426,
+            "ceza_katsayisi": 0.9
+        },
+        "Eredivisie|Ev Sahibi Kazan\u0131r": {
+            "toplam_mac": 10,
+            "hit_rate": 0.6,
+            "roi": 0.246,
+            "ceza_katsayisi": 0.9
+        },
+        "Eredivisie|Deplasman Kazan\u0131r": {
+            "toplam_mac": 10,
+            "hit_rate": 0.2,
+            "roi": -0.473,
+            "ceza_katsayisi": 1.25
+        },
+        "Ligue 1|Deplasman Kazan\u0131r": {
+            "toplam_mac": 7,
+            "hit_rate": 1.0,
+            "roi": 1.444,
+            "ceza_katsayisi": 0.9
+        },
+        "Championship|Ev Sahibi Kazan\u0131r": {
+            "toplam_mac": 8,
+            "hit_rate": 0.5,
+            "roi": 0.019,
+            "ceza_katsayisi": 1.0
+        },
+        "Championship|Deplasman Kazan\u0131r": {
+            "toplam_mac": 7,
+            "hit_rate": 0.429,
+            "roi": 0.1,
+            "ceza_katsayisi": 1.0
+        },
+        "Bundesliga|Deplasman Kazan\u0131r": {
+            "toplam_mac": 11,
+            "hit_rate": 0.455,
+            "roi": 0.412,
+            "ceza_katsayisi": 0.9
+        },
+        "Primeira Liga|Ev Sahibi Kazan\u0131r": {
+            "toplam_mac": 12,
+            "hit_rate": 0.5,
+            "roi": -0.051,
+            "ceza_katsayisi": 1.1
+        },
+        "Bundesliga|Ev Sahibi Kazan\u0131r": {
+            "toplam_mac": 7,
+            "hit_rate": 0.857,
+            "roi": 0.771,
+            "ceza_katsayisi": 0.9
+        },
+        "Eredivisie|KG Var (Kar\u015f\u0131l\u0131kl\u0131 Gol)": {
+            "toplam_mac": 8,
+            "hit_rate": 0.0,
+            "roi": -1.0,
+            "ceza_katsayisi": 1.25
+        },
+        "Bundesliga|KG Var (Kar\u015f\u0131l\u0131kl\u0131 Gol)": {
+            "toplam_mac": 5,
+            "hit_rate": 0.0,
+            "roi": -1.0,
+            "ceza_katsayisi": 1.25
+        },
+        "Eredivisie|1.5 \u00dcst": {
+            "toplam_mac": 9,
+            "hit_rate": 0.0,
+            "roi": -1.0,
+            "ceza_katsayisi": 1.25
+        },
+        "Bundesliga|1.5 \u00dcst": {
+            "toplam_mac": 8,
+            "hit_rate": 0.0,
+            "roi": -1.0,
+            "ceza_katsayisi": 1.25
+        },
+        "Primeira Liga|1.5 \u00dcst": {
+            "toplam_mac": 5,
+            "hit_rate": 0.0,
+            "roi": -1.0,
+            "ceza_katsayisi": 1.25
+        },
+        "Primeira Liga|\u00c7ifte \u015eans 1-X": {
+            "toplam_mac": 5,
+            "hit_rate": 0.4,
+            "roi": -0.512,
+            "ceza_katsayisi": 1.25
+        },
+        "Serie A|\u00c7ifte \u015eans 1-X": {
+            "toplam_mac": 5,
+            "hit_rate": 1.0,
+            "roi": 0.22,
+            "ceza_katsayisi": 0.9
+        },
+        "Ligue 1|1.5 \u00dcst": {
+            "toplam_mac": 6,
+            "hit_rate": 0.0,
+            "roi": -1.0,
+            "ceza_katsayisi": 1.25
+        }
+    }
+}

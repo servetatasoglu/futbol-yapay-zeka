@@ -1,0 +1,23 @@
+tarih,lig,ev,dep,tahmin,dogru,sistem_oran,pinn_oran,clv,model_p,fair_p,gercek_edge,sistem_roi,pinn_roi,gercek,kaynak
+,Serie A,Lazio,Sassuolo,Deplasman Kazanır,False,3.7,,,0.0036,,,-1,,ev,yok
+,La Liga,Espanyol,Oviedo,Ev Sahibi Kazanır,False,1.95,,,0.0061,,,-1,,ber,yok
+,Champions League,Real Madrid,Manchester City,Ev Sahibi Kazanır,False,3.7,,,0.0047,,,-1,,dep,yok
+,Champions League,Galatasaray,Liverpool,Ev Sahibi Kazanır,False,4.5,,,0.0035,,,-1,,ev,yok
+,Primeira Liga,Tondela,Rio Ave FC,Deplasman Kazanır,False,4.0,,,0.0033,,,-1,,dep,yok
+,Champions League,Newcastle United,Barcelona,Deplasman Kazanır,False,2.3,,,0.0054,,,-1,,dep,yok
+2026-03-10T17:45:00Z,Champions League,Galatasaray,Liverpool,Ev Sahibi Kazanır,False,4.5,,,0.0035,,,-1,,ev,yok
+2026-03-09T19:45:00Z,Serie A,Lazio,Sassuolo,Deplasman Kazanır,False,3.7,,,0.0037,,,-1,,ev,yok
+2026-03-09T20:15:00Z,Primeira Liga,Tondela,Rio Ave FC,Deplasman Kazanır,False,4.0,,,0.0033,,,-1,,dep,yok
+2026-03-10T20:00:00Z,Champions League,Newcastle United,Barcelona,Deplasman Kazanır,False,2.32,,,0.0054,,,-1,,dep,yok
+2026-03-09T20:00:00Z,La Liga,Espanyol,Oviedo,Ev Sahibi Kazanır,False,1.96,,,0.0061,,,-1,,ber,yok
+2026-03-11T20:00:00Z,Champions League,Real Madrid,Manchester City,Ev Sahibi Kazanır,False,3.65,,,0.0047,,,-1,,dep,yok
+,Premier League,Arsenal FC,Chelsea FC,Ev Sahibi Kazanır,False,2.1,,,0.0062,,,-1,,ev,yok
+,Premier League,Arsenal FC,Chelsea FC,Ev Sahibi Kazanır,False,2.1,,,0.0062,,,-1,,ev,yok
+,Premier League,Arsenal FC,Chelsea FC,Ev Sahibi Kazanır,False,2.1,,,0.0062,,,-1,,ev,yok
+,Premier League,Arsenal FC,Chelsea FC,Ev Sahibi Kazanır,False,2.1,,,0.0062,,,-1,,ev,yok
+,Premier League,Arsenal FC,Chelsea FC,Ev Sahibi Kazanır,False,2.1,,,0.0062,,,-1,,ev,yok
+,Premier League,Arsenal FC,Chelsea FC,Ev Sahibi Kazanır,False,2.1,,,0.0062,,,-1,,ev,yok
+,Premier League,Arsenal FC,Chelsea FC,Ev Sahibi Kazanır,False,2.1,,,0.0062,,,-1,,09.03.2026 22:24,yok
+2026-03-11T19:45:00Z,Championship,West Bromwich Albion FC,Southampton FC,Ev Sahibi Kazanır,False,3.49,,,0.0037,,,-1,,ber,yok
+2026-03-10T19:45:00Z,Championship,Millwall FC,Derby County FC,Deplasman Kazanır,False,4.32,,,0.0029,,,-1,,ev,yok
+2026-03-11T20:00:00Z,Champions League,FK Bodø/Glimt,Sporting Clube de Portugal,Deplasman Kazanır,False,2.2,,,0.0061,,,-1,,ev,yok

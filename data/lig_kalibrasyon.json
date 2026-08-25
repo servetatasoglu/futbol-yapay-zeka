@@ -1,0 +1,385 @@
+{
+  "Serie A": {
+    "Deplasman Kazanır": {
+      "faktor": 1.0,
+      "mac": 14,
+      "gercek_oran": null,
+      "model_oran": null,
+      "not": "yetersiz_veri"
+    },
+    "Ev Sahibi Kazanır": {
+      "faktor": 1.0763,
+      "mac": 25,
+      "gercek_oran": 0.68,
+      "model_oran": 0.6318
+    },
+    "Beraberlik": {
+      "faktor": 1.0,
+      "mac": 1,
+      "gercek_oran": null,
+      "model_oran": null,
+      "not": "yetersiz_veri"
+    },
+    "Çifte Şans 1-X": {
+      "faktor": 1.0,
+      "mac": 5,
+      "gercek_oran": null,
+      "model_oran": null,
+      "not": "yetersiz_veri"
+    },
+    "1.5 Üst": {
+      "faktor": 1.0,
+      "mac": 3,
+      "gercek_oran": null,
+      "model_oran": null,
+      "not": "yetersiz_veri"
+    }
+  },
+  "Primeira Liga": {
+    "Deplasman Kazanır": {
+      "faktor": 1.0,
+      "mac": 5,
+      "gercek_oran": null,
+      "model_oran": null,
+      "not": "yetersiz_veri"
+    },
+    "Ev Sahibi Kazanır": {
+      "faktor": 1.0,
+      "mac": 12,
+      "gercek_oran": null,
+      "model_oran": null,
+      "not": "yetersiz_veri"
+    },
+    "Beraberlik": {
+      "faktor": 1.0,
+      "mac": 2,
+      "gercek_oran": null,
+      "model_oran": null,
+      "not": "yetersiz_veri"
+    },
+    "KG Var (Karşılıklı Gol)": {
+      "faktor": 1.0,
+      "mac": 2,
+      "gercek_oran": null,
+      "model_oran": null,
+      "not": "yetersiz_veri"
+    },
+    "1.5 Üst": {
+      "faktor": 1.0,
+      "mac": 4,
+      "gercek_oran": null,
+      "model_oran": null,
+      "not": "yetersiz_veri"
+    },
+    "Çifte Şans 1-X": {
+      "faktor": 1.0,
+      "mac": 3,
+      "gercek_oran": null,
+      "model_oran": null,
+      "not": "yetersiz_veri"
+    },
+    "Çifte Şans X-2": {
+      "faktor": 1.0,
+      "mac": 1,
+      "gercek_oran": null,
+      "model_oran": null,
+      "not": "yetersiz_veri"
+    }
+  },
+  "Champions League": {
+    "Deplasman Kazanır": {
+      "faktor": 1.0,
+      "mac": 4,
+      "gercek_oran": null,
+      "model_oran": null,
+      "not": "yetersiz_veri"
+    },
+    "Ev Sahibi Kazanır": {
+      "faktor": 1.0,
+      "mac": 2,
+      "gercek_oran": null,
+      "model_oran": null,
+      "not": "yetersiz_veri"
+    }
+  },
+  "La Liga": {
+    "Ev Sahibi Kazanır": {
+      "faktor": 1.0,
+      "mac": 12,
+      "gercek_oran": null,
+      "model_oran": null,
+      "not": "yetersiz_veri"
+    },
+    "Deplasman Kazanır": {
+      "faktor": 1.0,
+      "mac": 11,
+      "gercek_oran": null,
+      "model_oran": null,
+      "not": "yetersiz_veri"
+    },
+    "Beraberlik": {
+      "faktor": 1.0,
+      "mac": 4,
+      "gercek_oran": null,
+      "model_oran": null,
+      "not": "yetersiz_veri"
+    },
+    "KG Var (Karşılıklı Gol)": {
+      "faktor": 1.0,
+      "mac": 2,
+      "gercek_oran": null,
+      "model_oran": null,
+      "not": "yetersiz_veri"
+    },
+    "1.5 Üst": {
+      "faktor": 1.0,
+      "mac": 3,
+      "gercek_oran": null,
+      "model_oran": null,
+      "not": "yetersiz_veri"
+    },
+    "Çifte Şans 1-X": {
+      "faktor": 1.0,
+      "mac": 1,
+      "gercek_oran": null,
+      "model_oran": null,
+      "not": "yetersiz_veri"
+    }
+  },
+  "Ligue 1": {
+    "Ev Sahibi Kazanır": {
+      "faktor": 1.0,
+      "mac": 11,
+      "gercek_oran": null,
+      "model_oran": null,
+      "not": "yetersiz_veri"
+    },
+    "Deplasman Kazanır": {
+      "faktor": 1.0,
+      "mac": 7,
+      "gercek_oran": null,
+      "model_oran": null,
+      "not": "yetersiz_veri"
+    },
+    "KG Var (Karşılıklı Gol)": {
+      "faktor": 1.0,
+      "mac": 4,
+      "gercek_oran": null,
+      "model_oran": null,
+      "not": "yetersiz_veri"
+    },
+    "Çifte Şans 1-X": {
+      "faktor": 1.0,
+      "mac": 3,
+      "gercek_oran": null,
+      "model_oran": null,
+      "not": "yetersiz_veri"
+    },
+    "1.5 Üst": {
+      "faktor": 1.0,
+      "mac": 5,
+      "gercek_oran": null,
+      "model_oran": null,
+      "not": "yetersiz_veri"
+    },
+    "Çifte Şans X-2": {
+      "faktor": 1.0,
+      "mac": 1,
+      "gercek_oran": null,
+      "model_oran": null,
+      "not": "yetersiz_veri"
+    }
+  },
+  "Premier League": {
+    "Deplasman Kazanır": {
+      "faktor": 1.0,
+      "mac": 9,
+      "gercek_oran": null,
+      "model_oran": null,
+      "not": "yetersiz_veri"
+    },
+    "Ev Sahibi Kazanır": {
+      "faktor": 1.0,
+      "mac": 11,
+      "gercek_oran": null,
+      "model_oran": null,
+      "not": "yetersiz_veri"
+    },
+    "Beraberlik": {
+      "faktor": 1.0,
+      "mac": 3,
+      "gercek_oran": null,
+      "model_oran": null,
+      "not": "yetersiz_veri"
+    },
+    "1.5 Üst": {
+      "faktor": 1.0,
+      "mac": 3,
+      "gercek_oran": null,
+      "model_oran": null,
+      "not": "yetersiz_veri"
+    },
+    "KG Var (Karşılıklı Gol)": {
+      "faktor": 1.0,
+      "mac": 4,
+      "gercek_oran": null,
+      "model_oran": null,
+      "not": "yetersiz_veri"
+    }
+  },
+  "Eredivisie": {
+    "Ev Sahibi Kazanır": {
+      "faktor": 1.0,
+      "mac": 10,
+      "gercek_oran": null,
+      "model_oran": null,
+      "not": "yetersiz_veri"
+    },
+    "Deplasman Kazanır": {
+      "faktor": 1.0,
+      "mac": 10,
+      "gercek_oran": null,
+      "model_oran": null,
+      "not": "yetersiz_veri"
+    },
+    "Beraberlik": {
+      "faktor": 1.0,
+      "mac": 1,
+      "gercek_oran": null,
+      "model_oran": null,
+      "not": "yetersiz_veri"
+    },
+    "KG Var (Karşılıklı Gol)": {
+      "faktor": 1.0,
+      "mac": 8,
+      "gercek_oran": null,
+      "model_oran": null,
+      "not": "yetersiz_veri"
+    },
+    "1.5 Üst": {
+      "faktor": 1.0,
+      "mac": 9,
+      "gercek_oran": null,
+      "model_oran": null,
+      "not": "yetersiz_veri"
+    },
+    "Çifte Şans 1-X": {
+      "faktor": 1.0,
+      "mac": 1,
+      "gercek_oran": null,
+      "model_oran": null,
+      "not": "yetersiz_veri"
+    },
+    "Çifte Şans X-2": {
+      "faktor": 1.0,
+      "mac": 1,
+      "gercek_oran": null,
+      "model_oran": null,
+      "not": "yetersiz_veri"
+    }
+  },
+  "Championship": {
+    "Ev Sahibi Kazanır": {
+      "faktor": 1.0,
+      "mac": 8,
+      "gercek_oran": null,
+      "model_oran": null,
+      "not": "yetersiz_veri"
+    },
+    "Deplasman Kazanır": {
+      "faktor": 1.0,
+      "mac": 7,
+      "gercek_oran": null,
+      "model_oran": null,
+      "not": "yetersiz_veri"
+    },
+    "Beraberlik": {
+      "faktor": 1.0,
+      "mac": 1,
+      "gercek_oran": null,
+      "model_oran": null,
+      "not": "yetersiz_veri"
+    },
+    "1.5 Üst": {
+      "faktor": 1.0,
+      "mac": 3,
+      "gercek_oran": null,
+      "model_oran": null,
+      "not": "yetersiz_veri"
+    },
+    "Çifte Şans 1-X": {
+      "faktor": 1.0,
+      "mac": 1,
+      "gercek_oran": null,
+      "model_oran": null,
+      "not": "yetersiz_veri"
+    },
+    "KG Var (Karşılıklı Gol)": {
+      "faktor": 1.0,
+      "mac": 2,
+      "gercek_oran": null,
+      "model_oran": null,
+      "not": "yetersiz_veri"
+    }
+  },
+  "Bundesliga": {
+    "Deplasman Kazanır": {
+      "faktor": 1.0,
+      "mac": 11,
+      "gercek_oran": null,
+      "model_oran": null,
+      "not": "yetersiz_veri"
+    },
+    "Ev Sahibi Kazanır": {
+      "faktor": 1.0,
+      "mac": 7,
+      "gercek_oran": null,
+      "model_oran": null,
+      "not": "yetersiz_veri"
+    },
+    "Beraberlik": {
+      "faktor": 1.0,
+      "mac": 2,
+      "gercek_oran": null,
+      "model_oran": null,
+      "not": "yetersiz_veri"
+    },
+    "KG Var (Karşılıklı Gol)": {
+      "faktor": 1.0,
+      "mac": 5,
+      "gercek_oran": null,
+      "model_oran": null,
+      "not": "yetersiz_veri"
+    },
+    "1.5 Üst": {
+      "faktor": 1.0,
+      "mac": 8,
+      "gercek_oran": null,
+      "model_oran": null,
+      "not": "yetersiz_veri"
+    },
+    "Çifte Şans 1-X": {
+      "faktor": 1.0,
+      "mac": 2,
+      "gercek_oran": null,
+      "model_oran": null,
+      "not": "yetersiz_veri"
+    },
+    "Çifte Şans X-2": {
+      "faktor": 1.0,
+      "mac": 1,
+      "gercek_oran": null,
+      "model_oran": null,
+      "not": "yetersiz_veri"
+    }
+  },
+  "Brasileirao": {
+    "Deplasman Kazanır": {
+      "faktor": 1.0,
+      "mac": 1,
+      "gercek_oran": null,
+      "model_oran": null,
+      "not": "yetersiz_veri"
+    }
+  }
+}

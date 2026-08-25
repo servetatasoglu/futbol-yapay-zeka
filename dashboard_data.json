@@ -1,0 +1,450 @@
+{
+  "summary": {
+    "total_bets": 0,
+    "initial_br": 10000.0,
+    "final_br": 10000.0,
+    "roi": 0.0,
+    "win_rate": 0.0,
+    "mdd": 0.0,
+    "avg_clv": 0.0,
+    "pct_clv_positive": 0.0,
+    "verdict": "AWAITING DATA",
+    "avg_slippage_pts": 0.0,
+    "avg_clv_decay": 0.0
+  },
+  "statistics": {
+    "p_value": 1.0,
+    "clv_significant": false,
+    "edge_reliability": 0.0,
+    "overfitting_risk": "N/A"
+  },
+  "equity_curve": [
+    {
+      "bet_index": 0,
+      "bankroll": 10000.0
+    }
+  ],
+  "attribution_league": {},
+  "attribution_odds": {
+    "<1.50": {
+      "pnl": 0,
+      "count": 0
+    },
+    "1.50-2.00": {
+      "pnl": 0,
+      "count": 0
+    },
+    "2.00-3.00": {
+      "pnl": 0,
+      "count": 0
+    },
+    ">3.00": {
+      "pnl": 0,
+      "count": 0
+    }
+  },
+  "bets": [],
+  "kupon": null,
+  "finished_matches": [
+    {
+      "lig": "PPL",
+      "ev": "CD Nacional",
+      "dep": "Vitória SC",
+      "skor": "2-0",
+      "tarih": "2026-05-16T17:00:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "PPL",
+      "ev": "Casa Pia AC",
+      "dep": "Rio Ave",
+      "skor": "2-1",
+      "tarih": "2026-05-16T17:00:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "PPL",
+      "ev": "FC Arouca",
+      "dep": "CD Tondela",
+      "skor": "3-1",
+      "tarih": "2026-05-16T17:00:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "PPL",
+      "ev": "Sporting Clube de Braga",
+      "dep": "CF Estrela da Amadora",
+      "skor": "2-2",
+      "tarih": "2026-05-16T17:00:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "PPL",
+      "ev": "Moreirense",
+      "dep": "AVS",
+      "skor": "0-1",
+      "tarih": "2026-05-16T14:30:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "PPL",
+      "ev": "FC Porto",
+      "dep": "CD Santa Clara",
+      "skor": "1-0",
+      "tarih": "2026-05-16T14:30:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "FL1",
+      "ev": "Racing Club de Lens",
+      "dep": "Paris Saint-Germain",
+      "skor": "0-2",
+      "tarih": "2026-05-13T19:00:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "FL1",
+      "ev": "Stade Brestois 29",
+      "dep": "RC Strasbourg Alsace",
+      "skor": "1-2",
+      "tarih": "2026-05-13T17:00:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "ELC",
+      "ev": "Southampton",
+      "dep": "Middlesbrough",
+      "skor": "2-1",
+      "tarih": "2026-05-12T19:00:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "PPL",
+      "ev": "Vitória SC",
+      "dep": "Casa Pia AC",
+      "skor": "0-1",
+      "tarih": "2026-05-11T19:15:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "PPL",
+      "ev": "Gil Vicente",
+      "dep": "FC Arouca",
+      "skor": "1-3",
+      "tarih": "2026-05-11T19:15:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "PPL",
+      "ev": "CD Tondela",
+      "dep": "Moreirense",
+      "skor": "2-0",
+      "tarih": "2026-05-11T19:15:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "PPL",
+      "ev": "CF Estrela da Amadora",
+      "dep": "FC Famalicão",
+      "skor": "0-0",
+      "tarih": "2026-05-11T19:15:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "PPL",
+      "ev": "Rio Ave",
+      "dep": "Sporting Clube de Portugal",
+      "skor": "1-4",
+      "tarih": "2026-05-11T19:15:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "PPL",
+      "ev": "CD Santa Clara",
+      "dep": "CD Nacional",
+      "skor": "2-0",
+      "tarih": "2026-05-11T19:15:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "PPL",
+      "ev": "Sport Lisboa e Benfica",
+      "dep": "Sporting Clube de Braga",
+      "skor": "2-2",
+      "tarih": "2026-05-11T19:15:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "ELC",
+      "ev": "Millwall",
+      "dep": "Hull City AFC",
+      "skor": "0-2",
+      "tarih": "2026-05-11T19:00:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "PPL",
+      "ev": "FC Alverca",
+      "dep": "GD Estoril Praia",
+      "skor": "1-1",
+      "tarih": "2026-05-10T19:30:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "FL1",
+      "ev": "Le Havre AC",
+      "dep": "Olympique de Marseille",
+      "skor": "0-1",
+      "tarih": "2026-05-10T19:00:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "FL1",
+      "ev": "AJ Auxerre",
+      "dep": "OGC Nice",
+      "skor": "2-1",
+      "tarih": "2026-05-10T19:00:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "FL1",
+      "ev": "AS Monaco",
+      "dep": "Lille OSC",
+      "skor": "0-1",
+      "tarih": "2026-05-10T19:00:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "FL1",
+      "ev": "FC Metz",
+      "dep": "FC Lorient",
+      "skor": "0-4",
+      "tarih": "2026-05-10T19:00:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "FL1",
+      "ev": "Toulouse",
+      "dep": "Olympique Lyonnais",
+      "skor": "2-1",
+      "tarih": "2026-05-10T19:00:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "FL1",
+      "ev": "Paris Saint-Germain",
+      "dep": "Stade Brestois 29",
+      "skor": "1-0",
+      "tarih": "2026-05-10T19:00:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "FL1",
+      "ev": "Angers SCO",
+      "dep": "RC Strasbourg Alsace",
+      "skor": "1-1",
+      "tarih": "2026-05-10T19:00:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "FL1",
+      "ev": "Stade Rennais 1901",
+      "dep": "Paris",
+      "skor": "2-1",
+      "tarih": "2026-05-10T19:00:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "PPL",
+      "ev": "AVS",
+      "dep": "FC Porto",
+      "skor": "3-1",
+      "tarih": "2026-05-10T17:00:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "DED",
+      "ev": "AFC Ajax",
+      "dep": "FC Utrecht",
+      "skor": "1-2",
+      "tarih": "2026-05-10T14:45:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "DED",
+      "ev": "SBV Excelsior",
+      "dep": "FC Volendam",
+      "skor": "1-1",
+      "tarih": "2026-05-10T14:45:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "DED",
+      "ev": "FC Groningen",
+      "dep": "NEC",
+      "skor": "2-1",
+      "tarih": "2026-05-10T14:45:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "DED",
+      "ev": "Feyenoord Rotterdam",
+      "dep": "AZ",
+      "skor": "1-1",
+      "tarih": "2026-05-10T14:45:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "DED",
+      "ev": "Fortuna Sittard",
+      "dep": "PEC Zwolle",
+      "skor": "3-2",
+      "tarih": "2026-05-10T14:45:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "DED",
+      "ev": "Go Ahead Eagles",
+      "dep": "PSV",
+      "skor": "1-4",
+      "tarih": "2026-05-10T14:45:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "DED",
+      "ev": "Telstar 1963",
+      "dep": "Heracles Almelo",
+      "skor": "3-0",
+      "tarih": "2026-05-10T14:45:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "DED",
+      "ev": "FC Twente '65",
+      "dep": "Sparta Rotterdam",
+      "skor": "4-0",
+      "tarih": "2026-05-10T14:45:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "ELC",
+      "ev": "Middlesbrough",
+      "dep": "Southampton",
+      "skor": "0-0",
+      "tarih": "2026-05-09T11:30:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "ELC",
+      "ev": "Hull City AFC",
+      "dep": "Millwall",
+      "skor": "0-0",
+      "tarih": "2026-05-08T19:00:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "FL1",
+      "ev": "Racing Club de Lens",
+      "dep": "FC Nantes",
+      "skor": "1-0",
+      "tarih": "2026-05-08T18:45:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "PPL",
+      "ev": "Sporting Clube de Portugal",
+      "dep": "Vitória SC",
+      "skor": "5-1",
+      "tarih": "2026-05-04T19:15:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "PPL",
+      "ev": "Rio Ave",
+      "dep": "Gil Vicente",
+      "skor": "0-0",
+      "tarih": "2026-05-03T19:30:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "FL1",
+      "ev": "Olympique Lyonnais",
+      "dep": "Stade Rennais 1901",
+      "skor": "4-2",
+      "tarih": "2026-05-03T18:45:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "PPL",
+      "ev": "Sporting Clube de Braga",
+      "dep": "GD Estoril Praia",
+      "skor": "1-1",
+      "tarih": "2026-05-03T17:00:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "FL1",
+      "ev": "AJ Auxerre",
+      "dep": "Angers SCO",
+      "skor": "3-1",
+      "tarih": "2026-05-03T15:15:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "FL1",
+      "ev": "Paris",
+      "dep": "Stade Brestois 29",
+      "skor": "4-0",
+      "tarih": "2026-05-03T15:15:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "FL1",
+      "ev": "RC Strasbourg Alsace",
+      "dep": "Toulouse",
+      "skor": "1-2",
+      "tarih": "2026-05-03T15:15:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "DED",
+      "ev": "AZ",
+      "dep": "FC Twente '65",
+      "skor": "2-2",
+      "tarih": "2026-05-03T14:45:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "DED",
+      "ev": "Sparta Rotterdam",
+      "dep": "Go Ahead Eagles",
+      "skor": "2-2",
+      "tarih": "2026-05-03T14:45:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "PPL",
+      "ev": "Casa Pia AC",
+      "dep": "CD Tondela",
+      "skor": "0-1",
+      "tarih": "2026-05-03T14:30:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "FL1",
+      "ev": "Lille OSC",
+      "dep": "Le Havre AC",
+      "skor": "1-1",
+      "tarih": "2026-05-03T13:00:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "DED",
+      "ev": "Fortuna Sittard",
+      "dep": "Feyenoord Rotterdam",
+      "skor": "1-2",
+      "tarih": "2026-05-03T12:30:00Z",
+      "tahmin": null
+    }
+  ]
+}

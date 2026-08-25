@@ -1,0 +1,135 @@
+{
+  "madrid|2026-04-03T19": {
+    "yagis_mm": 0.0,
+    "sicaklik_c": 20.3,
+    "sehir": "madrid",
+    "kaynak": "api",
+    "zaman": 1774904379.590574
+  },
+  "paris|2026-04-03T18": {
+    "yagis_mm": 0.3,
+    "sicaklik_c": 11.8,
+    "sehir": "paris",
+    "kaynak": "api",
+    "zaman": 1774904391.437174
+  },
+  "seville|2026-04-04T16": {
+    "yagis_mm": 0.0,
+    "sicaklik_c": 26.6,
+    "sehir": "seville",
+    "kaynak": "api",
+    "zaman": 1774904380.575619
+  },
+  "hamburg|2026-04-04T13": {
+    "yagis_mm": 0.0,
+    "sicaklik_c": 10.5,
+    "sehir": "hamburg",
+    "kaynak": "api",
+    "zaman": 1774904383.300964
+  },
+  "freiburg|2026-04-04T13": {
+    "yagis_mm": 0.0,
+    "sicaklik_c": 14.1,
+    "sehir": "freiburg",
+    "kaynak": "api",
+    "zaman": 1774904384.1261508
+  },
+  "stuttgart|2026-04-04T16": {
+    "yagis_mm": 0.0,
+    "sicaklik_c": 14.2,
+    "sehir": "stuttgart",
+    "kaynak": "api",
+    "zaman": 1774904385.153926
+  },
+  "rome|2026-04-04T18": {
+    "yagis_mm": 0.0,
+    "sicaklik_c": 17.3,
+    "sehir": "rome",
+    "kaynak": "api",
+    "zaman": 1774904386.91252
+  },
+  "eindhoven|2026-04-04T14": {
+    "yagis_mm": 0.1,
+    "sicaklik_c": 13.8,
+    "sehir": "eindhoven",
+    "kaynak": "api",
+    "zaman": 1774904393.096342
+  },
+  "rome|2026-04-04T16": {
+    "yagis_mm": 0.0,
+    "sicaklik_c": 19.4,
+    "sehir": "rome",
+    "kaynak": "api",
+    "zaman": 1774904393.906312
+  },
+  "amsterdam|2026-04-04T19": {
+    "yagis_mm": 0.0,
+    "sicaklik_c": 13.6,
+    "sehir": "amsterdam",
+    "kaynak": "api",
+    "zaman": 1774904394.812594
+  },
+  "porto|2026-04-04T19": {
+    "yagis_mm": 0.0,
+    "sicaklik_c": 15.3,
+    "sehir": "porto",
+    "kaynak": "api",
+    "zaman": 1774904395.915497
+  },
+  "madrid|2026-04-05T12": {
+    "yagis_mm": 0.0,
+    "sicaklik_c": 17.7,
+    "sehir": "madrid",
+    "kaynak": "api",
+    "zaman": 1774904381.534941
+  },
+  "valencia|2026-04-05T14": {
+    "yagis_mm": 0.0,
+    "sicaklik_c": 24.0,
+    "sehir": "valencia",
+    "kaynak": "api",
+    "zaman": 1774904382.382689
+  },
+  "frankfurt|2026-04-05T15": {
+    "yagis_mm": 0.0,
+    "sicaklik_c": 16.6,
+    "sehir": "frankfurt",
+    "kaynak": "api",
+    "zaman": 1774904385.9856389
+  },
+  "paris|2026-04-05T16": {
+    "yagis_mm": 0.0,
+    "sicaklik_c": 20.5,
+    "sehir": "paris",
+    "kaynak": "api",
+    "zaman": 1774904387.8237069
+  },
+  "milan|2026-04-05T18": {
+    "yagis_mm": 0.0,
+    "sicaklik_c": 22.3,
+    "sehir": "milan",
+    "kaynak": "api",
+    "zaman": 1774904388.600735
+  },
+  "turin|2026-04-06T16": {
+    "yagis_mm": 0.0,
+    "sicaklik_c": 21.7,
+    "sehir": "turin",
+    "kaynak": "api",
+    "zaman": 1774904389.4235709
+  },
+  "naples|2026-04-06T18": {
+    "yagis_mm": 0.0,
+    "sicaklik_c": 18.2,
+    "sehir": "naples",
+    "kaynak": "api",
+    "zaman": 1774904390.2898319
+  },
+  "monaco|2026-04-05T18": {
+    "yagis_mm": 0.0,
+    "sicaklik_c": 16.2,
+    "sehir": "monaco",
+    "kaynak": "api",
+    "zaman": 1774904392.34224
+  }
+}

@@ -1,0 +1,1233 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>KAM — Kantitatif Algoritma Masası</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  :root{
+    --bg:    #060b14;
+    --bg2:   #0c1524;
+    --bg3:   #111e33;
+    --border:#1a2d4a;
+    --text:  #e2e8f0;
+    --muted: #64748b;
+    --cyan:  #00d4ff;
+    --green: #10b981;
+    --red:   #ef4444;
+    --amber: #f59e0b;
+    --violet:#8b5cf6;
+  }
+  html{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;min-height:100vh}
+  body{background:radial-gradient(ellipse 100% 60% at 50% 0%,#061428 0%,var(--bg) 70%);min-height:100vh;padding:1.5rem 1rem}
+  @media(min-width:768px){body{padding:2rem 2.5rem}}
+  
+  /* GLOBAL TYPOGRAPHY */
+  .tabular-nums { font-family:'JetBrains Mono',monospace; font-variant-numeric:tabular-nums; letter-spacing:-0.02em; }
+  
+  /* GLASS CARDS */
+  .card{background:rgba(12,21,36,0.8);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid var(--border);border-radius:1rem;transition:border-color .3s,transform .25s}
+  .card:hover{border-color:#234;transform:translateY(-2px)}
+  .card-glow-cyan{box-shadow:0 0 40px rgba(0,212,255,.04),inset 0 1px 0 rgba(0,212,255,.06)}
+  .card-glow-green{box-shadow:0 0 40px rgba(16,185,129,.04),inset 0 1px 0 rgba(16,185,129,.06)}
+  .card-glow-violet{box-shadow:0 0 40px rgba(139,92,246,.04),inset 0 1px 0 rgba(139,92,246,.06)}
+  .card-glow-amber{box-shadow:0 0 40px rgba(245,158,11,.04),inset 0 1px 0 rgba(245,158,11,.06)}
+
+  /* HEADER GRADIENT */
+  .header-title{background:linear-gradient(135deg,#fff 30%,var(--cyan) 100%);-webkit-background-clip:text;color:transparent;font-size:clamp(1.6rem,4vw,2.8rem);font-weight:900;letter-spacing:-0.03em;line-height:1.1}
+  .header-sub{font-size:.7rem;letter-spacing:.18em;color:var(--muted);text-transform:uppercase;margin-top:.25rem}
+
+  /* METRIC NUMBERS */
+  .metric-val{font-size:clamp(1.5rem,3vw,2.2rem);font-weight:800;letter-spacing:-.03em;font-family:'JetBrains Mono',monospace;line-height:1}
+  .metric-label{font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin-bottom:.6rem;font-weight:600}
+  .metric-sub{font-size:.75rem;color:var(--muted);margin-top:.4rem;font-family:'Inter',sans-serif;}
+
+  /* PULSE DOT */
+  .dot{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 0 0 rgba(16,185,129,.5);animation:pulse-dot 2.5s infinite}
+  @keyframes pulse-dot{0%,100%{box-shadow:0 0 0 0 rgba(16,185,129,.4)}60%{box-shadow:0 0 0 8px rgba(16,185,129,0)}}
+
+  /* SEKMELER */
+  .tabs-bar{display:flex;gap:.4rem;padding:.75rem;border-bottom:1px solid var(--border);overflow-x:auto;scrollbar-width:none}
+  .tabs-bar::-webkit-scrollbar{display:none}
+  .tab{padding:.4rem 1.1rem;border-radius:.6rem;font-size:.75rem;font-weight:700;cursor:pointer;transition:all .2s;border:1px solid transparent;color:var(--muted);white-space:nowrap;letter-spacing:.03em}
+  .tab:hover{color:#cbd5e1;background:rgba(255,255,255,.04)}
+  .tab.active{color:#fff;background:linear-gradient(135deg,rgba(0,212,255,.12),rgba(139,92,246,.12));border-color:rgba(0,212,255,.2);text-shadow:0 0 12px rgba(0,212,255,.3)}
+  .tab-pane{display:none}.tab-pane.active{display:block}
+
+  /* TABLE HOVER ANIMATIONS */
+  .trow{border-bottom:1px solid rgba(255,255,255,.03);transition:all .25s ease-out;position:relative}
+  .trow:hover{background:linear-gradient(90deg, rgba(0,212,255,.05), transparent);transform:scale(1.002);box-shadow:inset 3px 0 0 var(--cyan);z-index:5}
+  .thead-cell{padding:.75rem 1rem;font-size:.65rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--border);position:sticky;top:0;background:rgba(10,18,32,.95);backdrop-filter:blur(12px);z-index:10}
+
+  /* TOOLTIP (ARAÇ İPUCU) */
+  .tt{position:relative;cursor:help;border-bottom:1px dotted var(--muted);display:inline-block}
+  .tt::after{content:attr(data-tip);position:absolute;bottom:125%;left:50%;transform:translateX(-50%) translateY(5px);background:var(--bg3);color:#fff;padding:.3rem .7rem;border-radius:.4rem;font-size:.65rem;white-space:nowrap;opacity:0;pointer-events:none;transition:all .2s ease;border:1px solid var(--border);box-shadow:0 10px 25px rgba(0,0,0,.5);z-index:99;font-weight:500;font-family:'Inter',sans-serif;letter-spacing:normal text-transform:none}
+  .tt:hover::after{opacity:1;transform:translateX(-50%) translateY(0)}
+
+  /* BADGES */
+  .badge{display:inline-flex;align-items:center;padding:.2rem .65rem;border-radius:.45rem;font-size:.7rem;font-weight:700;letter-spacing:.03em;border:1px solid transparent}
+  .badge-sky{background:linear-gradient(135deg, rgba(14,165,233,.15), rgba(14,165,233,.05));color:#38bdf8;border-color:rgba(14,165,233,.25)}
+  .badge-rose{background:linear-gradient(135deg, rgba(244,63,94,.15), rgba(244,63,94,.05));color:#fb7185;border-color:rgba(244,63,94,.25)}
+  .badge-amber{background:linear-gradient(135deg, rgba(245,158,11,.15), rgba(245,158,11,.05));color:#fbbf24;border-color:rgba(245,158,11,.25)}
+  .badge-violet{background:linear-gradient(135deg, rgba(139,92,246,.15), rgba(139,92,246,.05));color:#a78bfa;border-color:rgba(139,92,246,.25)}
+  .badge-orange{background:linear-gradient(135deg, rgba(249,115,22,.15), rgba(249,115,22,.05));color:#fb923c;border-color:rgba(249,115,22,.25)}
+  .badge-emerald{background:linear-gradient(135deg, rgba(16,185,129,.15), rgba(16,185,129,.05));color:#34d399;border-color:rgba(16,185,129,.25)}
+  .badge-slate{background:linear-gradient(135deg, rgba(100,116,139,.15), rgba(100,116,139,.05));color:#94a3b8;border-color:rgba(100,116,139,.25)}
+  .badge-cyan{background:linear-gradient(135deg, rgba(0,212,255,.15), rgba(0,212,255,.05));color:#00d4ff;border-color:rgba(0,212,255,.25)}
+
+  /* MINI PROGRESS BAR */
+  .mini-bar{width:70px;height:5px;background:#1e293b;border-radius:3px;overflow:hidden;box-shadow:inset 0 1px 2px rgba(0,0,0,0.5)}
+  .mini-fill{height:100%;border-radius:3px;transition:width .6s ease}
+  .mini-cyan{background:linear-gradient(90deg,#00d4ff,#0ea5e9)}
+  .mini-violet{background:linear-gradient(90deg,#8b5cf6,#6d28d9)}
+  .mini-emerald{background:linear-gradient(90deg,#10b981,#059669)}
+  .mini-orange{background:linear-gradient(90deg,#f97316,#dc2626)}
+
+  /* SCROLLBAR */
+  ::-webkit-scrollbar{width:6px;height:6px}
+  ::-webkit-scrollbar-track{background:#0c1524}
+  ::-webkit-scrollbar-thumb{background:#1e3a5f;border-radius:3px}
+  ::-webkit-scrollbar-thumb:hover{background:#2a4d7a}
+
+  /* SECTION DIVIDER */
+  .section-title{font-size:.7rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin-bottom:.75rem;display:flex;align-items:center;gap:.5rem}
+  .section-title::after{content:'';flex:1;height:1px;background:var(--border)}
+
+  /* LİG BADGE */
+  .kbd{background:linear-gradient(180deg,#111e33,#0c1524);border:1px solid #1a2d4a;padding:.15rem .5rem;border-radius:.35rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;color:#64748b;box-shadow:0 2px 4px rgba(0,0,0,.2)}
+
+  /* INFO STRIP */
+  .info-strip{background:linear-gradient(90deg,rgba(0,212,255,.06),rgba(139,92,246,.06));border:1px solid rgba(0,212,255,.12);border-radius:.6rem;padding:.6rem 1rem;font-size:.72rem;color:#94a3b8}
+</style>
+</head>
+<body>
+
+<!-- ═══ HEADER ═══════════════════════════════════════════════════ -->
+<header style="margin-bottom:2rem;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-start;gap:1rem">
+  <div>
+    <div class="header-sub">Otonom Yapay Zeka • Kantitatif Analiz Platformu</div>
+    <h1 class="header-title">KANTİTATİF ALGORİTMA MASASI</h1>
+    <div style="font-size:.7rem;color:#334155;margin-top:.3rem;font-family:'JetBrains Mono',monospace">
+      v13.0.0 &nbsp;•&nbsp; 275 RESOLVED &nbsp;•&nbsp; 1 PENDING
+    </div>
+  </div>
+  <div style="display:flex;flex-direction:column;align-items:flex-end;gap:.5rem">
+    <div class="card" style="padding:.5rem 1rem;display:flex;align-items:center;gap:.6rem;border-radius:.75rem">
+      <div class="dot"></div>
+      <span style="font-size:.8rem;font-weight:600;color:#e2e8f0">Motor Aktif</span>
+      <span id="live-clock" style="font-size:.75rem;color:#00d4ff;font-family:'JetBrains Mono',monospace;letter-spacing:0.05em;background:rgba(0,212,255,0.1);padding:0.1rem 0.4rem;border-radius:0.25rem">31.03.2026 00:00:01</span>
+    </div>
+    <div style="display:flex;gap:.4rem">
+      <span class="kbd">GBM ✓</span>
+      <span class="kbd">ELO ✓</span>
+      <span class="kbd">Poisson ✓</span>
+      <span class="kbd">Kelly ✓</span>
+    </div>
+  </div>
+</header>
+
+<!-- ═══ METRİK KARTLAR ═══════════════════════════════════════════ -->
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin-bottom:1.5rem">
+
+  <div class="card card-glow-cyan" style="padding:1.5rem;border-top:2px solid var(--cyan)">
+    <div class="metric-label">📦 Simüle Bankroll</div>
+    <div class="metric-val" style="color:var(--cyan)">₺5,988</div>
+    <div class="metric-sub" style="color:#ef4444">₺4,012 &nbsp;toplam kâr</div>
+    <div style="margin-top:.8rem;height:3px;background:#1e293b;border-radius:2px;overflow:hidden">
+      <div style="height:100%;width:29.94%;background:linear-gradient(90deg,var(--cyan),#0ea5e9);border-radius:2px;transition:width 1s ease"></div>
+    </div>
+  </div>
+
+  <div class="card card-glow-green" style="padding:1.5rem;border-top:2px solid var(--green)">
+    <div class="metric-label">📈 Yatırım Getiri (ROI)</div>
+    <div class="metric-val" style="color:#ef4444">-40.12%</div>
+    <div class="metric-sub">Başlangıç ₺10,000 &nbsp;|&nbsp; Bahis ₺100</div>
+  </div>
+
+  <div class="card card-glow-violet" style="padding:1.5rem;border-top:2px solid var(--violet)">
+    <div class="metric-label">🎯 Algoritma İsabeti</div>
+    <div class="metric-val" style="color:var(--violet)">35.3%</div>
+    <div class="metric-sub">97/275 kazandı &nbsp;|&nbsp; ort. 2.42x oran</div>
+  </div>
+
+  <div class="card card-glow-amber" style="padding:1.5rem;border-top:2px solid var(--amber)">
+    <div class="metric-label">⚡ Aktif Fırsatlar</div>
+    <div class="metric-val" style="color:var(--amber)">1</div>
+    <div class="metric-sub">1 taraf &nbsp;•&nbsp; 0 alternatif</div>
+  </div>
+
+</div>
+
+<!-- ═══ GRAFİKLER ════════════════════════════════════════════════ -->
+<div style="display:grid;grid-template-columns:2fr 1fr;gap:1.25rem;margin-bottom:1.5rem">
+  <div class="card" style="padding:1.25rem">
+    <div class="section-title">📈 Kasa Büyüme Eğrisi</div>
+    <div style="height:220px"><div>                        <script>window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.4.0.min.js" integrity="sha256-KEmPoupLpFyGMyGAiOsiNDbKDKAvxXAn/W+oQa0ZAfk=" crossorigin="anonymous"></script>                <div id="40bea89d-5ce8-4eef-a1d1-4b49ecc65b7b" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script>                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("40bea89d-5ce8-4eef-a1d1-4b49ecc65b7b")) {                    Plotly.newPlot(                        "40bea89d-5ce8-4eef-a1d1-4b49ecc65b7b",                        [{"fill":"tozeroy","fillcolor":"rgba(0,212,255,0.06)","line":{"color":"#00d4ff","width":2.5},"mode":"lines","y":[9900.0,10200.0,10332.0,10232.0,10132.0,10032.0,9932.0,9832.0,9732.0,9942.0,9842.0,9742.0,9927.0,9827.0,9979.0,9879.0,10051.0,9951.0,9851.0,9751.0,10072.0,10199.0,10391.0,10291.0,10489.0,10767.0,10990.0,10890.0,10790.0,11021.0,10921.0,11098.0,11415.0,11645.0,11545.0,11445.0,11345.0,11245.0,11595.0,11495.0,11395.0,11295.0,11640.0,11540.0,11639.0,11730.0,11813.0,11899.0,11995.0,12092.0,11992.0,12084.0,12172.0,12072.0,12170.0,12070.0,12161.0,12061.0,12157.0,12256.0,12348.0,12248.0,12465.0,12365.0,12265.0,12509.0,12409.0,12514.0,12414.0,12714.0,12866.0,12766.0,12666.0,12936.0,12836.0,12736.0,12991.0,12891.0,13161.0,13266.0,13451.0,13351.0,13251.0,13521.0,13421.0,13321.0,13437.0,13549.0,13652.0,13552.0,13452.0,13352.0,13462.0,13362.0,13262.0,13356.0,13442.0,13342.0,13428.0,13513.0,13601.0,13693.0,13786.0,13686.0,13839.0,13739.0,13928.0,13828.0,13728.0,13822.0,13722.0,13810.0,13710.0,13803.0,13703.0,13603.0,13503.0,13613.0,13802.0,13702.0,13602.0,13502.0,13596.0,13496.0,13649.0,13741.0,13641.0,13541.0,13627.0,13710.0,13795.0,13882.0,13974.0,14067.0,14155.0,14247.0,14147.0,14047.0,13947.0,14041.0,14135.0,14035.0,14121.0,14021.0,14104.0,14189.0,14276.0,14368.0,14461.0,14549.0,14449.0,14541.0,14441.0,14341.0,14435.0,14529.0,14637.0,14537.0,14645.0,14545.0,14445.0,14345.0,14480.0,14380.0,14514.0,14882.0,14782.0,14682.0,14582.0,14697.0,14597.0,14497.0,14397.0,14297.0,14449.0,14349.0,14459.0,14572.0,14472.0,14372.0,14272.0,14172.0,14072.0,13972.0,13872.0,13772.0,13672.0,13572.0,13472.0,13372.0,13272.0,13172.0,13072.0,12972.0,12872.0,12772.0,12672.0,12572.0,12472.0,12372.0,12272.0,12172.0,12072.0,11972.0,11872.0,11772.0,11672.0,11572.0,11472.0,11372.0,11272.0,11172.0,11072.0,10972.0,10872.0,10772.0,10672.0,10572.0,10472.0,10372.0,10272.0,10172.0,10072.0,9972.0,9872.0,9772.0,9672.0,9572.0,9472.0,9372.0,9272.0,9172.0,9072.0,8972.0,8872.0,8772.0,8672.0,8572.0,8472.0,8372.0,8272.0,8172.0,8072.0,7972.0,7872.0,7772.0,7672.0,7572.0,7472.0,7372.0,7272.0,7172.0,7305.0,7205.0,7105.0,7005.0,7134.0,7266.0,7166.0,7066.0,6966.0,7078.0,6978.0,6878.0,6778.0,6888.0,6788.0,6688.0,6588.0,6488.0,6388.0,6288.0,6188.0,6088.0,5988.0],"type":"scatter"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"shapes":[{"fillcolor":"rgba(16,185,129,0.04)","line":{"width":0},"type":"rect","x0":0,"x1":1,"xref":"x domain","y0":10000.0,"y1":14882.0,"yref":"y"},{"line":{"color":"#334155","dash":"dot"},"type":"line","x0":0,"x1":1,"xref":"x domain","y0":10000.0,"y1":10000.0,"yref":"y"}],"annotations":[{"font":{"color":"#475569"},"showarrow":false,"text":"Ba\u015flang\u0131\u00e7","x":1,"xanchor":"right","xref":"x domain","y":10000.0,"yanchor":"bottom","yref":"y"}],"font":{"color":"#64748b","family":"Inter"},"margin":{"l":0,"r":0,"t":8,"b":0},"xaxis":{"showgrid":true,"gridcolor":"#1e293b","zeroline":false,"title":{"text":"Ma\u00e7"}},"yaxis":{"showgrid":true,"gridcolor":"#1e293b","tickprefix":"\u20ba"},"paper_bgcolor":"rgba(0,0,0,0)","plot_bgcolor":"rgba(0,0,0,0)","showlegend":false},                        {"displayModeBar": false, "responsive": true}                    )                };            </script>        </div></div>
+  </div>
+  <div class="card" style="padding:1.25rem">
+    <div class="section-title">🎯 Win Rate Göstergesi</div>
+    <div style="height:180px"><div>                            <div id="227e94d5-1025-43b6-ba92-55c16a373ec0" class="plotly-graph-div" style="height:200px; width:100%;"></div>            <script>                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("227e94d5-1025-43b6-ba92-55c16a373ec0")) {                    Plotly.newPlot(                        "227e94d5-1025-43b6-ba92-55c16a373ec0",                        [{"delta":{"reference":50,"suffix":"%","valueformat":".1f"},"gauge":{"axis":{"range":[0,100],"tickcolor":"#334155","tickfont":{"color":"#475569"}},"bar":{"color":"#00d4ff","thickness":0.25},"bgcolor":"rgba(0,0,0,0)","borderwidth":0,"steps":[{"color":"rgba(239,68,68,0.15)","range":[0,40]},{"color":"rgba(234,179,8,0.15)","range":[40,55]},{"color":"rgba(16,185,129,0.15)","range":[55,100]}],"threshold":{"line":{"color":"#f59e0b","width":2},"thickness":0.9,"value":55}},"mode":"gauge+number+delta","number":{"font":{"color":"#00d4ff","family":"Inter","size":36},"suffix":"%"},"value":35.27272727272727,"type":"indicator"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"font":{"color":"#94a3b8","family":"Inter"},"margin":{"l":20,"r":20,"t":30,"b":0},"paper_bgcolor":"rgba(0,0,0,0)","height":200},                        {"displayModeBar": false, "responsive": true}                    )                };            </script>        </div></div>
+    <div style="text-align:center;font-size:.7rem;color:var(--muted);margin-top:.25rem">
+      <span style="color:#ef4444">■</span> &lt;40% &nbsp;
+      <span style="color:#f59e0b">■</span> 40-55% &nbsp;
+      <span style="color:#10b981">■</span> &gt;55%
+    </div>
+  </div>
+</div>
+
+<div class="card" style="padding:1.25rem;margin-bottom:1.5rem">
+  <div class="section-title">🏅 Lig Bazında Kâr/Zarar Analizi</div>
+  <div style="height:200px"><div>                            <div id="71e55c1c-d3c5-4277-b41d-40dc50c020a0" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script>                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("71e55c1c-d3c5-4277-b41d-40dc50c020a0")) {                    Plotly.newPlot(                        "71e55c1c-d3c5-4277-b41d-40dc50c020a0",                        [{"marker":{"color":["#ef4444","#ef4444","#ef4444","#ef4444","#ef4444","#ef4444","#10b981","#10b981","#10b981","#10b981"],"line":{"width":0}},"orientation":"h","text":["\u20ba-2227","\u20ba-807","\u20ba-615","\u20ba-567","\u20ba-507","\u20ba-355","\u20ba+170","\u20ba+196","\u20ba+244","\u20ba+456"],"textfont":{"color":"#94a3b8","size":11},"textposition":"auto","x":[-2227.0,-807.0,-615.0,-567.0,-507.0,-355.0,170.0,196.0,244.0,456.0],"y":["Eredivisie","Bundesliga","Championship","Primeira Liga","Premier League","La Liga","Ligue 1","Serie A","Brasileirao","Champions League"],"type":"bar"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"font":{"color":"#64748b","family":"Inter"},"margin":{"l":0,"r":0,"t":8,"b":0},"xaxis":{"showgrid":true,"gridcolor":"#1e293b","title":{"text":"Net K\u00e2r (\u20ba)"}},"yaxis":{"showgrid":false},"paper_bgcolor":"rgba(0,0,0,0)","plot_bgcolor":"rgba(0,0,0,0)","showlegend":false},                        {"displayModeBar": false, "responsive": true}                    )                };            </script>        </div></div>
+</div>
+
+<!-- ═══ SEKMELİ TABLO PANELİ ════════════════════════════════════ -->
+<div class="card" style="overflow:hidden">
+  <div class="tabs-bar">
+    <button onclick="T('taraf')" class="tab active" id="t-taraf">⚽ Taraf (1)</button>
+    <button onclick="T('kg')"    class="tab"        id="t-kg">🎯 KG Var/Yok (1)</button>
+    <button onclick="T('uo')"   class="tab"        id="t-uo">📊 Üst/Alt (1)</button>
+    <button onclick="T('alt')"  class="tab"        id="t-alt">🔷 Diğer (0)</button>
+    <button onclick="T('canli')" class="tab"       id="t-canli">🔴 CANLI (0)</button>
+    <button onclick="T('gec')"  class="tab"        id="t-gec">📋 Geçmiş (275)</button>
+  </div>
+
+  <!-- TARAF -->
+  <div id="p-taraf" class="tab-pane active">
+    <div style="overflow:auto;max-height:560px">
+      <table style="width:100%;border-collapse:collapse">
+        <thead><tr>
+          <th class="thead-cell">Tarih</th><th class="thead-cell">Maç</th><th class="thead-cell">Lig</th>
+          <th class="thead-cell">Tahmin</th><th class="thead-cell" style="text-align:right">Oran</th>
+          <th class="thead-cell tt" style="text-align:right" data-tip="Tahmin Edilen Saf Olasılık - Piyasa Olasılığı (Edge)">Edge</th>
+          <th class="thead-cell tt" data-tip="Model Olasılığı">Olasılık</th>
+          <th class="thead-cell tt" style="text-align:center" data-tip="Karşılıklı Gol Bulma İhtimali">KG%</th>
+          <th class="thead-cell tt" style="text-align:center" data-tip="Deplasman ve Ev Sahibinin Toplam 3+ Gol Bulma İhtimali">2.5Üz</th>
+          <th class="thead-cell tt" style="text-align:center" data-tip="Referans Pinnacle Borsası Durumu">Pin</th>
+          <th class="thead-cell tt" style="text-align:center" data-tip="Erken Düşen Sharp Oranı Algılayıcısı">Sharp</th>
+        </tr></thead>
+        <tbody>
+<tr class="trow">
+  <td class="px-4 py-3"><div class="tabular-nums" style="line-height:1.2"><div style="color:#94a3b8;font-size:.72rem">03.04</div><div style="color:#00d4ff;font-size:.8rem;font-weight:700;font-family:'JetBrains Mono',monospace">21:45</div></div></td>
+  <td class="px-4 py-3">
+    <div class="flex flex-col gap-0.5">
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(14,165,233,.18);color:#38bdf8;padding:.05rem .35rem;border-radius:.25rem;font-weight:700;letter-spacing:.04em">EV</span><span class="text-slate-100 font-semibold text-sm">Paris Saint-Germain FC</span></div>
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(244,63,94,.18);color:#fb7185;padding:.05rem .35rem;border-radius:.25rem;font-weight:700;letter-spacing:.04em">DEP</span><span class="text-slate-400 text-sm">Toulouse FC</span></div>
+      
+      
+      <div class="mt-1.5 text-[0.65rem] text-slate-400 italic flex items-start gap-1 p-1.5 rounded" style="background:rgba(255,255,255,0.03); border-left: 2px solid #00d4ff"><span title="Yapay Zeka Yorumu">🤖</span> <span class="leading-tight">[{"label": "Yüksek Değer (Value)", "score": "+3", "type": "avantaj"}, {"label": "Modeller Hemfikir", "score": "+2", "type": "avantaj"}]</span></div>
+    </div>
+  </td>
+  <td class="px-4 py-3 text-slate-500 text-xs">Ligue 1</td>
+  <td class="px-4 py-3"><span class="badge badge-sky">🛡 Paris Saint-Germain FC Yenilmez (1-X)</span></td>
+  <td class="px-4 py-3 text-right text-white font-bold tabular-nums">1.22</td>
+  <td class="px-4 py-3 text-right tabular-nums text-emerald-400 font-bold text-sm">+0.1300</td>
+  <td class="px-4 py-3"><div class="flex items-center gap-2"><div class="mini-bar"><div class="mini-fill mini-cyan" style="width:88%"></div></div><span class="text-xs text-slate-400">88%</span></div></td>
+  <td class="px-4 py-3 text-center text-xs text-violet-400">55%</td>
+  <td class="px-4 py-3 text-center text-xs text-cyan-400">64%</td>
+  <td class="px-4 py-3 text-center"><span class="text-slate-700">✗</span></td>
+  <td class="px-4 py-3 text-center"><span class="text-slate-700 text-xs">—</span></td>
+</tr></tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- KG -->
+  <div id="p-kg" class="tab-pane">
+    <div style="padding:1rem">
+      <div class="info-strip">⚽ <b style="color:#a78bfa">KG Var</b> = BTS ≥ %55 her iki takım gol atar &nbsp;|&nbsp; <b style="color:#fb923c">KG Yok</b> = BTS ≤ %45 en az bir takım golsüz bitirir</div>
+    </div>
+    <div style="overflow:auto;max-height:510px">
+      <table style="width:100%;border-collapse:collapse">
+        <thead><tr>
+          <th class="thead-cell">Tarih</th><th class="thead-cell">Maç</th><th class="thead-cell">Lig</th>
+          <th class="thead-cell">KG Tahmini</th><th class="thead-cell tt" data-tip="Both Teams to Score (İki Takım Da Gol Atar)">BTS Olasılığı</th>
+          <th class="thead-cell tt" style="text-align:center" data-tip="Poisson Ev + Dep Beklenen Golü Uzay Toplamı">λ Lambda</th>
+          <th class="thead-cell" style="text-align:center">1.5Üz</th>
+          <th class="thead-cell" style="text-align:center">2.5Üz</th>
+          <th class="thead-cell" style="text-align:center">3.5Üz</th>
+          <th class="thead-cell" style="text-align:right">Oran</th>
+        </tr></thead>
+        <tbody>
+<tr class="trow">
+  <td class="px-4 py-3"><div class="tabular-nums" style="line-height:1.2"><div style="color:#94a3b8;font-size:.72rem">03.04</div><div style="color:#00d4ff;font-size:.8rem;font-weight:700;font-family:'JetBrains Mono',monospace">21:45</div></div></td>
+  <td class="px-4 py-3">
+    <div class="flex flex-col gap-0.5">
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(14,165,233,.18);color:#38bdf8;padding:.05rem .35rem;border-radius:.25rem;font-weight:700;letter-spacing:.04em">EV</span><span class="text-slate-100 font-semibold text-sm">Paris Saint-Germain FC</span></div>
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(244,63,94,.18);color:#fb7185;padding:.05rem .35rem;border-radius:.25rem;font-weight:700;letter-spacing:.04em">DEP</span><span class="text-slate-400 text-sm">Toulouse FC</span></div>
+      
+      
+      <div class="mt-1.5 text-[0.65rem] text-slate-400 italic flex items-start gap-1 p-1.5 rounded" style="background:rgba(255,255,255,0.03); border-left: 2px solid #00d4ff"><span title="Yapay Zeka Yorumu">🤖</span> <span class="leading-tight">[{"label": "Yüksek Değer (Value)", "score": "+3", "type": "avantaj"}, {"label": "Modeller Hemfikir", "score": "+2", "type": "avantaj"}]</span></div>
+    </div>
+  </td>
+  <td class="px-4 py-3 text-slate-500 text-xs">Ligue 1</td>
+  <td class="px-4 py-3"><span class="badge badge-violet">⚽ İki Takım da Gol Atar</span></td>
+  <td class="px-4 py-3"><div class="flex items-center gap-2"><div class="mini-bar"><div class="mini-fill mini-violet" style="width:55%"></div></div><span class="text-xs text-slate-400">55%</span></div></td>
+  <td class="px-4 py-3 text-center text-xs text-slate-400">λ 0.00+0.00=0.00</td>
+  <td class="px-4 py-3 text-center text-xs text-blue-400">83%</td>
+  <td class="px-4 py-3 text-center text-xs text-cyan-400">64%</td>
+  <td class="px-4 py-3 text-center text-xs text-indigo-400">42%</td>
+  <td class="px-4 py-3 text-right text-white font-bold">1.22</td>
+</tr></tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ÜST/ALT -->
+  <div id="p-uo" class="tab-pane">
+    <div style="padding:1rem">
+      <div class="info-strip">📈 <b style="color:#34d399">2.5 ÜST</b> = Olasılık &gt;%60 (3+ gol bekleniyor) &nbsp;|&nbsp; <b style="color:#fb923c">2.5 ALT</b> = Olasılık &lt;%40 (0-2 gol bekleniyor)</div>
+    </div>
+    <div style="overflow:auto;max-height:510px">
+      <table style="width:100%;border-collapse:collapse">
+        <thead><tr>
+          <th class="thead-cell">Tarih</th><th class="thead-cell">Maç</th><th class="thead-cell">Lig</th>
+          <th class="thead-cell">Tahmin</th><th class="thead-cell tt" style="text-align:center" data-tip="Maçtaki Beklenen Toplam Gol">λ Toplam</th>
+          <th class="thead-cell">2.5Üz Olasılık</th>
+          <th class="thead-cell" style="text-align:center">1.5Üz</th>
+          <th class="thead-cell tt" style="text-align:center" data-tip="Karşılıklı Gol İhtimali">KG%</th>
+          <th class="thead-cell" style="text-align:right">Oran</th>
+          <th class="thead-cell tt" style="text-align:right" data-tip="Model Kenarı (Finansal Fark)">Edge</th>
+        </tr></thead>
+        <tbody>
+<tr class="trow">
+  <td class="px-4 py-3"><div class="tabular-nums" style="line-height:1.2"><div style="color:#94a3b8;font-size:.72rem">03.04</div><div style="color:#00d4ff;font-size:.8rem;font-weight:700;font-family:'JetBrains Mono',monospace">21:45</div></div></td>
+  <td class="px-4 py-3">
+    <div class="flex flex-col gap-0.5">
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(14,165,233,.18);color:#38bdf8;padding:.05rem .35rem;border-radius:.25rem;font-weight:700;letter-spacing:.04em">EV</span><span class="text-slate-100 font-semibold text-sm">Paris Saint-Germain FC</span></div>
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(244,63,94,.18);color:#fb7185;padding:.05rem .35rem;border-radius:.25rem;font-weight:700;letter-spacing:.04em">DEP</span><span class="text-slate-400 text-sm">Toulouse FC</span></div>
+      
+      
+      <div class="mt-1.5 text-[0.65rem] text-slate-400 italic flex items-start gap-1 p-1.5 rounded" style="background:rgba(255,255,255,0.03); border-left: 2px solid #00d4ff"><span title="Yapay Zeka Yorumu">🤖</span> <span class="leading-tight">[{"label": "Yüksek Değer (Value)", "score": "+3", "type": "avantaj"}, {"label": "Modeller Hemfikir", "score": "+2", "type": "avantaj"}]</span></div>
+    </div>
+  </td>
+  <td class="px-4 py-3 text-slate-500 text-xs">Ligue 1</td>
+  <td class="px-4 py-3"><span class="badge badge-emerald text-base font-black">2.5 ÜST</span></td>
+  <td class="px-4 py-3 text-center text-xs text-slate-400">λ 0.00</td>
+  <td class="px-4 py-3"><div class="flex items-center gap-2"><div class="mini-bar"><div class="mini-fill mini-emerald" style="width:64%"></div></div><span class="text-xs text-slate-400">64%</span></div></td>
+  <td class="px-4 py-3 text-center text-xs text-blue-400">83%</td>
+  <td class="px-4 py-3 text-center text-xs text-violet-400">55%</td>
+  <td class="px-4 py-3 text-right text-white font-bold">1.22</td>
+  <td class="px-4 py-3 text-right text-emerald-400 font-bold text-xs">0.1300</td>
+</tr></tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ALTERNATİF -->
+  <div id="p-alt" class="tab-pane">
+    <div style="overflow:auto;max-height:560px">
+      <table style="width:100%;border-collapse:collapse">
+        <thead><tr>
+          <th class="thead-cell">Tarih</th><th class="thead-cell">Maç</th><th class="thead-cell">Lig</th>
+          <th class="thead-cell">Tahmin</th><th class="thead-cell" style="text-align:right">Oran</th>
+          <th class="thead-cell tt" style="text-align:right" data-tip="Banka Hatası Farkı">Edge</th><th class="thead-cell tt" data-tip="Model Olasılığı">Olasılık</th>
+        </tr></thead>
+        <tbody><tr><td colspan="7" style="padding:3rem;text-align:center;color:#334155">Alternatif market yok.</td></tr></tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- CANLI -->
+  <div id="p-canli" class="tab-pane">
+    <div style="overflow:auto;max-height:560px">
+      <table style="width:100%;border-collapse:collapse">
+        <thead><tr>
+          <th class="thead-cell">Dakika</th><th class="thead-cell">Maç</th><th class="thead-cell">Lig</th>
+          <th class="thead-cell">Live Sinyal</th><th class="thead-cell" style="text-align:right">Anlık Oran</th>
+          <th class="thead-cell tt" style="text-align:right" data-tip="Canlı Oran Farkı">Live Edge</th><th class="thead-cell tt" data-tip="Kalan Dakikaya Göre Olasılık">Olasılık</th>
+        </tr></thead>
+        <tbody><tr><td colspan="7" style="padding:3rem;text-align:center;color:#334155">Şu an aktif canlı sinyal yok.</td></tr></tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- GEÇMİŞ -->
+  <div id="p-gec" class="tab-pane">
+    <div style="overflow:auto;max-height:560px">
+      <table style="width:100%;border-collapse:collapse">
+        <thead><tr>
+          <th class="thead-cell">Tarih</th><th class="thead-cell">Maç</th><th class="thead-cell">Lig</th>
+          <th class="thead-cell">Tahmin</th><th class="thead-cell" style="text-align:center">Sonuç</th>
+          <th class="thead-cell" style="text-align:right">Oran</th>
+          <th class="thead-cell" style="text-align:right">Kâr/Zarar</th>
+        </tr></thead>
+        <tbody>
+<tr class="trow">
+  <td class="px-4 py-3"><div class="tabular-nums" style="line-height:1.2"><div style="color:#94a3b8;font-size:.72rem">21.03</div><div style="color:#00d4ff;font-size:.8rem;font-weight:700;font-family:'JetBrains Mono',monospace">19:00</div></div></td>
+  <td class="px-4 py-3">
+    <div class="flex flex-col gap-0.5">
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(14,165,233,.18);color:#38bdf8;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">EV</span><span class="text-slate-200 font-medium text-sm">Toulouse FC</span></div>
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(244,63,94,.18);color:#fb7185;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">DEP</span><span class="text-slate-400 text-sm">FC Lorient</span></div>
+    </div>
+  </td>
+  <td class="px-4 py-3 text-slate-500 text-xs">Ligue 1</td>
+  <td class="px-4 py-3"><span class="badge badge-slate">KG Var (Karşılıklı Gol)</span></td>
+  <td class="px-4 py-3 text-center text-lg">❌</td>
+  <td class="px-4 py-3 text-right text-slate-400 tabular-nums">1.85</td>
+  <td class="px-4 py-3 text-right tabular-nums text-red-400 font-bold">₺-100</td>
+</tr>
+<tr class="trow">
+  <td class="px-4 py-3"><div class="tabular-nums" style="line-height:1.2"><div style="color:#94a3b8;font-size:.72rem">22.03</div><div style="color:#00d4ff;font-size:.8rem;font-weight:700;font-family:'JetBrains Mono',monospace">19:15</div></div></td>
+  <td class="px-4 py-3">
+    <div class="flex flex-col gap-0.5">
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(14,165,233,.18);color:#38bdf8;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">EV</span><span class="text-slate-200 font-medium text-sm">Stade Rennais FC 1901</span></div>
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(244,63,94,.18);color:#fb7185;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">DEP</span><span class="text-slate-400 text-sm">FC Metz</span></div>
+    </div>
+  </td>
+  <td class="px-4 py-3 text-slate-500 text-xs">Ligue 1</td>
+  <td class="px-4 py-3"><span class="badge badge-sky">🛡 Stade Rennais FC 1901 Yenilmez (1-X)</span></td>
+  <td class="px-4 py-3 text-center text-lg">❌</td>
+  <td class="px-4 py-3 text-right text-slate-400 tabular-nums">1.22</td>
+  <td class="px-4 py-3 text-right tabular-nums text-red-400 font-bold">₺-100</td>
+</tr>
+<tr class="trow">
+  <td class="px-4 py-3"><div class="tabular-nums" style="line-height:1.2"><div style="color:#94a3b8;font-size:.72rem">22.03</div><div style="color:#00d4ff;font-size:.8rem;font-weight:700;font-family:'JetBrains Mono',monospace">19:15</div></div></td>
+  <td class="px-4 py-3">
+    <div class="flex flex-col gap-0.5">
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(14,165,233,.18);color:#38bdf8;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">EV</span><span class="text-slate-200 font-medium text-sm">Stade Rennais FC 1901</span></div>
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(244,63,94,.18);color:#fb7185;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">DEP</span><span class="text-slate-400 text-sm">FC Metz</span></div>
+    </div>
+  </td>
+  <td class="px-4 py-3 text-slate-500 text-xs">Ligue 1</td>
+  <td class="px-4 py-3"><span class="badge badge-emerald">⚽ En Az 2 Gol Olur (1.5 Üst)</span></td>
+  <td class="px-4 py-3 text-center text-lg">❌</td>
+  <td class="px-4 py-3 text-right text-slate-400 tabular-nums">1.3</td>
+  <td class="px-4 py-3 text-right tabular-nums text-red-400 font-bold">₺-100</td>
+</tr>
+<tr class="trow">
+  <td class="px-4 py-3"><div class="tabular-nums" style="line-height:1.2"><div style="color:#94a3b8;font-size:.72rem">22.03</div><div style="color:#00d4ff;font-size:.8rem;font-weight:700;font-family:'JetBrains Mono',monospace">19:15</div></div></td>
+  <td class="px-4 py-3">
+    <div class="flex flex-col gap-0.5">
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(14,165,233,.18);color:#38bdf8;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">EV</span><span class="text-slate-200 font-medium text-sm">Olympique de Marseille</span></div>
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(244,63,94,.18);color:#fb7185;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">DEP</span><span class="text-slate-400 text-sm">Lille OSC</span></div>
+    </div>
+  </td>
+  <td class="px-4 py-3 text-slate-500 text-xs">Ligue 1</td>
+  <td class="px-4 py-3"><span class="badge badge-emerald">⚽ En Az 2 Gol Olur (1.5 Üst)</span></td>
+  <td class="px-4 py-3 text-center text-lg">❌</td>
+  <td class="px-4 py-3 text-right text-slate-400 tabular-nums">1.3</td>
+  <td class="px-4 py-3 text-right tabular-nums text-red-400 font-bold">₺-100</td>
+</tr>
+<tr class="trow">
+  <td class="px-4 py-3"><div class="tabular-nums" style="line-height:1.2"><div style="color:#94a3b8;font-size:.72rem">22.03</div><div style="color:#00d4ff;font-size:.8rem;font-weight:700;font-family:'JetBrains Mono',monospace">17:00</div></div></td>
+  <td class="px-4 py-3">
+    <div class="flex flex-col gap-0.5">
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(14,165,233,.18);color:#38bdf8;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">EV</span><span class="text-slate-200 font-medium text-sm">Olympique Lyonnais</span></div>
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(244,63,94,.18);color:#fb7185;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">DEP</span><span class="text-slate-400 text-sm">AS Monaco FC</span></div>
+    </div>
+  </td>
+  <td class="px-4 py-3 text-slate-500 text-xs">Ligue 1</td>
+  <td class="px-4 py-3"><span class="badge badge-emerald">⚽ En Az 2 Gol Olur (1.5 Üst)</span></td>
+  <td class="px-4 py-3 text-center text-lg">❌</td>
+  <td class="px-4 py-3 text-right text-slate-400 tabular-nums">1.3</td>
+  <td class="px-4 py-3 text-right tabular-nums text-red-400 font-bold">₺-100</td>
+</tr>
+<tr class="trow">
+  <td class="px-4 py-3"><div class="tabular-nums" style="line-height:1.2"><div style="color:#94a3b8;font-size:.72rem">21.03</div><div style="color:#00d4ff;font-size:.8rem;font-weight:700;font-family:'JetBrains Mono',monospace">23:00</div></div></td>
+  <td class="px-4 py-3">
+    <div class="flex flex-col gap-0.5">
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(14,165,233,.18);color:#38bdf8;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">EV</span><span class="text-slate-200 font-medium text-sm">OGC Nice</span></div>
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(244,63,94,.18);color:#fb7185;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">DEP</span><span class="text-slate-400 text-sm">Paris Saint-Germain FC</span></div>
+    </div>
+  </td>
+  <td class="px-4 py-3 text-slate-500 text-xs">Ligue 1</td>
+  <td class="px-4 py-3"><span class="badge badge-rose">🛡 Paris Saint-Germain FC Yenilmez (X-2)</span></td>
+  <td class="px-4 py-3 text-center text-lg">❌</td>
+  <td class="px-4 py-3 text-right text-slate-400 tabular-nums">1.22</td>
+  <td class="px-4 py-3 text-right tabular-nums text-red-400 font-bold">₺-100</td>
+</tr>
+<tr class="trow">
+  <td class="px-4 py-3"><div class="tabular-nums" style="line-height:1.2"><div style="color:#94a3b8;font-size:.72rem">21.03</div><div style="color:#00d4ff;font-size:.8rem;font-weight:700;font-family:'JetBrains Mono',monospace">23:00</div></div></td>
+  <td class="px-4 py-3">
+    <div class="flex flex-col gap-0.5">
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(14,165,233,.18);color:#38bdf8;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">EV</span><span class="text-slate-200 font-medium text-sm">OGC Nice</span></div>
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(244,63,94,.18);color:#fb7185;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">DEP</span><span class="text-slate-400 text-sm">Paris Saint-Germain FC</span></div>
+    </div>
+  </td>
+  <td class="px-4 py-3 text-slate-500 text-xs">Ligue 1</td>
+  <td class="px-4 py-3"><span class="badge badge-emerald">⚽ En Az 2 Gol Olur (1.5 Üst)</span></td>
+  <td class="px-4 py-3 text-center text-lg">❌</td>
+  <td class="px-4 py-3 text-right text-slate-400 tabular-nums">1.3</td>
+  <td class="px-4 py-3 text-right tabular-nums text-red-400 font-bold">₺-100</td>
+</tr>
+<tr class="trow">
+  <td class="px-4 py-3"><div class="tabular-nums" style="line-height:1.2"><div style="color:#94a3b8;font-size:.72rem">21.03</div><div style="color:#00d4ff;font-size:.8rem;font-weight:700;font-family:'JetBrains Mono',monospace">19:00</div></div></td>
+  <td class="px-4 py-3">
+    <div class="flex flex-col gap-0.5">
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(14,165,233,.18);color:#38bdf8;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">EV</span><span class="text-slate-200 font-medium text-sm">Toulouse FC</span></div>
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(244,63,94,.18);color:#fb7185;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">DEP</span><span class="text-slate-400 text-sm">FC Lorient</span></div>
+    </div>
+  </td>
+  <td class="px-4 py-3 text-slate-500 text-xs">Ligue 1</td>
+  <td class="px-4 py-3"><span class="badge badge-emerald">⚽ En Az 2 Gol Olur (1.5 Üst)</span></td>
+  <td class="px-4 py-3 text-center text-lg">❌</td>
+  <td class="px-4 py-3 text-right text-slate-400 tabular-nums">1.3</td>
+  <td class="px-4 py-3 text-right tabular-nums text-red-400 font-bold">₺-100</td>
+</tr>
+<tr class="trow">
+  <td class="px-4 py-3"><div class="tabular-nums" style="line-height:1.2"><div style="color:#94a3b8;font-size:.72rem">20.03</div><div style="color:#00d4ff;font-size:.8rem;font-weight:700;font-family:'JetBrains Mono',monospace">22:45</div></div></td>
+  <td class="px-4 py-3">
+    <div class="flex flex-col gap-0.5">
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(14,165,233,.18);color:#38bdf8;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">EV</span><span class="text-slate-200 font-medium text-sm">Racing Club de Lens</span></div>
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(244,63,94,.18);color:#fb7185;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">DEP</span><span class="text-slate-400 text-sm">Angers SCO</span></div>
+    </div>
+  </td>
+  <td class="px-4 py-3 text-slate-500 text-xs">Ligue 1</td>
+  <td class="px-4 py-3"><span class="badge badge-sky">🛡 Racing Club de Lens Yenilmez (1-X)</span></td>
+  <td class="px-4 py-3 text-center text-lg">❌</td>
+  <td class="px-4 py-3 text-right text-slate-400 tabular-nums">1.22</td>
+  <td class="px-4 py-3 text-right tabular-nums text-red-400 font-bold">₺-100</td>
+</tr>
+<tr class="trow">
+  <td class="px-4 py-3"><div class="tabular-nums" style="line-height:1.2"><div style="color:#94a3b8;font-size:.72rem">21.03</div><div style="color:#00d4ff;font-size:.8rem;font-weight:700;font-family:'JetBrains Mono',monospace">18:00</div></div></td>
+  <td class="px-4 py-3">
+    <div class="flex flex-col gap-0.5">
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(14,165,233,.18);color:#38bdf8;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">EV</span><span class="text-slate-200 font-medium text-sm">Southampton FC</span></div>
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(244,63,94,.18);color:#fb7185;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">DEP</span><span class="text-slate-400 text-sm">Oxford United FC</span></div>
+    </div>
+  </td>
+  <td class="px-4 py-3 text-slate-500 text-xs">Championship</td>
+  <td class="px-4 py-3"><span class="badge badge-sky">🏠 Southampton FC Kazanır</span></td>
+  <td class="px-4 py-3 text-center text-lg">✅</td>
+  <td class="px-4 py-3 text-right text-slate-400 tabular-nums">2.1</td>
+  <td class="px-4 py-3 text-right tabular-nums text-emerald-400 font-bold">₺+110</td>
+</tr>
+<tr class="trow">
+  <td class="px-4 py-3"><div class="tabular-nums" style="line-height:1.2"><div style="color:#94a3b8;font-size:.72rem">22.03</div><div style="color:#00d4ff;font-size:.8rem;font-weight:700;font-family:'JetBrains Mono',monospace">15:00</div></div></td>
+  <td class="px-4 py-3">
+    <div class="flex flex-col gap-0.5">
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(14,165,233,.18);color:#38bdf8;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">EV</span><span class="text-slate-200 font-medium text-sm">Newcastle United FC</span></div>
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(244,63,94,.18);color:#fb7185;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">DEP</span><span class="text-slate-400 text-sm">Sunderland AFC</span></div>
+    </div>
+  </td>
+  <td class="px-4 py-3 text-slate-500 text-xs">Premier League</td>
+  <td class="px-4 py-3"><span class="badge badge-sky">🏠 Newcastle United FC Kazanır</span></td>
+  <td class="px-4 py-3 text-center text-lg">❌</td>
+  <td class="px-4 py-3 text-right text-slate-400 tabular-nums">2.08</td>
+  <td class="px-4 py-3 text-right tabular-nums text-red-400 font-bold">₺-100</td>
+</tr>
+<tr class="trow">
+  <td class="px-4 py-3"><div class="tabular-nums" style="line-height:1.2"><div style="color:#94a3b8;font-size:.72rem">21.03</div><div style="color:#00d4ff;font-size:.8rem;font-weight:700;font-family:'JetBrains Mono',monospace">18:00</div></div></td>
+  <td class="px-4 py-3">
+    <div class="flex flex-col gap-0.5">
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(14,165,233,.18);color:#38bdf8;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">EV</span><span class="text-slate-200 font-medium text-sm">Watford FC</span></div>
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(244,63,94,.18);color:#fb7185;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">DEP</span><span class="text-slate-400 text-sm">Leicester City FC</span></div>
+    </div>
+  </td>
+  <td class="px-4 py-3 text-slate-500 text-xs">Championship</td>
+  <td class="px-4 py-3"><span class="badge badge-slate">KG Var (Karşılıklı Gol)</span></td>
+  <td class="px-4 py-3 text-center text-lg">❌</td>
+  <td class="px-4 py-3 text-right text-slate-400 tabular-nums">1.85</td>
+  <td class="px-4 py-3 text-right tabular-nums text-red-400 font-bold">₺-100</td>
+</tr>
+<tr class="trow">
+  <td class="px-4 py-3"><div class="tabular-nums" style="line-height:1.2"><div style="color:#94a3b8;font-size:.72rem">21.03</div><div style="color:#00d4ff;font-size:.8rem;font-weight:700;font-family:'JetBrains Mono',monospace">18:00</div></div></td>
+  <td class="px-4 py-3">
+    <div class="flex flex-col gap-0.5">
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(14,165,233,.18);color:#38bdf8;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">EV</span><span class="text-slate-200 font-medium text-sm">Sheffield United FC</span></div>
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(244,63,94,.18);color:#fb7185;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">DEP</span><span class="text-slate-400 text-sm">Wrexham AFC</span></div>
+    </div>
+  </td>
+  <td class="px-4 py-3 text-slate-500 text-xs">Championship</td>
+  <td class="px-4 py-3"><span class="badge badge-slate">KG Var (Karşılıklı Gol)</span></td>
+  <td class="px-4 py-3 text-center text-lg">❌</td>
+  <td class="px-4 py-3 text-right text-slate-400 tabular-nums">1.85</td>
+  <td class="px-4 py-3 text-right tabular-nums text-red-400 font-bold">₺-100</td>
+</tr>
+<tr class="trow">
+  <td class="px-4 py-3"><div class="tabular-nums" style="line-height:1.2"><div style="color:#94a3b8;font-size:.72rem">21.03</div><div style="color:#00d4ff;font-size:.8rem;font-weight:700;font-family:'JetBrains Mono',monospace">18:00</div></div></td>
+  <td class="px-4 py-3">
+    <div class="flex flex-col gap-0.5">
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(14,165,233,.18);color:#38bdf8;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">EV</span><span class="text-slate-200 font-medium text-sm">Fulham FC</span></div>
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(244,63,94,.18);color:#fb7185;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">DEP</span><span class="text-slate-400 text-sm">Burnley FC</span></div>
+    </div>
+  </td>
+  <td class="px-4 py-3 text-slate-500 text-xs">Premier League</td>
+  <td class="px-4 py-3"><span class="badge badge-sky">🏠 Fulham FC Kazanır</span></td>
+  <td class="px-4 py-3 text-center text-lg">✅</td>
+  <td class="px-4 py-3 text-right text-slate-400 tabular-nums">2.12</td>
+  <td class="px-4 py-3 text-right tabular-nums text-emerald-400 font-bold">₺+112</td>
+</tr>
+<tr class="trow">
+  <td class="px-4 py-3"><div class="tabular-nums" style="line-height:1.2"><div style="color:#94a3b8;font-size:.72rem">21.03</div><div style="color:#00d4ff;font-size:.8rem;font-weight:700;font-family:'JetBrains Mono',monospace">18:00</div></div></td>
+  <td class="px-4 py-3">
+    <div class="flex flex-col gap-0.5">
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(14,165,233,.18);color:#38bdf8;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">EV</span><span class="text-slate-200 font-medium text-sm">Watford FC</span></div>
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(244,63,94,.18);color:#fb7185;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">DEP</span><span class="text-slate-400 text-sm">Leicester City FC</span></div>
+    </div>
+  </td>
+  <td class="px-4 py-3 text-slate-500 text-xs">Championship</td>
+  <td class="px-4 py-3"><span class="badge badge-sky">🏠 Watford FC Kazanır</span></td>
+  <td class="px-4 py-3 text-center text-lg">❌</td>
+  <td class="px-4 py-3 text-right text-slate-400 tabular-nums">2.16</td>
+  <td class="px-4 py-3 text-right tabular-nums text-red-400 font-bold">₺-100</td>
+</tr>
+<tr class="trow">
+  <td class="px-4 py-3"><div class="tabular-nums" style="line-height:1.2"><div style="color:#94a3b8;font-size:.72rem">21.03</div><div style="color:#00d4ff;font-size:.8rem;font-weight:700;font-family:'JetBrains Mono',monospace">18:00</div></div></td>
+  <td class="px-4 py-3">
+    <div class="flex flex-col gap-0.5">
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(14,165,233,.18);color:#38bdf8;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">EV</span><span class="text-slate-200 font-medium text-sm">Fulham FC</span></div>
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(244,63,94,.18);color:#fb7185;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">DEP</span><span class="text-slate-400 text-sm">Burnley FC</span></div>
+    </div>
+  </td>
+  <td class="px-4 py-3 text-slate-500 text-xs">Premier League</td>
+  <td class="px-4 py-3"><span class="badge badge-rose">✈️ Burnley FC Kazanır</span></td>
+  <td class="px-4 py-3 text-center text-lg">❌</td>
+  <td class="px-4 py-3 text-right text-slate-400 tabular-nums">3.74</td>
+  <td class="px-4 py-3 text-right tabular-nums text-red-400 font-bold">₺-100</td>
+</tr>
+<tr class="trow">
+  <td class="px-4 py-3"><div class="tabular-nums" style="line-height:1.2"><div style="color:#94a3b8;font-size:.72rem">21.03</div><div style="color:#00d4ff;font-size:.8rem;font-weight:700;font-family:'JetBrains Mono',monospace">17:00</div></div></td>
+  <td class="px-4 py-3">
+    <div class="flex flex-col gap-0.5">
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(14,165,233,.18);color:#38bdf8;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">EV</span><span class="text-slate-200 font-medium text-sm">Parma Calcio 1913</span></div>
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(244,63,94,.18);color:#fb7185;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">DEP</span><span class="text-slate-400 text-sm">US Cremonese</span></div>
+    </div>
+  </td>
+  <td class="px-4 py-3 text-slate-500 text-xs">Serie A</td>
+  <td class="px-4 py-3"><span class="badge badge-sky">🏠 Parma Calcio 1913 Kazanır</span></td>
+  <td class="px-4 py-3 text-center text-lg">❌</td>
+  <td class="px-4 py-3 text-right text-slate-400 tabular-nums">2.21</td>
+  <td class="px-4 py-3 text-right tabular-nums text-red-400 font-bold">₺-100</td>
+</tr>
+<tr class="trow">
+  <td class="px-4 py-3"><div class="tabular-nums" style="line-height:1.2"><div style="color:#94a3b8;font-size:.72rem">22.03</div><div style="color:#00d4ff;font-size:.8rem;font-weight:700;font-family:'JetBrains Mono',monospace">19:15</div></div></td>
+  <td class="px-4 py-3">
+    <div class="flex flex-col gap-0.5">
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(14,165,233,.18);color:#38bdf8;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">EV</span><span class="text-slate-200 font-medium text-sm">Paris FC</span></div>
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(244,63,94,.18);color:#fb7185;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">DEP</span><span class="text-slate-400 text-sm">Le Havre AC</span></div>
+    </div>
+  </td>
+  <td class="px-4 py-3 text-slate-500 text-xs">Ligue 1</td>
+  <td class="px-4 py-3"><span class="badge badge-sky">🏠 Paris FC Kazanır</span></td>
+  <td class="px-4 py-3 text-center text-lg">✅</td>
+  <td class="px-4 py-3 text-right text-slate-400 tabular-nums">2.32</td>
+  <td class="px-4 py-3 text-right tabular-nums text-emerald-400 font-bold">₺+132</td>
+</tr>
+<tr class="trow">
+  <td class="px-4 py-3"><div class="tabular-nums" style="line-height:1.2"><div style="color:#94a3b8;font-size:.72rem">21.03</div><div style="color:#00d4ff;font-size:.8rem;font-weight:700;font-family:'JetBrains Mono',monospace">15:30</div></div></td>
+  <td class="px-4 py-3">
+    <div class="flex flex-col gap-0.5">
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(14,165,233,.18);color:#38bdf8;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">EV</span><span class="text-slate-200 font-medium text-sm">Derby County FC</span></div>
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(244,63,94,.18);color:#fb7185;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">DEP</span><span class="text-slate-400 text-sm">Birmingham City FC</span></div>
+    </div>
+  </td>
+  <td class="px-4 py-3 text-slate-500 text-xs">Championship</td>
+  <td class="px-4 py-3"><span class="badge badge-sky">🏠 Derby County FC Kazanır</span></td>
+  <td class="px-4 py-3 text-center text-lg">✅</td>
+  <td class="px-4 py-3 text-right text-slate-400 tabular-nums">2.29</td>
+  <td class="px-4 py-3 text-right tabular-nums text-emerald-400 font-bold">₺+129</td>
+</tr>
+<tr class="trow">
+  <td class="px-4 py-3"><div class="tabular-nums" style="line-height:1.2"><div style="color:#94a3b8;font-size:.72rem">21.03</div><div style="color:#00d4ff;font-size:.8rem;font-weight:700;font-family:'JetBrains Mono',monospace">18:00</div></div></td>
+  <td class="px-4 py-3">
+    <div class="flex flex-col gap-0.5">
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(14,165,233,.18);color:#38bdf8;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">EV</span><span class="text-slate-200 font-medium text-sm">Bristol City FC</span></div>
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(244,63,94,.18);color:#fb7185;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">DEP</span><span class="text-slate-400 text-sm">West Bromwich Albion FC</span></div>
+    </div>
+  </td>
+  <td class="px-4 py-3 text-slate-500 text-xs">Championship</td>
+  <td class="px-4 py-3"><span class="badge badge-sky">🏠 Bristol City FC Kazanır</span></td>
+  <td class="px-4 py-3 text-center text-lg">❌</td>
+  <td class="px-4 py-3 text-right text-slate-400 tabular-nums">2.34</td>
+  <td class="px-4 py-3 text-right tabular-nums text-red-400 font-bold">₺-100</td>
+</tr>
+<tr class="trow">
+  <td class="px-4 py-3"><div class="tabular-nums" style="line-height:1.2"><div style="color:#94a3b8;font-size:.72rem">20.03</div><div style="color:#00d4ff;font-size:.8rem;font-weight:700;font-family:'JetBrains Mono',monospace">22:45</div></div></td>
+  <td class="px-4 py-3">
+    <div class="flex flex-col gap-0.5">
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(14,165,233,.18);color:#38bdf8;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">EV</span><span class="text-slate-200 font-medium text-sm">Genoa CFC</span></div>
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(244,63,94,.18);color:#fb7185;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">DEP</span><span class="text-slate-400 text-sm">Udinese Calcio</span></div>
+    </div>
+  </td>
+  <td class="px-4 py-3 text-slate-500 text-xs">Serie A</td>
+  <td class="px-4 py-3"><span class="badge badge-sky">🏠 Genoa CFC Kazanır</span></td>
+  <td class="px-4 py-3 text-center text-lg">❌</td>
+  <td class="px-4 py-3 text-right text-slate-400 tabular-nums">2.29</td>
+  <td class="px-4 py-3 text-right tabular-nums text-red-400 font-bold">₺-100</td>
+</tr>
+<tr class="trow">
+  <td class="px-4 py-3"><div class="tabular-nums" style="line-height:1.2"><div style="color:#94a3b8;font-size:.72rem">21.03</div><div style="color:#00d4ff;font-size:.8rem;font-weight:700;font-family:'JetBrains Mono',monospace">18:30</div></div></td>
+  <td class="px-4 py-3">
+    <div class="flex flex-col gap-0.5">
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(14,165,233,.18);color:#38bdf8;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">EV</span><span class="text-slate-200 font-medium text-sm">Moreirense FC</span></div>
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(244,63,94,.18);color:#fb7185;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">DEP</span><span class="text-slate-400 text-sm">FC Arouca</span></div>
+    </div>
+  </td>
+  <td class="px-4 py-3 text-slate-500 text-xs">Primeira Liga</td>
+  <td class="px-4 py-3"><span class="badge badge-sky">🏠 Moreirense FC Kazanır</span></td>
+  <td class="px-4 py-3 text-center text-lg">❌</td>
+  <td class="px-4 py-3 text-right text-slate-400 tabular-nums">2.31</td>
+  <td class="px-4 py-3 text-right tabular-nums text-red-400 font-bold">₺-100</td>
+</tr>
+<tr class="trow">
+  <td class="px-4 py-3"><div class="tabular-nums" style="line-height:1.2"><div style="color:#94a3b8;font-size:.72rem">21.03</div><div style="color:#00d4ff;font-size:.8rem;font-weight:700;font-family:'JetBrains Mono',monospace">20:30</div></div></td>
+  <td class="px-4 py-3">
+    <div class="flex flex-col gap-0.5">
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(14,165,233,.18);color:#38bdf8;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">EV</span><span class="text-slate-200 font-medium text-sm">Levante UD</span></div>
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(244,63,94,.18);color:#fb7185;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">DEP</span><span class="text-slate-400 text-sm">Real Oviedo</span></div>
+    </div>
+  </td>
+  <td class="px-4 py-3 text-slate-500 text-xs">La Liga</td>
+  <td class="px-4 py-3"><span class="badge badge-sky">🏠 Levante UD Kazanır</span></td>
+  <td class="px-4 py-3 text-center text-lg">✅</td>
+  <td class="px-4 py-3 text-right text-slate-400 tabular-nums">2.33</td>
+  <td class="px-4 py-3 text-right tabular-nums text-emerald-400 font-bold">₺+133</td>
+</tr>
+<tr class="trow">
+  <td class="px-4 py-3"><div class="tabular-nums" style="line-height:1.2"><div style="color:#94a3b8;font-size:.72rem">21.03</div><div style="color:#00d4ff;font-size:.8rem;font-weight:700;font-family:'JetBrains Mono',monospace">18:00</div></div></td>
+  <td class="px-4 py-3">
+    <div class="flex flex-col gap-0.5">
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(14,165,233,.18);color:#38bdf8;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">EV</span><span class="text-slate-200 font-medium text-sm">Watford FC</span></div>
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(244,63,94,.18);color:#fb7185;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">DEP</span><span class="text-slate-400 text-sm">Leicester City FC</span></div>
+    </div>
+  </td>
+  <td class="px-4 py-3 text-slate-500 text-xs">Championship</td>
+  <td class="px-4 py-3"><span class="badge badge-emerald">⚽ En Az 2 Gol Olur (1.5 Üst)</span></td>
+  <td class="px-4 py-3 text-center text-lg">❌</td>
+  <td class="px-4 py-3 text-right text-slate-400 tabular-nums">1.3</td>
+  <td class="px-4 py-3 text-right tabular-nums text-red-400 font-bold">₺-100</td>
+</tr>
+<tr class="trow">
+  <td class="px-4 py-3"><div class="tabular-nums" style="line-height:1.2"><div style="color:#94a3b8;font-size:.72rem">21.03</div><div style="color:#00d4ff;font-size:.8rem;font-weight:700;font-family:'JetBrains Mono',monospace">18:00</div></div></td>
+  <td class="px-4 py-3">
+    <div class="flex flex-col gap-0.5">
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(14,165,233,.18);color:#38bdf8;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">EV</span><span class="text-slate-200 font-medium text-sm">Sheffield United FC</span></div>
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(244,63,94,.18);color:#fb7185;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">DEP</span><span class="text-slate-400 text-sm">Wrexham AFC</span></div>
+    </div>
+  </td>
+  <td class="px-4 py-3 text-slate-500 text-xs">Championship</td>
+  <td class="px-4 py-3"><span class="badge badge-emerald">⚽ En Az 2 Gol Olur (1.5 Üst)</span></td>
+  <td class="px-4 py-3 text-center text-lg">❌</td>
+  <td class="px-4 py-3 text-right text-slate-400 tabular-nums">1.3</td>
+  <td class="px-4 py-3 text-right tabular-nums text-red-400 font-bold">₺-100</td>
+</tr>
+<tr class="trow">
+  <td class="px-4 py-3"><div class="tabular-nums" style="line-height:1.2"><div style="color:#94a3b8;font-size:.72rem">21.03</div><div style="color:#00d4ff;font-size:.8rem;font-weight:700;font-family:'JetBrains Mono',monospace">23:30</div></div></td>
+  <td class="px-4 py-3">
+    <div class="flex flex-col gap-0.5">
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(14,165,233,.18);color:#38bdf8;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">EV</span><span class="text-slate-200 font-medium text-sm">CD Tondela</span></div>
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(244,63,94,.18);color:#fb7185;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">DEP</span><span class="text-slate-400 text-sm">AVS</span></div>
+    </div>
+  </td>
+  <td class="px-4 py-3 text-slate-500 text-xs">Primeira Liga</td>
+  <td class="px-4 py-3"><span class="badge badge-sky">🏠 CD Tondela Kazanır</span></td>
+  <td class="px-4 py-3 text-center text-lg">❌</td>
+  <td class="px-4 py-3 text-right text-slate-400 tabular-nums">2.12</td>
+  <td class="px-4 py-3 text-right tabular-nums text-red-400 font-bold">₺-100</td>
+</tr>
+<tr class="trow">
+  <td class="px-4 py-3"><div class="tabular-nums" style="line-height:1.2"><div style="color:#94a3b8;font-size:.72rem">22.03</div><div style="color:#00d4ff;font-size:.8rem;font-weight:700;font-family:'JetBrains Mono',monospace">17:15</div></div></td>
+  <td class="px-4 py-3">
+    <div class="flex flex-col gap-0.5">
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(14,165,233,.18);color:#38bdf8;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">EV</span><span class="text-slate-200 font-medium text-sm">Aston Villa FC</span></div>
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(244,63,94,.18);color:#fb7185;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">DEP</span><span class="text-slate-400 text-sm">West Ham United FC</span></div>
+    </div>
+  </td>
+  <td class="px-4 py-3 text-slate-500 text-xs">Premier League</td>
+  <td class="px-4 py-3"><span class="badge badge-slate">KG Var (Karşılıklı Gol)</span></td>
+  <td class="px-4 py-3 text-center text-lg">❌</td>
+  <td class="px-4 py-3 text-right text-slate-400 tabular-nums">1.85</td>
+  <td class="px-4 py-3 text-right tabular-nums text-red-400 font-bold">₺-100</td>
+</tr>
+<tr class="trow">
+  <td class="px-4 py-3"><div class="tabular-nums" style="line-height:1.2"><div style="color:#94a3b8;font-size:.72rem">21.03</div><div style="color:#00d4ff;font-size:.8rem;font-weight:700;font-family:'JetBrains Mono',monospace">18:30</div></div></td>
+  <td class="px-4 py-3">
+    <div class="flex flex-col gap-0.5">
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(14,165,233,.18);color:#38bdf8;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">EV</span><span class="text-slate-200 font-medium text-sm">FC Famalicão</span></div>
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(244,63,94,.18);color:#fb7185;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">DEP</span><span class="text-slate-400 text-sm">CD Nacional</span></div>
+    </div>
+  </td>
+  <td class="px-4 py-3 text-slate-500 text-xs">Primeira Liga</td>
+  <td class="px-4 py-3"><span class="badge badge-sky">🛡 FC Famalicão Yenilmez (1-X)</span></td>
+  <td class="px-4 py-3 text-center text-lg">❌</td>
+  <td class="px-4 py-3 text-right text-slate-400 tabular-nums">1.22</td>
+  <td class="px-4 py-3 text-right tabular-nums text-red-400 font-bold">₺-100</td>
+</tr>
+<tr class="trow">
+  <td class="px-4 py-3"><div class="tabular-nums" style="line-height:1.2"><div style="color:#94a3b8;font-size:.72rem">21.03</div><div style="color:#00d4ff;font-size:.8rem;font-weight:700;font-family:'JetBrains Mono',monospace">18:00</div></div></td>
+  <td class="px-4 py-3">
+    <div class="flex flex-col gap-0.5">
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(14,165,233,.18);color:#38bdf8;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">EV</span><span class="text-slate-200 font-medium text-sm">Hull City AFC</span></div>
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(244,63,94,.18);color:#fb7185;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">DEP</span><span class="text-slate-400 text-sm">Sheffield Wednesday FC</span></div>
+    </div>
+  </td>
+  <td class="px-4 py-3 text-slate-500 text-xs">Championship</td>
+  <td class="px-4 py-3"><span class="badge badge-sky">🛡 Hull City AFC Yenilmez (1-X)</span></td>
+  <td class="px-4 py-3 text-center text-lg">❌</td>
+  <td class="px-4 py-3 text-right text-slate-400 tabular-nums">1.22</td>
+  <td class="px-4 py-3 text-right tabular-nums text-red-400 font-bold">₺-100</td>
+</tr>
+<tr class="trow">
+  <td class="px-4 py-3"><div class="tabular-nums" style="line-height:1.2"><div style="color:#94a3b8;font-size:.72rem">21.03</div><div style="color:#00d4ff;font-size:.8rem;font-weight:700;font-family:'JetBrains Mono',monospace">23:00</div></div></td>
+  <td class="px-4 py-3">
+    <div class="flex flex-col gap-0.5">
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(14,165,233,.18);color:#38bdf8;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">EV</span><span class="text-slate-200 font-medium text-sm">Leeds United FC</span></div>
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(244,63,94,.18);color:#fb7185;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">DEP</span><span class="text-slate-400 text-sm">Brentford FC</span></div>
+    </div>
+  </td>
+  <td class="px-4 py-3 text-slate-500 text-xs">Premier League</td>
+  <td class="px-4 py-3"><span class="badge badge-slate">KG Var (Karşılıklı Gol)</span></td>
+  <td class="px-4 py-3 text-center text-lg">❌</td>
+  <td class="px-4 py-3 text-right text-slate-400 tabular-nums">1.85</td>
+  <td class="px-4 py-3 text-right tabular-nums text-red-400 font-bold">₺-100</td>
+</tr>
+<tr class="trow">
+  <td class="px-4 py-3"><div class="tabular-nums" style="line-height:1.2"><div style="color:#94a3b8;font-size:.72rem">21.03</div><div style="color:#00d4ff;font-size:.8rem;font-weight:700;font-family:'JetBrains Mono',monospace">18:00</div></div></td>
+  <td class="px-4 py-3">
+    <div class="flex flex-col gap-0.5">
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(14,165,233,.18);color:#38bdf8;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">EV</span><span class="text-slate-200 font-medium text-sm">Hull City AFC</span></div>
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(244,63,94,.18);color:#fb7185;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">DEP</span><span class="text-slate-400 text-sm">Sheffield Wednesday FC</span></div>
+    </div>
+  </td>
+  <td class="px-4 py-3 text-slate-500 text-xs">Championship</td>
+  <td class="px-4 py-3"><span class="badge badge-emerald">⚽ En Az 2 Gol Olur (1.5 Üst)</span></td>
+  <td class="px-4 py-3 text-center text-lg">❌</td>
+  <td class="px-4 py-3 text-right text-slate-400 tabular-nums">1.3</td>
+  <td class="px-4 py-3 text-right tabular-nums text-red-400 font-bold">₺-100</td>
+</tr>
+<tr class="trow">
+  <td class="px-4 py-3"><div class="tabular-nums" style="line-height:1.2"><div style="color:#94a3b8;font-size:.72rem">21.03</div><div style="color:#00d4ff;font-size:.8rem;font-weight:700;font-family:'JetBrains Mono',monospace">15:30</div></div></td>
+  <td class="px-4 py-3">
+    <div class="flex flex-col gap-0.5">
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(14,165,233,.18);color:#38bdf8;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">EV</span><span class="text-slate-200 font-medium text-sm">Brighton & Hove Albion FC</span></div>
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(244,63,94,.18);color:#fb7185;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">DEP</span><span class="text-slate-400 text-sm">Liverpool FC</span></div>
+    </div>
+  </td>
+  <td class="px-4 py-3 text-slate-500 text-xs">Premier League</td>
+  <td class="px-4 py-3"><span class="badge badge-slate">KG Var (Karşılıklı Gol)</span></td>
+  <td class="px-4 py-3 text-center text-lg">❌</td>
+  <td class="px-4 py-3 text-right text-slate-400 tabular-nums">1.85</td>
+  <td class="px-4 py-3 text-right tabular-nums text-red-400 font-bold">₺-100</td>
+</tr>
+<tr class="trow">
+  <td class="px-4 py-3"><div class="tabular-nums" style="line-height:1.2"><div style="color:#94a3b8;font-size:.72rem">20.03</div><div style="color:#00d4ff;font-size:.8rem;font-weight:700;font-family:'JetBrains Mono',monospace">23:00</div></div></td>
+  <td class="px-4 py-3">
+    <div class="flex flex-col gap-0.5">
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(14,165,233,.18);color:#38bdf8;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">EV</span><span class="text-slate-200 font-medium text-sm">AFC Bournemouth</span></div>
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(244,63,94,.18);color:#fb7185;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">DEP</span><span class="text-slate-400 text-sm">Manchester United FC</span></div>
+    </div>
+  </td>
+  <td class="px-4 py-3 text-slate-500 text-xs">Premier League</td>
+  <td class="px-4 py-3"><span class="badge badge-slate">KG Var (Karşılıklı Gol)</span></td>
+  <td class="px-4 py-3 text-center text-lg">❌</td>
+  <td class="px-4 py-3 text-right text-slate-400 tabular-nums">1.85</td>
+  <td class="px-4 py-3 text-right tabular-nums text-red-400 font-bold">₺-100</td>
+</tr>
+<tr class="trow">
+  <td class="px-4 py-3"><div class="tabular-nums" style="line-height:1.2"><div style="color:#94a3b8;font-size:.72rem">22.03</div><div style="color:#00d4ff;font-size:.8rem;font-weight:700;font-family:'JetBrains Mono',monospace">18:45</div></div></td>
+  <td class="px-4 py-3">
+    <div class="flex flex-col gap-0.5">
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(14,165,233,.18);color:#38bdf8;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">EV</span><span class="text-slate-200 font-medium text-sm">FC Groningen</span></div>
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(244,63,94,.18);color:#fb7185;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">DEP</span><span class="text-slate-400 text-sm">AZ</span></div>
+    </div>
+  </td>
+  <td class="px-4 py-3 text-slate-500 text-xs">Eredivisie</td>
+  <td class="px-4 py-3"><span class="badge badge-slate">KG Var (Karşılıklı Gol)</span></td>
+  <td class="px-4 py-3 text-center text-lg">❌</td>
+  <td class="px-4 py-3 text-right text-slate-400 tabular-nums">1.85</td>
+  <td class="px-4 py-3 text-right tabular-nums text-red-400 font-bold">₺-100</td>
+</tr>
+<tr class="trow">
+  <td class="px-4 py-3"><div class="tabular-nums" style="line-height:1.2"><div style="color:#94a3b8;font-size:.72rem">21.03</div><div style="color:#00d4ff;font-size:.8rem;font-weight:700;font-family:'JetBrains Mono',monospace">23:00</div></div></td>
+  <td class="px-4 py-3">
+    <div class="flex flex-col gap-0.5">
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(14,165,233,.18);color:#38bdf8;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">EV</span><span class="text-slate-200 font-medium text-sm">PEC Zwolle</span></div>
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(244,63,94,.18);color:#fb7185;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">DEP</span><span class="text-slate-400 text-sm">NAC Breda</span></div>
+    </div>
+  </td>
+  <td class="px-4 py-3 text-slate-500 text-xs">Eredivisie</td>
+  <td class="px-4 py-3"><span class="badge badge-slate">KG Var (Karşılıklı Gol)</span></td>
+  <td class="px-4 py-3 text-center text-lg">❌</td>
+  <td class="px-4 py-3 text-right text-slate-400 tabular-nums">1.85</td>
+  <td class="px-4 py-3 text-right tabular-nums text-red-400 font-bold">₺-100</td>
+</tr>
+<tr class="trow">
+  <td class="px-4 py-3"><div class="tabular-nums" style="line-height:1.2"><div style="color:#94a3b8;font-size:.72rem">21.03</div><div style="color:#00d4ff;font-size:.8rem;font-weight:700;font-family:'JetBrains Mono',monospace">18:30</div></div></td>
+  <td class="px-4 py-3">
+    <div class="flex flex-col gap-0.5">
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(14,165,233,.18);color:#38bdf8;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">EV</span><span class="text-slate-200 font-medium text-sm">Fortuna Sittard</span></div>
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(244,63,94,.18);color:#fb7185;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">DEP</span><span class="text-slate-400 text-sm">FC Twente '65</span></div>
+    </div>
+  </td>
+  <td class="px-4 py-3 text-slate-500 text-xs">Eredivisie</td>
+  <td class="px-4 py-3"><span class="badge badge-slate">KG Var (Karşılıklı Gol)</span></td>
+  <td class="px-4 py-3 text-center text-lg">❌</td>
+  <td class="px-4 py-3 text-right text-slate-400 tabular-nums">1.85</td>
+  <td class="px-4 py-3 text-right tabular-nums text-red-400 font-bold">₺-100</td>
+</tr>
+<tr class="trow">
+  <td class="px-4 py-3"><div class="tabular-nums" style="line-height:1.2"><div style="color:#94a3b8;font-size:.72rem">22.03</div><div style="color:#00d4ff;font-size:.8rem;font-weight:700;font-family:'JetBrains Mono',monospace">21:30</div></div></td>
+  <td class="px-4 py-3">
+    <div class="flex flex-col gap-0.5">
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(14,165,233,.18);color:#38bdf8;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">EV</span><span class="text-slate-200 font-medium text-sm">FC Augsburg</span></div>
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(244,63,94,.18);color:#fb7185;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">DEP</span><span class="text-slate-400 text-sm">VfB Stuttgart</span></div>
+    </div>
+  </td>
+  <td class="px-4 py-3 text-slate-500 text-xs">Bundesliga</td>
+  <td class="px-4 py-3"><span class="badge badge-slate">KG Var (Karşılıklı Gol)</span></td>
+  <td class="px-4 py-3 text-center text-lg">❌</td>
+  <td class="px-4 py-3 text-right text-slate-400 tabular-nums">1.85</td>
+  <td class="px-4 py-3 text-right tabular-nums text-red-400 font-bold">₺-100</td>
+</tr>
+<tr class="trow">
+  <td class="px-4 py-3"><div class="tabular-nums" style="line-height:1.2"><div style="color:#94a3b8;font-size:.72rem">21.03</div><div style="color:#00d4ff;font-size:.8rem;font-weight:700;font-family:'JetBrains Mono',monospace">18:30</div></div></td>
+  <td class="px-4 py-3">
+    <div class="flex flex-col gap-0.5">
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(14,165,233,.18);color:#38bdf8;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">EV</span><span class="text-slate-200 font-medium text-sm">Moreirense FC</span></div>
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(244,63,94,.18);color:#fb7185;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">DEP</span><span class="text-slate-400 text-sm">FC Arouca</span></div>
+    </div>
+  </td>
+  <td class="px-4 py-3 text-slate-500 text-xs">Primeira Liga</td>
+  <td class="px-4 py-3"><span class="badge badge-slate">KG Var (Karşılıklı Gol)</span></td>
+  <td class="px-4 py-3 text-center text-lg">❌</td>
+  <td class="px-4 py-3 text-right text-slate-400 tabular-nums">1.85</td>
+  <td class="px-4 py-3 text-right tabular-nums text-red-400 font-bold">₺-100</td>
+</tr>
+<tr class="trow">
+  <td class="px-4 py-3"><div class="tabular-nums" style="line-height:1.2"><div style="color:#94a3b8;font-size:.72rem">21.03</div><div style="color:#00d4ff;font-size:.8rem;font-weight:700;font-family:'JetBrains Mono',monospace">17:30</div></div></td>
+  <td class="px-4 py-3">
+    <div class="flex flex-col gap-0.5">
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(14,165,233,.18);color:#38bdf8;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">EV</span><span class="text-slate-200 font-medium text-sm">1. FC Köln</span></div>
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(244,63,94,.18);color:#fb7185;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">DEP</span><span class="text-slate-400 text-sm">Borussia Mönchengladbach</span></div>
+    </div>
+  </td>
+  <td class="px-4 py-3 text-slate-500 text-xs">Bundesliga</td>
+  <td class="px-4 py-3"><span class="badge badge-slate">KG Var (Karşılıklı Gol)</span></td>
+  <td class="px-4 py-3 text-center text-lg">❌</td>
+  <td class="px-4 py-3 text-right text-slate-400 tabular-nums">1.85</td>
+  <td class="px-4 py-3 text-right tabular-nums text-red-400 font-bold">₺-100</td>
+</tr>
+<tr class="trow">
+  <td class="px-4 py-3"><div class="tabular-nums" style="line-height:1.2"><div style="color:#94a3b8;font-size:.72rem">22.03</div><div style="color:#00d4ff;font-size:.8rem;font-weight:700;font-family:'JetBrains Mono',monospace">22:45</div></div></td>
+  <td class="px-4 py-3">
+    <div class="flex flex-col gap-0.5">
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(14,165,233,.18);color:#38bdf8;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">EV</span><span class="text-slate-200 font-medium text-sm">ACF Fiorentina</span></div>
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(244,63,94,.18);color:#fb7185;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">DEP</span><span class="text-slate-400 text-sm">FC Internazionale Milano</span></div>
+    </div>
+  </td>
+  <td class="px-4 py-3 text-slate-500 text-xs">Serie A</td>
+  <td class="px-4 py-3"><span class="badge badge-emerald">⚽ En Az 2 Gol Olur (1.5 Üst)</span></td>
+  <td class="px-4 py-3 text-center text-lg">❌</td>
+  <td class="px-4 py-3 text-right text-slate-400 tabular-nums">1.3</td>
+  <td class="px-4 py-3 text-right tabular-nums text-red-400 font-bold">₺-100</td>
+</tr>
+<tr class="trow">
+  <td class="px-4 py-3"><div class="tabular-nums" style="line-height:1.2"><div style="color:#94a3b8;font-size:.72rem">22.03</div><div style="color:#00d4ff;font-size:.8rem;font-weight:700;font-family:'JetBrains Mono',monospace">20:00</div></div></td>
+  <td class="px-4 py-3">
+    <div class="flex flex-col gap-0.5">
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(14,165,233,.18);color:#38bdf8;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">EV</span><span class="text-slate-200 font-medium text-sm">AS Roma</span></div>
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(244,63,94,.18);color:#fb7185;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">DEP</span><span class="text-slate-400 text-sm">US Lecce</span></div>
+    </div>
+  </td>
+  <td class="px-4 py-3 text-slate-500 text-xs">Serie A</td>
+  <td class="px-4 py-3"><span class="badge badge-sky">🛡 AS Roma Yenilmez (1-X)</span></td>
+  <td class="px-4 py-3 text-center text-lg">❌</td>
+  <td class="px-4 py-3 text-right text-slate-400 tabular-nums">1.22</td>
+  <td class="px-4 py-3 text-right tabular-nums text-red-400 font-bold">₺-100</td>
+</tr>
+<tr class="trow">
+  <td class="px-4 py-3"><div class="tabular-nums" style="line-height:1.2"><div style="color:#94a3b8;font-size:.72rem">22.03</div><div style="color:#00d4ff;font-size:.8rem;font-weight:700;font-family:'JetBrains Mono',monospace">17:00</div></div></td>
+  <td class="px-4 py-3">
+    <div class="flex flex-col gap-0.5">
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(14,165,233,.18);color:#38bdf8;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">EV</span><span class="text-slate-200 font-medium text-sm">Atalanta BC</span></div>
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(244,63,94,.18);color:#fb7185;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">DEP</span><span class="text-slate-400 text-sm">Hellas Verona FC</span></div>
+    </div>
+  </td>
+  <td class="px-4 py-3 text-slate-500 text-xs">Serie A</td>
+  <td class="px-4 py-3"><span class="badge badge-sky">🛡 Atalanta BC Yenilmez (1-X)</span></td>
+  <td class="px-4 py-3 text-center text-lg">❌</td>
+  <td class="px-4 py-3 text-right text-slate-400 tabular-nums">1.22</td>
+  <td class="px-4 py-3 text-right tabular-nums text-red-400 font-bold">₺-100</td>
+</tr>
+<tr class="trow">
+  <td class="px-4 py-3"><div class="tabular-nums" style="line-height:1.2"><div style="color:#94a3b8;font-size:.72rem">22.03</div><div style="color:#00d4ff;font-size:.8rem;font-weight:700;font-family:'JetBrains Mono',monospace">17:00</div></div></td>
+  <td class="px-4 py-3">
+    <div class="flex flex-col gap-0.5">
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(14,165,233,.18);color:#38bdf8;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">EV</span><span class="text-slate-200 font-medium text-sm">Atalanta BC</span></div>
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(244,63,94,.18);color:#fb7185;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">DEP</span><span class="text-slate-400 text-sm">Hellas Verona FC</span></div>
+    </div>
+  </td>
+  <td class="px-4 py-3 text-slate-500 text-xs">Serie A</td>
+  <td class="px-4 py-3"><span class="badge badge-emerald">⚽ En Az 2 Gol Olur (1.5 Üst)</span></td>
+  <td class="px-4 py-3 text-center text-lg">❌</td>
+  <td class="px-4 py-3 text-right text-slate-400 tabular-nums">1.3</td>
+  <td class="px-4 py-3 text-right tabular-nums text-red-400 font-bold">₺-100</td>
+</tr>
+<tr class="trow">
+  <td class="px-4 py-3"><div class="tabular-nums" style="line-height:1.2"><div style="color:#94a3b8;font-size:.72rem">22.03</div><div style="color:#00d4ff;font-size:.8rem;font-weight:700;font-family:'JetBrains Mono',monospace">14:30</div></div></td>
+  <td class="px-4 py-3">
+    <div class="flex flex-col gap-0.5">
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(14,165,233,.18);color:#38bdf8;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">EV</span><span class="text-slate-200 font-medium text-sm">Como 1907</span></div>
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(244,63,94,.18);color:#fb7185;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">DEP</span><span class="text-slate-400 text-sm">AC Pisa 1909</span></div>
+    </div>
+  </td>
+  <td class="px-4 py-3 text-slate-500 text-xs">Serie A</td>
+  <td class="px-4 py-3"><span class="badge badge-sky">🛡 Como 1907 Yenilmez (1-X)</span></td>
+  <td class="px-4 py-3 text-center text-lg">❌</td>
+  <td class="px-4 py-3 text-right text-slate-400 tabular-nums">1.22</td>
+  <td class="px-4 py-3 text-right tabular-nums text-red-400 font-bold">₺-100</td>
+</tr>
+<tr class="trow">
+  <td class="px-4 py-3"><div class="tabular-nums" style="line-height:1.2"><div style="color:#94a3b8;font-size:.72rem">21.03</div><div style="color:#00d4ff;font-size:.8rem;font-weight:700;font-family:'JetBrains Mono',monospace">22:45</div></div></td>
+  <td class="px-4 py-3">
+    <div class="flex flex-col gap-0.5">
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(14,165,233,.18);color:#38bdf8;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">EV</span><span class="text-slate-200 font-medium text-sm">Juventus FC</span></div>
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(244,63,94,.18);color:#fb7185;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">DEP</span><span class="text-slate-400 text-sm">US Sassuolo Calcio</span></div>
+    </div>
+  </td>
+  <td class="px-4 py-3 text-slate-500 text-xs">Serie A</td>
+  <td class="px-4 py-3"><span class="badge badge-sky">🛡 Juventus FC Yenilmez (1-X)</span></td>
+  <td class="px-4 py-3 text-center text-lg">❌</td>
+  <td class="px-4 py-3 text-right text-slate-400 tabular-nums">1.22</td>
+  <td class="px-4 py-3 text-right tabular-nums text-red-400 font-bold">₺-100</td>
+</tr>
+<tr class="trow">
+  <td class="px-4 py-3"><div class="tabular-nums" style="line-height:1.2"><div style="color:#94a3b8;font-size:.72rem">21.03</div><div style="color:#00d4ff;font-size:.8rem;font-weight:700;font-family:'JetBrains Mono',monospace">22:45</div></div></td>
+  <td class="px-4 py-3">
+    <div class="flex flex-col gap-0.5">
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(14,165,233,.18);color:#38bdf8;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">EV</span><span class="text-slate-200 font-medium text-sm">Juventus FC</span></div>
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(244,63,94,.18);color:#fb7185;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">DEP</span><span class="text-slate-400 text-sm">US Sassuolo Calcio</span></div>
+    </div>
+  </td>
+  <td class="px-4 py-3 text-slate-500 text-xs">Serie A</td>
+  <td class="px-4 py-3"><span class="badge badge-emerald">⚽ En Az 2 Gol Olur (1.5 Üst)</span></td>
+  <td class="px-4 py-3 text-center text-lg">❌</td>
+  <td class="px-4 py-3 text-right text-slate-400 tabular-nums">1.3</td>
+  <td class="px-4 py-3 text-right tabular-nums text-red-400 font-bold">₺-100</td>
+</tr>
+<tr class="trow">
+  <td class="px-4 py-3"><div class="tabular-nums" style="line-height:1.2"><div style="color:#94a3b8;font-size:.72rem">21.03</div><div style="color:#00d4ff;font-size:.8rem;font-weight:700;font-family:'JetBrains Mono',monospace">20:00</div></div></td>
+  <td class="px-4 py-3">
+    <div class="flex flex-col gap-0.5">
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(14,165,233,.18);color:#38bdf8;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">EV</span><span class="text-slate-200 font-medium text-sm">AC Milan</span></div>
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(244,63,94,.18);color:#fb7185;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">DEP</span><span class="text-slate-400 text-sm">Torino FC</span></div>
+    </div>
+  </td>
+  <td class="px-4 py-3 text-slate-500 text-xs">Serie A</td>
+  <td class="px-4 py-3"><span class="badge badge-sky">🛡 AC Milan Yenilmez (1-X)</span></td>
+  <td class="px-4 py-3 text-center text-lg">❌</td>
+  <td class="px-4 py-3 text-right text-slate-400 tabular-nums">1.22</td>
+  <td class="px-4 py-3 text-right tabular-nums text-red-400 font-bold">₺-100</td>
+</tr>
+<tr class="trow">
+  <td class="px-4 py-3"><div class="tabular-nums" style="line-height:1.2"><div style="color:#94a3b8;font-size:.72rem">22.03</div><div style="color:#00d4ff;font-size:.8rem;font-weight:700;font-family:'JetBrains Mono',monospace">17:15</div></div></td>
+  <td class="px-4 py-3">
+    <div class="flex flex-col gap-0.5">
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(14,165,233,.18);color:#38bdf8;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">EV</span><span class="text-slate-200 font-medium text-sm">Aston Villa FC</span></div>
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(244,63,94,.18);color:#fb7185;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">DEP</span><span class="text-slate-400 text-sm">West Ham United FC</span></div>
+    </div>
+  </td>
+  <td class="px-4 py-3 text-slate-500 text-xs">Premier League</td>
+  <td class="px-4 py-3"><span class="badge badge-emerald">⚽ En Az 2 Gol Olur (1.5 Üst)</span></td>
+  <td class="px-4 py-3 text-center text-lg">❌</td>
+  <td class="px-4 py-3 text-right text-slate-400 tabular-nums">1.3</td>
+  <td class="px-4 py-3 text-right tabular-nums text-red-400 font-bold">₺-100</td>
+</tr>
+<tr class="trow">
+  <td class="px-4 py-3"><div class="tabular-nums" style="line-height:1.2"><div style="color:#94a3b8;font-size:.72rem">21.03</div><div style="color:#00d4ff;font-size:.8rem;font-weight:700;font-family:'JetBrains Mono',monospace">15:30</div></div></td>
+  <td class="px-4 py-3">
+    <div class="flex flex-col gap-0.5">
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(14,165,233,.18);color:#38bdf8;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">EV</span><span class="text-slate-200 font-medium text-sm">Brighton & Hove Albion FC</span></div>
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(244,63,94,.18);color:#fb7185;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">DEP</span><span class="text-slate-400 text-sm">Liverpool FC</span></div>
+    </div>
+  </td>
+  <td class="px-4 py-3 text-slate-500 text-xs">Premier League</td>
+  <td class="px-4 py-3"><span class="badge badge-emerald">⚽ En Az 2 Gol Olur (1.5 Üst)</span></td>
+  <td class="px-4 py-3 text-center text-lg">❌</td>
+  <td class="px-4 py-3 text-right text-slate-400 tabular-nums">1.3</td>
+  <td class="px-4 py-3 text-right tabular-nums text-red-400 font-bold">₺-100</td>
+</tr>
+<tr class="trow">
+  <td class="px-4 py-3"><div class="tabular-nums" style="line-height:1.2"><div style="color:#94a3b8;font-size:.72rem">20.03</div><div style="color:#00d4ff;font-size:.8rem;font-weight:700;font-family:'JetBrains Mono',monospace">23:00</div></div></td>
+  <td class="px-4 py-3">
+    <div class="flex flex-col gap-0.5">
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(14,165,233,.18);color:#38bdf8;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">EV</span><span class="text-slate-200 font-medium text-sm">AFC Bournemouth</span></div>
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(244,63,94,.18);color:#fb7185;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">DEP</span><span class="text-slate-400 text-sm">Manchester United FC</span></div>
+    </div>
+  </td>
+  <td class="px-4 py-3 text-slate-500 text-xs">Premier League</td>
+  <td class="px-4 py-3"><span class="badge badge-emerald">⚽ En Az 2 Gol Olur (1.5 Üst)</span></td>
+  <td class="px-4 py-3 text-center text-lg">❌</td>
+  <td class="px-4 py-3 text-right text-slate-400 tabular-nums">1.3</td>
+  <td class="px-4 py-3 text-right tabular-nums text-red-400 font-bold">₺-100</td>
+</tr>
+<tr class="trow">
+  <td class="px-4 py-3"><div class="tabular-nums" style="line-height:1.2"><div style="color:#94a3b8;font-size:.72rem">22.03</div><div style="color:#00d4ff;font-size:.8rem;font-weight:700;font-family:'JetBrains Mono',monospace">18:45</div></div></td>
+  <td class="px-4 py-3">
+    <div class="flex flex-col gap-0.5">
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(14,165,233,.18);color:#38bdf8;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">EV</span><span class="text-slate-200 font-medium text-sm">Telstar 1963</span></div>
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(244,63,94,.18);color:#fb7185;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">DEP</span><span class="text-slate-400 text-sm">PSV</span></div>
+    </div>
+  </td>
+  <td class="px-4 py-3 text-slate-500 text-xs">Eredivisie</td>
+  <td class="px-4 py-3"><span class="badge badge-rose">🛡 PSV Yenilmez (X-2)</span></td>
+  <td class="px-4 py-3 text-center text-lg">❌</td>
+  <td class="px-4 py-3 text-right text-slate-400 tabular-nums">1.22</td>
+  <td class="px-4 py-3 text-right tabular-nums text-red-400 font-bold">₺-100</td>
+</tr>
+<tr class="trow">
+  <td class="px-4 py-3"><div class="tabular-nums" style="line-height:1.2"><div style="color:#94a3b8;font-size:.72rem">22.03</div><div style="color:#00d4ff;font-size:.8rem;font-weight:700;font-family:'JetBrains Mono',monospace">18:45</div></div></td>
+  <td class="px-4 py-3">
+    <div class="flex flex-col gap-0.5">
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(14,165,233,.18);color:#38bdf8;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">EV</span><span class="text-slate-200 font-medium text-sm">FC Groningen</span></div>
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(244,63,94,.18);color:#fb7185;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">DEP</span><span class="text-slate-400 text-sm">AZ</span></div>
+    </div>
+  </td>
+  <td class="px-4 py-3 text-slate-500 text-xs">Eredivisie</td>
+  <td class="px-4 py-3"><span class="badge badge-emerald">⚽ En Az 2 Gol Olur (1.5 Üst)</span></td>
+  <td class="px-4 py-3 text-center text-lg">❌</td>
+  <td class="px-4 py-3 text-right text-slate-400 tabular-nums">1.3</td>
+  <td class="px-4 py-3 text-right tabular-nums text-red-400 font-bold">₺-100</td>
+</tr>
+<tr class="trow">
+  <td class="px-4 py-3"><div class="tabular-nums" style="line-height:1.2"><div style="color:#94a3b8;font-size:.72rem">22.03</div><div style="color:#00d4ff;font-size:.8rem;font-weight:700;font-family:'JetBrains Mono',monospace">16:30</div></div></td>
+  <td class="px-4 py-3">
+    <div class="flex flex-col gap-0.5">
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(14,165,233,.18);color:#38bdf8;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">EV</span><span class="text-slate-200 font-medium text-sm">FC Utrecht</span></div>
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(244,63,94,.18);color:#fb7185;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">DEP</span><span class="text-slate-400 text-sm">Go Ahead Eagles</span></div>
+    </div>
+  </td>
+  <td class="px-4 py-3 text-slate-500 text-xs">Eredivisie</td>
+  <td class="px-4 py-3"><span class="badge badge-emerald">⚽ En Az 2 Gol Olur (1.5 Üst)</span></td>
+  <td class="px-4 py-3 text-center text-lg">❌</td>
+  <td class="px-4 py-3 text-right text-slate-400 tabular-nums">1.3</td>
+  <td class="px-4 py-3 text-right tabular-nums text-red-400 font-bold">₺-100</td>
+</tr>
+<tr class="trow">
+  <td class="px-4 py-3"><div class="tabular-nums" style="line-height:1.2"><div style="color:#94a3b8;font-size:.72rem">21.03</div><div style="color:#00d4ff;font-size:.8rem;font-weight:700;font-family:'JetBrains Mono',monospace">23:00</div></div></td>
+  <td class="px-4 py-3">
+    <div class="flex flex-col gap-0.5">
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(14,165,233,.18);color:#38bdf8;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">EV</span><span class="text-slate-200 font-medium text-sm">PEC Zwolle</span></div>
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(244,63,94,.18);color:#fb7185;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">DEP</span><span class="text-slate-400 text-sm">NAC Breda</span></div>
+    </div>
+  </td>
+  <td class="px-4 py-3 text-slate-500 text-xs">Eredivisie</td>
+  <td class="px-4 py-3"><span class="badge badge-emerald">⚽ En Az 2 Gol Olur (1.5 Üst)</span></td>
+  <td class="px-4 py-3 text-center text-lg">❌</td>
+  <td class="px-4 py-3 text-right text-slate-400 tabular-nums">1.3</td>
+  <td class="px-4 py-3 text-right tabular-nums text-red-400 font-bold">₺-100</td>
+</tr>
+<tr class="trow">
+  <td class="px-4 py-3"><div class="tabular-nums" style="line-height:1.2"><div style="color:#94a3b8;font-size:.72rem">21.03</div><div style="color:#00d4ff;font-size:.8rem;font-weight:700;font-family:'JetBrains Mono',monospace">20:45</div></div></td>
+  <td class="px-4 py-3">
+    <div class="flex flex-col gap-0.5">
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(14,165,233,.18);color:#38bdf8;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">EV</span><span class="text-slate-200 font-medium text-sm">Sparta Rotterdam</span></div>
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(244,63,94,.18);color:#fb7185;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">DEP</span><span class="text-slate-400 text-sm">FC Volendam</span></div>
+    </div>
+  </td>
+  <td class="px-4 py-3 text-slate-500 text-xs">Eredivisie</td>
+  <td class="px-4 py-3"><span class="badge badge-sky">🛡 Sparta Rotterdam Yenilmez (1-X)</span></td>
+  <td class="px-4 py-3 text-center text-lg">❌</td>
+  <td class="px-4 py-3 text-right text-slate-400 tabular-nums">1.22</td>
+  <td class="px-4 py-3 text-right tabular-nums text-red-400 font-bold">₺-100</td>
+</tr>
+<tr class="trow">
+  <td class="px-4 py-3"><div class="tabular-nums" style="line-height:1.2"><div style="color:#94a3b8;font-size:.72rem">21.03</div><div style="color:#00d4ff;font-size:.8rem;font-weight:700;font-family:'JetBrains Mono',monospace">20:45</div></div></td>
+  <td class="px-4 py-3">
+    <div class="flex flex-col gap-0.5">
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(14,165,233,.18);color:#38bdf8;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">EV</span><span class="text-slate-200 font-medium text-sm">Sparta Rotterdam</span></div>
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(244,63,94,.18);color:#fb7185;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">DEP</span><span class="text-slate-400 text-sm">FC Volendam</span></div>
+    </div>
+  </td>
+  <td class="px-4 py-3 text-slate-500 text-xs">Eredivisie</td>
+  <td class="px-4 py-3"><span class="badge badge-emerald">⚽ En Az 2 Gol Olur (1.5 Üst)</span></td>
+  <td class="px-4 py-3 text-center text-lg">❌</td>
+  <td class="px-4 py-3 text-right text-slate-400 tabular-nums">1.3</td>
+  <td class="px-4 py-3 text-right tabular-nums text-red-400 font-bold">₺-100</td>
+</tr>
+<tr class="trow">
+  <td class="px-4 py-3"><div class="tabular-nums" style="line-height:1.2"><div style="color:#94a3b8;font-size:.72rem">21.03</div><div style="color:#00d4ff;font-size:.8rem;font-weight:700;font-family:'JetBrains Mono',monospace">18:30</div></div></td>
+  <td class="px-4 py-3">
+    <div class="flex flex-col gap-0.5">
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(14,165,233,.18);color:#38bdf8;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">EV</span><span class="text-slate-200 font-medium text-sm">Fortuna Sittard</span></div>
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(244,63,94,.18);color:#fb7185;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">DEP</span><span class="text-slate-400 text-sm">FC Twente '65</span></div>
+    </div>
+  </td>
+  <td class="px-4 py-3 text-slate-500 text-xs">Eredivisie</td>
+  <td class="px-4 py-3"><span class="badge badge-emerald">⚽ En Az 2 Gol Olur (1.5 Üst)</span></td>
+  <td class="px-4 py-3 text-center text-lg">❌</td>
+  <td class="px-4 py-3 text-right text-slate-400 tabular-nums">1.3</td>
+  <td class="px-4 py-3 text-right tabular-nums text-red-400 font-bold">₺-100</td>
+</tr>
+<tr class="trow">
+  <td class="px-4 py-3"><div class="tabular-nums" style="line-height:1.2"><div style="color:#94a3b8;font-size:.72rem">20.03</div><div style="color:#00d4ff;font-size:.8rem;font-weight:700;font-family:'JetBrains Mono',monospace">22:00</div></div></td>
+  <td class="px-4 py-3">
+    <div class="flex flex-col gap-0.5">
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(14,165,233,.18);color:#38bdf8;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">EV</span><span class="text-slate-200 font-medium text-sm">Heracles Almelo</span></div>
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(244,63,94,.18);color:#fb7185;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">DEP</span><span class="text-slate-400 text-sm">SBV Excelsior</span></div>
+    </div>
+  </td>
+  <td class="px-4 py-3 text-slate-500 text-xs">Eredivisie</td>
+  <td class="px-4 py-3"><span class="badge badge-emerald">⚽ En Az 2 Gol Olur (1.5 Üst)</span></td>
+  <td class="px-4 py-3 text-center text-lg">❌</td>
+  <td class="px-4 py-3 text-right text-slate-400 tabular-nums">1.3</td>
+  <td class="px-4 py-3 text-right tabular-nums text-red-400 font-bold">₺-100</td>
+</tr>
+<tr class="trow">
+  <td class="px-4 py-3"><div class="tabular-nums" style="line-height:1.2"><div style="color:#94a3b8;font-size:.72rem">22.03</div><div style="color:#00d4ff;font-size:.8rem;font-weight:700;font-family:'JetBrains Mono',monospace">21:30</div></div></td>
+  <td class="px-4 py-3">
+    <div class="flex flex-col gap-0.5">
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(14,165,233,.18);color:#38bdf8;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">EV</span><span class="text-slate-200 font-medium text-sm">FC Augsburg</span></div>
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(244,63,94,.18);color:#fb7185;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">DEP</span><span class="text-slate-400 text-sm">VfB Stuttgart</span></div>
+    </div>
+  </td>
+  <td class="px-4 py-3 text-slate-500 text-xs">Bundesliga</td>
+  <td class="px-4 py-3"><span class="badge badge-emerald">⚽ En Az 2 Gol Olur (1.5 Üst)</span></td>
+  <td class="px-4 py-3 text-center text-lg">❌</td>
+  <td class="px-4 py-3 text-right text-slate-400 tabular-nums">1.3</td>
+  <td class="px-4 py-3 text-right tabular-nums text-red-400 font-bold">₺-100</td>
+</tr>
+<tr class="trow">
+  <td class="px-4 py-3"><div class="tabular-nums" style="line-height:1.2"><div style="color:#94a3b8;font-size:.72rem">22.03</div><div style="color:#00d4ff;font-size:.8rem;font-weight:700;font-family:'JetBrains Mono',monospace">17:30</div></div></td>
+  <td class="px-4 py-3">
+    <div class="flex flex-col gap-0.5">
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(14,165,233,.18);color:#38bdf8;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">EV</span><span class="text-slate-200 font-medium text-sm">1. FSV Mainz 05</span></div>
+      <div class="flex items-center gap-1.5"><span style="font-size:.6rem;background:rgba(244,63,94,.18);color:#fb7185;padding:.05rem .35rem;border-radius:.25rem;font-weight:700">DEP</span><span class="text-slate-400 text-sm">Eintracht Frankfurt</span></div>
+    </div>
+  </td>
+  <td class="px-4 py-3 text-slate-500 text-xs">Bundesliga</td>
+  <td class="px-4 py-3"><span class="badge badge-emerald">⚽ En Az 2 Gol Olur (1.5 Üst)</span></td>
+  <td class="px-4 py-3 text-center text-lg">❌</td>
+  <td class="px-4 py-3 text-right text-slate-400 tabular-nums">1.3</td>
+  <td class="px-4 py-3 text-right tabular-nums text-red-400 font-bold">₺-100</td>
+</tr></tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer style="text-align:center;padding:1.5rem 0 .5rem;font-size:.65rem;color:#1e3a5f;letter-spacing:.08em">
+  KANTİTATİF ALGORİTMA SİSTEMLERİ v13.0 &nbsp;•&nbsp; TESCİLLİ YAPAY ZEKA &nbsp;•&nbsp; 31.03.2026 00:00:01
+</footer>
+
+<script>
+// Tab Switching
+function T(name){
+  document.querySelectorAll('.tab-pane').forEach(e=>e.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(e=>e.classList.remove('active'));
+  document.getElementById('p-'+name).classList.add('active');
+  document.getElementById('t-'+name).classList.add('active');
+}
+
+// Live UTC Clock
+setInterval(() => {
+  const clk = document.getElementById('live-clock');
+  if(!clk) return;
+  const d = new Date();
+  const pad = n => n.toString().padStart(2, '0');
+  clk.innerText = pad(d.getUTCDate()) + "." + pad(d.getUTCMonth()+1) + "." + d.getUTCFullYear() + " " + pad(d.getUTCHours()) + ":" + pad(d.getUTCMinutes()) + ":" + pad(d.getUTCSeconds()) + " UTC";
+}, 1000);
+// Keyboard shortcuts: 1-6
+document.addEventListener('keydown',e=>{
+  const m={'1':'taraf','2':'kg','3':'uo','4':'alt','5':'canli','6':'gec'};
+  if(m[e.key]) T(m[e.key]);
+});
+</script>
+</body>
+</html>

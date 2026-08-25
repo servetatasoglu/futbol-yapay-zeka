@@ -1,0 +1,74 @@
+name: 🤖 Otomatik Futbol Analiz Botu
+
+on:
+  schedule:
+    # Her gün sabah 09:00 UTC (Türkiye saatiyle 12:00) çalışır
+    - cron: '0 9 * * *'
+    # Akşam 17:00 UTC (Türkiye 20:00) — ikinci tarama
+    - cron: '0 17 * * *'
+  workflow_dispatch: # GitHub üzerinden manuel tıklayarak çalıştırma butonu ekler
+
+permissions:
+  contents: write
+
+jobs:
+  run-bot:
+    runs-on: ubuntu-latest # GitHub'ın ücretsiz Linux sunucusu
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+    steps:
+    - name: 📥 Kodları Github'dan Çek
+      uses: actions/checkout@v4
+
+    - name: 🐍 Python Kurulumu
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11' 
+        cache: 'pip' # Kütüphaneleri hızlı yüklemek için önbellek
+
+    - name: 📦 Gereksinimleri (Kütüphaneleri) Yükle
+      run: |
+        python -m pip install --upgrade pip
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+    - name: 🔍 Sonuç Takibi (Önceki bahislerin sonuçlarını güncelle)
+      env:
+        FOOTBALL_DATA_API_KEY: ${{ secrets.FOOTBALL_DATA_API_KEY }}
+        API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
+      run: |
+        python scripts/result_tracker.py || echo "Result tracker bypass."
+
+    - name: 🚀 Ana Pipeline Çalıştır
+      env:
+        FOOTBALL_DATA_API_KEY: ${{ secrets.FOOTBALL_DATA_API_KEY }}
+        ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+        SPORTMONKS_API_KEY: ${{ secrets.SPORTMONKS_API_KEY }}
+        API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
+        TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+        TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+      run: |
+        python main.py
+
+    - name: 📩 Telegram Mesajları Gönder
+      env:
+        TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+        TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+      run: |
+        python scripts/telegram_sender.py
+
+    - name: 📊 Performans Raporu Üret
+      run: |
+        python scripts/performance_report.py || echo "Report bypass."
+
+    - name: Run Dashboard Generator
+      run: |
+        python generate_report.py || echo "Dashboard bypass passed."
+        
+    - name: Commit and Push Results
+      run: |
+        git config --global user.name "AI Tahmin Bot"
+        git config --global user.email "bot@claod-futbol.ai"
+        git add logs/ data/clv_bet_log.json data/performance_report.json dashboard.html live_signals.json || true
+        git commit -m "🤖 Hafıza Güncellendi: AI Model ve Bankroll Logları" || echo "Yeni veri yok"
+        git push

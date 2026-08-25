@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="tr" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mackolik AI - Futbol Zeka Portalı</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: { 
+                        sans: ['Roboto', 'sans-serif']
+                    },
+                    colors: {
+                        mk: {
+                            dark: '#0e0e0e',
+                            header: '#1a1a1a',
+                            row: '#1f1f1f',
+                            rowHover: '#2a2a2a',
+                            green: '#00a651',
+                            red: '#ed1c24',
+                            yellow: '#f9a01b',
+                            gray: '#888888',
+                            border: '#333333',
+                            lightBg: '#f0f2f5',
+                            lightHeader: '#ffffff',
+                            lightRow: '#ffffff',
+                            lightRowHover: '#f9f9f9',
+                            lightBorder: '#e0e0e0',
+                            lightText: '#333333'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { transition: background-color 0.3s, color 0.3s; }
+        
+        /* Dark Mode Colors */
+        .dark body { background-color: #0e0e0e; color: #ffffff; }
+        .dark .mk-bg-main { background-color: #0e0e0e; }
+        .dark .mk-bg-header { background-color: #1a1a1a; }
+        .dark .mk-bg-row { background-color: #1f1f1f; }
+        .dark .mk-border { border-color: #333333; }
+        .dark .match-row:hover { background-color: #2a2a2a; }
+        .dark .match-row.active { background-color: #2a2a2a; border-left: 4px solid #00a651; }
+        .dark .match-details { background-color: #141414; border-bottom: 1px solid #333333; }
+        .dark .text-primary { color: #ffffff; }
+        .dark .text-secondary { color: #d1d5db; }
+        .dark .text-muted { color: #888888; }
+        .dark .odd-box { background-color: #2d2d2d; border-color: #3d3d3d; color: #ffffff; }
+        .dark .progress-bar-bg { background-color: #2d2d2d; }
+        
+        /* Light Mode Colors */
+        body { background-color: #f0f2f5; color: #333333; }
+        .mk-bg-main { background-color: #f0f2f5; }
+        .mk-bg-header { background-color: #ffffff; }
+        .mk-bg-row { background-color: #ffffff; }
+        .mk-border { border-color: #e0e0e0; }
+        .match-row:hover { background-color: #f9f9f9; }
+        .match-row.active { background-color: #f9f9f9; border-left: 4px solid #00a651; }
+        .match-details { background-color: #fafafa; border-bottom: 1px solid #e0e0e0; }
+        .text-primary { color: #111111; }
+        .text-secondary { color: #4b5563; }
+        .text-muted { color: #6b7280; }
+        .odd-box { background-color: #f3f4f6; border-color: #d1d5db; color: #374151; }
+        .progress-bar-bg { background-color: #e5e7eb; }
+
+        /* Shared Components */
+        .match-row { cursor: pointer; transition: background-color 0.2s; }
+        .match-details {
+            display: none;
+        }
+        .match-row.active + .match-details {
+            display: block;
+            animation: slideDown 0.3s ease-out;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .odd-box {
+            font-size: 11px;
+            font-weight: 700;
+            text-align: center;
+            width: 38px;
+            height: 26px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 2px;
+            line-height: 1;
+            border-width: 1px;
+            border-style: solid;
+            position: relative;
+        }
+        .odd-box.value-found {
+            background-color: #00a651 !important;
+            border-color: #00a651 !important;
+            color: #ffffff !important;
+        }
+
+        .drop-arrow {
+            position: absolute;
+            top: -4px;
+            right: -4px;
+            background-color: #ed1c24;
+            color: white;
+            font-size: 8px;
+            font-weight: bold;
+            padding: 1px 3px;
+            border-radius: 4px;
+            animation: blink 2s infinite;
+        }
+
+        @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0.3; }
+            100% { opacity: 1; }
+        }
+
+        .progress-bar-bg { border-radius: 4px; overflow: hidden; height: 8px; width: 100%; margin-top: 4px; position: relative;}
+        .progress-bar-fill { height: 100%; border-radius: 4px; transition: width 0.5s ease; position: relative; z-index: 5;}
+        
+        .form-box {
+            width: 14px; height: 14px; display: inline-flex; align-items: center; justify-content: center;
+            font-size: 8px; font-weight: bold; color: white; border-radius: 2px;
+        }
+        .form-W { background-color: #00a651; }
+        .form-D { background-color: #f9a01b; }
+        .form-L { background-color: #ed1c24; }
+        .form-none { background-color: #888888; }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar { width: 6px; }
+        .dark ::-webkit-scrollbar-track { background: #0e0e0e; }
+        .dark ::-webkit-scrollbar-thumb { background: #333333; border-radius: 4px; }
+        ::-webkit-scrollbar-track { background: #f0f2f5; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #00a651; }
+        
+        .hide { display: none !important; }
+    </style>
+</head>
+<body class="min-h-screen antialiased flex flex-col items-center transition-colors pb-10">
+    
+    <!-- Navbar -->
+    <nav class="w-full mk-bg-header border-b mk-border py-2 px-4 flex justify-between items-center sticky top-0 z-50 transition-colors">
+        <div class="flex items-center gap-2">
+            <div class="w-8 h-8 bg-mk-green flex items-center justify-center text-white font-black italic text-lg rounded-sm">M</div>
+            <h1 class="text-xl font-black italic tracking-tight text-primary hidden md:block">Mackolik AI</h1>
+        </div>
+        <div class="flex items-center space-x-3 text-sm font-bold text-muted">
+            <span id="live-time">--:--</span>
+            
+            <!-- Theme Toggle -->
+            <button id="theme-toggle" class="text-muted hover:text-primary transition-colors p-1.5 rounded mk-bg-row border mk-border">
+                <svg id="theme-icon-dark" class="w-4 h-4 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+                <svg id="theme-icon-light" class="w-4 h-4 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+            </button>
+
+            <button onclick="window.location.reload();" class="text-muted hover:text-primary transition-colors p-1.5 rounded mk-bg-row border mk-border">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
+            </button>
+        </div>
+    </nav>
+    
+    <main class="w-full max-w-5xl px-0 md:px-4 py-4">
+        
+        <!-- COMPACT KPI WIDGET -->
+        <div class="mk-bg-header rounded-sm p-3 mb-4 flex justify-between items-center border mk-border mx-2 md:mx-0">
+            <div class="flex gap-6">
+                <div>
+                    <div class="text-[10px] text-muted uppercase font-bold">Kasa / Bankroll</div>
+                    <div id="kpi-bankroll" class="text-sm font-bold text-primary">$-</div>
+                </div>
+                <div>
+                    <div class="text-[10px] text-muted uppercase font-bold">Net ROI</div>
+                    <div id="kpi-roi" class="text-sm font-bold">-%</div>
+                </div>
+            </div>
+            <div id="verdict-badge" class="px-2 py-0.5 rounded text-[10px] font-bold uppercase mk-bg-row border mk-border text-muted">Bekleniyor</div>
+        </div>
+
+        <!-- KUPON CONTAINER -->
+        <div id="kupon-container" class="w-full mk-bg-header sm:rounded-sm overflow-hidden shadow-lg border-y sm:border mk-border mb-4 hidden">
+            <!-- JS Injects Kupon Here -->
+        </div>
+
+        <!-- SEARCH & FILTER BAR -->
+        <div class="mk-bg-header border mk-border rounded-sm p-2 mx-2 md:mx-0 mb-4 flex flex-col md:flex-row justify-between items-center gap-3">
+            <div class="flex gap-2 w-full md:w-auto">
+                <button id="tab-bulten" class="flex-1 md:flex-none px-4 py-1.5 mk-bg-row border border-mk-green text-mk-green rounded text-[12px] font-bold transition-colors">Yapay Zeka Radar</button>
+                <button id="tab-biten" class="flex-1 md:flex-none px-4 py-1.5 mk-bg-row border mk-border text-muted hover:text-primary rounded text-[12px] font-bold transition-colors">Biten Maçlar</button>
+            </div>
+            <div class="flex-1 w-full relative">
+                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                    <svg class="h-4 w-4 text-muted" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                </div>
+                <input type="text" id="searchInput" placeholder="Takım, Lig ara..." class="w-full mk-bg-row text-primary text-sm rounded border mk-border pl-9 pr-3 py-1.5 focus:outline-none focus:border-mk-green">
+            </div>
+            <div class="flex gap-2 w-full md:w-auto">
+                <button id="filter-value" class="flex-1 md:flex-none px-3 py-1.5 mk-bg-row border mk-border rounded text-[11px] font-bold text-muted hover:text-mk-green transition-colors">🔥 Value (Edge > 5%)</button>
+                <button id="filter-sharp" class="flex-1 md:flex-none px-3 py-1.5 mk-bg-row border mk-border rounded text-[11px] font-bold text-muted hover:text-purple-500 transition-colors">🧠 Sharp Onaylı</button>
+            </div>
+        </div>
+
+        <!-- FIXTURE LIST -->
+        <div id="fixture-container" class="w-full mk-bg-header sm:rounded-sm overflow-hidden shadow-lg border-y sm:border mk-border">
+            <!-- JS Injects Matches Here -->
+        </div>
+
+    </main>
+
+    <script id="injected-data">
+        window.LIVE_SIGNALS = [];
+        window.DASHBOARD_DATA = {"summary": {"total_bets": 0, "initial_br": 10000.0, "final_br": 10000.0, "roi": 0.0, "win_rate": 0.0, "mdd": 0.0, "avg_clv": 0.0, "pct_clv_positive": 0.0, "verdict": "AWAITING DATA", "avg_slippage_pts": 0.0, "avg_clv_decay": 0.0}, "statistics": {"p_value": 1.0, "clv_significant": false, "edge_reliability": 0.0, "overfitting_risk": "N/A"}, "equity_curve": [{"bet_index": 0, "bankroll": 10000.0}], "attribution_league": {}, "attribution_odds": {"<1.50": {"pnl": 0, "count": 0}, "1.50-2.00": {"pnl": 0, "count": 0}, "2.00-3.00": {"pnl": 0, "count": 0}, ">3.00": {"pnl": 0, "count": 0}}, "bets": [], "kupon": null, "finished_matches": [{"lig": "PPL", "ev": "CD Nacional", "dep": "Vitória SC", "skor": "2-0", "tarih": "2026-05-16T17:00:00Z", "tahmin": null}, {"lig": "PPL", "ev": "Casa Pia AC", "dep": "Rio Ave", "skor": "2-1", "tarih": "2026-05-16T17:00:00Z", "tahmin": null}, {"lig": "PPL", "ev": "FC Arouca", "dep": "CD Tondela", "skor": "3-1", "tarih": "2026-05-16T17:00:00Z", "tahmin": null}, {"lig": "PPL", "ev": "Sporting Clube de Braga", "dep": "CF Estrela da Amadora", "skor": "2-2", "tarih": "2026-05-16T17:00:00Z", "tahmin": null}, {"lig": "PPL", "ev": "Moreirense", "dep": "AVS", "skor": "0-1", "tarih": "2026-05-16T14:30:00Z", "tahmin": null}, {"lig": "PPL", "ev": "FC Porto", "dep": "CD Santa Clara", "skor": "1-0", "tarih": "2026-05-16T14:30:00Z", "tahmin": null}, {"lig": "FL1", "ev": "Racing Club de Lens", "dep": "Paris Saint-Germain", "skor": "0-2", "tarih": "2026-05-13T19:00:00Z", "tahmin": null}, {"lig": "FL1", "ev": "Stade Brestois 29", "dep": "RC Strasbourg Alsace", "skor": "1-2", "tarih": "2026-05-13T17:00:00Z", "tahmin": null}, {"lig": "ELC", "ev": "Southampton", "dep": "Middlesbrough", "skor": "2-1", "tarih": "2026-05-12T19:00:00Z", "tahmin": null}, {"lig": "PPL", "ev": "Vitória SC", "dep": "Casa Pia AC", "skor": "0-1", "tarih": "2026-05-11T19:15:00Z", "tahmin": null}, {"lig": "PPL", "ev": "Gil Vicente", "dep": "FC Arouca", "skor": "1-3", "tarih": "2026-05-11T19:15:00Z", "tahmin": null}, {"lig": "PPL", "ev": "CD Tondela", "dep": "Moreirense", "skor": "2-0", "tarih": "2026-05-11T19:15:00Z", "tahmin": null}, {"lig": "PPL", "ev": "CF Estrela da Amadora", "dep": "FC Famalicão", "skor": "0-0", "tarih": "2026-05-11T19:15:00Z", "tahmin": null}, {"lig": "PPL", "ev": "Rio Ave", "dep": "Sporting Clube de Portugal", "skor": "1-4", "tarih": "2026-05-11T19:15:00Z", "tahmin": null}, {"lig": "PPL", "ev": "CD Santa Clara", "dep": "CD Nacional", "skor": "2-0", "tarih": "2026-05-11T19:15:00Z", "tahmin": null}, {"lig": "PPL", "ev": "Sport Lisboa e Benfica", "dep": "Sporting Clube de Braga", "skor": "2-2", "tarih": "2026-05-11T19:15:00Z", "tahmin": null}, {"lig": "ELC", "ev": "Millwall", "dep": "Hull City AFC", "skor": "0-2", "tarih": "2026-05-11T19:00:00Z", "tahmin": null}, {"lig": "PPL", "ev": "FC Alverca", "dep": "GD Estoril Praia", "skor": "1-1", "tarih": "2026-05-10T19:30:00Z", "tahmin": null}, {"lig": "FL1", "ev": "Le Havre AC", "dep": "Olympique de Marseille", "skor": "0-1", "tarih": "2026-05-10T19:00:00Z", "tahmin": null}, {"lig": "FL1", "ev": "AJ Auxerre", "dep": "OGC Nice", "skor": "2-1", "tarih": "2026-05-10T19:00:00Z", "tahmin": null}, {"lig": "FL1", "ev": "AS Monaco", "dep": "Lille OSC", "skor": "0-1", "tarih": "2026-05-10T19:00:00Z", "tahmin": null}, {"lig": "FL1", "ev": "FC Metz", "dep": "FC Lorient", "skor": "0-4", "tarih": "2026-05-10T19:00:00Z", "tahmin": null}, {"lig": "FL1", "ev": "Toulouse", "dep": "Olympique Lyonnais", "skor": "2-1", "tarih": "2026-05-10T19:00:00Z", "tahmin": null}, {"lig": "FL1", "ev": "Paris Saint-Germain", "dep": "Stade Brestois 29", "skor": "1-0", "tarih": "2026-05-10T19:00:00Z", "tahmin": null}, {"lig": "FL1", "ev": "Angers SCO", "dep": "RC Strasbourg Alsace", "skor": "1-1", "tarih": "2026-05-10T19:00:00Z", "tahmin": null}, {"lig": "FL1", "ev": "Stade Rennais 1901", "dep": "Paris", "skor": "2-1", "tarih": "2026-05-10T19:00:00Z", "tahmin": null}, {"lig": "PPL", "ev": "AVS", "dep": "FC Porto", "skor": "3-1", "tarih": "2026-05-10T17:00:00Z", "tahmin": null}, {"lig": "DED", "ev": "AFC Ajax", "dep": "FC Utrecht", "skor": "1-2", "tarih": "2026-05-10T14:45:00Z", "tahmin": null}, {"lig": "DED", "ev": "SBV Excelsior", "dep": "FC Volendam", "skor": "1-1", "tarih": "2026-05-10T14:45:00Z", "tahmin": null}, {"lig": "DED", "ev": "FC Groningen", "dep": "NEC", "skor": "2-1", "tarih": "2026-05-10T14:45:00Z", "tahmin": null}, {"lig": "DED", "ev": "Feyenoord Rotterdam", "dep": "AZ", "skor": "1-1", "tarih": "2026-05-10T14:45:00Z", "tahmin": null}, {"lig": "DED", "ev": "Fortuna Sittard", "dep": "PEC Zwolle", "skor": "3-2", "tarih": "2026-05-10T14:45:00Z", "tahmin": null}, {"lig": "DED", "ev": "Go Ahead Eagles", "dep": "PSV", "skor": "1-4", "tarih": "2026-05-10T14:45:00Z", "tahmin": null}, {"lig": "DED", "ev": "Telstar 1963", "dep": "Heracles Almelo", "skor": "3-0", "tarih": "2026-05-10T14:45:00Z", "tahmin": null}, {"lig": "DED", "ev": "FC Twente '65", "dep": "Sparta Rotterdam", "skor": "4-0", "tarih": "2026-05-10T14:45:00Z", "tahmin": null}, {"lig": "ELC", "ev": "Middlesbrough", "dep": "Southampton", "skor": "0-0", "tarih": "2026-05-09T11:30:00Z", "tahmin": null}, {"lig": "ELC", "ev": "Hull City AFC", "dep": "Millwall", "skor": "0-0", "tarih": "2026-05-08T19:00:00Z", "tahmin": null}, {"lig": "FL1", "ev": "Racing Club de Lens", "dep": "FC Nantes", "skor": "1-0", "tarih": "2026-05-08T18:45:00Z", "tahmin": null}, {"lig": "PPL", "ev": "Sporting Clube de Portugal", "dep": "Vitória SC", "skor": "5-1", "tarih": "2026-05-04T19:15:00Z", "tahmin": null}, {"lig": "PPL", "ev": "Rio Ave", "dep": "Gil Vicente", "skor": "0-0", "tarih": "2026-05-03T19:30:00Z", "tahmin": null}, {"lig": "FL1", "ev": "Olympique Lyonnais", "dep": "Stade Rennais 1901", "skor": "4-2", "tarih": "2026-05-03T18:45:00Z", "tahmin": null}, {"lig": "PPL", "ev": "Sporting Clube de Braga", "dep": "GD Estoril Praia", "skor": "1-1", "tarih": "2026-05-03T17:00:00Z", "tahmin": null}, {"lig": "FL1", "ev": "AJ Auxerre", "dep": "Angers SCO", "skor": "3-1", "tarih": "2026-05-03T15:15:00Z", "tahmin": null}, {"lig": "FL1", "ev": "Paris", "dep": "Stade Brestois 29", "skor": "4-0", "tarih": "2026-05-03T15:15:00Z", "tahmin": null}, {"lig": "FL1", "ev": "RC Strasbourg Alsace", "dep": "Toulouse", "skor": "1-2", "tarih": "2026-05-03T15:15:00Z", "tahmin": null}, {"lig": "DED", "ev": "AZ", "dep": "FC Twente '65", "skor": "2-2", "tarih": "2026-05-03T14:45:00Z", "tahmin": null}, {"lig": "DED", "ev": "Sparta Rotterdam", "dep": "Go Ahead Eagles", "skor": "2-2", "tarih": "2026-05-03T14:45:00Z", "tahmin": null}, {"lig": "PPL", "ev": "Casa Pia AC", "dep": "CD Tondela", "skor": "0-1", "tarih": "2026-05-03T14:30:00Z", "tahmin": null}, {"lig": "FL1", "ev": "Lille OSC", "dep": "Le Havre AC", "skor": "1-1", "tarih": "2026-05-03T13:00:00Z", "tahmin": null}, {"lig": "DED", "ev": "Fortuna Sittard", "dep": "Feyenoord Rotterdam", "skor": "1-2", "tarih": "2026-05-03T12:30:00Z", "tahmin": null}]};
+    </script>
+
+    <script>
+        // ─── THEME MANAGEMENT ───
+        const htmlEl = document.documentElement;
+        const themeBtn = document.getElementById('theme-toggle');
+        const iconDark = document.getElementById('theme-icon-dark');
+        const iconLight = document.getElementById('theme-icon-light');
+
+        function setTheme(isDark) {
+            if(isDark) {
+                htmlEl.classList.add('dark');
+                iconLight.classList.remove('hidden');
+                iconDark.classList.add('hidden');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                htmlEl.classList.remove('dark');
+                iconDark.classList.remove('hidden');
+                iconLight.classList.add('hidden');
+                localStorage.setItem('theme', 'light');
+            }
+        }
+
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        setTheme(savedTheme === 'dark');
+
+        themeBtn.addEventListener('click', () => {
+            const isDark = htmlEl.classList.contains('dark');
+            setTheme(!isDark);
+        });
+
+        // ─── APP LOGIC ───
+        const formatMoney = (val) => new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', minimumFractionDigits: 0 }).format(val);
+        
+        setInterval(() => {
+            const now = new Date();
+            document.getElementById('live-time').innerText = now.toLocaleTimeString('tr-TR', {hour: '2-digit', minute:'2-digit'});
+        }, 1000);
+
+        function toggleMatchDetails(id) {
+            const row = document.getElementById(`match-row-${id}`);
+            row.classList.toggle('active');
+        }
+
+        window.switchTab = function(id, tabNum) {
+            for(let i=1; i<=4; i++){
+                const btn = document.getElementById(`tab-btn-${id}-${i}`);
+                const content = document.getElementById(`tab-content-${id}-${i}`);
+                if(btn && content) {
+                    btn.classList.remove('text-primary', 'border-primary');
+                    btn.classList.add('text-muted', 'border-transparent');
+                    content.classList.remove('block');
+                    content.classList.add('hidden');
+                }
+            }
+            const activeBtn = document.getElementById(`tab-btn-${id}-${tabNum}`);
+            const activeContent = document.getElementById(`tab-content-${id}-${tabNum}`);
+            if(activeBtn && activeContent) {
+                activeBtn.classList.remove('text-muted', 'border-transparent');
+                activeBtn.classList.add('text-primary', 'border-primary');
+                activeContent.classList.remove('hidden');
+                activeContent.classList.add('block');
+            }
+        };
+
+        // ─── FILTERS ───
+        let filterMode = 'all'; // 'all', 'value', 'sharp'
+        let searchQuery = '';
+
+        document.getElementById('searchInput').addEventListener('input', (e) => {
+            searchQuery = e.target.value.toLowerCase();
+            applyFilters();
+        });
+        document.getElementById('filter-value').addEventListener('click', (e) => {
+            filterMode = filterMode === 'value' ? 'all' : 'value';
+            e.target.classList.toggle('border-mk-green');
+            e.target.classList.toggle('text-mk-green');
+            document.getElementById('filter-sharp').classList.remove('border-purple-500', 'text-purple-500');
+            applyFilters();
+        });
+        document.getElementById('filter-sharp').addEventListener('click', (e) => {
+            filterMode = filterMode === 'sharp' ? 'all' : 'sharp';
+            e.target.classList.toggle('border-purple-500');
+            e.target.classList.toggle('text-purple-500');
+            document.getElementById('filter-value').classList.remove('border-mk-green', 'text-mk-green');
+            applyFilters();
+        });
+
+        function applyFilters() {
+            document.querySelectorAll('.league-group').forEach(group => {
+                let visibleCount = 0;
+                group.querySelectorAll('.match-container').forEach(match => {
+                    const txt = match.getAttribute('data-search') || '';
+                    const edge = parseFloat(match.getAttribute('data-edge') || '0');
+                    const sharp = match.getAttribute('data-sharp') || '';
+
+                    let show = true;
+                    if(searchQuery && !txt.includes(searchQuery)) show = false;
+                    if(filterMode === 'value' && edge < 5) show = false;
+                    if(filterMode === 'sharp' && !sharp.includes('STRONG') && !sharp.includes('ELITE')) show = false;
+
+                    if(show) { match.classList.remove('hide'); visibleCount++; }
+                    else { match.classList.add('hide'); }
+                });
+                
+                if(visibleCount === 0) group.classList.add('hide');
+                else group.classList.remove('hide');
+            });
+        }
+
+        let activeTab = 'bulten';
+
+        document.getElementById('tab-bulten').addEventListener('click', (e) => {
+            activeTab = 'bulten';
+            e.target.classList.add('border-mk-green', 'text-mk-green');
+            e.target.classList.remove('mk-border', 'text-muted');
+            const other = document.getElementById('tab-biten');
+            other.classList.remove('border-mk-green', 'text-mk-green');
+            other.classList.add('mk-border', 'text-muted');
+            renderActiveTab();
+        });
+
+        document.getElementById('tab-biten').addEventListener('click', (e) => {
+            activeTab = 'biten';
+            e.target.classList.add('border-mk-green', 'text-mk-green');
+            e.target.classList.remove('mk-border', 'text-muted');
+            const other = document.getElementById('tab-bulten');
+            other.classList.remove('border-mk-green', 'text-mk-green');
+            other.classList.add('mk-border', 'text-muted');
+            renderActiveTab();
+        });
+
+        function loadData() {
+            try {
+                const data = window.DASHBOARD_DATA;
+                const signals = window.LIVE_SIGNALS || [];
+                if (!data) return;
+                
+                renderKPIs(data.summary);
+                
+                // Append past bets to LIVE_SIGNALS for the Sonuçlananlar view
+                const pastBets = data.bets || [];
+                const finishedBets = pastBets.filter(b => b.is_win !== null).map(b => ({
+                    ev: b.ev, dep: b.dep, lig: "Sonuçlananlar (Model)", date: b.date, 
+                    selection: b.tahmin, target_odds: b.best_odds,
+                    is_win: b.is_win, gercek_skor: b.gercek_skor, pnl: b.pnl,
+                    edge_pct: b.edge * 100, odds: { ms1:0, ms0:0, ms2:0 },
+                    sharp: {}, form: {}, opening_odds: {}
+                }));
+                
+                const finishedMatches = data.finished_matches || [];
+                const bitenMaclarObj = finishedMatches.map(m => ({
+                    ev: m.ev, dep: m.dep, lig: m.lig, date: m.tarih, 
+                    selection: "Biten Maç", target_odds: 1.0,
+                    is_win: null, gercek_skor: m.skor, pnl: 0,
+                    edge_pct: 0, odds: { ms1:0, ms0:0, ms2:0 },
+                    sharp: {}, form: {}, opening_odds: {}
+                }));
+                
+                window.ALL_BULTEN = [...signals, ...finishedBets];
+                window.ALL_BITEN = bitenMaclarObj;
+                
+                renderKupon();
+                renderActiveTab();
+            } catch (err) {
+                console.error("Data load failed", err);
+            }
+        }
+        
+        function renderActiveTab() {
+            if (activeTab === 'bulten') {
+                document.getElementById('filter-value').parentElement.classList.remove('hidden');
+                document.getElementById('kupon-container').style.display = window.ALL_BULTEN.length > 0 ? '' : 'none';
+                renderFixtures(window.ALL_BULTEN);
+            } else {
+                document.getElementById('filter-value').parentElement.classList.add('hidden');
+                document.getElementById('kupon-container').style.display = 'none';
+                renderFixtures(window.ALL_BITEN);
+            }
+        }
+
+        function renderKPIs(summary) {
+            const roiEl = document.getElementById('kpi-roi');
+            roiEl.innerText = (summary.roi > 0 ? '+' : '') + (summary.roi||0).toFixed(2) + '%';
+            roiEl.className = `text-sm font-bold ${summary.roi > 0 ? 'text-mk-green' : (summary.roi < 0 ? 'text-mk-red' : 'text-muted')}`;
+            document.getElementById('kpi-bankroll').innerText = formatMoney(summary.final_br || 0);
+            
+            const badge = document.getElementById('verdict-badge');
+            const verdict = summary.verdict || "AWAITING";
+            badge.innerText = verdict;
+            if(verdict.includes('PROFITABLE') || verdict.includes('POSITIVE')) {
+                badge.className = "px-2 py-0.5 rounded text-[10px] font-bold uppercase bg-mk-green/10 text-mk-green border border-mk-green/30";
+            } else if (verdict.includes('BLEEDING')) {
+                badge.className = "px-2 py-0.5 rounded text-[10px] font-bold uppercase bg-mk-red/10 text-mk-red border border-mk-red/30";
+            }
+        }
+
+        function generateFormHTML(formArr) {
+            if(!formArr || formArr.length === 0) {
+                return `<div class="form-box form-none">-</div>`.repeat(5);
+            }
+            let html = '';
+            // Mackolik gibi en yeni maç en solda görünsün diye diziyi ters çeviriyoruz.
+            [...formArr].reverse().forEach(r => {
+                const cls = r === 'W' ? 'form-W' : (r === 'D' ? 'form-D' : 'form-L');
+                const lbl = r === 'W' ? 'G' : (r === 'D' ? 'B' : 'M');
+                html += `<div class="form-box ${cls}">${lbl}</div>`;
+            });
+            // fill up to 5 if needed
+            for(let i=formArr.length; i<5; i++){
+                html += `<div class="form-box form-none">-</div>`;
+            }
+            return html;
+        }
+
+        function createProgressBar(label, odds, aiProb, isValue) {
+            const oddsProb = odds > 0 ? (1 / odds) * 100 : 0;
+            const diff = aiProb - oddsProb;
+            const barColor = isValue ? 'bg-mk-green' : 'bg-mk-yellow';
+            
+            return `
+            <div class="mb-3">
+                <div class="flex justify-between text-xs mb-1">
+                    <span class="font-bold text-secondary">${label} <span class="text-muted font-normal">(Oran: ${odds > 0 ? odds.toFixed(2) : '-'})</span></span>
+                    <span class="font-bold ${isValue ? 'text-mk-green' : 'text-muted'}">%${(aiProb||0).toFixed(1)}</span>
+                </div>
+                <div class="progress-bar-bg relative">
+                    <div class="absolute top-0 bottom-0 border-r-2 border-primary z-10 opacity-30" style="left: ${Math.min(100, Math.max(0, oddsProb))}%;" title="İddaa Olasılığı: %${oddsProb.toFixed(1)}"></div>
+                    <div class="progress-bar-fill ${barColor}" style="width: ${Math.min(100, Math.max(0, aiProb))}%;"></div>
+                </div>
+                ${diff > 0 && odds > 0 ? `<div class="text-[9px] text-right text-mk-green mt-0.5">+%${diff.toFixed(1)} Değer (Edge)</div>` : `<div class="h-3"></div>`}
+            </div>`;
+        }
+
+        function renderKupon() {
+            const kContainer = document.getElementById('kupon-container');
+            const kData = window.DASHBOARD_DATA.kupon;
+            if(!kData || !kData.maclar || kData.maclar.length === 0) {
+                kContainer.classList.add('hidden');
+                return;
+            }
+            kContainer.classList.remove('hidden');
+
+            let html = `
+                <div class="bg-gradient-to-r from-yellow-500 to-yellow-600 px-3 py-2 flex justify-between items-center text-white">
+                    <div class="flex items-center gap-2">
+                        <span class="text-xl">🏆</span>
+                        <span class="font-bold uppercase tracking-wide text-sm">Günün Yapay Zeka Kombinesi</span>
+                    </div>
+                    <div class="text-right">
+                        <div class="text-[10px] uppercase opacity-80">Toplam Oran</div>
+                        <div class="font-black text-lg">${kData.toplam_oran.toFixed(2)}</div>
+                    </div>
+                </div>
+                <div class="p-3">
+            `;
+
+            kData.maclar.forEach(m => {
+                html += `
+                    <div class="flex justify-between items-center border-b border-gray-200 dark:border-gray-700 py-2 last:border-0">
+                        <div>
+                            <div class="text-sm font-bold text-primary">${m.ev} - ${m.dep}</div>
+                            <div class="text-[11px] text-muted">${m.tahmin}</div>
+                        </div>
+                        <div class="text-sm font-bold bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200 px-2 py-0.5 rounded">
+                            ${m.oran.toFixed(2)}
+                        </div>
+                    </div>
+                `;
+            });
+
+            html += `
+                <div class="mt-2 pt-2 border-t border-gray-200 dark:border-gray-700 flex justify-between text-[11px] text-muted">
+                    <span>Kazanma İhtimali: <strong class="text-primary">%${kData.kazanma_ihtimali}</strong></span>
+                    <span>Beklenen Değer (Edge): <strong class="text-primary">%${kData.beklenen_deger}</strong></span>
+                </div>
+                </div>
+            `;
+            kContainer.innerHTML = html;
+        }
+
+        function renderFixtures(signalsToRender) {
+            const container = document.getElementById('fixture-container');
+            container.innerHTML = '';
+
+            const matchMap = new Map();
+            signalsToRender.forEach((m, idx) => {
+                const key = m.ev + "_" + m.dep;
+                if(!matchMap.has(key)) matchMap.set(key, {...m, id: idx});
+            });
+
+            const allMatches = Array.from(matchMap.values());
+            allMatches.sort((a, b) => new Date(a.date || 0) - new Date(b.date || 0));
+
+            const grouped = {};
+            allMatches.forEach(m => {
+                const lig = m.lig || "Diğer";
+                const dateObj = new Date(m.date);
+                const dateKey = !isNaN(dateObj) ? dateObj.toLocaleDateString('tr-TR', {day: 'numeric', month: 'long', year: 'numeric'}) : '';
+                const groupKey = `${dateKey} - ${lig}`;
+                if(!grouped[groupKey]) grouped[groupKey] = [];
+                grouped[groupKey].push(m);
+            });
+
+            if(Object.keys(grouped).length === 0) {
+                container.innerHTML = `<div class="p-8 text-center text-muted text-sm">Günün bülteninde analiz edilecek maç bulunmamaktadır.</div>`;
+                return;
+            }
+
+            let html = '';
+            let idCounter = 0;
+
+            for(const [groupTitle, matches] of Object.entries(grouped)) {
+                html += `<div class="league-group">`;
+                html += `
+                    <div class="mk-bg-header border-b mk-border px-3 py-1.5 flex justify-between items-center">
+                        <div class="flex items-center gap-2">
+                            <div class="w-1 h-3 bg-mk-red"></div>
+                            <span class="text-[11px] font-bold text-secondary uppercase">${groupTitle}</span>
+                        </div>
+                        <div class="hidden md:flex gap-1 pr-1 text-[10px] text-muted font-bold w-[124px] justify-between">
+                            <span class="w-[38px] text-center">1</span>
+                            <span class="w-[38px] text-center">X</span>
+                            <span class="w-[38px] text-center">2</span>
+                        </div>
+                    </div>
+                `;
+
+                matches.forEach(m => {
+                    idCounter++;
+                    const dateObj = new Date(m.date);
+                    const timeStr = !isNaN(dateObj) ? dateObj.toLocaleTimeString('tr-TR', {hour: '2-digit', minute: '2-digit'}) : '--:--';
+                    
+                    const score = m.gercek_skor || (m.is_win === null || m.is_win === undefined ? 'v' : 'v');
+                    let scoreClass = 'text-muted font-normal';
+                    if (m.gercek_skor) scoreClass = m.is_win ? 'text-mk-green font-bold' : 'text-mk-red font-bold';
+
+                    const odds = m.odds || {};
+                    const probs = m.probs || {};
+                    const xg = m.xg || {};
+                    const sharp = m.sharp || {};
+                    const form = m.form || {};
+                    const open_odds = m.opening_odds || {};
+                    
+                    const isPending = (m.is_win === null || m.is_win === undefined);
+                    const selection = m.selection || m.tahmin || '';
+                    const edgePct = m.edge_pct || ((m.edge || 0) * 100);
+
+                    const isMs1Value = selection === "Ev Sahibi Kazanır";
+                    const isMs0Value = selection === "Beraberlik";
+                    const isMs2Value = selection === "Deplasman Kazanır";
+                    
+                    const extStats = m.extended_stats || {};
+                    const evSt = extStats.ev_standing || { played: 0, points: 0, gf: 0, ga: 0, over25: 0, btts: 0, recent: [] };
+                    const depSt = extStats.dep_standing || { played: 0, points: 0, gf: 0, ga: 0, over25: 0, btts: 0, recent: [] };
+                    const h2h = extStats.h2h || {matches: [], ev_wins: 0, dep_wins: 0, draws: 0, total: 0};
+                    const h2h_matches = h2h.matches || [];
+
+                    const evAvgGF = evSt.played > 0 ? (evSt.gf / evSt.played).toFixed(2) : '-';
+                    const evAvgGA = evSt.played > 0 ? (evSt.ga / evSt.played).toFixed(2) : '-';
+                    const depAvgGF = depSt.played > 0 ? (depSt.gf / depSt.played).toFixed(2) : '-';
+                    const depAvgGA = depSt.played > 0 ? (depSt.ga / depSt.played).toFixed(2) : '-';
+                    
+                    const evOuPct = evSt.played > 0 ? ((evSt.over25 / evSt.played) * 100).toFixed(0) : 0;
+                    const depOuPct = depSt.played > 0 ? ((depSt.over25 / depSt.played) * 100).toFixed(0) : 0;
+                    const evBttsPct = evSt.played > 0 ? ((evSt.btts / evSt.played) * 100).toFixed(0) : 0;
+                    const depBttsPct = depSt.played > 0 ? ((depSt.btts / depSt.played) * 100).toFixed(0) : 0;
+
+                    const maxGF = Math.max(evAvgGF !== '-' ? evAvgGF : 0, depAvgGF !== '-' ? depAvgGF : 0) || 1;
+                    const maxGA = Math.max(evAvgGA !== '-' ? evAvgGA : 0, depAvgGA !== '-' ? depAvgGA : 0) || 1;
+                    const maxPts = Math.max(evSt.points, depSt.points) || 1;
+                    
+                    const evLogo = `https://ui-avatars.com/api/?name=${encodeURIComponent(m.ev)}&background=random&color=fff&bold=true&rounded=true&size=64`;
+                    const depLogo = `https://ui-avatars.com/api/?name=${encodeURIComponent(m.dep)}&background=random&color=fff&bold=true&rounded=true&size=64`;
+
+
+                    // Dropping Odds Check
+                    const drop1 = (open_odds.ms1 > 0 && odds.ms1 > 0 && odds.ms1 < open_odds.ms1) ? `<span class="drop-arrow">↓</span>` : '';
+                    const drop2 = (open_odds.ms2 > 0 && odds.ms2 > 0 && odds.ms2 < open_odds.ms2) ? `<span class="drop-arrow">↓</span>` : '';
+
+                    // CLV trend text logic
+                    let clvTrendText = "Sabit Kaldı";
+                    let clvTrendColor = "text-muted";
+                    if(isMs1Value && odds.ms1 > 0 && open_odds.ms1 > 0) {
+                        if(odds.ms1 < open_odds.ms1) { clvTrendText = `${open_odds.ms1.toFixed(2)} -> ${odds.ms1.toFixed(2)} (CLV Kazanıldı)`; clvTrendColor = "text-mk-green"; }
+                        else if(odds.ms1 > open_odds.ms1) { clvTrendText = `${open_odds.ms1.toFixed(2)} -> ${odds.ms1.toFixed(2)} (CLV Kaybedildi)`; clvTrendColor = "text-mk-red"; }
+                    }
+
+                    // Public Consensus Calculation
+                    const o1 = odds.ms1 > 0 ? 1/odds.ms1 : 0;
+                    const o0 = odds.ms0 > 0 ? 1/odds.ms0 : 0;
+                    const o2 = odds.ms2 > 0 ? 1/odds.ms2 : 0;
+                    const totalO = o1 + o0 + o2;
+                    const pub1 = totalO > 0 ? (o1 / totalO) * 100 : 0;
+                    const pub0 = totalO > 0 ? (o0 / totalO) * 100 : 0;
+                    const pub2 = totalO > 0 ? (o2 / totalO) * 100 : 0;
+
+                    let sharpSinyalText = "Dengeli";
+                    let sharpColor = "text-muted";
+                    if(sharp.ms_sinyal === "EV") { sharpSinyalText = "Ev Sahibi"; sharpColor = "text-mk-green"; }
+                    else if(sharp.ms_sinyal === "DEP") { sharpSinyalText = "Deplasman"; sharpColor = "text-mk-yellow"; }
+
+                    html += `
+                        <div class="match-container" data-search="${m.ev.toLowerCase()} ${m.dep.toLowerCase()} ${groupTitle.toLowerCase()}" data-edge="${edgePct}" data-sharp="${sharp.ms_tier || ''}">
+                            <!-- Match Row -->
+                            <div id="match-row-${idCounter}" class="match-row flex items-center border-b mk-border px-2 py-2 select-none" onclick="toggleMatchDetails(${idCounter})">
+                                <div class="w-10 text-[11px] text-muted font-bold text-center">${timeStr}</div>
+                                
+                                <div class="flex-1 flex items-center justify-start gap-1 sm:gap-2 px-2">
+                                    <div class="text-right flex-1 flex flex-col justify-center">
+                                        <div class="flex items-center justify-end gap-2">
+                                            <span class="truncate text-[13px] font-bold ${isMs1Value ? 'text-primary' : 'text-secondary'}">${m.ev}</span>
+                                            <img src="${evLogo}" class="w-5 h-5 rounded-full object-cover border border-gray-200 dark:border-gray-700">
+                                        </div>
+                                        <div class="hidden sm:flex gap-0.5 justify-end mt-0.5">${(m.lig === "Sonuçlananlar (Model)") ? (m.pnl > 0 ? '<span class="text-[10px] text-mk-green">KAZANDI</span>' : '<span class="text-[10px] text-mk-red">KAYBETTİ</span>') : (activeTab === 'biten' ? (m.tahmin ? `<span class="text-[10px] font-bold text-mk-yellow uppercase bg-mk-yellow/10 px-1 rounded border border-mk-yellow/20">TAHMİN: ${m.tahmin}</span>` : '') : generateFormHTML(form.ev_form))}</div>
+                                    </div>
+                                    <div class="w-5 text-center text-[11px] mk-bg-header border mk-border rounded-sm py-0.5 ${scoreClass}">${score}</div>
+                                    <div class="text-left flex-1 flex flex-col justify-center">
+                                        <div class="flex items-center justify-start gap-2">
+                                            <img src="${depLogo}" class="w-5 h-5 rounded-full object-cover border border-gray-200 dark:border-gray-700">
+                                            <span class="truncate text-[13px] font-bold ${isMs2Value ? 'text-primary' : 'text-secondary'}">${m.dep}</span>
+                                        </div>
+                                        <div class="hidden sm:flex gap-0.5 justify-start mt-0.5">${(m.lig === "Sonuçlananlar (Model)" || activeTab === 'biten') ? '' : generateFormHTML(form.dep_form)}</div>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center gap-1 w-auto pr-1">
+                                    <div class="odd-box ${isMs1Value ? 'value-found' : ''}">${odds.ms1 > 0 ? odds.ms1.toFixed(2) : '-'} ${drop1}</div>
+                                    <div class="odd-box ${isMs0Value ? 'value-found' : ''}">${odds.ms0 > 0 ? odds.ms0.toFixed(2) : '-'}</div>
+                                    <div class="odd-box ${isMs2Value ? 'value-found' : ''}">${odds.ms2 > 0 ? odds.ms2.toFixed(2) : '-'} ${drop2}</div>
+                                </div>
+                            </div>
+
+                            <!-- Match Details Dropdown -->
+                            <div class="match-details border-b mk-border bg-gray-50 dark:bg-[#1a1b1e]">
+                                <!-- TABS NAV -->
+                                <div class="flex border-b mk-border overflow-x-auto scrollbar-hide text-[11px] font-bold uppercase tracking-wider px-2">
+                                    <div id="tab-btn-${idCounter}-1" class="px-4 py-3 cursor-pointer text-primary border-b-2 border-primary hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors whitespace-nowrap" onclick="switchTab(${idCounter}, 1)">Yapay Zeka & Analiz</div>
+                                    <div id="tab-btn-${idCounter}-2" class="px-4 py-3 cursor-pointer text-muted border-b-2 border-transparent hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors whitespace-nowrap" onclick="switchTab(${idCounter}, 2)">Karşılaştırma</div>
+                                    <div id="tab-btn-${idCounter}-3" class="px-4 py-3 cursor-pointer text-muted border-b-2 border-transparent hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors whitespace-nowrap" onclick="switchTab(${idCounter}, 3)">Aralarındaki Maçlar</div>
+                                    <div id="tab-btn-${idCounter}-4" class="px-4 py-3 cursor-pointer text-muted border-b-2 border-transparent hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors whitespace-nowrap" onclick="switchTab(${idCounter}, 4)">Takım Maçları</div>
+                                </div>
+                                
+                                <div class="p-4 relative">
+                                    <!-- TAB 1: ANALİZ -->
+                                    <div id="tab-content-${idCounter}-1" class="block">
+                                    <div class="flex flex-col sm:flex-row justify-between items-start mb-4 pb-3 border-b mk-border gap-2">
+                                        <div>
+                                            <div class="text-xs text-muted font-bold uppercase mb-1">Yapay Zeka Sinyali</div>
+                                            <div class="text-lg font-black text-primary flex items-center gap-2">
+                                                ${selection}
+                                                ${isMs1Value && drop1 ? `<span class="bg-mk-red text-white text-[10px] px-1.5 py-0.5 rounded animate-pulse">ORAN DÜŞÜYOR</span>` : ''}
+                                            </div>
+                                            <div class="text-sm font-bold text-mk-green">+%${edgePct.toFixed(1)} DEĞER (EDGE)</div>
+                                            <div class="text-[10px] mt-1 font-bold ${clvTrendColor}">CLV Trendi: ${clvTrendText}</div>
+                                        </div>
+                                        <div class="sm:text-right">
+                                            <div class="text-xs text-muted font-bold uppercase mb-1">Durum</div>
+                                            <div class="text-sm font-bold ${(m.status||'').includes('ONAY') ? 'text-mk-green' : 'text-mk-yellow'}">${m.status || 'BEKLİYOR'}</div>
+                                            ${!isPending && m.pnl !== undefined ? `<div class="mt-1 text-xs font-bold ${m.pnl > 0 ? 'text-mk-green' : 'text-mk-red'}">Kâr: ${m.pnl > 0 ? '+' : ''}${formatMoney(m.pnl)}</div>` : ''}
+                                        </div>
+                                    </div>
+
+                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6">
+                                        <div>
+                                            <div class="text-xs font-bold text-muted uppercase tracking-wider mb-3 flex items-center gap-2">
+                                                <div class="w-1.5 h-1.5 bg-mk-red rounded-full"></div>Taraf İhtimalleri (MS)
+                                            </div>
+                                            ${createProgressBar('Ev Sahibi', odds.ms1, probs.ms1, isMs1Value)}
+                                            ${createProgressBar('Beraberlik', odds.ms0, probs.ms0, isMs0Value)}
+                                            ${createProgressBar('Deplasman', odds.ms2, probs.ms2, isMs2Value)}
+                                        </div>
+                                        <div>
+                                            <div class="text-xs font-bold text-muted uppercase tracking-wider mb-3 flex items-center gap-2">
+                                                <div class="w-1.5 h-1.5 bg-mk-yellow rounded-full"></div>Gol İhtimalleri
+                                            </div>
+                                            ${createProgressBar('2.5 Üst', odds.over25, probs.over25, selection === '2.5 Üst')}
+                                            ${createProgressBar('2.5 Alt', odds.under25, probs.under25, selection === '2.5 Alt')}
+                                            ${createProgressBar('Karşılıklı Gol Var', odds.btts_yes, probs.btts_yes, selection === 'KG Var')}
+                                        </div>
+                                    </div>
+
+                                    <div class="mt-4 pt-4 border-t mk-border grid grid-cols-1 md:grid-cols-2 gap-6">
+                                        <div>
+                                            <div class="text-xs font-bold text-muted uppercase tracking-wider mb-2 flex items-center gap-2">
+                                                <div class="w-1.5 h-1.5 bg-blue-500 rounded-full"></div>Piyasa Konsensüsü
+                                            </div>
+                                            <div class="mk-bg-row border mk-border rounded p-3 text-xs">
+                                                <div class="flex justify-between mb-1">
+                                                    <span class="font-bold text-primary">1 (%${pub1.toFixed(0)})</span>
+                                                    <span class="font-bold text-primary">X (%${pub0.toFixed(0)})</span>
+                                                    <span class="font-bold text-primary">2 (%${pub2.toFixed(0)})</span>
+                                                </div>
+                                                <div class="flex h-2 rounded overflow-hidden">
+                                                    <div class="bg-mk-green" style="width: ${pub1}%"></div>
+                                                    <div class="bg-blue-500" style="width: ${pub0}%"></div>
+                                                    <div class="bg-mk-yellow" style="width: ${pub2}%"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="text-xs font-bold text-muted uppercase tracking-wider mb-2 flex items-center gap-2">
+                                                <div class="w-1.5 h-1.5 bg-purple-500 rounded-full"></div>Akıllı Para (Sharp Money) Akışı
+                                            </div>
+                                            <div class="mk-bg-row border mk-border rounded p-3 flex flex-col justify-center gap-1 text-sm">
+                                                <div class="flex justify-between">
+                                                    <span class="text-secondary font-bold">Piyasa Eğilimi:</span>
+                                                    <span class="font-black ${sharpColor}">${sharpSinyalText}</span>
+                                                </div>
+                                                <div class="flex justify-between">
+                                                    <span class="text-secondary font-bold">Hareket Gücü:</span>
+                                                    <span class="font-black text-primary">${sharp.ms_tier || 'YOK'}</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="mt-4 pt-4 border-t mk-border grid grid-cols-1 md:grid-cols-3 gap-6">
+                                        <div class="md:col-span-1">
+                                            <div class="text-xs font-bold text-muted uppercase tracking-wider mb-2 flex items-center gap-2">
+                                                <div class="w-1.5 h-1.5 bg-mk-green rounded-full"></div>Beklenen Gol (xG)
+                                            </div>
+                                            <div class="mk-bg-row border mk-border rounded p-3">
+                                                <div class="flex justify-between items-center mb-2 pb-2 border-b mk-border">
+                                                    <span class="text-sm font-bold text-secondary truncate pr-2">${m.ev}</span>
+                                                    <span class="text-sm font-black text-primary">${xg.ev > 0 ? xg.ev.toFixed(2) : '-'}</span>
+                                                </div>
+                                                <div class="flex justify-between items-center mb-2 pb-2 border-b mk-border">
+                                                    <span class="text-sm font-bold text-secondary truncate pr-2">${m.dep}</span>
+                                                    <span class="text-sm font-black text-primary">${xg.dep > 0 ? xg.dep.toFixed(2) : '-'}</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Sakat & Cezalılar Alanı (Mock/Placeholder) -->
+                                        <div class="md:col-span-1">
+                                            <div class="text-xs font-bold text-muted uppercase tracking-wider mb-2 flex items-center gap-2">
+                                                <div class="w-1.5 h-1.5 bg-orange-500 rounded-full"></div>Sakat / Cezalı
+                                            </div>
+                                            <div class="mk-bg-row border mk-border rounded p-3 h-[calc(100%-24px)] flex flex-col items-center justify-center text-center">
+                                                <svg class="w-6 h-6 text-muted mb-1 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                                                <span class="text-[10px] text-muted font-bold">API BEKLENİYOR</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="md:col-span-1">
+                                            <div class="text-xs font-bold text-muted uppercase tracking-wider mb-2 flex items-center gap-2">
+                                                <div class="w-1.5 h-1.5 bg-gray-500 rounded-full"></div>Gerekçe
+                                            </div>
+                                            <div class="mk-bg-row border mk-border rounded p-3 h-[calc(100%-24px)] overflow-y-auto">
+                                                <p class="text-xs text-secondary italic leading-relaxed">"${m.reasoning || "Değer tespit edildi."}"</p>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- TAB 2: KARŞILAŞTIRMA -->
+                                    <div id="tab-content-${idCounter}-2" class="hidden">
+                                        <div class="grid grid-cols-1 gap-6">
+                                            <!-- Puan -->
+                                            <div>
+                                                <div class="text-[11px] font-bold text-muted uppercase tracking-wider mb-2 text-center">Toplam Puan</div>
+                                                <div class="flex items-center justify-between text-sm font-black mb-1">
+                                                    <span class="text-primary w-16 text-left">${evSt.points} P</span>
+                                                    <span class="text-muted flex-1 text-center text-[10px]">(${evSt.played} Maç) Lig Puanı (${depSt.played} Maç)</span>
+                                                    <span class="text-primary w-16 text-right">${depSt.points} P</span>
+                                                </div>
+                                                <div class="flex items-center h-2 gap-1">
+                                                    <div class="flex-1 flex justify-end bg-gray-200 dark:bg-gray-700 rounded-l overflow-hidden">
+                                                        <div class="bg-mk-green h-full" style="width: ${(evSt.points / maxPts) * 100}%"></div>
+                                                    </div>
+                                                    <div class="flex-1 flex justify-start bg-gray-200 dark:bg-gray-700 rounded-r overflow-hidden">
+                                                        <div class="bg-blue-500 h-full" style="width: ${(depSt.points / maxPts) * 100}%"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Atılan Gol Ort -->
+                                            <div>
+                                                <div class="text-[11px] font-bold text-muted uppercase tracking-wider mb-2 text-center">Atılan Gol Ortalaması</div>
+                                                <div class="flex items-center justify-between text-sm font-black mb-1">
+                                                    <span class="text-primary w-16 text-left">${evAvgGF}</span>
+                                                    <span class="text-muted flex-1 text-center text-[10px]">Maç Başına</span>
+                                                    <span class="text-primary w-16 text-right">${depAvgGF}</span>
+                                                </div>
+                                                <div class="flex items-center h-2 gap-1">
+                                                    <div class="flex-1 flex justify-end bg-gray-200 dark:bg-gray-700 rounded-l overflow-hidden">
+                                                        <div class="bg-mk-green h-full" style="width: ${(evAvgGF !== '-' ? (evAvgGF / maxGF) * 100 : 0)}%"></div>
+                                                    </div>
+                                                    <div class="flex-1 flex justify-start bg-gray-200 dark:bg-gray-700 rounded-r overflow-hidden">
+                                                        <div class="bg-blue-500 h-full" style="width: ${(depAvgGF !== '-' ? (depAvgGF / maxGF) * 100 : 0)}%"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Yenilen Gol Ort -->
+                                            <div>
+                                                <div class="text-[11px] font-bold text-muted uppercase tracking-wider mb-2 text-center">Yenilen Gol Ortalaması</div>
+                                                <div class="flex items-center justify-between text-sm font-black mb-1">
+                                                    <span class="text-primary w-16 text-left">${evAvgGA}</span>
+                                                    <span class="text-muted flex-1 text-center text-[10px]">Maç Başına</span>
+                                                    <span class="text-primary w-16 text-right">${depAvgGA}</span>
+                                                </div>
+                                                <div class="flex items-center h-2 gap-1">
+                                                    <div class="flex-1 flex justify-end bg-gray-200 dark:bg-gray-700 rounded-l overflow-hidden">
+                                                        <div class="bg-mk-red h-full" style="width: ${(evAvgGA !== '-' ? (evAvgGA / maxGA) * 100 : 0)}%"></div>
+                                                    </div>
+                                                    <div class="flex-1 flex justify-start bg-gray-200 dark:bg-gray-700 rounded-r overflow-hidden">
+                                                        <div class="bg-orange-500 h-full" style="width: ${(depAvgGA !== '-' ? (depAvgGA / maxGA) * 100 : 0)}%"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- 2.5 Üst Yüzdesi -->
+                                            <div>
+                                                <div class="text-[11px] font-bold text-muted uppercase tracking-wider mb-2 text-center">2.5 Üst Maç Yüzdesi</div>
+                                                <div class="flex items-center justify-between text-sm font-black mb-1">
+                                                    <span class="text-primary w-16 text-left">%${evOuPct}</span>
+                                                    <span class="text-muted flex-1 text-center text-[10px]">Toplam Maça Oranla</span>
+                                                    <span class="text-primary w-16 text-right">%${depOuPct}</span>
+                                                </div>
+                                                <div class="flex items-center h-2 gap-1">
+                                                    <div class="flex-1 flex justify-end bg-gray-200 dark:bg-gray-700 rounded-l overflow-hidden">
+                                                        <div class="bg-purple-500 h-full" style="width: ${evOuPct}%"></div>
+                                                    </div>
+                                                    <div class="flex-1 flex justify-start bg-gray-200 dark:bg-gray-700 rounded-r overflow-hidden">
+                                                        <div class="bg-indigo-500 h-full" style="width: ${depOuPct}%"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- KG Var Yüzdesi -->
+                                            <div>
+                                                <div class="text-[11px] font-bold text-muted uppercase tracking-wider mb-2 text-center">Karşılıklı Gol Yüzdesi</div>
+                                                <div class="flex items-center justify-between text-sm font-black mb-1">
+                                                    <span class="text-primary w-16 text-left">%${evBttsPct}</span>
+                                                    <span class="text-muted flex-1 text-center text-[10px]">Toplam Maça Oranla</span>
+                                                    <span class="text-primary w-16 text-right">%${depBttsPct}</span>
+                                                </div>
+                                                <div class="flex items-center h-2 gap-1">
+                                                    <div class="flex-1 flex justify-end bg-gray-200 dark:bg-gray-700 rounded-l overflow-hidden">
+                                                        <div class="bg-mk-yellow h-full" style="width: ${evBttsPct}%"></div>
+                                                    </div>
+                                                    <div class="flex-1 flex justify-start bg-gray-200 dark:bg-gray-700 rounded-r overflow-hidden">
+                                                        <div class="bg-yellow-600 h-full" style="width: ${depBttsPct}%"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- TAB 3: H2H -->
+                                    <div id="tab-content-${idCounter}-3" class="hidden">
+                                        <div class="flex justify-between items-center bg-gray-100 dark:bg-gray-800 p-3 rounded mb-4 text-center">
+                                            <div class="flex-1">
+                                                <div class="text-[10px] text-muted font-bold mb-1 truncate">${m.ev}</div>
+                                                <div class="text-xl font-black text-mk-green">${h2h.ev_wins}</div>
+                                            </div>
+                                            <div class="flex-1 border-x mk-border">
+                                                <div class="text-[10px] text-muted font-bold mb-1">Beraberlik</div>
+                                                <div class="text-xl font-black text-gray-500">${h2h.draws}</div>
+                                            </div>
+                                            <div class="flex-1">
+                                                <div class="text-[10px] text-muted font-bold mb-1 truncate">${m.dep}</div>
+                                                <div class="text-xl font-black text-blue-500">${h2h.dep_wins}</div>
+                                            </div>
+                                        </div>
+                                        <div class="text-[11px] font-bold text-muted uppercase tracking-wider mb-3">Geçmiş Maçlar</div>
+                                        <div class="flex flex-col gap-2">
+                                            ${h2h_matches.length > 0 ? h2h_matches.map(h => `
+                                                <div class="flex items-center justify-between bg-white dark:bg-[#111214] p-2 rounded border mk-border text-xs">
+                                                    <div class="w-20 text-muted">${h.date}</div>
+                                                    <div class="flex-1 text-right font-bold ${h.home === m.ev ? 'text-primary' : 'text-secondary'} truncate">${h.home}</div>
+                                                    <div class="px-2 py-1 bg-gray-100 dark:bg-[#202124] rounded mx-2 font-black">${h.score}</div>
+                                                    <div class="flex-1 text-left font-bold ${h.away === m.dep ? 'text-primary' : 'text-secondary'} truncate">${h.away}</div>
+                                                </div>
+                                            `).join('') : '<div class="text-xs text-muted italic text-center py-4">Aralarında daha önce oynanmış kayıtlı maç bulunamadı.</div>'}
+                                        </div>
+                                    </div>
+
+                                    <!-- TAB 4: Maçlar (Form Detayları) -->
+                                    <div id="tab-content-${idCounter}-4" class="hidden">
+                                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                            <!-- EV Son 5 -->
+                                            <div>
+                                                <div class="flex items-center gap-2 mb-3">
+                                                    <img src="${evLogo}" class="w-6 h-6 rounded-full object-cover">
+                                                    <div class="text-[12px] font-bold text-primary uppercase">${m.ev} Son 5 Maç</div>
+                                                </div>
+                                                <div class="flex flex-col gap-2">
+                                                    ${evSt.recent.length > 0 ? evSt.recent.map(r => `
+                                                        <div class="flex items-center justify-between bg-white dark:bg-[#111214] p-2 rounded border mk-border text-[11px]">
+                                                            <div class="w-16 text-muted truncate">${r.date}</div>
+                                                            <div class="flex-1 text-center font-bold text-secondary truncate">${r.opponent} ${r.isHome ? '<span class="text-[9px] text-muted">(Ev)</span>' : '<span class="text-[9px] text-muted">(Dep)</span>'}</div>
+                                                            <div class="px-2 py-0.5 mx-1 font-black rounded text-white ${r.result === 'W' ? 'bg-mk-green' : (r.result === 'D' ? 'bg-gray-500' : 'bg-mk-red')}">${r.score}</div>
+                                                        </div>
+                                                    `).join('') : '<div class="text-[11px] text-muted italic">Veri bulunamadı.</div>'}
+                                                </div>
+                                            </div>
+
+                                            <!-- DEP Son 5 -->
+                                            <div>
+                                                <div class="flex items-center gap-2 mb-3">
+                                                    <img src="${depLogo}" class="w-6 h-6 rounded-full object-cover">
+                                                    <div class="text-[12px] font-bold text-primary uppercase">${m.dep} Son 5 Maç</div>
+                                                </div>
+                                                <div class="flex flex-col gap-2">
+                                                    ${depSt.recent.length > 0 ? depSt.recent.map(r => `
+                                                        <div class="flex items-center justify-between bg-white dark:bg-[#111214] p-2 rounded border mk-border text-[11px]">
+                                                            <div class="w-16 text-muted truncate">${r.date}</div>
+                                                            <div class="flex-1 text-center font-bold text-secondary truncate">${r.opponent} ${r.isHome ? '<span class="text-[9px] text-muted">(Ev)</span>' : '<span class="text-[9px] text-muted">(Dep)</span>'}</div>
+                                                            <div class="px-2 py-0.5 mx-1 font-black rounded text-white ${r.result === 'W' ? 'bg-mk-green' : (r.result === 'D' ? 'bg-gray-500' : 'bg-mk-red')}">${r.score}</div>
+                                                        </div>
+                                                    `).join('') : '<div class="text-[11px] text-muted italic">Veri bulunamadı.</div>'}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                });
+                html += `</div>`;
+            }
+            container.innerHTML = html;
+            applyFilters();
+        }
+
+        document.addEventListener('DOMContentLoaded', loadData);
+    </script>
+</body>
+</html>

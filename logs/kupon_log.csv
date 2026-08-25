@@ -1,0 +1,446 @@
+Tarih,KuponID,Tur,ToplamOran,BirlesikP,Edge,Mac1Ev,Mac1Dep,Mac1Tahmin,Mac1Oran,Mac1Sonuc,Mac2Ev,Mac2Dep,Mac2Tahmin,Mac2Oran,Mac2Sonuc,Mac3Ev,Mac3Dep,Mac3Tahmin,Mac3Oran,Mac3Sonuc,KuponSonuc,KazanılanKat,KuponTelegramBildirildi
+09.03.2026 03:39,09032026_2li_1,2li,15.91,0.1837,1.9231,Real Madrid,Manchester City,Ev Sahibi Kazanır,3.70,ev,Exeter City,Lincoln City,Ev Sahibi Kazanır,4.30,,,,,,,bekliyor,,1
+09.03.2026 03:39,09032026_2li_2,2li,16.65,0.1628,1.7103,Real Madrid,Manchester City,Ev Sahibi Kazanır,3.70,dep,Galatasaray,Liverpool,Ev Sahibi Kazanır,4.50,ev,,,,,,kaybetti,0,1
+09.03.2026 03:39,09032026_2li_3,2li,19.35,0.1368,1.6479,Exeter City,Lincoln City,Ev Sahibi Kazanır,4.30,,Galatasaray,Liverpool,Ev Sahibi Kazanır,4.50,,,,,,,bekliyor,,1
+09.03.2026 03:39,09032026_3lu_1,3lu,36.91,0.0991,2.6587,Real Madrid,Manchester City,Ev Sahibi Kazanır,3.70,ev,Exeter City,Lincoln City,Ev Sahibi Kazanır,4.30,,Newcastle United,Barcelona,Deplasman Kazanır,2.32,,bekliyor,,1
+09.03.2026 03:39,09032026_3lu_2,3lu,31.18,0.1115,2.4777,Real Madrid,Manchester City,Ev Sahibi Kazanır,3.70,ev,Exeter City,Lincoln City,Ev Sahibi Kazanır,4.30,,Espanyol,Oviedo,Ev Sahibi Kazanır,1.96,,bekliyor,,1
+09.03.2026 03:44,09032026_2li_1,2li,15.91,0.1837,1.9231,Real Madrid,Manchester City,Ev Sahibi Kazanır,3.70,ev,Exeter City,Lincoln City,Ev Sahibi Kazanır,4.30,,,,,,,bekliyor,,1
+09.03.2026 03:44,09032026_2li_2,2li,16.65,0.1628,1.7103,Real Madrid,Manchester City,Ev Sahibi Kazanır,3.70,dep,Galatasaray,Liverpool,Ev Sahibi Kazanır,4.50,ev,,,,,,kaybetti,0,1
+09.03.2026 03:44,09032026_2li_3,2li,19.35,0.1368,1.6479,Exeter City,Lincoln City,Ev Sahibi Kazanır,4.30,,Galatasaray,Liverpool,Ev Sahibi Kazanır,4.50,,,,,,,bekliyor,,1
+09.03.2026 03:44,09032026_3lu_1,3lu,36.91,0.0991,2.6587,Real Madrid,Manchester City,Ev Sahibi Kazanır,3.70,ev,Exeter City,Lincoln City,Ev Sahibi Kazanır,4.30,,Newcastle United,Barcelona,Deplasman Kazanır,2.32,,bekliyor,,1
+09.03.2026 03:44,09032026_3lu_2,3lu,31.18,0.1115,2.4777,Real Madrid,Manchester City,Ev Sahibi Kazanır,3.70,ev,Exeter City,Lincoln City,Ev Sahibi Kazanır,4.30,,Espanyol,Oviedo,Ev Sahibi Kazanır,1.96,,bekliyor,,1
+09.03.2026 20:12,09032026_2li_1,2li,16.43,0.1628,1.6737,Real Madrid,Manchester City,Ev Sahibi Kazanır,3.65,dep,Galatasaray,Liverpool,Ev Sahibi Kazanır,4.50,ev,,,,,,kaybetti,0,1
+09.03.2026 20:12,09032026_2li_2,2li,15.69,0.1617,1.5380,Real Madrid,Manchester City,Ev Sahibi Kazanır,3.65,ev,Exeter City,Lincoln City,Ev Sahibi Kazanır,4.30,,,,,,,bekliyor,,1
+09.03.2026 20:12,09032026_2li_3,2li,19.35,0.1204,1.3306,Galatasaray,Liverpool,Ev Sahibi Kazanır,4.50,ev,Exeter City,Lincoln City,Ev Sahibi Kazanır,4.30,,,,,,,bekliyor,,1
+09.03.2026 20:12,09032026_3lu_1,3lu,38.43,0.0878,2.3754,Real Madrid,Manchester City,Ev Sahibi Kazanır,3.65,dep,Galatasaray,Liverpool,Ev Sahibi Kazanır,4.50,ev,Newcastle United,Barcelona,Deplasman Kazanır,2.34,dep,kaybetti,0,1
+09.03.2026 20:12,09032026_3lu_2,3lu,36.73,0.0872,2.2041,Real Madrid,Manchester City,Ev Sahibi Kazanır,3.65,ev,Exeter City,Lincoln City,Ev Sahibi Kazanır,4.30,,Newcastle United,Barcelona,Deplasman Kazanır,2.34,,bekliyor,,1
+09.03.2026 20:27,09032026_2li_1,2li,16.43,0.1628,1.6737,Real Madrid,Manchester City,Ev Sahibi Kazanır,3.65,dep,Galatasaray,Liverpool,Ev Sahibi Kazanır,4.50,ev,,,,,,kaybetti,0,1
+09.03.2026 20:27,09032026_2li_2,2li,15.69,0.1617,1.5380,Real Madrid,Manchester City,Ev Sahibi Kazanır,3.65,ev,Exeter City,Lincoln City,Ev Sahibi Kazanır,4.30,,,,,,,bekliyor,,1
+09.03.2026 20:27,09032026_2li_3,2li,19.35,0.1204,1.3306,Galatasaray,Liverpool,Ev Sahibi Kazanır,4.50,ev,Exeter City,Lincoln City,Ev Sahibi Kazanır,4.30,,,,,,,bekliyor,,1
+09.03.2026 20:27,09032026_3lu_1,3lu,38.43,0.0878,2.3754,Real Madrid,Manchester City,Ev Sahibi Kazanır,3.65,dep,Galatasaray,Liverpool,Ev Sahibi Kazanır,4.50,ev,Newcastle United,Barcelona,Deplasman Kazanır,2.34,dep,kaybetti,0,1
+09.03.2026 20:27,09032026_3lu_2,3lu,36.73,0.0872,2.2041,Real Madrid,Manchester City,Ev Sahibi Kazanır,3.65,ev,Exeter City,Lincoln City,Ev Sahibi Kazanır,4.30,,Newcastle United,Barcelona,Deplasman Kazanır,2.34,,bekliyor,,1
+09.03.2026 20:43,09032026_2li_1,2li,15.69,0.1837,1.8836,Real Madrid,Manchester City,Ev Sahibi Kazanır,3.65,ev,Exeter City,Lincoln City,Ev Sahibi Kazanır,4.30,,,,,,,bekliyor,,1
+09.03.2026 20:43,09032026_2li_2,2li,16.43,0.1628,1.6737,Real Madrid,Manchester City,Ev Sahibi Kazanır,3.65,dep,Galatasaray,Liverpool,Ev Sahibi Kazanır,4.50,ev,,,,,,kaybetti,0,1
+09.03.2026 20:43,09032026_2li_3,2li,19.35,0.1368,1.6479,Exeter City,Lincoln City,Ev Sahibi Kazanır,4.30,,Galatasaray,Liverpool,Ev Sahibi Kazanır,4.50,,,,,,,bekliyor,,1
+09.03.2026 20:43,09032026_3lu_1,3lu,36.73,0.0991,2.6403,Real Madrid,Manchester City,Ev Sahibi Kazanır,3.65,ev,Exeter City,Lincoln City,Ev Sahibi Kazanır,4.30,,Newcastle United,Barcelona,Deplasman Kazanır,2.34,,bekliyor,,1
+09.03.2026 20:43,09032026_3lu_2,3lu,30.29,0.1115,2.3782,Real Madrid,Manchester City,Ev Sahibi Kazanır,3.65,ev,Exeter City,Lincoln City,Ev Sahibi Kazanır,4.30,,Espanyol,Oviedo,Ev Sahibi Kazanır,1.93,,bekliyor,,1
+09.03.2026 21:15,09032026_2li_1,2li,15.69,0.1854,1.9095,Real Madrid,Manchester City,Ev Sahibi Kazanır,3.65,ev,Exeter City,Lincoln City,Ev Sahibi Kazanır,4.30,,,,,,,bekliyor,,1
+09.03.2026 21:15,09032026_2li_2,2li,16.43,0.1624,1.6675,Real Madrid,Manchester City,Ev Sahibi Kazanır,3.65,dep,Galatasaray,Liverpool,Ev Sahibi Kazanır,4.50,ev,,,,,,kaybetti,0,1
+09.03.2026 21:15,09032026_2li_3,2li,19.35,0.1353,1.6182,Exeter City,Lincoln City,Ev Sahibi Kazanır,4.30,,Galatasaray,Liverpool,Ev Sahibi Kazanır,4.50,,,,,,,bekliyor,,1
+09.03.2026 21:15,09032026_3lu_1,3lu,36.73,0.1023,2.7588,Real Madrid,Manchester City,Ev Sahibi Kazanır,3.65,ev,Exeter City,Lincoln City,Ev Sahibi Kazanır,4.30,,Newcastle United,Barcelona,Deplasman Kazanır,2.34,,bekliyor,,1
+09.03.2026 21:15,09032026_3lu_2,3lu,38.43,0.0897,2.4462,Real Madrid,Manchester City,Ev Sahibi Kazanır,3.65,dep,Galatasaray,Liverpool,Ev Sahibi Kazanır,4.50,ev,Newcastle United,Barcelona,Deplasman Kazanır,2.34,dep,kaybetti,0,1
+09.03.2026 22:24,09032026_2li_1,2li,15.88,0.2932,3.6547,Rotherham United,Bolton Wanderers,Ev Sahibi Kazanır,4.35,,VfB Stuttgart,Porto,Deplasman Kazanır,3.65,,,,,,,bekliyor,,1
+09.03.2026 22:24,09032026_2li_2,2li,20.66,0.2138,3.4183,Rotherham United,Bolton Wanderers,Ev Sahibi Kazanır,4.35,,Exeter City,Lincoln City,Ev Sahibi Kazanır,4.75,,,,,,,bekliyor,,1
+09.03.2026 22:24,09032026_2li_3,2li,15.88,0.2567,3.0750,Rotherham United,Bolton Wanderers,Ev Sahibi Kazanır,4.35,,Real Madrid,Manchester City,Ev Sahibi Kazanır,3.65,,,,,,,bekliyor,,1
+09.03.2026 22:24,09032026_3lu_1,3lu,49.22,0.1349,5.6376,Rotherham United,Bolton Wanderers,Ev Sahibi Kazanır,4.35,,VfB Stuttgart,Porto,Deplasman Kazanır,3.65,,Vitória SC,Famalicão,Deplasman Kazanır,3.10,,bekliyor,,1
+09.03.2026 22:24,09032026_3lu_2,3lu,42.55,0.1492,5.3470,Rotherham United,Bolton Wanderers,Ev Sahibi Kazanır,4.35,,VfB Stuttgart,Porto,Deplasman Kazanır,3.65,,Northampton Town,Burton Albion,Ev Sahibi Kazanır,2.68,,bekliyor,,1
+09.03.2026 22:51,09032026_2li_1,2li,12.33,0.1537,0.8943,Manchester United,Aston Villa,Deplasman Kazanır,4.60,ev,Northampton Town,Burton Albion,Ev Sahibi Kazanır,2.68,,,,,,,bekliyor,,1
+09.03.2026 22:51,09032026_2li_2,2li,12.42,0.1504,0.8679,Manchester United,Aston Villa,Deplasman Kazanır,4.60,ev,Oviedo,Valencia,Deplasman Kazanır,2.70,ev,,,,,,kaybetti,0,1
+09.03.2026 22:51,09032026_2li_3,2li,13.11,0.1405,0.8418,Manchester United,Aston Villa,Deplasman Kazanır,4.60,ev,Nacional,Estoril,Deplasman Kazanır,2.85,dep,,,,,,kaybetti,0,1
+09.03.2026 22:51,09032026_3lu_1,3lu,33.29,0.0765,1.5471,Manchester United,Aston Villa,Deplasman Kazanır,4.60,ev,Northampton Town,Burton Albion,Ev Sahibi Kazanır,2.68,,Oviedo,Valencia,Deplasman Kazanır,2.70,,bekliyor,,1
+09.03.2026 22:51,09032026_3lu_2,3lu,35.13,0.0715,1.5115,Manchester United,Aston Villa,Deplasman Kazanır,4.60,ev,Northampton Town,Burton Albion,Ev Sahibi Kazanır,2.68,,Nacional,Estoril,Deplasman Kazanır,2.85,,bekliyor,,1
+09.03.2026 22:57,09032026_2li_1,2li,12.33,0.1537,0.8943,Manchester United,Aston Villa,Deplasman Kazanır,4.60,ev,Northampton Town,Burton Albion,Ev Sahibi Kazanır,2.68,,,,,,,bekliyor,,1
+09.03.2026 22:57,09032026_2li_2,2li,12.42,0.1504,0.8679,Manchester United,Aston Villa,Deplasman Kazanır,4.60,ev,Oviedo,Valencia,Deplasman Kazanır,2.70,ev,,,,,,kaybetti,0,1
+09.03.2026 22:57,09032026_2li_3,2li,13.11,0.1405,0.8418,Manchester United,Aston Villa,Deplasman Kazanır,4.60,ev,Nacional,Estoril,Deplasman Kazanır,2.85,dep,,,,,,kaybetti,0,1
+09.03.2026 22:57,09032026_3lu_1,3lu,33.29,0.0765,1.5471,Manchester United,Aston Villa,Deplasman Kazanır,4.60,ev,Northampton Town,Burton Albion,Ev Sahibi Kazanır,2.68,,Oviedo,Valencia,Deplasman Kazanır,2.70,,bekliyor,,1
+09.03.2026 22:57,09032026_3lu_2,3lu,35.13,0.0715,1.5115,Manchester United,Aston Villa,Deplasman Kazanır,4.60,ev,Northampton Town,Burton Albion,Ev Sahibi Kazanır,2.68,,Nacional,Estoril,Deplasman Kazanır,2.85,,bekliyor,,1
+09.03.2026 23:05,09032026_2li_1,2li,12.33,0.1537,0.8943,Manchester United,Aston Villa,Deplasman Kazanır,4.60,ev,Northampton Town,Burton Albion,Ev Sahibi Kazanır,2.68,,,,,,,bekliyor,,1
+09.03.2026 23:05,09032026_2li_2,2li,12.42,0.1504,0.8679,Manchester United,Aston Villa,Deplasman Kazanır,4.60,ev,Oviedo,Valencia,Deplasman Kazanır,2.70,ev,,,,,,kaybetti,0,1
+09.03.2026 23:05,09032026_2li_3,2li,13.11,0.1405,0.8418,Manchester United,Aston Villa,Deplasman Kazanır,4.60,ev,Nacional,Estoril,Deplasman Kazanır,2.85,dep,,,,,,kaybetti,0,1
+09.03.2026 23:05,09032026_3lu_1,3lu,33.29,0.0765,1.5471,Manchester United,Aston Villa,Deplasman Kazanır,4.60,ev,Northampton Town,Burton Albion,Ev Sahibi Kazanır,2.68,,Oviedo,Valencia,Deplasman Kazanır,2.70,,bekliyor,,1
+09.03.2026 23:05,09032026_3lu_2,3lu,35.13,0.0715,1.5115,Manchester United,Aston Villa,Deplasman Kazanır,4.60,ev,Northampton Town,Burton Albion,Ev Sahibi Kazanır,2.68,,Nacional,Estoril,Deplasman Kazanır,2.85,,bekliyor,,1
+09.03.2026 23:39,09032026_2li_1,2li,14.72,0.1311,0.9303,Crystal Palace,Leeds United,Deplasman Kazanır,3.30,ber,Borussia Monchengladbach,FC St. Pauli,Deplasman Kazanır,4.46,,,,,,,bekliyor,,1
+09.03.2026 23:39,09032026_2li_2,2li,12.54,0.1530,0.9190,Crystal Palace,Leeds United,Deplasman Kazanır,3.30,ber,Tondela,Rio Ave FC,Deplasman Kazanır,3.80,dep,,,,,,kaybetti,0,1
+09.03.2026 23:39,09032026_2li_3,2li,9.31,0.2057,0.9140,Crystal Palace,Leeds United,Deplasman Kazanır,3.30,ber,Wigan Athletic,Plymouth Argyle,Ev Sahibi Kazanır,2.82,,,,,,,bekliyor,,1
+09.03.2026 23:39,09032026_3lu_1,3lu,41.50,0.0637,1.6455,Crystal Palace,Leeds United,Deplasman Kazanır,3.30,ber,Borussia Monchengladbach,FC St. Pauli,Deplasman Kazanır,4.46,,Wigan Athletic,Plymouth Argyle,Ev Sahibi Kazanır,2.82,,bekliyor,,1
+09.03.2026 23:39,09032026_3lu_2,3lu,35.36,0.0744,1.6300,Crystal Palace,Leeds United,Deplasman Kazanır,3.30,ber,Tondela,Rio Ave FC,Deplasman Kazanır,3.80,dep,Wigan Athletic,Plymouth Argyle,Ev Sahibi Kazanır,2.82,,bekliyor,,1
+09.03.2026 23:47,09032026_2li_1,2li,12.58,0.1530,0.9249,Wigan Athletic,Plymouth Argyle,Ev Sahibi Kazanır,2.82,,Borussia Monchengladbach,FC St. Pauli,Deplasman Kazanır,4.46,,,,,,,bekliyor,,1
+09.03.2026 23:47,09032026_2li_2,2li,15.83,0.1202,0.9034,Borussia Monchengladbach,FC St. Pauli,Deplasman Kazanır,4.46,,Nottingham Forest,Fulham,Deplasman Kazanır,3.55,,,,,,,bekliyor,,1
+09.03.2026 23:47,09032026_2li_3,2li,10.01,0.1900,0.9019,Wigan Athletic,Plymouth Argyle,Ev Sahibi Kazanır,2.82,,Nottingham Forest,Fulham,Deplasman Kazanır,3.55,,,,,,,bekliyor,,1
+09.03.2026 23:47,09032026_3lu_1,3lu,44.65,0.0591,1.6398,Wigan Athletic,Plymouth Argyle,Ev Sahibi Kazanır,2.82,,Borussia Monchengladbach,FC St. Pauli,Deplasman Kazanır,4.46,,Nottingham Forest,Fulham,Deplasman Kazanır,3.55,,bekliyor,,1
+09.03.2026 23:47,09032026_3lu_2,3lu,41.50,0.0625,1.5930,Wigan Athletic,Plymouth Argyle,Ev Sahibi Kazanır,2.82,,Borussia Monchengladbach,FC St. Pauli,Deplasman Kazanır,4.46,,Crystal Palace,Leeds United,Deplasman Kazanır,3.30,,bekliyor,,1
+09.03.2026 23:52,09032026_2li_1,2li,12.58,0.1530,0.9249,Wigan Athletic,Plymouth Argyle,Ev Sahibi Kazanır,2.82,,Borussia Monchengladbach,FC St. Pauli,Deplasman Kazanır,4.46,,,,,,,bekliyor,,1
+09.03.2026 23:52,09032026_2li_2,2li,15.83,0.1202,0.9034,Nottingham Forest,Fulham,Deplasman Kazanır,3.55,ber,Borussia Monchengladbach,FC St. Pauli,Deplasman Kazanır,4.46,,,,,,,bekliyor,,1
+09.03.2026 23:52,09032026_2li_3,2li,10.01,0.1900,0.9019,Nottingham Forest,Fulham,Deplasman Kazanır,3.55,ber,Wigan Athletic,Plymouth Argyle,Ev Sahibi Kazanır,2.82,,,,,,,bekliyor,,1
+09.03.2026 23:52,09032026_3lu_1,3lu,44.65,0.0591,1.6398,Nottingham Forest,Fulham,Deplasman Kazanır,3.55,ber,Wigan Athletic,Plymouth Argyle,Ev Sahibi Kazanır,2.82,,Borussia Monchengladbach,FC St. Pauli,Deplasman Kazanır,4.46,,bekliyor,,1
+09.03.2026 23:52,09032026_3lu_2,3lu,41.50,0.0625,1.5930,Wigan Athletic,Plymouth Argyle,Ev Sahibi Kazanır,2.82,,Borussia Monchengladbach,FC St. Pauli,Deplasman Kazanır,4.46,,Crystal Palace,Leeds United,Deplasman Kazanır,3.30,,bekliyor,,1
+09.03.2026 23:55,09032026_2li_1,2li,12.58,0.1530,0.9249,Borussia Monchengladbach,FC St. Pauli,Deplasman Kazanır,4.46,,Wigan Athletic,Plymouth Argyle,Ev Sahibi Kazanır,2.82,,,,,,,bekliyor,,1
+09.03.2026 23:55,09032026_2li_2,2li,15.83,0.1202,0.9034,Borussia Monchengladbach,FC St. Pauli,Deplasman Kazanır,4.46,,Nottingham Forest,Fulham,Deplasman Kazanır,3.55,,,,,,,bekliyor,,1
+09.03.2026 23:55,09032026_2li_3,2li,10.01,0.1900,0.9019,Wigan Athletic,Plymouth Argyle,Ev Sahibi Kazanır,2.82,,Nottingham Forest,Fulham,Deplasman Kazanır,3.55,,,,,,,bekliyor,,1
+09.03.2026 23:55,09032026_3lu_1,3lu,44.65,0.0591,1.6398,Borussia Monchengladbach,FC St. Pauli,Deplasman Kazanır,4.46,,Wigan Athletic,Plymouth Argyle,Ev Sahibi Kazanır,2.82,,Nottingham Forest,Fulham,Deplasman Kazanır,3.55,,bekliyor,,1
+09.03.2026 23:55,09032026_3lu_2,3lu,41.50,0.0625,1.5930,Borussia Monchengladbach,FC St. Pauli,Deplasman Kazanır,4.46,,Wigan Athletic,Plymouth Argyle,Ev Sahibi Kazanır,2.82,,Crystal Palace,Leeds United,Deplasman Kazanır,3.30,,bekliyor,,1
+10.03.2026 00:12,10032026_2li_1,2li,12.58,0.1530,0.9249,Borussia Monchengladbach,FC St. Pauli,Deplasman Kazanır,4.46,,Wigan Athletic,Plymouth Argyle,Ev Sahibi Kazanır,2.82,,,,,,,bekliyor,,1
+10.03.2026 00:12,10032026_2li_2,2li,15.83,0.1202,0.9034,Nottingham Forest,Fulham,Deplasman Kazanır,3.55,ber,Borussia Monchengladbach,FC St. Pauli,Deplasman Kazanır,4.46,,,,,,,bekliyor,,1
+10.03.2026 00:12,10032026_2li_3,2li,10.01,0.1900,0.9019,Nottingham Forest,Fulham,Deplasman Kazanır,3.55,ber,Wigan Athletic,Plymouth Argyle,Ev Sahibi Kazanır,2.82,,,,,,,bekliyor,,1
+10.03.2026 00:12,10032026_3lu_1,3lu,44.65,0.0591,1.6398,Nottingham Forest,Fulham,Deplasman Kazanır,3.55,ber,Borussia Monchengladbach,FC St. Pauli,Deplasman Kazanır,4.46,,Wigan Athletic,Plymouth Argyle,Ev Sahibi Kazanır,2.82,,bekliyor,,1
+10.03.2026 00:12,10032026_3lu_2,3lu,41.50,0.0625,1.5930,Borussia Monchengladbach,FC St. Pauli,Deplasman Kazanır,4.46,,Wigan Athletic,Plymouth Argyle,Ev Sahibi Kazanır,2.82,,Crystal Palace,Leeds United,Deplasman Kazanır,3.30,,bekliyor,,1
+10.03.2026 19:30,10032026_2li_1,2li,11.26,0.1522,0.7140,Chelsea FC,Paris Saint-Germain FC,Deplasman Kazanır,2.98,dep,Stade Rennais FC 1901,Lille OSC,Deplasman Kazanır,3.78,dep,,,,,,kazandi,11.26,1
+10.03.2026 19:30,10032026_2li_2,2li,9.63,0.1772,0.7060,Chelsea FC,Paris Saint-Germain FC,Deplasman Kazanır,2.98,dep,US Sassuolo Calcio,Bologna FC 1909,Deplasman Kazanır,3.23,dep,,,,,,kazandi,9.63,1
+10.03.2026 19:30,10032026_2li_3,2li,12.21,0.1394,0.7015,Stade Rennais FC 1901,Lille OSC,Deplasman Kazanır,3.78,dep,US Sassuolo Calcio,Bologna FC 1909,Deplasman Kazanır,3.23,dep,,,,,,kazandi,12.21,1
+10.03.2026 19:30,10032026_3lu_1,3lu,36.38,0.0613,1.2306,Chelsea FC,Paris Saint-Germain FC,Deplasman Kazanır,2.98,dep,Stade Rennais FC 1901,Lille OSC,Deplasman Kazanır,3.78,dep,US Sassuolo Calcio,Bologna FC 1909,Deplasman Kazanır,3.23,dep,kazandi,36.38,1
+10.03.2026 19:30,10032026_3lu_2,3lu,39.31,0.0562,1.2091,Chelsea FC,Paris Saint-Germain FC,Deplasman Kazanır,2.98,dep,Stade Rennais FC 1901,Lille OSC,Deplasman Kazanır,3.78,dep,West Bromwich Albion FC,Southampton FC,Ev Sahibi Kazanır,3.49,ber,kaybetti,0,1
+10.03.2026 19:58,10032026_2li_1,2li,14.80,0.1295,0.9162,West Bromwich Albion FC,Southampton FC,Ev Sahibi Kazanır,3.49,ber,SC Heerenveen,Telstar 1963,Deplasman Kazanır,4.24,ev,,,,,,kaybetti,0,1
+10.03.2026 19:58,10032026_2li_2,2li,18.32,0.1043,0.9113,SC Heerenveen,Telstar 1963,Deplasman Kazanır,4.24,ev,Millwall FC,Derby County FC,Deplasman Kazanır,4.32,ev,,,,,,kaybetti,0,1
+10.03.2026 19:58,10032026_2li_3,2li,15.08,0.1264,0.9052,West Bromwich Albion FC,Southampton FC,Ev Sahibi Kazanır,3.49,ber,Millwall FC,Derby County FC,Deplasman Kazanır,4.32,ev,,,,,,kaybetti,0,1
+10.03.2026 19:58,10032026_3lu_1,3lu,48.98,0.0527,1.5814,West Bromwich Albion FC,Southampton FC,Ev Sahibi Kazanır,3.49,ber,SC Heerenveen,Telstar 1963,Deplasman Kazanır,4.24,ev,Angers SCO,OGC Nice,Deplasman Kazanır,3.31,dep,kaybetti,0,1
+10.03.2026 19:58,10032026_3lu_2,3lu,49.90,0.0514,1.5666,West Bromwich Albion FC,Southampton FC,Ev Sahibi Kazanır,3.49,ber,Millwall FC,Derby County FC,Deplasman Kazanır,4.32,ev,Angers SCO,OGC Nice,Deplasman Kazanır,3.31,dep,kaybetti,0,1
+11.03.2026 02:09,11032026_2li_1,2li,3.74,0.5189,0.9425,Feyenoord Rotterdam,SBV Excelsior,Ev Sahibi Kazanır,1.91,ev,Sporting Clube de Portugal,FK Bodø/Glimt,Ev Sahibi Kazanır,1.96,ev,,,,,,kazandi,3.74,1
+11.03.2026 02:09,11032026_2li_2,2li,3.55,0.5451,0.9365,Feyenoord Rotterdam,SBV Excelsior,Ev Sahibi Kazanır,1.91,ev,FC Porto,Moreirense FC,Ev Sahibi Kazanır,1.86,ev,,,,,,kazandi,3.55,1
+11.03.2026 02:09,11032026_2li_3,2li,3.65,0.5308,0.9349,FC Porto,Moreirense FC,Ev Sahibi Kazanır,1.86,ev,Sporting Clube de Portugal,FK Bodø/Glimt,Ev Sahibi Kazanır,1.96,ev,,,,,,kazandi,3.65,1
+11.03.2026 02:09,11032026_3lu_1,3lu,6.96,0.3875,1.6979,Feyenoord Rotterdam,SBV Excelsior,Ev Sahibi Kazanır,1.91,ev,FC Porto,Moreirense FC,Ev Sahibi Kazanır,1.86,ev,Sporting Clube de Portugal,FK Bodø/Glimt,Ev Sahibi Kazanır,1.96,ev,kazandi,6.96,1
+11.03.2026 02:09,11032026_3lu_2,3lu,7.45,0.3607,1.6873,FC Arouca,Sport Lisboa e Benfica,Deplasman Kazanır,1.99,dep,Feyenoord Rotterdam,SBV Excelsior,Ev Sahibi Kazanır,1.91,ev,Sporting Clube de Portugal,FK Bodø/Glimt,Ev Sahibi Kazanır,1.96,ev,kazandi,7.45,1
+11.03.2026 02:29,11032026_2li_1,2li,3.74,0.5189,0.9425,Feyenoord Rotterdam,SBV Excelsior,Ev Sahibi Kazanır,1.91,ev,Sporting Clube de Portugal,FK Bodø/Glimt,Ev Sahibi Kazanır,1.96,ev,,,,,,kazandi,3.74,1
+11.03.2026 02:29,11032026_2li_2,2li,3.55,0.5451,0.9365,Feyenoord Rotterdam,SBV Excelsior,Ev Sahibi Kazanır,1.91,ev,FC Porto,Moreirense FC,Ev Sahibi Kazanır,1.86,ev,,,,,,kazandi,3.55,1
+11.03.2026 02:29,11032026_2li_3,2li,3.65,0.5308,0.9349,Sporting Clube de Portugal,FK Bodø/Glimt,Ev Sahibi Kazanır,1.96,ev,FC Porto,Moreirense FC,Ev Sahibi Kazanır,1.86,ev,,,,,,kazandi,3.65,1
+11.03.2026 02:29,11032026_3lu_1,3lu,6.96,0.3875,1.6979,Feyenoord Rotterdam,SBV Excelsior,Ev Sahibi Kazanır,1.91,ev,Sporting Clube de Portugal,FK Bodø/Glimt,Ev Sahibi Kazanır,1.96,ev,FC Porto,Moreirense FC,Ev Sahibi Kazanır,1.86,ev,kazandi,6.96,1
+11.03.2026 02:29,11032026_3lu_2,3lu,7.45,0.3607,1.6873,Feyenoord Rotterdam,SBV Excelsior,Ev Sahibi Kazanır,1.91,ev,Sporting Clube de Portugal,FK Bodø/Glimt,Ev Sahibi Kazanır,1.96,ev,FC Arouca,Sport Lisboa e Benfica,Deplasman Kazanır,1.99,dep,kazandi,7.45,1
+11.03.2026 02:38,11032026_2li_1,2li,3.74,0.5189,0.9425,Sporting Clube de Portugal,FK Bodø/Glimt,Ev Sahibi Kazanır,1.96,ev,Feyenoord Rotterdam,SBV Excelsior,Ev Sahibi Kazanır,1.91,ev,,,,,,kazandi,3.74,1
+11.03.2026 02:38,11032026_2li_2,2li,3.55,0.5451,0.9365,FC Porto,Moreirense FC,Ev Sahibi Kazanır,1.86,ev,Feyenoord Rotterdam,SBV Excelsior,Ev Sahibi Kazanır,1.91,ev,,,,,,kazandi,3.55,1
+11.03.2026 02:38,11032026_2li_3,2li,3.65,0.5308,0.9349,Sporting Clube de Portugal,FK Bodø/Glimt,Ev Sahibi Kazanır,1.96,ev,FC Porto,Moreirense FC,Ev Sahibi Kazanır,1.86,ev,,,,,,kazandi,3.65,1
+11.03.2026 02:38,11032026_3lu_1,3lu,6.96,0.3875,1.6979,Sporting Clube de Portugal,FK Bodø/Glimt,Ev Sahibi Kazanır,1.96,ev,FC Porto,Moreirense FC,Ev Sahibi Kazanır,1.86,ev,Feyenoord Rotterdam,SBV Excelsior,Ev Sahibi Kazanır,1.91,ev,kazandi,6.96,1
+11.03.2026 02:38,11032026_3lu_2,3lu,7.45,0.3607,1.6873,Sporting Clube de Portugal,FK Bodø/Glimt,Ev Sahibi Kazanır,1.96,ev,FC Arouca,Sport Lisboa e Benfica,Deplasman Kazanır,1.99,dep,Feyenoord Rotterdam,SBV Excelsior,Ev Sahibi Kazanır,1.91,ev,kazandi,7.45,1
+11.03.2026 02:55,11032026_2li_1,2li,3.74,0.5189,0.9425,Sporting Clube de Portugal,FK Bodø/Glimt,Ev Sahibi Kazanır,1.96,ev,Feyenoord Rotterdam,SBV Excelsior,Ev Sahibi Kazanır,1.91,ev,,,,,,kazandi,3.74,1
+11.03.2026 02:55,11032026_2li_2,2li,3.55,0.5451,0.9365,FC Porto,Moreirense FC,Ev Sahibi Kazanır,1.86,ev,Feyenoord Rotterdam,SBV Excelsior,Ev Sahibi Kazanır,1.91,ev,,,,,,kazandi,3.55,1
+11.03.2026 02:55,11032026_2li_3,2li,3.65,0.5308,0.9349,Sporting Clube de Portugal,FK Bodø/Glimt,Ev Sahibi Kazanır,1.96,ev,FC Porto,Moreirense FC,Ev Sahibi Kazanır,1.86,ev,,,,,,kazandi,3.65,1
+11.03.2026 02:55,11032026_3lu_1,3lu,6.96,0.3875,1.6979,Sporting Clube de Portugal,FK Bodø/Glimt,Ev Sahibi Kazanır,1.96,ev,FC Porto,Moreirense FC,Ev Sahibi Kazanır,1.86,ev,Feyenoord Rotterdam,SBV Excelsior,Ev Sahibi Kazanır,1.91,ev,kazandi,6.96,1
+11.03.2026 02:55,11032026_3lu_2,3lu,7.45,0.3607,1.6873,Sporting Clube de Portugal,FK Bodø/Glimt,Ev Sahibi Kazanır,1.96,ev,Feyenoord Rotterdam,SBV Excelsior,Ev Sahibi Kazanır,1.91,ev,FC Arouca,Sport Lisboa e Benfica,Deplasman Kazanır,1.99,dep,kazandi,7.45,1
+11.03.2026 03:05,11032026_2li_1,2li,3.74,0.5189,0.9425,Sporting Clube de Portugal,FK Bodø/Glimt,Ev Sahibi Kazanır,1.96,ev,Feyenoord Rotterdam,SBV Excelsior,Ev Sahibi Kazanır,1.91,ev,,,,,,kazandi,3.74,1
+11.03.2026 03:05,11032026_2li_2,2li,3.55,0.5451,0.9365,FC Porto,Moreirense FC,Ev Sahibi Kazanır,1.86,ev,Feyenoord Rotterdam,SBV Excelsior,Ev Sahibi Kazanır,1.91,ev,,,,,,kazandi,3.55,1
+11.03.2026 03:05,11032026_2li_3,2li,3.65,0.5308,0.9349,Sporting Clube de Portugal,FK Bodø/Glimt,Ev Sahibi Kazanır,1.96,ev,FC Porto,Moreirense FC,Ev Sahibi Kazanır,1.86,ev,,,,,,kazandi,3.65,1
+11.03.2026 03:05,11032026_3lu_1,3lu,6.96,0.3875,1.6979,Sporting Clube de Portugal,FK Bodø/Glimt,Ev Sahibi Kazanır,1.96,ev,FC Porto,Moreirense FC,Ev Sahibi Kazanır,1.86,ev,Feyenoord Rotterdam,SBV Excelsior,Ev Sahibi Kazanır,1.91,ev,kazandi,6.96,1
+11.03.2026 03:05,11032026_3lu_2,3lu,7.45,0.3607,1.6873,Sporting Clube de Portugal,FK Bodø/Glimt,Ev Sahibi Kazanır,1.96,ev,Feyenoord Rotterdam,SBV Excelsior,Ev Sahibi Kazanır,1.91,ev,FC Arouca,Sport Lisboa e Benfica,Deplasman Kazanır,1.99,dep,kazandi,7.45,1
+11.03.2026 03:06,11032026_2li_1,2li,12.38,0.1536,0.9008,Como,AS Roma,Deplasman Kazanır,3.75,ev,Mansfield Town,Barnsley,Deplasman Kazanır,3.30,,,,,,,bekliyor,,1
+11.03.2026 03:06,11032026_2li_2,2li,13.86,0.1371,0.8996,Chelsea,Newcastle United,Deplasman Kazanır,4.20,dep,Mansfield Town,Barnsley,Deplasman Kazanır,3.30,,,,,,,bekliyor,,1
+11.03.2026 03:06,11032026_2li_3,2li,13.20,0.1428,0.8856,Cremonese,Fiorentina,Ev Sahibi Kazanır,4.00,dep,Mansfield Town,Barnsley,Deplasman Kazanır,3.30,,,,,,,bekliyor,,1
+11.03.2026 03:06,11032026_3lu_1,3lu,49.50,0.0523,1.5866,Como,AS Roma,Deplasman Kazanır,3.75,ev,Cremonese,Fiorentina,Ev Sahibi Kazanır,4.00,dep,Mansfield Town,Barnsley,Deplasman Kazanır,3.30,,bekliyor,,1
+11.03.2026 03:06,11032026_3lu_2,3lu,43.31,0.0594,1.5733,Como,AS Roma,Deplasman Kazanır,3.75,ev,Mansfield Town,Barnsley,Deplasman Kazanır,3.30,,Mallorca,Espanyol,Deplasman Kazanır,3.50,,bekliyor,,1
+11.03.2026 03:59,11032026_2li_1,2li,15.00,0.1288,0.9319,Cremonese,Fiorentina,Ev Sahibi Kazanır,4.00,dep,Celta Vigo,Lyon,Deplasman Kazanır,3.75,,,,,,,bekliyor,,1
+11.03.2026 03:59,11032026_2li_2,2li,14.00,0.1377,0.9274,Cremonese,Fiorentina,Ev Sahibi Kazanır,4.00,dep,Nottingham Forest,Fulham,Deplasman Kazanır,3.50,ber,,,,,,kaybetti,0,1
+11.03.2026 03:59,11032026_2li_3,2li,13.12,0.1452,0.9051,Celta Vigo,Lyon,Deplasman Kazanır,3.75,,Nottingham Forest,Fulham,Deplasman Kazanır,3.50,,,,,,,bekliyor,,1
+11.03.2026 03:59,11032026_3lu_1,3lu,49.22,0.0517,1.5455,Celta Vigo,Lyon,Deplasman Kazanır,3.75,,Nottingham Forest,Fulham,Deplasman Kazanır,3.50,,Como,AS Roma,Deplasman Kazanır,3.75,,bekliyor,,1
+11.03.2026 03:59,11032026_3lu_2,3lu,49.00,0.0514,1.5195,Cremonese,Fiorentina,Ev Sahibi Kazanır,4.00,dep,Nottingham Forest,Fulham,Deplasman Kazanır,3.50,ber,Sunderland,Brighton and Hove Albion,Ev Sahibi Kazanır,3.50,,bekliyor,,1
+11.03.2026 04:00,11032026_2li_1,2li,14.00,0.1371,0.9192,Cremonese,Fiorentina,Ev Sahibi Kazanır,4.00,dep,Nottingham Forest,Fulham,Deplasman Kazanır,3.50,ber,,,,,,kaybetti,0,1
+11.03.2026 04:00,11032026_2li_2,2li,15.00,0.1270,0.9046,Cremonese,Fiorentina,Ev Sahibi Kazanır,4.00,dep,Celta Vigo,Lyon,Deplasman Kazanır,3.75,,,,,,,bekliyor,,1
+11.03.2026 04:00,11032026_2li_3,2li,13.12,0.1442,0.8930,Nottingham Forest,Fulham,Deplasman Kazanır,3.50,ber,Celta Vigo,Lyon,Deplasman Kazanır,3.75,,,,,,,bekliyor,,1
+11.03.2026 04:00,11032026_3lu_1,3lu,49.22,0.0509,1.5037,Nottingham Forest,Fulham,Deplasman Kazanır,3.50,ber,Celta Vigo,Lyon,Deplasman Kazanır,3.75,,Como,AS Roma,Deplasman Kazanır,3.75,,bekliyor,,1
+11.03.2026 04:00,11032026_3lu_2,3lu,49.00,0.0510,1.5001,Cremonese,Fiorentina,Ev Sahibi Kazanır,4.00,dep,Nottingham Forest,Fulham,Deplasman Kazanır,3.50,ber,Sunderland,Brighton and Hove Albion,Ev Sahibi Kazanır,3.50,,bekliyor,,1
+11.03.2026 05:01,11032026_2li_1,2li,15.00,0.1268,0.9020,Cremonese,Fiorentina,Ev Sahibi Kazanır,4.00,dep,Celta Vigo,Lyon,Deplasman Kazanır,3.75,,,,,,,bekliyor,,1
+11.03.2026 05:01,11032026_2li_2,2li,16.60,0.1128,0.8719,Cremonese,Fiorentina,Ev Sahibi Kazanır,4.00,dep,Torino,Parma,Deplasman Kazanır,4.15,ev,,,,,,kaybetti,0,1
+11.03.2026 05:01,11032026_2li_3,2li,16.88,0.1104,0.8636,Cremonese,Fiorentina,Ev Sahibi Kazanır,4.00,dep,Borussia Monchengladbach,FC St. Pauli,Deplasman Kazanır,4.22,,,,,,,bekliyor,,1
+11.03.2026 05:01,11032026_3lu_1,3lu,41.10,0.0582,1.3926,Cremonese,Fiorentina,Ev Sahibi Kazanır,4.00,dep,Celta Vigo,Lyon,Deplasman Kazanır,3.75,,Oviedo,Valencia,Deplasman Kazanır,2.74,,bekliyor,,1
+11.03.2026 05:01,11032026_3lu_2,3lu,34.05,0.0694,1.3639,Cremonese,Fiorentina,Ev Sahibi Kazanır,4.00,dep,Celta Vigo,Lyon,Deplasman Kazanır,3.75,,Go Ahead Eagles,NAC Breda,Ev Sahibi Kazanır,2.27,,bekliyor,,1
+11.03.2026 05:04,11032026_2li_1,2li,14.00,0.1373,0.9221,Cremonese,Fiorentina,Ev Sahibi Kazanır,4.00,dep,Nottingham Forest,Fulham,Deplasman Kazanır,3.50,ber,,,,,,kaybetti,0,1
+11.03.2026 05:04,11032026_2li_2,2li,15.00,0.1270,0.9046,Cremonese,Fiorentina,Ev Sahibi Kazanır,4.00,dep,Celta Vigo,Lyon,Deplasman Kazanır,3.75,,,,,,,bekliyor,,1
+11.03.2026 05:04,11032026_2li_3,2li,13.12,0.1444,0.8958,Nottingham Forest,Fulham,Deplasman Kazanır,3.50,ber,Celta Vigo,Lyon,Deplasman Kazanır,3.75,,,,,,,bekliyor,,1
+11.03.2026 05:04,11032026_3lu_1,3lu,49.00,0.0510,1.4992,Cremonese,Fiorentina,Ev Sahibi Kazanır,4.00,dep,Nottingham Forest,Fulham,Deplasman Kazanır,3.50,ber,Sunderland,Brighton and Hove Albion,Ev Sahibi Kazanır,3.50,,bekliyor,,1
+11.03.2026 05:04,11032026_3lu_2,3lu,49.22,0.0507,1.4968,Nottingham Forest,Fulham,Deplasman Kazanır,3.50,ber,Celta Vigo,Lyon,Deplasman Kazanır,3.75,,Como,AS Roma,Deplasman Kazanır,3.75,,bekliyor,,1
+11.03.2026 05:38,11032026_2li_1,2li,13.12,0.1446,0.8984,Celta Vigo,Lyon,Deplasman Kazanır,3.75,,Nottingham Forest,Fulham,Deplasman Kazanır,3.50,,,,,,,bekliyor,,1
+11.03.2026 05:38,11032026_2li_2,2li,15.75,0.1190,0.8745,Celta Vigo,Lyon,Deplasman Kazanır,3.75,,Burnley,Bournemouth,Ev Sahibi Kazanır,4.20,,,,,,,bekliyor,,1
+11.03.2026 05:38,11032026_2li_3,2li,15.56,0.1204,0.8731,Celta Vigo,Lyon,Deplasman Kazanır,3.75,,Torino,Parma,Deplasman Kazanır,4.15,,,,,,,bekliyor,,1
+11.03.2026 05:38,11032026_3lu_1,3lu,45.94,0.0548,1.5196,Celta Vigo,Lyon,Deplasman Kazanır,3.75,,Nottingham Forest,Fulham,Deplasman Kazanır,3.50,,Sunderland,Brighton and Hove Albion,Ev Sahibi Kazanır,3.50,,bekliyor,,1
+11.03.2026 05:38,11032026_3lu_2,3lu,43.44,0.0579,1.5147,Celta Vigo,Lyon,Deplasman Kazanır,3.75,,Nottingham Forest,Fulham,Deplasman Kazanır,3.50,,Angers,Nice,Ev Sahibi Kazanır,3.31,,bekliyor,,1
+11.03.2026 05:40,11032026_2li_1,2li,13.12,0.1440,0.8901,Celta Vigo,Lyon,Deplasman Kazanır,3.75,,Nottingham Forest,Fulham,Deplasman Kazanır,3.50,,,,,,,bekliyor,,1
+11.03.2026 05:40,11032026_2li_2,2li,15.56,0.1206,0.8766,Celta Vigo,Lyon,Deplasman Kazanır,3.75,,Torino,Parma,Deplasman Kazanır,4.15,,,,,,,bekliyor,,1
+11.03.2026 05:40,11032026_2li_3,2li,15.82,0.1182,0.8711,Celta Vigo,Lyon,Deplasman Kazanır,3.75,,Borussia Monchengladbach,FC St. Pauli,Deplasman Kazanır,4.22,,,,,,,bekliyor,,1
+11.03.2026 05:40,11032026_3lu_1,3lu,45.94,0.0546,1.5072,Celta Vigo,Lyon,Deplasman Kazanır,3.75,,Nottingham Forest,Fulham,Deplasman Kazanır,3.50,,Sunderland,Brighton and Hove Albion,Ev Sahibi Kazanır,3.50,,bekliyor,,1
+11.03.2026 05:40,11032026_3lu_2,3lu,43.44,0.0576,1.5037,Celta Vigo,Lyon,Deplasman Kazanır,3.75,,Nottingham Forest,Fulham,Deplasman Kazanır,3.50,,Angers,Nice,Ev Sahibi Kazanır,3.31,,bekliyor,,1
+11.03.2026 05:41,11032026_2li_1,2li,13.12,0.1449,0.9023,Celta Vigo,Lyon,Deplasman Kazanır,3.75,,Nottingham Forest,Fulham,Deplasman Kazanır,3.50,,,,,,,bekliyor,,1
+11.03.2026 05:41,11032026_2li_2,2li,15.75,0.1205,0.8974,Celta Vigo,Lyon,Deplasman Kazanır,3.75,,Burnley,Bournemouth,Ev Sahibi Kazanır,4.20,,,,,,,bekliyor,,1
+11.03.2026 05:41,11032026_2li_3,2li,15.56,0.1203,0.8719,Celta Vigo,Lyon,Deplasman Kazanır,3.75,,Torino,Parma,Deplasman Kazanır,4.15,,,,,,,bekliyor,,1
+11.03.2026 05:41,11032026_3lu_1,3lu,45.94,0.0549,1.5201,Celta Vigo,Lyon,Deplasman Kazanır,3.75,,Nottingham Forest,Fulham,Deplasman Kazanır,3.50,,Sunderland,Brighton and Hove Albion,Ev Sahibi Kazanır,3.50,,bekliyor,,1
+11.03.2026 05:41,11032026_3lu_2,3lu,43.44,0.0580,1.5199,Celta Vigo,Lyon,Deplasman Kazanır,3.75,,Nottingham Forest,Fulham,Deplasman Kazanır,3.50,,Angers,Nice,Ev Sahibi Kazanır,3.31,,bekliyor,,1
+11.03.2026 05:46,11032026_2li_1,2li,13.12,0.1444,0.8959,Celta Vigo,Lyon,Deplasman Kazanır,3.75,,Nottingham Forest,Fulham,Deplasman Kazanır,3.50,,,,,,,bekliyor,,1
+11.03.2026 05:46,11032026_2li_2,2li,15.56,0.1204,0.8741,Celta Vigo,Lyon,Deplasman Kazanır,3.75,,Torino,Parma,Deplasman Kazanır,4.15,,,,,,,bekliyor,,1
+11.03.2026 05:46,11032026_2li_3,2li,15.75,0.1189,0.8720,Celta Vigo,Lyon,Deplasman Kazanır,3.75,,Burnley,Bournemouth,Ev Sahibi Kazanır,4.20,,,,,,,bekliyor,,1
+11.03.2026 05:46,11032026_3lu_1,3lu,45.94,0.0548,1.5162,Celta Vigo,Lyon,Deplasman Kazanır,3.75,,Nottingham Forest,Fulham,Deplasman Kazanır,3.50,,Sunderland,Brighton and Hove Albion,Ev Sahibi Kazanır,3.50,,bekliyor,,1
+11.03.2026 05:46,11032026_3lu_2,3lu,43.44,0.0578,1.5114,Celta Vigo,Lyon,Deplasman Kazanır,3.75,,Nottingham Forest,Fulham,Deplasman Kazanır,3.50,,Angers,Nice,Ev Sahibi Kazanır,3.31,,bekliyor,,1
+11.03.2026 06:00,11032026_2li_1,2li,13.12,0.1472,0.9325,Celta Vigo,Lyon,Deplasman Kazanır,3.75,,Nottingham Forest,Fulham,Deplasman Kazanır,3.50,,,,,,,bekliyor,,1
+11.03.2026 06:00,11032026_2li_2,2li,15.75,0.1189,0.8720,Celta Vigo,Lyon,Deplasman Kazanır,3.75,,Burnley,Bournemouth,Ev Sahibi Kazanır,4.20,,,,,,,bekliyor,,1
+11.03.2026 06:00,11032026_2li_3,2li,15.56,0.1201,0.8694,Celta Vigo,Lyon,Deplasman Kazanır,3.75,,Torino,Parma,Deplasman Kazanır,4.15,,,,,,,bekliyor,,1
+11.03.2026 06:00,11032026_3lu_1,3lu,45.94,0.0558,1.5648,Celta Vigo,Lyon,Deplasman Kazanır,3.75,,Nottingham Forest,Fulham,Deplasman Kazanır,3.50,,Sunderland,Brighton and Hove Albion,Ev Sahibi Kazanır,3.50,,bekliyor,,1
+11.03.2026 06:00,11032026_3lu_2,3lu,43.44,0.0589,1.5599,Celta Vigo,Lyon,Deplasman Kazanır,3.75,,Nottingham Forest,Fulham,Deplasman Kazanır,3.50,,Angers,Nice,Ev Sahibi Kazanır,3.31,,bekliyor,,1
+11.03.2026 06:23,11032026_2li_1,2li,13.12,0.1449,0.9023,Celta Vigo,Lyon,Deplasman Kazanır,3.75,,Nottingham Forest,Fulham,Deplasman Kazanır,3.50,,,,,,,bekliyor,,1
+11.03.2026 06:23,11032026_2li_2,2li,15.75,0.1205,0.8974,Celta Vigo,Lyon,Deplasman Kazanır,3.75,,Burnley,Bournemouth,Ev Sahibi Kazanır,4.20,,,,,,,bekliyor,,1
+11.03.2026 06:23,11032026_2li_3,2li,15.56,0.1204,0.8731,Celta Vigo,Lyon,Deplasman Kazanır,3.75,,Torino,Parma,Deplasman Kazanır,4.15,,,,,,,bekliyor,,1
+11.03.2026 06:23,11032026_3lu_1,3lu,45.94,0.0549,1.5201,Celta Vigo,Lyon,Deplasman Kazanır,3.75,,Nottingham Forest,Fulham,Deplasman Kazanır,3.50,,Sunderland,Brighton and Hove Albion,Ev Sahibi Kazanır,3.50,,bekliyor,,1
+11.03.2026 06:23,11032026_3lu_2,3lu,43.44,0.0580,1.5199,Celta Vigo,Lyon,Deplasman Kazanır,3.75,,Nottingham Forest,Fulham,Deplasman Kazanır,3.50,,Angers,Nice,Ev Sahibi Kazanır,3.31,,bekliyor,,1
+11.03.2026 06:25,11032026_2li_1,2li,13.12,0.1440,0.8901,Celta Vigo,Lyon,Deplasman Kazanır,3.75,,Nottingham Forest,Fulham,Deplasman Kazanır,3.50,,,,,,,bekliyor,,1
+11.03.2026 06:25,11032026_2li_2,2li,15.56,0.1206,0.8766,Celta Vigo,Lyon,Deplasman Kazanır,3.75,,Torino,Parma,Deplasman Kazanır,4.15,,,,,,,bekliyor,,1
+11.03.2026 06:25,11032026_2li_3,2li,15.82,0.1183,0.8717,Celta Vigo,Lyon,Deplasman Kazanır,3.75,,Borussia Monchengladbach,FC St. Pauli,Deplasman Kazanır,4.22,,,,,,,bekliyor,,1
+11.03.2026 06:25,11032026_3lu_1,3lu,45.94,0.0546,1.5072,Celta Vigo,Lyon,Deplasman Kazanır,3.75,,Nottingham Forest,Fulham,Deplasman Kazanır,3.50,,Sunderland,Brighton and Hove Albion,Ev Sahibi Kazanır,3.50,,bekliyor,,1
+11.03.2026 06:25,11032026_3lu_2,3lu,43.44,0.0576,1.5037,Celta Vigo,Lyon,Deplasman Kazanır,3.75,,Nottingham Forest,Fulham,Deplasman Kazanır,3.50,,Angers,Nice,Ev Sahibi Kazanır,3.31,,bekliyor,,1
+11.03.2026 06:29,11032026_2li_1,2li,13.12,0.1438,0.8876,Celta Vigo,Lyon,Deplasman Kazanır,3.75,,Nottingham Forest,Fulham,Deplasman Kazanır,3.50,,,,,,,bekliyor,,1
+11.03.2026 06:29,11032026_2li_2,2li,15.75,0.1189,0.8720,Celta Vigo,Lyon,Deplasman Kazanır,3.75,,Burnley,Bournemouth,Ev Sahibi Kazanır,4.20,,,,,,,bekliyor,,1
+11.03.2026 06:29,11032026_2li_3,2li,15.82,0.1183,0.8715,Celta Vigo,Lyon,Deplasman Kazanır,3.75,,Borussia Monchengladbach,FC St. Pauli,Deplasman Kazanır,4.22,,,,,,,bekliyor,,1
+11.03.2026 06:29,11032026_3lu_1,3lu,45.94,0.0544,1.5005,Celta Vigo,Lyon,Deplasman Kazanır,3.75,,Nottingham Forest,Fulham,Deplasman Kazanır,3.50,,Sunderland,Brighton and Hove Albion,Ev Sahibi Kazanır,3.50,,bekliyor,,1
+11.03.2026 06:29,11032026_3lu_2,3lu,43.44,0.0576,1.5004,Celta Vigo,Lyon,Deplasman Kazanır,3.75,,Nottingham Forest,Fulham,Deplasman Kazanır,3.50,,Angers,Nice,Ev Sahibi Kazanır,3.31,,bekliyor,,1
+11.03.2026 06:32,11032026_2li_1,2li,13.12,0.1445,0.8968,Celta Vigo,Lyon,Deplasman Kazanır,3.75,,Nottingham Forest,Fulham,Deplasman Kazanır,3.50,,,,,,,bekliyor,,1
+11.03.2026 06:32,11032026_2li_2,2li,15.56,0.1204,0.8741,Celta Vigo,Lyon,Deplasman Kazanır,3.75,,Torino,Parma,Deplasman Kazanır,4.15,,,,,,,bekliyor,,1
+11.03.2026 06:32,11032026_2li_3,2li,15.75,0.1186,0.8685,Celta Vigo,Lyon,Deplasman Kazanır,3.75,,Burnley,Bournemouth,Ev Sahibi Kazanır,4.20,,,,,,,bekliyor,,1
+11.03.2026 06:32,11032026_3lu_1,3lu,45.94,0.0548,1.5175,Celta Vigo,Lyon,Deplasman Kazanır,3.75,,Nottingham Forest,Fulham,Deplasman Kazanır,3.50,,Sunderland,Brighton and Hove Albion,Ev Sahibi Kazanır,3.50,,bekliyor,,1
+11.03.2026 06:32,11032026_3lu_2,3lu,43.44,0.0578,1.5127,Celta Vigo,Lyon,Deplasman Kazanır,3.75,,Nottingham Forest,Fulham,Deplasman Kazanır,3.50,,Angers,Nice,Ev Sahibi Kazanır,3.31,,bekliyor,,1
+11.03.2026 06:38,11032026_2li_1,2li,13.12,0.1449,0.9023,Celta Vigo,Lyon,Deplasman Kazanır,3.75,,Nottingham Forest,Fulham,Deplasman Kazanır,3.50,,,,,,,bekliyor,,1
+11.03.2026 06:38,11032026_2li_2,2li,15.75,0.1205,0.8974,Celta Vigo,Lyon,Deplasman Kazanır,3.75,,Burnley,Bournemouth,Ev Sahibi Kazanır,4.20,,,,,,,bekliyor,,1
+11.03.2026 06:38,11032026_2li_3,2li,15.82,0.1187,0.8782,Celta Vigo,Lyon,Deplasman Kazanır,3.75,,Borussia Monchengladbach,FC St. Pauli,Deplasman Kazanır,4.22,,,,,,,bekliyor,,1
+11.03.2026 06:38,11032026_3lu_1,3lu,45.94,0.0549,1.5201,Celta Vigo,Lyon,Deplasman Kazanır,3.75,,Nottingham Forest,Fulham,Deplasman Kazanır,3.50,,Sunderland,Brighton and Hove Albion,Ev Sahibi Kazanır,3.50,,bekliyor,,1
+11.03.2026 06:38,11032026_3lu_2,3lu,43.44,0.0580,1.5199,Celta Vigo,Lyon,Deplasman Kazanır,3.75,,Nottingham Forest,Fulham,Deplasman Kazanır,3.50,,Angers,Nice,Ev Sahibi Kazanır,3.31,,bekliyor,,1
+11.03.2026 06:39,11032026_2li_1,2li,13.12,0.1474,0.9351,Celta Vigo,Lyon,Deplasman Kazanır,3.75,,Nottingham Forest,Fulham,Deplasman Kazanır,3.50,,,,,,,bekliyor,,1
+11.03.2026 06:39,11032026_2li_2,2li,15.75,0.1205,0.8974,Celta Vigo,Lyon,Deplasman Kazanır,3.75,,Burnley,Bournemouth,Ev Sahibi Kazanır,4.20,,,,,,,bekliyor,,1
+11.03.2026 06:39,11032026_2li_3,2li,14.70,0.1281,0.8827,Nottingham Forest,Fulham,Deplasman Kazanır,3.50,ber,Burnley,Bournemouth,Ev Sahibi Kazanır,4.20,ber,,,,,,kaybetti,0,1
+11.03.2026 06:39,11032026_3lu_1,3lu,45.94,0.0559,1.5669,Celta Vigo,Lyon,Deplasman Kazanır,3.75,,Nottingham Forest,Fulham,Deplasman Kazanır,3.50,,Sunderland,Brighton and Hove Albion,Ev Sahibi Kazanır,3.50,,bekliyor,,1
+11.03.2026 06:39,11032026_3lu_2,3lu,43.44,0.0590,1.5633,Celta Vigo,Lyon,Deplasman Kazanır,3.75,,Nottingham Forest,Fulham,Deplasman Kazanır,3.50,,Angers,Nice,Ev Sahibi Kazanır,3.31,,bekliyor,,1
+11.03.2026 06:43,11032026_2li_1,2li,13.12,0.1430,0.8763,Celta Vigo,Lyon,Deplasman Kazanır,3.75,,Nottingham Forest,Fulham,Deplasman Kazanır,3.50,,,,,,,bekliyor,,1
+11.03.2026 06:43,11032026_2li_2,2li,15.56,0.1201,0.8694,Celta Vigo,Lyon,Deplasman Kazanır,3.75,,Torino,Parma,Deplasman Kazanır,4.15,,,,,,,bekliyor,,1
+11.03.2026 06:43,11032026_2li_3,2li,15.82,0.1181,0.8692,Celta Vigo,Lyon,Deplasman Kazanır,3.75,,Borussia Monchengladbach,FC St. Pauli,Deplasman Kazanır,4.22,,,,,,,bekliyor,,1
+11.03.2026 06:43,11032026_3lu_1,3lu,45.94,0.0542,1.4889,Celta Vigo,Lyon,Deplasman Kazanır,3.75,,Nottingham Forest,Fulham,Deplasman Kazanır,3.50,,Sunderland,Brighton and Hove Albion,Ev Sahibi Kazanır,3.50,,bekliyor,,1
+11.03.2026 06:43,11032026_3lu_2,3lu,43.44,0.0572,1.4855,Celta Vigo,Lyon,Deplasman Kazanır,3.75,,Nottingham Forest,Fulham,Deplasman Kazanır,3.50,,Angers,Nice,Ev Sahibi Kazanır,3.31,,bekliyor,,1
+11.03.2026 06:46,11032026_2li_1,2li,13.12,0.1432,0.8789,Celta Vigo,Lyon,Deplasman Kazanır,3.75,,Nottingham Forest,Fulham,Deplasman Kazanır,3.50,,,,,,,bekliyor,,1
+11.03.2026 06:46,11032026_2li_2,2li,15.56,0.1206,0.8766,Celta Vigo,Lyon,Deplasman Kazanır,3.75,,Torino,Parma,Deplasman Kazanır,4.15,,,,,,,bekliyor,,1
+11.03.2026 06:46,11032026_2li_3,2li,15.82,0.1182,0.8711,Celta Vigo,Lyon,Deplasman Kazanır,3.75,,Borussia Monchengladbach,FC St. Pauli,Deplasman Kazanır,4.22,,,,,,,bekliyor,,1
+11.03.2026 06:46,11032026_3lu_1,3lu,45.94,0.0543,1.4923,Celta Vigo,Lyon,Deplasman Kazanır,3.75,,Nottingham Forest,Fulham,Deplasman Kazanır,3.50,,Sunderland,Brighton and Hove Albion,Ev Sahibi Kazanır,3.50,,bekliyor,,1
+11.03.2026 06:46,11032026_3lu_2,3lu,43.44,0.0573,1.4888,Celta Vigo,Lyon,Deplasman Kazanır,3.75,,Nottingham Forest,Fulham,Deplasman Kazanır,3.50,,Angers,Nice,Ev Sahibi Kazanır,3.31,,bekliyor,,1
+11.03.2026 21:54,11032026_2li_1,2li,13.12,0.1445,0.8968,Celta Vigo,Lyon,Deplasman Kazanır,3.75,,Nottingham Forest,Fulham,Deplasman Kazanır,3.50,,,,,,,bekliyor,,1
+11.03.2026 21:54,11032026_2li_2,2li,15.75,0.1203,0.8949,Celta Vigo,Lyon,Deplasman Kazanır,3.75,,Burnley,Bournemouth,Ev Sahibi Kazanır,4.20,,,,,,,bekliyor,,1
+11.03.2026 21:54,11032026_2li_3,2li,15.56,0.1204,0.8741,Celta Vigo,Lyon,Deplasman Kazanır,3.75,,Torino,Parma,Deplasman Kazanır,4.15,,,,,,,bekliyor,,1
+11.03.2026 21:54,11032026_3lu_1,3lu,45.94,0.0547,1.5128,Celta Vigo,Lyon,Deplasman Kazanır,3.75,,Nottingham Forest,Fulham,Deplasman Kazanır,3.50,,Sunderland,Brighton and Hove Albion,Ev Sahibi Kazanır,3.50,,bekliyor,,1
+11.03.2026 21:54,11032026_3lu_2,3lu,43.44,0.0578,1.5127,Celta Vigo,Lyon,Deplasman Kazanır,3.75,,Nottingham Forest,Fulham,Deplasman Kazanır,3.50,,Angers,Nice,Ev Sahibi Kazanır,3.31,,bekliyor,,1
+12.03.2026 03:24,12032026_2li_1,2li,15.26,0.1257,0.9184,Burnley,Bournemouth,Ev Sahibi Kazanır,4.30,ber,Nottingham Forest,Fulham,Deplasman Kazanır,3.55,ber,,,,,,kaybetti,0,1
+12.03.2026 03:24,12032026_2li_2,2li,18.32,0.1027,0.8809,Burnley,Bournemouth,Ev Sahibi Kazanır,4.30,ber,Borussia Monchengladbach,FC St. Pauli,Deplasman Kazanır,4.26,,,,,,,bekliyor,,1
+12.03.2026 03:24,12032026_2li_3,2li,15.12,0.1234,0.8659,Nottingham Forest,Fulham,Deplasman Kazanır,3.55,ber,Borussia Monchengladbach,FC St. Pauli,Deplasman Kazanır,4.26,,,,,,,bekliyor,,1
+12.03.2026 03:24,12032026_3lu_1,3lu,48.85,0.0509,1.4862,Burnley,Bournemouth,Ev Sahibi Kazanır,4.30,ber,Nottingham Forest,Fulham,Deplasman Kazanır,3.55,ber,Lille,Aston Villa,Ev Sahibi Kazanır,3.20,,bekliyor,,1
+12.03.2026 03:24,12032026_3lu_2,3lu,43.81,0.0559,1.4473,Burnley,Bournemouth,Ev Sahibi Kazanır,4.30,ber,Nottingham Forest,Fulham,Deplasman Kazanır,3.55,ber,Nacional,Estoril,Deplasman Kazanır,2.87,dep,kaybetti,0,1
+12.03.2026 04:11,12032026_2li_1,2li,15.26,0.1257,0.9184,Burnley,Bournemouth,Ev Sahibi Kazanır,4.30,ber,Nottingham Forest,Fulham,Deplasman Kazanır,3.55,ber,,,,,,kaybetti,0,1
+12.03.2026 04:11,12032026_2li_2,2li,18.32,0.1022,0.8726,Burnley,Bournemouth,Ev Sahibi Kazanır,4.30,ber,Borussia Monchengladbach,FC St. Pauli,Deplasman Kazanır,4.26,,,,,,,bekliyor,,1
+12.03.2026 04:11,12032026_2li_3,2li,15.12,0.1228,0.8577,Nottingham Forest,Fulham,Deplasman Kazanır,3.55,ber,Borussia Monchengladbach,FC St. Pauli,Deplasman Kazanır,4.26,,,,,,,bekliyor,,1
+12.03.2026 04:11,12032026_3lu_1,3lu,43.81,0.0573,1.5084,Burnley,Bournemouth,Ev Sahibi Kazanır,4.30,ber,Nottingham Forest,Fulham,Deplasman Kazanır,3.55,ber,Nacional,Estoril,Deplasman Kazanır,2.87,dep,kaybetti,0,1
+12.03.2026 04:11,12032026_3lu_2,3lu,48.85,0.0508,1.4838,Burnley,Bournemouth,Ev Sahibi Kazanır,4.30,ber,Nottingham Forest,Fulham,Deplasman Kazanır,3.55,ber,Lille,Aston Villa,Ev Sahibi Kazanır,3.20,,bekliyor,,1
+12.03.2026 05:45,12032026_2li_1,2li,18.32,0.1000,0.8321,Burnley,Bournemouth,Ev Sahibi Kazanır,4.30,ber,Borussia Monchengladbach,FC St. Pauli,Deplasman Kazanır,4.26,,,,,,,bekliyor,,1
+12.03.2026 05:45,12032026_2li_2,2li,18.06,0.1007,0.8194,Burnley,Bournemouth,Ev Sahibi Kazanır,4.30,ber,Chelsea,Newcastle United,Deplasman Kazanır,4.20,dep,,,,,,kaybetti,0,1
+12.03.2026 05:45,12032026_2li_3,2li,17.89,0.1010,0.8076,Borussia Monchengladbach,FC St. Pauli,Deplasman Kazanır,4.26,,Chelsea,Newcastle United,Deplasman Kazanır,4.20,,,,,,,bekliyor,,1
+12.03.2026 05:45,12032026_3lu_1,3lu,49.82,0.0475,1.3684,Burnley,Bournemouth,Ev Sahibi Kazanır,4.30,ber,Angers,Nice,Ev Sahibi Kazanır,3.31,dep,Sunderland,Brighton and Hove Albion,Ev Sahibi Kazanır,3.50,,bekliyor,,1
+12.03.2026 05:45,12032026_3lu_2,3lu,49.35,0.0477,1.3531,Borussia Monchengladbach,FC St. Pauli,Deplasman Kazanır,4.26,,Angers,Nice,Ev Sahibi Kazanır,3.31,,Sunderland,Brighton and Hove Albion,Ev Sahibi Kazanır,3.50,,bekliyor,,1
+12.03.2026 05:57,12032026_2li_1,2li,8.95,0.1935,0.7307,Nottingham Forest,Fulham,Deplasman Kazanır,3.55,ber,Hellas Verona,Genoa,Deplasman Kazanır,2.52,dep,,,,,,kaybetti,0,1
+12.03.2026 05:57,12032026_2li_2,2li,7.88,0.2142,0.6878,Nottingham Forest,Fulham,Deplasman Kazanır,3.55,ber,SC Freiburg,Union Berlin,Ev Sahibi Kazanır,2.22,dep,,,,,,kaybetti,0,1
+12.03.2026 05:57,12032026_2li_3,2li,8.06,0.2102,0.6935,Nottingham Forest,Fulham,Deplasman Kazanır,3.55,ber,Go Ahead Eagles,NAC Breda,Ev Sahibi Kazanır,2.27,ev,,,,,,kaybetti,0,1
+12.03.2026 05:57,12032026_3lu_1,3lu,19.86,0.1065,1.1147,Nottingham Forest,Fulham,Deplasman Kazanır,3.55,ber,Hellas Verona,Genoa,Deplasman Kazanır,2.52,dep,SC Freiburg,Union Berlin,Ev Sahibi Kazanır,2.22,dep,kaybetti,0,1
+12.03.2026 05:57,12032026_3lu_2,3lu,17.89,0.1157,1.0693,Nottingham Forest,Fulham,Deplasman Kazanır,3.55,ber,Go Ahead Eagles,NAC Breda,Ev Sahibi Kazanır,2.27,ev,SC Freiburg,Union Berlin,Ev Sahibi Kazanır,2.22,dep,kaybetti,0,1
+12.03.2026 06:15,12032026_2li_1,2li,8.95,0.1939,0.7343,Nottingham Forest,Fulham,Deplasman Kazanır,3.55,ber,Hellas Verona,Genoa,Deplasman Kazanır,2.52,dep,,,,,,kaybetti,0,1
+12.03.2026 06:15,12032026_2li_2,2li,8.06,0.2114,0.7039,Nottingham Forest,Fulham,Deplasman Kazanır,3.55,ber,Go Ahead Eagles,NAC Breda,Ev Sahibi Kazanır,2.27,ev,,,,,,kaybetti,0,1
+12.03.2026 06:15,12032026_2li_3,2li,7.88,0.2146,0.6913,Nottingham Forest,Fulham,Deplasman Kazanır,3.55,ber,SC Freiburg,Union Berlin,Ev Sahibi Kazanır,2.22,dep,,,,,,kaybetti,0,1
+12.03.2026 06:15,12032026_3lu_1,3lu,19.86,0.1067,1.1191,Nottingham Forest,Fulham,Deplasman Kazanır,3.55,ber,Hellas Verona,Genoa,Deplasman Kazanır,2.52,dep,SC Freiburg,Union Berlin,Ev Sahibi Kazanır,2.22,dep,kaybetti,0,1
+12.03.2026 06:15,12032026_3lu_2,3lu,17.89,0.1164,1.0820,Nottingham Forest,Fulham,Deplasman Kazanır,3.55,ber,Go Ahead Eagles,NAC Breda,Ev Sahibi Kazanır,2.27,ev,SC Freiburg,Union Berlin,Ev Sahibi Kazanır,2.22,dep,kaybetti,0,1
+12.03.2026 06:21,12032026_2li_1,2li,7.88,0.2120,0.6704,Nottingham Forest,Fulham,Deplasman Kazanır,3.55,ber,SC Freiburg,Union Berlin,Ev Sahibi Kazanır,2.22,dep,,,,,,kaybetti,0,1
+12.03.2026 06:21,12032026_2li_2,2li,8.06,0.2080,0.6761,Nottingham Forest,Fulham,Deplasman Kazanır,3.55,ber,Go Ahead Eagles,NAC Breda,Ev Sahibi Kazanır,2.27,ev,,,,,,kaybetti,0,1
+12.03.2026 06:21,12032026_2li_3,2li,8.95,0.1899,0.6988,Nottingham Forest,Fulham,Deplasman Kazanır,3.55,ber,Hellas Verona,Genoa,Deplasman Kazanır,2.52,dep,,,,,,kaybetti,0,1
+12.03.2026 06:21,12032026_3lu_1,3lu,19.86,0.1045,1.0757,Nottingham Forest,Fulham,Deplasman Kazanır,3.55,ber,Hellas Verona,Genoa,Deplasman Kazanır,2.52,dep,SC Freiburg,Union Berlin,Ev Sahibi Kazanır,2.22,dep,kaybetti,0,1
+12.03.2026 06:21,12032026_3lu_2,3lu,17.89,0.1145,1.0480,Nottingham Forest,Fulham,Deplasman Kazanır,3.55,ber,Go Ahead Eagles,NAC Breda,Ev Sahibi Kazanır,2.27,ev,SC Freiburg,Union Berlin,Ev Sahibi Kazanır,2.22,dep,kaybetti,0,1
+14.03.2026 01:37,14032026_2li_1,2li,6.51,0.2457,0.5995,Nacional,Estoril,Deplasman Kazanır,2.88,dep,Go Ahead Eagles,NAC Breda,Ev Sahibi Kazanır,2.26,ev,,,,,,kazandi,6.51,1
+14.03.2026 01:37,14032026_2li_2,2li,6.39,0.2483,0.5875,Nacional,Estoril,Deplasman Kazanır,2.88,dep,SC Freiburg,Union Berlin,Ev Sahibi Kazanır,2.22,dep,,,,,,kaybetti,0,1
+14.03.2026 01:37,14032026_2li_3,2li,9.22,0.1822,0.6790,Nacional,Estoril,Deplasman Kazanır,2.88,dep,Angers,Nice,Ev Sahibi Kazanır,3.20,dep,,,,,,kaybetti,0,1
+14.03.2026 01:37,14032026_3lu_1,3lu,19.44,0.1033,1.0069,Santos,Internacional,Deplasman Kazanır,3.44,dep,Hellas Verona,Genoa,Deplasman Kazanır,2.50,dep,Go Ahead Eagles,NAC Breda,Ev Sahibi Kazanır,2.26,ev,kazandi,19.44,1
+14.03.2026 01:37,14032026_3lu_2,3lu,16.27,0.1212,0.9714,Nacional,Estoril,Deplasman Kazanır,2.88,dep,Hellas Verona,Genoa,Deplasman Kazanır,2.50,dep,Go Ahead Eagles,NAC Breda,Ev Sahibi Kazanır,2.26,ev,kazandi,16.27,1
+14.03.2026 15:17,14032026_2li_1,2li,7.66,0.2123,0.6259,Santos,Internacional,Deplasman Kazanır,3.45,dep,SC Freiburg,Union Berlin,Ev Sahibi Kazanır,2.22,dep,,,,,,kaybetti,0,1
+14.03.2026 15:17,14032026_2li_2,2li,8.69,0.1902,0.6532,Santos,Internacional,Deplasman Kazanır,3.45,dep,Hellas Verona,Genoa,Deplasman Kazanır,2.52,dep,,,,,,kazandi,8.69,1
+14.03.2026 15:17,14032026_2li_3,2li,5.02,0.2973,0.4915,SC Freiburg,Union Berlin,Ev Sahibi Kazanır,2.22,dep,Go Ahead Eagles,NAC Breda,Ev Sahibi Kazanır,2.26,ev,,,,,,kaybetti,0,1
+14.03.2026 15:17,14032026_3lu_1,3lu,19.30,0.1047,1.0200,Santos,Internacional,Deplasman Kazanır,3.45,dep,Hellas Verona,Genoa,Deplasman Kazanır,2.52,dep,SC Freiburg,Union Berlin,Ev Sahibi Kazanır,2.22,dep,kaybetti,0,1
+14.03.2026 15:17,14032026_3lu_2,3lu,19.65,0.1027,1.0179,Santos,Internacional,Deplasman Kazanır,3.45,dep,Hellas Verona,Genoa,Deplasman Kazanır,2.52,dep,Go Ahead Eagles,NAC Breda,Ev Sahibi Kazanır,2.26,ev,kazandi,19.65,1
+14.03.2026 15:24,14032026_2li_1,2li,8.69,0.1918,0.6672,Santos,Internacional,Deplasman Kazanır,3.45,dep,Hellas Verona,Genoa,Deplasman Kazanır,2.52,dep,,,,,,kazandi,8.69,1
+14.03.2026 15:24,14032026_2li_2,2li,7.80,0.2083,0.6242,Santos,Internacional,Deplasman Kazanır,3.45,dep,Go Ahead Eagles,NAC Breda,Ev Sahibi Kazanır,2.26,ev,,,,,,kazandi,7.80,1
+14.03.2026 15:24,14032026_2li_3,2li,7.26,0.2208,0.6022,Nacional,Estoril,Deplasman Kazanır,2.88,dep,Hellas Verona,Genoa,Deplasman Kazanır,2.52,dep,,,,,,kazandi,7.26,1
+14.03.2026 15:24,14032026_3lu_1,3lu,19.65,0.1036,1.0351,Santos,Internacional,Deplasman Kazanır,3.45,dep,Hellas Verona,Genoa,Deplasman Kazanır,2.52,dep,Go Ahead Eagles,NAC Breda,Ev Sahibi Kazanır,2.26,ev,kazandi,19.65,1
+14.03.2026 15:24,14032026_3lu_2,3lu,19.30,0.1046,1.0198,Santos,Internacional,Deplasman Kazanır,3.45,dep,Hellas Verona,Genoa,Deplasman Kazanır,2.52,dep,SC Freiburg,Union Berlin,Ev Sahibi Kazanır,2.22,dep,kaybetti,0,1
+14.03.2026 15:44,14032026_2li_1,2li,7.26,0.2262,0.6419,Nacional,Estoril,Deplasman Kazanır,2.88,dep,Hellas Verona,Genoa,Deplasman Kazanır,2.52,dep,,,,,,kazandi,7.26,1
+14.03.2026 15:44,14032026_2li_2,2li,6.51,0.2457,0.5995,Nacional,Estoril,Deplasman Kazanır,2.88,dep,Go Ahead Eagles,NAC Breda,Ev Sahibi Kazanır,2.26,ev,,,,,,kazandi,6.51,1
+14.03.2026 15:44,14032026_2li_3,2li,8.69,0.1928,0.6763,Santos,Internacional,Deplasman Kazanır,3.45,dep,Hellas Verona,Genoa,Deplasman Kazanır,2.52,dep,,,,,,kazandi,8.69,1
+14.03.2026 15:44,14032026_3lu_1,3lu,19.65,0.1041,1.0462,Santos,Internacional,Deplasman Kazanır,3.45,dep,Hellas Verona,Genoa,Deplasman Kazanır,2.52,dep,Go Ahead Eagles,NAC Breda,Ev Sahibi Kazanır,2.26,ev,kazandi,19.65,1
+14.03.2026 15:44,14032026_3lu_2,3lu,17.71,0.1143,1.0235,Nacional,Estoril,Deplasman Kazanır,2.88,dep,Hellas Verona,Genoa,Deplasman Kazanır,2.52,dep,Hamburger SV,1. FC Köln,Ev Sahibi Kazanır,2.44,ber,kaybetti,0,1
+14.03.2026 16:17,14032026_2li_1,2li,7.26,0.2262,0.6419,Nacional,Estoril,Deplasman Kazanır,2.88,dep,Hellas Verona,Genoa,Deplasman Kazanır,2.52,dep,,,,,,kazandi,7.26,1
+14.03.2026 16:17,14032026_2li_2,2li,6.39,0.2504,0.6012,Nacional,Estoril,Deplasman Kazanır,2.88,dep,SC Freiburg,Union Berlin,Ev Sahibi Kazanır,2.22,dep,,,,,,kaybetti,0,1
+14.03.2026 16:17,14032026_2li_3,2li,6.51,0.2457,0.5995,Nacional,Estoril,Deplasman Kazanır,2.88,dep,Go Ahead Eagles,NAC Breda,Ev Sahibi Kazanır,2.26,ev,,,,,,kazandi,6.51,1
+14.03.2026 16:17,14032026_3lu_1,3lu,19.30,0.1061,1.0483,Santos,Internacional,Deplasman Kazanır,3.45,dep,Hellas Verona,Genoa,Deplasman Kazanır,2.52,dep,SC Freiburg,Union Berlin,Ev Sahibi Kazanır,2.22,dep,kaybetti,0,1
+14.03.2026 16:17,14032026_3lu_2,3lu,19.65,0.1041,1.0462,Santos,Internacional,Deplasman Kazanır,3.45,dep,Hellas Verona,Genoa,Deplasman Kazanır,2.52,dep,Go Ahead Eagles,NAC Breda,Ev Sahibi Kazanır,2.26,ev,kazandi,19.65,1
+14.03.2026 16:36,14032026_2li_1,2li,6.39,0.2504,0.6012,Nacional,Estoril,Deplasman Kazanır,2.88,dep,SC Freiburg,Union Berlin,Ev Sahibi Kazanır,2.22,dep,,,,,,kaybetti,0,1
+14.03.2026 16:36,14032026_2li_2,2li,6.51,0.2457,0.5995,Nacional,Estoril,Deplasman Kazanır,2.88,dep,Go Ahead Eagles,NAC Breda,Ev Sahibi Kazanır,2.26,ev,,,,,,kazandi,6.51,1
+14.03.2026 16:36,14032026_2li_3,2li,7.26,0.2243,0.6280,Nacional,Estoril,Deplasman Kazanır,2.88,dep,Hellas Verona,Genoa,Deplasman Kazanır,2.52,dep,,,,,,kazandi,7.26,1
+14.03.2026 16:36,14032026_3lu_1,3lu,19.30,0.1052,1.0310,Santos,Internacional,Deplasman Kazanır,3.45,dep,Hellas Verona,Genoa,Deplasman Kazanır,2.52,dep,SC Freiburg,Union Berlin,Ev Sahibi Kazanır,2.22,dep,kaybetti,0,1
+14.03.2026 16:36,14032026_3lu_2,3lu,19.65,0.1033,1.0289,Santos,Internacional,Deplasman Kazanır,3.45,dep,Hellas Verona,Genoa,Deplasman Kazanır,2.52,dep,Go Ahead Eagles,NAC Breda,Ev Sahibi Kazanır,2.26,ev,kazandi,19.65,1
+14.03.2026 16:37,14032026_2li_1,2li,7.66,0.2353,0.8020,Santos,Internacional,Deplasman Kazanır,3.45,dep,SC Freiburg,Union Berlin,Ev Sahibi Kazanır,2.22,dep,,,,,,kaybetti,0,1
+14.03.2026 16:37,14032026_2li_2,2li,9.94,0.1838,0.8266,Santos,Internacional,Deplasman Kazanır,3.45,dep,Nacional,Estoril,Deplasman Kazanır,2.88,dep,,,,,,kazandi,9.94,1
+14.03.2026 16:37,14032026_2li_3,2li,8.33,0.2132,0.7751,Sunderland,Brighton and Hove Albion,Ev Sahibi Kazanır,3.75,,SC Freiburg,Union Berlin,Ev Sahibi Kazanır,2.22,,,,,,,bekliyor,,1
+14.03.2026 16:37,14032026_3lu_1,3lu,17.31,0.1281,1.2167,Santos,Internacional,Deplasman Kazanır,3.45,dep,SC Freiburg,Union Berlin,Ev Sahibi Kazanır,2.22,dep,Go Ahead Eagles,NAC Breda,Ev Sahibi Kazanır,2.26,ev,kaybetti,0,1
+14.03.2026 16:37,14032026_3lu_2,3lu,19.30,0.1151,1.2224,Santos,Internacional,Deplasman Kazanır,3.45,dep,SC Freiburg,Union Berlin,Ev Sahibi Kazanır,2.22,dep,Hellas Verona,Genoa,Deplasman Kazanır,2.52,dep,kaybetti,0,1
+14.03.2026 16:51,14032026_2li_1,2li,7.66,0.2325,0.7811,Santos,Internacional,Deplasman Kazanır,3.45,dep,SC Freiburg,Union Berlin,Ev Sahibi Kazanır,2.22,dep,,,,,,kaybetti,0,1
+14.03.2026 16:51,14032026_2li_2,2li,8.33,0.2132,0.7751,Sunderland,Brighton and Hove Albion,Ev Sahibi Kazanır,3.75,,SC Freiburg,Union Berlin,Ev Sahibi Kazanır,2.22,,,,,,,bekliyor,,1
+14.03.2026 16:51,14032026_2li_3,2li,7.77,0.2233,0.7350,Angers,Nice,Ev Sahibi Kazanır,3.50,dep,SC Freiburg,Union Berlin,Ev Sahibi Kazanır,2.22,dep,,,,,,kaybetti,0,1
+14.03.2026 16:51,14032026_3lu_1,3lu,17.31,0.1266,1.1909,Santos,Internacional,Deplasman Kazanır,3.45,dep,SC Freiburg,Union Berlin,Ev Sahibi Kazanır,2.22,dep,Go Ahead Eagles,NAC Breda,Ev Sahibi Kazanır,2.26,ev,kaybetti,0,1
+14.03.2026 16:51,14032026_3lu_2,3lu,19.30,0.1138,1.1966,Santos,Internacional,Deplasman Kazanır,3.45,dep,SC Freiburg,Union Berlin,Ev Sahibi Kazanır,2.22,dep,Hellas Verona,Genoa,Deplasman Kazanır,2.52,dep,kaybetti,0,1
+14.03.2026 17:04,14032026_2li_1,2li,7.66,0.2310,0.7695,Santos,Internacional,Deplasman Kazanır,3.45,dep,SC Freiburg,Union Berlin,Ev Sahibi Kazanır,2.22,dep,,,,,,kaybetti,0,1
+14.03.2026 17:04,14032026_2li_2,2li,9.94,0.1838,0.8266,Santos,Internacional,Deplasman Kazanır,3.45,dep,Nacional,Estoril,Deplasman Kazanır,2.88,dep,,,,,,kazandi,9.94,1
+14.03.2026 17:04,14032026_2li_3,2li,8.33,0.2102,0.7502,Sunderland,Brighton and Hove Albion,Ev Sahibi Kazanır,3.75,,SC Freiburg,Union Berlin,Ev Sahibi Kazanır,2.22,,,,,,,bekliyor,,1
+14.03.2026 17:04,14032026_3lu_1,3lu,17.31,0.1258,1.1767,Santos,Internacional,Deplasman Kazanır,3.45,dep,SC Freiburg,Union Berlin,Ev Sahibi Kazanır,2.22,dep,Go Ahead Eagles,NAC Breda,Ev Sahibi Kazanır,2.26,ev,kaybetti,0,1
+14.03.2026 17:04,14032026_3lu_2,3lu,19.30,0.1131,1.1823,Santos,Internacional,Deplasman Kazanır,3.45,dep,SC Freiburg,Union Berlin,Ev Sahibi Kazanır,2.22,dep,Hellas Verona,Genoa,Deplasman Kazanır,2.52,dep,kaybetti,0,1
+14.03.2026 17:07,14032026_2li_1,2li,7.66,0.2310,0.7695,Santos,Internacional,Deplasman Kazanır,3.45,dep,SC Freiburg,Union Berlin,Ev Sahibi Kazanır,2.22,dep,,,,,,kaybetti,0,1
+14.03.2026 17:07,14032026_2li_2,2li,9.94,0.1838,0.8266,Santos,Internacional,Deplasman Kazanır,3.45,dep,Nacional,Estoril,Deplasman Kazanır,2.88,dep,,,,,,kazandi,9.94,1
+14.03.2026 17:07,14032026_2li_3,2li,8.33,0.2102,0.7502,Sunderland,Brighton and Hove Albion,Ev Sahibi Kazanır,3.75,,SC Freiburg,Union Berlin,Ev Sahibi Kazanır,2.22,,,,,,,bekliyor,,1
+14.03.2026 17:07,14032026_3lu_1,3lu,17.31,0.1258,1.1767,Santos,Internacional,Deplasman Kazanır,3.45,dep,SC Freiburg,Union Berlin,Ev Sahibi Kazanır,2.22,dep,Go Ahead Eagles,NAC Breda,Ev Sahibi Kazanır,2.26,ev,kaybetti,0,1
+14.03.2026 17:07,14032026_3lu_2,3lu,19.30,0.1131,1.1823,Santos,Internacional,Deplasman Kazanır,3.45,dep,SC Freiburg,Union Berlin,Ev Sahibi Kazanır,2.22,dep,Hellas Verona,Genoa,Deplasman Kazanır,2.52,dep,kaybetti,0,1
+14.03.2026 17:18,14032026_2li_1,2li,7.66,0.2283,0.7489,Santos,Internacional,Deplasman Kazanır,3.45,dep,SC Freiburg,Union Berlin,Ev Sahibi Kazanır,2.22,dep,,,,,,kaybetti,0,1
+14.03.2026 17:18,14032026_2li_2,2li,8.33,0.2094,0.7431,Sunderland,Brighton and Hove Albion,Ev Sahibi Kazanır,3.75,,SC Freiburg,Union Berlin,Ev Sahibi Kazanır,2.22,,,,,,,bekliyor,,1
+14.03.2026 17:18,14032026_2li_3,2li,7.77,0.2193,0.7037,Angers,Nice,Ev Sahibi Kazanır,3.50,dep,SC Freiburg,Union Berlin,Ev Sahibi Kazanır,2.22,dep,,,,,,kaybetti,0,1
+14.03.2026 17:18,14032026_3lu_1,3lu,17.31,0.1243,1.1514,Santos,Internacional,Deplasman Kazanır,3.45,dep,SC Freiburg,Union Berlin,Ev Sahibi Kazanır,2.22,dep,Go Ahead Eagles,NAC Breda,Ev Sahibi Kazanır,2.26,ev,kaybetti,0,1
+14.03.2026 17:18,14032026_3lu_2,3lu,19.30,0.1118,1.1569,Santos,Internacional,Deplasman Kazanır,3.45,dep,SC Freiburg,Union Berlin,Ev Sahibi Kazanır,2.22,dep,Hellas Verona,Genoa,Deplasman Kazanır,2.52,dep,kaybetti,0,1
+14.03.2026 18:30,14032026_2li_1,2li,9.22,0.1958,0.8047,Chelsea,Paris Saint Germain,Deplasman Kazanır,3.20,,Nacional,Estoril,Deplasman Kazanır,2.88,,,,,,,bekliyor,,1
+14.03.2026 18:30,14032026_2li_2,2li,8.58,0.2074,0.7786,Chelsea,Paris Saint Germain,Deplasman Kazanır,3.20,,Oviedo,Valencia,Deplasman Kazanır,2.68,,,,,,,bekliyor,,1
+14.03.2026 18:30,14032026_2li_3,2li,8.06,0.2165,0.7456,Chelsea,Paris Saint Germain,Deplasman Kazanır,3.20,,Hellas Verona,Genoa,Deplasman Kazanır,2.52,,,,,,,bekliyor,,1
+14.03.2026 18:30,14032026_3lu_1,3lu,19.68,0.1116,1.1961,Chelsea,Paris Saint Germain,Deplasman Kazanır,3.20,,Hellas Verona,Genoa,Deplasman Kazanır,2.52,,Hamburger SV,1. FC Köln,Ev Sahibi Kazanır,2.44,,bekliyor,,1
+14.03.2026 18:30,14032026_3lu_2,3lu,19.38,0.1113,1.1578,Chelsea,Paris Saint Germain,Deplasman Kazanır,3.20,,Oviedo,Valencia,Deplasman Kazanır,2.68,,Go Ahead Eagles,NAC Breda,Ev Sahibi Kazanır,2.26,,bekliyor,,1
+14.03.2026 18:44,14032026_2li_1,2li,9.22,0.1958,0.8047,Chelsea,Paris Saint Germain,Deplasman Kazanır,3.20,,Nacional,Estoril,Deplasman Kazanır,2.88,,,,,,,bekliyor,,1
+14.03.2026 18:44,14032026_2li_2,2li,8.58,0.2074,0.7786,Chelsea,Paris Saint Germain,Deplasman Kazanır,3.20,,Oviedo,Valencia,Deplasman Kazanır,2.68,,,,,,,bekliyor,,1
+14.03.2026 18:44,14032026_2li_3,2li,8.06,0.2165,0.7456,Chelsea,Paris Saint Germain,Deplasman Kazanır,3.20,,Hellas Verona,Genoa,Deplasman Kazanır,2.52,,,,,,,bekliyor,,1
+14.03.2026 18:44,14032026_3lu_1,3lu,19.68,0.1116,1.1961,Chelsea,Paris Saint Germain,Deplasman Kazanır,3.20,,Hellas Verona,Genoa,Deplasman Kazanır,2.52,,Hamburger SV,1. FC Köln,Ev Sahibi Kazanır,2.44,,bekliyor,,1
+14.03.2026 18:44,14032026_3lu_2,3lu,19.38,0.1113,1.1578,Chelsea,Paris Saint Germain,Deplasman Kazanır,3.20,,Oviedo,Valencia,Deplasman Kazanır,2.68,,Go Ahead Eagles,NAC Breda,Ev Sahibi Kazanır,2.26,,bekliyor,,1
+14.03.2026 18:46,14032026_2li_1,2li,9.22,0.1958,0.8047,Chelsea,Paris Saint Germain,Deplasman Kazanır,3.20,,Nacional,Estoril,Deplasman Kazanır,2.88,,,,,,,bekliyor,,1
+14.03.2026 18:46,14032026_2li_2,2li,8.58,0.2074,0.7786,Chelsea,Paris Saint Germain,Deplasman Kazanır,3.20,,Oviedo,Valencia,Deplasman Kazanır,2.68,,,,,,,bekliyor,,1
+14.03.2026 18:46,14032026_2li_3,2li,8.06,0.2165,0.7456,Chelsea,Paris Saint Germain,Deplasman Kazanır,3.20,,Hellas Verona,Genoa,Deplasman Kazanır,2.52,,,,,,,bekliyor,,1
+14.03.2026 18:46,14032026_3lu_1,3lu,19.68,0.1116,1.1961,Chelsea,Paris Saint Germain,Deplasman Kazanır,3.20,,Hellas Verona,Genoa,Deplasman Kazanır,2.52,,Hamburger SV,1. FC Köln,Ev Sahibi Kazanır,2.44,,bekliyor,,1
+14.03.2026 18:46,14032026_3lu_2,3lu,19.38,0.1113,1.1578,Chelsea,Paris Saint Germain,Deplasman Kazanır,3.20,,Oviedo,Valencia,Deplasman Kazanır,2.68,,Go Ahead Eagles,NAC Breda,Ev Sahibi Kazanır,2.26,,bekliyor,,1
+14.03.2026 18:48,14032026_2li_1,2li,9.22,0.1958,0.8047,Chelsea,Paris Saint Germain,Deplasman Kazanır,3.20,,Nacional,Estoril,Deplasman Kazanır,2.88,,,,,,,bekliyor,,1
+14.03.2026 18:48,14032026_2li_2,2li,8.58,0.2074,0.7786,Chelsea,Paris Saint Germain,Deplasman Kazanır,3.20,,Oviedo,Valencia,Deplasman Kazanır,2.68,,,,,,,bekliyor,,1
+14.03.2026 18:48,14032026_2li_3,2li,8.06,0.2165,0.7456,Chelsea,Paris Saint Germain,Deplasman Kazanır,3.20,,Hellas Verona,Genoa,Deplasman Kazanır,2.52,,,,,,,bekliyor,,1
+14.03.2026 18:48,14032026_3lu_1,3lu,19.68,0.1116,1.1961,Chelsea,Paris Saint Germain,Deplasman Kazanır,3.20,,Hellas Verona,Genoa,Deplasman Kazanır,2.52,,Hamburger SV,1. FC Köln,Ev Sahibi Kazanır,2.44,,bekliyor,,1
+14.03.2026 18:48,14032026_3lu_2,3lu,19.38,0.1113,1.1578,Chelsea,Paris Saint Germain,Deplasman Kazanır,3.20,,Oviedo,Valencia,Deplasman Kazanır,2.68,,Go Ahead Eagles,NAC Breda,Ev Sahibi Kazanır,2.26,,bekliyor,,1
+17.03.2026 03:50,17032026_2li_1,2li,8.78,0.2183,0.9157,Tottenham Hotspur,Atlético Madrid,Deplasman Kazanır,2.62,,Bournemouth,Manchester United,Ev Sahibi Kazanır,3.35,,,,,,,bekliyor,,1
+17.03.2026 03:50,17032026_2li_2,2li,9.77,0.1973,0.9284,Tottenham Hotspur,Atlético Madrid,Deplasman Kazanır,2.62,,RB Leipzig,TSG Hoffenheim,Deplasman Kazanır,3.73,,,,,,,bekliyor,,1
+17.03.2026 03:50,17032026_2li_3,2li,9.69,0.1974,0.9139,Tottenham Hotspur,Atlético Madrid,Deplasman Kazanır,2.62,,Bologna,Lazio,Deplasman Kazanır,3.70,,,,,,,bekliyor,,1
+17.03.2026 03:50,17032026_3lu_1,3lu,19.75,0.1191,1.3512,Tottenham Hotspur,Atlético Madrid,Deplasman Kazanır,2.62,,Bournemouth,Manchester United,Ev Sahibi Kazanır,3.35,,FC Zwolle,NAC Breda,Ev Sahibi Kazanır,2.25,,bekliyor,,1
+17.03.2026 03:50,17032026_3lu_2,3lu,14.13,0.1580,1.2320,Tottenham Hotspur,Atlético Madrid,Deplasman Kazanır,2.62,,Bournemouth,Manchester United,Ev Sahibi Kazanır,3.35,,1. FC Heidenheim,Bayer Leverkusen,Deplasman Kazanır,1.61,,bekliyor,,1
+17.03.2026 04:13,17032026_2li_1,2li,8.78,0.2183,0.9157,Tottenham Hotspur,Atlético Madrid,Deplasman Kazanır,2.62,,Bournemouth,Manchester United,Ev Sahibi Kazanır,3.35,,,,,,,bekliyor,,1
+17.03.2026 04:13,17032026_2li_2,2li,9.77,0.1973,0.9284,Tottenham Hotspur,Atlético Madrid,Deplasman Kazanır,2.62,,RB Leipzig,TSG Hoffenheim,Deplasman Kazanır,3.73,,,,,,,bekliyor,,1
+17.03.2026 04:13,17032026_2li_3,2li,9.69,0.1974,0.9139,Tottenham Hotspur,Atlético Madrid,Deplasman Kazanır,2.62,,Bologna,Lazio,Deplasman Kazanır,3.70,,,,,,,bekliyor,,1
+17.03.2026 04:13,17032026_3lu_1,3lu,19.75,0.1191,1.3512,Tottenham Hotspur,Atlético Madrid,Deplasman Kazanır,2.62,,Bournemouth,Manchester United,Ev Sahibi Kazanır,3.35,,FC Zwolle,NAC Breda,Ev Sahibi Kazanır,2.25,,bekliyor,,1
+17.03.2026 04:13,17032026_3lu_2,3lu,14.13,0.1580,1.2320,Tottenham Hotspur,Atlético Madrid,Deplasman Kazanır,2.62,,Bournemouth,Manchester United,Ev Sahibi Kazanır,3.35,,1. FC Heidenheim,Bayer Leverkusen,Deplasman Kazanır,1.61,,bekliyor,,1
+18.03.2026 18:17,18032026_2li_1,2li,7.27,0.2235,0.6255,Athletic Bilbao,Real Betis,Deplasman Kazanır,3.60,,Aston Villa,West Ham United,Ev Sahibi Kazanır,2.02,,,,,,,bekliyor,,1
+18.03.2026 18:17,18032026_2li_2,2li,7.68,0.2092,0.6057,Elche CF,Mallorca,Deplasman Kazanır,3.80,ev,Aston Villa,West Ham United,Ev Sahibi Kazanır,2.02,ev,,,,,,kaybetti,0,1
+18.03.2026 18:17,18032026_2li_3,2li,7.47,0.2132,0.5934,Sevilla,Valencia,Deplasman Kazanır,3.70,dep,Aston Villa,West Ham United,Ev Sahibi Kazanır,2.02,ev,,,,,,kazandi,7.47,1
+18.03.2026 18:29,18032026_2li_1,2li,7.27,0.2235,0.6255,Athletic Bilbao,Real Betis,Deplasman Kazanır,3.60,,Aston Villa,West Ham United,Ev Sahibi Kazanır,2.02,,,,,,,bekliyor,,1
+18.03.2026 18:29,18032026_2li_2,2li,7.68,0.2092,0.6057,Elche CF,Mallorca,Deplasman Kazanır,3.80,ev,Aston Villa,West Ham United,Ev Sahibi Kazanır,2.02,ev,,,,,,kaybetti,0,1
+18.03.2026 18:29,18032026_2li_3,2li,7.47,0.2132,0.5934,Sevilla,Valencia,Deplasman Kazanır,3.70,dep,Aston Villa,West Ham United,Ev Sahibi Kazanır,2.02,ev,,,,,,kazandi,7.47,1
+18.03.2026 19:07,18032026_2li_1,2li,7.27,0.2235,0.6255,Athletic Bilbao,Real Betis,Deplasman Kazanır,3.60,,Aston Villa,West Ham United,Ev Sahibi Kazanır,2.02,,,,,,,bekliyor,,1
+18.03.2026 19:07,18032026_2li_2,2li,7.68,0.2092,0.6057,Elche CF,Mallorca,Deplasman Kazanır,3.80,ev,Aston Villa,West Ham United,Ev Sahibi Kazanır,2.02,ev,,,,,,kaybetti,0,1
+18.03.2026 19:07,18032026_2li_3,2li,7.47,0.2132,0.5934,Sevilla,Valencia,Deplasman Kazanır,3.70,dep,Aston Villa,West Ham United,Ev Sahibi Kazanır,2.02,ev,,,,,,kazandi,7.47,1
+18.03.2026 19:29,18032026_2li_1,2li,7.27,0.2235,0.6255,Athletic Bilbao,Real Betis,Deplasman Kazanır,3.60,,Aston Villa,West Ham United,Ev Sahibi Kazanır,2.02,,,,,,,bekliyor,,1
+18.03.2026 19:29,18032026_2li_2,2li,7.68,0.2092,0.6057,Elche CF,Mallorca,Deplasman Kazanır,3.80,ev,Aston Villa,West Ham United,Ev Sahibi Kazanır,2.02,ev,,,,,,kaybetti,0,1
+18.03.2026 19:29,18032026_2li_3,2li,7.47,0.2132,0.5934,Sevilla,Valencia,Deplasman Kazanır,3.70,dep,Aston Villa,West Ham United,Ev Sahibi Kazanır,2.02,ev,,,,,,kazandi,7.47,1
+18.03.2026 20:23,18032026_2li_1,2li,7.27,0.2235,0.6255,Athletic Bilbao,Real Betis,Deplasman Kazanır,3.60,,Aston Villa,West Ham United,Ev Sahibi Kazanır,2.02,,,,,,,bekliyor,,1
+18.03.2026 20:23,18032026_2li_2,2li,7.68,0.2092,0.6057,Elche CF,Mallorca,Deplasman Kazanır,3.80,ev,Aston Villa,West Ham United,Ev Sahibi Kazanır,2.02,ev,,,,,,kaybetti,0,1
+18.03.2026 20:23,18032026_2li_3,2li,7.47,0.2132,0.5934,Sevilla,Valencia,Deplasman Kazanır,3.70,dep,Aston Villa,West Ham United,Ev Sahibi Kazanır,2.02,ev,,,,,,kazandi,7.47,1
+18.03.2026 21:39,18032026_2li_1,2li,3.78,0.3904,0.4762,FC Zwolle,NAC Breda,Ev Sahibi Kazanır,2.32,,1. FC Heidenheim,Bayer Leverkusen,Deplasman Kazanır,1.63,,,,,,,bekliyor,,1
+18.03.2026 21:39,18032026_2li_2,2li,8.35,0.2089,0.7451,Athletic Bilbao,Real Betis,Deplasman Kazanır,3.60,,FC Zwolle,NAC Breda,Ev Sahibi Kazanır,2.32,,,,,,,bekliyor,,1
+18.03.2026 21:39,18032026_2li_3,2li,8.70,0.2005,0.7446,RB Leipzig,TSG Hoffenheim,Deplasman Kazanır,3.75,,FC Zwolle,NAC Breda,Ev Sahibi Kazanır,2.32,,,,,,,bekliyor,,1
+18.03.2026 21:39,18032026_3lu_1,3lu,13.61,0.1502,1.0449,Athletic Bilbao,Real Betis,Deplasman Kazanır,3.60,,FC Zwolle,NAC Breda,Ev Sahibi Kazanır,2.32,,1. FC Heidenheim,Bayer Leverkusen,Deplasman Kazanır,1.63,,bekliyor,,1
+18.03.2026 21:39,18032026_3lu_2,3lu,19.66,0.1064,1.0909,Athletic Bilbao,Real Betis,Deplasman Kazanır,3.60,,Bournemouth,Manchester United,Ev Sahibi Kazanır,3.35,,1. FC Heidenheim,Bayer Leverkusen,Deplasman Kazanır,1.63,,bekliyor,,1
+18.03.2026 22:09,18032026_2li_1,2li,3.78,0.3904,0.4762,FC Zwolle,NAC Breda,Ev Sahibi Kazanır,2.32,,1. FC Heidenheim,Bayer Leverkusen,Deplasman Kazanır,1.63,,,,,,,bekliyor,,1
+18.03.2026 22:09,18032026_2li_2,2li,8.35,0.2089,0.7451,Athletic Bilbao,Real Betis,Deplasman Kazanır,3.60,,FC Zwolle,NAC Breda,Ev Sahibi Kazanır,2.32,,,,,,,bekliyor,,1
+18.03.2026 22:09,18032026_2li_3,2li,8.70,0.2005,0.7446,RB Leipzig,TSG Hoffenheim,Deplasman Kazanır,3.75,,FC Zwolle,NAC Breda,Ev Sahibi Kazanır,2.32,,,,,,,bekliyor,,1
+18.03.2026 22:09,18032026_3lu_1,3lu,13.61,0.1502,1.0449,Athletic Bilbao,Real Betis,Deplasman Kazanır,3.60,,FC Zwolle,NAC Breda,Ev Sahibi Kazanır,2.32,,1. FC Heidenheim,Bayer Leverkusen,Deplasman Kazanır,1.63,,bekliyor,,1
+18.03.2026 22:09,18032026_3lu_2,3lu,19.66,0.1064,1.0909,Athletic Bilbao,Real Betis,Deplasman Kazanır,3.60,,Bournemouth,Manchester United,Ev Sahibi Kazanır,3.35,,1. FC Heidenheim,Bayer Leverkusen,Deplasman Kazanır,1.63,,bekliyor,,1
+18.03.2026 22:51,18032026_2li_1,2li,3.78,0.3904,0.4762,FC Zwolle,NAC Breda,Ev Sahibi Kazanır,2.32,,1. FC Heidenheim,Bayer Leverkusen,Deplasman Kazanır,1.63,,,,,,,bekliyor,,1
+18.03.2026 22:51,18032026_2li_2,2li,8.35,0.2089,0.7451,Athletic Bilbao,Real Betis,Deplasman Kazanır,3.60,,FC Zwolle,NAC Breda,Ev Sahibi Kazanır,2.32,,,,,,,bekliyor,,1
+18.03.2026 22:51,18032026_2li_3,2li,8.70,0.2005,0.7446,RB Leipzig,TSG Hoffenheim,Deplasman Kazanır,3.75,,FC Zwolle,NAC Breda,Ev Sahibi Kazanır,2.32,,,,,,,bekliyor,,1
+18.03.2026 22:51,18032026_3lu_1,3lu,13.61,0.1502,1.0449,Athletic Bilbao,Real Betis,Deplasman Kazanır,3.60,,FC Zwolle,NAC Breda,Ev Sahibi Kazanır,2.32,,1. FC Heidenheim,Bayer Leverkusen,Deplasman Kazanır,1.63,,bekliyor,,1
+18.03.2026 22:51,18032026_3lu_2,3lu,19.66,0.1064,1.0909,Athletic Bilbao,Real Betis,Deplasman Kazanır,3.60,,Bournemouth,Manchester United,Ev Sahibi Kazanır,3.35,,1. FC Heidenheim,Bayer Leverkusen,Deplasman Kazanır,1.63,,bekliyor,,1
+19.03.2026 01:38,19032026_2li_1,2li,3.63,0.5226,0.8963,Sport Lisboa e Benfica,Vitória SC,Ev Sahibi Kazanır,1.88,ev,AS Roma,US Lecce,Ev Sahibi Kazanır,1.93,ev,,,,,,kazandi,3.63,1
+19.03.2026 01:38,19032026_2li_2,2li,3.74,0.4980,0.8632,Sport Lisboa e Benfica,Vitória SC,Ev Sahibi Kazanır,1.88,ev,1. FC Heidenheim 1846,Bayer 04 Leverkusen,Deplasman Kazanır,1.99,ber,,,,,,kaybetti,0,1
+19.03.2026 01:38,19032026_2li_3,2li,3.84,0.4848,0.8621,AS Roma,US Lecce,Ev Sahibi Kazanır,1.93,ev,1. FC Heidenheim 1846,Bayer 04 Leverkusen,Deplasman Kazanır,1.99,ber,,,,,,kaybetti,0,1
+19.03.2026 01:38,19032026_3lu_1,3lu,7.22,0.3552,1.5650,Sport Lisboa e Benfica,Vitória SC,Ev Sahibi Kazanır,1.88,ev,AS Roma,US Lecce,Ev Sahibi Kazanır,1.93,ev,1. FC Heidenheim 1846,Bayer 04 Leverkusen,Deplasman Kazanır,1.99,ber,kaybetti,0,1
+19.03.2026 01:38,19032026_3lu_2,3lu,7.04,0.3536,1.4888,Sport Lisboa e Benfica,Vitória SC,Ev Sahibi Kazanır,1.88,ev,AS Roma,US Lecce,Ev Sahibi Kazanır,1.93,ev,Racing Club de Lens,Angers SCO,Ev Sahibi Kazanır,1.94,ev,kazandi,7.04,1
+19.03.2026 01:27,19032026_2li_1,2li,3.44,0.5587,0.9225,Atalanta BC,Hellas Verona FC,Ev Sahibi Kazanır,1.85,ev,FC Barcelona,Rayo Vallecano de Madrid,Ev Sahibi Kazanır,1.86,ev,,,,,,kazandi,3.44,1
+19.03.2026 01:27,19032026_2li_2,2li,3.46,0.5532,0.9138,Atalanta BC,Hellas Verona FC,Ev Sahibi Kazanır,1.85,ev,Stade Rennais FC 1901,FC Metz,Ev Sahibi Kazanır,1.87,ber,,,,,,kaybetti,0,1
+19.03.2026 01:27,19032026_2li_3,2li,3.46,0.5476,0.8945,FC Barcelona,Rayo Vallecano de Madrid,Ev Sahibi Kazanır,1.86,ev,Como 1907,AC Pisa 1909,Ev Sahibi Kazanır,1.86,ev,,,,,,kazandi,3.46,1
+19.03.2026 01:27,19032026_3lu_1,3lu,6.43,0.4099,1.6374,Atalanta BC,Hellas Verona FC,Ev Sahibi Kazanır,1.85,ev,FC Barcelona,Rayo Vallecano de Madrid,Ev Sahibi Kazanır,1.86,ev,Stade Rennais FC 1901,FC Metz,Ev Sahibi Kazanır,1.87,ber,kaybetti,0,1
+19.03.2026 01:27,19032026_3lu_2,3lu,6.88,0.3828,1.6343,Atalanta BC,Hellas Verona FC,Ev Sahibi Kazanır,1.85,ev,FC Barcelona,Rayo Vallecano de Madrid,Ev Sahibi Kazanır,1.86,ev,Telstar 1963,PSV,Deplasman Kazanır,2.00,ev,kaybetti,0,1
+19.03.2026 04:04,19032026_2li_1,2li,3.46,0.5523,0.9106,FC Barcelona,Rayo Vallecano de Madrid,Ev Sahibi Kazanır,1.86,ev,Como 1907,AC Pisa 1909,Ev Sahibi Kazanır,1.86,ev,,,,,,kazandi,3.46,1
+19.03.2026 04:04,19032026_2li_2,2li,3.44,0.5461,0.8792,FC Barcelona,Rayo Vallecano de Madrid,Ev Sahibi Kazanır,1.86,ev,Atalanta BC,Hellas Verona FC,Ev Sahibi Kazanır,1.85,ev,,,,,,kazandi,3.44,1
+19.03.2026 04:04,19032026_2li_3,2li,3.48,0.5400,0.8782,FC Barcelona,Rayo Vallecano de Madrid,Ev Sahibi Kazanır,1.86,ev,Stade Rennais FC 1901,FC Metz,Ev Sahibi Kazanır,1.87,ber,,,,,,kaybetti,0,1
+19.03.2026 04:04,19032026_3lu_1,3lu,6.92,0.3794,1.6251,FC Barcelona,Rayo Vallecano de Madrid,Ev Sahibi Kazanır,1.86,ev,Como 1907,AC Pisa 1909,Ev Sahibi Kazanır,1.86,ev,Telstar 1963,PSV,Deplasman Kazanır,2.00,ev,kaybetti,0,1
+19.03.2026 04:04,19032026_3lu_2,3lu,6.47,0.3991,1.5821,FC Barcelona,Rayo Vallecano de Madrid,Ev Sahibi Kazanır,1.86,ev,Como 1907,AC Pisa 1909,Ev Sahibi Kazanır,1.86,ev,Stade Rennais FC 1901,FC Metz,Ev Sahibi Kazanır,1.87,ber,kaybetti,0,1
+19.03.2026 04:27,19032026_2li_1,2li,3.63,0.5149,0.8684,Sport Lisboa e Benfica,Vitória SC,Ev Sahibi Kazanır,1.88,ev,AS Roma,US Lecce,Ev Sahibi Kazanır,1.93,ev,,,,,,kazandi,3.63,1
+19.03.2026 04:27,19032026_2li_2,2li,3.74,0.4990,0.8670,Sport Lisboa e Benfica,Vitória SC,Ev Sahibi Kazanır,1.88,ev,1. FC Heidenheim 1846,Bayer 04 Leverkusen,Deplasman Kazanır,1.99,ber,,,,,,kaybetti,0,1
+19.03.2026 04:27,19032026_2li_3,2li,3.65,0.4985,0.8183,Sport Lisboa e Benfica,Vitória SC,Ev Sahibi Kazanır,1.88,ev,Racing Club de Lens,Angers SCO,Ev Sahibi Kazanır,1.94,ev,,,,,,kazandi,3.65,1
+19.03.2026 04:27,19032026_3lu_1,3lu,7.22,0.3508,1.5328,Sport Lisboa e Benfica,Vitória SC,Ev Sahibi Kazanır,1.88,ev,AS Roma,US Lecce,Ev Sahibi Kazanır,1.93,ev,1. FC Heidenheim 1846,Bayer 04 Leverkusen,Deplasman Kazanır,1.99,ber,kaybetti,0,1
+19.03.2026 04:27,19032026_3lu_2,3lu,7.04,0.3504,1.4666,Sport Lisboa e Benfica,Vitória SC,Ev Sahibi Kazanır,1.88,ev,AS Roma,US Lecce,Ev Sahibi Kazanır,1.93,ev,Racing Club de Lens,Angers SCO,Ev Sahibi Kazanır,1.94,ev,kazandi,7.04,1
+19.03.2026 04:51,19032026_2li_1,2li,3.46,0.5523,0.9106,FC Barcelona,Rayo Vallecano de Madrid,Ev Sahibi Kazanır,1.86,ev,Como 1907,AC Pisa 1909,Ev Sahibi Kazanır,1.86,ev,,,,,,kazandi,3.46,1
+19.03.2026 04:51,19032026_2li_2,2li,3.48,0.5451,0.8959,FC Barcelona,Rayo Vallecano de Madrid,Ev Sahibi Kazanır,1.86,ev,Stade Rennais FC 1901,FC Metz,Ev Sahibi Kazanır,1.87,ber,,,,,,kaybetti,0,1
+19.03.2026 04:51,19032026_2li_3,2li,3.44,0.5461,0.8792,FC Barcelona,Rayo Vallecano de Madrid,Ev Sahibi Kazanır,1.86,ev,Atalanta BC,Hellas Verona FC,Ev Sahibi Kazanır,1.85,ev,,,,,,kazandi,3.44,1
+19.03.2026 04:51,19032026_3lu_1,3lu,6.47,0.4029,1.6064,FC Barcelona,Rayo Vallecano de Madrid,Ev Sahibi Kazanır,1.86,ev,Como 1907,AC Pisa 1909,Ev Sahibi Kazanır,1.86,ev,Stade Rennais FC 1901,FC Metz,Ev Sahibi Kazanır,1.87,ber,kaybetti,0,1
+19.03.2026 04:51,19032026_3lu_2,3lu,6.92,0.3801,1.6301,FC Barcelona,Rayo Vallecano de Madrid,Ev Sahibi Kazanır,1.86,ev,Telstar 1963,PSV,Deplasman Kazanır,2.00,ev,Como 1907,AC Pisa 1909,Ev Sahibi Kazanır,1.86,ev,kaybetti,0,1
+19.03.2026 05:06,19032026_2li_1,2li,3.63,0.5149,0.8682,Sport Lisboa e Benfica,Vitória SC,Ev Sahibi Kazanır,1.88,ev,AS Roma,US Lecce,Ev Sahibi Kazanır,1.93,ev,,,,,,kazandi,3.63,1
+19.03.2026 05:06,19032026_2li_2,2li,3.74,0.4994,0.8684,Sport Lisboa e Benfica,Vitória SC,Ev Sahibi Kazanır,1.88,ev,1. FC Heidenheim 1846,Bayer 04 Leverkusen,Deplasman Kazanır,1.99,ber,,,,,,kaybetti,0,1
+19.03.2026 05:06,19032026_2li_3,2li,3.65,0.4985,0.8183,Sport Lisboa e Benfica,Vitória SC,Ev Sahibi Kazanır,1.88,ev,Racing Club de Lens,Angers SCO,Ev Sahibi Kazanır,1.94,ev,,,,,,kazandi,3.65,1
+19.03.2026 05:06,19032026_3lu_1,3lu,7.22,0.3510,1.5347,Sport Lisboa e Benfica,Vitória SC,Ev Sahibi Kazanır,1.88,ev,1. FC Heidenheim 1846,Bayer 04 Leverkusen,Deplasman Kazanır,1.99,ber,AS Roma,US Lecce,Ev Sahibi Kazanır,1.93,ev,kaybetti,0,1
+19.03.2026 05:06,19032026_3lu_2,3lu,7.04,0.3504,1.4667,Sport Lisboa e Benfica,Vitória SC,Ev Sahibi Kazanır,1.88,ev,AS Roma,US Lecce,Ev Sahibi Kazanır,1.93,ev,Racing Club de Lens,Angers SCO,Ev Sahibi Kazanır,1.94,ev,kazandi,7.04,1
+19.03.2026 05:33,19032026_2li_1,2li,3.40,0.5523,0.8798,Como 1907,AC Pisa 1909,Ev Sahibi Kazanır,1.86,ev,FC Barcelona,Rayo Vallecano de Madrid,Ev Sahibi Kazanır,1.83,ev,,,,,,kazandi,3.40,1
+19.03.2026 05:33,19032026_2li_2,2li,3.57,0.5337,0.9060,1. FC Heidenheim 1846,Bayer 04 Leverkusen,Deplasman Kazanır,1.92,ber,Como 1907,AC Pisa 1909,Ev Sahibi Kazanır,1.86,ev,,,,,,kaybetti,0,1
+19.03.2026 05:33,19032026_2li_3,2li,3.51,0.5396,0.8958,1. FC Heidenheim 1846,Bayer 04 Leverkusen,Deplasman Kazanır,1.92,ber,FC Barcelona,Rayo Vallecano de Madrid,Ev Sahibi Kazanır,1.83,ev,,,,,,kaybetti,0,1
+19.03.2026 05:33,19032026_3lu_1,3lu,6.54,0.3988,1.6062,1. FC Heidenheim 1846,Bayer 04 Leverkusen,Deplasman Kazanır,1.92,ber,Como 1907,AC Pisa 1909,Ev Sahibi Kazanır,1.86,ev,FC Barcelona,Rayo Vallecano de Madrid,Ev Sahibi Kazanır,1.83,ev,kaybetti,0,1
+19.03.2026 05:33,19032026_3lu_2,3lu,7.14,0.3675,1.6245,1. FC Heidenheim 1846,Bayer 04 Leverkusen,Deplasman Kazanır,1.92,ber,Telstar 1963,PSV,Deplasman Kazanır,2.00,ev,Como 1907,AC Pisa 1909,Ev Sahibi Kazanır,1.86,ev,kaybetti,0,1
+19.03.2026 05:58,19032026_2li_1,2li,3.40,0.5523,0.8798,Como 1907,AC Pisa 1909,Ev Sahibi Kazanır,1.86,ev,FC Barcelona,Rayo Vallecano de Madrid,Ev Sahibi Kazanır,1.83,ev,,,,,,kazandi,3.40,1
+19.03.2026 05:58,19032026_2li_2,2li,3.57,0.5337,0.9060,1. FC Heidenheim 1846,Bayer 04 Leverkusen,Deplasman Kazanır,1.92,ber,Como 1907,AC Pisa 1909,Ev Sahibi Kazanır,1.86,ev,,,,,,kaybetti,0,1
+19.03.2026 05:58,19032026_2li_3,2li,3.51,0.5396,0.8958,1. FC Heidenheim 1846,Bayer 04 Leverkusen,Deplasman Kazanır,1.92,ber,FC Barcelona,Rayo Vallecano de Madrid,Ev Sahibi Kazanır,1.83,ev,,,,,,kaybetti,0,1
+19.03.2026 05:58,19032026_3lu_1,3lu,6.54,0.3988,1.6062,1. FC Heidenheim 1846,Bayer 04 Leverkusen,Deplasman Kazanır,1.92,ber,Como 1907,AC Pisa 1909,Ev Sahibi Kazanır,1.86,ev,FC Barcelona,Rayo Vallecano de Madrid,Ev Sahibi Kazanır,1.83,ev,kaybetti,0,1
+19.03.2026 05:58,19032026_3lu_2,3lu,6.68,0.3881,1.5915,1. FC Heidenheim 1846,Bayer 04 Leverkusen,Deplasman Kazanır,1.92,ber,Como 1907,AC Pisa 1909,Ev Sahibi Kazanır,1.86,ev,Stade Rennais FC 1901,FC Metz,Ev Sahibi Kazanır,1.87,ber,kaybetti,0,1
+19.03.2026 06:26,19032026_2li_1,2li,3.61,0.5143,0.8562,Sport Lisboa e Benfica,Vitória SC,Ev Sahibi Kazanır,1.87,ev,AS Roma,US Lecce,Ev Sahibi Kazanır,1.93,ev,,,,,,kazandi,3.61,1
+19.03.2026 06:26,19032026_2li_2,2li,3.59,0.5131,0.8421,Sport Lisboa e Benfica,Vitória SC,Ev Sahibi Kazanır,1.87,ev,Borussia Dortmund,Hamburger SV,Ev Sahibi Kazanır,1.92,ev,,,,,,kazandi,3.59,1
+19.03.2026 06:26,19032026_2li_3,2li,3.52,0.5120,0.7999,Sport Lisboa e Benfica,Vitória SC,Ev Sahibi Kazanır,1.87,ev,Hull City AFC,Sheffield Wednesday FC,Ev Sahibi Kazanır,1.88,ev,,,,,,kazandi,3.52,1
+19.03.2026 06:26,19032026_3lu_1,3lu,6.93,0.3606,1.4986,Sport Lisboa e Benfica,Vitória SC,Ev Sahibi Kazanır,1.87,ev,AS Roma,US Lecce,Ev Sahibi Kazanır,1.93,ev,Borussia Dortmund,Hamburger SV,Ev Sahibi Kazanır,1.92,ev,kazandi,6.93,1
+19.03.2026 06:26,19032026_3lu_2,3lu,6.79,0.3598,1.4414,Sport Lisboa e Benfica,Vitória SC,Ev Sahibi Kazanır,1.87,ev,AS Roma,US Lecce,Ev Sahibi Kazanır,1.93,ev,Hull City AFC,Sheffield Wednesday FC,Ev Sahibi Kazanır,1.88,ev,kazandi,6.79,1
+19.03.2026 06:35,19032026_2li_1,2li,3.61,0.5148,0.8580,Sport Lisboa e Benfica,Vitória SC,Ev Sahibi Kazanır,1.87,ev,AS Roma,US Lecce,Ev Sahibi Kazanır,1.93,ev,,,,,,kazandi,3.61,1
+19.03.2026 06:35,19032026_2li_2,2li,3.59,0.5131,0.8423,Sport Lisboa e Benfica,Vitória SC,Ev Sahibi Kazanır,1.87,ev,Borussia Dortmund,Hamburger SV,Ev Sahibi Kazanır,1.92,ev,,,,,,kazandi,3.59,1
+19.03.2026 06:35,19032026_2li_3,2li,3.52,0.5125,0.8016,Sport Lisboa e Benfica,Vitória SC,Ev Sahibi Kazanır,1.87,ev,Hull City AFC,Sheffield Wednesday FC,Ev Sahibi Kazanır,1.88,ev,,,,,,kazandi,3.52,1
+19.03.2026 06:35,19032026_3lu_1,3lu,6.93,0.3606,1.4989,Sport Lisboa e Benfica,Vitória SC,Ev Sahibi Kazanır,1.87,ev,AS Roma,US Lecce,Ev Sahibi Kazanır,1.93,ev,Borussia Dortmund,Hamburger SV,Ev Sahibi Kazanır,1.92,ev,kazandi,6.93,1
+19.03.2026 06:35,19032026_3lu_2,3lu,6.79,0.3602,1.4437,Sport Lisboa e Benfica,Vitória SC,Ev Sahibi Kazanır,1.87,ev,AS Roma,US Lecce,Ev Sahibi Kazanır,1.93,ev,Hull City AFC,Sheffield Wednesday FC,Ev Sahibi Kazanır,1.88,ev,kazandi,6.79,1
+19.03.2026 06:55,19032026_2li_1,2li,3.61,0.5149,0.8582,Sport Lisboa e Benfica,Vitória SC,Ev Sahibi Kazanır,1.87,ev,AS Roma,US Lecce,Ev Sahibi Kazanır,1.93,ev,,,,,,kazandi,3.61,1
+19.03.2026 06:55,19032026_2li_2,2li,3.59,0.5131,0.8423,Sport Lisboa e Benfica,Vitória SC,Ev Sahibi Kazanır,1.87,ev,Borussia Dortmund,Hamburger SV,Ev Sahibi Kazanır,1.92,ev,,,,,,kazandi,3.59,1
+19.03.2026 06:55,19032026_2li_3,2li,3.52,0.5125,0.8016,Sport Lisboa e Benfica,Vitória SC,Ev Sahibi Kazanır,1.87,ev,Hull City AFC,Sheffield Wednesday FC,Ev Sahibi Kazanır,1.88,ev,,,,,,kazandi,3.52,1
+19.03.2026 06:55,19032026_3lu_1,3lu,6.93,0.3607,1.4992,Sport Lisboa e Benfica,Vitória SC,Ev Sahibi Kazanır,1.87,ev,AS Roma,US Lecce,Ev Sahibi Kazanır,1.93,ev,Borussia Dortmund,Hamburger SV,Ev Sahibi Kazanır,1.92,ev,kazandi,6.93,1
+19.03.2026 06:55,19032026_3lu_2,3lu,6.79,0.3602,1.4440,Sport Lisboa e Benfica,Vitória SC,Ev Sahibi Kazanır,1.87,ev,AS Roma,US Lecce,Ev Sahibi Kazanır,1.93,ev,Hull City AFC,Sheffield Wednesday FC,Ev Sahibi Kazanır,1.88,ev,kazandi,6.79,1
+19.03.2026 07:04,19032026_2li_1,2li,3.39,0.5567,0.8846,Atalanta BC,Hellas Verona FC,Ev Sahibi Kazanır,1.85,ev,FC Barcelona,Rayo Vallecano de Madrid,Ev Sahibi Kazanır,1.83,ev,,,,,,kazandi,3.39,1
+19.03.2026 07:04,19032026_2li_2,2li,3.55,0.5380,0.9108,1. FC Heidenheim 1846,Bayer 04 Leverkusen,Deplasman Kazanır,1.92,ber,Atalanta BC,Hellas Verona FC,Ev Sahibi Kazanır,1.85,ev,,,,,,kaybetti,0,1
+19.03.2026 07:04,19032026_2li_3,2li,3.40,0.5523,0.8798,Como 1907,AC Pisa 1909,Ev Sahibi Kazanır,1.86,ev,FC Barcelona,Rayo Vallecano de Madrid,Ev Sahibi Kazanır,1.83,ev,,,,,,kazandi,3.40,1
+19.03.2026 07:04,19032026_3lu_1,3lu,6.50,0.4020,1.6129,1. FC Heidenheim 1846,Bayer 04 Leverkusen,Deplasman Kazanır,1.92,ber,Atalanta BC,Hellas Verona FC,Ev Sahibi Kazanır,1.85,ev,FC Barcelona,Rayo Vallecano de Madrid,Ev Sahibi Kazanır,1.83,ev,kaybetti,0,1
+19.03.2026 07:04,19032026_3lu_2,3lu,6.54,0.3988,1.6062,1. FC Heidenheim 1846,Bayer 04 Leverkusen,Deplasman Kazanır,1.92,ber,Como 1907,AC Pisa 1909,Ev Sahibi Kazanır,1.86,ev,FC Barcelona,Rayo Vallecano de Madrid,Ev Sahibi Kazanır,1.83,ev,kaybetti,0,1
+19.03.2026 07:13,19032026_2li_1,2li,3.61,0.5149,0.8582,Sport Lisboa e Benfica,Vitória SC,Ev Sahibi Kazanır,1.87,ev,AS Roma,US Lecce,Ev Sahibi Kazanır,1.93,ev,,,,,,kazandi,3.61,1
+19.03.2026 07:13,19032026_2li_2,2li,3.59,0.5136,0.8439,Sport Lisboa e Benfica,Vitória SC,Ev Sahibi Kazanır,1.87,ev,Borussia Dortmund,Hamburger SV,Ev Sahibi Kazanır,1.92,ev,,,,,,kazandi,3.59,1
+19.03.2026 07:13,19032026_2li_3,2li,3.52,0.5125,0.8016,Sport Lisboa e Benfica,Vitória SC,Ev Sahibi Kazanır,1.87,ev,Hull City AFC,Sheffield Wednesday FC,Ev Sahibi Kazanır,1.88,ev,,,,,,kazandi,3.52,1
+19.03.2026 07:13,19032026_3lu_1,3lu,6.93,0.3610,1.5014,Sport Lisboa e Benfica,Vitória SC,Ev Sahibi Kazanır,1.87,ev,AS Roma,US Lecce,Ev Sahibi Kazanır,1.93,ev,Borussia Dortmund,Hamburger SV,Ev Sahibi Kazanır,1.92,ev,kazandi,6.93,1
+19.03.2026 07:13,19032026_3lu_2,3lu,6.79,0.3602,1.4440,Sport Lisboa e Benfica,Vitória SC,Ev Sahibi Kazanır,1.87,ev,AS Roma,US Lecce,Ev Sahibi Kazanır,1.93,ev,Hull City AFC,Sheffield Wednesday FC,Ev Sahibi Kazanır,1.88,ev,kazandi,6.79,1
+19.03.2026 08:33,19032026_2li_1,2li,3.61,0.5155,0.8606,Sport Lisboa e Benfica,Vitória SC,Ev Sahibi Kazanır,1.87,ev,AS Roma,US Lecce,Ev Sahibi Kazanır,1.93,ev,,,,,,kazandi,3.61,1
+19.03.2026 08:33,19032026_2li_2,2li,3.59,0.5125,0.8402,Sport Lisboa e Benfica,Vitória SC,Ev Sahibi Kazanır,1.87,ev,Borussia Dortmund,Hamburger SV,Ev Sahibi Kazanır,1.92,ev,,,,,,kazandi,3.59,1
+19.03.2026 08:33,19032026_2li_3,2li,3.52,0.5123,0.8011,Sport Lisboa e Benfica,Vitória SC,Ev Sahibi Kazanır,1.87,ev,Hull City AFC,Sheffield Wednesday FC,Ev Sahibi Kazanır,1.88,ev,,,,,,kazandi,3.52,1
+19.03.2026 08:33,19032026_3lu_1,3lu,6.93,0.3608,1.5000,Sport Lisboa e Benfica,Vitória SC,Ev Sahibi Kazanır,1.87,ev,AS Roma,US Lecce,Ev Sahibi Kazanır,1.93,ev,Borussia Dortmund,Hamburger SV,Ev Sahibi Kazanır,1.92,ev,kazandi,6.93,1
+19.03.2026 08:33,19032026_3lu_2,3lu,6.79,0.3606,1.4468,Sport Lisboa e Benfica,Vitória SC,Ev Sahibi Kazanır,1.87,ev,AS Roma,US Lecce,Ev Sahibi Kazanır,1.93,ev,Hull City AFC,Sheffield Wednesday FC,Ev Sahibi Kazanır,1.88,ev,kazandi,6.79,1
+19.03.2026 09:07,19032026_2li_1,2li,3.61,0.5150,0.8588,Sport Lisboa e Benfica,Vitória SC,Ev Sahibi Kazanır,1.87,ev,AS Roma,US Lecce,Ev Sahibi Kazanır,1.93,ev,,,,,,kazandi,3.61,1
+19.03.2026 09:07,19032026_2li_2,2li,3.59,0.5129,0.8416,Sport Lisboa e Benfica,Vitória SC,Ev Sahibi Kazanır,1.87,ev,Borussia Dortmund,Hamburger SV,Ev Sahibi Kazanır,1.92,ev,,,,,,kazandi,3.59,1
+19.03.2026 09:07,19032026_2li_3,2li,3.71,0.4934,0.8285,AS Roma,US Lecce,Ev Sahibi Kazanır,1.93,ev,Borussia Dortmund,Hamburger SV,Ev Sahibi Kazanır,1.92,ev,,,,,,kazandi,3.71,1
+19.03.2026 09:07,19032026_3lu_1,3lu,6.93,0.3610,1.5019,Sport Lisboa e Benfica,Vitória SC,Ev Sahibi Kazanır,1.87,ev,AS Roma,US Lecce,Ev Sahibi Kazanır,1.93,ev,Borussia Dortmund,Hamburger SV,Ev Sahibi Kazanır,1.92,ev,kazandi,6.93,1
+19.03.2026 09:07,19032026_3lu_2,3lu,6.79,0.3603,1.4445,Sport Lisboa e Benfica,Vitória SC,Ev Sahibi Kazanır,1.87,ev,AS Roma,US Lecce,Ev Sahibi Kazanır,1.93,ev,Hull City AFC,Sheffield Wednesday FC,Ev Sahibi Kazanır,1.88,ev,kazandi,6.79,1
+19.03.2026 09:12,19032026_2li_1,2li,3.61,0.5156,0.8609,Sport Lisboa e Benfica,Vitória SC,Ev Sahibi Kazanır,1.87,ev,AS Roma,US Lecce,Ev Sahibi Kazanır,1.93,ev,,,,,,kazandi,3.61,1
+19.03.2026 09:12,19032026_2li_2,2li,3.59,0.5135,0.8436,Sport Lisboa e Benfica,Vitória SC,Ev Sahibi Kazanır,1.87,ev,Borussia Dortmund,Hamburger SV,Ev Sahibi Kazanır,1.92,ev,,,,,,kazandi,3.59,1
+19.03.2026 09:12,19032026_2li_3,2li,2.43,0.6562,0.5952,Sport Lisboa e Benfica,Vitória SC,Ev Sahibi Kazanır,1.87,ev,FC Bayern München,1. FC Union Berlin,1.5 Üst,1.30,ev,,,,,,kaybetti,0,1
+19.03.2026 09:12,19032026_3lu_1,3lu,6.93,0.3614,1.5046,Sport Lisboa e Benfica,Vitória SC,Ev Sahibi Kazanır,1.87,ev,AS Roma,US Lecce,Ev Sahibi Kazanır,1.93,ev,Borussia Dortmund,Hamburger SV,Ev Sahibi Kazanır,1.92,ev,kazandi,6.93,1
+19.03.2026 09:12,19032026_3lu_2,3lu,6.79,0.3607,1.4472,Sport Lisboa e Benfica,Vitória SC,Ev Sahibi Kazanır,1.87,ev,AS Roma,US Lecce,Ev Sahibi Kazanır,1.93,ev,Hull City AFC,Sheffield Wednesday FC,Ev Sahibi Kazanır,1.88,ev,kazandi,6.79,1
+19.03.2026 09:20,19032026_2li_1,2li,3.61,0.5156,0.8609,Sport Lisboa e Benfica,Vitória SC,Ev Sahibi Kazanır,1.87,ev,AS Roma,US Lecce,Ev Sahibi Kazanır,1.93,ev,,,,,,kazandi,3.61,1
+19.03.2026 09:20,19032026_2li_2,2li,3.59,0.5135,0.8436,Sport Lisboa e Benfica,Vitória SC,Ev Sahibi Kazanır,1.87,ev,Borussia Dortmund,Hamburger SV,Ev Sahibi Kazanır,1.92,ev,,,,,,kazandi,3.59,1
+19.03.2026 09:20,19032026_2li_3,2li,2.43,0.6539,0.5896,Sport Lisboa e Benfica,Vitória SC,Ev Sahibi Kazanır,1.87,ev,FC Bayern München,1. FC Union Berlin,1.5 Üst,1.30,ev,,,,,,kaybetti,0,1
+19.03.2026 09:20,19032026_3lu_1,3lu,6.93,0.3614,1.5046,Sport Lisboa e Benfica,Vitória SC,Ev Sahibi Kazanır,1.87,ev,AS Roma,US Lecce,Ev Sahibi Kazanır,1.93,ev,Borussia Dortmund,Hamburger SV,Ev Sahibi Kazanır,1.92,ev,kazandi,6.93,1
+19.03.2026 09:20,19032026_3lu_2,3lu,6.79,0.3607,1.4472,Sport Lisboa e Benfica,Vitória SC,Ev Sahibi Kazanır,1.87,ev,AS Roma,US Lecce,Ev Sahibi Kazanır,1.93,ev,Hull City AFC,Sheffield Wednesday FC,Ev Sahibi Kazanır,1.88,ev,kazandi,6.79,1
+19.03.2026 20:47,19032026_2li_1,2li,3.57,0.5341,0.9073,1. FC Heidenheim 1846,Bayer 04 Leverkusen,Deplasman Kazanır,1.92,ber,Como 1907,AC Pisa 1909,Ev Sahibi Kazanır,1.86,ev,,,,,,kaybetti,0,1
+19.03.2026 20:47,19032026_2li_2,2li,3.40,0.5508,0.8747,Como 1907,AC Pisa 1909,Ev Sahibi Kazanır,1.86,ev,FC Barcelona,Rayo Vallecano de Madrid,Ev Sahibi Kazanır,1.83,ev,,,,,,kazandi,3.40,1
+19.03.2026 20:47,19032026_2li_3,2li,3.51,0.5385,0.8920,1. FC Heidenheim 1846,Bayer 04 Leverkusen,Deplasman Kazanır,1.92,ber,FC Barcelona,Rayo Vallecano de Madrid,Ev Sahibi Kazanır,1.83,ev,,,,,,kaybetti,0,1
+19.03.2026 20:47,19032026_3lu_1,3lu,6.54,0.3980,1.6010,1. FC Heidenheim 1846,Bayer 04 Leverkusen,Deplasman Kazanır,1.92,ber,Como 1907,AC Pisa 1909,Ev Sahibi Kazanır,1.86,ev,FC Barcelona,Rayo Vallecano de Madrid,Ev Sahibi Kazanır,1.83,ev,kaybetti,0,1
+19.03.2026 20:47,19032026_3lu_2,3lu,6.68,0.3882,1.5926,1. FC Heidenheim 1846,Bayer 04 Leverkusen,Deplasman Kazanır,1.92,ber,Como 1907,AC Pisa 1909,Ev Sahibi Kazanır,1.86,ev,Stade Rennais FC 1901,FC Metz,Ev Sahibi Kazanır,1.87,ber,kaybetti,0,1
+20.03.2026 01:40,20032026_2li_1,2li,3.42,0.4257,0.4569,RB Leipzig,TSG 1899 Hoffenheim,KG Var (Karşılıklı Gol),1.85,ev,Feyenoord Rotterdam,AFC Ajax,KG Var (Karşılıklı Gol),1.85,ber,,,,,,kaybetti,0,1
+20.03.2026 01:40,20032026_2li_2,2li,4.33,0.3487,0.5096,Villarreal CF,Real Sociedad de Fútbol,Ev Sahibi Kazanır,2.34,ev,RB Leipzig,TSG 1899 Hoffenheim,KG Var (Karşılıklı Gol),1.85,ev,,,,,,kaybetti,0,1
+20.03.2026 01:40,20032026_2li_3,2li,4.33,0.3487,0.5096,Bristol City FC,West Bromwich Albion FC,Ev Sahibi Kazanır,2.34,dep,RB Leipzig,TSG 1899 Hoffenheim,KG Var (Karşılıklı Gol),1.85,ev,,,,,,kaybetti,0,1
+20.03.2026 01:40,20032026_3lu_1,3lu,10.13,0.1860,0.8839,Villarreal CF,Real Sociedad de Fútbol,Ev Sahibi Kazanır,2.34,ev,Bristol City FC,West Bromwich Albion FC,Ev Sahibi Kazanır,2.34,dep,RB Leipzig,TSG 1899 Hoffenheim,KG Var (Karşılıklı Gol),1.85,ev,kaybetti,0,1
+20.03.2026 01:40,20032026_3lu_2,3lu,8.01,0.2270,0.8181,Villarreal CF,Real Sociedad de Fútbol,Ev Sahibi Kazanır,2.34,ev,RB Leipzig,TSG 1899 Hoffenheim,KG Var (Karşılıklı Gol),1.85,ev,Feyenoord Rotterdam,AFC Ajax,KG Var (Karşılıklı Gol),1.85,ber,kaybetti,0,1

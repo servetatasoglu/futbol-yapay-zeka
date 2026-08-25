@@ -1,0 +1,12 @@
+{
+  "edge_esigi": 0.1,
+  "sharp_bonus": 5,
+  "sharp_ceza": 10,
+  "lig_bonuslar": {},
+  "en_iyi_lig": "PL",
+  "oyna_esigi": 65,
+  "dikkat_esigi": 45,
+  "hesaplama_tarihi": "2026-08-25 15:44",
+  "kaynak": "walk_forward_backtest",
+  "tahmin_sayisi": 66
+}

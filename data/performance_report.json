@@ -1,0 +1,187 @@
+{
+  "rapor_tarihi": "2026-05-15 18:29",
+  "ozet": {
+    "toplam_bahis": 20,
+    "sonuclu": 14,
+    "bekleyen": 6,
+    "kazanan": 2,
+    "kaybeden": 12,
+    "win_rate": 0.1429,
+    "win_rate_pct": "%14.3",
+    "roi": -22.0,
+    "roi_str": "%-22.0",
+    "toplam_kar_zarar": -3.08,
+    "avg_odds": 3.44,
+    "avg_edge_pct": 52.23,
+    "bootstrap_ci_95": [
+      -85.86,
+      58.0
+    ],
+    "is_statistically_significant": false
+  },
+  "clv": {
+    "hesaplanan": 5,
+    "ortalama": 0.0,
+    "pozitif_oran": 0.0,
+    "durum": "VERİ YOK"
+  },
+  "lig_bazli": {
+    "FL1": {
+      "toplam": 3,
+      "kazanan": 1,
+      "kaybeden": 2,
+      "bekleyen": 0,
+      "win_rate": 0.3333,
+      "roi": 56.67,
+      "avg_edge": 63.39,
+      "avg_odds": 4.0
+    },
+    "ELC": {
+      "toplam": 3,
+      "kazanan": 0,
+      "kaybeden": 3,
+      "bekleyen": 0,
+      "win_rate": 0.0,
+      "roi": -1.0,
+      "avg_edge": 42.04,
+      "avg_odds": 3.12
+    },
+    "DED": {
+      "toplam": 2,
+      "kazanan": 0,
+      "kaybeden": 2,
+      "bekleyen": 0,
+      "win_rate": 0.0,
+      "roi": -100.0,
+      "avg_edge": 77.27,
+      "avg_odds": 4.53
+    },
+    "PPL": {
+      "toplam": 7,
+      "kazanan": 1,
+      "kaybeden": 5,
+      "bekleyen": 1,
+      "win_rate": 0.1667,
+      "roi": -45.83,
+      "avg_edge": 44.92,
+      "avg_odds": 3.18
+    },
+    "TSL": {
+      "toplam": 3,
+      "kazanan": 0,
+      "kaybeden": 0,
+      "bekleyen": 3,
+      "win_rate": null,
+      "roi": null,
+      "avg_edge": 66.51,
+      "avg_odds": 3.41
+    },
+    "BL2": {
+      "toplam": 2,
+      "kazanan": 0,
+      "kaybeden": 0,
+      "bekleyen": 2,
+      "win_rate": null,
+      "roi": null,
+      "avg_edge": 29.93,
+      "avg_odds": 2.97
+    }
+  },
+  "en_iyi_ligler": [
+    [
+      "FL1",
+      56.67
+    ],
+    [
+      "ELC",
+      -1.0
+    ],
+    [
+      "PPL",
+      -45.83
+    ]
+  ],
+  "en_kotu_ligler": [
+    [
+      "ELC",
+      -1.0
+    ],
+    [
+      "PPL",
+      -45.83
+    ],
+    [
+      "DED",
+      -100.0
+    ]
+  ],
+  "tier_bazli": {
+    "NO_SHARP": {
+      "toplam": 6,
+      "kazanan": 1,
+      "kaybeden": 5,
+      "win_rate": 0.1667,
+      "roi": -5.17
+    },
+    "WEAK": {
+      "toplam": 5,
+      "kazanan": 0,
+      "kaybeden": 3,
+      "win_rate": 0.0,
+      "roi": -67.0
+    },
+    "STRONG": {
+      "toplam": 8,
+      "kazanan": 1,
+      "kaybeden": 4,
+      "win_rate": 0.2,
+      "roi": -15.2
+    },
+    "ELITE": {
+      "toplam": 1,
+      "kazanan": 0,
+      "kaybeden": 0,
+      "win_rate": null,
+      "roi": null
+    }
+  },
+  "tahmin_tipi": {
+    "Beraberlik": {
+      "toplam": 5,
+      "kazanan": 0,
+      "kaybeden": 4
+    },
+    "2.5 Alt": {
+      "toplam": 5,
+      "kazanan": 0,
+      "kaybeden": 2
+    },
+    "Ev Sahibi Kazanır": {
+      "toplam": 8,
+      "kazanan": 2,
+      "kaybeden": 5
+    },
+    "Deplasman Kazanır": {
+      "toplam": 2,
+      "kazanan": 0,
+      "kaybeden": 1
+    }
+  },
+  "model_vs_market": {
+    "karsilastirma_sayisi": 14,
+    "model_basarili": 2,
+    "market_basarili": 0
+  },
+  "veri_tazeligi": {
+    "maclar_json": {
+      "son_guncelleme": "2026-05-15 18:28",
+      "saat_once": 0.0,
+      "taze": true
+    },
+    "odds_cache": {
+      "son_guncelleme": "2026-05-15 18:28",
+      "saat_once": 0.0,
+      "taze": true
+    }
+  }
+}

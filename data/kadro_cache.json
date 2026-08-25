@@ -1,0 +1,789 @@
+{
+  "zaman": 1773497947.4781199,
+  "veriler": {
+    "Burnley FC|AFC Bournemouth": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksik": "",
+      "dep_eksik": "",
+      "veri_var": false,
+      "ozet": ""
+    },
+    "Sunderland AFC|Brighton & Hove Albion FC": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksik": "",
+      "dep_eksik": "",
+      "veri_var": false,
+      "ozet": ""
+    },
+    "Arsenal FC|Everton FC": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksik": "",
+      "dep_eksik": "",
+      "veri_var": false,
+      "ozet": ""
+    },
+    "Chelsea FC|Newcastle United FC": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksik": "",
+      "dep_eksik": "",
+      "veri_var": false,
+      "ozet": ""
+    },
+    "West Ham United FC|Manchester City FC": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksik": "",
+      "dep_eksik": "",
+      "veri_var": false,
+      "ozet": ""
+    },
+    "Manchester United FC|Aston Villa FC": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksik": "",
+      "dep_eksik": "",
+      "veri_var": false,
+      "ozet": ""
+    },
+    "Crystal Palace FC|Leeds United FC": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksik": "",
+      "dep_eksik": "",
+      "veri_var": false,
+      "ozet": ""
+    },
+    "Nottingham Forest FC|Fulham FC": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksik": "",
+      "dep_eksik": "",
+      "veri_var": false,
+      "ozet": ""
+    },
+    "Liverpool FC|Tottenham Hotspur FC": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksik": "",
+      "dep_eksik": "",
+      "veri_var": false,
+      "ozet": ""
+    },
+    "Brentford FC|Wolverhampton Wanderers FC": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksik": "",
+      "dep_eksik": "",
+      "veri_var": false,
+      "ozet": ""
+    },
+    "Deportivo Alavés|Villarreal CF": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksik": "",
+      "dep_eksik": "",
+      "veri_var": false,
+      "ozet": ""
+    },
+    "Girona FC|Athletic Club": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksik": "",
+      "dep_eksik": "",
+      "veri_var": false,
+      "ozet": ""
+    },
+    "Club Atlético de Madrid|Getafe CF": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksik": "",
+      "dep_eksik": "",
+      "veri_var": false,
+      "ozet": ""
+    },
+    "Real Oviedo|Valencia CF": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksik": "",
+      "dep_eksik": "",
+      "veri_var": false,
+      "ozet": ""
+    },
+    "Real Madrid CF|Elche CF": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksik": "",
+      "dep_eksik": "",
+      "veri_var": false,
+      "ozet": ""
+    },
+    "RCD Mallorca|RCD Espanyol de Barcelona": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksik": "",
+      "dep_eksik": "",
+      "veri_var": false,
+      "ozet": ""
+    },
+    "FC Barcelona|Sevilla FC": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksik": "",
+      "dep_eksik": "",
+      "veri_var": false,
+      "ozet": ""
+    },
+    "Real Betis Balompié|RC Celta de Vigo": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksik": "",
+      "dep_eksik": "",
+      "veri_var": false,
+      "ozet": ""
+    },
+    "Real Sociedad de Fútbol|CA Osasuna": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksik": "",
+      "dep_eksik": "",
+      "veri_var": false,
+      "ozet": ""
+    },
+    "Rayo Vallecano de Madrid|Levante UD": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksik": "",
+      "dep_eksik": "",
+      "veri_var": false,
+      "ozet": ""
+    },
+    "Borussia Mönchengladbach|FC St. Pauli 1910": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksik": "",
+      "dep_eksik": "",
+      "veri_var": false,
+      "ozet": ""
+    },
+    "Eintracht Frankfurt|1. FC Heidenheim 1846": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksik": "",
+      "dep_eksik": "",
+      "veri_var": false,
+      "ozet": ""
+    },
+    "Borussia Dortmund|FC Augsburg": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksik": "",
+      "dep_eksik": "",
+      "veri_var": false,
+      "ozet": ""
+    },
+    "Bayer 04 Leverkusen|FC Bayern München": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksik": "",
+      "dep_eksik": "",
+      "veri_var": false,
+      "ozet": ""
+    },
+    "TSG 1899 Hoffenheim|VfL Wolfsburg": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksik": "",
+      "dep_eksik": "",
+      "veri_var": false,
+      "ozet": ""
+    },
+    "Hamburger SV|1. FC Köln": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksik": "",
+      "dep_eksik": "",
+      "veri_var": false,
+      "ozet": ""
+    },
+    "SV Werder Bremen|1. FSV Mainz 05": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksik": "",
+      "dep_eksik": "",
+      "veri_var": false,
+      "ozet": ""
+    },
+    "SC Freiburg|1. FC Union Berlin": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksik": "",
+      "dep_eksik": "",
+      "veri_var": false,
+      "ozet": ""
+    },
+    "VfB Stuttgart|RB Leipzig": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksik": "",
+      "dep_eksik": "",
+      "veri_var": false,
+      "ozet": ""
+    },
+    "Torino FC|Parma Calcio 1913": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksik": "",
+      "dep_eksik": "",
+      "veri_var": false,
+      "ozet": ""
+    },
+    "FC Internazionale Milano|Atalanta BC": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksik": "",
+      "dep_eksik": "",
+      "veri_var": false,
+      "ozet": ""
+    },
+    "SSC Napoli|US Lecce": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksik": "",
+      "dep_eksik": "",
+      "veri_var": false,
+      "ozet": ""
+    },
+    "Udinese Calcio|Juventus FC": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksik": "",
+      "dep_eksik": "",
+      "veri_var": false,
+      "ozet": ""
+    },
+    "Hellas Verona FC|Genoa CFC": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksik": "",
+      "dep_eksik": "",
+      "veri_var": false,
+      "ozet": ""
+    },
+    "US Sassuolo Calcio|Bologna FC 1909": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksik": "",
+      "dep_eksik": "",
+      "veri_var": false,
+      "ozet": ""
+    },
+    "Paris FC|Cagliari Calcio": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksik": "",
+      "dep_eksik": "",
+      "veri_var": false,
+      "ozet": ""
+    },
+    "Como 1907|AS Roma": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksik": "",
+      "dep_eksik": "",
+      "veri_var": false,
+      "ozet": ""
+    },
+    "SS Lazio|AC Milan": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksik": "",
+      "dep_eksik": "",
+      "veri_var": false,
+      "ozet": ""
+    },
+    "US Cremonese|ACF Fiorentina": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksik": "",
+      "dep_eksik": "",
+      "veri_var": false,
+      "ozet": ""
+    },
+    "Olympique de Marseille|AJ Auxerre": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksik": "",
+      "dep_eksik": "",
+      "veri_var": false,
+      "ozet": ""
+    },
+    "FC Lorient|CD Leganés": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksik": "",
+      "dep_eksik": "",
+      "veri_var": false,
+      "ozet": ""
+    },
+    "Angers SCO|OGC Nice": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksik": "",
+      "dep_eksik": "",
+      "veri_var": false,
+      "ozet": ""
+    },
+    "AS Monaco FC|Stade Brestois 29": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksik": "",
+      "dep_eksik": "",
+      "veri_var": false,
+      "ozet": ""
+    },
+    "RC Strasbourg Alsace|Paris FC": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksik": "",
+      "dep_eksik": "",
+      "veri_var": false,
+      "ozet": ""
+    },
+    "Le Havre AC|Olympique Lyonnais": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksik": "",
+      "dep_eksik": "",
+      "veri_var": false,
+      "ozet": ""
+    },
+    "FC Metz|Toulouse FC": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksik": "",
+      "dep_eksik": "",
+      "veri_var": false,
+      "ozet": ""
+    },
+    "Stade Rennais FC 1901|Lille OSC": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksik": "",
+      "dep_eksik": "",
+      "veri_var": false,
+      "ozet": ""
+    },
+    "PEC Zwolle|FC Groningen": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksik": "",
+      "dep_eksik": "",
+      "veri_var": false,
+      "ozet": ""
+    },
+    "FC Volendam|Fortuna Sittard": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksik": "",
+      "dep_eksik": "",
+      "veri_var": false,
+      "ozet": ""
+    },
+    "PSV|NEC": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksik": "",
+      "dep_eksik": "",
+      "veri_var": false,
+      "ozet": ""
+    },
+    "SC Heerenveen|Telstar 1963": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksik": "",
+      "dep_eksik": "",
+      "veri_var": false,
+      "ozet": ""
+    },
+    "AFC Ajax|Sparta Rotterdam": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksik": "",
+      "dep_eksik": "",
+      "veri_var": false,
+      "ozet": ""
+    },
+    "AZ|Heracles Almelo": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksik": "",
+      "dep_eksik": "",
+      "veri_var": false,
+      "ozet": ""
+    },
+    "Go Ahead Eagles|NAC Breda": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksik": "",
+      "dep_eksik": "",
+      "veri_var": false,
+      "ozet": ""
+    },
+    "Vitória SC|FC Famalicão": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksik": "",
+      "dep_eksik": "",
+      "veri_var": false,
+      "ozet": ""
+    },
+    "Gil Vicente FC|FC Alverca": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksik": "",
+      "dep_eksik": "",
+      "veri_var": false,
+      "ozet": ""
+    },
+    "FC Arouca|Sport Lisboa e Benfica": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksik": "",
+      "dep_eksik": "",
+      "veri_var": false,
+      "ozet": ""
+    },
+    "AVS|CD Santa Clara": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksik": "",
+      "dep_eksik": "",
+      "veri_var": false,
+      "ozet": ""
+    },
+    "CD Nacional|GD Estoril Praia": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksik": "",
+      "dep_eksik": "",
+      "veri_var": false,
+      "ozet": ""
+    },
+    "Rio Ave FC|CF Estrela da Amadora": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksik": "",
+      "dep_eksik": "",
+      "veri_var": false,
+      "ozet": ""
+    },
+    "FC Porto|Moreirense FC": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksik": "",
+      "dep_eksik": "",
+      "veri_var": false,
+      "ozet": ""
+    },
+    "Rotherham United FC|Wolverhampton Wanderers FC": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksik": "",
+      "dep_eksik": "",
+      "veri_var": false,
+      "ozet": ""
+    },
+    "Huddersfield Town AFC|Burnley FC": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksik": "",
+      "dep_eksik": "",
+      "veri_var": false,
+      "ozet": ""
+    },
+    "Southampton FC|Brighton & Hove Albion FC": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksik": "",
+      "dep_eksik": "",
+      "veri_var": false,
+      "ozet": ""
+    },
+    "Leicester City FC|Cardiff City FC": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksik": "",
+      "dep_eksik": "",
+      "veri_var": false,
+      "ozet": ""
+    },
+    "Wolverhampton Wanderers FC|Luton Town FC": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksik": "",
+      "dep_eksik": "",
+      "veri_var": false,
+      "ozet": ""
+    },
+    "Cardiff City FC|Wolverhampton Wanderers FC": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksik": "",
+      "dep_eksik": "",
+      "veri_var": false,
+      "ozet": ""
+    },
+    "Luton Town FC|Leicester City FC": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksik": "",
+      "dep_eksik": "",
+      "veri_var": false,
+      "ozet": ""
+    },
+    "Huddersfield Town AFC|Hull City AFC": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksik": "",
+      "dep_eksik": "",
+      "veri_var": false,
+      "ozet": ""
+    },
+    "Burnley FC|Charlton Athletic FC": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksik": "",
+      "dep_eksik": "",
+      "veri_var": false,
+      "ozet": ""
+    },
+    "Bayer 04 Leverkusen|Arsenal FC": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksik": "",
+      "dep_eksik": "",
+      "veri_var": false,
+      "ozet": ""
+    },
+    "Paris Saint-Germain FC|Chelsea FC": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksik": "",
+      "dep_eksik": "",
+      "veri_var": false,
+      "ozet": ""
+    },
+    "Real Madrid CF|Manchester City FC": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksik": "",
+      "dep_eksik": "",
+      "veri_var": false,
+      "ozet": ""
+    },
+    "Bologna FC 1909|AS Roma": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksik": "",
+      "dep_eksik": "",
+      "veri_var": false,
+      "ozet": ""
+    },
+    "Lille OSC|Aston Villa FC": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksik": "",
+      "dep_eksik": "",
+      "veri_var": false,
+      "ozet": ""
+    },
+    "VfB Stuttgart|FC Porto": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksik": "",
+      "dep_eksik": "",
+      "veri_var": false,
+      "ozet": ""
+    },
+    "RC Celta de Vigo|Olympique Lyonnais": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksik": "",
+      "dep_eksik": "",
+      "veri_var": false,
+      "ozet": ""
+    },
+    "Huddersfield Town AFC|Bristol City FC": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksik": "",
+      "dep_eksik": "",
+      "veri_var": false,
+      "ozet": ""
+    },
+    "Arsenal FC|Bayer 04 Leverkusen": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksik": "",
+      "dep_eksik": "",
+      "veri_var": false,
+      "ozet": ""
+    },
+    "Chelsea FC|Paris Saint-Germain FC": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksik": "",
+      "dep_eksik": "",
+      "veri_var": false,
+      "ozet": ""
+    },
+    "Manchester City FC|Real Madrid CF": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksik": "",
+      "dep_eksik": "",
+      "veri_var": false,
+      "ozet": ""
+    },
+    "FC Barcelona|Newcastle United FC": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksik": "",
+      "dep_eksik": "",
+      "veri_var": false,
+      "ozet": ""
+    },
+    "FC Bayern München|Atalanta BC": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksik": "",
+      "dep_eksik": "",
+      "veri_var": false,
+      "ozet": ""
+    },
+    "Tottenham Hotspur FC|Club Atlético de Madrid": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksik": "",
+      "dep_eksik": "",
+      "veri_var": false,
+      "ozet": ""
+    },
+    "Liverpool FC|Galatasaray SK": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksik": "",
+      "dep_eksik": "",
+      "veri_var": false,
+      "ozet": ""
+    },
+    "AFC Bournemouth|Manchester United FC": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksik": "",
+      "dep_eksik": "",
+      "veri_var": false,
+      "ozet": ""
+    },
+    "Villarreal CF|Real Sociedad de Fútbol": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksik": "",
+      "dep_eksik": "",
+      "veri_var": false,
+      "ozet": ""
+    },
+    "RB Leipzig|TSG 1899 Hoffenheim": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksik": "",
+      "dep_eksik": "",
+      "veri_var": false,
+      "ozet": ""
+    },
+    "Cagliari Calcio|SSC Napoli": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksik": "",
+      "dep_eksik": "",
+      "veri_var": false,
+      "ozet": ""
+    },
+    "Genoa CFC|Udinese Calcio": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksik": "",
+      "dep_eksik": "",
+      "veri_var": false,
+      "ozet": ""
+    },
+    "CD Leganés|Angers SCO": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksik": "",
+      "dep_eksik": "",
+      "veri_var": false,
+      "ozet": ""
+    },
+    "Heracles Almelo|SBV Excelsior": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksik": "",
+      "dep_eksik": "",
+      "veri_var": false,
+      "ozet": ""
+    },
+    "CF Estrela da Amadora|Casa Pia AC": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksik": "",
+      "dep_eksik": "",
+      "veri_var": false,
+      "ozet": ""
+    },
+    "FC Nantes|CD Nacional": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksik": "",
+      "dep_eksik": "",
+      "veri_var": false,
+      "ozet": ""
+    },
+    "Olympique Lyonnais|RC Celta de Vigo": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksik": "",
+      "dep_eksik": "",
+      "veri_var": false,
+      "ozet": ""
+    },
+    "AS Roma|Bologna FC 1909": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksik": "",
+      "dep_eksik": "",
+      "veri_var": false,
+      "ozet": ""
+    },
+    "Aston Villa FC|Lille OSC": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksik": "",
+      "dep_eksik": "",
+      "veri_var": false,
+      "ozet": ""
+    },
+    "FC Porto|VfB Stuttgart": {
+      "ev_guc": 1.0,
+      "dep_guc": 1.0,
+      "ev_eksik": "",
+      "dep_eksik": "",
+      "veri_var": false,
+      "ozet": ""
+    }
+  }
+}

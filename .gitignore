@@ -1,0 +1,26 @@
+# ============================================================
+#  Futbol Tahmin Sistemi — Git İgnore
+# ============================================================
+
+# GİZLİ: API anahtarları ve token'lar
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+.venv-1/
+*.egg-info/
+
+# Veri dosyaları
+# data/ (Github'a gönderilecek)
+# logs/ (Github'a gönderilecek)
+*.log
+# *.pkl (Model beyni Github'a gidecek)
+# *.csv (Geçmiş bahisler gidecek)
+
+# macOS
+.DS_Store

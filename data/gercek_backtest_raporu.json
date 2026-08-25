@@ -1,0 +1,75 @@
+{
+  "baslangic": "2025-01-01",
+  "toplam_tahmin": 4033,
+  "genel_accuracy": 0.299,
+  "roi_genel": 0.6186,
+  "filtreli_n": 3349,
+  "filtreli_accuracy": 0.281,
+  "filtreli_roi": 0.7294,
+  "gercek_pinnacle_modu": true,
+  "gercek_pinnacle_n": 1479,
+  "pinnacle_accuracy": 0.263,
+  "pinnacle_roi": -0.0123,
+  "pinnacle_filtreli_n": 1477,
+  "pinnacle_filtreli_acc": 0.2634,
+  "pinnacle_filtreli_roi": -0.0109,
+  "pinnacle_eslesme": 1479,
+  "pinnacle_eslesme_yok": 2554,
+  "lig_accuracy": {
+    "PL": 0.3293,
+    "ELC": 0.2867,
+    "PD": 0.2983,
+    "FL1": 0.298,
+    "PPL": 0.302,
+    "SA": 0.2846,
+    "BL1": 0.3203,
+    "DED": 0.2768,
+    "CL": 0.3022
+  },
+  "edge_kalibrasyon": {
+    "-1.00_0.00": {
+      "n": 110,
+      "acc": 0.3636,
+      "roi": -0.0767
+    },
+    "0.00_0.05": {
+      "n": 276,
+      "acc": 0.4058,
+      "roi": 0.1393
+    },
+    "0.05_0.10": {
+      "n": 298,
+      "acc": 0.3792,
+      "roi": 0.0747
+    },
+    "0.10_0.15": {
+      "n": 281,
+      "acc": 0.4021,
+      "roi": 0.3326
+    },
+    "0.15_0.25": {
+      "n": 615,
+      "acc": 0.348,
+      "roi": 0.3831
+    },
+    "0.25_1.00": {
+      "n": 1930,
+      "acc": 0.2731,
+      "roi": 0.8305
+    }
+  },
+  "yon_stats": {
+    "ev": {
+      "n": 1279,
+      "accuracy": 0.3722
+    },
+    "dep": {
+      "n": 1734,
+      "accuracy": 0.2699
+    },
+    "ber": {
+      "n": 1020,
+      "accuracy": 0.2569
+    }
+  }
+}

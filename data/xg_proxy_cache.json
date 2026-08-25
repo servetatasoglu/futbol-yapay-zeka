@@ -1,0 +1,897 @@
+{
+  "zaman": 1778963207.674429,
+  "takimlar": {
+    "OGC Nice": {
+      "xg": 1.285,
+      "xga": 1.469,
+      "xg_diff": -0.184,
+      "mac": 101,
+      "lig": "FL1",
+      "kaynak": "dixon_coles_proxy",
+      "xg_rank": 0.429
+    },
+    "Lille OSC": {
+      "xg": 1.427,
+      "xga": 1.072,
+      "xg_diff": 0.355,
+      "mac": 101,
+      "lig": "FL1",
+      "kaynak": "dixon_coles_proxy",
+      "xg_rank": 0.667
+    },
+    "Olympique de Marseille": {
+      "xg": 1.635,
+      "xga": 1.333,
+      "xg_diff": 0.302,
+      "mac": 101,
+      "lig": "FL1",
+      "kaynak": "dixon_coles_proxy",
+      "xg_rank": 0.952
+    },
+    "Stade de Reims": {
+      "xg": 1.043,
+      "xga": 1.324,
+      "xg_diff": -0.281,
+      "mac": 68,
+      "lig": "FL1",
+      "kaynak": "dixon_coles_proxy",
+      "xg_rank": 0.19
+    },
+    "Paris Saint-Germain FC": {
+      "xg": 2.01,
+      "xga": 0.99,
+      "xg_diff": 1.02,
+      "mac": 101,
+      "lig": "FL1",
+      "kaynak": "dixon_coles_proxy",
+      "xg_rank": 1.0
+    },
+    "FC Lorient": {
+      "xg": 1.399,
+      "xga": 1.402,
+      "xg_diff": -0.003,
+      "mac": 67,
+      "lig": "FL1",
+      "kaynak": "dixon_coles_proxy",
+      "xg_rank": 0.619
+    },
+    "Stade Brestois 29": {
+      "xg": 1.314,
+      "xga": 1.504,
+      "xg_diff": -0.19,
+      "mac": 101,
+      "lig": "FL1",
+      "kaynak": "dixon_coles_proxy",
+      "xg_rank": 0.476
+    },
+    "Racing Club de Lens": {
+      "xg": 1.544,
+      "xga": 1.164,
+      "xg_diff": 0.38,
+      "mac": 101,
+      "lig": "FL1",
+      "kaynak": "dixon_coles_proxy",
+      "xg_rank": 0.762
+    },
+    "Clermont Foot 63": {
+      "xg": 0.912,
+      "xga": 1.643,
+      "xg_diff": -0.731,
+      "mac": 34,
+      "lig": "FL1",
+      "kaynak": "dixon_coles_proxy",
+      "xg_rank": 0.0
+    },
+    "AS Monaco FC": {
+      "xg": 1.596,
+      "xga": 1.329,
+      "xg_diff": 0.267,
+      "mac": 101,
+      "lig": "FL1",
+      "kaynak": "dixon_coles_proxy",
+      "xg_rank": 0.905
+    },
+    "FC Nantes": {
+      "xg": 1.023,
+      "xga": 1.449,
+      "xg_diff": -0.426,
+      "mac": 101,
+      "lig": "FL1",
+      "kaynak": "dixon_coles_proxy",
+      "xg_rank": 0.143
+    },
+    "Toulouse FC": {
+      "xg": 1.336,
+      "xga": 1.342,
+      "xg_diff": -0.006,
+      "mac": 101,
+      "lig": "FL1",
+      "kaynak": "dixon_coles_proxy",
+      "xg_rank": 0.524
+    },
+    "Montpellier HSC": {
+      "xg": 0.933,
+      "xga": 1.806,
+      "xg_diff": -0.873,
+      "mac": 67,
+      "lig": "FL1",
+      "kaynak": "dixon_coles_proxy",
+      "xg_rank": 0.048
+    },
+    "Le Havre AC": {
+      "xg": 1.075,
+      "xga": 1.436,
+      "xg_diff": -0.361,
+      "mac": 101,
+      "lig": "FL1",
+      "kaynak": "dixon_coles_proxy",
+      "xg_rank": 0.286
+    },
+    "Stade Rennais FC 1901": {
+      "xg": 1.57,
+      "xga": 1.37,
+      "xg_diff": 0.2,
+      "mac": 101,
+      "lig": "FL1",
+      "kaynak": "dixon_coles_proxy",
+      "xg_rank": 0.857
+    },
+    "FC Metz": {
+      "xg": 1.055,
+      "xga": 1.943,
+      "xg_diff": -0.888,
+      "mac": 67,
+      "lig": "FL1",
+      "kaynak": "dixon_coles_proxy",
+      "xg_rank": 0.238
+    },
+    "RC Strasbourg Alsace": {
+      "xg": 1.459,
+      "xga": 1.286,
+      "xg_diff": 0.173,
+      "mac": 101,
+      "lig": "FL1",
+      "kaynak": "dixon_coles_proxy",
+      "xg_rank": 0.714
+    },
+    "Olympique Lyonnais": {
+      "xg": 1.564,
+      "xga": 1.223,
+      "xg_diff": 0.341,
+      "mac": 101,
+      "lig": "FL1",
+      "kaynak": "dixon_coles_proxy",
+      "xg_rank": 0.81
+    },
+    "AS Saint-Étienne": {
+      "xg": 1.198,
+      "xga": 2.007,
+      "xg_diff": -0.809,
+      "mac": 33,
+      "lig": "FL1",
+      "kaynak": "dixon_coles_proxy",
+      "xg_rank": 0.381
+    },
+    "AJ Auxerre": {
+      "xg": 1.167,
+      "xga": 1.312,
+      "xg_diff": -0.145,
+      "mac": 67,
+      "lig": "FL1",
+      "kaynak": "dixon_coles_proxy",
+      "xg_rank": 0.333
+    },
+    "Angers SCO": {
+      "xg": 0.963,
+      "xga": 1.415,
+      "xg_diff": -0.452,
+      "mac": 67,
+      "lig": "FL1",
+      "kaynak": "dixon_coles_proxy",
+      "xg_rank": 0.095
+    },
+    "Paris FC": {
+      "xg": 1.339,
+      "xga": 1.351,
+      "xg_diff": -0.012,
+      "mac": 33,
+      "lig": "FL1",
+      "kaynak": "dixon_coles_proxy",
+      "xg_rank": 0.571
+    },
+    "Sporting Clube de Braga": {
+      "xg": 1.647,
+      "xga": 1.117,
+      "xg_diff": 0.53,
+      "mac": 101,
+      "lig": "PPL",
+      "kaynak": "dixon_coles_proxy",
+      "xg_rank": 0.864
+    },
+    "FC Famalicão": {
+      "xg": 1.267,
+      "xga": 1.091,
+      "xg_diff": 0.176,
+      "mac": 101,
+      "lig": "PPL",
+      "kaynak": "dixon_coles_proxy",
+      "xg_rank": 0.636
+    },
+    "Gil Vicente FC": {
+      "xg": 1.284,
+      "xga": 1.24,
+      "xg_diff": 0.044,
+      "mac": 101,
+      "lig": "PPL",
+      "kaynak": "dixon_coles_proxy",
+      "xg_rank": 0.727
+    },
+    "Portimonense SC": {
+      "xg": 1.211,
+      "xga": 1.856,
+      "xg_diff": -0.645,
+      "mac": 34,
+      "lig": "PPL",
+      "kaynak": "dixon_coles_proxy",
+      "xg_rank": 0.591
+    },
+    "SC Farense": {
+      "xg": 1.035,
+      "xga": 1.346,
+      "xg_diff": -0.311,
+      "mac": 68,
+      "lig": "PPL",
+      "kaynak": "dixon_coles_proxy",
+      "xg_rank": 0.182
+    },
+    "Casa Pia AC": {
+      "xg": 1.062,
+      "xga": 1.46,
+      "xg_diff": -0.398,
+      "mac": 101,
+      "lig": "PPL",
+      "kaynak": "dixon_coles_proxy",
+      "xg_rank": 0.273
+    },
+    "Sporting Clube de Portugal": {
+      "xg": 2.204,
+      "xga": 0.939,
+      "xg_diff": 1.265,
+      "mac": 101,
+      "lig": "PPL",
+      "kaynak": "dixon_coles_proxy",
+      "xg_rank": 1.0
+    },
+    "FC Vizela": {
+      "xg": 1.143,
+      "xga": 1.756,
+      "xg_diff": -0.613,
+      "mac": 34,
+      "lig": "PPL",
+      "kaynak": "dixon_coles_proxy",
+      "xg_rank": 0.5
+    },
+    "Rio Ave FC": {
+      "xg": 1.124,
+      "xga": 1.515,
+      "xg_diff": -0.391,
+      "mac": 101,
+      "lig": "PPL",
+      "kaynak": "dixon_coles_proxy",
+      "xg_rank": 0.409
+    },
+    "GD Chaves": {
+      "xg": 0.992,
+      "xga": 1.814,
+      "xg_diff": -0.822,
+      "mac": 34,
+      "lig": "PPL",
+      "kaynak": "dixon_coles_proxy",
+      "xg_rank": 0.136
+    },
+    "CF Estrela da Amadora": {
+      "xg": 1.055,
+      "xga": 1.497,
+      "xg_diff": -0.442,
+      "mac": 101,
+      "lig": "PPL",
+      "kaynak": "dixon_coles_proxy",
+      "xg_rank": 0.227
+    },
+    "Vitória SC": {
+      "xg": 1.28,
+      "xga": 1.337,
+      "xg_diff": -0.057,
+      "mac": 101,
+      "lig": "PPL",
+      "kaynak": "dixon_coles_proxy",
+      "xg_rank": 0.682
+    },
+    "FC Arouca": {
+      "xg": 1.312,
+      "xga": 1.546,
+      "xg_diff": -0.234,
+      "mac": 101,
+      "lig": "PPL",
+      "kaynak": "dixon_coles_proxy",
+      "xg_rank": 0.773
+    },
+    "GD Estoril Praia": {
+      "xg": 1.451,
+      "xga": 1.513,
+      "xg_diff": -0.062,
+      "mac": 101,
+      "lig": "PPL",
+      "kaynak": "dixon_coles_proxy",
+      "xg_rank": 0.818
+    },
+    "Moreirense FC": {
+      "xg": 1.156,
+      "xga": 1.405,
+      "xg_diff": -0.249,
+      "mac": 101,
+      "lig": "PPL",
+      "kaynak": "dixon_coles_proxy",
+      "xg_rank": 0.545
+    },
+    "FC Porto": {
+      "xg": 1.718,
+      "xga": 0.886,
+      "xg_diff": 0.832,
+      "mac": 101,
+      "lig": "PPL",
+      "kaynak": "dixon_coles_proxy",
+      "xg_rank": 0.909
+    },
+    "Boavista FC": {
+      "xg": 0.957,
+      "xga": 1.648,
+      "xg_diff": -0.691,
+      "mac": 68,
+      "lig": "PPL",
+      "kaynak": "dixon_coles_proxy",
+      "xg_rank": 0.0
+    },
+    "Sport Lisboa e Benfica": {
+      "xg": 1.969,
+      "xga": 0.944,
+      "xg_diff": 1.025,
+      "mac": 101,
+      "lig": "PPL",
+      "kaynak": "dixon_coles_proxy",
+      "xg_rank": 0.955
+    },
+    "AVS": {
+      "xg": 0.961,
+      "xga": 1.714,
+      "xg_diff": -0.753,
+      "mac": 67,
+      "lig": "PPL",
+      "kaynak": "dixon_coles_proxy",
+      "xg_rank": 0.045
+    },
+    "CD Nacional": {
+      "xg": 1.098,
+      "xga": 1.35,
+      "xg_diff": -0.252,
+      "mac": 67,
+      "lig": "PPL",
+      "kaynak": "dixon_coles_proxy",
+      "xg_rank": 0.318
+    },
+    "CD Santa Clara": {
+      "xg": 1.104,
+      "xga": 1.178,
+      "xg_diff": -0.074,
+      "mac": 67,
+      "lig": "PPL",
+      "kaynak": "dixon_coles_proxy",
+      "xg_rank": 0.364
+    },
+    "CD Tondela": {
+      "xg": 0.966,
+      "xga": 1.463,
+      "xg_diff": -0.497,
+      "mac": 33,
+      "lig": "PPL",
+      "kaynak": "dixon_coles_proxy",
+      "xg_rank": 0.091
+    },
+    "FC Alverca": {
+      "xg": 1.13,
+      "xga": 1.442,
+      "xg_diff": -0.312,
+      "mac": 33,
+      "lig": "PPL",
+      "kaynak": "dixon_coles_proxy",
+      "xg_rank": 0.455
+    },
+    "Sheffield Wednesday FC": {
+      "xg": 0.965,
+      "xga": 1.623,
+      "xg_diff": -0.658,
+      "mac": 138,
+      "lig": "ELC",
+      "kaynak": "dixon_coles_proxy",
+      "xg_rank": 0.032
+    },
+    "Southampton FC": {
+      "xg": 1.665,
+      "xga": 1.2,
+      "xg_diff": 0.465,
+      "mac": 97,
+      "lig": "ELC",
+      "kaynak": "dixon_coles_proxy",
+      "xg_rank": 0.935
+    },
+    "Blackburn Rovers FC": {
+      "xg": 1.086,
+      "xga": 1.227,
+      "xg_diff": -0.141,
+      "mac": 138,
+      "lig": "ELC",
+      "kaynak": "dixon_coles_proxy",
+      "xg_rank": 0.129
+    },
+    "West Bromwich Albion FC": {
+      "xg": 1.182,
+      "xga": 1.213,
+      "xg_diff": -0.031,
+      "mac": 140,
+      "lig": "ELC",
+      "kaynak": "dixon_coles_proxy",
+      "xg_rank": 0.323
+    },
+    "Bristol City FC": {
+      "xg": 1.252,
+      "xga": 1.296,
+      "xg_diff": -0.044,
+      "mac": 140,
+      "lig": "ELC",
+      "kaynak": "dixon_coles_proxy",
+      "xg_rank": 0.516
+    },
+    "Preston North End FC": {
+      "xg": 1.196,
+      "xga": 1.366,
+      "xg_diff": -0.17,
+      "mac": 138,
+      "lig": "ELC",
+      "kaynak": "dixon_coles_proxy",
+      "xg_rank": 0.355
+    },
+    "Middlesbrough FC": {
+      "xg": 1.432,
+      "xga": 1.164,
+      "xg_diff": 0.268,
+      "mac": 140,
+      "lig": "ELC",
+      "kaynak": "dixon_coles_proxy",
+      "xg_rank": 0.806
+    },
+    "Millwall FC": {
+      "xg": 1.26,
+      "xga": 1.122,
+      "xg_diff": 0.138,
+      "mac": 140,
+      "lig": "ELC",
+      "kaynak": "dixon_coles_proxy",
+      "xg_rank": 0.548
+    },
+    "Norwich City FC": {
+      "xg": 1.41,
+      "xga": 1.28,
+      "xg_diff": 0.13,
+      "mac": 140,
+      "lig": "ELC",
+      "kaynak": "dixon_coles_proxy",
+      "xg_rank": 0.742
+    },
+    "Hull City AFC": {
+      "xg": 1.331,
+      "xga": 1.288,
+      "xg_diff": 0.043,
+      "mac": 140,
+      "lig": "ELC",
+      "kaynak": "dixon_coles_proxy",
+      "xg_rank": 0.677
+    },
+    "Plymouth Argyle FC": {
+      "xg": 1.199,
+      "xga": 1.633,
+      "xg_diff": -0.434,
+      "mac": 92,
+      "lig": "ELC",
+      "kaynak": "dixon_coles_proxy",
+      "xg_rank": 0.419
+    },
+    "Huddersfield Town AFC": {
+      "xg": 1.116,
+      "xga": 1.568,
+      "xg_diff": -0.452,
+      "mac": 46,
+      "lig": "ELC",
+      "kaynak": "dixon_coles_proxy",
+      "xg_rank": 0.194
+    },
+    "Watford FC": {
+      "xg": 1.169,
+      "xga": 1.391,
+      "xg_diff": -0.222,
+      "mac": 138,
+      "lig": "ELC",
+      "kaynak": "dixon_coles_proxy",
+      "xg_rank": 0.29
+    },
+    "Queens Park Rangers FC": {
+      "xg": 1.269,
+      "xga": 1.449,
+      "xg_diff": -0.18,
+      "mac": 138,
+      "lig": "ELC",
+      "kaynak": "dixon_coles_proxy",
+      "xg_rank": 0.613
+    },
+    "Stoke City FC": {
+      "xg": 1.126,
+      "xga": 1.315,
+      "xg_diff": -0.189,
+      "mac": 138,
+      "lig": "ELC",
+      "kaynak": "dixon_coles_proxy",
+      "xg_rank": 0.226
+    },
+    "Rotherham United FC": {
+      "xg": 0.943,
+      "xga": 1.735,
+      "xg_diff": -0.792,
+      "mac": 46,
+      "lig": "ELC",
+      "kaynak": "dixon_coles_proxy",
+      "xg_rank": 0.0
+    },
+    "Swansea City AFC": {
+      "xg": 1.262,
+      "xga": 1.292,
+      "xg_diff": -0.03,
+      "mac": 138,
+      "lig": "ELC",
+      "kaynak": "dixon_coles_proxy",
+      "xg_rank": 0.581
+    },
+    "Birmingham City FC": {
+      "xg": 1.234,
+      "xga": 1.249,
+      "xg_diff": -0.015,
+      "mac": 92,
+      "lig": "ELC",
+      "kaynak": "dixon_coles_proxy",
+      "xg_rank": 0.484
+    },
+    "Leicester City FC": {
+      "xg": 1.31,
+      "xga": 1.385,
+      "xg_diff": -0.075,
+      "mac": 92,
+      "lig": "ELC",
+      "kaynak": "dixon_coles_proxy",
+      "xg_rank": 0.645
+    },
+    "Coventry City FC": {
+      "xg": 1.683,
+      "xga": 1.134,
+      "xg_diff": 0.549,
+      "mac": 140,
+      "lig": "ELC",
+      "kaynak": "dixon_coles_proxy",
+      "xg_rank": 0.968
+    },
+    "Leeds United FC": {
+      "xg": 1.793,
+      "xga": 0.894,
+      "xg_diff": 0.899,
+      "mac": 95,
+      "lig": "ELC",
+      "kaynak": "dixon_coles_proxy",
+      "xg_rank": 1.0
+    },
+    "Cardiff City FC": {
+      "xg": 1.139,
+      "xga": 1.494,
+      "xg_diff": -0.355,
+      "mac": 92,
+      "lig": "ELC",
+      "kaynak": "dixon_coles_proxy",
+      "xg_rank": 0.258
+    },
+    "Sunderland AFC": {
+      "xg": 1.209,
+      "xga": 1.117,
+      "xg_diff": 0.092,
+      "mac": 95,
+      "lig": "ELC",
+      "kaynak": "dixon_coles_proxy",
+      "xg_rank": 0.452
+    },
+    "Ipswich Town FC": {
+      "xg": 1.631,
+      "xga": 1.122,
+      "xg_diff": 0.509,
+      "mac": 92,
+      "lig": "ELC",
+      "kaynak": "dixon_coles_proxy",
+      "xg_rank": 0.903
+    },
+    "Derby County FC": {
+      "xg": 1.335,
+      "xga": 1.26,
+      "xg_diff": 0.075,
+      "mac": 92,
+      "lig": "ELC",
+      "kaynak": "dixon_coles_proxy",
+      "xg_rank": 0.71
+    },
+    "Sheffield United FC": {
+      "xg": 1.423,
+      "xga": 1.262,
+      "xg_diff": 0.161,
+      "mac": 95,
+      "lig": "ELC",
+      "kaynak": "dixon_coles_proxy",
+      "xg_rank": 0.774
+    },
+    "Portsmouth FC": {
+      "xg": 1.198,
+      "xga": 1.393,
+      "xg_diff": -0.195,
+      "mac": 92,
+      "lig": "ELC",
+      "kaynak": "dixon_coles_proxy",
+      "xg_rank": 0.387
+    },
+    "Oxford United FC": {
+      "xg": 1.092,
+      "xga": 1.298,
+      "xg_diff": -0.206,
+      "mac": 92,
+      "lig": "ELC",
+      "kaynak": "dixon_coles_proxy",
+      "xg_rank": 0.161
+    },
+    "Luton Town FC": {
+      "xg": 1.08,
+      "xga": 1.414,
+      "xg_diff": -0.334,
+      "mac": 46,
+      "lig": "ELC",
+      "kaynak": "dixon_coles_proxy",
+      "xg_rank": 0.097
+    },
+    "Burnley FC": {
+      "xg": 1.484,
+      "xga": 0.639,
+      "xg_diff": 0.845,
+      "mac": 46,
+      "lig": "ELC",
+      "kaynak": "dixon_coles_proxy",
+      "xg_rank": 0.871
+    },
+    "Charlton Athletic FC": {
+      "xg": 1.059,
+      "xga": 1.291,
+      "xg_diff": -0.232,
+      "mac": 46,
+      "lig": "ELC",
+      "kaynak": "dixon_coles_proxy",
+      "xg_rank": 0.065
+    },
+    "Wrexham AFC": {
+      "xg": 1.447,
+      "xga": 1.402,
+      "xg_diff": 0.045,
+      "mac": 46,
+      "lig": "ELC",
+      "kaynak": "dixon_coles_proxy",
+      "xg_rank": 0.839
+    },
+    "FC Volendam": {
+      "xg": 1.162,
+      "xga": 1.658,
+      "xg_diff": -0.496,
+      "mac": 67,
+      "lig": "DED",
+      "kaynak": "dixon_coles_proxy",
+      "xg_rank": 0.19
+    },
+    "SBV Vitesse": {
+      "xg": 1.101,
+      "xga": 2.004,
+      "xg_diff": -0.903,
+      "mac": 34,
+      "lig": "DED",
+      "kaynak": "dixon_coles_proxy",
+      "xg_rank": 0.048
+    },
+    "PSV": {
+      "xg": 2.525,
+      "xga": 1.34,
+      "xg_diff": 1.185,
+      "mac": 101,
+      "lig": "DED",
+      "kaynak": "dixon_coles_proxy",
+      "xg_rank": 1.0
+    },
+    "FC Utrecht": {
+      "xg": 1.618,
+      "xga": 1.366,
+      "xg_diff": 0.252,
+      "mac": 101,
+      "lig": "DED",
+      "kaynak": "dixon_coles_proxy",
+      "xg_rank": 0.667
+    },
+    "SC Heerenveen": {
+      "xg": 1.619,
+      "xga": 1.609,
+      "xg_diff": 0.01,
+      "mac": 100,
+      "lig": "DED",
+      "kaynak": "dixon_coles_proxy",
+      "xg_rank": 0.714
+    },
+    "RKC Waalwijk": {
+      "xg": 1.383,
+      "xga": 1.872,
+      "xg_diff": -0.489,
+      "mac": 68,
+      "lig": "DED",
+      "kaynak": "dixon_coles_proxy",
+      "xg_rank": 0.381
+    },
+    "AFC Ajax": {
+      "xg": 1.801,
+      "xga": 1.317,
+      "xg_diff": 0.484,
+      "mac": 101,
+      "lig": "DED",
+      "kaynak": "dixon_coles_proxy",
+      "xg_rank": 0.857
+    },
+    "Heracles Almelo": {
+      "xg": 1.195,
+      "xga": 2.072,
+      "xg_diff": -0.877,
+      "mac": 101,
+      "lig": "DED",
+      "kaynak": "dixon_coles_proxy",
+      "xg_rank": 0.238
+    },
+    "PEC Zwolle": {
+      "xg": 1.401,
+      "xga": 1.825,
+      "xg_diff": -0.424,
+      "mac": 101,
+      "lig": "DED",
+      "kaynak": "dixon_coles_proxy",
+      "xg_rank": 0.476
+    },
+    "Sparta Rotterdam": {
+      "xg": 1.295,
+      "xga": 1.593,
+      "xg_diff": -0.298,
+      "mac": 101,
+      "lig": "DED",
+      "kaynak": "dixon_coles_proxy",
+      "xg_rank": 0.286
+    },
+    "NEC": {
+      "xg": 1.864,
+      "xga": 1.502,
+      "xg_diff": 0.362,
+      "mac": 101,
+      "lig": "DED",
+      "kaynak": "dixon_coles_proxy",
+      "xg_rank": 0.905
+    },
+    "SBV Excelsior": {
+      "xg": 1.379,
+      "xga": 1.628,
+      "xg_diff": -0.249,
+      "mac": 67,
+      "lig": "DED",
+      "kaynak": "dixon_coles_proxy",
+      "xg_rank": 0.333
+    },
+    "Feyenoord Rotterdam": {
+      "xg": 1.937,
+      "xga": 1.326,
+      "xg_diff": 0.611,
+      "mac": 101,
+      "lig": "DED",
+      "kaynak": "dixon_coles_proxy",
+      "xg_rank": 0.952
+    },
+    "Fortuna Sittard": {
+      "xg": 1.396,
+      "xga": 1.709,
+      "xg_diff": -0.313,
+      "mac": 101,
+      "lig": "DED",
+      "kaynak": "dixon_coles_proxy",
+      "xg_rank": 0.429
+    },
+    "AZ": {
+      "xg": 1.637,
+      "xga": 1.388,
+      "xg_diff": 0.249,
+      "mac": 101,
+      "lig": "DED",
+      "kaynak": "dixon_coles_proxy",
+      "xg_rank": 0.762
+    },
+    "Go Ahead Eagles": {
+      "xg": 1.582,
+      "xga": 1.536,
+      "xg_diff": 0.046,
+      "mac": 101,
+      "lig": "DED",
+      "kaynak": "dixon_coles_proxy",
+      "xg_rank": 0.619
+    },
+    "Almere City FC": {
+      "xg": 1.009,
+      "xga": 1.714,
+      "xg_diff": -0.705,
+      "mac": 68,
+      "lig": "DED",
+      "kaynak": "dixon_coles_proxy",
+      "xg_rank": 0.0
+    },
+    "FC Twente '65": {
+      "xg": 1.743,
+      "xga": 1.268,
+      "xg_diff": 0.475,
+      "mac": 101,
+      "lig": "DED",
+      "kaynak": "dixon_coles_proxy",
+      "xg_rank": 0.81
+    },
+    "FC Groningen": {
+      "xg": 1.426,
+      "xga": 1.45,
+      "xg_diff": -0.024,
+      "mac": 67,
+      "lig": "DED",
+      "kaynak": "dixon_coles_proxy",
+      "xg_rank": 0.524
+    },
+    "NAC Breda": {
+      "xg": 1.109,
+      "xga": 1.676,
+      "xg_diff": -0.567,
+      "mac": 66,
+      "lig": "DED",
+      "kaynak": "dixon_coles_proxy",
+      "xg_rank": 0.095
+    },
+    "Willem II Tilburg": {
+      "xg": 1.134,
+      "xga": 1.672,
+      "xg_diff": -0.538,
+      "mac": 34,
+      "lig": "DED",
+      "kaynak": "dixon_coles_proxy",
+      "xg_rank": 0.143
+    },
+    "Telstar 1963": {
+      "xg": 1.511,
+      "xga": 1.594,
+      "xg_diff": -0.083,
+      "mac": 33,
+      "lig": "DED",
+      "kaynak": "dixon_coles_proxy",
+      "xg_rank": 0.571
+    }
+  },
+  "toplam": 99
+}

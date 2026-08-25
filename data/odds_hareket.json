@@ -1,0 +1,8438 @@
+{
+  "Burnley|Bournemouth|2026-03-14": {
+    "ilk_ev_oran": 4.3,
+    "ilk_dep_oran": 1.93,
+    "ilk_zaman": 1773084273.727013
+  },
+  "Sunderland|Brighton and Hove Albion|2026-03-14": {
+    "ilk_ev_oran": 3.5,
+    "ilk_dep_oran": 2.3,
+    "ilk_zaman": 1773084273.727277
+  },
+  "Arsenal|Everton|2026-03-14": {
+    "ilk_ev_oran": 1.41,
+    "ilk_dep_oran": 11.5,
+    "ilk_zaman": 1773084273.727492
+  },
+  "Chelsea|Newcastle United|2026-03-14": {
+    "ilk_ev_oran": 1.85,
+    "ilk_dep_oran": 4.21,
+    "ilk_zaman": 1773084273.727691
+  },
+  "West Ham United|Manchester City|2026-03-14": {
+    "ilk_ev_oran": 5.2,
+    "ilk_dep_oran": 1.73,
+    "ilk_zaman": 1773084273.727894
+  },
+  "Manchester United|Aston Villa|2026-03-15": {
+    "ilk_ev_oran": 1.8,
+    "ilk_dep_oran": 4.6,
+    "ilk_zaman": 1773084273.728087
+  },
+  "Crystal Palace|Leeds United|2026-03-15": {
+    "ilk_ev_oran": 2.46,
+    "ilk_dep_oran": 3.3,
+    "ilk_zaman": 1773084273.728288
+  },
+  "Nottingham Forest|Fulham|2026-03-15": {
+    "ilk_ev_oran": 2.28,
+    "ilk_dep_oran": 3.5,
+    "ilk_zaman": 1773084273.728509
+  },
+  "Liverpool|Tottenham Hotspur|2026-03-15": {
+    "ilk_ev_oran": 1.36,
+    "ilk_dep_oran": 9.2,
+    "ilk_zaman": 1773084273.7287118
+  },
+  "Espanyol|Oviedo|2026-03-09": {
+    "ilk_ev_oran": 2.02,
+    "ilk_dep_oran": 4.5,
+    "ilk_zaman": 1773084274.2130802
+  },
+  "Alavés|Villarreal|2026-03-13": {
+    "ilk_ev_oran": 3.55,
+    "ilk_dep_oran": 2.25,
+    "ilk_zaman": 1773084274.213234
+  },
+  "Girona|Athletic Bilbao|2026-03-14": {
+    "ilk_ev_oran": 2.84,
+    "ilk_dep_oran": 2.7,
+    "ilk_zaman": 1773084274.213376
+  },
+  "Atlético Madrid|Getafe|2026-03-14": {
+    "ilk_ev_oran": 1.67,
+    "ilk_dep_oran": 8.0,
+    "ilk_zaman": 1773084274.213511
+  },
+  "Oviedo|Valencia|2026-03-14": {
+    "ilk_ev_oran": 3.1,
+    "ilk_dep_oran": 2.7,
+    "ilk_zaman": 1773084274.213651
+  },
+  "Real Madrid|Elche CF|2026-03-14": {
+    "ilk_ev_oran": 1.28,
+    "ilk_dep_oran": 13.0,
+    "ilk_zaman": 1773084274.213793
+  },
+  "Mallorca|Espanyol|2026-03-15": {
+    "ilk_ev_oran": 2.6,
+    "ilk_dep_oran": 3.35,
+    "ilk_zaman": 1773084274.213931
+  },
+  "Barcelona|Sevilla|2026-03-15": {
+    "ilk_ev_oran": 1.28,
+    "ilk_dep_oran": 13.0,
+    "ilk_zaman": 1773084274.214068
+  },
+  "Real Betis|Celta Vigo|2026-03-15": {
+    "ilk_ev_oran": 2.28,
+    "ilk_dep_oran": 3.6,
+    "ilk_zaman": 1773084274.214206
+  },
+  "Real Sociedad|CA Osasuna|2026-03-15": {
+    "ilk_ev_oran": 1.96,
+    "ilk_dep_oran": 4.36,
+    "ilk_zaman": 1773084274.214339
+  },
+  "Borussia Monchengladbach|FC St. Pauli|2026-03-13": {
+    "ilk_ev_oran": 2.0,
+    "ilk_dep_oran": 4.46,
+    "ilk_zaman": 1773084274.911123
+  },
+  "Eintracht Frankfurt|1. FC Heidenheim|2026-03-14": {
+    "ilk_ev_oran": 1.57,
+    "ilk_dep_oran": 6.25,
+    "ilk_zaman": 1773084274.911341
+  },
+  "Borussia Dortmund|Augsburg|2026-03-14": {
+    "ilk_ev_oran": 1.44,
+    "ilk_dep_oran": 8.2,
+    "ilk_zaman": 1773084274.911535
+  },
+  "Bayer Leverkusen|Bayern Munich|2026-03-14": {
+    "ilk_ev_oran": 5.02,
+    "ilk_dep_oran": 1.66,
+    "ilk_zaman": 1773084274.911725
+  },
+  "TSG Hoffenheim|VfL Wolfsburg|2026-03-14": {
+    "ilk_ev_oran": 1.56,
+    "ilk_dep_oran": 6.0,
+    "ilk_zaman": 1773084274.911916
+  },
+  "Hamburger SV|1. FC Köln|2026-03-14": {
+    "ilk_ev_oran": 2.19,
+    "ilk_dep_oran": 3.54,
+    "ilk_zaman": 1773084274.912104
+  },
+  "Werder Bremen|FSV Mainz 05|2026-03-15": {
+    "ilk_ev_oran": 2.38,
+    "ilk_dep_oran": 3.15,
+    "ilk_zaman": 1773084274.912298
+  },
+  "SC Freiburg|Union Berlin|2026-03-15": {
+    "ilk_ev_oran": 2.29,
+    "ilk_dep_oran": 3.65,
+    "ilk_zaman": 1773084274.912491
+  },
+  "VfB Stuttgart|RB Leipzig|2026-03-15": {
+    "ilk_ev_oran": 2.34,
+    "ilk_dep_oran": 3.05,
+    "ilk_zaman": 1773084274.9126568
+  },
+  "Lazio|Sassuolo|2026-03-09": {
+    "ilk_ev_oran": 2.36,
+    "ilk_dep_oran": 3.6,
+    "ilk_zaman": 1773084275.618648
+  },
+  "Torino|Parma|2026-03-13": {
+    "ilk_ev_oran": 2.23,
+    "ilk_dep_oran": 4.2,
+    "ilk_zaman": 1773084275.6188102
+  },
+  "Inter Milan|Atalanta BC|2026-03-14": {
+    "ilk_ev_oran": 1.59,
+    "ilk_dep_oran": 6.25,
+    "ilk_zaman": 1773084275.6189902
+  },
+  "Napoli|Lecce|2026-03-14": {
+    "ilk_ev_oran": 1.41,
+    "ilk_dep_oran": 11.5,
+    "ilk_zaman": 1773084275.6191459
+  },
+  "Udinese|Juventus|2026-03-14": {
+    "ilk_ev_oran": 6.6,
+    "ilk_dep_oran": 1.66,
+    "ilk_zaman": 1773084275.619306
+  },
+  "Hellas Verona|Genoa|2026-03-15": {
+    "ilk_ev_oran": 3.45,
+    "ilk_dep_oran": 2.52,
+    "ilk_zaman": 1773084275.619457
+  },
+  "Sassuolo|Bologna|2026-03-15": {
+    "ilk_ev_oran": 2.8,
+    "ilk_dep_oran": 2.8,
+    "ilk_zaman": 1773084275.619605
+  },
+  "Pisa|Cagliari|2026-03-15": {
+    "ilk_ev_oran": 2.72,
+    "ilk_dep_oran": 3.25,
+    "ilk_zaman": 1773084275.61976
+  },
+  "Como|AS Roma|2026-03-15": {
+    "ilk_ev_oran": 2.24,
+    "ilk_dep_oran": 3.65,
+    "ilk_zaman": 1773084275.6199129
+  },
+  "Lazio|AC Milan|2026-03-15": {
+    "ilk_ev_oran": 4.1,
+    "ilk_dep_oran": 2.12,
+    "ilk_zaman": 1773084275.620085
+  },
+  "Marseille|Auxerre|2026-03-13": {
+    "ilk_ev_oran": 1.5,
+    "ilk_dep_oran": 7.6,
+    "ilk_zaman": 1773084276.320519
+  },
+  "Lorient|RC Lens|2026-03-14": {
+    "ilk_ev_oran": 4.35,
+    "ilk_dep_oran": 1.92,
+    "ilk_zaman": 1773084276.320729
+  },
+  "Angers|Nice|2026-03-14": {
+    "ilk_ev_oran": 3.31,
+    "ilk_dep_oran": 2.45,
+    "ilk_zaman": 1773084276.320933
+  },
+  "AS Monaco|Brest|2026-03-14": {
+    "ilk_ev_oran": 1.7,
+    "ilk_dep_oran": 5.25,
+    "ilk_zaman": 1773084276.321124
+  },
+  "Strasbourg|Paris FC|2026-03-15": {
+    "ilk_ev_oran": 1.79,
+    "ilk_dep_oran": 4.9,
+    "ilk_zaman": 1773084276.32131
+  },
+  "Le Havre|Lyon|2026-03-15": {
+    "ilk_ev_oran": 4.1,
+    "ilk_dep_oran": 2.05,
+    "ilk_zaman": 1773084276.321459
+  },
+  "Metz|Toulouse|2026-03-15": {
+    "ilk_ev_oran": 4.2,
+    "ilk_dep_oran": 2.06,
+    "ilk_zaman": 1773084276.32161
+  },
+  "Rennes|Lille|2026-03-15": {
+    "ilk_ev_oran": 2.51,
+    "ilk_dep_oran": 3.1,
+    "ilk_zaman": 1773084276.3217542
+  },
+  "FC Zwolle|Groningen|2026-03-13": {
+    "ilk_ev_oran": 2.95,
+    "ilk_dep_oran": 2.38,
+    "ilk_zaman": 1773084276.899032
+  },
+  "FC Volendam|Fortuna Sittard|2026-03-14": {
+    "ilk_ev_oran": 2.38,
+    "ilk_dep_oran": 2.91,
+    "ilk_zaman": 1773084276.8992581
+  },
+  "PSV Eindhoven|NEC Nijmegen|2026-03-14": {
+    "ilk_ev_oran": 1.47,
+    "ilk_dep_oran": 7.0,
+    "ilk_zaman": 1773084276.899447
+  },
+  "Heerenveen|SC Telstar|2026-03-14": {
+    "ilk_ev_oran": 1.72,
+    "ilk_dep_oran": 5.0,
+    "ilk_zaman": 1773084276.899628
+  },
+  "Ajax|Sparta Rotterdam|2026-03-14": {
+    "ilk_ev_oran": 1.62,
+    "ilk_dep_oran": 5.4,
+    "ilk_zaman": 1773084276.899816
+  },
+  "FC Twente Enschede|FC Utrecht|2026-03-15": {
+    "ilk_ev_oran": 1.58,
+    "ilk_dep_oran": 5.85,
+    "ilk_zaman": 1773084276.899998
+  },
+  "AZ Alkmaar|Heracles Almelo|2026-03-15": {
+    "ilk_ev_oran": 1.46,
+    "ilk_dep_oran": 7.8,
+    "ilk_zaman": 1773084276.900183
+  },
+  "Feyenoord|Excelsior|2026-03-15": {
+    "ilk_ev_oran": 1.33,
+    "ilk_dep_oran": 9.7,
+    "ilk_zaman": 1773084276.900377
+  },
+  "Go Ahead Eagles|NAC Breda|2026-03-15": {
+    "ilk_ev_oran": 2.27,
+    "ilk_dep_oran": 3.2,
+    "ilk_zaman": 1773084276.900554
+  },
+  "Tondela|Rio Ave FC|2026-03-09": {
+    "ilk_ev_oran": 2.21,
+    "ilk_dep_oran": 3.9,
+    "ilk_zaman": 1773084277.355149
+  },
+  "Vitória SC|Famalicão|2026-03-14": {
+    "ilk_ev_oran": 2.45,
+    "ilk_dep_oran": 3.1,
+    "ilk_zaman": 1773084277.355338
+  },
+  "Gil Vicente|Alverca|2026-03-14": {
+    "ilk_ev_oran": 1.73,
+    "ilk_dep_oran": 5.8,
+    "ilk_zaman": 1773084277.355514
+  },
+  "Arouca|Benfica|2026-03-14": {
+    "ilk_ev_oran": 12.5,
+    "ilk_dep_oran": 1.29,
+    "ilk_zaman": 1773084277.35569
+  },
+  "AVS Futebol SAD|Santa Clara|2026-03-15": {
+    "ilk_ev_oran": 4.7,
+    "ilk_dep_oran": 1.89,
+    "ilk_zaman": 1773084277.355857
+  },
+  "Nacional|Estoril|2026-03-15": {
+    "ilk_ev_oran": 2.51,
+    "ilk_dep_oran": 2.85,
+    "ilk_zaman": 1773084277.356024
+  },
+  "Sporting Lisbon|Tondela|2026-03-15": {
+    "ilk_ev_oran": 1.16,
+    "ilk_dep_oran": 22.0,
+    "ilk_zaman": 1773084277.3561049
+  },
+  "Rio Ave FC|CF Estrela|2026-03-15": {
+    "ilk_ev_oran": 2.45,
+    "ilk_dep_oran": 3.15,
+    "ilk_zaman": 1773084277.3562691
+  },
+  "FC Porto|Moreirense FC|2026-03-15": {
+    "ilk_ev_oran": 1.2,
+    "ilk_dep_oran": 20.0,
+    "ilk_zaman": 1773084277.356435
+  },
+  "Barnsley|Cardiff City|2026-03-10": {
+    "ilk_ev_oran": 3.75,
+    "ilk_dep_oran": 2.02,
+    "ilk_zaman": 1773084277.803832
+  },
+  "Doncaster Rovers|Luton|2026-03-10": {
+    "ilk_ev_oran": 2.76,
+    "ilk_dep_oran": 2.66,
+    "ilk_zaman": 1773084277.8039198
+  },
+  "Exeter City|Lincoln City|2026-03-10": {
+    "ilk_ev_oran": 4.75,
+    "ilk_dep_oran": 1.92,
+    "ilk_zaman": 1773084277.804002
+  },
+  "Stevenage|Leyton Orient|2026-03-10": {
+    "ilk_ev_oran": 1.93,
+    "ilk_dep_oran": 5.2,
+    "ilk_zaman": 1773084277.804082
+  },
+  "Mansfield Town|Reading|2026-03-10": {
+    "ilk_ev_oran": 2.2,
+    "ilk_dep_oran": 3.55,
+    "ilk_zaman": 1773084277.804159
+  },
+  "Wigan Athletic|Plymouth Argyle|2026-03-10": {
+    "ilk_ev_oran": 2.8,
+    "ilk_dep_oran": 2.72,
+    "ilk_zaman": 1773084277.804233
+  },
+  "Wimbledon|Blackpool|2026-03-11": {
+    "ilk_ev_oran": 2.3,
+    "ilk_dep_oran": 3.45,
+    "ilk_zaman": 1773084277.80431
+  },
+  "Port Vale|Bradford City|2026-03-11": {
+    "ilk_ev_oran": 3.4,
+    "ilk_dep_oran": 2.34,
+    "ilk_zaman": 1773084277.8043861
+  },
+  "Rotherham United|Bolton Wanderers|2026-03-14": {
+    "ilk_ev_oran": 4.35,
+    "ilk_dep_oran": 1.85,
+    "ilk_zaman": 1773084277.804449
+  },
+  "Lincoln City|Stockport County FC|2026-03-14": {
+    "ilk_ev_oran": 2.12,
+    "ilk_dep_oran": 3.6,
+    "ilk_zaman": 1773084277.804508
+  },
+  "Mansfield Town|Barnsley|2026-03-14": {
+    "ilk_ev_oran": 2.48,
+    "ilk_dep_oran": 2.78,
+    "ilk_zaman": 1773084277.804568
+  },
+  "Doncaster Rovers|Blackpool|2026-03-14": {
+    "ilk_ev_oran": 1.92,
+    "ilk_dep_oran": 4.0,
+    "ilk_zaman": 1773084277.804627
+  },
+  "Wigan Athletic|Bradford City|2026-03-14": {
+    "ilk_ev_oran": 2.62,
+    "ilk_dep_oran": 2.78,
+    "ilk_zaman": 1773084277.804686
+  },
+  "Northampton Town|Burton Albion|2026-03-14": {
+    "ilk_ev_oran": 2.68,
+    "ilk_dep_oran": 2.75,
+    "ilk_zaman": 1773084277.80475
+  },
+  "Exeter City|Cardiff City|2026-03-14": {
+    "ilk_ev_oran": 4.0,
+    "ilk_dep_oran": 1.91,
+    "ilk_zaman": 1773084277.8048089
+  },
+  "Port Vale|Huddersfield Town|2026-03-14": {
+    "ilk_ev_oran": 3.3,
+    "ilk_dep_oran": 2.18,
+    "ilk_zaman": 1773084277.80487
+  },
+  "Leyton Orient|Peterborough United|2026-03-14": {
+    "ilk_ev_oran": 2.25,
+    "ilk_dep_oran": 3.0,
+    "ilk_zaman": 1773084277.804929
+  },
+  "Wycombe Wanderers|Luton|2026-03-14": {
+    "ilk_ev_oran": 2.2,
+    "ilk_dep_oran": 3.4,
+    "ilk_zaman": 1773084277.804986
+  },
+  "Reading|Plymouth Argyle|2026-03-14": {
+    "ilk_ev_oran": 2.5,
+    "ilk_dep_oran": 2.95,
+    "ilk_zaman": 1773084277.805045
+  },
+  "Stevenage|Wimbledon|2026-03-14": {
+    "ilk_ev_oran": 1.97,
+    "ilk_dep_oran": 4.25,
+    "ilk_zaman": 1773084277.805104
+  },
+  "Mirassol|Santos|2026-03-11": {
+    "ilk_ev_oran": 2.06,
+    "ilk_dep_oran": 3.85,
+    "ilk_zaman": 1773084278.257853
+  },
+  "Atletico Mineiro|Internacional|2026-03-11": {
+    "ilk_ev_oran": 2.26,
+    "ilk_dep_oran": 3.55,
+    "ilk_zaman": 1773084278.258019
+  },
+  "Bahia|Vitoria|2026-03-11": {
+    "ilk_ev_oran": 1.76,
+    "ilk_dep_oran": 5.25,
+    "ilk_zaman": 1773084278.258165
+  },
+  "Corinthians|Coritiba|2026-03-12": {
+    "ilk_ev_oran": 1.6,
+    "ilk_dep_oran": 7.2,
+    "ilk_zaman": 1773084278.258313
+  },
+  "Flamengo|Cruzeiro|2026-03-12": {
+    "ilk_ev_oran": 1.53,
+    "ilk_dep_oran": 7.6,
+    "ilk_zaman": 1773084278.258456
+  },
+  "Remo|Fluminense|2026-03-12": {
+    "ilk_ev_oran": 3.85,
+    "ilk_dep_oran": 2.06,
+    "ilk_zaman": 1773084278.258601
+  },
+  "Vasco da Gama|Palmeiras|2026-03-12": {
+    "ilk_ev_oran": 3.35,
+    "ilk_dep_oran": 2.31,
+    "ilk_zaman": 1773084278.258739
+  },
+  "Sao Paulo|Chapecoense|2026-03-12": {
+    "ilk_ev_oran": 1.45,
+    "ilk_dep_oran": 7.85,
+    "ilk_zaman": 1773084278.2588758
+  },
+  "Grêmio|Bragantino-SP|2026-03-13": {
+    "ilk_ev_oran": 2.07,
+    "ilk_dep_oran": 3.6,
+    "ilk_zaman": 1773084278.2590039
+  },
+  "Vitoria|Atletico Mineiro|2026-03-14": {
+    "ilk_ev_oran": 2.73,
+    "ilk_dep_oran": 2.67,
+    "ilk_zaman": 1773084278.2591202
+  },
+  "Botafogo|Flamengo|2026-03-14": {
+    "ilk_ev_oran": 3.56,
+    "ilk_dep_oran": 2.15,
+    "ilk_zaman": 1773084278.259233
+  },
+  "Fluminense|Atletico Paranaense|2026-03-15": {
+    "ilk_ev_oran": 1.74,
+    "ilk_dep_oran": 5.18,
+    "ilk_zaman": 1773084278.2593439
+  },
+  "Internacional|Bahia|2026-03-15": {
+    "ilk_ev_oran": 2.4,
+    "ilk_dep_oran": 3.5,
+    "ilk_zaman": 1773084278.2594602
+  },
+  "Santos|Corinthians|2026-03-15": {
+    "ilk_ev_oran": 2.32,
+    "ilk_dep_oran": 3.28,
+    "ilk_zaman": 1773084278.259577
+  },
+  "Coritiba|Remo|2026-03-15": {
+    "ilk_ev_oran": 1.81,
+    "ilk_dep_oran": 5.19,
+    "ilk_zaman": 1773084278.259694
+  },
+  "Palmeiras|Mirassol|2026-03-15": {
+    "ilk_ev_oran": 1.49,
+    "ilk_dep_oran": 7.2,
+    "ilk_zaman": 1773084278.259805
+  },
+  "Bragantino-SP|Sao Paulo|2026-03-15": {
+    "ilk_ev_oran": 2.62,
+    "ilk_dep_oran": 2.95,
+    "ilk_zaman": 1773084278.25992
+  },
+  "Cruzeiro|Vasco da Gama|2026-03-15": {
+    "ilk_ev_oran": 1.69,
+    "ilk_dep_oran": 5.5,
+    "ilk_zaman": 1773084278.260035
+  },
+  "Galatasaray|Liverpool|2026-03-10": {
+    "ilk_ev_oran": 4.55,
+    "ilk_dep_oran": 1.82,
+    "ilk_zaman": 1773084278.721476
+  },
+  "Atalanta BC|Bayern Munich|2026-03-10": {
+    "ilk_ev_oran": 5.2,
+    "ilk_dep_oran": 1.68,
+    "ilk_zaman": 1773084278.7216818
+  },
+  "Atlético Madrid|Tottenham Hotspur|2026-03-10": {
+    "ilk_ev_oran": 1.58,
+    "ilk_dep_oran": 6.6,
+    "ilk_zaman": 1773084278.721874
+  },
+  "Newcastle United|Barcelona|2026-03-10": {
+    "ilk_ev_oran": 3.05,
+    "ilk_dep_oran": 2.31,
+    "ilk_zaman": 1773084278.7220669
+  },
+  "Bayer Leverkusen|Arsenal|2026-03-11": {
+    "ilk_ev_oran": 6.6,
+    "ilk_dep_oran": 1.6,
+    "ilk_zaman": 1773084278.722259
+  },
+  "Bodø/Glimt|Sporting Lisbon|2026-03-11": {
+    "ilk_ev_oran": 2.68,
+    "ilk_dep_oran": 2.68,
+    "ilk_zaman": 1773084278.722444
+  },
+  "Paris Saint Germain|Chelsea|2026-03-11": {
+    "ilk_ev_oran": 2.02,
+    "ilk_dep_oran": 4.0,
+    "ilk_zaman": 1773084278.722636
+  },
+  "Real Madrid|Manchester City|2026-03-11": {
+    "ilk_ev_oran": 3.65,
+    "ilk_dep_oran": 2.12,
+    "ilk_zaman": 1773084278.72283
+  },
+  "Bologna|AS Roma|2026-03-12": {
+    "ilk_ev_oran": 3.25,
+    "ilk_dep_oran": 2.6,
+    "ilk_zaman": 1773084279.180037
+  },
+  "Lille|Aston Villa|2026-03-12": {
+    "ilk_ev_oran": 3.1,
+    "ilk_dep_oran": 2.51,
+    "ilk_zaman": 1773084279.180188
+  },
+  "Panathinaikos FC|Real Betis|2026-03-12": {
+    "ilk_ev_oran": 3.9,
+    "ilk_dep_oran": 2.19,
+    "ilk_zaman": 1773084279.180322
+  },
+  "VfB Stuttgart|Porto|2026-03-12": {
+    "ilk_ev_oran": 2.18,
+    "ilk_dep_oran": 3.65,
+    "ilk_zaman": 1773084279.180458
+  },
+  "Celta Vigo|Lyon|2026-03-12": {
+    "ilk_ev_oran": 2.15,
+    "ilk_dep_oran": 3.75,
+    "ilk_zaman": 1773084279.1805902
+  },
+  "Nottingham Forest|FC Midtjylland|2026-03-12": {
+    "ilk_ev_oran": 1.6,
+    "ilk_dep_oran": 6.2,
+    "ilk_zaman": 1773084279.180723
+  },
+  "Ferencváros TC|SC Braga|2026-03-12": {
+    "ilk_ev_oran": 3.15,
+    "ilk_dep_oran": 2.54,
+    "ilk_zaman": 1773084279.180856
+  },
+  "KRC Genk|SC Freiburg|2026-03-12": {
+    "ilk_ev_oran": 2.8,
+    "ilk_dep_oran": 2.75,
+    "ilk_zaman": 1773084279.180985
+  },
+  "Cremonese|Fiorentina|2026-03-16": {
+    "ilk_ev_oran": 4.0,
+    "ilk_dep_oran": 2.03,
+    "ilk_zaman": 1773085938.338619
+  },
+  "Brentford|Wolverhampton Wanderers|2026-03-16": {
+    "ilk_ev_oran": 1.6,
+    "ilk_dep_oran": 6.2,
+    "ilk_zaman": 1773187594.8324668
+  },
+  "Rayo Vallecano|Levante|2026-03-16": {
+    "ilk_ev_oran": 1.77,
+    "ilk_dep_oran": 5.5,
+    "ilk_zaman": 1773187595.318912
+  },
+  "Blackpool|Port Vale|2026-03-17": {
+    "ilk_ev_oran": 2.2,
+    "ilk_dep_oran": 3.1,
+    "ilk_zaman": 1773187598.093442
+  },
+  "Bolton Wanderers|Doncaster Rovers|2026-03-17": {
+    "ilk_ev_oran": 1.72,
+    "ilk_dep_oran": 4.4,
+    "ilk_zaman": 1773187598.093461
+  },
+  "Bradford City|Mansfield Town|2026-03-17": {
+    "ilk_ev_oran": 1.95,
+    "ilk_dep_oran": 3.7,
+    "ilk_zaman": 1773187598.093478
+  },
+  "Burton Albion|Reading|2026-03-17": {
+    "ilk_ev_oran": 2.63,
+    "ilk_dep_oran": 2.6,
+    "ilk_zaman": 1773187598.0934951
+  },
+  "Cardiff City|Wycombe Wanderers|2026-03-17": {
+    "ilk_ev_oran": 1.91,
+    "ilk_dep_oran": 3.75,
+    "ilk_zaman": 1773187598.0935109
+  },
+  "Luton|Exeter City|2026-03-17": {
+    "ilk_ev_oran": 1.78,
+    "ilk_dep_oran": 4.4,
+    "ilk_zaman": 1773187598.093527
+  },
+  "Huddersfield Town|Lincoln City|2026-03-17": {
+    "ilk_ev_oran": 2.55,
+    "ilk_dep_oran": 2.7,
+    "ilk_zaman": 1773187598.0935428
+  },
+  "Wimbledon|Leyton Orient|2026-03-17": {
+    "ilk_ev_oran": 2.4,
+    "ilk_dep_oran": 2.88,
+    "ilk_zaman": 1773187598.09356
+  },
+  "Stockport County FC|Northampton Town|2026-03-17": {
+    "ilk_ev_oran": 1.51,
+    "ilk_dep_oran": 5.8,
+    "ilk_zaman": 1773187598.093576
+  },
+  "Peterborough United|Rotherham United|2026-03-17": {
+    "ilk_ev_oran": 1.92,
+    "ilk_dep_oran": 3.65,
+    "ilk_zaman": 1773187598.0935931
+  },
+  "Plymouth Argyle|Stevenage|2026-03-17": {
+    "ilk_ev_oran": 2.23,
+    "ilk_dep_oran": 3.25,
+    "ilk_zaman": 1773187598.0936089
+  },
+  "Barnsley|Wigan Athletic|2026-03-17": {
+    "ilk_ev_oran": 2.12,
+    "ilk_dep_oran": 3.3,
+    "ilk_zaman": 1773187598.093626
+  },
+  "Chapecoense|Grêmio|2026-03-16": {
+    "ilk_ev_oran": 2.96,
+    "ilk_dep_oran": 2.51,
+    "ilk_zaman": 1773187598.549141
+  },
+  "Bahia|Bragantino-SP|2026-03-18": {
+    "ilk_ev_oran": 1.81,
+    "ilk_dep_oran": 4.2,
+    "ilk_zaman": 1773275074.7249448
+  },
+  "Palmeiras|Botafogo|2026-03-18": {
+    "ilk_ev_oran": 1.49,
+    "ilk_dep_oran": 6.4,
+    "ilk_zaman": 1773275074.724965
+  },
+  "Atletico Paranaense|Cruzeiro|2026-03-18": {
+    "ilk_ev_oran": 2.85,
+    "ilk_dep_oran": 2.48,
+    "ilk_zaman": 1773275074.724983
+  },
+  "Atletico Mineiro|Sao Paulo|2026-03-18": {
+    "ilk_ev_oran": 1.97,
+    "ilk_dep_oran": 3.75,
+    "ilk_zaman": 1773275074.725002
+  },
+  "Mirassol|Coritiba|2026-03-18": {
+    "ilk_ev_oran": 1.71,
+    "ilk_dep_oran": 4.9,
+    "ilk_zaman": 1773275074.725021
+  },
+  "Sporting Lisbon|Bodø/Glimt|2026-03-17": {
+    "ilk_ev_oran": 1.57,
+    "ilk_dep_oran": 6.05,
+    "ilk_zaman": 1773275075.20419
+  },
+  "Arsenal|Bayer Leverkusen|2026-03-17": {
+    "ilk_ev_oran": 1.34,
+    "ilk_dep_oran": 11.0,
+    "ilk_zaman": 1773275075.204276
+  },
+  "Chelsea|Paris Saint Germain|2026-03-17": {
+    "ilk_ev_oran": 2.2,
+    "ilk_dep_oran": 3.1,
+    "ilk_zaman": 1773275075.204344
+  },
+  "Manchester City|Real Madrid|2026-03-17": {
+    "ilk_ev_oran": 1.5,
+    "ilk_dep_oran": 6.0,
+    "ilk_zaman": 1773275075.204413
+  },
+  "Barcelona|Newcastle United|2026-03-18": {
+    "ilk_ev_oran": 1.64,
+    "ilk_dep_oran": 5.5,
+    "ilk_zaman": 1773275075.2045052
+  },
+  "Bayern Munich|Atalanta BC|2026-03-18": {
+    "ilk_ev_oran": 1.34,
+    "ilk_dep_oran": 9.6,
+    "ilk_zaman": 1773275075.204594
+  },
+  "Tottenham Hotspur|Atlético Madrid|2026-03-18": {
+    "ilk_ev_oran": 2.7,
+    "ilk_dep_oran": 2.65,
+    "ilk_zaman": 1773275075.204684
+  },
+  "Liverpool|Galatasaray|2026-03-18": {
+    "ilk_ev_oran": 1.31,
+    "ilk_dep_oran": 11.0,
+    "ilk_zaman": 1773275075.204774
+  },
+  "Bournemouth|Manchester United|2026-03-20": {
+    "ilk_ev_oran": 3.15,
+    "ilk_dep_oran": 2.36,
+    "ilk_zaman": 1773441457.215619
+  },
+  "Villarreal|Real Sociedad|2026-03-20": {
+    "ilk_ev_oran": 1.99,
+    "ilk_dep_oran": 4.23,
+    "ilk_zaman": 1773441457.8068469
+  },
+  "RB Leipzig|TSG Hoffenheim|2026-03-20": {
+    "ilk_ev_oran": 1.98,
+    "ilk_dep_oran": 3.73,
+    "ilk_zaman": 1773441458.68473
+  },
+  "Cagliari|Napoli|2026-03-20": {
+    "ilk_ev_oran": 6.6,
+    "ilk_dep_oran": 1.7,
+    "ilk_zaman": 1773441459.132458
+  },
+  "Genoa|Udinese|2026-03-20": {
+    "ilk_ev_oran": 2.25,
+    "ilk_dep_oran": 3.8,
+    "ilk_zaman": 1773441459.1325
+  },
+  "RC Lens|Angers|2026-03-20": {
+    "ilk_ev_oran": 1.35,
+    "ilk_dep_oran": 11.0,
+    "ilk_zaman": 1773441459.573332
+  },
+  "Heracles Almelo|Excelsior|2026-03-20": {
+    "ilk_ev_oran": 2.38,
+    "ilk_dep_oran": 2.95,
+    "ilk_zaman": 1773441460.092534
+  },
+  "CF Estrela|Casa Pia|2026-03-20": {
+    "ilk_ev_oran": 2.35,
+    "ilk_dep_oran": 3.0,
+    "ilk_zaman": 1773441460.544993
+  },
+  "Vasco da Gama|Fluminense|2026-03-19": {
+    "ilk_ev_oran": 3.24,
+    "ilk_dep_oran": 2.31,
+    "ilk_zaman": 1773441461.454986
+  },
+  "Santos|Internacional|2026-03-19": {
+    "ilk_ev_oran": 2.18,
+    "ilk_dep_oran": 3.44,
+    "ilk_zaman": 1773441461.455111
+  },
+  "Grêmio|Vitoria|2026-03-19": {
+    "ilk_ev_oran": 1.7,
+    "ilk_dep_oran": 5.25,
+    "ilk_zaman": 1773441461.4552221
+  },
+  "Flamengo|Remo|2026-03-19": {
+    "ilk_ev_oran": 1.24,
+    "ilk_dep_oran": 16.0,
+    "ilk_zaman": 1773441461.455338
+  },
+  "Chapecoense|Corinthians|2026-03-20": {
+    "ilk_ev_oran": 3.2,
+    "ilk_dep_oran": 2.41,
+    "ilk_zaman": 1773441461.455447
+  },
+  "SC Braga|Ferencváros TC|2026-03-18": {
+    "ilk_ev_oran": 1.53,
+    "ilk_dep_oran": 7.1,
+    "ilk_zaman": 1773441462.34369
+  },
+  "Lyon|Celta Vigo|2026-03-19": {
+    "ilk_ev_oran": 2.06,
+    "ilk_dep_oran": 4.35,
+    "ilk_zaman": 1773441462.343842
+  },
+  "FC Midtjylland|Nottingham Forest|2026-03-19": {
+    "ilk_ev_oran": 3.65,
+    "ilk_dep_oran": 2.2,
+    "ilk_zaman": 1773441462.343989
+  },
+  "SC Freiburg|KRC Genk|2026-03-19": {
+    "ilk_ev_oran": 1.64,
+    "ilk_dep_oran": 5.8,
+    "ilk_zaman": 1773441462.344125
+  },
+  "AS Roma|Bologna|2026-03-19": {
+    "ilk_ev_oran": 1.89,
+    "ilk_dep_oran": 5.22,
+    "ilk_zaman": 1773441462.344269
+  },
+  "Aston Villa|Lille|2026-03-19": {
+    "ilk_ev_oran": 1.74,
+    "ilk_dep_oran": 5.8,
+    "ilk_zaman": 1773441462.344407
+  },
+  "Real Betis|Panathinaikos FC|2026-03-19": {
+    "ilk_ev_oran": 1.48,
+    "ilk_dep_oran": 8.1,
+    "ilk_zaman": 1773441462.344535
+  },
+  "Porto|VfB Stuttgart|2026-03-19": {
+    "ilk_ev_oran": 2.34,
+    "ilk_dep_oran": 3.2,
+    "ilk_zaman": 1773441462.344691
+  },
+  "Brighton and Hove Albion|Liverpool|2026-03-21": {
+    "ilk_ev_oran": 3.2,
+    "ilk_dep_oran": 2.34,
+    "ilk_zaman": 1773708655.617546
+  },
+  "Fulham|Burnley|2026-03-21": {
+    "ilk_ev_oran": 1.62,
+    "ilk_dep_oran": 6.6,
+    "ilk_zaman": 1773708655.617735
+  },
+  "Everton|Chelsea|2026-03-21": {
+    "ilk_ev_oran": 3.7,
+    "ilk_dep_oran": 2.12,
+    "ilk_zaman": 1773708655.61791
+  },
+  "Leeds United|Brentford|2026-03-21": {
+    "ilk_ev_oran": 2.6,
+    "ilk_dep_oran": 2.98,
+    "ilk_zaman": 1773708655.6181629
+  },
+  "Newcastle United|Sunderland|2026-03-22": {
+    "ilk_ev_oran": 1.71,
+    "ilk_dep_oran": 5.8,
+    "ilk_zaman": 1773708655.618363
+  },
+  "Aston Villa|West Ham United|2026-03-22": {
+    "ilk_ev_oran": 2.05,
+    "ilk_dep_oran": 4.15,
+    "ilk_zaman": 1773708655.618531
+  },
+  "Tottenham Hotspur|Nottingham Forest|2026-03-22": {
+    "ilk_ev_oran": 2.56,
+    "ilk_dep_oran": 3.05,
+    "ilk_zaman": 1773708655.6187751
+  },
+  "Elche CF|Mallorca|2026-03-21": {
+    "ilk_ev_oran": 2.24,
+    "ilk_dep_oran": 3.9,
+    "ilk_zaman": 1773708656.105102
+  },
+  "Espanyol|Getafe|2026-03-21": {
+    "ilk_ev_oran": 2.54,
+    "ilk_dep_oran": 3.55,
+    "ilk_zaman": 1773708656.105262
+  },
+  "CA Osasuna|Girona|2026-03-21": {
+    "ilk_ev_oran": 2.32,
+    "ilk_dep_oran": 3.45,
+    "ilk_zaman": 1773708656.105441
+  },
+  "Levante|Oviedo|2026-03-21": {
+    "ilk_ev_oran": 2.27,
+    "ilk_dep_oran": 3.6,
+    "ilk_zaman": 1773708656.105637
+  },
+  "Sevilla|Valencia|2026-03-21": {
+    "ilk_ev_oran": 2.3,
+    "ilk_dep_oran": 3.8,
+    "ilk_zaman": 1773708656.1058052
+  },
+  "Barcelona|Rayo Vallecano|2026-03-22": {
+    "ilk_ev_oran": 1.27,
+    "ilk_dep_oran": 12.5,
+    "ilk_zaman": 1773708656.1059752
+  },
+  "Celta Vigo|Alavés|2026-03-22": {
+    "ilk_ev_oran": 1.89,
+    "ilk_dep_oran": 5.2,
+    "ilk_zaman": 1773708656.1061518
+  },
+  "Athletic Bilbao|Real Betis|2026-03-22": {
+    "ilk_ev_oran": 2.24,
+    "ilk_dep_oran": 3.65,
+    "ilk_zaman": 1773708656.106435
+  },
+  "Real Madrid|Atlético Madrid|2026-03-22": {
+    "ilk_ev_oran": 1.98,
+    "ilk_dep_oran": 4.01,
+    "ilk_zaman": 1773708656.106627
+  },
+  "1. FC Heidenheim|Bayer Leverkusen|2026-03-21": {
+    "ilk_ev_oran": 5.7,
+    "ilk_dep_oran": 1.61,
+    "ilk_zaman": 1773708656.622258
+  },
+  "1. FC Köln|Borussia Monchengladbach|2026-03-21": {
+    "ilk_ev_oran": 2.38,
+    "ilk_dep_oran": 3.15,
+    "ilk_zaman": 1773708656.622445
+  },
+  "Bayern Munich|Union Berlin|2026-03-21": {
+    "ilk_ev_oran": 1.2,
+    "ilk_dep_oran": 17.0,
+    "ilk_zaman": 1773708656.622633
+  },
+  "VfL Wolfsburg|Werder Bremen|2026-03-21": {
+    "ilk_ev_oran": 2.55,
+    "ilk_dep_oran": 2.85,
+    "ilk_zaman": 1773708656.6228108
+  },
+  "Borussia Dortmund|Hamburger SV|2026-03-21": {
+    "ilk_ev_oran": 1.43,
+    "ilk_dep_oran": 8.2,
+    "ilk_zaman": 1773708656.623015
+  },
+  "FSV Mainz 05|Eintracht Frankfurt|2026-03-22": {
+    "ilk_ev_oran": 2.25,
+    "ilk_dep_oran": 3.4,
+    "ilk_zaman": 1773708656.623277
+  },
+  "FC St. Pauli|SC Freiburg|2026-03-22": {
+    "ilk_ev_oran": 2.88,
+    "ilk_dep_oran": 2.88,
+    "ilk_zaman": 1773708656.623501
+  },
+  "Augsburg|VfB Stuttgart|2026-03-22": {
+    "ilk_ev_oran": 3.7,
+    "ilk_dep_oran": 2.04,
+    "ilk_zaman": 1773708656.623669
+  },
+  "Parma|Cremonese|2026-03-21": {
+    "ilk_ev_oran": 2.22,
+    "ilk_dep_oran": 4.29,
+    "ilk_zaman": 1773708657.0981498
+  },
+  "AC Milan|Torino|2026-03-21": {
+    "ilk_ev_oran": 1.4,
+    "ilk_dep_oran": 10.0,
+    "ilk_zaman": 1773708657.098221
+  },
+  "Juventus|Sassuolo|2026-03-21": {
+    "ilk_ev_oran": 1.38,
+    "ilk_dep_oran": 10.5,
+    "ilk_zaman": 1773708657.09829
+  },
+  "Como|Pisa|2026-03-22": {
+    "ilk_ev_oran": 1.3,
+    "ilk_dep_oran": 14.0,
+    "ilk_zaman": 1773708657.0983622
+  },
+  "Atalanta BC|Hellas Verona|2026-03-22": {
+    "ilk_ev_oran": 1.45,
+    "ilk_dep_oran": 9.5,
+    "ilk_zaman": 1773708657.09843
+  },
+  "Bologna|Lazio|2026-03-22": {
+    "ilk_ev_oran": 2.37,
+    "ilk_dep_oran": 3.7,
+    "ilk_zaman": 1773708657.098497
+  },
+  "AS Roma|Lecce|2026-03-22": {
+    "ilk_ev_oran": 1.46,
+    "ilk_dep_oran": 10.0,
+    "ilk_zaman": 1773708657.098573
+  },
+  "Fiorentina|Inter Milan|2026-03-22": {
+    "ilk_ev_oran": 5.3,
+    "ilk_dep_oran": 1.69,
+    "ilk_zaman": 1773708657.098641
+  },
+  "Toulouse|Lorient|2026-03-21": {
+    "ilk_ev_oran": 2.08,
+    "ilk_dep_oran": 4.78,
+    "ilk_zaman": 1773708657.6184928
+  },
+  "Auxerre|Brest|2026-03-21": {
+    "ilk_ev_oran": 2.43,
+    "ilk_dep_oran": 3.35,
+    "ilk_zaman": 1773708657.6186612
+  },
+  "Nice|Paris Saint Germain|2026-03-21": {
+    "ilk_ev_oran": 7.75,
+    "ilk_dep_oran": 1.42,
+    "ilk_zaman": 1773708657.618826
+  },
+  "Lyon|AS Monaco|2026-03-22": {
+    "ilk_ev_oran": 2.85,
+    "ilk_dep_oran": 2.63,
+    "ilk_zaman": 1773708657.618978
+  },
+  "Paris FC|Le Havre|2026-03-22": {
+    "ilk_ev_oran": 2.12,
+    "ilk_dep_oran": 4.48,
+    "ilk_zaman": 1773708657.619334
+  },
+  "Marseille|Lille|2026-03-22": {
+    "ilk_ev_oran": 2.06,
+    "ilk_dep_oran": 4.0,
+    "ilk_zaman": 1773708657.619526
+  },
+  "Rennes|Metz|2026-03-22": {
+    "ilk_ev_oran": 1.39,
+    "ilk_dep_oran": 9.6,
+    "ilk_zaman": 1773708657.619691
+  },
+  "Nantes|Strasbourg|2026-03-22": {
+    "ilk_ev_oran": 3.9,
+    "ilk_dep_oran": 2.1,
+    "ilk_zaman": 1773708657.619842
+  },
+  "Fortuna Sittard|FC Twente Enschede|2026-03-21": {
+    "ilk_ev_oran": 5.5,
+    "ilk_dep_oran": 1.61,
+    "ilk_zaman": 1773708658.100404
+  },
+  "Sparta Rotterdam|FC Volendam|2026-03-21": {
+    "ilk_ev_oran": 1.54,
+    "ilk_dep_oran": 6.0,
+    "ilk_zaman": 1773708658.100576
+  },
+  "FC Zwolle|NAC Breda|2026-03-21": {
+    "ilk_ev_oran": 2.25,
+    "ilk_dep_oran": 3.25,
+    "ilk_zaman": 1773708658.1008482
+  },
+  "NEC Nijmegen|Heerenveen|2026-03-22": {
+    "ilk_ev_oran": 1.75,
+    "ilk_dep_oran": 4.3,
+    "ilk_zaman": 1773708658.101108
+  },
+  "Feyenoord|Ajax|2026-03-22": {
+    "ilk_ev_oran": 2.08,
+    "ilk_dep_oran": 3.48,
+    "ilk_zaman": 1773708658.101403
+  },
+  "FC Utrecht|Go Ahead Eagles|2026-03-22": {
+    "ilk_ev_oran": 1.79,
+    "ilk_dep_oran": 5.21,
+    "ilk_zaman": 1773708658.1016068
+  },
+  "Groningen|AZ Alkmaar|2026-03-22": {
+    "ilk_ev_oran": 2.55,
+    "ilk_dep_oran": 2.7,
+    "ilk_zaman": 1773708658.101774
+  },
+  "SC Telstar|PSV Eindhoven|2026-03-22": {
+    "ilk_ev_oran": 6.75,
+    "ilk_dep_oran": 1.47,
+    "ilk_zaman": 1773708658.102078
+  },
+  "Moreirense FC|Arouca|2026-03-21": {
+    "ilk_ev_oran": 2.5,
+    "ilk_dep_oran": 3.2,
+    "ilk_zaman": 1773708658.729388
+  },
+  "Famalicão|Nacional|2026-03-21": {
+    "ilk_ev_oran": 1.79,
+    "ilk_dep_oran": 5.0,
+    "ilk_zaman": 1773708658.729538
+  },
+  "Benfica|Vitória SC|2026-03-21": {
+    "ilk_ev_oran": 1.33,
+    "ilk_dep_oran": 12.0,
+    "ilk_zaman": 1773708658.7296782
+  },
+  "Santa Clara|Gil Vicente|2026-03-21": {
+    "ilk_ev_oran": 2.85,
+    "ilk_dep_oran": 2.94,
+    "ilk_zaman": 1773708658.729818
+  },
+  "Tondela|AVS Futebol SAD|2026-03-21": {
+    "ilk_ev_oran": 1.93,
+    "ilk_dep_oran": 4.5,
+    "ilk_zaman": 1773708658.729951
+  },
+  "Estoril|Rio Ave FC|2026-03-22": {
+    "ilk_ev_oran": 1.81,
+    "ilk_dep_oran": 4.75,
+    "ilk_zaman": 1773708658.73009
+  },
+  "Alverca|Sporting Lisbon|2026-03-22": {
+    "ilk_ev_oran": 11.0,
+    "ilk_dep_oran": 1.3,
+    "ilk_zaman": 1773708658.730228
+  },
+  "Braga|FC Porto|2026-03-22": {
+    "ilk_ev_oran": 3.6,
+    "ilk_dep_oran": 2.25,
+    "ilk_zaman": 1773708658.7303748
+  },
+  "Bragantino-SP|Botafogo|2026-03-21": {
+    "ilk_ev_oran": 2.19,
+    "ilk_dep_oran": 3.41,
+    "ilk_zaman": 1773708659.6411421
+  },
+  "Fluminense|Atletico Mineiro|2026-03-21": {
+    "ilk_ev_oran": 1.91,
+    "ilk_dep_oran": 4.38,
+    "ilk_zaman": 1773708659.641273
+  },
+  "Sao Paulo|Palmeiras|2026-03-22": {
+    "ilk_ev_oran": 3.08,
+    "ilk_dep_oran": 2.38,
+    "ilk_zaman": 1773708659.641398
+  },
+  "Atletico Paranaense|Coritiba|2026-03-22": {
+    "ilk_ev_oran": 2.3,
+    "ilk_dep_oran": 3.65,
+    "ilk_zaman": 1773708659.6415172
+  },
+  "Remo|Bahia|2026-03-22": {
+    "ilk_ev_oran": 3.41,
+    "ilk_dep_oran": 2.3,
+    "ilk_zaman": 1773708659.6416352
+  },
+  "Cruzeiro|Santos|2026-03-22": {
+    "ilk_ev_oran": 1.93,
+    "ilk_dep_oran": 4.39,
+    "ilk_zaman": 1773708659.641752
+  },
+  "Vasco da Gama|Grêmio|2026-03-22": {
+    "ilk_ev_oran": 2.18,
+    "ilk_dep_oran": 3.57,
+    "ilk_zaman": 1773708659.641858
+  },
+  "Internacional|Chapecoense|2026-03-22": {
+    "ilk_ev_oran": 1.72,
+    "ilk_dep_oran": 5.3,
+    "ilk_zaman": 1773708659.641977
+  },
+  "Vitoria|Mirassol|2026-03-22": {
+    "ilk_ev_oran": 2.7,
+    "ilk_dep_oran": 2.82,
+    "ilk_zaman": 1773708659.642093
+  },
+  "Corinthians|Flamengo|2026-03-22": {
+    "ilk_ev_oran": 3.42,
+    "ilk_dep_oran": 2.24,
+    "ilk_zaman": 1773708659.64222
+  },
+  "Atletico Paranaense|Botafogo|2026-03-29": {
+    "seri": [
+      {
+        "zaman": 1774287002.439368,
+        "ev": 1.98,
+        "dep": 4.1
+      },
+      {
+        "zaman": 1774434397.588002,
+        "ev": 2.04,
+        "dep": 4.0
+      },
+      {
+        "zaman": 1774634226.708798,
+        "ev": 2.08,
+        "dep": 4.1
+      },
+      {
+        "zaman": 1774647736.214626,
+        "ev": 2.08,
+        "dep": 4.0
+      },
+      {
+        "zaman": 1774777039.349791,
+        "ev": 2.16,
+        "dep": 4.1
+      }
+    ]
+  },
+  "Gil Vicente|AVS Futebol SAD|2026-04-03": {
+    "seri": [
+      {
+        "zaman": 1774634226.1365829,
+        "ev": 1.44,
+        "dep": 8.9
+      },
+      {
+        "zaman": 1774777038.977711,
+        "ev": 1.44,
+        "dep": 8.76
+      },
+      {
+        "zaman": 1774903771.489011,
+        "ev": 1.44,
+        "dep": 9.8
+      },
+      {
+        "zaman": 1775080520.578069,
+        "ev": 1.4,
+        "dep": 10.5
+      }
+    ]
+  },
+  "Vitória SC|Tondela|2026-04-03": {
+    "seri": [
+      {
+        "zaman": 1774634226.136788,
+        "ev": 1.83,
+        "dep": 4.75
+      },
+      {
+        "zaman": 1774777038.9778059,
+        "ev": 1.82,
+        "dep": 4.75
+      },
+      {
+        "zaman": 1774903771.489246,
+        "ev": 1.83,
+        "dep": 5.0
+      },
+      {
+        "zaman": 1775080520.5782819,
+        "ev": 1.82,
+        "dep": 5.0
+      }
+    ]
+  },
+  "Botafogo|Mirassol|2026-04-01": {
+    "seri": [
+      {
+        "zaman": 1774634226.709005,
+        "ev": 2.16,
+        "dep": 3.75
+      },
+      {
+        "zaman": 1774777039.349893,
+        "ev": 2.17,
+        "dep": 3.6
+      },
+      {
+        "zaman": 1774903772.065094,
+        "ev": 2.22,
+        "dep": 3.45
+      },
+      {
+        "zaman": 1775080521.4622211,
+        "ev": 2.48,
+        "dep": 3.35
+      }
+    ]
+  },
+  "Internacional|Sao Paulo|2026-04-01": {
+    "seri": [
+      {
+        "zaman": 1774634226.709162,
+        "ev": 2.34,
+        "dep": 3.74
+      },
+      {
+        "zaman": 1774777039.349986,
+        "ev": 2.34,
+        "dep": 3.78
+      },
+      {
+        "zaman": 1774903772.06529,
+        "ev": 2.27,
+        "dep": 3.7
+      },
+      {
+        "zaman": 1775080521.462358,
+        "ev": 2.32,
+        "dep": 3.8
+      }
+    ]
+  },
+  "Bahia|Atletico Paranaense|2026-04-01": {
+    "seri": [
+      {
+        "zaman": 1774634226.709306,
+        "ev": 1.93,
+        "dep": 4.5
+      },
+      {
+        "zaman": 1774647736.215457,
+        "ev": 1.95,
+        "dep": 4.5
+      },
+      {
+        "zaman": 1774777039.3500705,
+        "ev": 1.95,
+        "dep": 4.22
+      },
+      {
+        "zaman": 1774903772.065469,
+        "ev": 1.85,
+        "dep": 4.8
+      },
+      {
+        "zaman": 1775080521.462471,
+        "ev": 1.94,
+        "dep": 4.6
+      }
+    ]
+  },
+  "Cruzeiro|Vitoria|2026-04-01": {
+    "seri": [
+      {
+        "zaman": 1774634226.709461,
+        "ev": 1.61,
+        "dep": 7.0
+      },
+      {
+        "zaman": 1774647736.2156448,
+        "ev": 1.65,
+        "dep": 7.0
+      },
+      {
+        "zaman": 1774777039.3501673,
+        "ev": 1.6,
+        "dep": 7.0
+      },
+      {
+        "zaman": 1774903772.065641,
+        "ev": 1.61,
+        "dep": 7.0
+      },
+      {
+        "zaman": 1775080521.462584,
+        "ev": 1.6,
+        "dep": 7.2
+      }
+    ]
+  },
+  "Coritiba|Vasco da Gama|2026-04-01": {
+    "seri": [
+      {
+        "zaman": 1774634226.709623,
+        "ev": 2.58,
+        "dep": 2.94
+      },
+      {
+        "zaman": 1774777039.3502567,
+        "ev": 2.6,
+        "dep": 3.05
+      },
+      {
+        "zaman": 1774903772.065805,
+        "ev": 2.59,
+        "dep": 2.94
+      },
+      {
+        "zaman": 1775080521.462687,
+        "ev": 2.72,
+        "dep": 3.05
+      }
+    ]
+  },
+  "Fluminense|Corinthians|2026-04-02": {
+    "seri": [
+      {
+        "zaman": 1774634226.7098281,
+        "ev": 1.97,
+        "dep": 4.6
+      },
+      {
+        "zaman": 1774777039.350347,
+        "ev": 1.97,
+        "dep": 4.7
+      },
+      {
+        "zaman": 1774903772.0659788,
+        "ev": 1.97,
+        "dep": 4.8
+      },
+      {
+        "zaman": 1775080521.462796,
+        "ev": 1.77,
+        "dep": 6.0
+      }
+    ]
+  },
+  "Chapecoense|Atletico Mineiro|2026-04-02": {
+    "seri": [
+      {
+        "zaman": 1774634226.709973,
+        "ev": 2.9,
+        "dep": 2.51
+      },
+      {
+        "zaman": 1774777039.3504333,
+        "ev": 2.94,
+        "dep": 2.52
+      },
+      {
+        "zaman": 1774903772.066164,
+        "ev": 2.94,
+        "dep": 2.51
+      },
+      {
+        "zaman": 1775080521.4629061,
+        "ev": 3.1,
+        "dep": 2.56
+      }
+    ]
+  },
+  "Santos|Remo|2026-04-02": {
+    "seri": [
+      {
+        "zaman": 1774634226.7101262,
+        "ev": 1.55,
+        "dep": 7.2
+      },
+      {
+        "zaman": 1775080521.463018,
+        "ev": 1.58,
+        "dep": 7.0
+      }
+    ]
+  },
+  "Bragantino-SP|Flamengo|2026-04-03": {
+    "seri": [
+      {
+        "zaman": 1774634226.710266,
+        "ev": 4.6,
+        "dep": 1.96
+      },
+      {
+        "zaman": 1774903772.066506,
+        "ev": 4.6,
+        "dep": 1.95
+      },
+      {
+        "zaman": 1775080521.463126,
+        "ev": 4.42,
+        "dep": 2.02
+      }
+    ]
+  },
+  "Palmeiras|Grêmio|2026-04-03": {
+    "seri": [
+      {
+        "zaman": 1774634226.710408,
+        "ev": 1.55,
+        "dep": 6.8
+      },
+      {
+        "zaman": 1775080521.463233,
+        "ev": 1.56,
+        "dep": 7.0
+      }
+    ]
+  },
+  "Rayo Vallecano|Elche CF|2026-04-03": {
+    "seri": [
+      {
+        "zaman": 1774647731.413716,
+        "ev": 1.87,
+        "dep": 5.0
+      },
+      {
+        "zaman": 1774777037.1123981,
+        "ev": 1.81,
+        "dep": 5.1
+      },
+      {
+        "zaman": 1774903767.96359,
+        "ev": 1.82,
+        "dep": 5.1
+      },
+      {
+        "zaman": 1775080517.133353,
+        "ev": 1.82,
+        "dep": 5.2
+      }
+    ]
+  },
+  "Paris Saint Germain|Toulouse|2026-04-03": {
+    "seri": [
+      {
+        "zaman": 1774647734.478133,
+        "ev": 1.32,
+        "dep": 12.0
+      },
+      {
+        "zaman": 1775080519.0574489,
+        "ev": 1.33,
+        "dep": 12.0
+      }
+    ]
+  },
+  "Sporting Lisbon|Santa Clara|2026-04-03": {
+    "seri": [
+      {
+        "zaman": 1774647735.634442,
+        "ev": 1.27,
+        "dep": 14.8
+      },
+      {
+        "zaman": 1774903771.4894478,
+        "ev": 1.27,
+        "dep": 17.0
+      },
+      {
+        "zaman": 1775080520.5784671,
+        "ev": 1.3,
+        "dep": 14.0
+      }
+    ]
+  },
+  "Real Sociedad|Levante|2026-04-04": {
+    "seri": [
+      {
+        "zaman": 1774777037.112563,
+        "ev": 1.7,
+        "dep": 5.6
+      },
+      {
+        "zaman": 1774903767.963854,
+        "ev": 1.66,
+        "dep": 6.0
+      },
+      {
+        "zaman": 1775080517.133713,
+        "ev": 1.64,
+        "dep": 6.1
+      }
+    ]
+  },
+  "Mallorca|Real Madrid|2026-04-04": {
+    "seri": [
+      {
+        "zaman": 1774777037.1126552,
+        "ev": 5.3,
+        "dep": 1.71
+      },
+      {
+        "zaman": 1774903767.964041,
+        "ev": 6.0,
+        "dep": 1.62
+      },
+      {
+        "zaman": 1775080517.133992,
+        "ev": 6.4,
+        "dep": 1.63
+      }
+    ]
+  },
+  "Real Betis|Espanyol|2026-04-04": {
+    "seri": [
+      {
+        "zaman": 1774777037.1127346,
+        "ev": 1.84,
+        "dep": 4.7
+      },
+      {
+        "zaman": 1774903767.964204,
+        "ev": 1.8,
+        "dep": 4.7
+      },
+      {
+        "zaman": 1775080517.134224,
+        "ev": 1.77,
+        "dep": 5.0
+      }
+    ]
+  },
+  "Atlético Madrid|Barcelona|2026-04-04": {
+    "seri": [
+      {
+        "zaman": 1774777037.1128154,
+        "ev": 3.3,
+        "dep": 2.28
+      },
+      {
+        "zaman": 1774903767.9643579,
+        "ev": 3.2,
+        "dep": 2.31
+      },
+      {
+        "zaman": 1775080517.134426,
+        "ev": 3.25,
+        "dep": 2.28
+      }
+    ]
+  },
+  "Borussia Monchengladbach|1. FC Heidenheim|2026-04-04": {
+    "seri": [
+      {
+        "zaman": 1774777037.5053418,
+        "ev": 1.61,
+        "dep": 6.0
+      },
+      {
+        "zaman": 1775080517.867311,
+        "ev": 1.63,
+        "dep": 5.8
+      }
+    ]
+  },
+  "Hamburger SV|Augsburg|2026-04-04": {
+    "seri": [
+      {
+        "zaman": 1774777037.505458,
+        "ev": 2.4,
+        "dep": 3.29
+      },
+      {
+        "zaman": 1774903768.908457,
+        "ev": 2.36,
+        "dep": 3.3
+      }
+    ]
+  },
+  "Bayer Leverkusen|VfL Wolfsburg|2026-04-04": {
+    "seri": [
+      {
+        "zaman": 1774777037.505564,
+        "ev": 1.45,
+        "dep": 7.6
+      },
+      {
+        "zaman": 1774903768.908685,
+        "ev": 1.45,
+        "dep": 8.0
+      },
+      {
+        "zaman": 1775080517.867696,
+        "ev": 1.46,
+        "dep": 7.6
+      }
+    ]
+  },
+  "SC Freiburg|Bayern Munich|2026-04-04": {
+    "seri": [
+      {
+        "zaman": 1774777037.5056581,
+        "ev": 8.0,
+        "dep": 1.44
+      }
+    ]
+  },
+  "TSG Hoffenheim|FSV Mainz 05|2026-04-04": {
+    "seri": [
+      {
+        "zaman": 1774777037.5057478,
+        "ev": 1.78,
+        "dep": 4.58
+      },
+      {
+        "zaman": 1774903768.909039,
+        "ev": 1.78,
+        "dep": 4.6
+      },
+      {
+        "zaman": 1775080517.868026,
+        "ev": 1.81,
+        "dep": 4.51
+      }
+    ]
+  },
+  "Werder Bremen|RB Leipzig|2026-04-04": {
+    "seri": [
+      {
+        "zaman": 1774777037.505835,
+        "ev": 3.5,
+        "dep": 2.09
+      },
+      {
+        "zaman": 1774903768.909194,
+        "ev": 3.55,
+        "dep": 2.09
+      },
+      {
+        "zaman": 1775080517.868195,
+        "ev": 3.62,
+        "dep": 2.06
+      }
+    ]
+  },
+  "VfB Stuttgart|Borussia Dortmund|2026-04-04": {
+    "seri": [
+      {
+        "zaman": 1774777037.505923,
+        "ev": 2.49,
+        "dep": 2.8
+      },
+      {
+        "zaman": 1774903768.909355,
+        "ev": 2.5,
+        "dep": 2.8
+      },
+      {
+        "zaman": 1775080517.868435,
+        "ev": 2.42,
+        "dep": 2.83
+      }
+    ]
+  },
+  "Sassuolo|Cagliari|2026-04-04": {
+    "seri": [
+      {
+        "zaman": 1774777037.9096293,
+        "ev": 2.05,
+        "dep": 4.75
+      },
+      {
+        "zaman": 1774903769.487995,
+        "ev": 2.08,
+        "dep": 4.7
+      },
+      {
+        "zaman": 1775080518.451948,
+        "ev": 2.07,
+        "dep": 4.7
+      }
+    ]
+  },
+  "Hellas Verona|Fiorentina|2026-04-04": {
+    "seri": [
+      {
+        "zaman": 1774777037.9097233,
+        "ev": 4.5,
+        "dep": 2.0
+      },
+      {
+        "zaman": 1775080518.452102,
+        "ev": 4.3,
+        "dep": 2.02
+      }
+    ]
+  },
+  "Lazio|Parma|2026-04-04": {
+    "seri": [
+      {
+        "zaman": 1774777037.9098108,
+        "ev": 1.87,
+        "dep": 5.3
+      },
+      {
+        "zaman": 1774903769.488385,
+        "ev": 1.88,
+        "dep": 5.3
+      }
+    ]
+  },
+  "Strasbourg|Nice|2026-04-04": {
+    "seri": [
+      {
+        "zaman": 1774777038.2716055,
+        "ev": 1.89,
+        "dep": 4.52
+      },
+      {
+        "zaman": 1774903770.026666,
+        "ev": 1.89,
+        "dep": 4.57
+      },
+      {
+        "zaman": 1775080519.057638,
+        "ev": 1.9,
+        "dep": 4.6
+      }
+    ]
+  },
+  "Brest|Rennes|2026-04-04": {
+    "seri": [
+      {
+        "zaman": 1774777038.271696,
+        "ev": 3.7,
+        "dep": 2.2
+      },
+      {
+        "zaman": 1774903770.0267258,
+        "ev": 3.6,
+        "dep": 2.22
+      },
+      {
+        "zaman": 1775080519.057802,
+        "ev": 3.3,
+        "dep": 2.34
+      }
+    ]
+  },
+  "Lille|RC Lens|2026-04-04": {
+    "seri": [
+      {
+        "zaman": 1774777038.2717824,
+        "ev": 2.72,
+        "dep": 2.8
+      },
+      {
+        "zaman": 1775080519.057961,
+        "ev": 2.75,
+        "dep": 2.8
+      }
+    ]
+  },
+  "PSV Eindhoven|FC Utrecht|2026-04-04": {
+    "seri": [
+      {
+        "zaman": 1774777038.6420047,
+        "ev": 1.52,
+        "dep": 7.5
+      },
+      {
+        "zaman": 1774903770.9417422,
+        "ev": 1.56,
+        "dep": 7.0
+      },
+      {
+        "zaman": 1775080519.678488,
+        "ev": 1.55,
+        "dep": 6.6
+      }
+    ]
+  },
+  "AZ Alkmaar|Fortuna Sittard|2026-04-04": {
+    "seri": [
+      {
+        "zaman": 1774777038.642093,
+        "ev": 1.38,
+        "dep": 9.3
+      },
+      {
+        "zaman": 1774903770.9419782,
+        "ev": 1.37,
+        "dep": 9.3
+      },
+      {
+        "zaman": 1775080519.678715,
+        "ev": 1.36,
+        "dep": 9.0
+      }
+    ]
+  },
+  "SC Telstar|Groningen|2026-04-04": {
+    "seri": [
+      {
+        "zaman": 1774777038.642175,
+        "ev": 2.65,
+        "dep": 2.7
+      },
+      {
+        "zaman": 1775080519.6788962,
+        "ev": 2.7,
+        "dep": 2.7
+      }
+    ]
+  },
+  "Ajax|FC Twente Enschede|2026-04-04": {
+    "seri": [
+      {
+        "zaman": 1774777038.6422515,
+        "ev": 2.35,
+        "dep": 2.92
+      },
+      {
+        "zaman": 1775080519.679073,
+        "ev": 2.35,
+        "dep": 2.9
+      }
+    ]
+  },
+  "Excelsior|NEC Nijmegen|2026-04-04": {
+    "seri": [
+      {
+        "zaman": 1774777038.6423264,
+        "ev": 3.65,
+        "dep": 2.02
+      },
+      {
+        "zaman": 1775080519.67925,
+        "ev": 3.8,
+        "dep": 2.02
+      }
+    ]
+  },
+  "Nacional|CF Estrela|2026-04-04": {
+    "seri": [
+      {
+        "zaman": 1774777038.9779756,
+        "ev": 2.08,
+        "dep": 3.8
+      },
+      {
+        "zaman": 1774903771.489625,
+        "ev": 2.07,
+        "dep": 3.8
+      },
+      {
+        "zaman": 1775080520.578748,
+        "ev": 2.08,
+        "dep": 3.8
+      }
+    ]
+  },
+  "Rio Ave FC|Alverca|2026-04-04": {
+    "seri": [
+      {
+        "zaman": 1774777038.978057,
+        "ev": 2.62,
+        "dep": 2.8
+      },
+      {
+        "zaman": 1775080520.578945,
+        "ev": 2.6,
+        "dep": 2.85
+      }
+    ]
+  },
+  "Moreirense FC|Braga|2026-04-04": {
+    "seri": [
+      {
+        "zaman": 1774777038.9781327,
+        "ev": 6.5,
+        "dep": 1.64
+      },
+      {
+        "zaman": 1774903771.489965,
+        "ev": 7.0,
+        "dep": 1.58
+      },
+      {
+        "zaman": 1775080520.579134,
+        "ev": 7.0,
+        "dep": 1.59
+      }
+    ]
+  },
+  "FC Porto|Famalicão|2026-04-04": {
+    "seri": [
+      {
+        "zaman": 1774777038.9782166,
+        "ev": 1.45,
+        "dep": 9.2
+      },
+      {
+        "zaman": 1774903771.490145,
+        "ev": 1.45,
+        "dep": 10.0
+      },
+      {
+        "zaman": 1775080520.579308,
+        "ev": 1.44,
+        "dep": 10.0
+      }
+    ]
+  },
+  "Sao Paulo|Cruzeiro|2026-04-04": {
+    "seri": [
+      {
+        "zaman": 1774777039.35077,
+        "ev": 2.19,
+        "dep": 3.65
+      }
+    ]
+  },
+  "Coritiba|Fluminense|2026-04-04": {
+    "seri": [
+      {
+        "zaman": 1774777039.3508391,
+        "ev": 3.26,
+        "dep": 2.41
+      },
+      {
+        "zaman": 1774903772.066915,
+        "ev": 3.27,
+        "dep": 2.4
+      }
+    ]
+  },
+  "Vasco da Gama|Botafogo|2026-04-05": {
+    "seri": [
+      {
+        "zaman": 1774777039.350901,
+        "ev": 2.28,
+        "dep": 3.35
+      },
+      {
+        "zaman": 1774903772.0670369,
+        "ev": 2.27,
+        "dep": 3.35
+      }
+    ]
+  },
+  "Genclerbirligi SK|Goztepe|2026-04-04": {
+    "seri": [
+      {
+        "zaman": 1774777040.4061723,
+        "ev": 3.15,
+        "dep": 2.51
+      },
+      {
+        "zaman": 1775080523.1199832,
+        "ev": 3.18,
+        "dep": 2.5
+      }
+    ]
+  },
+  "Kasimpasa SK|Kayserispor|2026-04-04": {
+    "seri": [
+      {
+        "zaman": 1774777040.4062593,
+        "ev": 2.2,
+        "dep": 3.5
+      },
+      {
+        "zaman": 1774903773.666034,
+        "ev": 2.2,
+        "dep": 3.43
+      },
+      {
+        "zaman": 1775080523.120228,
+        "ev": 2.21,
+        "dep": 3.41
+      }
+    ]
+  },
+  "Gazişehir Gaziantep|Alanyaspor|2026-04-04": {
+    "seri": [
+      {
+        "zaman": 1774777040.4063396,
+        "ev": 2.89,
+        "dep": 2.5
+      },
+      {
+        "zaman": 1774903773.666178,
+        "ev": 2.9,
+        "dep": 2.49
+      }
+    ]
+  },
+  "Trabzonspor|Galatasaray|2026-04-04": {
+    "seri": [
+      {
+        "zaman": 1774777040.4064157,
+        "ev": 3.5,
+        "dep": 2.1
+      },
+      {
+        "zaman": 1774903773.666316,
+        "ev": 3.48,
+        "dep": 2.1
+      },
+      {
+        "zaman": 1775080523.1206741,
+        "ev": 3.5,
+        "dep": 2.12
+      }
+    ]
+  },
+  "1. FC Kaiserslautern|Fortuna Düsseldorf|2026-04-04": {
+    "seri": [
+      {
+        "zaman": 1774777040.755991,
+        "ev": 2.5,
+        "dep": 2.7
+      },
+      {
+        "zaman": 1774903774.2016058,
+        "ev": 2.52,
+        "dep": 2.7
+      },
+      {
+        "zaman": 1775080523.695586,
+        "ev": 2.48,
+        "dep": 2.78
+      }
+    ]
+  },
+  "1. FC Magdeburg|VfL Bochum|2026-04-04": {
+    "seri": [
+      {
+        "zaman": 1774777040.756086,
+        "ev": 2.18,
+        "dep": 3.26
+      },
+      {
+        "zaman": 1775080523.6957881,
+        "ev": 2.15,
+        "dep": 3.35
+      }
+    ]
+  },
+  "Arminia Bielefeld|SV Darmstadt 98|2026-04-04": {
+    "seri": [
+      {
+        "zaman": 1774777040.7561684,
+        "ev": 2.35,
+        "dep": 3.0
+      },
+      {
+        "zaman": 1774903774.201909,
+        "ev": 2.36,
+        "dep": 2.98
+      },
+      {
+        "zaman": 1775080523.695977,
+        "ev": 2.35,
+        "dep": 2.94
+      }
+    ]
+  },
+  "Dynamo Dresden|Hertha Berlin|2026-04-04": {
+    "seri": [
+      {
+        "zaman": 1774777040.7562478,
+        "ev": 2.85,
+        "dep": 2.59
+      },
+      {
+        "zaman": 1774903774.2020538,
+        "ev": 2.65,
+        "dep": 2.61
+      },
+      {
+        "zaman": 1775080523.696162,
+        "ev": 2.72,
+        "dep": 2.66
+      }
+    ]
+  },
+  "Getafe|Athletic Bilbao|2026-04-05": {
+    "seri": [
+      {
+        "zaman": 1774903767.964514,
+        "ev": 3.15,
+        "dep": 2.85
+      }
+    ]
+  },
+  "Valencia|Celta Vigo|2026-04-05": {
+    "seri": [
+      {
+        "zaman": 1774903767.964659,
+        "ev": 2.45,
+        "dep": 3.35
+      }
+    ]
+  },
+  "Oviedo|Sevilla|2026-04-05": {
+    "seri": [
+      {
+        "zaman": 1774903767.9648042,
+        "ev": 3.08,
+        "dep": 2.8
+      }
+    ]
+  },
+  "Alavés|CA Osasuna|2026-04-05": {
+    "seri": [
+      {
+        "zaman": 1774903767.964946,
+        "ev": 2.5,
+        "dep": 3.35
+      }
+    ]
+  },
+  "Girona|Villarreal|2026-04-06": {
+    "seri": [
+      {
+        "zaman": 1774903767.965086,
+        "ev": 3.29,
+        "dep": 2.43
+      }
+    ]
+  },
+  "Union Berlin|FC St. Pauli|2026-04-05": {
+    "seri": [
+      {
+        "zaman": 1774903768.909539,
+        "ev": 2.18,
+        "dep": 4.0
+      }
+    ]
+  },
+  "Eintracht Frankfurt|1. FC Köln|2026-04-05": {
+    "seri": [
+      {
+        "zaman": 1774903768.909695,
+        "ev": 2.28,
+        "dep": 3.35
+      }
+    ]
+  },
+  "Cremonese|Bologna|2026-04-05": {
+    "seri": [
+      {
+        "zaman": 1774903769.488572,
+        "ev": 3.7,
+        "dep": 2.18
+      }
+    ]
+  },
+  "Pisa|Torino|2026-04-05": {
+    "seri": [
+      {
+        "zaman": 1774903769.4887471,
+        "ev": 3.31,
+        "dep": 2.67
+      }
+    ]
+  },
+  "Inter Milan|AS Roma|2026-04-05": {
+    "seri": [
+      {
+        "zaman": 1774903769.488896,
+        "ev": 1.69,
+        "dep": 5.8
+      }
+    ]
+  },
+  "Udinese|Como|2026-04-06": {
+    "seri": [
+      {
+        "zaman": 1774903769.489044,
+        "ev": 5.5,
+        "dep": 1.76
+      }
+    ]
+  },
+  "Lecce|Atalanta BC|2026-04-06": {
+    "seri": [
+      {
+        "zaman": 1774903769.4891899,
+        "ev": 5.2,
+        "dep": 1.81
+      }
+    ]
+  },
+  "Juventus|Genoa|2026-04-06": {
+    "seri": [
+      {
+        "zaman": 1774903769.4893372,
+        "ev": 1.44,
+        "dep": 10.5
+      }
+    ]
+  },
+  "Napoli|AC Milan|2026-04-06": {
+    "seri": [
+      {
+        "zaman": 1774903769.489481,
+        "ev": 2.73,
+        "dep": 3.2
+      }
+    ]
+  },
+  "Angers|Lyon|2026-04-05": {
+    "seri": [
+      {
+        "zaman": 1774903770.0268328,
+        "ev": 5.1,
+        "dep": 1.86
+      }
+    ]
+  },
+  "Le Havre|Auxerre|2026-04-05": {
+    "seri": [
+      {
+        "zaman": 1774903770.026886,
+        "ev": 2.48,
+        "dep": 3.35
+      }
+    ]
+  },
+  "Lorient|Paris FC|2026-04-05": {
+    "seri": [
+      {
+        "zaman": 1774903770.026936,
+        "ev": 2.43,
+        "dep": 3.33
+      }
+    ]
+  },
+  "Metz|Nantes|2026-04-05": {
+    "seri": [
+      {
+        "zaman": 1774903770.026985,
+        "ev": 3.07,
+        "dep": 2.56
+      }
+    ]
+  },
+  "AS Monaco|Marseille|2026-04-05": {
+    "seri": [
+      {
+        "zaman": 1774903770.027035,
+        "ev": 2.31,
+        "dep": 3.19
+      }
+    ]
+  },
+  "Go Ahead Eagles|FC Zwolle|2026-04-05": {
+    "seri": [
+      {
+        "zaman": 1774903770.9425988,
+        "ev": 1.98,
+        "dep": 3.86
+      }
+    ]
+  },
+  "FC Volendam|Feyenoord|2026-04-05": {
+    "seri": [
+      {
+        "zaman": 1774903770.942743,
+        "ev": 6.5,
+        "dep": 1.5
+      }
+    ]
+  },
+  "Heerenveen|Heracles Almelo|2026-04-05": {
+    "seri": [
+      {
+        "zaman": 1774903770.942881,
+        "ev": 1.56,
+        "dep": 5.75
+      }
+    ]
+  },
+  "NAC Breda|Sparta Rotterdam|2026-04-05": {
+    "seri": [
+      {
+        "zaman": 1774903770.943022,
+        "ev": 2.5,
+        "dep": 3.1
+      }
+    ]
+  },
+  "Arouca|Estoril|2026-04-06": {
+    "seri": [
+      {
+        "zaman": 1774903771.490314,
+        "ev": 2.59,
+        "dep": 2.75
+      }
+    ]
+  },
+  "Casa Pia|Benfica|2026-04-06": {
+    "seri": [
+      {
+        "zaman": 1774903771.490462,
+        "ev": 12.8,
+        "dep": 1.3
+      }
+    ]
+  },
+  "Chapecoense|Vitoria|2026-04-05": {
+    "seri": [
+      {
+        "zaman": 1774903772.067164,
+        "ev": 2.5,
+        "dep": 3.02
+      }
+    ]
+  },
+  "Atletico Mineiro|Atletico Paranaense|2026-04-05": {
+    "seri": [
+      {
+        "zaman": 1774903772.067287,
+        "ev": 1.98,
+        "dep": 4.23
+      }
+    ]
+  },
+  "Flamengo|Santos|2026-04-05": {
+    "seri": [
+      {
+        "zaman": 1774903772.0674188,
+        "ev": 1.39,
+        "dep": 9.5
+      }
+    ]
+  },
+  "Bahia|Palmeiras|2026-04-05": {
+    "seri": [
+      {
+        "zaman": 1774903772.0675452,
+        "ev": 3.01,
+        "dep": 2.42
+      }
+    ]
+  },
+  "Corinthians|Internacional|2026-04-05": {
+    "seri": [
+      {
+        "zaman": 1774903772.0677261,
+        "ev": 2.1,
+        "dep": 3.82
+      }
+    ]
+  },
+  "Mirassol|Bragantino-SP|2026-04-05": {
+    "seri": [
+      {
+        "zaman": 1774903772.0678642,
+        "ev": 2.08,
+        "dep": 3.85
+      }
+    ]
+  },
+  "Grêmio|Remo|2026-04-05": {
+    "seri": [
+      {
+        "zaman": 1774903772.06799,
+        "ev": 1.5,
+        "dep": 7.1
+      }
+    ]
+  },
+  "Fatih Karagümrük|Çaykur Rizespor|2026-04-05": {
+    "seri": [
+      {
+        "zaman": 1774903773.666454,
+        "ev": 3.0,
+        "dep": 2.48
+      }
+    ]
+  },
+  "Samsunspor|Torku Konyaspor|2026-04-05": {
+    "seri": [
+      {
+        "zaman": 1774903773.666592,
+        "ev": 2.39,
+        "dep": 3.35
+      }
+    ]
+  },
+  "Antalyaspor|Eyüpspor|2026-04-05": {
+    "seri": [
+      {
+        "zaman": 1774903773.666729,
+        "ev": 2.29,
+        "dep": 3.93
+      }
+    ]
+  },
+  "Fenerbahce|Besiktas JK|2026-04-05": {
+    "seri": [
+      {
+        "zaman": 1774903773.666889,
+        "ev": 2.06,
+        "dep": 3.7
+      }
+    ]
+  },
+  "Kocaelispor|Basaksehir|2026-04-06": {
+    "seri": [
+      {
+        "zaman": 1774903773.66701,
+        "ev": 2.91,
+        "dep": 2.61
+      }
+    ]
+  },
+  "Eintracht Braunschweig|1. FC Nürnberg|2026-04-05": {
+    "seri": [
+      {
+        "zaman": 1774903774.2022002,
+        "ev": 2.58,
+        "dep": 2.72
+      }
+    ]
+  },
+  "Hannover 96|Elversberg|2026-04-05": {
+    "seri": [
+      {
+        "zaman": 1774903774.202344,
+        "ev": 2.3,
+        "dep": 3.05
+      }
+    ]
+  },
+  "FC Schalke 04|Karlsruher SC|2026-04-05": {
+    "seri": [
+      {
+        "zaman": 1774903774.202486,
+        "ev": 1.51,
+        "dep": 6.8
+      }
+    ]
+  },
+  "Greuther Fürth|SC Paderborn|2026-04-05": {
+    "seri": [
+      {
+        "zaman": 1774903774.202625,
+        "ev": 4.1,
+        "dep": 1.88
+      }
+    ]
+  },
+  "Holstein Kiel|SC Preußen Münster|2026-04-05": {
+    "seri": [
+      {
+        "zaman": 1774903774.20278,
+        "ev": 1.95,
+        "dep": 3.9
+      }
+    ]
+  },
+  "Nottingham Forest|Aston Villa|2026-04-12": {
+    "seri": [
+      {
+        "zaman": 1775936096.700866,
+        "ev": 2.82,
+        "dep": 2.76
+      }
+    ]
+  },
+  "Crystal Palace|Newcastle United|2026-04-12": {
+    "seri": [
+      {
+        "zaman": 1775936096.7011461,
+        "ev": 3.25,
+        "dep": 2.38
+      }
+    ]
+  },
+  "Sunderland|Tottenham Hotspur|2026-04-12": {
+    "seri": [
+      {
+        "zaman": 1775936096.701333,
+        "ev": 2.8,
+        "dep": 2.8
+      },
+      {
+        "zaman": 1775941536.229702,
+        "ev": 2.8,
+        "dep": 2.78
+      }
+    ]
+  },
+  "Chelsea|Manchester City|2026-04-12": {
+    "seri": [
+      {
+        "zaman": 1775936096.70149,
+        "ev": 3.6,
+        "dep": 2.11
+      },
+      {
+        "zaman": 1775939868.841336,
+        "ev": 3.65,
+        "dep": 2.1
+      }
+    ]
+  },
+  "Manchester United|Leeds United|2026-04-13": {
+    "seri": [
+      {
+        "zaman": 1775936096.701642,
+        "ev": 1.68,
+        "dep": 5.8
+      },
+      {
+        "zaman": 1776016568.894182,
+        "ev": 1.66,
+        "dep": 6.2
+      }
+    ]
+  },
+  "CA Osasuna|Real Betis|2026-04-12": {
+    "seri": [
+      {
+        "zaman": 1775936097.2649128,
+        "ev": 2.32,
+        "dep": 3.4
+      }
+    ]
+  },
+  "Mallorca|Rayo Vallecano|2026-04-12": {
+    "seri": [
+      {
+        "zaman": 1775936097.265074,
+        "ev": 2.45,
+        "dep": 3.37
+      },
+      {
+        "zaman": 1775939869.371142,
+        "ev": 2.44,
+        "dep": 3.37
+      },
+      {
+        "zaman": 1775941536.917081,
+        "ev": 2.44,
+        "dep": 3.4
+      },
+      {
+        "zaman": 1775941790.513682,
+        "ev": 2.44,
+        "dep": 3.37
+      }
+    ]
+  },
+  "Celta Vigo|Oviedo|2026-04-12": {
+    "seri": [
+      {
+        "zaman": 1775936097.265236,
+        "ev": 1.81,
+        "dep": 5.1
+      },
+      {
+        "zaman": 1775941536.917269,
+        "ev": 1.81,
+        "dep": 5.0
+      }
+    ]
+  },
+  "Athletic Bilbao|Villarreal|2026-04-12": {
+    "seri": [
+      {
+        "zaman": 1775936097.2653801,
+        "ev": 2.39,
+        "dep": 3.35
+      },
+      {
+        "zaman": 1775942802.152891,
+        "ev": 2.37,
+        "dep": 3.35
+      },
+      {
+        "zaman": 1776016569.494376,
+        "ev": 2.14,
+        "dep": 3.9
+      }
+    ]
+  },
+  "Levante|Getafe|2026-04-13": {
+    "seri": [
+      {
+        "zaman": 1775936097.265522,
+        "ev": 2.85,
+        "dep": 3.05
+      },
+      {
+        "zaman": 1776016569.494463,
+        "ev": 2.85,
+        "dep": 3.1
+      }
+    ]
+  },
+  "1. FC Köln|Werder Bremen|2026-04-12": {
+    "seri": [
+      {
+        "zaman": 1775936097.8431091,
+        "ev": 2.35,
+        "dep": 3.4
+      },
+      {
+        "zaman": 1775939869.905411,
+        "ev": 2.32,
+        "dep": 3.35
+      },
+      {
+        "zaman": 1775941537.544936,
+        "ev": 2.32,
+        "dep": 3.4
+      }
+    ]
+  },
+  "VfB Stuttgart|Hamburger SV|2026-04-12": {
+    "seri": [
+      {
+        "zaman": 1775936097.843276,
+        "ev": 1.41,
+        "dep": 8.8
+      }
+    ]
+  },
+  "FSV Mainz 05|SC Freiburg|2026-04-12": {
+    "seri": [
+      {
+        "zaman": 1775936097.843432,
+        "ev": 2.4,
+        "dep": 3.57
+      }
+    ]
+  },
+  "Genoa|Sassuolo|2026-04-12": {
+    "seri": [
+      {
+        "zaman": 1775936098.6725109,
+        "ev": 2.22,
+        "dep": 3.85
+      },
+      {
+        "zaman": 1775941538.3578439,
+        "ev": 2.24,
+        "dep": 3.85
+      },
+      {
+        "zaman": 1775941791.740221,
+        "ev": 2.24,
+        "dep": 3.9
+      }
+    ]
+  },
+  "Parma|Napoli|2026-04-12": {
+    "seri": [
+      {
+        "zaman": 1775936098.6726809,
+        "ev": 6.8,
+        "dep": 1.66
+      },
+      {
+        "zaman": 1775941538.3579588,
+        "ev": 6.8,
+        "dep": 1.67
+      },
+      {
+        "zaman": 1775942810.700168,
+        "ev": 7.0,
+        "dep": 1.67
+      }
+    ]
+  },
+  "Bologna|Lecce|2026-04-12": {
+    "seri": [
+      {
+        "zaman": 1775936098.672916,
+        "ev": 1.9,
+        "dep": 5.5
+      },
+      {
+        "zaman": 1775939870.43965,
+        "ev": 1.9,
+        "dep": 5.6
+      },
+      {
+        "zaman": 1775941538.35805,
+        "ev": 1.9,
+        "dep": 5.5
+      }
+    ]
+  },
+  "Como|Inter Milan|2026-04-12": {
+    "seri": [
+      {
+        "zaman": 1775936098.673096,
+        "ev": 3.25,
+        "dep": 2.44
+      },
+      {
+        "zaman": 1775939870.439819,
+        "ev": 3.3,
+        "dep": 2.44
+      },
+      {
+        "zaman": 1775941538.358135,
+        "ev": 3.25,
+        "dep": 2.46
+      },
+      {
+        "zaman": 1776016570.609706,
+        "ev": 3.4,
+        "dep": 2.43
+      }
+    ]
+  },
+  "Fiorentina|Lazio|2026-04-13": {
+    "seri": [
+      {
+        "zaman": 1775936098.673259,
+        "ev": 2.44,
+        "dep": 3.65
+      },
+      {
+        "zaman": 1776016570.609946,
+        "ev": 2.42,
+        "dep": 3.65
+      }
+    ]
+  },
+  "Nice|Le Havre|2026-04-12": {
+    "seri": [
+      {
+        "zaman": 1775936099.240688,
+        "ev": 2.03,
+        "dep": 4.9
+      },
+      {
+        "zaman": 1775939870.999746,
+        "ev": 2.02,
+        "dep": 4.9
+      },
+      {
+        "zaman": 1775942812.389497,
+        "ev": 2.03,
+        "dep": 4.9
+      }
+    ]
+  },
+  "Toulouse|Lille|2026-04-12": {
+    "seri": [
+      {
+        "zaman": 1775936099.24086,
+        "ev": 3.4,
+        "dep": 2.42
+      },
+      {
+        "zaman": 1775939870.9999192,
+        "ev": 3.4,
+        "dep": 2.44
+      },
+      {
+        "zaman": 1775942812.389725,
+        "ev": 3.5,
+        "dep": 2.41
+      }
+    ]
+  },
+  "Lyon|Lorient|2026-04-12": {
+    "seri": [
+      {
+        "zaman": 1775936099.241106,
+        "ev": 1.75,
+        "dep": 5.5
+      },
+      {
+        "zaman": 1775941863.687552,
+        "ev": 1.75,
+        "dep": 5.6
+      },
+      {
+        "zaman": 1775942812.389921,
+        "ev": 1.75,
+        "dep": 5.5
+      },
+      {
+        "zaman": 1776016571.1280792,
+        "ev": 1.68,
+        "dep": 5.85
+      }
+    ]
+  },
+  "Fortuna Sittard|NAC Breda|2026-04-12": {
+    "seri": [
+      {
+        "zaman": 1775936099.8411672,
+        "ev": 2.84,
+        "dep": 2.7
+      },
+      {
+        "zaman": 1775939871.553087,
+        "ev": 2.82,
+        "dep": 2.7
+      }
+    ]
+  },
+  "FC Zwolle|Excelsior|2026-04-12": {
+    "seri": [
+      {
+        "zaman": 1775936099.841332,
+        "ev": 2.26,
+        "dep": 3.3
+      },
+      {
+        "zaman": 1775942813.9054239,
+        "ev": 2.25,
+        "dep": 3.3
+      }
+    ]
+  },
+  "NEC Nijmegen|Feyenoord|2026-04-12": {
+    "seri": [
+      {
+        "zaman": 1775936099.8414888,
+        "ev": 2.26,
+        "dep": 3.2
+      },
+      {
+        "zaman": 1775939871.553403,
+        "ev": 2.24,
+        "dep": 3.2
+      }
+    ]
+  },
+  "AZ Alkmaar|Heerenveen|2026-04-12": {
+    "seri": [
+      {
+        "zaman": 1775936099.841641,
+        "ev": 1.77,
+        "dep": 4.6
+      }
+    ]
+  },
+  "Alverca|Casa Pia|2026-04-12": {
+    "seri": [
+      {
+        "zaman": 1775936100.480088,
+        "ev": 2.06,
+        "dep": 4.2
+      },
+      {
+        "zaman": 1775939872.083422,
+        "ev": 2.05,
+        "dep": 4.3
+      }
+    ]
+  },
+  "Braga|Arouca|2026-04-12": {
+    "seri": [
+      {
+        "zaman": 1775936100.480265,
+        "ev": 1.48,
+        "dep": 8.4
+      }
+    ]
+  },
+  "Benfica|Nacional|2026-04-12": {
+    "seri": [
+      {
+        "zaman": 1775936100.480464,
+        "ev": 1.18,
+        "dep": 21.0
+      },
+      {
+        "zaman": 1775939872.083735,
+        "ev": 1.18,
+        "dep": 22.0
+      }
+    ]
+  },
+  "Estoril|FC Porto|2026-04-12": {
+    "seri": [
+      {
+        "zaman": 1775936100.480695,
+        "ev": 7.4,
+        "dep": 1.51
+      },
+      {
+        "zaman": 1775941540.174011,
+        "ev": 7.6,
+        "dep": 1.5
+      },
+      {
+        "zaman": 1775941864.992991,
+        "ev": 7.8,
+        "dep": 1.5
+      },
+      {
+        "zaman": 1775942814.499757,
+        "ev": 7.6,
+        "dep": 1.5
+      },
+      {
+        "zaman": 1776016572.2077,
+        "ev": 8.2,
+        "dep": 1.44
+      }
+    ]
+  },
+  "Tondela|Gil Vicente|2026-04-13": {
+    "seri": [
+      {
+        "zaman": 1775936100.480865,
+        "ev": 4.2,
+        "dep": 2.08
+      },
+      {
+        "zaman": 1776016572.207823,
+        "ev": 4.5,
+        "dep": 2.06
+      }
+    ]
+  },
+  "Mirassol|Bahia|2026-04-11": {
+    "seri": [
+      {
+        "zaman": 1775936101.2002702,
+        "ev": 2.34,
+        "dep": 3.45
+      },
+      {
+        "zaman": 1775939872.744481,
+        "ev": 2.38,
+        "dep": 3.4
+      },
+      {
+        "zaman": 1775941540.9122298,
+        "ev": 2.32,
+        "dep": 3.5
+      }
+    ]
+  },
+  "Santos|Atletico Mineiro|2026-04-11": {
+    "seri": [
+      {
+        "zaman": 1775936101.201204,
+        "ev": 2.32,
+        "dep": 3.55
+      },
+      {
+        "zaman": 1775939872.744608,
+        "ev": 2.38,
+        "dep": 3.5
+      },
+      {
+        "zaman": 1775941540.9124658,
+        "ev": 2.42,
+        "dep": 3.5
+      },
+      {
+        "zaman": 1775941794.030955,
+        "ev": 2.38,
+        "dep": 3.5
+      },
+      {
+        "zaman": 1775941865.554332,
+        "ev": 2.36,
+        "dep": 3.5
+      }
+    ]
+  },
+  "Internacional|Grêmio|2026-04-11": {
+    "seri": [
+      {
+        "zaman": 1775936101.202,
+        "ev": 1.87,
+        "dep": 4.9
+      }
+    ]
+  },
+  "Atletico Paranaense|Chapecoense|2026-04-12": {
+    "seri": [
+      {
+        "zaman": 1775936101.202254,
+        "ev": 1.56,
+        "dep": 7.2
+      },
+      {
+        "zaman": 1775939872.744821,
+        "ev": 1.55,
+        "dep": 7.4
+      },
+      {
+        "zaman": 1775941794.032497,
+        "ev": 1.55,
+        "dep": 7.6
+      }
+    ]
+  },
+  "Botafogo|Coritiba|2026-04-12": {
+    "seri": [
+      {
+        "zaman": 1775936101.2024288,
+        "ev": 1.83,
+        "dep": 5.0
+      },
+      {
+        "zaman": 1775939872.744931,
+        "ev": 1.84,
+        "dep": 5.2
+      },
+      {
+        "zaman": 1775941540.913056,
+        "ev": 1.86,
+        "dep": 5.2
+      },
+      {
+        "zaman": 1776016572.754273,
+        "ev": 1.89,
+        "dep": 5.0
+      }
+    ]
+  },
+  "Fluminense|Flamengo|2026-04-12": {
+    "seri": [
+      {
+        "zaman": 1775936101.2026,
+        "ev": 3.7,
+        "dep": 2.38
+      },
+      {
+        "zaman": 1775939872.7450502,
+        "ev": 3.7,
+        "dep": 2.36
+      },
+      {
+        "zaman": 1775941540.913494,
+        "ev": 3.7,
+        "dep": 2.35
+      },
+      {
+        "zaman": 1776016572.754453,
+        "ev": 3.4,
+        "dep": 2.52
+      }
+    ]
+  },
+  "Cruzeiro|Bragantino-SP|2026-04-12": {
+    "seri": [
+      {
+        "zaman": 1775936101.202761,
+        "ev": 1.91,
+        "dep": 4.6
+      },
+      {
+        "zaman": 1775939872.745157,
+        "ev": 1.89,
+        "dep": 4.8
+      },
+      {
+        "zaman": 1775941540.913779,
+        "ev": 1.9,
+        "dep": 4.8
+      },
+      {
+        "zaman": 1775942815.1651149,
+        "ev": 1.9,
+        "dep": 4.9
+      },
+      {
+        "zaman": 1776016572.7546,
+        "ev": 1.96,
+        "dep": 4.6
+      }
+    ]
+  },
+  "Corinthians|Palmeiras|2026-04-12": {
+    "seri": [
+      {
+        "zaman": 1775936101.2030542,
+        "ev": 3.15,
+        "dep": 2.62
+      },
+      {
+        "zaman": 1775941540.91403,
+        "ev": 3.05,
+        "dep": 2.7
+      },
+      {
+        "zaman": 1776016572.754681,
+        "ev": 3.05,
+        "dep": 2.88
+      }
+    ]
+  },
+  "Atlético Madrid|Barcelona|2026-04-14": {
+    "seri": [
+      {
+        "zaman": 1775936101.9430919,
+        "ev": 3.85,
+        "dep": 1.9
+      },
+      {
+        "zaman": 1776016573.271303,
+        "ev": 3.95,
+        "dep": 1.9
+      },
+      {
+        "zaman": 1776129715.137578,
+        "ev": 4.0,
+        "dep": 1.87
+      }
+    ]
+  },
+  "Liverpool|Paris Saint Germain|2026-04-14": {
+    "seri": [
+      {
+        "zaman": 1775936101.9432561,
+        "ev": 2.52,
+        "dep": 2.6
+      },
+      {
+        "zaman": 1775939873.3876832,
+        "ev": 2.5,
+        "dep": 2.6
+      },
+      {
+        "zaman": 1776016573.271394,
+        "ev": 2.58,
+        "dep": 2.56
+      },
+      {
+        "zaman": 1776129715.137957,
+        "ev": 2.5,
+        "dep": 2.68
+      }
+    ]
+  },
+  "Torku Konyaspor|Fatih Karagümrük|2026-04-12": {
+    "seri": [
+      {
+        "zaman": 1775936103.1418471,
+        "ev": 1.73,
+        "dep": 6.2
+      }
+    ]
+  },
+  "Goztepe|Kasimpasa SK|2026-04-12": {
+    "seri": [
+      {
+        "zaman": 1775936103.142009,
+        "ev": 1.96,
+        "dep": 4.7
+      },
+      {
+        "zaman": 1775941542.5581062,
+        "ev": 2.0,
+        "dep": 4.7
+      }
+    ]
+  },
+  "Galatasaray|Kocaelispor|2026-04-12": {
+    "seri": [
+      {
+        "zaman": 1775936103.142159,
+        "ev": 1.22,
+        "dep": 16.5
+      },
+      {
+        "zaman": 1775939874.563904,
+        "ev": 1.22,
+        "dep": 17.0
+      },
+      {
+        "zaman": 1775941542.558298,
+        "ev": 1.22,
+        "dep": 17.5
+      },
+      {
+        "zaman": 1775941796.806983,
+        "ev": 1.22,
+        "dep": 17.0
+      }
+    ]
+  },
+  "Eyüpspor|Samsunspor|2026-04-13": {
+    "seri": [
+      {
+        "zaman": 1775936103.1423192,
+        "ev": 4.4,
+        "dep": 1.99
+      },
+      {
+        "zaman": 1776016574.333583,
+        "ev": 4.42,
+        "dep": 1.92
+      }
+    ]
+  },
+  "Çaykur Rizespor|Gazişehir Gaziantep|2026-04-13": {
+    "seri": [
+      {
+        "zaman": 1775936103.142463,
+        "ev": 1.85,
+        "dep": 4.59
+      },
+      {
+        "zaman": 1775939874.564258,
+        "ev": 1.84,
+        "dep": 4.59
+      },
+      {
+        "zaman": 1775941867.231309,
+        "ev": 1.85,
+        "dep": 4.59
+      },
+      {
+        "zaman": 1776016574.333741,
+        "ev": 1.83,
+        "dep": 4.91
+      }
+    ]
+  },
+  "SC Paderborn|1. FC Magdeburg|2026-04-12": {
+    "seri": [
+      {
+        "zaman": 1775936103.946432,
+        "ev": 1.93,
+        "dep": 3.95
+      },
+      {
+        "zaman": 1775939875.0924191,
+        "ev": 1.93,
+        "dep": 4.0
+      },
+      {
+        "zaman": 1775941543.2127202,
+        "ev": 1.91,
+        "dep": 3.95
+      },
+      {
+        "zaman": 1775942817.898528,
+        "ev": 1.98,
+        "dep": 3.9
+      }
+    ]
+  },
+  "VfL Bochum|Eintracht Braunschweig|2026-04-12": {
+    "seri": [
+      {
+        "zaman": 1775936103.946589,
+        "ev": 1.83,
+        "dep": 4.5
+      },
+      {
+        "zaman": 1775941543.21304,
+        "ev": 1.84,
+        "dep": 4.5
+      },
+      {
+        "zaman": 1775942817.8987641,
+        "ev": 1.86,
+        "dep": 4.4
+      }
+    ]
+  },
+  "Elversberg|FC Schalke 04|2026-04-12": {
+    "seri": [
+      {
+        "zaman": 1775936103.946741,
+        "ev": 2.16,
+        "dep": 3.65
+      },
+      {
+        "zaman": 1775939875.092961,
+        "ev": 2.14,
+        "dep": 3.65
+      },
+      {
+        "zaman": 1775941543.213381,
+        "ev": 2.12,
+        "dep": 3.65
+      },
+      {
+        "zaman": 1775941797.327265,
+        "ev": 2.12,
+        "dep": 3.7
+      },
+      {
+        "zaman": 1775942817.898958,
+        "ev": 2.14,
+        "dep": 3.7
+      }
+    ]
+  },
+  "Arsenal|Sporting Lisbon|2026-04-15": {
+    "seri": [
+      {
+        "zaman": 1776129715.1381629,
+        "ev": 1.5,
+        "dep": 8.0
+      }
+    ]
+  },
+  "Bayern Munich|Real Madrid|2026-04-15": {
+    "seri": [
+      {
+        "zaman": 1776129715.138361,
+        "ev": 1.6,
+        "dep": 5.58
+      }
+    ]
+  },
+  "Celta Vigo|SC Freiburg|2026-04-16": {
+    "seri": [
+      {
+        "zaman": 1776129715.648001,
+        "ev": 2.06,
+        "dep": 3.95
+      },
+      {
+        "zaman": 1776314032.6961842,
+        "ev": 1.96,
+        "dep": 4.3
+      }
+    ]
+  },
+  "Aston Villa|Bologna|2026-04-16": {
+    "seri": [
+      {
+        "zaman": 1776129715.648204,
+        "ev": 1.7,
+        "dep": 5.53
+      },
+      {
+        "zaman": 1776314032.6963992,
+        "ev": 1.64,
+        "dep": 6.4
+      }
+    ]
+  },
+  "Nottingham Forest|Porto|2026-04-16": {
+    "seri": [
+      {
+        "zaman": 1776129715.648414,
+        "ev": 2.36,
+        "dep": 3.48
+      },
+      {
+        "zaman": 1776314032.696619,
+        "ev": 2.52,
+        "dep": 3.35
+      }
+    ]
+  },
+  "Real Betis|SC Braga|2026-04-16": {
+    "seri": [
+      {
+        "zaman": 1776129715.648584,
+        "ev": 1.93,
+        "dep": 4.4
+      },
+      {
+        "zaman": 1776314032.696811,
+        "ev": 1.92,
+        "dep": 4.9
+      }
+    ]
+  },
+  "Brentford|Fulham|2026-04-18": {
+    "seri": [
+      {
+        "zaman": 1776314027.590213,
+        "ev": 2.18,
+        "dep": 3.55
+      }
+    ]
+  },
+  "Newcastle United|Bournemouth|2026-04-18": {
+    "seri": [
+      {
+        "zaman": 1776314027.5905359,
+        "ev": 2.05,
+        "dep": 3.86
+      }
+    ]
+  },
+  "Leeds United|Wolverhampton Wanderers|2026-04-18": {
+    "seri": [
+      {
+        "zaman": 1776314027.590762,
+        "ev": 1.69,
+        "dep": 6.2
+      }
+    ]
+  },
+  "Tottenham Hotspur|Brighton and Hove Albion|2026-04-18": {
+    "seri": [
+      {
+        "zaman": 1776314027.590967,
+        "ev": 2.9,
+        "dep": 2.5
+      }
+    ]
+  },
+  "Chelsea|Manchester United|2026-04-18": {
+    "seri": [
+      {
+        "zaman": 1776314027.59116,
+        "ev": 2.4,
+        "dep": 3.3
+      }
+    ]
+  },
+  "FC St. Pauli|1. FC Köln|2026-04-17": {
+    "seri": [
+      {
+        "zaman": 1776314028.751096,
+        "ev": 2.84,
+        "dep": 2.85
+      }
+    ]
+  },
+  "Bayer Leverkusen|Augsburg|2026-04-18": {
+    "seri": [
+      {
+        "zaman": 1776314028.751328,
+        "ev": 1.47,
+        "dep": 7.2
+      }
+    ]
+  },
+  "TSG Hoffenheim|Borussia Dortmund|2026-04-18": {
+    "seri": [
+      {
+        "zaman": 1776314028.75155,
+        "ev": 2.7,
+        "dep": 2.56
+      }
+    ]
+  },
+  "Werder Bremen|Hamburger SV|2026-04-18": {
+    "seri": [
+      {
+        "zaman": 1776314028.75175,
+        "ev": 2.06,
+        "dep": 3.9
+      }
+    ]
+  },
+  "Union Berlin|VfL Wolfsburg|2026-04-18": {
+    "seri": [
+      {
+        "zaman": 1776314028.751929,
+        "ev": 2.23,
+        "dep": 3.4
+      }
+    ]
+  },
+  "Eintracht Frankfurt|RB Leipzig|2026-04-18": {
+    "seri": [
+      {
+        "zaman": 1776314028.752105,
+        "ev": 3.6,
+        "dep": 2.07
+      }
+    ]
+  },
+  "Sassuolo|Como|2026-04-17": {
+    "seri": [
+      {
+        "zaman": 1776314029.3288882,
+        "ev": 5.4,
+        "dep": 1.73
+      }
+    ]
+  },
+  "Inter Milan|Cagliari|2026-04-17": {
+    "seri": [
+      {
+        "zaman": 1776314029.329102,
+        "ev": 1.27,
+        "dep": 16.25
+      }
+    ]
+  },
+  "Udinese|Parma|2026-04-18": {
+    "seri": [
+      {
+        "zaman": 1776314029.329293,
+        "ev": 2.24,
+        "dep": 4.25
+      }
+    ]
+  },
+  "Napoli|Lazio|2026-04-18": {
+    "seri": [
+      {
+        "zaman": 1776314029.329477,
+        "ev": 1.65,
+        "dep": 7.4
+      }
+    ]
+  },
+  "AS Roma|Atalanta BC|2026-04-18": {
+    "seri": [
+      {
+        "zaman": 1776314029.329657,
+        "ev": 2.5,
+        "dep": 3.2
+      }
+    ]
+  },
+  "RC Lens|Toulouse|2026-04-17": {
+    "seri": [
+      {
+        "zaman": 1776314029.9039721,
+        "ev": 1.63,
+        "dep": 6.2
+      }
+    ]
+  },
+  "Lorient|Marseille|2026-04-18": {
+    "seri": [
+      {
+        "zaman": 1776314029.904201,
+        "ev": 4.7,
+        "dep": 1.83
+      }
+    ]
+  },
+  "Angers|Le Havre|2026-04-18": {
+    "seri": [
+      {
+        "zaman": 1776314029.9043899,
+        "ev": 3.0,
+        "dep": 2.8
+      }
+    ]
+  },
+  "Lille|Nice|2026-04-18": {
+    "seri": [
+      {
+        "zaman": 1776314029.904577,
+        "ev": 1.62,
+        "dep": 6.6
+      }
+    ]
+  },
+  "Rio Ave FC|AVS Futebol SAD|2026-04-17": {
+    "seri": [
+      {
+        "zaman": 1776314031.000576,
+        "ev": 1.73,
+        "dep": 5.25
+      }
+    ]
+  },
+  "Nacional|Alverca|2026-04-18": {
+    "seri": [
+      {
+        "zaman": 1776314031.000792,
+        "ev": 2.28,
+        "dep": 3.3
+      }
+    ]
+  },
+  "Casa Pia|Santa Clara|2026-04-18": {
+    "seri": [
+      {
+        "zaman": 1776314031.0009909,
+        "ev": 3.9,
+        "dep": 2.23
+      }
+    ]
+  },
+  "Gil Vicente|Vitória SC|2026-04-18": {
+    "seri": [
+      {
+        "zaman": 1776314031.001247,
+        "ev": 2.18,
+        "dep": 3.7
+      }
+    ]
+  },
+  "Chapecoense|Botafogo|2026-04-18": {
+    "seri": [
+      {
+        "zaman": 1776314031.63074,
+        "ev": 3.25,
+        "dep": 2.35
+      }
+    ]
+  },
+  "Vasco da Gama|Sao Paulo|2026-04-18": {
+    "seri": [
+      {
+        "zaman": 1776314031.630982,
+        "ev": 2.4,
+        "dep": 3.3
+      }
+    ]
+  },
+  "Vitoria|Corinthians|2026-04-18": {
+    "seri": [
+      {
+        "zaman": 1776314031.6311839,
+        "ev": 2.86,
+        "dep": 2.8
+      }
+    ]
+  },
+  "Cruzeiro|Grêmio|2026-04-18": {
+    "seri": [
+      {
+        "zaman": 1776314031.6313658,
+        "ev": 1.73,
+        "dep": 5.3
+      }
+    ]
+  },
+  "Antalyaspor|Torku Konyaspor|2026-04-17": {
+    "seri": [
+      {
+        "zaman": 1776314033.230328,
+        "ev": 3.2,
+        "dep": 2.38
+      }
+    ]
+  },
+  "Fenerbahce|Çaykur Rizespor|2026-04-17": {
+    "seri": [
+      {
+        "zaman": 1776314033.230548,
+        "ev": 1.35,
+        "dep": 10.5
+      }
+    ]
+  },
+  "Fatih Karagümrük|Eyüpspor|2026-04-18": {
+    "seri": [
+      {
+        "zaman": 1776314033.230735,
+        "ev": 2.02,
+        "dep": 4.0
+      }
+    ]
+  },
+  "Kocaelispor|Goztepe|2026-04-18": {
+    "seri": [
+      {
+        "zaman": 1776314033.230912,
+        "ev": 2.8,
+        "dep": 2.96
+      }
+    ]
+  },
+  "Genclerbirligi SK|Galatasaray|2026-04-18": {
+    "seri": [
+      {
+        "zaman": 1776314033.231082,
+        "ev": 8.4,
+        "dep": 1.44
+      },
+      {
+        "zaman": 1776531388.505931,
+        "ev": 9.6,
+        "dep": 1.44
+      }
+    ]
+  },
+  "Holstein Kiel|1. FC Kaiserslautern|2026-04-17": {
+    "seri": [
+      {
+        "zaman": 1776314033.764113,
+        "ev": 2.22,
+        "dep": 3.15
+      }
+    ]
+  },
+  "Elversberg|Karlsruher SC|2026-04-17": {
+    "seri": [
+      {
+        "zaman": 1776314033.7643251,
+        "ev": 1.52,
+        "dep": 6.25
+      }
+    ]
+  },
+  "1. FC Magdeburg|Fortuna Düsseldorf|2026-04-18": {
+    "seri": [
+      {
+        "zaman": 1776314033.7645068,
+        "ev": 2.1,
+        "dep": 3.45
+      }
+    ]
+  },
+  "Arminia Bielefeld|1. FC Nürnberg|2026-04-18": {
+    "seri": [
+      {
+        "zaman": 1776314033.764683,
+        "ev": 2.07,
+        "dep": 3.75
+      }
+    ]
+  },
+  "Dynamo Dresden|VfL Bochum|2026-04-18": {
+    "seri": [
+      {
+        "zaman": 1776314033.764862,
+        "ev": 2.42,
+        "dep": 2.85
+      }
+    ]
+  },
+  "Hannover 96|SC Paderborn|2026-04-18": {
+    "seri": [
+      {
+        "zaman": 1776314033.765037,
+        "ev": 2.22,
+        "dep": 3.14
+      },
+      {
+        "zaman": 1776531389.1557708,
+        "ev": 2.26,
+        "dep": 3.3
+      }
+    ]
+  },
+  "Kasimpasa SK|Alanyaspor|2026-04-19": {
+    "seri": [
+      {
+        "zaman": 1776531388.506609,
+        "ev": 2.82,
+        "dep": 2.84
+      },
+      {
+        "zaman": 1776596512.818493,
+        "ev": 2.68,
+        "dep": 3.2
+      }
+    ]
+  },
+  "Samsunspor|Besiktas JK|2026-04-19": {
+    "seri": [
+      {
+        "zaman": 1776531388.5068831,
+        "ev": 3.6,
+        "dep": 2.14
+      },
+      {
+        "zaman": 1776596512.818729,
+        "ev": 3.65,
+        "dep": 2.12
+      }
+    ]
+  },
+  "Trabzonspor|Basaksehir|2026-04-19": {
+    "seri": [
+      {
+        "zaman": 1776531388.507157,
+        "ev": 1.95,
+        "dep": 3.9
+      },
+      {
+        "zaman": 1776596512.818917,
+        "ev": 1.98,
+        "dep": 3.9
+      }
+    ]
+  },
+  "Gazişehir Gaziantep|Kayserispor|2026-04-20": {
+    "seri": [
+      {
+        "zaman": 1776531388.5074701,
+        "ev": 2.23,
+        "dep": 3.7
+      },
+      {
+        "zaman": 1776596512.8190951,
+        "ev": 2.24,
+        "dep": 3.6
+      },
+      {
+        "zaman": 1776699629.272733,
+        "ev": 2.44,
+        "dep": 3.1
+      }
+    ]
+  },
+  "Eintracht Braunschweig|Hertha Berlin|2026-04-19": {
+    "seri": [
+      {
+        "zaman": 1776531389.1560352,
+        "ev": 3.3,
+        "dep": 2.23
+      },
+      {
+        "zaman": 1776596513.436805,
+        "ev": 3.3,
+        "dep": 2.3
+      }
+    ]
+  },
+  "FC Schalke 04|SC Preußen Münster|2026-04-19": {
+    "seri": [
+      {
+        "zaman": 1776531389.156231,
+        "ev": 1.58,
+        "dep": 6.8
+      },
+      {
+        "zaman": 1776596513.4369202,
+        "ev": 1.57,
+        "dep": 7.2
+      }
+    ]
+  },
+  "Greuther Fürth|SV Darmstadt 98|2026-04-19": {
+    "seri": [
+      {
+        "zaman": 1776531389.156414,
+        "ev": 3.3,
+        "dep": 2.16
+      },
+      {
+        "zaman": 1776596513.437015,
+        "ev": 3.45,
+        "dep": 2.1
+      }
+    ]
+  },
+  "Aston Villa|Sunderland|2026-04-19": {
+    "seri": [
+      {
+        "zaman": 1776596507.192449,
+        "ev": 1.81,
+        "dep": 5.32
+      }
+    ]
+  },
+  "Nottingham Forest|Burnley|2026-04-19": {
+    "seri": [
+      {
+        "zaman": 1776596507.1927319,
+        "ev": 1.51,
+        "dep": 7.8
+      }
+    ]
+  },
+  "Everton|Liverpool|2026-04-19": {
+    "seri": [
+      {
+        "zaman": 1776596507.1929421,
+        "ev": 3.35,
+        "dep": 2.42
+      }
+    ]
+  },
+  "Manchester City|Arsenal|2026-04-19": {
+    "seri": [
+      {
+        "zaman": 1776596507.19313,
+        "ev": 1.97,
+        "dep": 4.4
+      }
+    ]
+  },
+  "Crystal Palace|West Ham United|2026-04-20": {
+    "seri": [
+      {
+        "zaman": 1776596507.1933498,
+        "ev": 2.51,
+        "dep": 3.2
+      },
+      {
+        "zaman": 1776699613.55794,
+        "ev": 2.76,
+        "dep": 2.83
+      }
+    ]
+  },
+  "Brighton and Hove Albion|Chelsea|2026-04-21": {
+    "seri": [
+      {
+        "zaman": 1776596507.1935492,
+        "ev": 2.6,
+        "dep": 2.86
+      },
+      {
+        "zaman": 1776699613.558251,
+        "ev": 2.58,
+        "dep": 2.8
+      }
+    ]
+  },
+  "Athletic Bilbao|CA Osasuna|2026-04-21": {
+    "seri": [
+      {
+        "zaman": 1776596507.762539,
+        "ev": 1.89,
+        "dep": 5.0
+      },
+      {
+        "zaman": 1776699614.4189708,
+        "ev": 2.0,
+        "dep": 4.7
+      }
+    ]
+  },
+  "Mallorca|Valencia|2026-04-21": {
+    "seri": [
+      {
+        "zaman": 1776596507.762769,
+        "ev": 2.64,
+        "dep": 3.15
+      },
+      {
+        "zaman": 1776699614.41919,
+        "ev": 2.6,
+        "dep": 3.15
+      }
+    ]
+  },
+  "Real Madrid|Alavés|2026-04-21": {
+    "seri": [
+      {
+        "zaman": 1776596507.7629418,
+        "ev": 1.3,
+        "dep": 14.0
+      },
+      {
+        "zaman": 1776699614.419341,
+        "ev": 1.31,
+        "dep": 12.0
+      }
+    ]
+  },
+  "Girona|Real Betis|2026-04-21": {
+    "seri": [
+      {
+        "zaman": 1776596507.763117,
+        "ev": 2.78,
+        "dep": 2.9
+      },
+      {
+        "zaman": 1776699614.4194748,
+        "ev": 2.62,
+        "dep": 2.96
+      }
+    ]
+  },
+  "SC Freiburg|1. FC Heidenheim|2026-04-19": {
+    "seri": [
+      {
+        "zaman": 1776596508.313904,
+        "ev": 1.72,
+        "dep": 5.3
+      }
+    ]
+  },
+  "Bayern Munich|VfB Stuttgart|2026-04-19": {
+    "seri": [
+      {
+        "zaman": 1776596508.3141382,
+        "ev": 1.46,
+        "dep": 7.5
+      }
+    ]
+  },
+  "Borussia Monchengladbach|FSV Mainz 05|2026-04-19": {
+    "seri": [
+      {
+        "zaman": 1776596508.314322,
+        "ev": 2.38,
+        "dep": 3.2
+      }
+    ]
+  },
+  "Hellas Verona|AC Milan|2026-04-19": {
+    "seri": [
+      {
+        "zaman": 1776596508.912829,
+        "ev": 7.8,
+        "dep": 1.59
+      }
+    ]
+  },
+  "Pisa|Genoa|2026-04-19": {
+    "seri": [
+      {
+        "zaman": 1776596508.913058,
+        "ev": 3.35,
+        "dep": 2.58
+      }
+    ]
+  },
+  "Juventus|Bologna|2026-04-19": {
+    "seri": [
+      {
+        "zaman": 1776596508.91325,
+        "ev": 1.5,
+        "dep": 7.8
+      }
+    ]
+  },
+  "Lecce|Fiorentina|2026-04-20": {
+    "seri": [
+      {
+        "zaman": 1776596508.913433,
+        "ev": 3.7,
+        "dep": 2.34
+      },
+      {
+        "zaman": 1776699618.778922,
+        "ev": 3.7,
+        "dep": 2.26
+      }
+    ]
+  },
+  "AS Monaco|Auxerre|2026-04-19": {
+    "seri": [
+      {
+        "zaman": 1776596509.5031629,
+        "ev": 1.6,
+        "dep": 6.2
+      }
+    ]
+  },
+  "Nantes|Brest|2026-04-19": {
+    "seri": [
+      {
+        "zaman": 1776596509.503398,
+        "ev": 2.54,
+        "dep": 3.2
+      }
+    ]
+  },
+  "Metz|Paris FC|2026-04-19": {
+    "seri": [
+      {
+        "zaman": 1776596509.503596,
+        "ev": 3.4,
+        "dep": 2.32
+      }
+    ]
+  },
+  "Strasbourg|Rennes|2026-04-19": {
+    "seri": [
+      {
+        "zaman": 1776596509.503781,
+        "ev": 2.9,
+        "dep": 2.52
+      }
+    ]
+  },
+  "Paris Saint Germain|Lyon|2026-04-19": {
+    "seri": [
+      {
+        "zaman": 1776596509.503968,
+        "ev": 1.33,
+        "dep": 10.0
+      }
+    ]
+  },
+  "Arouca|CF Estrela|2026-04-19": {
+    "seri": [
+      {
+        "zaman": 1776596510.5675468,
+        "ev": 2.22,
+        "dep": 3.97
+      }
+    ]
+  },
+  "Sporting Lisbon|Benfica|2026-04-19": {
+    "seri": [
+      {
+        "zaman": 1776596510.567657,
+        "ev": 2.18,
+        "dep": 3.6
+      }
+    ]
+  },
+  "Braga|Famalicão|2026-04-19": {
+    "seri": [
+      {
+        "zaman": 1776596510.567749,
+        "ev": 2.1,
+        "dep": 4.1
+      }
+    ]
+  },
+  "FC Porto|Tondela|2026-04-19": {
+    "seri": [
+      {
+        "zaman": 1776596510.567837,
+        "ev": 1.2,
+        "dep": 25.0
+      }
+    ]
+  },
+  "Moreirense FC|Estoril|2026-04-20": {
+    "seri": [
+      {
+        "zaman": 1776596510.567926,
+        "ev": 3.2,
+        "dep": 2.39
+      },
+      {
+        "zaman": 1776699624.600951,
+        "ev": 3.25,
+        "dep": 2.4
+      }
+    ]
+  },
+  "Internacional|Mirassol|2026-04-19": {
+    "seri": [
+      {
+        "zaman": 1776596511.127923,
+        "ev": 1.84,
+        "dep": 5.0
+      }
+    ]
+  },
+  "Coritiba|Atletico Mineiro|2026-04-19": {
+    "seri": [
+      {
+        "zaman": 1776596511.128147,
+        "ev": 2.5,
+        "dep": 3.35
+      }
+    ]
+  },
+  "Santos|Fluminense|2026-04-19": {
+    "seri": [
+      {
+        "zaman": 1776596511.1283479,
+        "ev": 2.42,
+        "dep": 3.45
+      }
+    ]
+  },
+  "Palmeiras|Atletico Paranaense|2026-04-19": {
+    "seri": [
+      {
+        "zaman": 1776596511.1285372,
+        "ev": 1.65,
+        "dep": 6.4
+      }
+    ]
+  },
+  "Bragantino-SP|Remo|2026-04-19": {
+    "seri": [
+      {
+        "zaman": 1776596511.1287198,
+        "ev": 1.57,
+        "dep": 7.0
+      }
+    ]
+  },
+  "Flamengo|Bahia|2026-04-19": {
+    "seri": [
+      {
+        "zaman": 1776596511.128906,
+        "ev": 1.53,
+        "dep": 7.2
+      }
+    ]
+  },
+  "Bournemouth|Leeds United|2026-04-22": {
+    "seri": [
+      {
+        "zaman": 1776699613.558424,
+        "ev": 2.1,
+        "dep": 3.85
+      },
+      {
+        "zaman": 1776805246.841507,
+        "ev": 2.08,
+        "dep": 3.9
+      }
+    ]
+  },
+  "Burnley|Manchester City|2026-04-22": {
+    "seri": [
+      {
+        "zaman": 1776699613.558562,
+        "ev": 22.0,
+        "dep": 1.18
+      }
+    ]
+  },
+  "Elche CF|Atlético Madrid|2026-04-22": {
+    "seri": [
+      {
+        "zaman": 1776699614.4196029,
+        "ev": 2.79,
+        "dep": 2.64
+      },
+      {
+        "zaman": 1776805249.026488,
+        "ev": 2.6,
+        "dep": 3.05
+      }
+    ]
+  },
+  "Real Sociedad|Getafe|2026-04-22": {
+    "seri": [
+      {
+        "zaman": 1776699614.4197278,
+        "ev": 2.32,
+        "dep": 3.95
+      },
+      {
+        "zaman": 1776805249.026591,
+        "ev": 2.28,
+        "dep": 4.0
+      }
+    ]
+  },
+  "Barcelona|Celta Vigo|2026-04-22": {
+    "seri": [
+      {
+        "zaman": 1776699614.419852,
+        "ev": 1.26,
+        "dep": 12.0
+      },
+      {
+        "zaman": 1776805249.026659,
+        "ev": 1.26,
+        "dep": 12.5
+      }
+    ]
+  },
+  "Paris Saint Germain|Nantes|2026-04-22": {
+    "seri": [
+      {
+        "zaman": 1776699621.955071,
+        "ev": 1.21,
+        "dep": 17.0
+      },
+      {
+        "zaman": 1776805260.1903539,
+        "ev": 1.2,
+        "dep": 17.01
+      }
+    ]
+  },
+  "SC Telstar|Sparta Rotterdam|2026-04-22": {
+    "seri": [
+      {
+        "zaman": 1776699623.825975,
+        "ev": 2.51,
+        "dep": 2.72
+      },
+      {
+        "zaman": 1776805262.632707,
+        "ev": 2.52,
+        "dep": 2.8
+      }
+    ]
+  },
+  "Sunderland|Nottingham Forest|2026-04-24": {
+    "seri": [
+      {
+        "zaman": 1776805246.84208,
+        "ev": 2.88,
+        "dep": 2.8
+      },
+      {
+        "zaman": 1776938792.9617321,
+        "ev": 2.88,
+        "dep": 2.84
+      },
+      {
+        "zaman": 1776973282.122444,
+        "ev": 2.9,
+        "dep": 2.8
+      }
+    ]
+  },
+  "Levante|Sevilla|2026-04-23": {
+    "seri": [
+      {
+        "zaman": 1776805249.026735,
+        "ev": 2.6,
+        "dep": 3.1
+      },
+      {
+        "zaman": 1776938793.521693,
+        "ev": 2.54,
+        "dep": 3.2
+      }
+    ]
+  },
+  "Rayo Vallecano|Espanyol|2026-04-23": {
+    "seri": [
+      {
+        "zaman": 1776805249.0268002,
+        "ev": 2.19,
+        "dep": 4.0
+      },
+      {
+        "zaman": 1776938793.521909,
+        "ev": 2.16,
+        "dep": 4.1
+      }
+    ]
+  },
+  "Oviedo|Villarreal|2026-04-23": {
+    "seri": [
+      {
+        "zaman": 1776805249.026863,
+        "ev": 3.9,
+        "dep": 2.14
+      },
+      {
+        "zaman": 1776938793.522091,
+        "ev": 3.85,
+        "dep": 2.22
+      }
+    ]
+  },
+  "Real Betis|Real Madrid|2026-04-24": {
+    "seri": [
+      {
+        "zaman": 1776805249.026988,
+        "ev": 3.8,
+        "dep": 1.94
+      },
+      {
+        "zaman": 1776938793.522264,
+        "ev": 3.85,
+        "dep": 1.94
+      },
+      {
+        "zaman": 1776973282.741371,
+        "ev": 3.95,
+        "dep": 1.94
+      }
+    ]
+  },
+  "RB Leipzig|Union Berlin|2026-04-24": {
+    "seri": [
+      {
+        "zaman": 1776805252.6581361,
+        "ev": 1.38,
+        "dep": 10.0
+      },
+      {
+        "zaman": 1776938794.0909262,
+        "ev": 1.39,
+        "dep": 9.5
+      },
+      {
+        "zaman": 1776973284.4694972,
+        "ev": 1.41,
+        "dep": 9.0
+      }
+    ]
+  },
+  "Napoli|Cremonese|2026-04-24": {
+    "seri": [
+      {
+        "zaman": 1776805257.228387,
+        "ev": 1.37,
+        "dep": 12.0
+      },
+      {
+        "zaman": 1776938794.73266,
+        "ev": 1.37,
+        "dep": 11.0
+      },
+      {
+        "zaman": 1776973285.11071,
+        "ev": 1.37,
+        "dep": 11.5
+      }
+    ]
+  },
+  "Brest|RC Lens|2026-04-24": {
+    "seri": [
+      {
+        "zaman": 1776805260.1905448,
+        "ev": 5.1,
+        "dep": 1.76
+      },
+      {
+        "zaman": 1776938795.326668,
+        "ev": 5.4,
+        "dep": 1.76
+      },
+      {
+        "zaman": 1776973285.676646,
+        "ev": 5.2,
+        "dep": 1.76
+      },
+      {
+        "zaman": 1776980649.261209,
+        "ev": 5.1,
+        "dep": 1.76
+      }
+    ]
+  },
+  "Go Ahead Eagles|AZ Alkmaar|2026-04-23": {
+    "seri": [
+      {
+        "zaman": 1776805262.632809,
+        "ev": 3.1,
+        "dep": 2.3
+      },
+      {
+        "zaman": 1776938795.963012,
+        "ev": 3.15,
+        "dep": 2.3
+      }
+    ]
+  },
+  "PSV Eindhoven|FC Zwolle|2026-04-23": {
+    "seri": [
+      {
+        "zaman": 1776805262.632891,
+        "ev": 1.22,
+        "dep": 14.0
+      }
+    ]
+  },
+  "Casa Pia|Braga|2026-04-23": {
+    "seri": [
+      {
+        "zaman": 1776805264.888549,
+        "ev": 6.1,
+        "dep": 1.65
+      },
+      {
+        "zaman": 1776938796.4955158,
+        "ev": 6.6,
+        "dep": 1.63
+      }
+    ]
+  },
+  "Alverca|Arouca|2026-04-24": {
+    "seri": [
+      {
+        "zaman": 1776805264.888862,
+        "ev": 2.38,
+        "dep": 3.27
+      },
+      {
+        "zaman": 1776938796.4957938,
+        "ev": 2.38,
+        "dep": 3.3
+      },
+      {
+        "zaman": 1776973286.8083892,
+        "ev": 2.4,
+        "dep": 3.3
+      },
+      {
+        "zaman": 1776980649.794529,
+        "ev": 2.38,
+        "dep": 3.35
+      }
+    ]
+  },
+  "Basaksehir|Kasimpasa SK|2026-04-24": {
+    "seri": [
+      {
+        "zaman": 1776805269.993163,
+        "ev": 1.71,
+        "dep": 5.0
+      },
+      {
+        "zaman": 1776938798.71519,
+        "ev": 1.7,
+        "dep": 5.2
+      },
+      {
+        "zaman": 1776973289.034726,
+        "ev": 1.71,
+        "dep": 5.3
+      },
+      {
+        "zaman": 1776980651.05825,
+        "ev": 1.74,
+        "dep": 5.9
+      },
+      {
+        "zaman": 1776981875.6788852,
+        "ev": 1.7,
+        "dep": 5.9
+      }
+    ]
+  },
+  "1. FC Kaiserslautern|Eintracht Braunschweig|2026-04-24": {
+    "seri": [
+      {
+        "zaman": 1776805271.411202,
+        "ev": 2.06,
+        "dep": 3.4
+      },
+      {
+        "zaman": 1776938799.318733,
+        "ev": 2.12,
+        "dep": 3.35
+      },
+      {
+        "zaman": 1776973289.58146,
+        "ev": 2.14,
+        "dep": 3.4
+      },
+      {
+        "zaman": 1776975812.221977,
+        "ev": 2.14,
+        "dep": 3.38
+      },
+      {
+        "zaman": 1776980652.246289,
+        "ev": 2.16,
+        "dep": 3.4
+      },
+      {
+        "zaman": 1776981876.251284,
+        "ev": 2.16,
+        "dep": 3.37
+      }
+    ]
+  },
+  "Fortuna Düsseldorf|Dynamo Dresden|2026-04-24": {
+    "seri": [
+      {
+        "zaman": 1776805271.411556,
+        "ev": 2.35,
+        "dep": 3.0
+      },
+      {
+        "zaman": 1776938799.319024,
+        "ev": 2.4,
+        "dep": 3.0
+      },
+      {
+        "zaman": 1776973289.5817852,
+        "ev": 2.44,
+        "dep": 3.0
+      },
+      {
+        "zaman": 1776980652.246607,
+        "ev": 2.46,
+        "dep": 3.0
+      }
+    ]
+  },
+  "Fulham|Aston Villa|2026-04-25": {
+    "seri": [
+      {
+        "zaman": 1776938792.9621499,
+        "ev": 2.96,
+        "dep": 2.6
+      },
+      {
+        "zaman": 1776973282.1227698,
+        "ev": 2.92,
+        "dep": 2.56
+      }
+    ]
+  },
+  "Liverpool|Crystal Palace|2026-04-25": {
+    "seri": [
+      {
+        "zaman": 1776938792.9624372,
+        "ev": 1.51,
+        "dep": 7.0
+      }
+    ]
+  },
+  "West Ham United|Everton|2026-04-25": {
+    "seri": [
+      {
+        "zaman": 1776938792.9627142,
+        "ev": 2.5,
+        "dep": 3.11
+      }
+    ]
+  },
+  "Wolverhampton Wanderers|Tottenham Hotspur|2026-04-25": {
+    "seri": [
+      {
+        "zaman": 1776938792.9629629,
+        "ev": 4.75,
+        "dep": 1.79
+      },
+      {
+        "zaman": 1776973282.1234078,
+        "ev": 4.8,
+        "dep": 1.78
+      }
+    ]
+  },
+  "Arsenal|Newcastle United|2026-04-25": {
+    "seri": [
+      {
+        "zaman": 1776938792.9632142,
+        "ev": 1.53,
+        "dep": 6.8
+      },
+      {
+        "zaman": 1776973282.1236072,
+        "ev": 1.54,
+        "dep": 6.8
+      }
+    ]
+  },
+  "Alavés|Mallorca|2026-04-25": {
+    "seri": [
+      {
+        "zaman": 1776938793.522441,
+        "ev": 2.23,
+        "dep": 4.1
+      },
+      {
+        "zaman": 1776973282.7414558,
+        "ev": 2.22,
+        "dep": 4.1
+      }
+    ]
+  },
+  "Getafe|Barcelona|2026-04-25": {
+    "seri": [
+      {
+        "zaman": 1776938793.522623,
+        "ev": 6.25,
+        "dep": 1.73
+      },
+      {
+        "zaman": 1776973282.7415261,
+        "ev": 6.0,
+        "dep": 1.73
+      }
+    ]
+  },
+  "Valencia|Girona|2026-04-25": {
+    "seri": [
+      {
+        "zaman": 1776938793.522804,
+        "ev": 2.12,
+        "dep": 4.1
+      },
+      {
+        "zaman": 1776973282.741594,
+        "ev": 2.15,
+        "dep": 3.8
+      }
+    ]
+  },
+  "Atlético Madrid|Athletic Bilbao|2026-04-25": {
+    "seri": [
+      {
+        "zaman": 1776938793.522975,
+        "ev": 2.41,
+        "dep": 3.4
+      },
+      {
+        "zaman": 1776973282.741657,
+        "ev": 2.41,
+        "dep": 3.45
+      }
+    ]
+  },
+  "1. FC Heidenheim|FC St. Pauli|2026-04-25": {
+    "seri": [
+      {
+        "zaman": 1776938794.091199,
+        "ev": 2.55,
+        "dep": 3.13
+      },
+      {
+        "zaman": 1776973284.4697878,
+        "ev": 2.46,
+        "dep": 3.15
+      }
+    ]
+  },
+  "1. FC Köln|Bayer Leverkusen|2026-04-25": {
+    "seri": [
+      {
+        "zaman": 1776938794.091391,
+        "ev": 4.2,
+        "dep": 1.92
+      },
+      {
+        "zaman": 1776973284.470028,
+        "ev": 4.1,
+        "dep": 1.93
+      }
+    ]
+  },
+  "Augsburg|Eintracht Frankfurt|2026-04-25": {
+    "seri": [
+      {
+        "zaman": 1776938794.091573,
+        "ev": 2.74,
+        "dep": 2.8
+      },
+      {
+        "zaman": 1776973284.470259,
+        "ev": 2.72,
+        "dep": 2.7
+      }
+    ]
+  },
+  "FSV Mainz 05|Bayern Munich|2026-04-25": {
+    "seri": [
+      {
+        "zaman": 1776938794.0917602,
+        "ev": 4.85,
+        "dep": 1.72
+      },
+      {
+        "zaman": 1776973284.470485,
+        "ev": 4.85,
+        "dep": 1.75
+      }
+    ]
+  },
+  "VfL Wolfsburg|Borussia Monchengladbach|2026-04-25": {
+    "seri": [
+      {
+        "zaman": 1776938794.091944,
+        "ev": 2.34,
+        "dep": 3.19
+      },
+      {
+        "zaman": 1776973284.4707048,
+        "ev": 2.33,
+        "dep": 3.2
+      }
+    ]
+  },
+  "Hamburger SV|TSG Hoffenheim|2026-04-25": {
+    "seri": [
+      {
+        "zaman": 1776938794.092126,
+        "ev": 4.4,
+        "dep": 1.87
+      }
+    ]
+  },
+  "Parma|Pisa|2026-04-25": {
+    "seri": [
+      {
+        "zaman": 1776938794.733082,
+        "ev": 2.18,
+        "dep": 4.0
+      }
+    ]
+  },
+  "Bologna|AS Roma|2026-04-25": {
+    "seri": [
+      {
+        "zaman": 1776938794.733407,
+        "ev": 3.15,
+        "dep": 2.54
+      },
+      {
+        "zaman": 1776973285.1113129,
+        "ev": 3.25,
+        "dep": 2.54
+      }
+    ]
+  },
+  "Hellas Verona|Lecce|2026-04-25": {
+    "seri": [
+      {
+        "zaman": 1776938794.733666,
+        "ev": 2.86,
+        "dep": 2.96
+      },
+      {
+        "zaman": 1776973285.111567,
+        "ev": 2.88,
+        "dep": 3.0
+      }
+    ]
+  },
+  "Lyon|Auxerre|2026-04-25": {
+    "seri": [
+      {
+        "zaman": 1776938795.326978,
+        "ev": 1.73,
+        "dep": 5.5
+      },
+      {
+        "zaman": 1776973285.6768909,
+        "ev": 1.71,
+        "dep": 5.7
+      },
+      {
+        "zaman": 1777058135.9990752,
+        "ev": 1.68,
+        "dep": 5.9
+      }
+    ]
+  },
+  "Angers|Paris Saint Germain|2026-04-25": {
+    "seri": [
+      {
+        "zaman": 1776938795.327233,
+        "ev": 13.0,
+        "dep": 1.3
+      }
+    ]
+  },
+  "Toulouse|AS Monaco|2026-04-25": {
+    "seri": [
+      {
+        "zaman": 1776938795.327469,
+        "ev": 3.55,
+        "dep": 2.16
+      },
+      {
+        "zaman": 1777058135.99997,
+        "ev": 3.95,
+        "dep": 2.05
+      }
+    ]
+  },
+  "Feyenoord|Groningen|2026-04-25": {
+    "seri": [
+      {
+        "zaman": 1776938795.963368,
+        "ev": 1.67,
+        "dep": 5.1
+      },
+      {
+        "zaman": 1776973286.2409852,
+        "ev": 1.68,
+        "dep": 5.0
+      },
+      {
+        "zaman": 1777058139.52674,
+        "ev": 1.69,
+        "dep": 5.2
+      }
+    ]
+  },
+  "Heerenveen|Fortuna Sittard|2026-04-25": {
+    "seri": [
+      {
+        "zaman": 1776938795.9635189,
+        "ev": 1.57,
+        "dep": 5.8
+      },
+      {
+        "zaman": 1776980653.9285078,
+        "ev": 1.57,
+        "dep": 6.1
+      },
+      {
+        "zaman": 1777058139.527056,
+        "ev": 1.55,
+        "dep": 6.1
+      }
+    ]
+  },
+  "NAC Breda|Ajax|2026-04-25": {
+    "seri": [
+      {
+        "zaman": 1776938795.9636638,
+        "ev": 3.75,
+        "dep": 2.08
+      },
+      {
+        "zaman": 1776973286.241339,
+        "ev": 3.6,
+        "dep": 2.1
+      },
+      {
+        "zaman": 1777058139.5273511,
+        "ev": 3.55,
+        "dep": 2.1
+      }
+    ]
+  },
+  "FC Twente Enschede|NEC Nijmegen|2026-04-25": {
+    "seri": [
+      {
+        "zaman": 1776938795.963812,
+        "ev": 2.0,
+        "dep": 3.75
+      },
+      {
+        "zaman": 1777058139.52764,
+        "ev": 1.93,
+        "dep": 3.9
+      }
+    ]
+  },
+  "Tondela|Nacional|2026-04-25": {
+    "seri": [
+      {
+        "zaman": 1776938796.496018,
+        "ev": 2.96,
+        "dep": 2.6
+      },
+      {
+        "zaman": 1776973286.808649,
+        "ev": 3.0,
+        "dep": 2.6
+      }
+    ]
+  },
+  "Benfica|Moreirense FC|2026-04-25": {
+    "seri": [
+      {
+        "zaman": 1776938796.496246,
+        "ev": 1.17,
+        "dep": 24.0
+      },
+      {
+        "zaman": 1776973286.8088682,
+        "ev": 1.15,
+        "dep": 26.0
+      }
+    ]
+  },
+  "Vitória SC|Rio Ave FC|2026-04-25": {
+    "seri": [
+      {
+        "zaman": 1776938796.496468,
+        "ev": 1.97,
+        "dep": 4.59
+      },
+      {
+        "zaman": 1776973286.809103,
+        "ev": 1.91,
+        "dep": 4.81
+      },
+      {
+        "zaman": 1777058136.556509,
+        "ev": 1.9,
+        "dep": 5.0
+      }
+    ]
+  },
+  "Bahia|Santos|2026-04-25": {
+    "seri": [
+      {
+        "zaman": 1776938797.117782,
+        "ev": 1.87,
+        "dep": 4.6
+      },
+      {
+        "zaman": 1776973287.446049,
+        "ev": 1.84,
+        "dep": 5.1
+      },
+      {
+        "zaman": 1776975811.121585,
+        "ev": 1.83,
+        "dep": 5.1
+      },
+      {
+        "zaman": 1776982498.589684,
+        "ev": 1.83,
+        "dep": 5.0
+      },
+      {
+        "zaman": 1777058137.218634,
+        "ev": 1.74,
+        "dep": 5.5
+      }
+    ]
+  },
+  "Botafogo|Internacional|2026-04-25": {
+    "seri": [
+      {
+        "zaman": 1776938797.118009,
+        "ev": 2.55,
+        "dep": 3.2
+      },
+      {
+        "zaman": 1776973287.446269,
+        "ev": 2.58,
+        "dep": 3.3
+      },
+      {
+        "zaman": 1776980650.514555,
+        "ev": 2.6,
+        "dep": 3.3
+      },
+      {
+        "zaman": 1776982498.590188,
+        "ev": 2.67,
+        "dep": 3.15
+      },
+      {
+        "zaman": 1777058137.21906,
+        "ev": 2.68,
+        "dep": 3.05
+      }
+    ]
+  },
+  "Remo|Cruzeiro|2026-04-25": {
+    "seri": [
+      {
+        "zaman": 1776938797.118203,
+        "ev": 3.62,
+        "dep": 2.26
+      },
+      {
+        "zaman": 1776973287.446461,
+        "ev": 3.62,
+        "dep": 2.2
+      },
+      {
+        "zaman": 1776980650.514876,
+        "ev": 3.62,
+        "dep": 2.22
+      },
+      {
+        "zaman": 1777058137.21941,
+        "ev": 3.47,
+        "dep": 2.3
+      }
+    ]
+  },
+  "Sao Paulo|Mirassol|2026-04-26": {
+    "seri": [
+      {
+        "zaman": 1776938797.11839,
+        "ev": 1.85,
+        "dep": 4.6
+      },
+      {
+        "zaman": 1776973287.446665,
+        "ev": 1.94,
+        "dep": 4.35
+      },
+      {
+        "zaman": 1777058137.219733,
+        "ev": 1.95,
+        "dep": 4.4
+      }
+    ]
+  },
+  "Eyüpspor|Gazişehir Gaziantep|2026-04-25": {
+    "seri": [
+      {
+        "zaman": 1776938798.715487,
+        "ev": 2.88,
+        "dep": 2.65
+      },
+      {
+        "zaman": 1777058137.784225,
+        "ev": 2.7,
+        "dep": 2.76
+      }
+    ]
+  },
+  "Kayserispor|Çaykur Rizespor|2026-04-25": {
+    "seri": [
+      {
+        "zaman": 1776938798.715704,
+        "ev": 2.72,
+        "dep": 2.64
+      },
+      {
+        "zaman": 1776973289.035139,
+        "ev": 2.71,
+        "dep": 2.65
+      },
+      {
+        "zaman": 1777058137.784621,
+        "ev": 2.56,
+        "dep": 2.84
+      }
+    ]
+  },
+  "Goztepe|Antalyaspor|2026-04-25": {
+    "seri": [
+      {
+        "zaman": 1776938798.715909,
+        "ev": 1.76,
+        "dep": 5.2
+      },
+      {
+        "zaman": 1776973289.035378,
+        "ev": 1.76,
+        "dep": 5.4
+      },
+      {
+        "zaman": 1777058137.78494,
+        "ev": 1.76,
+        "dep": 5.7
+      }
+    ]
+  },
+  "SC Preußen Münster|Arminia Bielefeld|2026-04-25": {
+    "seri": [
+      {
+        "zaman": 1776938799.3192902,
+        "ev": 3.18,
+        "dep": 2.22
+      },
+      {
+        "zaman": 1776973289.5820422,
+        "ev": 3.18,
+        "dep": 2.24
+      },
+      {
+        "zaman": 1776980652.2468019,
+        "ev": 3.18,
+        "dep": 2.22
+      },
+      {
+        "zaman": 1777058138.366982,
+        "ev": 3.3,
+        "dep": 2.26
+      }
+    ]
+  },
+  "Karlsruher SC|Hannover 96|2026-04-25": {
+    "seri": [
+      {
+        "zaman": 1776938799.319485,
+        "ev": 4.0,
+        "dep": 1.83
+      },
+      {
+        "zaman": 1777058138.367313,
+        "ev": 4.2,
+        "dep": 1.83
+      }
+    ]
+  },
+  "Hertha Berlin|Holstein Kiel|2026-04-25": {
+    "seri": [
+      {
+        "zaman": 1776938799.319676,
+        "ev": 1.97,
+        "dep": 3.7
+      },
+      {
+        "zaman": 1776973289.582525,
+        "ev": 2.06,
+        "dep": 3.7
+      },
+      {
+        "zaman": 1776974549.4173481,
+        "ev": 2.04,
+        "dep": 3.7
+      },
+      {
+        "zaman": 1776980652.2471402,
+        "ev": 2.06,
+        "dep": 3.7
+      },
+      {
+        "zaman": 1777058138.3675861,
+        "ev": 2.08,
+        "dep": 3.6
+      }
+    ]
+  },
+  "SV Darmstadt 98|Elversberg|2026-04-25": {
+    "seri": [
+      {
+        "zaman": 1776938799.319927,
+        "ev": 2.84,
+        "dep": 2.38
+      },
+      {
+        "zaman": 1777058138.367844,
+        "ev": 2.98,
+        "dep": 2.38
+      }
+    ]
+  },
+  "Rayo Vallecano|Real Sociedad|2026-04-26": {
+    "seri": [
+      {
+        "zaman": 1776973282.74172,
+        "ev": 2.5,
+        "dep": 3.2
+      }
+    ]
+  },
+  "Oviedo|Elche CF|2026-04-26": {
+    "seri": [
+      {
+        "zaman": 1776973282.741853,
+        "ev": 2.4,
+        "dep": 3.4
+      }
+    ]
+  },
+  "CA Osasuna|Sevilla|2026-04-26": {
+    "seri": [
+      {
+        "zaman": 1776973282.7420201,
+        "ev": 2.14,
+        "dep": 3.95
+      }
+    ]
+  },
+  "Villarreal|Celta Vigo|2026-04-26": {
+    "seri": [
+      {
+        "zaman": 1776973282.742183,
+        "ev": 2.09,
+        "dep": 4.25
+      }
+    ]
+  },
+  "VfB Stuttgart|Werder Bremen|2026-04-26": {
+    "seri": [
+      {
+        "zaman": 1776973284.471138,
+        "ev": 1.58,
+        "dep": 6.8
+      }
+    ]
+  },
+  "Borussia Dortmund|SC Freiburg|2026-04-26": {
+    "seri": [
+      {
+        "zaman": 1776973284.471322,
+        "ev": 1.48,
+        "dep": 7.6
+      }
+    ]
+  },
+  "Fiorentina|Sassuolo|2026-04-26": {
+    "seri": [
+      {
+        "zaman": 1776973285.11182,
+        "ev": 2.0,
+        "dep": 4.53
+      }
+    ]
+  },
+  "Genoa|Como|2026-04-26": {
+    "seri": [
+      {
+        "zaman": 1776973285.1120799,
+        "ev": 4.9,
+        "dep": 1.84
+      }
+    ]
+  },
+  "Torino|Inter Milan|2026-04-26": {
+    "seri": [
+      {
+        "zaman": 1776973285.1122901,
+        "ev": 8.0,
+        "dep": 1.46
+      }
+    ]
+  },
+  "AC Milan|Juventus|2026-04-26": {
+    "seri": [
+      {
+        "zaman": 1776973285.1124742,
+        "ev": 3.25,
+        "dep": 2.65
+      }
+    ]
+  },
+  "Lorient|Strasbourg|2026-04-26": {
+    "seri": [
+      {
+        "zaman": 1776973285.677527,
+        "ev": 2.2,
+        "dep": 3.5
+      },
+      {
+        "zaman": 1777058136.0002408,
+        "ev": 2.3,
+        "dep": 3.35
+      }
+    ]
+  },
+  "Le Havre|Metz|2026-04-26": {
+    "seri": [
+      {
+        "zaman": 1776973285.677789,
+        "ev": 1.72,
+        "dep": 5.8
+      },
+      {
+        "zaman": 1777058136.000491,
+        "ev": 1.71,
+        "dep": 5.8
+      }
+    ]
+  },
+  "Paris FC|Lille|2026-04-26": {
+    "seri": [
+      {
+        "zaman": 1776973285.6779861,
+        "ev": 4.1,
+        "dep": 2.02
+      },
+      {
+        "zaman": 1776980649.262045,
+        "ev": 4.2,
+        "dep": 2.02
+      },
+      {
+        "zaman": 1777058136.000829,
+        "ev": 4.1,
+        "dep": 1.98
+      }
+    ]
+  },
+  "Rennes|Nantes|2026-04-26": {
+    "seri": [
+      {
+        "zaman": 1776973285.678327,
+        "ev": 1.47,
+        "dep": 8.6
+      },
+      {
+        "zaman": 1776980649.26213,
+        "ev": 1.47,
+        "dep": 8.4
+      }
+    ]
+  },
+  "Marseille|Nice|2026-04-26": {
+    "seri": [
+      {
+        "zaman": 1776973285.6786702,
+        "ev": 1.53,
+        "dep": 6.8
+      },
+      {
+        "zaman": 1777058136.00139,
+        "ev": 1.54,
+        "dep": 6.8
+      }
+    ]
+  },
+  "Excelsior|FC Utrecht|2026-04-26": {
+    "seri": [
+      {
+        "zaman": 1776973286.241633,
+        "ev": 3.35,
+        "dep": 2.26
+      },
+      {
+        "zaman": 1777058139.5279071,
+        "ev": 3.35,
+        "dep": 2.3
+      }
+    ]
+  },
+  "Heracles Almelo|FC Volendam|2026-04-26": {
+    "seri": [
+      {
+        "zaman": 1776973286.241778,
+        "ev": 2.2,
+        "dep": 3.25
+      },
+      {
+        "zaman": 1777058139.528173,
+        "ev": 2.26,
+        "dep": 3.2
+      }
+    ]
+  },
+  "Estoril|Famalicão|2026-04-26": {
+    "seri": [
+      {
+        "zaman": 1776973286.809321,
+        "ev": 3.25,
+        "dep": 2.28
+      },
+      {
+        "zaman": 1777058136.556752,
+        "ev": 3.3,
+        "dep": 2.25
+      }
+    ]
+  },
+  "Santa Clara|Braga|2026-04-26": {
+    "seri": [
+      {
+        "zaman": 1776973286.809529,
+        "ev": 4.2,
+        "dep": 2.03
+      },
+      {
+        "zaman": 1776975810.578589,
+        "ev": 4.2,
+        "dep": 2.05
+      },
+      {
+        "zaman": 1777058136.5569851,
+        "ev": 3.55,
+        "dep": 2.34
+      }
+    ]
+  },
+  "CF Estrela|FC Porto|2026-04-26": {
+    "seri": [
+      {
+        "zaman": 1776973286.809742,
+        "ev": 11.0,
+        "dep": 1.36
+      },
+      {
+        "zaman": 1777058136.557204,
+        "ev": 12.0,
+        "dep": 1.35
+      }
+    ]
+  },
+  "AVS Futebol SAD|Sporting Lisbon|2026-04-26": {
+    "seri": [
+      {
+        "zaman": 1776973286.809941,
+        "ev": 21.0,
+        "dep": 1.15
+      },
+      {
+        "zaman": 1776974547.104276,
+        "ev": 21.0,
+        "dep": 1.14
+      }
+    ]
+  },
+  "Corinthians|Vasco da Gama|2026-04-26": {
+    "seri": [
+      {
+        "zaman": 1776973287.446847,
+        "ev": 2.12,
+        "dep": 3.85
+      },
+      {
+        "zaman": 1776980650.5154188,
+        "ev": 2.12,
+        "dep": 3.8
+      },
+      {
+        "zaman": 1777058137.220038,
+        "ev": 2.09,
+        "dep": 3.9
+      }
+    ]
+  },
+  "Grêmio|Coritiba|2026-04-26": {
+    "seri": [
+      {
+        "zaman": 1776973287.44702,
+        "ev": 2.0,
+        "dep": 4.4
+      },
+      {
+        "zaman": 1777058137.220317,
+        "ev": 2.02,
+        "dep": 4.4
+      }
+    ]
+  },
+  "Genclerbirligi SK|Kocaelispor|2026-04-26": {
+    "seri": [
+      {
+        "zaman": 1776973289.035563,
+        "ev": 2.61,
+        "dep": 2.96
+      },
+      {
+        "zaman": 1776982499.376904,
+        "ev": 2.61,
+        "dep": 2.95
+      },
+      {
+        "zaman": 1777058137.785224,
+        "ev": 2.56,
+        "dep": 3.05
+      }
+    ]
+  },
+  "Galatasaray|Fenerbahce|2026-04-26": {
+    "seri": [
+      {
+        "zaman": 1776973289.03574,
+        "ev": 2.35,
+        "dep": 3.39
+      },
+      {
+        "zaman": 1777058137.785553,
+        "ev": 2.42,
+        "dep": 3.44
+      }
+    ]
+  },
+  "1. FC Nürnberg|1. FC Magdeburg|2026-04-26": {
+    "seri": [
+      {
+        "zaman": 1776973289.582958,
+        "ev": 2.5,
+        "dep": 2.78
+      }
+    ]
+  },
+  "SC Paderborn|FC Schalke 04|2026-04-26": {
+    "seri": [
+      {
+        "zaman": 1776973289.583167,
+        "ev": 2.4,
+        "dep": 3.24
+      },
+      {
+        "zaman": 1776974549.417877,
+        "ev": 2.4,
+        "dep": 3.21
+      },
+      {
+        "zaman": 1777058138.3683379,
+        "ev": 2.4,
+        "dep": 3.24
+      }
+    ]
+  },
+  "VfL Bochum|Greuther Fürth|2026-04-26": {
+    "seri": [
+      {
+        "zaman": 1776973289.5833752,
+        "ev": 1.77,
+        "dep": 4.6
+      },
+      {
+        "zaman": 1777058138.368588,
+        "ev": 1.78,
+        "dep": 4.7
+      }
+    ]
+  },
+  "Atletico Paranaense|Vitoria|2026-04-26": {
+    "seri": [
+      {
+        "zaman": 1776980650.5161972,
+        "ev": 1.75,
+        "dep": 5.9
+      },
+      {
+        "zaman": 1777058137.2205691,
+        "ev": 1.72,
+        "dep": 6.2
+      }
+    ]
+  },
+  "Bragantino-SP|Palmeiras|2026-04-26": {
+    "seri": [
+      {
+        "zaman": 1776980650.5164769,
+        "ev": 3.3,
+        "dep": 2.35
+      },
+      {
+        "zaman": 1777058137.220798,
+        "ev": 3.22,
+        "dep": 2.46
+      }
+    ]
+  },
+  "Leicester City|Millwall|2026-04-24": {
+    "seri": [
+      {
+        "zaman": 1776980653.401703,
+        "ev": 4.8,
+        "dep": 1.83
+      },
+      {
+        "zaman": 1776981876.807393,
+        "ev": 4.7,
+        "dep": 1.83
+      }
+    ]
+  },
+  "Charlton Athletic|Hull City|2026-04-25": {
+    "seri": [
+      {
+        "zaman": 1776980653.401818,
+        "ev": 3.05,
+        "dep": 2.63
+      },
+      {
+        "zaman": 1777058138.935133,
+        "ev": 3.0,
+        "dep": 2.7
+      }
+    ]
+  },
+  "West Bromwich Albion|Ipswich Town|2026-04-25": {
+    "seri": [
+      {
+        "zaman": 1776980653.40191,
+        "ev": 4.2,
+        "dep": 1.94
+      },
+      {
+        "zaman": 1776981876.807948,
+        "ev": 4.2,
+        "dep": 1.95
+      },
+      {
+        "zaman": 1777058138.935462,
+        "ev": 3.9,
+        "dep": 2.08
+      }
+    ]
+  },
+  "Middlesbrough|Watford|2026-04-25": {
+    "seri": [
+      {
+        "zaman": 1776980653.401995,
+        "ev": 1.49,
+        "dep": 7.6
+      },
+      {
+        "zaman": 1777058138.9358861,
+        "ev": 1.44,
+        "dep": 8.0
+      }
+    ]
+  },
+  "Birmingham City|Bristol City|2026-04-25": {
+    "seri": [
+      {
+        "zaman": 1776980653.402078,
+        "ev": 1.76,
+        "dep": 5.0
+      },
+      {
+        "zaman": 1777058138.936291,
+        "ev": 1.78,
+        "dep": 4.8
+      }
+    ]
+  },
+  "Queens Park Rangers|Derby County|2026-04-25": {
+    "seri": [
+      {
+        "zaman": 1776980653.4021618,
+        "ev": 3.15,
+        "dep": 2.4
+      }
+    ]
+  },
+  "Norwich City|Swansea City|2026-04-25": {
+    "seri": [
+      {
+        "zaman": 1776980653.402246,
+        "ev": 1.75,
+        "dep": 5.0
+      },
+      {
+        "zaman": 1777058138.9369411,
+        "ev": 1.75,
+        "dep": 5.1
+      }
+    ]
+  },
+  "Oxford United|Sheffield Wednesday|2026-04-25": {
+    "seri": [
+      {
+        "zaman": 1776980653.402328,
+        "ev": 1.48,
+        "dep": 8.0
+      },
+      {
+        "zaman": 1777058138.937234,
+        "ev": 1.49,
+        "dep": 7.75
+      }
+    ]
+  },
+  "Stoke City|Portsmouth|2026-04-25": {
+    "seri": [
+      {
+        "zaman": 1776980653.4024131,
+        "ev": 2.84,
+        "dep": 2.71
+      },
+      {
+        "zaman": 1777058138.937545,
+        "ev": 2.8,
+        "dep": 2.8
+      }
+    ]
+  },
+  "Sheffield United|Preston North End|2026-04-25": {
+    "seri": [
+      {
+        "zaman": 1776980653.402501,
+        "ev": 1.71,
+        "dep": 5.25
+      },
+      {
+        "zaman": 1777058138.937821,
+        "ev": 1.67,
+        "dep": 5.25
+      }
+    ]
+  },
+  "Coventry City|Wrexham AFC|2026-04-26": {
+    "seri": [
+      {
+        "zaman": 1776980653.402598,
+        "ev": 2.24,
+        "dep": 3.35
+      },
+      {
+        "zaman": 1777058138.938045,
+        "ev": 2.16,
+        "dep": 3.4
+      }
+    ]
+  },
+  "Gil Vicente|Casa Pia|2026-04-27": {
+    "seri": [
+      {
+        "zaman": 1777058136.557621,
+        "ev": 1.65,
+        "dep": 6.2
+      }
+    ]
+  },
+  "Atletico Mineiro|Flamengo|2026-04-26": {
+    "seri": [
+      {
+        "zaman": 1777058137.22101,
+        "ev": 4.0,
+        "dep": 2.09
+      }
+    ]
+  },
+  "Fluminense|Chapecoense|2026-04-26": {
+    "seri": [
+      {
+        "zaman": 1777058137.22123,
+        "ev": 1.32,
+        "dep": 12.0
+      }
+    ]
+  },
+  "Alanyaspor|Samsunspor|2026-04-27": {
+    "seri": [
+      {
+        "zaman": 1777058137.785783,
+        "ev": 2.41,
+        "dep": 3.55
+      }
+    ]
+  },
+  "Besiktas JK|Fatih Karagümrük|2026-04-27": {
+    "seri": [
+      {
+        "zaman": 1777058137.785998,
+        "ev": 1.35,
+        "dep": 9.5
+      }
+    ]
+  },
+  "Torku Konyaspor|Trabzonspor|2026-04-27": {
+    "seri": [
+      {
+        "zaman": 1777058137.786201,
+        "ev": 3.1,
+        "dep": 2.44
+      }
+    ]
+  },
+  "Nantes|Marseille|2026-05-02": {
+    "seri": [
+      {
+        "zaman": 1777500879.053068,
+        "ev": 4.8,
+        "dep": 1.77
+      },
+      {
+        "zaman": 1777506851.771002,
+        "ev": 4.8,
+        "dep": 1.78
+      },
+      {
+        "zaman": 1777567981.386271,
+        "ev": 4.8,
+        "dep": 1.79
+      }
+    ]
+  },
+  "Paris Saint Germain|Lorient|2026-05-02": {
+    "seri": [
+      {
+        "zaman": 1777500879.0534122,
+        "ev": 1.33,
+        "dep": 10.0
+      },
+      {
+        "zaman": 1777567981.3863978,
+        "ev": 1.33,
+        "dep": 9.85
+      }
+    ]
+  },
+  "Metz|AS Monaco|2026-05-02": {
+    "seri": [
+      {
+        "zaman": 1777500879.053675,
+        "ev": 7.5,
+        "dep": 1.45
+      },
+      {
+        "zaman": 1777567981.38649,
+        "ev": 7.5,
+        "dep": 1.46
+      },
+      {
+        "zaman": 1777570268.087857,
+        "ev": 7.5,
+        "dep": 1.45
+      }
+    ]
+  },
+  "Nice|RC Lens|2026-05-02": {
+    "seri": [
+      {
+        "zaman": 1777500879.0539148,
+        "ev": 4.4,
+        "dep": 1.81
+      },
+      {
+        "zaman": 1777567981.386573,
+        "ev": 4.5,
+        "dep": 1.81
+      },
+      {
+        "zaman": 1777570268.08795,
+        "ev": 4.4,
+        "dep": 1.81
+      }
+    ]
+  },
+  "Nacional|AVS Futebol SAD|2026-05-02": {
+    "seri": [
+      {
+        "zaman": 1777500879.597666,
+        "ev": 1.5,
+        "dep": 7.2
+      },
+      {
+        "zaman": 1777567981.9137962,
+        "ev": 1.5,
+        "dep": 7.4
+      }
+    ]
+  },
+  "Arouca|Santa Clara|2026-05-02": {
+    "seri": [
+      {
+        "zaman": 1777500879.597933,
+        "ev": 3.04,
+        "dep": 2.67
+      },
+      {
+        "zaman": 1777567981.914042,
+        "ev": 3.03,
+        "dep": 2.7
+      }
+    ]
+  },
+  "Moreirense FC|CF Estrela|2026-05-02": {
+    "seri": [
+      {
+        "zaman": 1777500879.598179,
+        "ev": 2.58,
+        "dep": 2.98
+      },
+      {
+        "zaman": 1777567981.914258,
+        "ev": 2.57,
+        "dep": 2.95
+      }
+    ]
+  },
+  "Famalicão|Benfica|2026-05-02": {
+    "seri": [
+      {
+        "zaman": 1777500879.598413,
+        "ev": 6.4,
+        "dep": 1.62
+      },
+      {
+        "zaman": 1777567981.914458,
+        "ev": 5.9,
+        "dep": 1.63
+      },
+      {
+        "zaman": 1777570268.689121,
+        "ev": 6.0,
+        "dep": 1.63
+      }
+    ]
+  },
+  "FC Porto|Alverca|2026-05-02": {
+    "seri": [
+      {
+        "zaman": 1777500879.5986292,
+        "ev": 1.22,
+        "dep": 16.5
+      },
+      {
+        "zaman": 1777567981.9146502,
+        "ev": 1.22,
+        "dep": 18.0
+      }
+    ]
+  },
+  "Botafogo|Remo|2026-05-02": {
+    "seri": [
+      {
+        "zaman": 1777500880.215862,
+        "ev": 1.57,
+        "dep": 6.8
+      },
+      {
+        "zaman": 1777567982.5312982,
+        "ev": 1.59,
+        "dep": 6.8
+      }
+    ]
+  },
+  "Vitoria|Coritiba|2026-05-02": {
+    "seri": [
+      {
+        "zaman": 1777500880.216217,
+        "ev": 2.23,
+        "dep": 3.58
+      },
+      {
+        "zaman": 1777567982.53159,
+        "ev": 2.34,
+        "dep": 3.5
+      }
+    ]
+  },
+  "Palmeiras|Santos|2026-05-02": {
+    "seri": [
+      {
+        "zaman": 1777500880.21651,
+        "ev": 1.53,
+        "dep": 7.5
+      },
+      {
+        "zaman": 1777567982.531827,
+        "ev": 1.53,
+        "dep": 7.2
+      },
+      {
+        "zaman": 1777570269.527195,
+        "ev": 1.54,
+        "dep": 7.2
+      }
+    ]
+  },
+  "Çaykur Rizespor|Torku Konyaspor|2026-05-01": {
+    "seri": [
+      {
+        "zaman": 1777500880.76174,
+        "ev": 2.16,
+        "dep": 3.58
+      },
+      {
+        "zaman": 1777567983.098131,
+        "ev": 2.13,
+        "dep": 3.7
+      }
+    ]
+  },
+  "Gazişehir Gaziantep|Besiktas JK|2026-05-01": {
+    "seri": [
+      {
+        "zaman": 1777500880.762008,
+        "ev": 4.2,
+        "dep": 1.84
+      },
+      {
+        "zaman": 1777567983.09822,
+        "ev": 4.2,
+        "dep": 1.91
+      }
+    ]
+  },
+  "Fenerbahce|Basaksehir|2026-05-02": {
+    "seri": [
+      {
+        "zaman": 1777500880.762221,
+        "ev": 1.63,
+        "dep": 5.2
+      },
+      {
+        "zaman": 1777506853.443747,
+        "ev": 1.63,
+        "dep": 5.25
+      },
+      {
+        "zaman": 1777509315.101012,
+        "ev": 1.63,
+        "dep": 5.2
+      },
+      {
+        "zaman": 1777567983.098294,
+        "ev": 1.64,
+        "dep": 5.2
+      }
+    ]
+  },
+  "Samsunspor|Galatasaray|2026-05-02": {
+    "seri": [
+      {
+        "zaman": 1777500880.7624278,
+        "ev": 4.9,
+        "dep": 1.7
+      },
+      {
+        "zaman": 1777567983.098367,
+        "ev": 5.0,
+        "dep": 1.69
+      }
+    ]
+  },
+  "Trabzonspor|Goztepe|2026-05-02": {
+    "seri": [
+      {
+        "zaman": 1777500880.7626612,
+        "ev": 1.85,
+        "dep": 4.3
+      },
+      {
+        "zaman": 1777567983.098439,
+        "ev": 1.85,
+        "dep": 4.4
+      }
+    ]
+  },
+  "Dynamo Dresden|1. FC Kaiserslautern|2026-05-02": {
+    "seri": [
+      {
+        "zaman": 1777500881.313118,
+        "ev": 1.88,
+        "dep": 3.9
+      },
+      {
+        "zaman": 1777567983.649865,
+        "ev": 1.88,
+        "dep": 4.1
+      }
+    ]
+  },
+  "Arminia Bielefeld|VfL Bochum|2026-05-02": {
+    "seri": [
+      {
+        "zaman": 1777500881.313361,
+        "ev": 2.06,
+        "dep": 3.48
+      }
+    ]
+  },
+  "Holstein Kiel|Eintracht Braunschweig|2026-05-02": {
+    "seri": [
+      {
+        "zaman": 1777500881.3135822,
+        "ev": 2.22,
+        "dep": 3.3
+      },
+      {
+        "zaman": 1777567983.6503592,
+        "ev": 2.2,
+        "dep": 3.3
+      }
+    ]
+  },
+  "FC Schalke 04|Fortuna Düsseldorf|2026-05-02": {
+    "seri": [
+      {
+        "zaman": 1777500881.313815,
+        "ev": 1.6,
+        "dep": 5.8
+      },
+      {
+        "zaman": 1777567983.650607,
+        "ev": 1.57,
+        "dep": 5.6
+      }
+    ]
+  },
+  "Portsmouth|Birmingham City|2026-05-02": {
+    "seri": [
+      {
+        "zaman": 1777500881.846271,
+        "ev": 2.52,
+        "dep": 2.9
+      },
+      {
+        "zaman": 1777567984.2428071,
+        "ev": 2.5,
+        "dep": 2.86
+      }
+    ]
+  },
+  "Blackburn Rovers|Leicester City|2026-05-02": {
+    "seri": [
+      {
+        "zaman": 1777500881.8465521,
+        "ev": 2.32,
+        "dep": 3.35
+      },
+      {
+        "zaman": 1777506854.800977,
+        "ev": 2.3,
+        "dep": 3.35
+      },
+      {
+        "zaman": 1777567984.243165,
+        "ev": 2.28,
+        "dep": 3.35
+      }
+    ]
+  },
+  "Bristol City|Stoke City|2026-05-02": {
+    "seri": [
+      {
+        "zaman": 1777500881.846814,
+        "ev": 2.0,
+        "dep": 3.7
+      },
+      {
+        "zaman": 1777506854.801227,
+        "ev": 1.99,
+        "dep": 3.7
+      },
+      {
+        "zaman": 1777567984.243517,
+        "ev": 2.02,
+        "dep": 3.7
+      }
+    ]
+  },
+  "Swansea City|Charlton Athletic|2026-05-02": {
+    "seri": [
+      {
+        "zaman": 1777500881.8470342,
+        "ev": 1.82,
+        "dep": 4.6
+      },
+      {
+        "zaman": 1777506854.801453,
+        "ev": 1.84,
+        "dep": 4.7
+      },
+      {
+        "zaman": 1777509316.315808,
+        "ev": 1.84,
+        "dep": 4.6
+      },
+      {
+        "zaman": 1777567984.243778,
+        "ev": 1.82,
+        "dep": 4.6
+      }
+    ]
+  },
+  "Watford|Coventry City|2026-05-02": {
+    "seri": [
+      {
+        "zaman": 1777500881.8472571,
+        "ev": 3.45,
+        "dep": 2.06
+      },
+      {
+        "zaman": 1777567984.244006,
+        "ev": 3.6,
+        "dep": 2.06
+      },
+      {
+        "zaman": 1777570271.3174121,
+        "ev": 3.45,
+        "dep": 2.06
+      }
+    ]
+  },
+  "Derby County|Sheffield United|2026-05-02": {
+    "seri": [
+      {
+        "zaman": 1777500881.8474848,
+        "ev": 1.82,
+        "dep": 4.5
+      },
+      {
+        "zaman": 1777567984.2442188,
+        "ev": 1.89,
+        "dep": 4.4
+      }
+    ]
+  },
+  "Hull City|Norwich City|2026-05-02": {
+    "seri": [
+      {
+        "zaman": 1777500881.8477051,
+        "ev": 1.89,
+        "dep": 4.5
+      },
+      {
+        "zaman": 1777506854.802145,
+        "ev": 1.89,
+        "dep": 4.35
+      },
+      {
+        "zaman": 1777567984.244429,
+        "ev": 1.95,
+        "dep": 4.1
+      },
+      {
+        "zaman": 1777570271.317846,
+        "ev": 1.93,
+        "dep": 4.1
+      }
+    ]
+  },
+  "Ipswich Town|Queens Park Rangers|2026-05-02": {
+    "seri": [
+      {
+        "zaman": 1777500881.8479161,
+        "ev": 1.34,
+        "dep": 10.5
+      },
+      {
+        "zaman": 1777567984.244637,
+        "ev": 1.36,
+        "dep": 11.0
+      }
+    ]
+  },
+  "Wrexham AFC|Middlesbrough|2026-05-02": {
+    "seri": [
+      {
+        "zaman": 1777500881.848137,
+        "ev": 2.7,
+        "dep": 2.56
+      },
+      {
+        "zaman": 1777567984.244849,
+        "ev": 2.74,
+        "dep": 2.56
+      }
+    ]
+  },
+  "Millwall|Oxford United|2026-05-02": {
+    "seri": [
+      {
+        "zaman": 1777500881.848344,
+        "ev": 1.39,
+        "dep": 9.5
+      },
+      {
+        "zaman": 1777567984.245058,
+        "ev": 1.39,
+        "dep": 10.0
+      }
+    ]
+  },
+  "Preston North End|Southampton|2026-05-02": {
+    "seri": [
+      {
+        "zaman": 1777500881.848546,
+        "ev": 3.4,
+        "dep": 2.15
+      },
+      {
+        "zaman": 1777567984.245279,
+        "ev": 3.4,
+        "dep": 2.12
+      }
+    ]
+  },
+  "Sheffield Wednesday|West Bromwich Albion|2026-05-02": {
+    "seri": [
+      {
+        "zaman": 1777500881.8487601,
+        "ev": 6.5,
+        "dep": 1.55
+      },
+      {
+        "zaman": 1777567984.245483,
+        "ev": 6.6,
+        "dep": 1.55
+      }
+    ]
+  },
+  "FC Utrecht|NAC Breda|2026-05-02": {
+    "seri": [
+      {
+        "zaman": 1777500882.423531,
+        "ev": 1.82,
+        "dep": 4.6
+      },
+      {
+        "zaman": 1777567984.796521,
+        "ev": 1.83,
+        "dep": 4.6
+      }
+    ]
+  },
+  "Groningen|Excelsior|2026-05-02": {
+    "seri": [
+      {
+        "zaman": 1777500882.42383,
+        "ev": 1.71,
+        "dep": 4.8
+      }
+    ]
+  },
+  "Ajax|PSV Eindhoven|2026-05-02": {
+    "seri": [
+      {
+        "zaman": 1777500882.424115,
+        "ev": 2.6,
+        "dep": 2.52
+      }
+    ]
+  },
+  "NEC Nijmegen|SC Telstar|2026-05-02": {
+    "seri": [
+      {
+        "zaman": 1777500882.424382,
+        "ev": 1.5,
+        "dep": 7.0
+      },
+      {
+        "zaman": 1777567984.7973208,
+        "ev": 1.5,
+        "dep": 6.4
+      }
+    ]
+  },
+  "Atletico Paranaense|Grêmio|2026-05-02": {
+    "seri": [
+      {
+        "zaman": 1777506852.873197,
+        "ev": 1.94,
+        "dep": 4.26
+      },
+      {
+        "zaman": 1777567982.5320609,
+        "ev": 1.94,
+        "dep": 4.5
+      }
+    ]
+  },
+  "Cruzeiro|Atletico Mineiro|2026-05-03": {
+    "seri": [
+      {
+        "zaman": 1777507559.381265,
+        "ev": 2.02,
+        "dep": 4.3
+      },
+      {
+        "zaman": 1777567982.532288,
+        "ev": 2.02,
+        "dep": 4.4
+      }
+    ]
+  },
+  "Lille|Le Havre|2026-05-03": {
+    "seri": [
+      {
+        "zaman": 1777567981.386655,
+        "ev": 1.44,
+        "dep": 9.0
+      }
+    ]
+  },
+  "Auxerre|Angers|2026-05-03": {
+    "seri": [
+      {
+        "zaman": 1777567981.386753,
+        "ev": 1.76,
+        "dep": 5.9
+      }
+    ]
+  },
+  "Paris FC|Brest|2026-05-03": {
+    "seri": [
+      {
+        "zaman": 1777567981.386834,
+        "ev": 2.12,
+        "dep": 3.85
+      }
+    ]
+  },
+  "Strasbourg|Toulouse|2026-05-03": {
+    "seri": [
+      {
+        "zaman": 1777567981.386919,
+        "ev": 2.6,
+        "dep": 2.9
+      },
+      {
+        "zaman": 1777570268.088323,
+        "ev": 2.62,
+        "dep": 2.82
+      }
+    ]
+  },
+  "Casa Pia|Tondela|2026-05-03": {
+    "seri": [
+      {
+        "zaman": 1777567981.914824,
+        "ev": 2.39,
+        "dep": 3.33
+      }
+    ]
+  },
+  "1. FC Magdeburg|Hertha Berlin|2026-05-03": {
+    "seri": [
+      {
+        "zaman": 1777567983.650966,
+        "ev": 2.2,
+        "dep": 3.1
+      }
+    ]
+  },
+  "Greuther Fürth|1. FC Nürnberg|2026-05-03": {
+    "seri": [
+      {
+        "zaman": 1777567983.6512141,
+        "ev": 2.8,
+        "dep": 2.46
+      }
+    ]
+  },
+  "Elversberg|SC Paderborn|2026-05-03": {
+    "seri": [
+      {
+        "zaman": 1777567983.6514409,
+        "ev": 2.15,
+        "dep": 3.1
+      }
+    ]
+  },
+  "Hannover 96|SC Preußen Münster|2026-05-03": {
+    "seri": [
+      {
+        "zaman": 1777567983.651916,
+        "ev": 1.38,
+        "dep": 8.0
+      }
+    ]
+  },
+  "Karlsruher SC|SV Darmstadt 98|2026-05-03": {
+    "seri": [
+      {
+        "zaman": 1777567983.6523142,
+        "ev": 2.88,
+        "dep": 2.25
+      }
+    ]
+  },
+  "FC Volendam|Heerenveen|2026-05-03": {
+    "seri": [
+      {
+        "zaman": 1777567984.797534,
+        "ev": 3.55,
+        "dep": 2.05
+      }
+    ]
+  },
+  "FC Zwolle|Heracles Almelo|2026-05-03": {
+    "seri": [
+      {
+        "zaman": 1777567984.79774,
+        "ev": 1.5,
+        "dep": 6.75
+      }
+    ]
+  },
+  "Fortuna Sittard|Feyenoord|2026-05-03": {
+    "seri": [
+      {
+        "zaman": 1777567984.797944,
+        "ev": 5.85,
+        "dep": 1.56
+      }
+    ]
+  },
+  "AZ Alkmaar|FC Twente Enschede|2026-05-03": {
+    "seri": [
+      {
+        "zaman": 1777567984.798142,
+        "ev": 2.75,
+        "dep": 2.5
+      }
+    ]
+  },
+  "Sparta Rotterdam|Go Ahead Eagles|2026-05-03": {
+    "seri": [
+      {
+        "zaman": 1777567984.798337,
+        "ev": 2.08,
+        "dep": 3.6
+      }
+    ]
+  },
+  "Braga|Estoril|2026-05-03": {
+    "seri": [
+      {
+        "zaman": 1777570268.6896691,
+        "ev": 1.7,
+        "dep": 5.53
+      }
+    ]
+  },
+  "Antalyaspor|Alanyaspor|2026-05-03": {
+    "seri": [
+      {
+        "zaman": 1777570270.073281,
+        "ev": 3.22,
+        "dep": 2.43
+      }
+    ]
+  },
+  "Kayserispor|Eyüpspor|2026-05-03": {
+    "seri": [
+      {
+        "zaman": 1777570270.0735302,
+        "ev": 1.85,
+        "dep": 4.9
+      }
+    ]
+  },
+  "Fatih Karagümrük|Genclerbirligi SK|2026-05-03": {
+    "seri": [
+      {
+        "zaman": 1777570270.073754,
+        "ev": 2.77,
+        "dep": 2.73
+      }
+    ]
+  },
+  "Kasimpasa SK|Kocaelispor|2026-05-03": {
+    "seri": [
+      {
+        "zaman": 1777570270.073972,
+        "ev": 2.31,
+        "dep": 3.85
+      }
+    ]
+  },
+  "Strasbourg|AS Monaco|2026-05-17": {
+    "seri": [
+      {
+        "zaman": 1778918327.903927,
+        "ev": 3.2,
+        "dep": 2.21
+      },
+      {
+        "zaman": 1778937822.874323,
+        "ev": 3.25,
+        "dep": 2.21
+      },
+      {
+        "zaman": 1778944760.404171,
+        "ev": 3.25,
+        "dep": 2.22
+      }
+    ]
+  },
+  "Brest|Angers|2026-05-17": {
+    "seri": [
+      {
+        "zaman": 1778918327.904373,
+        "ev": 1.89,
+        "dep": 4.4
+      },
+      {
+        "zaman": 1778937822.874658,
+        "ev": 1.89,
+        "dep": 4.6
+      },
+      {
+        "zaman": 1778963202.645182,
+        "ev": 1.91,
+        "dep": 4.5
+      }
+    ]
+  },
+  "Lille|Auxerre|2026-05-17": {
+    "seri": [
+      {
+        "zaman": 1778918327.904736,
+        "ev": 1.42,
+        "dep": 9.6
+      },
+      {
+        "zaman": 1778923626.117184,
+        "ev": 1.41,
+        "dep": 9.6
+      },
+      {
+        "zaman": 1778963202.645621,
+        "ev": 1.44,
+        "dep": 9.2
+      }
+    ]
+  },
+  "Lorient|Le Havre|2026-05-17": {
+    "seri": [
+      {
+        "zaman": 1778918327.905046,
+        "ev": 2.74,
+        "dep": 2.74
+      },
+      {
+        "zaman": 1778920382.8164108,
+        "ev": 2.78,
+        "dep": 2.74
+      },
+      {
+        "zaman": 1778921154.959638,
+        "ev": 2.74,
+        "dep": 2.74
+      },
+      {
+        "zaman": 1778923626.117285,
+        "ev": 2.73,
+        "dep": 2.76
+      },
+      {
+        "zaman": 1778937822.8752441,
+        "ev": 2.74,
+        "dep": 2.74
+      },
+      {
+        "zaman": 1778963202.6458912,
+        "ev": 2.76,
+        "dep": 2.7
+      },
+      {
+        "zaman": 1778964948.805836,
+        "ev": 2.76,
+        "dep": 2.72
+      }
+    ]
+  },
+  "Lyon|RC Lens|2026-05-17": {
+    "seri": [
+      {
+        "zaman": 1778918327.905324,
+        "ev": 1.76,
+        "dep": 4.8
+      },
+      {
+        "zaman": 1778921154.959905,
+        "ev": 1.77,
+        "dep": 4.8
+      },
+      {
+        "zaman": 1778922141.5372102,
+        "ev": 1.76,
+        "dep": 4.8
+      },
+      {
+        "zaman": 1778937822.8756962,
+        "ev": 1.8,
+        "dep": 4.6
+      },
+      {
+        "zaman": 1778963202.646157,
+        "ev": 1.78,
+        "dep": 4.7
+      },
+      {
+        "zaman": 1778964948.806158,
+        "ev": 1.77,
+        "dep": 4.7
+      }
+    ]
+  },
+  "Marseille|Rennes|2026-05-17": {
+    "seri": [
+      {
+        "zaman": 1778918327.905539,
+        "ev": 2.1,
+        "dep": 3.75
+      },
+      {
+        "zaman": 1778921154.960118,
+        "ev": 2.08,
+        "dep": 3.75
+      },
+      {
+        "zaman": 1778937822.8759391,
+        "ev": 2.1,
+        "dep": 3.75
+      },
+      {
+        "zaman": 1778945615.8511732,
+        "ev": 2.12,
+        "dep": 3.75
+      },
+      {
+        "zaman": 1778963202.646393,
+        "ev": 2.16,
+        "dep": 3.6
+      }
+    ]
+  },
+  "Nice|Metz|2026-05-17": {
+    "seri": [
+      {
+        "zaman": 1778918327.905756,
+        "ev": 1.39,
+        "dep": 9.55
+      },
+      {
+        "zaman": 1778923626.117571,
+        "ev": 1.39,
+        "dep": 10.0
+      },
+      {
+        "zaman": 1778924538.246868,
+        "ev": 1.39,
+        "dep": 9.6
+      },
+      {
+        "zaman": 1778937822.8761752,
+        "ev": 1.39,
+        "dep": 9.8
+      },
+      {
+        "zaman": 1778939048.179931,
+        "ev": 1.39,
+        "dep": 9.6
+      },
+      {
+        "zaman": 1778940034.836606,
+        "ev": 1.39,
+        "dep": 10.0
+      }
+    ]
+  },
+  "Nantes|Toulouse|2026-05-17": {
+    "seri": [
+      {
+        "zaman": 1778918327.905972,
+        "ev": 2.66,
+        "dep": 2.72
+      },
+      {
+        "zaman": 1778920382.817323,
+        "ev": 2.68,
+        "dep": 2.72
+      },
+      {
+        "zaman": 1778921154.9605381,
+        "ev": 2.72,
+        "dep": 2.72
+      },
+      {
+        "zaman": 1778937822.876402,
+        "ev": 2.72,
+        "dep": 2.71
+      },
+      {
+        "zaman": 1778963202.6468601,
+        "ev": 2.69,
+        "dep": 2.76
+      },
+      {
+        "zaman": 1778964948.806868,
+        "ev": 2.7,
+        "dep": 2.76
+      }
+    ]
+  },
+  "Paris FC|Paris Saint Germain|2026-05-17": {
+    "seri": [
+      {
+        "zaman": 1778918327.9061959,
+        "ev": 5.75,
+        "dep": 1.64
+      },
+      {
+        "zaman": 1778963202.6470988,
+        "ev": 5.5,
+        "dep": 1.63
+      }
+    ]
+  },
+  "Moreirense FC|AVS Futebol SAD|2026-05-16": {
+    "seri": [
+      {
+        "zaman": 1778918328.508259,
+        "ev": 1.93,
+        "dep": 4.3
+      },
+      {
+        "zaman": 1778920383.358071,
+        "ev": 1.94,
+        "dep": 4.3
+      },
+      {
+        "zaman": 1778921155.52305,
+        "ev": 1.93,
+        "dep": 4.4
+      },
+      {
+        "zaman": 1778922142.122389,
+        "ev": 1.95,
+        "dep": 4.3
+      },
+      {
+        "zaman": 1778923626.681418,
+        "ev": 1.95,
+        "dep": 4.4
+      },
+      {
+        "zaman": 1778924538.809298,
+        "ev": 1.95,
+        "dep": 4.3
+      },
+      {
+        "zaman": 1778937823.526696,
+        "ev": 2.48,
+        "dep": 3.5
+      },
+      {
+        "zaman": 1778939048.7298691,
+        "ev": 2.5,
+        "dep": 3.45
+      },
+      {
+        "zaman": 1778940035.608896,
+        "ev": 2.5,
+        "dep": 3.75
+      }
+    ]
+  },
+  "FC Porto|Santa Clara|2026-05-16": {
+    "seri": [
+      {
+        "zaman": 1778918328.508495,
+        "ev": 1.37,
+        "dep": 11.0
+      },
+      {
+        "zaman": 1778920383.3582752,
+        "ev": 1.36,
+        "dep": 11.0
+      },
+      {
+        "zaman": 1778922142.122493,
+        "ev": 1.36,
+        "dep": 11.5
+      },
+      {
+        "zaman": 1778923626.681717,
+        "ev": 1.36,
+        "dep": 11.0
+      },
+      {
+        "zaman": 1778937823.526952,
+        "ev": 1.36,
+        "dep": 12.0
+      },
+      {
+        "zaman": 1778939048.7300532,
+        "ev": 1.38,
+        "dep": 12.5
+      },
+      {
+        "zaman": 1778940035.609196,
+        "ev": 1.34,
+        "dep": 12.0
+      }
+    ]
+  },
+  "Arouca|Tondela|2026-05-16": {
+    "seri": [
+      {
+        "zaman": 1778918328.508686,
+        "ev": 3.4,
+        "dep": 2.27
+      },
+      {
+        "zaman": 1778920383.3584452,
+        "ev": 3.4,
+        "dep": 2.26
+      },
+      {
+        "zaman": 1778923626.6819599,
+        "ev": 3.45,
+        "dep": 2.26
+      },
+      {
+        "zaman": 1778924538.809845,
+        "ev": 3.45,
+        "dep": 2.24
+      },
+      {
+        "zaman": 1778937823.527149,
+        "ev": 3.5,
+        "dep": 2.22
+      },
+      {
+        "zaman": 1778939048.7302039,
+        "ev": 3.55,
+        "dep": 2.28
+      },
+      {
+        "zaman": 1778940035.609439,
+        "ev": 3.6,
+        "dep": 2.18
+      },
+      {
+        "zaman": 1778942091.521861,
+        "ev": 3.7,
+        "dep": 2.18
+      },
+      {
+        "zaman": 1778943565.870472,
+        "ev": 3.6,
+        "dep": 2.18
+      },
+      {
+        "zaman": 1778944760.9486341,
+        "ev": 3.65,
+        "dep": 2.18
+      },
+      {
+        "zaman": 1778945616.4267578,
+        "ev": 3.6,
+        "dep": 2.18
+      }
+    ]
+  },
+  "Braga|CF Estrela|2026-05-16": {
+    "seri": [
+      {
+        "zaman": 1778918328.508876,
+        "ev": 1.74,
+        "dep": 5.3
+      },
+      {
+        "zaman": 1778920383.3586078,
+        "ev": 1.73,
+        "dep": 5.3
+      },
+      {
+        "zaman": 1778921155.523844,
+        "ev": 1.72,
+        "dep": 5.3
+      },
+      {
+        "zaman": 1778922142.122655,
+        "ev": 1.72,
+        "dep": 5.4
+      },
+      {
+        "zaman": 1778923626.682198,
+        "ev": 1.74,
+        "dep": 5.4
+      },
+      {
+        "zaman": 1778937823.527343,
+        "ev": 1.74,
+        "dep": 5.3
+      },
+      {
+        "zaman": 1778939048.7303522,
+        "ev": 1.77,
+        "dep": 5.2
+      },
+      {
+        "zaman": 1778940035.609691,
+        "ev": 1.77,
+        "dep": 5.0
+      },
+      {
+        "zaman": 1778942091.522044,
+        "ev": 1.79,
+        "dep": 4.8
+      },
+      {
+        "zaman": 1778943565.870583,
+        "ev": 1.8,
+        "dep": 4.8
+      },
+      {
+        "zaman": 1778944760.9488761,
+        "ev": 1.78,
+        "dep": 4.9
+      },
+      {
+        "zaman": 1778945616.426929,
+        "ev": 1.79,
+        "dep": 4.8
+      }
+    ]
+  },
+  "Casa Pia|Rio Ave FC|2026-05-16": {
+    "seri": [
+      {
+        "zaman": 1778918328.509061,
+        "ev": 1.78,
+        "dep": 5.2
+      },
+      {
+        "zaman": 1778920383.3587708,
+        "ev": 1.79,
+        "dep": 5.0
+      },
+      {
+        "zaman": 1778921155.524095,
+        "ev": 1.79,
+        "dep": 5.1
+      },
+      {
+        "zaman": 1778922142.1227362,
+        "ev": 1.79,
+        "dep": 5.3
+      },
+      {
+        "zaman": 1778923626.6824372,
+        "ev": 1.76,
+        "dep": 5.4
+      },
+      {
+        "zaman": 1778937823.5275369,
+        "ev": 1.77,
+        "dep": 5.2
+      },
+      {
+        "zaman": 1778942091.522202,
+        "ev": 1.77,
+        "dep": 5.4
+      },
+      {
+        "zaman": 1778943565.870671,
+        "ev": 1.77,
+        "dep": 5.3
+      },
+      {
+        "zaman": 1778944760.949087,
+        "ev": 1.78,
+        "dep": 5.3
+      },
+      {
+        "zaman": 1778945616.427066,
+        "ev": 1.78,
+        "dep": 5.2
+      }
+    ]
+  },
+  "Nacional|Vitória SC|2026-05-16": {
+    "seri": [
+      {
+        "zaman": 1778918328.509234,
+        "ev": 2.26,
+        "dep": 3.6
+      },
+      {
+        "zaman": 1778920383.3589242,
+        "ev": 2.19,
+        "dep": 3.75
+      },
+      {
+        "zaman": 1778921155.524321,
+        "ev": 2.19,
+        "dep": 3.8
+      },
+      {
+        "zaman": 1778922142.1228092,
+        "ev": 2.19,
+        "dep": 3.75
+      },
+      {
+        "zaman": 1778924538.810551,
+        "ev": 2.19,
+        "dep": 3.7
+      },
+      {
+        "zaman": 1778937823.5277178,
+        "ev": 2.3,
+        "dep": 3.6
+      },
+      {
+        "zaman": 1778939048.730625,
+        "ev": 2.32,
+        "dep": 3.6
+      },
+      {
+        "zaman": 1778940035.610163,
+        "ev": 2.32,
+        "dep": 3.55
+      },
+      {
+        "zaman": 1778942091.522345,
+        "ev": 2.34,
+        "dep": 3.5
+      },
+      {
+        "zaman": 1778943565.870753,
+        "ev": 2.34,
+        "dep": 3.45
+      },
+      {
+        "zaman": 1778944760.949279,
+        "ev": 2.36,
+        "dep": 3.35
+      },
+      {
+        "zaman": 1778945616.427201,
+        "ev": 2.36,
+        "dep": 3.45
+      }
+    ]
+  },
+  "Famalicão|Alverca|2026-05-16": {
+    "seri": [
+      {
+        "zaman": 1778918328.509418,
+        "ev": 1.67,
+        "dep": 5.9
+      },
+      {
+        "zaman": 1778920383.3590841,
+        "ev": 1.67,
+        "dep": 6.0
+      },
+      {
+        "zaman": 1778937823.527903,
+        "ev": 1.63,
+        "dep": 6.2
+      },
+      {
+        "zaman": 1778939048.730763,
+        "ev": 1.64,
+        "dep": 6.2
+      },
+      {
+        "zaman": 1778940035.610389,
+        "ev": 1.64,
+        "dep": 6.4
+      },
+      {
+        "zaman": 1778942091.522487,
+        "ev": 1.63,
+        "dep": 6.4
+      },
+      {
+        "zaman": 1778944760.949478,
+        "ev": 1.66,
+        "dep": 6.2
+      },
+      {
+        "zaman": 1778945616.427326,
+        "ev": 1.67,
+        "dep": 6.2
+      }
+    ]
+  },
+  "Estoril|Benfica|2026-05-16": {
+    "seri": [
+      {
+        "zaman": 1778918328.509592,
+        "ev": 10.0,
+        "dep": 1.31
+      },
+      {
+        "zaman": 1778922142.122964,
+        "ev": 11.0,
+        "dep": 1.31
+      },
+      {
+        "zaman": 1778923626.6831229,
+        "ev": 11.0,
+        "dep": 1.3
+      },
+      {
+        "zaman": 1778939048.7308989,
+        "ev": 11.0,
+        "dep": 1.31
+      },
+      {
+        "zaman": 1778943565.870909,
+        "ev": 11.5,
+        "dep": 1.3
+      }
+    ]
+  },
+  "Sporting Lisbon|Gil Vicente|2026-05-16": {
+    "seri": [
+      {
+        "zaman": 1778918328.509753,
+        "ev": 1.25,
+        "dep": 15.5
+      },
+      {
+        "zaman": 1778920383.359375,
+        "ev": 1.22,
+        "dep": 16.5
+      },
+      {
+        "zaman": 1778924538.811224,
+        "ev": 1.22,
+        "dep": 16.0
+      },
+      {
+        "zaman": 1778939048.7310321,
+        "ev": 1.24,
+        "dep": 16.0
+      },
+      {
+        "zaman": 1778940035.610823,
+        "ev": 1.22,
+        "dep": 16.0
+      },
+      {
+        "zaman": 1778943565.870979,
+        "ev": 1.25,
+        "dep": 16.0
+      }
+    ]
+  },
+  "Atletico Mineiro|Mirassol|2026-05-16": {
+    "seri": [
+      {
+        "zaman": 1778918329.2059982,
+        "ev": 2.14,
+        "dep": 3.9
+      },
+      {
+        "zaman": 1778922142.774966,
+        "ev": 2.16,
+        "dep": 3.9
+      },
+      {
+        "zaman": 1778924539.3774972,
+        "ev": 2.14,
+        "dep": 3.95
+      },
+      {
+        "zaman": 1778937824.5937989,
+        "ev": 2.12,
+        "dep": 3.95
+      },
+      {
+        "zaman": 1778945617.049323,
+        "ev": 2.12,
+        "dep": 3.9
+      },
+      {
+        "zaman": 1778963203.750807,
+        "ev": 2.12,
+        "dep": 3.95
+      },
+      {
+        "zaman": 1778964949.9078422,
+        "ev": 2.08,
+        "dep": 4.3
+      },
+      {
+        "zaman": 1778965817.6940742,
+        "ev": 2.06,
+        "dep": 4.3
+      }
+    ]
+  },
+  "Internacional|Vasco da Gama|2026-05-16": {
+    "seri": [
+      {
+        "zaman": 1778918329.206292,
+        "ev": 2.02,
+        "dep": 4.3
+      },
+      {
+        "zaman": 1778920383.920987,
+        "ev": 2.01,
+        "dep": 4.3
+      },
+      {
+        "zaman": 1778922142.775388,
+        "ev": 2.02,
+        "dep": 4.3
+      },
+      {
+        "zaman": 1778937824.594115,
+        "ev": 2.06,
+        "dep": 4.3
+      },
+      {
+        "zaman": 1778940036.689832,
+        "ev": 2.04,
+        "dep": 4.3
+      },
+      {
+        "zaman": 1778942092.060508,
+        "ev": 2.06,
+        "dep": 4.3
+      },
+      {
+        "zaman": 1778943566.509851,
+        "ev": 2.04,
+        "dep": 4.3
+      },
+      {
+        "zaman": 1778964949.908163,
+        "ev": 2.0,
+        "dep": 4.6
+      }
+    ]
+  },
+  "Fluminense|Sao Paulo|2026-05-16": {
+    "seri": [
+      {
+        "zaman": 1778918329.206721,
+        "ev": 1.91,
+        "dep": 4.9
+      },
+      {
+        "zaman": 1778924539.3781178,
+        "ev": 1.9,
+        "dep": 4.9
+      },
+      {
+        "zaman": 1778937824.594465,
+        "ev": 1.85,
+        "dep": 5.0
+      },
+      {
+        "zaman": 1778939049.8756852,
+        "ev": 1.86,
+        "dep": 5.0
+      },
+      {
+        "zaman": 1778942092.060746,
+        "ev": 1.85,
+        "dep": 5.1
+      },
+      {
+        "zaman": 1778943566.51011,
+        "ev": 1.84,
+        "dep": 5.1
+      },
+      {
+        "zaman": 1778944761.506644,
+        "ev": 1.83,
+        "dep": 5.1
+      },
+      {
+        "zaman": 1778963203.751047,
+        "ev": 1.82,
+        "dep": 5.2
+      },
+      {
+        "zaman": 1778964949.908436,
+        "ev": 1.81,
+        "dep": 5.4
+      },
+      {
+        "zaman": 1778965817.69456,
+        "ev": 1.81,
+        "dep": 5.5
+      }
+    ]
+  },
+  "Palmeiras|Cruzeiro|2026-05-17": {
+    "seri": [
+      {
+        "zaman": 1778918329.2070951,
+        "ev": 1.8,
+        "dep": 5.7
+      },
+      {
+        "zaman": 1778920383.921227,
+        "ev": 1.8,
+        "dep": 5.6
+      },
+      {
+        "zaman": 1778923627.398182,
+        "ev": 1.8,
+        "dep": 5.7
+      },
+      {
+        "zaman": 1778924539.378382,
+        "ev": 1.8,
+        "dep": 5.6
+      },
+      {
+        "zaman": 1778937824.594761,
+        "ev": 1.85,
+        "dep": 5.3
+      },
+      {
+        "zaman": 1778939049.87577,
+        "ev": 1.86,
+        "dep": 5.3
+      },
+      {
+        "zaman": 1778942092.060982,
+        "ev": 1.84,
+        "dep": 5.2
+      },
+      {
+        "zaman": 1778944761.506925,
+        "ev": 1.83,
+        "dep": 5.2
+      },
+      {
+        "zaman": 1778963203.751157,
+        "ev": 1.89,
+        "dep": 5.0
+      },
+      {
+        "zaman": 1778964949.908701,
+        "ev": 1.88,
+        "dep": 5.0
+      }
+    ]
+  },
+  "Santos|Coritiba|2026-05-17": {
+    "seri": [
+      {
+        "zaman": 1778918329.207411,
+        "ev": 1.8,
+        "dep": 5.4
+      },
+      {
+        "zaman": 1778942092.0614212,
+        "ev": 1.8,
+        "dep": 5.6
+      },
+      {
+        "zaman": 1778963203.7512589,
+        "ev": 1.8,
+        "dep": 6.0
+      },
+      {
+        "zaman": 1778964949.908959,
+        "ev": 1.8,
+        "dep": 5.9
+      }
+    ]
+  },
+  "Bahia|Grêmio|2026-05-17": {
+    "seri": [
+      {
+        "zaman": 1778918329.207724,
+        "ev": 1.85,
+        "dep": 4.7
+      },
+      {
+        "zaman": 1778937824.595266,
+        "ev": 1.83,
+        "dep": 4.7
+      },
+      {
+        "zaman": 1778940036.6910841,
+        "ev": 1.85,
+        "dep": 4.7
+      },
+      {
+        "zaman": 1778945617.050399,
+        "ev": 1.85,
+        "dep": 4.6
+      },
+      {
+        "zaman": 1778963203.751358,
+        "ev": 1.84,
+        "dep": 4.7
+      }
+    ]
+  },
+  "Botafogo|Corinthians|2026-05-17": {
+    "seri": [
+      {
+        "zaman": 1778918329.208031,
+        "ev": 2.44,
+        "dep": 3.4
+      },
+      {
+        "zaman": 1778963203.751458,
+        "ev": 2.42,
+        "dep": 3.4
+      }
+    ]
+  },
+  "Bragantino-SP|Vitoria|2026-05-17": {
+    "seri": [
+      {
+        "zaman": 1778918329.2083352,
+        "ev": 1.75,
+        "dep": 5.3
+      },
+      {
+        "zaman": 1778924539.379349,
+        "ev": 1.75,
+        "dep": 5.5
+      },
+      {
+        "zaman": 1778945617.050783,
+        "ev": 1.75,
+        "dep": 5.4
+      },
+      {
+        "zaman": 1778963203.7515562,
+        "ev": 1.74,
+        "dep": 5.5
+      }
+    ]
+  },
+  "Chapecoense|Remo|2026-05-17": {
+    "seri": [
+      {
+        "zaman": 1778918329.208577,
+        "ev": 2.46,
+        "dep": 3.0
+      },
+      {
+        "zaman": 1778945617.050978,
+        "ev": 2.46,
+        "dep": 3.05
+      },
+      {
+        "zaman": 1778963203.751657,
+        "ev": 2.48,
+        "dep": 3.05
+      },
+      {
+        "zaman": 1778964949.909913,
+        "ev": 2.48,
+        "dep": 3.15
+      }
+    ]
+  },
+  "Atletico Paranaense|Flamengo|2026-05-17": {
+    "seri": [
+      {
+        "zaman": 1778918329.208801,
+        "ev": 3.35,
+        "dep": 2.26
+      },
+      {
+        "zaman": 1778937824.596242,
+        "ev": 3.4,
+        "dep": 2.26
+      },
+      {
+        "zaman": 1778963203.751749,
+        "ev": 3.45,
+        "dep": 2.26
+      }
+    ]
+  },
+  "Fatih Karagümrük|Alanyaspor|2026-05-16": {
+    "seri": [
+      {
+        "zaman": 1778918329.780025,
+        "ev": 3.0,
+        "dep": 2.66
+      },
+      {
+        "zaman": 1778920384.47898,
+        "ev": 3.05,
+        "dep": 2.68
+      },
+      {
+        "zaman": 1778921156.845165,
+        "ev": 2.98,
+        "dep": 2.68
+      },
+      {
+        "zaman": 1778922143.360468,
+        "ev": 3.0,
+        "dep": 2.68
+      },
+      {
+        "zaman": 1778924539.968937,
+        "ev": 3.0,
+        "dep": 2.7
+      },
+      {
+        "zaman": 1778937825.2053518,
+        "ev": 3.35,
+        "dep": 2.37
+      },
+      {
+        "zaman": 1778939050.462917,
+        "ev": 3.45,
+        "dep": 2.35
+      }
+    ]
+  },
+  "Gazişehir Gaziantep|Basaksehir|2026-05-16": {
+    "seri": [
+      {
+        "zaman": 1778918329.780332,
+        "ev": 3.85,
+        "dep": 1.9
+      },
+      {
+        "zaman": 1778920384.479351,
+        "ev": 3.85,
+        "dep": 1.91
+      },
+      {
+        "zaman": 1778921156.845505,
+        "ev": 3.85,
+        "dep": 1.89
+      },
+      {
+        "zaman": 1778937825.205638,
+        "ev": 3.7,
+        "dep": 1.95
+      },
+      {
+        "zaman": 1778944762.0562859,
+        "ev": 3.65,
+        "dep": 1.97
+      },
+      {
+        "zaman": 1778945617.6463628,
+        "ev": 3.65,
+        "dep": 1.96
+      }
+    ]
+  },
+  "Samsunspor|Goztepe|2026-05-16": {
+    "seri": [
+      {
+        "zaman": 1778918329.780629,
+        "ev": 2.6,
+        "dep": 2.9
+      },
+      {
+        "zaman": 1778924539.969501,
+        "ev": 2.6,
+        "dep": 2.92
+      },
+      {
+        "zaman": 1778937825.2058802,
+        "ev": 2.74,
+        "dep": 2.76
+      },
+      {
+        "zaman": 1778940037.267235,
+        "ev": 2.78,
+        "dep": 2.76
+      },
+      {
+        "zaman": 1778942092.6211379,
+        "ev": 2.84,
+        "dep": 2.65
+      },
+      {
+        "zaman": 1778943567.0646532,
+        "ev": 2.98,
+        "dep": 2.65
+      },
+      {
+        "zaman": 1778944762.056573,
+        "ev": 3.25,
+        "dep": 2.32
+      },
+      {
+        "zaman": 1778945617.6467369,
+        "ev": 3.35,
+        "dep": 2.26
+      }
+    ]
+  },
+  "Kayserispor|Torku Konyaspor|2026-05-17": {
+    "seri": [
+      {
+        "zaman": 1778918329.780947,
+        "ev": 2.0,
+        "dep": 3.75
+      },
+      {
+        "zaman": 1778937825.2061172,
+        "ev": 2.02,
+        "dep": 3.75
+      },
+      {
+        "zaman": 1778939050.463753,
+        "ev": 2.0,
+        "dep": 3.75
+      },
+      {
+        "zaman": 1778942092.621391,
+        "ev": 2.04,
+        "dep": 3.75
+      },
+      {
+        "zaman": 1778963204.378805,
+        "ev": 2.0,
+        "dep": 3.7
+      },
+      {
+        "zaman": 1778964950.4710588,
+        "ev": 2.02,
+        "dep": 3.7
+      }
+    ]
+  },
+  "Antalyaspor|Kocaelispor|2026-05-17": {
+    "seri": [
+      {
+        "zaman": 1778918329.781204,
+        "ev": 1.61,
+        "dep": 6.63
+      },
+      {
+        "zaman": 1778922143.361706,
+        "ev": 1.61,
+        "dep": 6.65
+      },
+      {
+        "zaman": 1778942092.621651,
+        "ev": 1.61,
+        "dep": 6.8
+      },
+      {
+        "zaman": 1778943567.06516,
+        "ev": 1.61,
+        "dep": 6.65
+      },
+      {
+        "zaman": 1778963204.3790982,
+        "ev": 1.55,
+        "dep": 7.07
+      }
+    ]
+  },
+  "Fenerbahce|Eyüpspor|2026-05-17": {
+    "seri": [
+      {
+        "zaman": 1778918329.781475,
+        "ev": 1.31,
+        "dep": 11.0
+      },
+      {
+        "zaman": 1778965818.234067,
+        "ev": 1.3,
+        "dep": 11.0
+      }
+    ]
+  },
+  "Kasimpasa SK|Galatasaray|2026-05-17": {
+    "seri": [
+      {
+        "zaman": 1778918329.7817311,
+        "ev": 3.42,
+        "dep": 2.3
+      },
+      {
+        "zaman": 1778920384.480582,
+        "ev": 3.35,
+        "dep": 2.4
+      },
+      {
+        "zaman": 1778923627.9412422,
+        "ev": 3.35,
+        "dep": 2.42
+      },
+      {
+        "zaman": 1778937825.2067661,
+        "ev": 3.35,
+        "dep": 2.38
+      },
+      {
+        "zaman": 1778942092.622126,
+        "ev": 3.25,
+        "dep": 2.38
+      },
+      {
+        "zaman": 1778944762.057585,
+        "ev": 3.25,
+        "dep": 2.4
+      },
+      {
+        "zaman": 1778945617.647707,
+        "ev": 3.25,
+        "dep": 2.38
+      },
+      {
+        "zaman": 1778963204.3796139,
+        "ev": 3.2,
+        "dep": 2.46
+      },
+      {
+        "zaman": 1778965818.234323,
+        "ev": 3.2,
+        "dep": 2.48
+      }
+    ]
+  },
+  "Trabzonspor|Genclerbirligi SK|2026-05-17": {
+    "seri": [
+      {
+        "zaman": 1778918329.7819479,
+        "ev": 3.2,
+        "dep": 2.26
+      },
+      {
+        "zaman": 1778923627.941308,
+        "ev": 3.25,
+        "dep": 2.26
+      },
+      {
+        "zaman": 1778924539.97085,
+        "ev": 3.2,
+        "dep": 2.26
+      },
+      {
+        "zaman": 1778937825.2069829,
+        "ev": 3.2,
+        "dep": 2.28
+      },
+      {
+        "zaman": 1778939050.464597,
+        "ev": 3.25,
+        "dep": 2.26
+      }
+    ]
+  },
+  "1. FC Magdeburg|1. FC Kaiserslautern|2026-05-17": {
+    "seri": [
+      {
+        "zaman": 1778918330.372958,
+        "ev": 1.72,
+        "dep": 4.5
+      },
+      {
+        "zaman": 1778920385.0407412,
+        "ev": 1.73,
+        "dep": 4.5
+      },
+      {
+        "zaman": 1778937825.7881641,
+        "ev": 1.73,
+        "dep": 4.4
+      },
+      {
+        "zaman": 1778939051.0322099,
+        "ev": 1.73,
+        "dep": 4.7
+      },
+      {
+        "zaman": 1778943567.604565,
+        "ev": 1.72,
+        "dep": 4.7
+      },
+      {
+        "zaman": 1778963204.941207,
+        "ev": 1.72,
+        "dep": 4.6
+      }
+    ]
+  },
+  "Hannover 96|1. FC Nürnberg|2026-05-17": {
+    "seri": [
+      {
+        "zaman": 1778918330.3732421,
+        "ev": 1.45,
+        "dep": 6.5
+      },
+      {
+        "zaman": 1778937825.78843,
+        "ev": 1.5,
+        "dep": 6.25
+      },
+      {
+        "zaman": 1778942093.1929758,
+        "ev": 1.52,
+        "dep": 5.75
+      },
+      {
+        "zaman": 1778943567.604845,
+        "ev": 1.54,
+        "dep": 6.2
+      },
+      {
+        "zaman": 1778944762.632034,
+        "ev": 1.54,
+        "dep": 5.75
+      },
+      {
+        "zaman": 1778963204.941462,
+        "ev": 1.54,
+        "dep": 5.9
+      },
+      {
+        "zaman": 1778965818.841892,
+        "ev": 1.53,
+        "dep": 5.9
+      }
+    ]
+  },
+  "Arminia Bielefeld|Hertha Berlin|2026-05-17": {
+    "seri": [
+      {
+        "zaman": 1778918330.373503,
+        "ev": 1.77,
+        "dep": 4.4
+      },
+      {
+        "zaman": 1778937825.788675,
+        "ev": 1.77,
+        "dep": 4.5
+      },
+      {
+        "zaman": 1778942093.193197,
+        "ev": 1.77,
+        "dep": 4.6
+      },
+      {
+        "zaman": 1778963204.941684,
+        "ev": 1.8,
+        "dep": 4.5
+      },
+      {
+        "zaman": 1778964951.0241659,
+        "ev": 1.82,
+        "dep": 4.5
+      },
+      {
+        "zaman": 1778965818.842134,
+        "ev": 1.8,
+        "dep": 4.5
+      }
+    ]
+  },
+  "Dynamo Dresden|Holstein Kiel|2026-05-17": {
+    "seri": [
+      {
+        "zaman": 1778918330.373754,
+        "ev": 1.75,
+        "dep": 4.8
+      },
+      {
+        "zaman": 1778942093.193412,
+        "ev": 1.76,
+        "dep": 4.8
+      },
+      {
+        "zaman": 1778963204.941903,
+        "ev": 1.74,
+        "dep": 4.9
+      }
+    ]
+  },
+  "FC Schalke 04|Eintracht Braunschweig|2026-05-17": {
+    "seri": [
+      {
+        "zaman": 1778918330.374018,
+        "ev": 1.94,
+        "dep": 3.9
+      },
+      {
+        "zaman": 1778920385.0416498,
+        "ev": 1.95,
+        "dep": 3.9
+      },
+      {
+        "zaman": 1778921157.3798301,
+        "ev": 1.95,
+        "dep": 3.95
+      },
+      {
+        "zaman": 1778923628.537556,
+        "ev": 1.94,
+        "dep": 3.95
+      },
+      {
+        "zaman": 1778937825.789115,
+        "ev": 1.93,
+        "dep": 3.95
+      },
+      {
+        "zaman": 1778939051.03309,
+        "ev": 1.95,
+        "dep": 3.95
+      },
+      {
+        "zaman": 1778940037.811606,
+        "ev": 1.92,
+        "dep": 3.95
+      },
+      {
+        "zaman": 1778942093.1936262,
+        "ev": 1.93,
+        "dep": 4.1
+      },
+      {
+        "zaman": 1778943567.605827,
+        "ev": 1.92,
+        "dep": 4.0
+      },
+      {
+        "zaman": 1778944762.632725,
+        "ev": 1.92,
+        "dep": 4.2
+      },
+      {
+        "zaman": 1778963204.942118,
+        "ev": 1.91,
+        "dep": 3.95
+      },
+      {
+        "zaman": 1778964951.0246332,
+        "ev": 1.91,
+        "dep": 4.0
+      },
+      {
+        "zaman": 1778965818.842589,
+        "ev": 1.91,
+        "dep": 3.95
+      }
+    ]
+  },
+  "Elversberg|SC Preußen Münster|2026-05-17": {
+    "seri": [
+      {
+        "zaman": 1778918330.374374,
+        "ev": 1.24,
+        "dep": 12.5
+      },
+      {
+        "zaman": 1778937825.7893481,
+        "ev": 1.24,
+        "dep": 13.0
+      },
+      {
+        "zaman": 1778939051.033299,
+        "ev": 1.25,
+        "dep": 13.0
+      },
+      {
+        "zaman": 1778963204.942374,
+        "ev": 1.23,
+        "dep": 14.0
+      }
+    ]
+  },
+  "Greuther Fürth|Fortuna Düsseldorf|2026-05-17": {
+    "seri": [
+      {
+        "zaman": 1778918330.374669,
+        "ev": 2.55,
+        "dep": 2.64
+      },
+      {
+        "zaman": 1778939051.03351,
+        "ev": 2.55,
+        "dep": 2.68
+      },
+      {
+        "zaman": 1778943567.606348,
+        "ev": 2.5,
+        "dep": 2.68
+      },
+      {
+        "zaman": 1778944762.633159,
+        "ev": 2.52,
+        "dep": 2.68
+      },
+      {
+        "zaman": 1778945618.195231,
+        "ev": 2.54,
+        "dep": 2.68
+      },
+      {
+        "zaman": 1778963204.942595,
+        "ev": 2.52,
+        "dep": 2.76
+      }
+    ]
+  },
+  "Karlsruher SC|VfL Bochum|2026-05-17": {
+    "seri": [
+      {
+        "zaman": 1778918330.374929,
+        "ev": 2.64,
+        "dep": 2.54
+      },
+      {
+        "zaman": 1778922143.913106,
+        "ev": 2.61,
+        "dep": 2.54
+      },
+      {
+        "zaman": 1778937825.7897658,
+        "ev": 2.7,
+        "dep": 2.54
+      },
+      {
+        "zaman": 1778963204.942803,
+        "ev": 2.6,
+        "dep": 2.54
+      },
+      {
+        "zaman": 1778964951.025291,
+        "ev": 2.6,
+        "dep": 2.55
+      }
+    ]
+  },
+  "SV Darmstadt 98|SC Paderborn|2026-05-17": {
+    "seri": [
+      {
+        "zaman": 1778918330.3751879,
+        "ev": 3.8,
+        "dep": 1.92
+      },
+      {
+        "zaman": 1778937825.789985,
+        "ev": 3.65,
+        "dep": 1.92
+      },
+      {
+        "zaman": 1778939051.033934,
+        "ev": 3.7,
+        "dep": 1.92
+      }
+    ]
+  },
+  "AZ Alkmaar|NAC Breda|2026-05-17": {
+    "seri": [
+      {
+        "zaman": 1778918331.464503,
+        "ev": 1.4,
+        "dep": 8.5
+      },
+      {
+        "zaman": 1778920386.352185,
+        "ev": 1.39,
+        "dep": 9.0
+      },
+      {
+        "zaman": 1778943568.683854,
+        "ev": 1.4,
+        "dep": 9.0
+      }
+    ]
+  },
+  "Heerenveen|Ajax|2026-05-17": {
+    "seri": [
+      {
+        "zaman": 1778918331.464867,
+        "ev": 3.25,
+        "dep": 2.12
+      },
+      {
+        "zaman": 1778920386.352457,
+        "ev": 3.25,
+        "dep": 2.16
+      },
+      {
+        "zaman": 1778923629.708608,
+        "ev": 3.25,
+        "dep": 2.18
+      },
+      {
+        "zaman": 1778937826.9675992,
+        "ev": 3.2,
+        "dep": 2.18
+      },
+      {
+        "zaman": 1778944764.10136,
+        "ev": 3.2,
+        "dep": 2.22
+      },
+      {
+        "zaman": 1778945619.3474472,
+        "ev": 3.1,
+        "dep": 2.22
+      },
+      {
+        "zaman": 1778963206.656655,
+        "ev": 3.1,
+        "dep": 2.16
+      }
+    ]
+  },
+  "Sparta Rotterdam|Excelsior|2026-05-17": {
+    "seri": [
+      {
+        "zaman": 1778918331.465153,
+        "ev": 2.12,
+        "dep": 3.3
+      },
+      {
+        "zaman": 1778963206.656981,
+        "ev": 2.08,
+        "dep": 3.45
+      },
+      {
+        "zaman": 1778965819.9055,
+        "ev": 2.08,
+        "dep": 3.5
+      }
+    ]
+  },
+  "PSV Eindhoven|FC Twente Enschede|2026-05-17": {
+    "seri": [
+      {
+        "zaman": 1778918331.46541,
+        "ev": 2.15,
+        "dep": 3.2
+      },
+      {
+        "zaman": 1778920386.352886,
+        "ev": 2.18,
+        "dep": 3.2
+      },
+      {
+        "zaman": 1778921158.4790652,
+        "ev": 2.22,
+        "dep": 3.2
+      },
+      {
+        "zaman": 1778937826.9680152,
+        "ev": 2.28,
+        "dep": 3.05
+      },
+      {
+        "zaman": 1778939052.15971,
+        "ev": 2.26,
+        "dep": 3.05
+      },
+      {
+        "zaman": 1778963206.65726,
+        "ev": 2.3,
+        "dep": 3.05
+      },
+      {
+        "zaman": 1778965819.9057121,
+        "ev": 2.32,
+        "dep": 3.05
+      }
+    ]
+  },
+  "FC Utrecht|Fortuna Sittard|2026-05-17": {
+    "seri": [
+      {
+        "zaman": 1778918331.465621,
+        "ev": 1.53,
+        "dep": 6.75
+      },
+      {
+        "zaman": 1778965819.9059489,
+        "ev": 1.54,
+        "dep": 6.75
+      }
+    ]
+  },
+  "FC Volendam|SC Telstar|2026-05-17": {
+    "seri": [
+      {
+        "zaman": 1778918331.465827,
+        "ev": 2.95,
+        "dep": 2.45
+      },
+      {
+        "zaman": 1778937826.968423,
+        "ev": 2.95,
+        "dep": 2.4
+      },
+      {
+        "zaman": 1778963206.657772,
+        "ev": 2.95,
+        "dep": 2.44
+      }
+    ]
+  },
+  "FC Zwolle|Feyenoord|2026-05-17": {
+    "seri": [
+      {
+        "zaman": 1778918331.466039,
+        "ev": 4.8,
+        "dep": 1.74
+      },
+      {
+        "zaman": 1778937826.968626,
+        "ev": 4.8,
+        "dep": 1.72
+      },
+      {
+        "zaman": 1778942094.2724118,
+        "ev": 4.8,
+        "dep": 1.71
+      },
+      {
+        "zaman": 1778943568.685149,
+        "ev": 4.8,
+        "dep": 1.72
+      },
+      {
+        "zaman": 1778963206.6579971,
+        "ev": 4.6,
+        "dep": 1.83
+      },
+      {
+        "zaman": 1778964952.203304,
+        "ev": 4.6,
+        "dep": 1.84
+      },
+      {
+        "zaman": 1778965819.90639,
+        "ev": 4.6,
+        "dep": 1.83
+      }
+    ]
+  },
+  "NEC Nijmegen|Go Ahead Eagles|2026-05-17": {
+    "seri": [
+      {
+        "zaman": 1778918331.46625,
+        "ev": 1.41,
+        "dep": 8.5
+      },
+      {
+        "zaman": 1778963206.658211,
+        "ev": 1.41,
+        "dep": 8.0
+      }
+    ]
+  },
+  "Heracles Almelo|Groningen|2026-05-17": {
+    "seri": [
+      {
+        "zaman": 1778918331.466463,
+        "ev": 5.3,
+        "dep": 1.61
+      },
+      {
+        "zaman": 1778922145.0085409,
+        "ev": 5.5,
+        "dep": 1.61
+      },
+      {
+        "zaman": 1778937826.969037,
+        "ev": 5.5,
+        "dep": 1.6
+      },
+      {
+        "zaman": 1778963206.658425,
+        "ev": 5.8,
+        "dep": 1.6
+      },
+      {
+        "zaman": 1778964952.203767,
+        "ev": 5.8,
+        "dep": 1.61
+      }
+    ]
+  }
+}

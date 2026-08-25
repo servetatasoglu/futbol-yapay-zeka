@@ -1,0 +1,80 @@
+{
+  "Estoril_Famalicão_2026-08-07": {
+    "ev": "Estoril",
+    "dep": "Famalicão",
+    "tahmin": "Beraberlik",
+    "date": "2026-08-07"
+  },
+  "SV Darmstadt 98_Holstein Kiel_2026-08-08": {
+    "ev": "SV Darmstadt 98",
+    "dep": "Holstein Kiel",
+    "tahmin": "2.5 Alt",
+    "date": "2026-08-08"
+  },
+  "Vitória SC_Arouca_2026-08-08": {
+    "ev": "Vitória SC",
+    "dep": "Arouca",
+    "tahmin": "Deplasman Kazanır",
+    "date": "2026-08-08"
+  },
+  "PSV Eindhoven_Fortuna Sittard_2026-08-08": {
+    "ev": "PSV Eindhoven",
+    "dep": "Fortuna Sittard",
+    "tahmin": "Deplasman Kazanır",
+    "date": "2026-08-08"
+  },
+  "CF Estrela_Sporting Lisbon_2026-08-08": {
+    "ev": "CF Estrela",
+    "dep": "Sporting Lisbon",
+    "tahmin": "Ev Sahibi Kazanır",
+    "date": "2026-08-08"
+  },
+  "Sparta Rotterdam_Feyenoord_2026-08-09": {
+    "ev": "Sparta Rotterdam",
+    "dep": "Feyenoord",
+    "tahmin": "Beraberlik",
+    "date": "2026-08-09"
+  },
+  "Gil Vicente_Rio Ave_2026-08-09": {
+    "ev": "Gil Vicente",
+    "dep": "Rio Ave",
+    "tahmin": "Beraberlik",
+    "date": "2026-08-09"
+  },
+  "FC Zwolle_Ajax_2026-08-09": {
+    "ev": "FC Zwolle",
+    "dep": "Ajax",
+    "tahmin": "Ev Sahibi Kazanır",
+    "date": "2026-08-09"
+  },
+  "Groningen_FC Utrecht_2026-08-09": {
+    "ev": "Groningen",
+    "dep": "FC Utrecht",
+    "tahmin": "Beraberlik",
+    "date": "2026-08-09"
+  },
+  "Heerenveen_FC Twente Enschede_2026-08-09": {
+    "ev": "Heerenveen",
+    "dep": "FC Twente Enschede",
+    "tahmin": "Beraberlik",
+    "date": "2026-08-09"
+  },
+  "Moreirense_Braga_2026-08-09": {
+    "ev": "Moreirense",
+    "dep": "Braga",
+    "tahmin": "Beraberlik",
+    "date": "2026-08-09"
+  },
+  "FC Porto_Alverca_2026-08-09": {
+    "ev": "FC Porto",
+    "dep": "Alverca",
+    "tahmin": "Deplasman Kazanır",
+    "date": "2026-08-09"
+  },
+  "Santa Clara_Nacional_2026-08-10": {
+    "ev": "Santa Clara",
+    "dep": "Nacional",
+    "tahmin": "Beraberlik",
+    "date": "2026-08-10"
+  }
+}
