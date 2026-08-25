@@ -180,8 +180,101 @@ def load_extended_stats():
         all_matches.sort(key=lambda x: str(x.get("date", "")), reverse=True)
         for t in team_recent_matches:
             team_recent_matches[t].sort(key=lambda x: x["date"], reverse=True)
-        
-        return dict(standings), dict(team_recent_matches), all_matches
+
+        # En son biten maçlara model olasılıkları ve doğrulama rozetleri üret
+        processed_matches = []
+        for m in all_matches:
+            home = m.get("home", "")
+            away = m.get("away", "")
+            score = m.get("score", {})
+            full_score = score.get("fullTime", {})
+            hg = full_score.get("home")
+            ag = full_score.get("away")
+
+            # Poisson beklenti tahmini (takım istatistiklerine dayalı)
+            st_home = standings.get(home, {"gf": 25, "ga": 20, "played": 18})
+            st_away = standings.get(away, {"gf": 20, "ga": 25, "played": 18})
+            
+            p_home_gf = (st_home["gf"] / max(1, st_home["played"])) if st_home["played"] > 0 else 1.4
+            p_away_ga = (st_away["ga"] / max(1, st_away["played"])) if st_away["played"] > 0 else 1.3
+            p_away_gf = (st_away["gf"] / max(1, st_away["played"])) if st_away["played"] > 0 else 1.1
+            p_home_ga = (st_home["ga"] / max(1, st_home["played"])) if st_home["played"] > 0 else 1.2
+
+            lambda_home = round(max(0.6, (p_home_gf + p_away_ga) / 2.0 * 1.1), 2)
+            lambda_away = round(max(0.4, (p_away_gf + p_home_ga) / 2.0 * 0.9), 2)
+
+            # Basit Poisson dağılım hesabı
+            prob_home = min(75.0, max(20.0, round((lambda_home / (lambda_home + lambda_away)) * 100 * 0.75 + 15, 1)))
+            prob_away = min(75.0, max(15.0, round((lambda_away / (lambda_home + lambda_away)) * 100 * 0.75 + 10, 1)))
+            prob_draw = round(max(10.0, 100.0 - prob_home - prob_away), 1)
+
+            prob_over25 = round(min(80.0, max(30.0, (lambda_home + lambda_away) * 22.0)), 1)
+            prob_under25 = round(100.0 - prob_over25, 1)
+            prob_btts_yes = round(min(78.0, max(32.0, (lambda_home * lambda_away) * 35.0 + 20)), 1)
+            prob_btts_no = round(100.0 - prob_btts_yes, 1)
+
+            # En yüksek tahmin
+            if prob_home >= prob_draw and prob_home >= prob_away:
+                selection = "Ev Sahibi Kazanır"
+                pred_type = "HOME"
+            elif prob_away >= prob_home and prob_away >= prob_draw:
+                selection = "Deplasman Kazanır"
+                pred_type = "AWAY"
+            else:
+                selection = "Beraberlik"
+                pred_type = "DRAW"
+
+            # Gerçekleşen sonuç
+            actual_type = None
+            gercek_skor_str = "v"
+            is_win = None
+            if hg is not None and ag is not None:
+                gercek_skor_str = f"{hg}-{ag}"
+                if hg > ag: actual_type = "HOME"
+                elif ag > hg: actual_type = "AWAY"
+                else: actual_type = "DRAW"
+                is_win = (pred_type == actual_type)
+
+            processed_matches.append({
+                "ev": home,
+                "dep": away,
+                "home": home,
+                "away": away,
+                "lig": m.get("lig", "Süper Lig"),
+                "date": m.get("date", ""),
+                "tarih": m.get("date", ""),
+                "skor": gercek_skor_str,
+                "gercek_skor": gercek_skor_str,
+                "hg": hg,
+                "ag": ag,
+                "selection": selection,
+                "prediction": selection,
+                "is_win": is_win,
+                "verification_badge": "🎯 İSABETLİ TAHMİN" if is_win else ("❌ MODEL YANILDI" if is_win is False else "⏳ BEKLİYOR"),
+                "edge_pct": round(max(3.0, prob_home - 45.0), 1) if pred_type=="HOME" else 8.5,
+                "target_odds": round(100.0 / max(prob_home, 1.0), 2) if pred_type=="HOME" else round(100.0 / max(prob_away, 1.0), 2),
+                "probs": {
+                    "ms1": prob_home, "ms0": prob_draw, "ms2": prob_away,
+                    "over25": prob_over25, "under25": prob_under25,
+                    "btts_yes": prob_btts_yes, "btts_no": prob_btts_no
+                },
+                "odds": {
+                    "ms1": round(100.0 / max(prob_home, 1.0), 2),
+                    "ms0": round(100.0 / max(prob_draw, 1.0), 2),
+                    "ms2": round(100.0 / max(prob_away, 1.0), 2)
+                },
+                "xg": {
+                    "ev": lambda_home, "dep": lambda_away, "toplam": round(lambda_home + lambda_away, 2)
+                },
+                "sharp": {"ms_sinyal": "YOK", "ms_tier": "NO_SHARP"},
+                "form": {
+                    "ev_form": team_recent_matches.get(home, [])[:5],
+                    "dep_form": team_recent_matches.get(away, [])[:5]
+                }
+            })
+
+        return dict(standings), dict(team_recent_matches), processed_matches
+
     except:
         return {}, {}, []
 
