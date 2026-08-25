@@ -264,16 +264,17 @@ def load_extended_stats():
             
             ai_commentary = (
                 f"🤖 <b>Yapay Zeka Analizi:</b> Ensemble modeli (Dixon-Coles + ELO + Purged LightGBM), <b>{home}</b> galibiyetine %{prob_home:.1f}, "
-                f"beraberliğe %{prob_draw:.1f}, <b>{away}</b> galibiyetine %{prob_away:.1f} ihtimal vermektedir.\n\n"
+                f"beraberliğe %{prob_draw:.1f}, <b>{away}</b> galibiyetine %{prob_away:.1f} ihtimal vermektedir.<br><br>"
                 f"📊 <b>Gol ve Tempo Projeksiyonu:</b> Beklenen Gol (xG) hesabı Ev: {lambda_home} - Dep: {lambda_away} (Toplam {xg_total} gol) göstermektedir. "
-                f"2.5 Üst ihtimali %{prob_over25:.1f}, KG Var ihtimali %{prob_btts_yes:.1f} seviyesindedir.\n\n"
+                f"2.5 Üst ihtimali %{prob_over25:.1f}, KG Var ihtimali %{prob_btts_yes:.1f} seviyesindedir.<br><br>"
                 f"🎯 <b>Stratejik Yol Haritası & Tavsiye:</b> Bu karşılaşmada <b>{selection}</b> bahsi %+ {edge_val}% matematiksel net değer (Edge) barındırmaktadır. "
                 f"Disiplinli Kelly sermaye yönetiminden %1.8 (90 TL) oranında katılım önerilir."
             )
 
             if is_win is not None:
                 isabet_str = "🎯 Model Tam İsabet Sağladı (Doğru Tahmin)" if is_win else "❌ Model Yanıldı (Hatalı Tahmin)"
-                ai_commentary += f"\n\n🏁 <b>Maç Sonu Sonuç İncelemesi:</b> Karşılaşma <b>{gercek_skor_str}</b> skoru ile tamamlandı. Yapay zeka tahmini (<b>{selection}</b>) {isabet_str}."
+                ai_commentary += f"<br><br>🏁 <b>Maç Sonu Sonuç İncelemesi:</b> Karşılaşma <b>{gercek_skor_str}</b> skoru ile tamamlandı. Yapay zeka tahmini (<b>{selection}</b>) {isabet_str}."
+
 
             processed_matches.append({
                 "ev": home,
@@ -921,13 +922,14 @@ def _inject_into_html(signals, data_json):
     with open(html_path, "r", encoding="utf-8") as f:
         content = f.read()
 
-    signals_str = json.dumps(signals, ensure_ascii=False)
-    data_str = json.dumps(data_json, ensure_ascii=False)
+    signals_str = json.dumps(signals, ensure_ascii=False).replace("</", "<\\/")
+    data_str = json.dumps(data_json, ensure_ascii=False).replace("</", "<\\/")
 
     injected_script = f"""<script id="injected-data">
         window.LIVE_SIGNALS = {signals_str};
         window.DASHBOARD_DATA = {data_str};
     </script>"""
+
 
     content = re.sub(
         r'<script id="injected-data">.*?</script>',
