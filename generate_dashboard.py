@@ -119,14 +119,26 @@ def load_extended_stats():
         all_matches = []
         
         for lig, mac_list in maclar.items():
+            lig_isim = {
+                "TSL": "Süper Lig (TR)",
+                "FL1": "Ligue 1 (FR)",
+                "PPL": "Primeira Liga (PT)",
+                "BL2": "2. Bundesliga (DE)",
+                "ELC": "Championship (UK)",
+                "DED": "Eredivisie (NL)"
+            }.get(lig, lig)
+
             for m in mac_list:
                 m_clean = {
                     "home": clean_team_name(m.get("homeTeam", {}).get("name", "")),
                     "away": clean_team_name(m.get("awayTeam", {}).get("name", "")),
                     "date": m.get("utcDate", ""),
-                    "score": m.get("score", {})
+                    "score": m.get("score", {}),
+                    "lig": lig,
+                    "lig_isim": lig_isim
                 }
                 all_matches.append(m_clean)
+
                 
                 score = m.get("score", {})
                 is_finished = m.get("status") == "FINISHED"
@@ -176,14 +188,25 @@ def load_extended_stats():
                         "result": "W" if ag>hg else ("L" if hg>ag else "D"), "isHome": False
                     })
                         
-        # Sort matches by date for H2H (newest first)
-        all_matches.sort(key=lambda x: str(x.get("date", "")), reverse=True)
+        # Lig bazında en güncel 30'ar maçı seç (Süper Lig, TSL, FL1, PPL, BL2, ELC, DED eşit görünsün)
+        league_groups = defaultdict(list)
+        for m in all_matches:
+            league_groups[m.get("lig", "TSL")].append(m)
+
+        selected_matches = []
+        for lig_kodu, m_list in league_groups.items():
+            m_list.sort(key=lambda x: str(x.get("date", "")), reverse=True)
+            selected_matches.extend(m_list[:30])
+
+        selected_matches.sort(key=lambda x: str(x.get("date", "")), reverse=True)
+
         for t in team_recent_matches:
             team_recent_matches[t].sort(key=lambda x: x["date"], reverse=True)
 
         # En son biten maçlara model olasılıkları ve doğrulama rozetleri üret
         processed_matches = []
-        for m in all_matches:
+        for m in selected_matches:
+
             home = m.get("home", "")
             away = m.get("away", "")
             score = m.get("score", {})
@@ -240,7 +263,9 @@ def load_extended_stats():
                 "dep": away,
                 "home": home,
                 "away": away,
-                "lig": m.get("lig", "Süper Lig"),
+                "lig": m.get("lig_isim", m.get("lig", "Süper Lig (TR)")),
+                "lig_kodu": m.get("lig", "TSL"),
+
                 "date": m.get("date", ""),
                 "tarih": m.get("date", ""),
                 "skor": gercek_skor_str,
@@ -626,35 +651,48 @@ def generate_dashboard_data(live_signals=None):
             
         for lig, mac_list in maclar.items():
             for m in mac_list:
-                if m.get('status') == 'FINISHED':
-                    score = m.get('score',{}).get('fullTime',{})
-                    if score.get('home') is not None and score.get('away') is not None:
-                        ev_name = clean_team_name(m.get('homeTeam',{}).get('name',''))
-                        dep_name = clean_team_name(m.get('awayTeam',{}).get('name',''))
-                        match_date = m.get('utcDate','')[:10]
-                        
-                        ev_lower = ev_name.lower()
-                        dep_lower = dep_name.lower()
-                        
-                        tahmin = None
-                        for p in predictions_list:
-                            # If dates match (or prediction date is empty) AND team names have a substring match
-                            if (not p["date"] or p["date"] == match_date or p["date"].replace(".","-") in match_date):
-                                if (p["ev"] in ev_lower or ev_lower in p["ev"]) and (p["dep"] in dep_lower or dep_lower in p["dep"]):
-                                    tahmin = p["tahmin"]
-                                    break
-                                    
-                        finished_matches.append({
-                            'lig': lig,
-                            'ev': ev_name,
-                            'dep': dep_name,
-                            'skor': f"{score.get('home')}-{score.get('away')}",
-                            'tarih': m.get('utcDate',''),
-                            'tahmin': tahmin
-                        })
-        # Sort by date descending and take top 50
-        finished_matches.sort(key=lambda x: x['tarih'], reverse=True)
-        finished_matches = finished_matches[:50]
+                score = m.get('score',{}).get('fullTime',{})
+                is_finished = (m.get('status') == 'FINISHED')
+                if score.get('home') is not None and score.get('away') is not None:
+                    is_finished = True
+
+                if is_finished and score.get('home') is not None and score.get('away') is not None:
+                    ev_name = clean_team_name(m.get('homeTeam',{}).get('name',''))
+                    dep_name = clean_team_name(m.get('awayTeam',{}).get('name',''))
+                    match_date = m.get('utcDate','')[:10]
+
+                    ev_lower = ev_name.lower()
+                    dep_lower = dep_name.lower()
+                    
+                    tahmin = None
+                    for p in predictions_list:
+                        if (not p["date"] or p["date"] == match_date or p["date"].replace(".","-") in match_date):
+                            if (p["ev"] in ev_lower or ev_lower in p["ev"]) and (p["dep"] in dep_lower or dep_lower in p["dep"]):
+                                tahmin = p["tahmin"]
+                                break
+                                
+                    finished_matches.append({
+                        'lig': lig,
+                        'ev': ev_name,
+                        'dep': dep_name,
+                        'skor': f"{score.get('home')}-{score.get('away')}",
+                        'tarih': m.get('utcDate',''),
+                        'tahmin': tahmin
+                    })
+
+        # Lig bazında en güncel 30'ar maçı seç (Süper Lig TSL dahil tüm ligler eşit temsil edilsin)
+        fgroups = defaultdict(list)
+        for fm_item in finished_matches:
+            fgroups[fm_item.get('lig', 'TSL')].append(fm_item)
+
+        balanced_finished = []
+        for l_code, m_lst in fgroups.items():
+            m_lst.sort(key=lambda x: x['tarih'], reverse=True)
+            balanced_finished.extend(m_lst[:30])
+
+        balanced_finished.sort(key=lambda x: x['tarih'], reverse=True)
+        finished_matches = balanced_finished
+
     except Exception as e:
         print(f"  ⚠️ Error parsing finished matches: {e}")
 
@@ -849,7 +887,8 @@ def _write_empty_dashboard(live_signals=None, finished_matches=None):
         "standings": dict(standings),
         "total_matches_count": len(all_matches),
         "kupon": kupon_onerisi(live_signals if live_signals else []),
-        "finished_matches": finished_matches if finished_matches else all_matches[-100:]
+        "finished_matches": finished_matches if finished_matches else (all_matches[:300] if len(all_matches) > 300 else all_matches)
+
     }
     with open(DASH_OUT, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)

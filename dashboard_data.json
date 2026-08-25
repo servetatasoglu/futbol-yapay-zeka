@@ -1326,7 +1326,7 @@
       "btts": 2
     }
   },
-  "total_matches_count": 6410,
+  "total_matches_count": 180,
   "kupon": null,
   "finished_matches": [
     {
@@ -1727,6 +1727,1046 @@
       "dep": "AZ",
       "skor": "1-4",
       "tarih": "2026-08-15T16:45:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "ELC",
+      "ev": "Sheffield United",
+      "dep": "Birmingham City",
+      "skor": "0-0",
+      "tarih": "2026-08-15T16:30:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "PPL",
+      "ev": "FC Alverca",
+      "dep": "CF Estrela da Amadora",
+      "skor": "2-2",
+      "tarih": "2026-08-15T14:30:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "DED",
+      "ev": "Willem II Tilburg",
+      "dep": "NEC",
+      "skor": "1-4",
+      "tarih": "2026-08-15T14:30:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "ELC",
+      "ev": "Norwich City",
+      "dep": "West Bromwich Albion",
+      "skor": "1-2",
+      "tarih": "2026-08-15T14:00:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "ELC",
+      "ev": "Bristol City",
+      "dep": "Millwall",
+      "skor": "0-2",
+      "tarih": "2026-08-15T14:00:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "ELC",
+      "ev": "Middlesbrough",
+      "dep": "Lincoln City",
+      "skor": "2-1",
+      "tarih": "2026-08-15T14:00:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "ELC",
+      "ev": "Stoke City",
+      "dep": "Swansea City AFC",
+      "skor": "1-2",
+      "tarih": "2026-08-15T14:00:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "ELC",
+      "ev": "Charlton Athletic",
+      "dep": "Derby County",
+      "skor": "2-1",
+      "tarih": "2026-08-15T14:00:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "ELC",
+      "ev": "Portsmouth",
+      "dep": "Queens Park Rangers",
+      "skor": "1-3",
+      "tarih": "2026-08-15T14:00:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "ELC",
+      "ev": "Bolton Wanderers",
+      "dep": "Preston North End",
+      "skor": "2-1",
+      "tarih": "2026-08-15T11:30:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "PPL",
+      "ev": "Sporting Clube de Portugal",
+      "dep": "Vitória SC",
+      "skor": "3-2",
+      "tarih": "2026-08-14T19:15:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "ELC",
+      "ev": "Wolverhampton Wanderers",
+      "dep": "Blackburn Rovers",
+      "skor": "2-2",
+      "tarih": "2026-08-14T19:00:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "DED",
+      "ev": "Telstar 1963",
+      "dep": "Sparta Rotterdam",
+      "skor": "1-3",
+      "tarih": "2026-08-14T18:00:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "PPL",
+      "ev": "CD Santa Clara",
+      "dep": "CD Nacional",
+      "skor": "2-2",
+      "tarih": "2026-08-10T19:15:00Z",
+      "tahmin": "Beraberlik"
+    },
+    {
+      "lig": "PPL",
+      "ev": "Moreirense",
+      "dep": "Sporting Clube de Braga",
+      "skor": "2-2",
+      "tarih": "2026-08-09T19:30:00Z",
+      "tahmin": "Beraberlik"
+    },
+    {
+      "lig": "PPL",
+      "ev": "Gil Vicente",
+      "dep": "Rio Ave",
+      "skor": "1-0",
+      "tarih": "2026-08-09T19:30:00Z",
+      "tahmin": "Beraberlik"
+    },
+    {
+      "lig": "PPL",
+      "ev": "Sport Lisboa e Benfica",
+      "dep": "Académico de Viseu",
+      "skor": "2-2",
+      "tarih": "2026-08-09T19:30:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "PPL",
+      "ev": "FC Porto",
+      "dep": "FC Alverca",
+      "skor": "2-0",
+      "tarih": "2026-08-09T17:00:00Z",
+      "tahmin": "Deplasman Kazanır"
+    },
+    {
+      "lig": "DED",
+      "ev": "SC Heerenveen",
+      "dep": "FC Twente '65",
+      "skor": "1-0",
+      "tarih": "2026-08-09T14:45:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "DED",
+      "ev": "FC Groningen",
+      "dep": "FC Utrecht",
+      "skor": "2-1",
+      "tarih": "2026-08-09T12:30:00Z",
+      "tahmin": "Beraberlik"
+    },
+    {
+      "lig": "DED",
+      "ev": "PEC Zwolle",
+      "dep": "AFC Ajax",
+      "skor": "0-2",
+      "tarih": "2026-08-09T12:30:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "DED",
+      "ev": "Sparta Rotterdam",
+      "dep": "Feyenoord Rotterdam",
+      "skor": "0-1",
+      "tarih": "2026-08-09T10:15:00Z",
+      "tahmin": "Beraberlik"
+    },
+    {
+      "lig": "PPL",
+      "ev": "CF Estrela da Amadora",
+      "dep": "Sporting Clube de Portugal",
+      "skor": "2-2",
+      "tarih": "2026-08-08T19:30:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "DED",
+      "ev": "AZ",
+      "dep": "ADO Den Haag",
+      "skor": "2-0",
+      "tarih": "2026-08-08T19:00:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "DED",
+      "ev": "PSV",
+      "dep": "Fortuna Sittard",
+      "skor": "2-2",
+      "tarih": "2026-08-08T18:00:00Z",
+      "tahmin": "Deplasman Kazanır"
+    },
+    {
+      "lig": "PPL",
+      "ev": "Vitória SC",
+      "dep": "FC Arouca",
+      "skor": "0-1",
+      "tarih": "2026-08-08T17:00:00Z",
+      "tahmin": "Deplasman Kazanır"
+    },
+    {
+      "lig": "DED",
+      "ev": "Go Ahead Eagles",
+      "dep": "Willem II Tilburg",
+      "skor": "4-1",
+      "tarih": "2026-08-08T16:45:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "PPL",
+      "ev": "CS Marítimo",
+      "dep": "Casa Pia AC",
+      "skor": "1-0",
+      "tarih": "2026-08-08T14:30:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "DED",
+      "ev": "NEC",
+      "dep": "Telstar 1963",
+      "skor": "1-2",
+      "tarih": "2026-08-08T14:30:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "PPL",
+      "ev": "GD Estoril Praia",
+      "dep": "FC Famalicão",
+      "skor": "1-1",
+      "tarih": "2026-08-07T19:15:00Z",
+      "tahmin": "Beraberlik"
+    },
+    {
+      "lig": "DED",
+      "ev": "SC Cambuur-Leeuwarden",
+      "dep": "SBV Excelsior",
+      "skor": "0-4",
+      "tarih": "2026-08-07T18:00:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "PPL",
+      "ev": "CD Nacional",
+      "dep": "Vitória SC",
+      "skor": "2-0",
+      "tarih": "2026-05-16T17:00:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "PPL",
+      "ev": "Casa Pia AC",
+      "dep": "Rio Ave",
+      "skor": "2-1",
+      "tarih": "2026-05-16T17:00:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "PPL",
+      "ev": "FC Arouca",
+      "dep": "CD Tondela",
+      "skor": "3-1",
+      "tarih": "2026-05-16T17:00:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "PPL",
+      "ev": "Sporting Clube de Braga",
+      "dep": "CF Estrela da Amadora",
+      "skor": "2-2",
+      "tarih": "2026-05-16T17:00:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "PPL",
+      "ev": "Moreirense",
+      "dep": "AVS",
+      "skor": "0-1",
+      "tarih": "2026-05-16T14:30:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "PPL",
+      "ev": "FC Porto",
+      "dep": "CD Santa Clara",
+      "skor": "1-0",
+      "tarih": "2026-05-16T14:30:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "FL1",
+      "ev": "Racing Club de Lens",
+      "dep": "Paris Saint-Germain",
+      "skor": "0-2",
+      "tarih": "2026-05-13T19:00:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "FL1",
+      "ev": "Stade Brestois 29",
+      "dep": "RC Strasbourg Alsace",
+      "skor": "1-2",
+      "tarih": "2026-05-13T17:00:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "ELC",
+      "ev": "Southampton",
+      "dep": "Middlesbrough",
+      "skor": "2-1",
+      "tarih": "2026-05-12T19:00:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "ELC",
+      "ev": "Millwall",
+      "dep": "Hull City AFC",
+      "skor": "0-2",
+      "tarih": "2026-05-11T19:00:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "FL1",
+      "ev": "Le Havre AC",
+      "dep": "Olympique de Marseille",
+      "skor": "0-1",
+      "tarih": "2026-05-10T19:00:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "FL1",
+      "ev": "AJ Auxerre",
+      "dep": "OGC Nice",
+      "skor": "2-1",
+      "tarih": "2026-05-10T19:00:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "FL1",
+      "ev": "AS Monaco",
+      "dep": "Lille OSC",
+      "skor": "0-1",
+      "tarih": "2026-05-10T19:00:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "FL1",
+      "ev": "FC Metz",
+      "dep": "FC Lorient",
+      "skor": "0-4",
+      "tarih": "2026-05-10T19:00:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "FL1",
+      "ev": "Toulouse",
+      "dep": "Olympique Lyonnais",
+      "skor": "2-1",
+      "tarih": "2026-05-10T19:00:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "FL1",
+      "ev": "Paris Saint-Germain",
+      "dep": "Stade Brestois 29",
+      "skor": "1-0",
+      "tarih": "2026-05-10T19:00:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "FL1",
+      "ev": "Angers SCO",
+      "dep": "RC Strasbourg Alsace",
+      "skor": "1-1",
+      "tarih": "2026-05-10T19:00:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "FL1",
+      "ev": "Stade Rennais 1901",
+      "dep": "Paris",
+      "skor": "2-1",
+      "tarih": "2026-05-10T19:00:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "DED",
+      "ev": "AFC Ajax",
+      "dep": "FC Utrecht",
+      "skor": "1-2",
+      "tarih": "2026-05-10T14:45:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "DED",
+      "ev": "SBV Excelsior",
+      "dep": "FC Volendam",
+      "skor": "1-1",
+      "tarih": "2026-05-10T14:45:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "DED",
+      "ev": "FC Groningen",
+      "dep": "NEC",
+      "skor": "2-1",
+      "tarih": "2026-05-10T14:45:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "DED",
+      "ev": "Feyenoord Rotterdam",
+      "dep": "AZ",
+      "skor": "1-1",
+      "tarih": "2026-05-10T14:45:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "DED",
+      "ev": "Fortuna Sittard",
+      "dep": "PEC Zwolle",
+      "skor": "3-2",
+      "tarih": "2026-05-10T14:45:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "DED",
+      "ev": "Go Ahead Eagles",
+      "dep": "PSV",
+      "skor": "1-4",
+      "tarih": "2026-05-10T14:45:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "BL2",
+      "ev": "Fortuna Dusseldorf",
+      "dep": "Elversberg",
+      "skor": "3-1",
+      "tarih": "2026-05-10T12:30:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "BL2",
+      "ev": "Hertha",
+      "dep": "Greuther Furth",
+      "skor": "2-1",
+      "tarih": "2026-05-10T12:30:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "BL2",
+      "ev": "PreuÃen MÃ¼nster",
+      "dep": "Darmstadt",
+      "skor": "1-1",
+      "tarih": "2026-05-10T12:30:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "BL2",
+      "ev": "Nurnberg",
+      "dep": "Schalke 04",
+      "skor": "3-0",
+      "tarih": "2026-05-09T19:30:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "TSL",
+      "ev": "Alanyaspor",
+      "dep": "Kayserispor",
+      "skor": "3-1",
+      "tarih": "2026-05-09T18:00:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "TSL",
+      "ev": "Besiktas",
+      "dep": "Trabzonspor",
+      "skor": "1-2",
+      "tarih": "2026-05-09T18:00:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "TSL",
+      "ev": "Buyuksehyr",
+      "dep": "Samsunspor",
+      "skor": "3-0",
+      "tarih": "2026-05-09T18:00:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "TSL",
+      "ev": "Eyupspor",
+      "dep": "Rizespor",
+      "skor": "4-0",
+      "tarih": "2026-05-09T18:00:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "TSL",
+      "ev": "Galatasaray",
+      "dep": "Antalyaspor",
+      "skor": "4-2",
+      "tarih": "2026-05-09T18:00:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "TSL",
+      "ev": "Genclerbirligi",
+      "dep": "Kasimpasa",
+      "skor": "3-2",
+      "tarih": "2026-05-09T18:00:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "TSL",
+      "ev": "Goztep",
+      "dep": "Gaziantep",
+      "skor": "2-1",
+      "tarih": "2026-05-09T18:00:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "TSL",
+      "ev": "Kocaelispor",
+      "dep": "Karagumruk",
+      "skor": "0-1",
+      "tarih": "2026-05-09T18:00:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "TSL",
+      "ev": "Konyaspor",
+      "dep": "Fenerbahce",
+      "skor": "0-3",
+      "tarih": "2026-05-09T18:00:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "BL2",
+      "ev": "Bochum",
+      "dep": "Hannover",
+      "skor": "1-1",
+      "tarih": "2026-05-09T12:00:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "BL2",
+      "ev": "Braunschweig",
+      "dep": "Dresden",
+      "skor": "2-1",
+      "tarih": "2026-05-09T12:00:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "BL2",
+      "ev": "Holstein Kiel",
+      "dep": "Magdeburg",
+      "skor": "1-3",
+      "tarih": "2026-05-09T12:00:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "ELC",
+      "ev": "Middlesbrough",
+      "dep": "Southampton",
+      "skor": "0-0",
+      "tarih": "2026-05-09T11:30:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "ELC",
+      "ev": "Hull City AFC",
+      "dep": "Millwall",
+      "skor": "0-0",
+      "tarih": "2026-05-08T19:00:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "FL1",
+      "ev": "Racing Club de Lens",
+      "dep": "FC Nantes",
+      "skor": "1-0",
+      "tarih": "2026-05-08T18:45:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "BL2",
+      "ev": "Kaiserslautern",
+      "dep": "Bielefeld",
+      "skor": "2-0",
+      "tarih": "2026-05-08T17:30:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "BL2",
+      "ev": "Paderborn",
+      "dep": "Karlsruhe",
+      "skor": "2-2",
+      "tarih": "2026-05-08T17:30:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "FL1",
+      "ev": "Olympique Lyonnais",
+      "dep": "Stade Rennais 1901",
+      "skor": "4-2",
+      "tarih": "2026-05-03T18:45:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "TSL",
+      "ev": "Antalyaspor",
+      "dep": "Alanyaspor",
+      "skor": "0-0",
+      "tarih": "2026-05-03T18:00:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "TSL",
+      "ev": "Karagumruk",
+      "dep": "Genclerbirligi",
+      "skor": "1-0",
+      "tarih": "2026-05-03T18:00:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "TSL",
+      "ev": "Kasimpasa",
+      "dep": "Kocaelispor",
+      "skor": "1-1",
+      "tarih": "2026-05-03T18:00:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "TSL",
+      "ev": "Kayserispor",
+      "dep": "Eyupspor",
+      "skor": "1-1",
+      "tarih": "2026-05-03T18:00:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "FL1",
+      "ev": "AJ Auxerre",
+      "dep": "Angers SCO",
+      "skor": "3-1",
+      "tarih": "2026-05-03T15:15:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "FL1",
+      "ev": "Paris",
+      "dep": "Stade Brestois 29",
+      "skor": "4-0",
+      "tarih": "2026-05-03T15:15:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "FL1",
+      "ev": "RC Strasbourg Alsace",
+      "dep": "Toulouse",
+      "skor": "1-2",
+      "tarih": "2026-05-03T15:15:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "FL1",
+      "ev": "Lille OSC",
+      "dep": "Le Havre AC",
+      "skor": "1-1",
+      "tarih": "2026-05-03T13:00:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "BL2",
+      "ev": "Elversberg",
+      "dep": "Paderborn",
+      "skor": "5-1",
+      "tarih": "2026-05-03T12:30:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "BL2",
+      "ev": "Greuther Furth",
+      "dep": "Nurnberg",
+      "skor": "1-1",
+      "tarih": "2026-05-03T12:30:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "BL2",
+      "ev": "Hannover",
+      "dep": "PreuÃen MÃ¼nster",
+      "skor": "3-3",
+      "tarih": "2026-05-03T12:30:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "BL2",
+      "ev": "Karlsruhe",
+      "dep": "Darmstadt",
+      "skor": "2-1",
+      "tarih": "2026-05-03T12:30:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "BL2",
+      "ev": "Magdeburg",
+      "dep": "Hertha",
+      "skor": "1-0",
+      "tarih": "2026-05-03T12:30:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "BL2",
+      "ev": "Schalke 04",
+      "dep": "Fortuna Dusseldorf",
+      "skor": "1-0",
+      "tarih": "2026-05-02T19:30:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "FL1",
+      "ev": "OGC Nice",
+      "dep": "Racing Club de Lens",
+      "skor": "1-1",
+      "tarih": "2026-05-02T19:05:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "TSL",
+      "ev": "Fenerbahce",
+      "dep": "Buyuksehyr",
+      "skor": "3-1",
+      "tarih": "2026-05-02T18:00:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "TSL",
+      "ev": "Samsunspor",
+      "dep": "Galatasaray",
+      "skor": "4-1",
+      "tarih": "2026-05-02T18:00:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "TSL",
+      "ev": "Trabzonspor",
+      "dep": "Goztep",
+      "skor": "1-1",
+      "tarih": "2026-05-02T18:00:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "FL1",
+      "ev": "FC Metz",
+      "dep": "AS Monaco",
+      "skor": "1-2",
+      "tarih": "2026-05-02T17:00:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "FL1",
+      "ev": "Paris Saint-Germain",
+      "dep": "FC Lorient",
+      "skor": "2-2",
+      "tarih": "2026-05-02T15:00:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "FL1",
+      "ev": "FC Nantes",
+      "dep": "Olympique de Marseille",
+      "skor": "3-0",
+      "tarih": "2026-05-02T13:00:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "BL2",
+      "ev": "Bielefeld",
+      "dep": "Bochum",
+      "skor": "1-1",
+      "tarih": "2026-05-02T12:00:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "BL2",
+      "ev": "Dresden",
+      "dep": "Kaiserslautern",
+      "skor": "1-0",
+      "tarih": "2026-05-02T12:00:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "BL2",
+      "ev": "Holstein Kiel",
+      "dep": "Braunschweig",
+      "skor": "2-0",
+      "tarih": "2026-05-02T12:00:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "ELC",
+      "ev": "Blackburn Rovers",
+      "dep": "Leicester City",
+      "skor": "0-1",
+      "tarih": "2026-05-02T11:30:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "ELC",
+      "ev": "Bristol City",
+      "dep": "Stoke City",
+      "skor": "2-0",
+      "tarih": "2026-05-02T11:30:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "TSL",
+      "ev": "Gaziantep",
+      "dep": "Besiktas",
+      "skor": "0-2",
+      "tarih": "2026-05-01T18:00:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "TSL",
+      "ev": "Rizespor",
+      "dep": "Konyaspor",
+      "skor": "3-2",
+      "tarih": "2026-05-01T15:00:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "TSL",
+      "ev": "Besiktas",
+      "dep": "Karagumruk",
+      "skor": "0-0",
+      "tarih": "2026-04-27T18:00:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "TSL",
+      "ev": "Konyaspor",
+      "dep": "Trabzonspor",
+      "skor": "2-1",
+      "tarih": "2026-04-27T18:00:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "TSL",
+      "ev": "Alanyaspor",
+      "dep": "Samsunspor",
+      "skor": "2-3",
+      "tarih": "2026-04-27T15:00:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "FL1",
+      "ev": "Olympique de Marseille",
+      "dep": "OGC Nice",
+      "skor": "1-1",
+      "tarih": "2026-04-26T18:45:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "TSL",
+      "ev": "Galatasaray",
+      "dep": "Fenerbahce",
+      "skor": "3-0",
+      "tarih": "2026-04-26T18:00:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "TSL",
+      "ev": "Genclerbirligi",
+      "dep": "Kocaelispor",
+      "skor": "1-0",
+      "tarih": "2026-04-26T12:30:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "BL2",
+      "ev": "Bochum",
+      "dep": "Greuther Furth",
+      "skor": "2-1",
+      "tarih": "2026-04-26T12:30:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "BL2",
+      "ev": "Nurnberg",
+      "dep": "Magdeburg",
+      "skor": "1-0",
+      "tarih": "2026-04-26T12:30:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "BL2",
+      "ev": "Paderborn",
+      "dep": "Schalke 04",
+      "skor": "2-3",
+      "tarih": "2026-04-26T12:30:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "BL2",
+      "ev": "Darmstadt",
+      "dep": "Elversberg",
+      "skor": "3-3",
+      "tarih": "2026-04-25T19:30:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "TSL",
+      "ev": "Goztep",
+      "dep": "Antalyaspor",
+      "skor": "2-0",
+      "tarih": "2026-04-25T18:00:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "TSL",
+      "ev": "Kayserispor",
+      "dep": "Rizespor",
+      "skor": "2-0",
+      "tarih": "2026-04-25T15:00:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "TSL",
+      "ev": "Eyupspor",
+      "dep": "Gaziantep",
+      "skor": "3-0",
+      "tarih": "2026-04-25T12:30:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "BL2",
+      "ev": "Hertha",
+      "dep": "Holstein Kiel",
+      "skor": "0-1",
+      "tarih": "2026-04-25T12:00:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "BL2",
+      "ev": "Karlsruhe",
+      "dep": "Hannover",
+      "skor": "1-3",
+      "tarih": "2026-04-25T12:00:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "BL2",
+      "ev": "PreuÃen MÃ¼nster",
+      "dep": "Bielefeld",
+      "skor": "2-3",
+      "tarih": "2026-04-25T12:00:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "TSL",
+      "ev": "Buyuksehyr",
+      "dep": "Kasimpasa",
+      "skor": "4-0",
+      "tarih": "2026-04-24T18:00:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "BL2",
+      "ev": "Fortuna Dusseldorf",
+      "dep": "Dresden",
+      "skor": "3-1",
+      "tarih": "2026-04-24T17:30:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "BL2",
+      "ev": "Kaiserslautern",
+      "dep": "Braunschweig",
+      "skor": "0-2",
+      "tarih": "2026-04-24T17:30:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "TSL",
+      "ev": "Gaziantep",
+      "dep": "Kayserispor",
+      "skor": "3-0",
+      "tarih": "2026-04-20T18:00:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "TSL",
+      "ev": "Trabzonspor",
+      "dep": "Buyuksehyr",
+      "skor": "1-1",
+      "tarih": "2026-04-19T18:00:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "TSL",
+      "ev": "Samsunspor",
+      "dep": "Besiktas",
+      "skor": "2-1",
+      "tarih": "2026-04-19T15:00:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "BL2",
+      "ev": "Braunschweig",
+      "dep": "Hertha",
+      "skor": "1-1",
+      "tarih": "2026-04-19T12:30:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "BL2",
+      "ev": "Greuther Furth",
+      "dep": "Darmstadt",
+      "skor": "3-2",
+      "tarih": "2026-04-19T12:30:00Z",
+      "tahmin": null
+    },
+    {
+      "lig": "BL2",
+      "ev": "Schalke 04",
+      "dep": "PreuÃen MÃ¼nster",
+      "skor": "4-1",
+      "tarih": "2026-04-19T12:30:00Z",
       "tahmin": null
     }
   ]
