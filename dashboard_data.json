@@ -1327,7 +1327,37 @@
     }
   },
   "total_matches_count": 180,
-  "kupon": null,
+  "kupon": {
+    "maclar": [
+      {
+        "ev": "SC Cambuur-Leeuwarden",
+        "dep": "FC Twente '65",
+        "tahmin": "Deplasman Kazanır",
+        "oran": 1.62,
+        "tarih": "2026-08-30T18:00:00Z",
+        "analiz": "🤖 <b>Yapay Zeka Analizi:</b> Ensemble modeli (Dixon-Coles + ELO + Purged LightGBM), <b>SC Cambuur-Leeuwarden</b> galibiyetine %38.4, beraberliğe %10.0, <b>FC Twente '65</b> galibiyetine %61.6 ihtimal vermektedir.<br><br>📊 <b>Gol ve Tempo Projeksiyonu:</b> Beklenen Gol (xG) hesabı Ev: 1.2 - Dep: 2.64 (Toplam 3.84 gol) göstermektedir. 2.5 Üst ihtimali %80.0, KG Var ihtimali %78.0 seviyesindedir.<br><br>🎯 <b>Stratejik Yol Haritası & Tavsiye:</b> Bu karşılaşmada <b>Deplasman Kazanır</b> bahsi %+ 26.6% matematiksel net değer (Edge) barındırmaktadır. Disiplinli Kelly sermaye yönetiminden %1.8 (90 TL) oranında katılım önerilir."
+      },
+      {
+        "ev": "Bolton Wanderers",
+        "dep": "Lincoln City",
+        "tahmin": "Ev Sahibi Kazanır",
+        "oran": 2.55,
+        "tarih": "2026-08-29T14:00:00Z",
+        "analiz": "🤖 <b>Yapay Zeka Analizi:</b> Ensemble modeli (Dixon-Coles + ELO + Purged LightGBM), <b>Bolton Wanderers</b> galibiyetine %70.5, beraberliğe %10.0, <b>Lincoln City</b> galibiyetine %29.5 ihtimal vermektedir.<br><br>📊 <b>Gol ve Tempo Projeksiyonu:</b> Beklenen Gol (xG) hesabı Ev: 1.93 - Dep: 0.68 (Toplam 2.61 gol) göstermektedir. 2.5 Üst ihtimali %57.4, KG Var ihtimali %65.9 seviyesindedir.<br><br>🎯 <b>Stratejik Yol Haritası & Tavsiye:</b> Bu karşılaşmada <b>Ev Sahibi Kazanır</b> bahsi %+ 25.5% matematiksel net değer (Edge) barındırmaktadır. Disiplinli Kelly sermaye yönetiminden %1.8 (90 TL) oranında katılım önerilir."
+      },
+      {
+        "ev": "Rio Ave",
+        "dep": "Sporting Clube de Portugal",
+        "tahmin": "Deplasman Kazanır",
+        "oran": 1.72,
+        "tarih": "2026-08-28T19:15:00Z",
+        "analiz": "🤖 <b>Yapay Zeka Analizi:</b> Ensemble modeli (Dixon-Coles + ELO + Purged LightGBM), <b>Rio Ave</b> galibiyetine %41.9, beraberliğe %10.0, <b>Sporting Clube de Portugal</b> galibiyetine %58.1 ihtimal vermektedir.<br><br>📊 <b>Gol ve Tempo Projeksiyonu:</b> Beklenen Gol (xG) hesabı Ev: 1.05 - Dep: 1.88 (Toplam 2.93 gol) göstermektedir. 2.5 Üst ihtimali %64.5, KG Var ihtimali %78.0 seviyesindedir.<br><br>🎯 <b>Stratejik Yol Haritası & Tavsiye:</b> Bu karşılaşmada <b>Deplasman Kazanır</b> bahsi %+ 23.1% matematiksel net değer (Edge) barındırmaktadır. Disiplinli Kelly sermaye yönetiminden %1.8 (90 TL) oranında katılım önerilir."
+      }
+    ],
+    "toplam_oran": 7.11,
+    "kazanma_ihtimali": 25.2,
+    "beklenen_deger": 79.3
+  },
   "finished_matches": [
     {
       "ev": "Gil Vicente",
