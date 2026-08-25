@@ -217,33 +217,53 @@ def send_telegram_message(text: str):
 # ═══════════════════════════════════════════════════════
 
 def _load_latest_bets() -> list:
-    """En son pipeline çalıştırmasından gelen bahisleri çek."""
-    # Öncelik: clv_bet_log.json (ana kaynak)
+    """En son pipeline çalıştırmasından gelen bahisleri ve canlı sinyalleri yükle."""
+    # 1. Öncelik: clv_bet_log.json
     if os.path.exists(CLV_LOG_PATH):
         try:
             with open(CLV_LOG_PATH, "r", encoding="utf-8") as f:
                 data = json.load(f)
             bahisler = data.get("bahisler", [])
-
-            # Bugünün bahislerini al
             bugun = datetime.now().strftime("%Y-%m-%d")
             bugun_bahisler = [b for b in bahisler if str(b.get("tarih", ""))[:10] == bugun]
-
             if bugun_bahisler:
                 return bugun_bahisler
+            elif bahisler:
+                # Son 3 günün bahislerini al
+                uc_gun_once = (datetime.now() - timedelta(days=3)).strftime("%Y-%m-%d")
+                recent = [b for b in bahisler if str(b.get("tarih", ""))[:10] >= uc_gun_once]
+                if recent:
+                    return recent
         except Exception as e:
             print(f"⚠️ CLV log okuma hatası: {e}")
 
-    # Fallback: live_signals.json
+    # 2. Fallback: live_signals.json (Yaklaşan Value Bet sinyalleri)
     if os.path.exists(SIGNALS_PATH):
         try:
             with open(SIGNALS_PATH, "r", encoding="utf-8") as f:
                 signals = json.load(f)
-            return signals
-        except Exception:
-            pass
+            # live_signals formatını normalize et
+            normalized = []
+            for s in signals:
+                normalized.append({
+                    "ev": s.get("ev"),
+                    "dep": s.get("dep"),
+                    "lig": s.get("lig"),
+                    "tahmin": s.get("selection", s.get("tahmin", "")),
+                    "oran": s.get("target_odds", s.get("oran", 0)),
+                    "model_p": s.get("model_prob", 0) / 100.0 if s.get("model_prob", 0) > 1 else s.get("model_prob", 0),
+                    "edge": s.get("edge_pct", 0) / 100.0 if s.get("edge_pct", 0) > 1 else s.get("edge_pct", 0),
+                    "confidence": s.get("edge_pct", 25.0),
+                    "tarih": s.get("date", ""),
+                    "reasoning": s.get("reasoning", ""),
+                })
+            if normalized:
+                return normalized
+        except Exception as e:
+            print(f"⚠️ Live signals okuma hatası: {e}")
 
     return []
+
 
 
 # ═══════════════════════════════════════════════════════
