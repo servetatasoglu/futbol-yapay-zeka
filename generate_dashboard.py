@@ -43,6 +43,75 @@ def _get_api_key(name):
     return os.environ.get(env_map.get(name, ""), "")
 
 
+def fetch_match_news(home, away):
+    """
+    Google News RSS üzerinden maç ile ilgili güncel Türkçe haberleri çeker.
+    12 saatlik önbellek (cache) mekanizması ile hızlı ve kotasız çalışır.
+    """
+    cache_file = os.path.join(BASE, "data", "news_cache.json")
+    news_cache = {}
+    if os.path.exists(cache_file):
+        try:
+            with open(cache_file, "r", encoding="utf-8") as f:
+                news_cache = json.load(f)
+        except Exception:
+            news_cache = {}
+    
+    key = f"{home.lower()}|{away.lower()}"
+    now_ts = datetime.now().timestamp()
+    if key in news_cache:
+        cached = news_cache[key]
+        if now_ts - cached.get("timestamp", 0) < 43200: # 12 saat
+            return cached.get("news", [])
+
+    query = f"{home} {away}"
+    items = []
+    try:
+        import urllib.parse, urllib.request, xml.etree.ElementTree as ET
+        encoded = urllib.parse.quote(f"{query} futbol")
+        url = f"https://news.google.com/rss/search?q={encoded}&hl=tr&gl=TR&ceid=TR:tr"
+        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+        with urllib.request.urlopen(req, timeout=3) as response:
+            xml_data = response.read()
+            root = ET.fromstring(xml_data)
+            for item in root.findall(".//item")[:4]:
+                title = item.find("title").text if item.find("title") is not None else ""
+                link = item.find("link").text if item.find("link") is not None else ""
+                pubDate = item.find("pubDate").text if item.find("pubDate") is not None else ""
+                source = item.find("source").text if item.find("source") is not None else ""
+                items.append({"title": title, "link": link, "pubDate": pubDate, "source": source})
+    except Exception:
+        pass
+
+    if not items:
+        try:
+            import urllib.parse, urllib.request, xml.etree.ElementTree as ET
+            encoded = urllib.parse.quote(f"{home} futbol")
+            url = f"https://news.google.com/rss/search?q={encoded}&hl=tr&gl=TR&ceid=TR:tr"
+            req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+            with urllib.request.urlopen(req, timeout=3) as response:
+                xml_data = response.read()
+                root = ET.fromstring(xml_data)
+                for item in root.findall(".//item")[:3]:
+                    title = item.find("title").text if item.find("title") is not None else ""
+                    link = item.find("link").text if item.find("link") is not None else ""
+                    pubDate = item.find("pubDate").text if item.find("pubDate") is not None else ""
+                    source = item.find("source").text if item.find("source") is not None else ""
+                    items.append({"title": title, "link": link, "pubDate": pubDate, "source": source})
+        except Exception:
+            pass
+
+    news_cache[key] = {"timestamp": now_ts, "news": items}
+    try:
+        os.makedirs(os.path.join(BASE, "data"), exist_ok=True)
+        with open(cache_file, "w", encoding="utf-8") as f:
+            json.dump(news_cache, f, ensure_ascii=False, indent=2)
+    except Exception:
+        pass
+
+    return items
+
+
 def fetch_upcoming_matches():
     """
     Football-Data API'den gelecek 10 gündeki maçları çeker.
@@ -1410,7 +1479,8 @@ if __name__ == "__main__":
                 "ev_standing": get_standing(home),
                 "dep_standing": get_standing(away),
                 "h2h": get_h2h(home, away)
-            }
+            },
+            "news": fetch_match_news(home, away)
         })
     
     print(f"  ✅ {len(upcoming_signals)} gelecek maç için AI analizi tamamlandı")

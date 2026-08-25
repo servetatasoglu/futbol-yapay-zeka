@@ -3386,7 +3386,7 @@
         "tahmin": "Ev Sahibi Kazanır",
         "oran": 2.56,
         "tarih": "2026-08-29T14:00:00Z",
-        "analiz": "🤖 <b>Yapay Zeka Analizi:</b> Ensemble modeli (Dixon-Coles + ELO + Purged LightGBM), <b>Bolton Wanderers</b> galibiyetine %49.6, beraberliğe %20.5, <b>Lincoln City</b> galibiyetine %29.9 ihtimal vermektedir.<br>📐 <b>Bayesian Kalibrasyon:</b> Pinnacle piyasa olasılığı ile model tahmini %60/%40 oranında harmanlanmıştır.<br><br>📊 <b>Gol ve Tempo Projeksiyonu:</b> Beklenen Gol (xG) hesabı Ev: 1.93 - Dep: 0.68 (Toplam 2.61 gol) göstermektedir. 2.5 Üst ihtimali %57.4, KG Var ihtimali %65.9 seviyesindedir.<br><br>🎯 <b>Stratejik Yol Haritası & Tavsiye:</b> Bu karşılaşmada <b>Ev Sahibi Kazanır</b> bahsi %+10.5% matematiksel net değer (Edge) barındırmaktadır. Kelly sermaye yönetimi (Fractional %25): bakiyenin %4.3'i ile katılım önerilir."
+        "analiz": "🤖 <b>Yapay Zeka Analizi:</b> Ensemble modeli (Dixon-Coles + ELO + Purged LightGBM), <b>Bolton Wanderers</b> galibiyetine %49.5, beraberliğe %20.7, <b>Lincoln City</b> galibiyetine %29.8 ihtimal vermektedir.<br>📐 <b>Bayesian Kalibrasyon:</b> Pinnacle piyasa olasılığı ile model tahmini %60/%40 oranında harmanlanmıştır.<br><br>📊 <b>Gol ve Tempo Projeksiyonu:</b> Beklenen Gol (xG) hesabı Ev: 1.93 - Dep: 0.68 (Toplam 2.61 gol) göstermektedir. 2.5 Üst ihtimali %57.4, KG Var ihtimali %65.9 seviyesindedir.<br><br>🎯 <b>Stratejik Yol Haritası & Tavsiye:</b> Bu karşılaşmada <b>Ev Sahibi Kazanır</b> bahsi %+10.4% matematiksel net değer (Edge) barındırmaktadır. Kelly sermaye yönetimi (Fractional %25): bakiyenin %4.3'i ile katılım önerilir."
       },
       {
         "ev": "Stade Brestois 29",
@@ -3407,7 +3407,7 @@
     ],
     "toplam_oran": 19.0,
     "kazanma_ihtimali": 9.1,
-    "beklenen_deger": 73.0
+    "beklenen_deger": 72.6
   },
   "finished_matches": [
     {
