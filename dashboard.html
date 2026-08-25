@@ -197,10 +197,12 @@
 
         <!-- SEARCH & FILTER BAR -->
         <div class="mk-bg-header border mk-border rounded-sm p-2 mx-2 md:mx-0 mb-4 flex flex-col md:flex-row justify-between items-center gap-3">
-            <div class="flex gap-2 w-full md:w-auto">
+            <div class="flex gap-2 w-full md:w-auto overflow-x-auto">
                 <button id="tab-bulten" class="flex-1 md:flex-none px-4 py-1.5 mk-bg-row border border-mk-green text-mk-green rounded text-[12px] font-bold transition-colors">Yapay Zeka Radar</button>
                 <button id="tab-biten" class="flex-1 md:flex-none px-4 py-1.5 mk-bg-row border mk-border text-muted hover:text-primary rounded text-[12px] font-bold transition-colors">Biten Maçlar</button>
+                <button id="tab-puan" class="flex-1 md:flex-none px-4 py-1.5 mk-bg-row border mk-border text-muted hover:text-mk-yellow rounded text-[12px] font-bold transition-colors">🏆 Puan Durumu</button>
             </div>
+
             <div class="flex-1 w-full relative">
                 <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                     <svg class="h-4 w-4 text-muted" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
@@ -335,81 +337,144 @@
 
         let activeTab = 'bulten';
 
-        document.getElementById('tab-bulten').addEventListener('click', (e) => {
+        let activeTab = 'bulten';
+
+        function updateTabStyles() {
+            const tabs = [
+                { id: 'tab-bulten', name: 'bulten', color: 'text-mk-green', border: 'border-mk-green' },
+                { id: 'tab-biten', name: 'biten', color: 'text-primary', border: 'border-primary' },
+                { id: 'tab-puan', name: 'puan', color: 'text-mk-yellow', border: 'border-mk-yellow' }
+            ];
+            tabs.forEach(t => {
+                const el = document.getElementById(t.id);
+                if (!el) return;
+                if (activeTab === t.name) {
+                    el.className = `flex-1 md:flex-none px-4 py-1.5 mk-bg-row border ${t.border} ${t.color} rounded text-[12px] font-bold transition-colors`;
+                } else {
+                    el.className = `flex-1 md:flex-none px-4 py-1.5 mk-bg-row border mk-border text-muted hover:text-primary rounded text-[12px] font-bold transition-colors`;
+                }
+            });
+        }
+
+        document.getElementById('tab-bulten').addEventListener('click', () => {
             activeTab = 'bulten';
-            e.target.classList.add('border-mk-green', 'text-mk-green');
-            e.target.classList.remove('mk-border', 'text-muted');
-            const other = document.getElementById('tab-biten');
-            other.classList.remove('border-mk-green', 'text-mk-green');
-            other.classList.add('mk-border', 'text-muted');
+            updateTabStyles();
             renderActiveTab();
         });
 
-        document.getElementById('tab-biten').addEventListener('click', (e) => {
+        document.getElementById('tab-biten').addEventListener('click', () => {
             activeTab = 'biten';
-            e.target.classList.add('border-mk-green', 'text-mk-green');
-            e.target.classList.remove('mk-border', 'text-muted');
-            const other = document.getElementById('tab-bulten');
-            other.classList.remove('border-mk-green', 'text-mk-green');
-            other.classList.add('mk-border', 'text-muted');
+            updateTabStyles();
             renderActiveTab();
         });
 
-        function loadData() {
-            try {
-                const data = window.DASHBOARD_DATA;
-                const signals = window.LIVE_SIGNALS || [];
-                if (!data) return;
-                
-                renderKPIs(data.summary);
-                
-                // Append past bets to LIVE_SIGNALS for the Sonuçlananlar view
-                const pastBets = data.bets || [];
-                const finishedBets = pastBets.filter(b => b.is_win !== null).map(b => ({
-                    ev: b.ev, dep: b.dep, lig: "Sonuçlananlar (Model)", date: b.date, 
-                    selection: b.tahmin, target_odds: b.best_odds,
-                    is_win: b.is_win, gercek_skor: b.gercek_skor, pnl: b.pnl,
-                    edge_pct: b.edge * 100, odds: { ms1:0, ms0:0, ms2:0 },
-                    sharp: {}, form: {}, opening_odds: {}
-                }));
-                
-                const finishedMatches = data.finished_matches || [];
-                const bitenMaclarObj = finishedMatches.map(m => ({
-                    ev: m.ev || m.home, dep: m.dep || m.away, lig: m.lig || "?", date: m.tarih || m.date, 
-                    selection: m.selection || m.prediction || "Biten Maç",
-                    target_odds: m.target_odds || (m.odds ? m.odds.ms1 : 1.80),
-                    is_win: m.is_win, gercek_skor: m.gercek_skor || m.skor || "v", pnl: m.pnl || 0,
-                    verification_badge: m.verification_badge || (m.is_win ? "🎯 İSABETLİ TAHMİN" : (m.is_win === false ? "❌ MODEL YANILDI" : "⏳ BEKLİYOR")),
-                    edge_pct: m.edge_pct || 8.5,
-                    probs: m.probs || { ms1: 52.0, ms0: 26.0, ms2: 22.0, over25: 56.0, under25: 44.0, btts_yes: 54.0, btts_no: 46.0 },
-                    odds: m.odds || { ms1: 1.92, ms0: 3.85, ms2: 4.55 },
-                    xg: m.xg || { ev: 1.65, dep: 1.10, toplam: 2.75 },
-                    sharp: m.sharp || { ms_sinyal: "YOK", ms_tier: "NO_SHARP" },
-                    form: m.form || {}, opening_odds: m.opening_odds || {}
-                }));
+        document.getElementById('tab-puan').addEventListener('click', () => {
+            activeTab = 'puan';
+            updateTabStyles();
+            renderActiveTab();
+        });
 
-                
-                window.ALL_BULTEN = [...signals, ...finishedBets];
-                window.ALL_BITEN = bitenMaclarObj;
-                
-                renderKupon();
-                renderActiveTab();
-            } catch (err) {
-                console.error("Data load failed", err);
-            }
-        }
-        
         function renderActiveTab() {
+            const filterValueBtn = document.getElementById('filter-value');
+            const kuponCont = document.getElementById('kupon-container');
+            
             if (activeTab === 'bulten') {
-                document.getElementById('filter-value').parentElement.classList.remove('hidden');
-                document.getElementById('kupon-container').style.display = window.ALL_BULTEN.length > 0 ? '' : 'none';
+                if (filterValueBtn) filterValueBtn.parentElement.classList.remove('hidden');
+                if (kuponCont) kuponCont.style.display = window.ALL_BULTEN.length > 0 ? '' : 'none';
                 renderFixtures(window.ALL_BULTEN);
-            } else {
-                document.getElementById('filter-value').parentElement.classList.add('hidden');
-                document.getElementById('kupon-container').style.display = 'none';
+            } else if (activeTab === 'biten') {
+                if (filterValueBtn) filterValueBtn.parentElement.classList.add('hidden');
+                if (kuponCont) kuponCont.style.display = 'none';
                 renderFixtures(window.ALL_BITEN);
+            } else if (activeTab === 'puan') {
+                if (filterValueBtn) filterValueBtn.parentElement.classList.add('hidden');
+                if (kuponCont) kuponCont.style.display = 'none';
+                renderStandings();
             }
         }
+
+        function renderStandings() {
+            const container = document.getElementById('fixture-container');
+            const standings = (window.DASHBOARD_DATA && window.DASHBOARD_DATA.standings) || {};
+            
+            if (Object.keys(standings).length === 0) {
+                container.innerHTML = `<div class="p-8 text-center text-muted text-sm">Puan durumu verisi yükleniyor...</div>`;
+                return;
+            }
+
+            const sortedTeams = Object.entries(standings).map(([name, s]) => {
+                const played = s.played || 1;
+                const gf = s.gf || 0;
+                const ga = s.ga || 0;
+                const av = gf - ga;
+                const pts = s.points || 0;
+                const wins = Math.floor(pts / 3);
+                const draws = pts % 3;
+                const losses = Math.max(0, played - wins - draws);
+                return { name, played, wins, draws, losses, gf, ga, av, pts };
+            }).sort((a, b) => b.pts - a.pts || b.av - a.av || b.gf - a.gf);
+
+            let html = `
+            <div class="p-3 border-b mk-border mk-bg-header flex justify-between items-center">
+                <div class="flex items-center gap-2">
+                    <div class="w-1.5 h-4 bg-mk-yellow rounded"></div>
+                    <span class="font-bold text-sm text-primary uppercase">🏆 Mackolik Liderlik & Puan Tablosu</span>
+                </div>
+                <span class="text-xs text-muted font-bold">${sortedTeams.length} Takım Kayıtlı</span>
+            </div>
+            <div class="overflow-x-auto">
+                <table class="w-full text-left border-collapse text-xs">
+                    <thead>
+                        <tr class="mk-bg-row border-b mk-border text-muted font-bold uppercase text-[11px]">
+                            <th class="py-2.5 px-3 w-10 text-center">Sıra</th>
+                            <th class="py-2.5 px-3">Takım</th>
+                            <th class="py-2.5 px-2 text-center">O</th>
+                            <th class="py-2.5 px-2 text-center text-mk-green">G</th>
+                            <th class="py-2.5 px-2 text-center text-mk-yellow">B</th>
+                            <th class="py-2.5 px-2 text-center text-mk-red">M</th>
+                            <th class="py-2.5 px-2 text-center">AG</th>
+                            <th class="py-2.5 px-2 text-center">YG</th>
+                            <th class="py-2.5 px-2 text-center">AV</th>
+                            <th class="py-2.5 px-3 text-center text-primary font-black">Puan</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y mk-border">
+            `;
+
+            sortedTeams.forEach((t, i) => {
+                const rankColor = i < 3 ? 'bg-mk-green/20 text-mk-green font-black border border-mk-green/30' : (i < 6 ? 'bg-blue-500/20 text-blue-400 font-bold' : 'text-muted');
+                const logo = `https://ui-avatars.com/api/?name=${encodeURIComponent(t.name)}&background=random&color=fff&bold=true&rounded=true&size=32`;
+                
+                html += `
+                    <tr class="mk-bg-row hover:bg-mk-rowHover transition-colors">
+                        <td class="py-2 px-3 text-center">
+                            <span class="inline-block w-5 h-5 leading-5 rounded text-[10px] ${rankColor}">${i + 1}</span>
+                        </td>
+                        <td class="py-2 px-3 flex items-center gap-2 font-bold text-primary">
+                            <img src="${logo}" class="w-4 h-4 rounded-full">
+                            <span>${t.name}</span>
+                        </td>
+                        <td class="py-2 px-2 text-center font-bold text-secondary">${t.played}</td>
+                        <td class="py-2 px-2 text-center font-bold text-mk-green">${t.wins}</td>
+                        <td class="py-2 px-2 text-center font-bold text-mk-yellow">${t.draws}</td>
+                        <td class="py-2 px-2 text-center font-bold text-mk-red">${t.losses}</td>
+                        <td class="py-2 px-2 text-center text-muted">${t.gf}</td>
+                        <td class="py-2 px-2 text-center text-muted">${t.ga}</td>
+                        <td class="py-2 px-2 text-center font-bold ${t.av > 0 ? 'text-mk-green' : (t.av < 0 ? 'text-mk-red' : 'text-muted')}">${t.av > 0 ? '+' : ''}${t.av}</td>
+                        <td class="py-2 px-3 text-center font-black text-sm text-mk-yellow">${t.pts}</td>
+                    </tr>
+                `;
+            });
+
+            html += `
+                    </tbody>
+                </table>
+            </div>
+            `;
+
+            container.innerHTML = html;
+        }
+
 
         function renderKPIs(summary) {
             const roiEl = document.getElementById('kpi-roi');
