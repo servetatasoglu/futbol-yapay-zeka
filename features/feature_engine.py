@@ -469,6 +469,34 @@ def feature_vektor_genisletilmis(
         "hava_carpan":       hava_carpan,
         "yagis_mm":          yagis,
         "sicaklik_c":        sicak,
+        # YENİ: Kadro / Sakatlık / Eksiklik Cezası
+        "ev_sakatlik_cezasi":  squad_availability_penalty(ev_ist.get("sakatliklar", [])),
+        "dep_sakatlik_cezasi": squad_availability_penalty(dep_ist.get("sakatliklar", [])),
         # Lig kodu (kategorik — GBM one-hot ile işler)
         "lig_kodu":          lig_kodu,
     }
+
+
+def squad_availability_penalty(sakatlik_listesi: list) -> float:
+    """
+    Sakat veya cezalı kilit oyuncu sayısına göre hücum/savunma λ ceza çarpanını döner.
+    1.0 = tam kadro
+    0.95 = 1 kilit oyuncu eksik (%5 lambda düşüşü)
+    0.88 = 2+ kilit oyuncu eksik (%12 lambda düşüşü)
+    """
+    if not sakatlik_listesi:
+        return 1.0
+    kilit_eksik = 0
+    for player in sakatlik_listesi:
+        if isinstance(player, dict):
+            if player.get("importance") == "HIGH" or player.get("key_player", False):
+                kilit_eksik += 1
+            else:
+                kilit_eksik += 0.5
+        elif isinstance(player, str):
+            kilit_eksik += 0.5
+    if kilit_eksik >= 2:
+        return 0.88
+    elif kilit_eksik >= 1:
+        return 0.94
+    return 1.0

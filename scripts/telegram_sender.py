@@ -133,29 +133,41 @@ def _format_bet_message(bet: dict) -> str:
     confidence = bet.get("confidence", 0)
     kelly = bet.get("kelly", bet.get("size", 0))
     tier = bet.get("tier", bet.get("aktif_tier", "NO_SHARP"))
-    veri = bet.get("veri_kaynak", "TAM")
     lig = bet.get("lig", "?")
-    mac_tarihi = str(bet.get("mac_tarihi", ""))[:16].replace("T", " ")
+    mac_tarihi = str(bet.get("mac_tarihi", bet.get("tarih", "")))[:16].replace("T", " ")
+
+    # Value Tier Badge
+    edge_pct = edge * 100 if edge < 1.0 else edge
+    if edge_pct >= 12.0:
+        badge = "🔥 <b>SÜPER DEĞER BAHİSİ</b>"
+    elif edge_pct >= 6.0:
+        badge = "⚡ <b>YÜKSEK POTANSİYEL</b>"
+    else:
+        badge = "📊 <b>STANDART DEĞER BAHİSİ</b>"
 
     # Tier emoji
     tier_emoji = {"ELITE": "🔴", "STRONG": "🟠", "WEAK": "🟡", "NO_SHARP": "⚪"}.get(tier, "⚪")
 
     # Açıklama üret
     reason = _generate_explanation(bet)
+    stake_tl = round(kelly * 5000, 0) if kelly else 50.0
 
     msg = (
+        f"{badge}\n"
         f"⚽ <b>{ev} vs {dep}</b>\n"
         f"🏆 {lig} | 📅 {mac_tarihi}\n"
         f"━━━━━━━━━━━━━━━━━━━━━━\n"
         f"📊 Tahmin: <b>{tahmin}</b>\n"
-        f"💰 Oran: <b>{oran:.2f}</b>\n"
-        f"🎯 Model: <b>{model_p*100:.1f}%</b> | Piyasa: {market_p*100:.1f}%\n"
-        f"📈 Edge: <b>+{edge*100:.1f}%</b> | Güven: {confidence:.0f}\n"
-        f"💼 Kelly: %{kelly*100:.2f} | {tier_emoji} {tier}\n"
+        f"💰 Oran: <b>{oran:.2f}</b> (Pinnacle/Büro)\n"
+        f"🎯 Model: <b>{model_p*100 if model_p<1 else model_p:.1f}%</b> | Piyasa: {market_p*100 if market_p<1 else market_p:.1f}%\n"
+        f"📈 Net Edge: <b>+{edge_pct:.1f}%</b> | Güven: {confidence:.0f}\n"
+        f"💼 Tavsiye Bahis: <b>{stake_tl:.0f} TL</b> (%{kelly*100 if kelly<1 else kelly:.1f} Kelly)\n"
+        f"🛡️ Sharp Money: {tier_emoji} {tier}\n"
         f"━━━━━━━━━━━━━━━━━━━━━━\n"
         f"💡 <i>{reason}</i>\n"
     )
     return msg
+
 
 
 def _format_header(bet_count: int, total_scanned: int) -> str:
