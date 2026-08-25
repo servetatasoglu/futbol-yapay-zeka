@@ -47,1316 +47,3367 @@
   "standings": {
     "OGC Nice": {
       "played": 102,
+      "wins": 39,
+      "draws": 30,
+      "losses": 33,
       "points": 147,
       "gf": 143,
       "ga": 130,
       "over25": 50,
-      "btts": 57
+      "btts": 57,
+      "lig": "FL1"
     },
     "Lille OSC": {
       "played": 102,
+      "wins": 52,
+      "draws": 27,
+      "losses": 23,
       "points": 183,
       "gf": 158,
       "ga": 105,
       "over25": 46,
-      "btts": 51
+      "btts": 51,
+      "lig": "FL1"
     },
     "Olympique de Marseille": {
       "played": 102,
+      "wins": 51,
+      "draws": 21,
+      "losses": 30,
       "points": 174,
       "gf": 190,
       "ga": 132,
       "over25": 61,
-      "btts": 58
+      "btts": 58,
+      "lig": "FL1"
     },
     "Stade de Reims": {
       "played": 68,
+      "wins": 21,
+      "draws": 17,
+      "losses": 30,
       "points": 80,
       "gf": 75,
       "ga": 94,
       "over25": 34,
-      "btts": 38
+      "btts": 38,
+      "lig": "FL1"
     },
     "Paris Saint-Germain": {
       "played": 102,
+      "wins": 72,
+      "draws": 21,
+      "losses": 9,
       "points": 237,
       "gf": 248,
       "ga": 97,
       "over25": 68,
-      "btts": 63
+      "btts": 63,
+      "lig": "FL1"
     },
     "FC Lorient": {
       "played": 68,
+      "wins": 18,
+      "draws": 21,
+      "losses": 29,
       "points": 75,
       "gf": 91,
       "ga": 115,
       "over25": 37,
-      "btts": 36
+      "btts": 36,
+      "lig": "FL1"
     },
     "Stade Brestois 29": {
       "played": 102,
+      "wins": 42,
+      "draws": 24,
+      "losses": 36,
       "points": 150,
       "gf": 149,
       "ga": 149,
       "over25": 52,
-      "btts": 49
+      "btts": 49,
+      "lig": "FL1"
     },
     "Racing Club de Lens": {
       "played": 102,
+      "wins": 51,
+      "draws": 20,
+      "losses": 31,
       "points": 173,
       "gf": 154,
       "ga": 113,
       "over25": 49,
-      "btts": 47
+      "btts": 47,
+      "lig": "FL1"
     },
     "Clermont Foot 63": {
       "played": 34,
+      "wins": 5,
+      "draws": 10,
+      "losses": 19,
       "points": 25,
       "gf": 26,
       "ga": 60,
       "over25": 17,
-      "btts": 17
+      "btts": 17,
+      "lig": "FL1"
     },
     "AS Monaco": {
       "played": 102,
+      "wins": 55,
+      "draws": 20,
+      "losses": 27,
       "points": 185,
       "gf": 188,
       "ga": 132,
       "over25": 64,
-      "btts": 61
+      "btts": 61,
+      "lig": "FL1"
     },
     "FC Nantes": {
       "played": 101,
+      "wins": 22,
+      "draws": 26,
+      "losses": 53,
       "points": 92,
       "gf": 98,
       "ga": 159,
       "over25": 46,
-      "btts": 52
+      "btts": 52,
+      "lig": "FL1"
     },
     "Toulouse": {
       "played": 102,
+      "wins": 34,
+      "draws": 27,
+      "losses": 41,
       "points": 129,
       "gf": 133,
       "ga": 137,
       "over25": 56,
-      "btts": 56
+      "btts": 56,
+      "lig": "FL1"
     },
     "Montpellier HSC": {
       "played": 67,
+      "wins": 14,
+      "draws": 16,
+      "losses": 37,
       "points": 58,
       "gf": 66,
       "ga": 125,
       "over25": 37,
-      "btts": 32
+      "btts": 32,
+      "lig": "FL1"
     },
     "Le Havre AC": {
       "played": 102,
+      "wins": 23,
+      "draws": 29,
+      "losses": 50,
       "points": 98,
       "gf": 104,
       "ga": 161,
       "over25": 49,
-      "btts": 54
+      "btts": 54,
+      "lig": "FL1"
     },
     "Stade Rennais 1901": {
       "played": 102,
+      "wins": 42,
+      "draws": 21,
+      "losses": 39,
       "points": 147,
       "gf": 164,
       "ga": 145,
       "over25": 63,
-      "btts": 58
+      "btts": 58,
+      "lig": "FL1"
     },
     "FC Metz": {
       "played": 67,
+      "wins": 11,
+      "draws": 12,
+      "losses": 44,
       "points": 45,
       "gf": 67,
       "ga": 134,
       "over25": 39,
-      "btts": 35
+      "btts": 35,
+      "lig": "FL1"
     },
     "RC Strasbourg Alsace": {
       "played": 102,
+      "wins": 40,
+      "draws": 26,
+      "losses": 36,
       "points": 146,
       "gf": 147,
       "ga": 141,
       "over25": 62,
-      "btts": 65
+      "btts": 65,
+      "lig": "FL1"
     },
     "Olympique Lyonnais": {
       "played": 102,
+      "wins": 52,
+      "draws": 17,
+      "losses": 33,
       "points": 173,
       "gf": 169,
       "ga": 137,
       "over25": 60,
-      "btts": 57
+      "btts": 57,
+      "lig": "FL1"
     },
     "AS Saint-Étienne": {
       "played": 33,
+      "wins": 7,
+      "draws": 6,
+      "losses": 20,
       "points": 27,
       "gf": 37,
       "ga": 77,
       "over25": 19,
-      "btts": 19
+      "btts": 19,
+      "lig": "FL1"
     },
     "AJ Auxerre": {
       "played": 68,
+      "wins": 18,
+      "draws": 19,
+      "losses": 31,
       "points": 73,
       "gf": 82,
       "ga": 100,
       "over25": 37,
-      "btts": 34
+      "btts": 34,
+      "lig": "FL1"
     },
     "Angers SCO": {
       "played": 68,
+      "wins": 19,
+      "draws": 14,
+      "losses": 35,
       "points": 71,
       "gf": 60,
       "ga": 102,
       "over25": 21,
-      "btts": 26
+      "btts": 26,
+      "lig": "FL1"
     },
     "Paris": {
       "played": 34,
+      "wins": 10,
+      "draws": 12,
+      "losses": 12,
       "points": 42,
       "gf": 45,
       "ga": 49,
       "over25": 18,
-      "btts": 20
+      "btts": 20,
+      "lig": "FL1"
     },
     "Le Mans": {
       "played": 1,
+      "wins": 0,
+      "draws": 1,
+      "losses": 0,
       "points": 1,
       "gf": 2,
       "ga": 2,
       "over25": 1,
-      "btts": 1
+      "btts": 1,
+      "lig": "FL1"
     },
     "ES Troyes AC": {
       "played": 1,
+      "wins": 0,
+      "draws": 1,
+      "losses": 0,
       "points": 1,
       "gf": 0,
       "ga": 0,
       "over25": 0,
-      "btts": 0
+      "btts": 0,
+      "lig": "FL1"
     },
     "Sporting Clube de Braga": {
       "played": 103,
+      "wins": 56,
+      "draws": 26,
+      "losses": 21,
       "points": 194,
       "gf": 192,
       "ga": 118,
       "over25": 64,
-      "btts": 61
+      "btts": 61,
+      "lig": "PPL"
     },
     "FC Famalicão": {
       "played": 104,
+      "wins": 36,
+      "draws": 35,
+      "losses": 33,
       "points": 143,
       "gf": 124,
       "ga": 113,
       "over25": 47,
-      "btts": 51
+      "btts": 51,
+      "lig": "PPL"
     },
     "Gil Vicente": {
       "played": 103,
+      "wins": 32,
+      "draws": 30,
+      "losses": 41,
       "points": 126,
       "gf": 126,
       "ga": 134,
       "over25": 49,
-      "btts": 50
+      "btts": 50,
+      "lig": "PPL"
     },
     "Portimonense SC": {
       "played": 34,
+      "wins": 8,
+      "draws": 8,
+      "losses": 18,
       "points": 32,
       "gf": 39,
       "ga": 72,
       "over25": 21,
-      "btts": 20
+      "btts": 20,
+      "lig": "PPL"
     },
     "SC Farense": {
       "played": 68,
+      "wins": 16,
+      "draws": 16,
+      "losses": 36,
       "points": 64,
       "gf": 71,
       "ga": 97,
       "over25": 33,
-      "btts": 35
+      "btts": 35,
+      "lig": "PPL"
     },
     "Casa Pia AC": {
       "played": 105,
+      "wins": 29,
+      "draws": 28,
+      "losses": 48,
       "points": 115,
       "gf": 109,
       "ga": 161,
       "over25": 48,
-      "btts": 51
+      "btts": 51,
+      "lig": "PPL"
     },
     "Sporting Clube de Portugal": {
       "played": 104,
+      "wins": 80,
+      "draws": 18,
+      "losses": 6,
       "points": 258,
       "gf": 278,
       "ga": 85,
       "over25": 75,
-      "btts": 58
+      "btts": 58,
+      "lig": "PPL"
     },
     "FC Vizela": {
       "played": 34,
+      "wins": 5,
+      "draws": 11,
+      "losses": 18,
       "points": 26,
       "gf": 36,
       "ga": 66,
       "over25": 19,
-      "btts": 19
+      "btts": 19,
+      "lig": "PPL"
     },
     "Rio Ave": {
       "played": 105,
+      "wins": 24,
+      "draws": 41,
+      "losses": 40,
       "points": 113,
       "gf": 114,
       "ga": 159,
       "over25": 50,
-      "btts": 57
+      "btts": 57,
+      "lig": "PPL"
     },
     "GD Chaves": {
       "played": 34,
+      "wins": 5,
+      "draws": 8,
+      "losses": 21,
       "points": 23,
       "gf": 31,
       "ga": 72,
       "over25": 21,
-      "btts": 18
+      "btts": 18,
+      "lig": "PPL"
     },
     "CF Estrela da Amadora": {
       "played": 104,
+      "wins": 20,
+      "draws": 34,
+      "losses": 50,
       "points": 94,
       "gf": 99,
       "ga": 163,
       "over25": 47,
-      "btts": 46
+      "btts": 46,
+      "lig": "PPL"
     },
     "Vitória SC": {
       "played": 105,
+      "wins": 46,
+      "draws": 24,
+      "losses": 35,
       "points": 162,
       "gf": 141,
       "ga": 130,
       "over25": 51,
-      "btts": 48
+      "btts": 48,
+      "lig": "PPL"
     },
     "FC Arouca": {
       "played": 105,
+      "wins": 36,
+      "draws": 24,
+      "losses": 45,
       "points": 132,
       "gf": 141,
       "ga": 165,
       "over25": 62,
-      "btts": 56
+      "btts": 56,
+      "lig": "PPL"
     },
     "GD Estoril Praia": {
       "played": 104,
+      "wins": 31,
+      "draws": 26,
+      "losses": 47,
       "points": 119,
       "gf": 151,
       "ga": 170,
       "over25": 65,
-      "btts": 59
+      "btts": 59,
+      "lig": "PPL"
     },
     "Moreirense": {
       "played": 104,
+      "wins": 38,
+      "draws": 24,
+      "losses": 42,
       "points": 138,
       "gf": 117,
       "ga": 141,
       "over25": 49,
-      "btts": 48
+      "btts": 48,
+      "lig": "PPL"
     },
     "FC Porto": {
       "played": 105,
+      "wins": 75,
+      "draws": 15,
+      "losses": 15,
       "points": 240,
       "gf": 200,
       "ga": 75,
       "over25": 56,
-      "btts": 44
+      "btts": 44,
+      "lig": "PPL"
     },
     "Boavista": {
       "played": 68,
+      "wins": 13,
+      "draws": 17,
+      "losses": 38,
       "points": 56,
       "gf": 63,
       "ga": 121,
       "over25": 35,
-      "btts": 36
+      "btts": 36,
+      "lig": "PPL"
     },
     "Sport Lisboa e Benfica": {
       "played": 103,
+      "wins": 73,
+      "draws": 22,
+      "losses": 8,
       "points": 241,
       "gf": 241,
       "ga": 82,
       "over25": 69,
-      "btts": 53
+      "btts": 53,
+      "lig": "PPL"
     },
     "AVS": {
       "played": 68,
+      "wins": 9,
+      "draws": 23,
+      "losses": 36,
       "points": 50,
       "gf": 53,
       "ga": 127,
       "over25": 34,
-      "btts": 32
+      "btts": 32,
+      "lig": "PPL"
     },
     "CD Nacional": {
       "played": 71,
+      "wins": 19,
+      "draws": 15,
+      "losses": 37,
       "points": 72,
       "gf": 73,
       "ga": 98,
       "over25": 30,
-      "btts": 30
+      "btts": 30,
+      "lig": "PPL"
     },
     "CD Santa Clara": {
       "played": 71,
+      "wins": 28,
+      "draws": 16,
+      "losses": 27,
       "points": 100,
       "gf": 72,
       "ga": 75,
       "over25": 23,
-      "btts": 29
+      "btts": 29,
+      "lig": "PPL"
     },
     "CD Tondela": {
       "played": 34,
+      "wins": 6,
+      "draws": 10,
+      "losses": 18,
       "points": 28,
       "gf": 27,
       "ga": 55,
       "over25": 17,
-      "btts": 12
+      "btts": 12,
+      "lig": "PPL"
     },
     "FC Alverca": {
       "played": 36,
+      "wins": 10,
+      "draws": 10,
+      "losses": 16,
       "points": 40,
       "gf": 38,
       "ga": 58,
       "over25": 19,
-      "btts": 21
+      "btts": 21,
+      "lig": "PPL"
     },
     "CS Marítimo": {
       "played": 3,
+      "wins": 2,
+      "draws": 1,
+      "losses": 0,
       "points": 7,
       "gf": 5,
       "ga": 3,
       "over25": 2,
-      "btts": 2
+      "btts": 2,
+      "lig": "PPL"
     },
     "Académico de Viseu": {
       "played": 3,
+      "wins": 0,
+      "draws": 2,
+      "losses": 1,
       "points": 2,
       "gf": 4,
       "ga": 5,
       "over25": 2,
-      "btts": 2
+      "btts": 2,
+      "lig": "PPL"
     },
     "Trabzonspor": {
       "played": 107,
+      "wins": 54,
+      "draws": 25,
+      "losses": 28,
       "points": 187,
       "gf": 188,
       "ga": 131,
       "over25": 59,
-      "btts": 64
+      "btts": 64,
+      "lig": "TSL"
     },
     "Antalyaspor": {
       "played": 107,
+      "wins": 31,
+      "draws": 29,
+      "losses": 47,
       "points": 122,
       "gf": 113,
       "ga": 166,
       "over25": 54,
-      "btts": 59
+      "btts": 59,
+      "lig": "TSL"
     },
     "Kasimpasa": {
       "played": 107,
+      "wins": 34,
+      "draws": 33,
+      "losses": 40,
       "points": 135,
       "gf": 156,
       "ga": 177,
       "over25": 64,
-      "btts": 68
+      "btts": 68,
+      "lig": "TSL"
     },
     "Ankaragucu": {
       "played": 38,
+      "wins": 8,
+      "draws": 16,
+      "losses": 14,
       "points": 40,
       "gf": 46,
       "ga": 52,
       "over25": 17,
-      "btts": 25
+      "btts": 25,
+      "lig": "TSL"
     },
     "Konyaspor": {
       "played": 107,
+      "wins": 32,
+      "draws": 31,
+      "losses": 44,
       "points": 127,
       "gf": 127,
       "ga": 151,
       "over25": 50,
-      "btts": 62
+      "btts": 62,
+      "lig": "TSL"
     },
     "Istanbulspor": {
       "played": 38,
+      "wins": 4,
+      "draws": 7,
+      "losses": 27,
       "points": 19,
       "gf": 27,
       "ga": 80,
       "over25": 21,
-      "btts": 18
+      "btts": 18,
+      "lig": "TSL"
     },
     "Kayserispor": {
       "played": 107,
+      "wins": 27,
+      "draws": 36,
+      "losses": 44,
       "points": 117,
       "gf": 114,
       "ga": 175,
       "over25": 53,
-      "btts": 56
+      "btts": 56,
+      "lig": "TSL"
     },
     "Galatasaray": {
       "played": 107,
+      "wins": 87,
+      "draws": 13,
+      "losses": 7,
       "points": 274,
       "gf": 260,
       "ga": 86,
       "over25": 72,
-      "btts": 59
+      "btts": 59,
+      "lig": "TSL"
     },
     "Pendikspor": {
       "played": 38,
+      "wins": 9,
+      "draws": 10,
+      "losses": 19,
       "points": 37,
       "gf": 42,
       "ga": 73,
       "over25": 20,
-      "btts": 24
+      "btts": 24,
+      "lig": "TSL"
     },
     "Hatayspor": {
       "played": 74,
+      "wins": 15,
+      "draws": 22,
+      "losses": 37,
       "points": 67,
       "gf": 92,
       "ga": 126,
       "over25": 40,
-      "btts": 45
+      "btts": 45,
+      "lig": "TSL"
     },
     "Sivasspor": {
       "played": 74,
+      "wins": 23,
+      "draws": 20,
+      "losses": 31,
       "points": 89,
       "gf": 91,
       "ga": 114,
       "over25": 37,
-      "btts": 43
+      "btts": 43,
+      "lig": "TSL"
     },
     "Samsunspor": {
       "played": 107,
+      "wins": 42,
+      "draws": 29,
+      "losses": 36,
       "points": 155,
       "gf": 140,
       "ga": 138,
       "over25": 53,
-      "btts": 57
+      "btts": 57,
+      "lig": "TSL"
     },
     "Ad. Demirspor": {
       "played": 74,
+      "wins": 13,
+      "draws": 19,
+      "losses": 42,
       "points": 58,
       "gf": 88,
       "ga": 153,
       "over25": 47,
-      "btts": 44
+      "btts": 44,
+      "lig": "TSL"
     },
     "Rizespor": {
       "played": 107,
+      "wins": 39,
+      "draws": 22,
+      "losses": 46,
       "points": 139,
       "gf": 144,
       "ga": 166,
       "over25": 61,
-      "btts": 55
+      "btts": 55,
+      "lig": "TSL"
     },
     "Fenerbahce": {
       "played": 107,
+      "wins": 78,
+      "draws": 22,
+      "losses": 7,
       "points": 256,
       "gf": 263,
       "ga": 104,
       "over25": 72,
-      "btts": 63
+      "btts": 63,
+      "lig": "TSL"
     },
     "Gaziantep": {
       "played": 107,
+      "wins": 33,
+      "draws": 27,
+      "losses": 47,
       "points": 126,
       "gf": 137,
       "ga": 163,
       "over25": 62,
-      "btts": 60
+      "btts": 60,
+      "lig": "TSL"
     },
     "Alanyaspor": {
       "played": 107,
+      "wins": 31,
+      "draws": 41,
+      "losses": 35,
       "points": 134,
       "gf": 136,
       "ga": 139,
       "over25": 50,
-      "btts": 62
+      "btts": 62,
+      "lig": "TSL"
     },
     "Buyuksehyr": {
       "played": 107,
+      "wins": 49,
+      "draws": 22,
+      "losses": 36,
       "points": 169,
       "gf": 173,
       "ga": 133,
       "over25": 56,
-      "btts": 54
+      "btts": 54,
+      "lig": "TSL"
     },
     "Karagumruk": {
       "played": 71,
+      "wins": 17,
+      "draws": 16,
+      "losses": 38,
       "points": 67,
       "gf": 78,
       "ga": 105,
       "over25": 34,
-      "btts": 36
+      "btts": 36,
+      "lig": "TSL"
     },
     "Besiktas": {
       "played": 107,
+      "wins": 50,
+      "draws": 27,
+      "losses": 30,
       "points": 177,
       "gf": 168,
       "ga": 121,
       "over25": 53,
-      "btts": 61
+      "btts": 61,
+      "lig": "TSL"
     },
     "Goztep": {
       "played": 69,
+      "wins": 27,
+      "draws": 24,
+      "losses": 18,
       "points": 105,
       "gf": 101,
       "ga": 79,
       "over25": 32,
-      "btts": 38
+      "btts": 38,
+      "lig": "TSL"
     },
     "Eyupspor": {
       "played": 69,
+      "wins": 23,
+      "draws": 16,
+      "losses": 30,
       "points": 85,
       "gf": 82,
       "ga": 92,
       "over25": 35,
-      "btts": 34
+      "btts": 34,
+      "lig": "TSL"
     },
     "Bodrumspor": {
       "played": 36,
+      "wins": 9,
+      "draws": 10,
+      "losses": 17,
       "points": 37,
       "gf": 26,
       "ga": 43,
       "over25": 10,
-      "btts": 11
+      "btts": 11,
+      "lig": "TSL"
     },
     "Genclerbirligi": {
       "played": 33,
+      "wins": 8,
+      "draws": 7,
+      "losses": 18,
       "points": 31,
       "gf": 33,
       "ga": 47,
       "over25": 17,
-      "btts": 17
+      "btts": 17,
+      "lig": "TSL"
     },
     "Kocaelispor": {
       "played": 33,
+      "wins": 9,
+      "draws": 10,
+      "losses": 14,
       "points": 37,
       "gf": 26,
       "ga": 37,
       "over25": 9,
-      "btts": 13
+      "btts": 13,
+      "lig": "TSL"
     },
     "Hamburg": {
       "played": 68,
+      "wins": 33,
+      "draws": 18,
+      "losses": 17,
       "points": 117,
       "gf": 142,
       "ga": 88,
       "over25": 46,
-      "btts": 42
+      "btts": 42,
+      "lig": "BL2"
     },
     "Schalke 04": {
       "played": 101,
+      "wins": 42,
+      "draws": 22,
+      "losses": 37,
       "points": 148,
       "gf": 154,
       "ga": 153,
       "over25": 58,
-      "btts": 57
+      "btts": 57,
+      "lig": "BL2"
     },
     "Hannover": {
       "played": 101,
+      "wins": 42,
+      "draws": 36,
+      "losses": 23,
       "points": 162,
       "gf": 157,
       "ga": 121,
       "over25": 59,
-      "btts": 63
+      "btts": 63,
+      "lig": "BL2"
     },
     "Elversberg": {
       "played": 101,
+      "wins": 45,
+      "draws": 25,
+      "losses": 31,
       "points": 160,
       "gf": 174,
       "ga": 139,
       "over25": 62,
-      "btts": 58
+      "btts": 58,
+      "lig": "BL2"
     },
     "Kaiserslautern": {
       "played": 101,
+      "wins": 41,
+      "draws": 18,
+      "losses": 42,
       "points": 141,
       "gf": 166,
       "ga": 166,
       "over25": 72,
-      "btts": 63
+      "btts": 63,
+      "lig": "BL2"
     },
     "St Pauli": {
       "played": 34,
+      "wins": 20,
+      "draws": 9,
+      "losses": 5,
       "points": 69,
       "gf": 62,
       "ga": 36,
       "over25": 19,
-      "btts": 22
+      "btts": 22,
+      "lig": "BL2"
     },
     "Osnabruck": {
       "played": 34,
+      "wins": 6,
+      "draws": 10,
+      "losses": 18,
       "points": 28,
       "gf": 31,
       "ga": 69,
       "over25": 20,
-      "btts": 18
+      "btts": 18,
+      "lig": "BL2"
     },
     "Karlsruhe": {
       "played": 101,
+      "wins": 41,
+      "draws": 28,
+      "losses": 32,
       "points": 151,
       "gf": 177,
       "ga": 165,
       "over25": 73,
-      "btts": 65
+      "btts": 65,
+      "lig": "BL2"
     },
     "Wehen": {
       "played": 34,
+      "wins": 8,
+      "draws": 8,
+      "losses": 18,
       "points": 32,
       "gf": 36,
       "ga": 50,
       "over25": 14,
-      "btts": 19
+      "btts": 19,
+      "lig": "BL2"
     },
     "Magdeburg": {
       "played": 101,
+      "wins": 35,
+      "draws": 25,
+      "losses": 41,
       "points": 130,
       "gf": 162,
       "ga": 163,
       "over25": 58,
-      "btts": 57
+      "btts": 57,
+      "lig": "BL2"
     },
     "Fortuna Dusseldorf": {
       "played": 101,
+      "wins": 43,
+      "draws": 24,
+      "losses": 34,
       "points": 153,
       "gf": 162,
       "ga": 142,
       "over25": 57,
-      "btts": 61
+      "btts": 61,
+      "lig": "BL2"
     },
     "Hertha": {
       "played": 101,
+      "wins": 39,
+      "draws": 26,
+      "losses": 36,
       "points": 143,
       "gf": 164,
       "ga": 148,
       "over25": 61,
-      "btts": 62
+      "btts": 62,
+      "lig": "BL2"
     },
     "Braunschweig": {
       "played": 101,
+      "wins": 29,
+      "draws": 23,
+      "losses": 49,
       "points": 110,
       "gf": 111,
       "ga": 170,
       "over25": 53,
-      "btts": 54
+      "btts": 54,
+      "lig": "BL2"
     },
     "Holstein Kiel": {
       "played": 67,
+      "wins": 32,
+      "draws": 13,
+      "losses": 22,
       "points": 109,
       "gf": 108,
       "ga": 85,
       "over25": 36,
-      "btts": 38
+      "btts": 38,
+      "lig": "BL2"
     },
     "Greuther Furth": {
       "played": 101,
+      "wins": 33,
+      "draws": 24,
+      "losses": 44,
       "points": 123,
       "gf": 141,
       "ga": 176,
       "over25": 59,
-      "btts": 58
+      "btts": 58,
+      "lig": "BL2"
     },
     "Paderborn": {
       "played": 101,
+      "wins": 47,
+      "draws": 25,
+      "losses": 29,
       "points": 166,
       "gf": 167,
       "ga": 145,
       "over25": 67,
-      "btts": 70
+      "btts": 70,
+      "lig": "BL2"
     },
     "Hansa Rostock": {
       "played": 34,
+      "wins": 9,
+      "draws": 4,
+      "losses": 21,
       "points": 31,
       "gf": 30,
       "ga": 57,
       "over25": 20,
-      "btts": 16
+      "btts": 16,
+      "lig": "BL2"
     },
     "Nurnberg": {
       "played": 101,
+      "wins": 37,
+      "draws": 22,
+      "losses": 42,
       "points": 133,
       "gf": 147,
       "ga": 163,
       "over25": 62,
-      "btts": 61
+      "btts": 61,
+      "lig": "BL2"
     },
     "FC Koln": {
       "played": 34,
+      "wins": 18,
+      "draws": 7,
+      "losses": 9,
       "points": 61,
       "gf": 53,
       "ga": 38,
       "over25": 18,
-      "btts": 18
+      "btts": 18,
+      "lig": "BL2"
     },
     "Regensburg": {
       "played": 34,
+      "wins": 6,
+      "draws": 7,
+      "losses": 21,
       "points": 25,
       "gf": 23,
       "ga": 71,
       "over25": 16,
-      "btts": 11
+      "btts": 11,
+      "lig": "BL2"
     },
     "Darmstadt": {
       "played": 67,
+      "wins": 24,
+      "draws": 22,
+      "losses": 21,
       "points": 94,
       "gf": 113,
       "ga": 98,
       "over25": 41,
-      "btts": 44
+      "btts": 44,
+      "lig": "BL2"
     },
     "PreuÃen MÃ¼nster": {
       "played": 67,
+      "wins": 14,
+      "draws": 24,
+      "losses": 29,
       "points": 66,
       "gf": 78,
       "ga": 101,
       "over25": 35,
-      "btts": 43
+      "btts": 43,
+      "lig": "BL2"
     },
     "Ulm": {
       "played": 34,
+      "wins": 6,
+      "draws": 12,
+      "losses": 16,
       "points": 30,
       "gf": 36,
       "ga": 48,
       "over25": 16,
-      "btts": 20
+      "btts": 20,
+      "lig": "BL2"
     },
     "Bochum": {
       "played": 33,
+      "wins": 10,
+      "draws": 11,
+      "losses": 12,
       "points": 41,
       "gf": 47,
       "ga": 46,
       "over25": 16,
-      "btts": 22
+      "btts": 22,
+      "lig": "BL2"
     },
     "Bielefeld": {
       "played": 33,
+      "wins": 9,
+      "draws": 9,
+      "losses": 15,
       "points": 36,
       "gf": 47,
       "ga": 50,
       "over25": 17,
-      "btts": 21
+      "btts": 21,
+      "lig": "BL2"
     },
     "Dresden": {
       "played": 33,
+      "wins": 10,
+      "draws": 8,
+      "losses": 15,
       "points": 38,
       "gf": 52,
       "ga": 52,
       "over25": 23,
-      "btts": 23
+      "btts": 23,
+      "lig": "BL2"
     },
     "Sheffield Wednesday": {
       "played": 138,
+      "wins": 32,
+      "draws": 33,
+      "losses": 73,
       "points": 129,
       "gf": 133,
       "ga": 226,
       "over25": 69,
-      "btts": 64
+      "btts": 64,
+      "lig": "ELC"
     },
     "Southampton": {
       "played": 99,
+      "wins": 52,
+      "draws": 25,
+      "losses": 22,
       "points": 181,
       "gf": 179,
       "ga": 124,
       "over25": 63,
-      "btts": 67
+      "btts": 67,
+      "lig": "ELC"
     },
     "Blackburn Rovers": {
       "played": 140,
+      "wins": 47,
+      "draws": 34,
+      "losses": 59,
       "points": 175,
       "gf": 159,
       "ga": 181,
       "over25": 67,
-      "btts": 69
+      "btts": 69,
+      "lig": "ELC"
     },
     "West Bromwich Albion": {
       "played": 142,
+      "wins": 51,
+      "draws": 46,
+      "losses": 45,
       "points": 199,
       "gf": 181,
       "ga": 157,
       "over25": 63,
-      "btts": 74
+      "btts": 74,
+      "lig": "ELC"
     },
     "Bristol City": {
       "played": 142,
+      "wins": 51,
+      "draws": 40,
+      "losses": 51,
       "points": 193,
       "gf": 173,
       "ga": 175,
       "over25": 62,
-      "btts": 69
+      "btts": 69,
+      "lig": "ELC"
     },
     "Preston North End": {
       "played": 140,
+      "wins": 43,
+      "draws": 44,
+      "losses": 53,
       "points": 173,
       "gf": 161,
       "ga": 193,
       "over25": 73,
-      "btts": 81
+      "btts": 81,
+      "lig": "ELC"
     },
     "Middlesbrough": {
       "played": 142,
+      "wins": 61,
+      "draws": 34,
+      "losses": 47,
       "points": 217,
       "gf": 211,
       "ga": 170,
       "over25": 73,
-      "btts": 79
+      "btts": 79,
+      "lig": "ELC"
     },
     "Millwall": {
       "played": 142,
+      "wins": 60,
+      "draws": 35,
+      "losses": 47,
       "points": 215,
       "gf": 161,
       "ga": 155,
       "over25": 54,
-      "btts": 61
+      "btts": 61,
+      "lig": "ELC"
     },
     "Norwich City": {
       "played": 142,
+      "wins": 54,
+      "draws": 34,
+      "losses": 54,
       "points": 196,
       "gf": 214,
       "ga": 197,
       "over25": 77,
-      "btts": 88
+      "btts": 88,
+      "lig": "ELC"
     },
     "Hull City AFC": {
       "played": 140,
+      "wins": 53,
+      "draws": 37,
+      "losses": 50,
       "points": 196,
       "gf": 184,
       "ga": 180,
       "over25": 71,
-      "btts": 82
+      "btts": 82,
+      "lig": "ELC"
     },
     "Plymouth Argyle": {
       "played": 92,
+      "wins": 24,
+      "draws": 25,
+      "losses": 43,
       "points": 97,
       "gf": 110,
       "ga": 158,
       "over25": 53,
-      "btts": 50
+      "btts": 50,
+      "lig": "ELC"
     },
     "Huddersfield Town AFC": {
       "played": 46,
+      "wins": 9,
+      "draws": 18,
+      "losses": 19,
       "points": 45,
       "gf": 48,
       "ga": 77,
       "over25": 21,
-      "btts": 30
+      "btts": 30,
+      "lig": "ELC"
     },
     "Watford": {
       "played": 140,
+      "wins": 44,
+      "draws": 42,
+      "losses": 54,
       "points": 174,
       "gf": 170,
       "ga": 189,
       "over25": 72,
-      "btts": 80
+      "btts": 80,
+      "lig": "ELC"
     },
     "Queens Park Rangers": {
       "played": 140,
+      "wins": 46,
+      "draws": 36,
+      "losses": 58,
       "points": 174,
       "gf": 164,
       "ga": 195,
       "over25": 75,
-      "btts": 79
+      "btts": 79,
+      "lig": "ELC"
     },
     "Stoke City": {
       "played": 140,
+      "wins": 42,
+      "draws": 36,
+      "losses": 62,
       "points": 162,
       "gf": 147,
       "ga": 183,
       "over25": 59,
-      "btts": 62
+      "btts": 62,
+      "lig": "ELC"
     },
     "Rotherham United": {
       "played": 46,
+      "wins": 5,
+      "draws": 12,
+      "losses": 29,
       "points": 27,
       "gf": 37,
       "ga": 89,
       "over25": 23,
-      "btts": 22
+      "btts": 22,
+      "lig": "ELC"
     },
     "Swansea City AFC": {
       "played": 140,
+      "wins": 51,
+      "draws": 33,
+      "losses": 56,
       "points": 186,
       "gf": 169,
       "ga": 181,
       "over25": 71,
-      "btts": 72
+      "btts": 72,
+      "lig": "ELC"
     },
     "Birmingham City": {
       "played": 94,
+      "wins": 30,
+      "draws": 26,
+      "losses": 38,
       "points": 116,
       "gf": 109,
       "ga": 123,
       "over25": 43,
-      "btts": 50
+      "btts": 50,
+      "lig": "ELC"
     },
     "Leicester City": {
       "played": 92,
+      "wins": 43,
+      "draws": 20,
+      "losses": 29,
       "points": 149,
       "gf": 147,
       "ga": 109,
       "over25": 52,
-      "btts": 57
+      "btts": 57,
+      "lig": "ELC"
     },
     "Coventry City": {
       "played": 140,
+      "wins": 65,
+      "draws": 34,
+      "losses": 41,
       "points": 229,
       "gf": 233,
       "ga": 165,
       "over25": 83,
-      "btts": 82
+      "btts": 82,
+      "lig": "ELC"
     },
     "Leeds United": {
       "played": 95,
+      "wins": 57,
+      "draws": 23,
+      "losses": 15,
       "points": 194,
       "gf": 180,
       "ga": 74,
       "over25": 47,
-      "btts": 38
+      "btts": 38,
+      "lig": "ELC"
     },
     "Cardiff City": {
       "played": 94,
+      "wins": 28,
+      "draws": 24,
+      "losses": 42,
       "points": 108,
       "gf": 104,
       "ga": 146,
       "over25": 45,
-      "btts": 50
+      "btts": 50,
+      "lig": "ELC"
     },
     "Sunderland AFC": {
       "played": 95,
+      "wins": 39,
+      "draws": 22,
+      "losses": 34,
       "points": 139,
       "gf": 115,
       "ga": 101,
       "over25": 43,
-      "btts": 44
+      "btts": 44,
+      "lig": "ELC"
     },
     "Ipswich Town": {
       "played": 92,
+      "wins": 51,
+      "draws": 27,
+      "losses": 14,
       "points": 180,
       "gf": 172,
       "ga": 104,
       "over25": 52,
-      "btts": 54
+      "btts": 54,
+      "lig": "ELC"
     },
     "Derby County": {
       "played": 94,
+      "wins": 33,
+      "draws": 21,
+      "losses": 40,
       "points": 120,
       "gf": 118,
       "ga": 119,
       "over25": 44,
-      "btts": 53
+      "btts": 53,
+      "lig": "ELC"
     },
     "Sheffield United": {
       "played": 97,
+      "wins": 48,
+      "draws": 16,
+      "losses": 33,
       "points": 160,
       "gf": 136,
       "ga": 104,
       "over25": 46,
-      "btts": 45
+      "btts": 45,
+      "lig": "ELC"
     },
     "Portsmouth": {
       "played": 94,
+      "wins": 29,
+      "draws": 25,
+      "losses": 40,
       "points": 112,
       "gf": 111,
       "ga": 139,
       "over25": 50,
-      "btts": 53
+      "btts": 53,
+      "lig": "ELC"
     },
     "Oxford United": {
       "played": 92,
+      "wins": 24,
+      "draws": 28,
+      "losses": 40,
       "points": 100,
       "gf": 94,
       "ga": 124,
       "over25": 38,
-      "btts": 48
+      "btts": 48,
+      "lig": "ELC"
     },
     "Luton Town": {
       "played": 46,
+      "wins": 13,
+      "draws": 10,
+      "losses": 23,
       "points": 49,
       "gf": 45,
       "ga": 69,
       "over25": 20,
-      "btts": 23
+      "btts": 23,
+      "lig": "ELC"
     },
     "Burnley": {
       "played": 48,
+      "wins": 28,
+      "draws": 17,
+      "losses": 3,
       "points": 101,
       "gf": 72,
       "ga": 21,
       "over25": 17,
-      "btts": 16
+      "btts": 16,
+      "lig": "ELC"
     },
     "Charlton Athletic": {
       "played": 48,
+      "wins": 15,
+      "draws": 14,
+      "losses": 19,
       "points": 59,
       "gf": 48,
       "ga": 60,
       "over25": 20,
-      "btts": 27
+      "btts": 27,
+      "lig": "ELC"
     },
     "Wrexham AFC": {
       "played": 48,
+      "wins": 19,
+      "draws": 16,
+      "losses": 13,
       "points": 73,
       "gf": 71,
       "ga": 67,
       "over25": 23,
-      "btts": 32
+      "btts": 32,
+      "lig": "ELC"
     },
     "Wolverhampton Wanderers": {
       "played": 2,
+      "wins": 1,
+      "draws": 1,
+      "losses": 0,
       "points": 4,
       "gf": 5,
       "ga": 3,
       "over25": 2,
-      "btts": 2
+      "btts": 2,
+      "lig": "ELC"
     },
     "Bolton Wanderers": {
       "played": 2,
+      "wins": 1,
+      "draws": 1,
+      "losses": 0,
       "points": 4,
       "gf": 2,
       "ga": 1,
       "over25": 1,
-      "btts": 1
+      "btts": 1,
+      "lig": "ELC"
     },
     "Lincoln City": {
       "played": 2,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
       "points": 0,
       "gf": 2,
       "ga": 5,
       "over25": 2,
-      "btts": 2
+      "btts": 2,
+      "lig": "ELC"
     },
     "West Ham United": {
       "played": 2,
+      "wins": 0,
+      "draws": 1,
+      "losses": 1,
       "points": 1,
       "gf": 3,
       "ga": 4,
       "over25": 2,
-      "btts": 2
+      "btts": 2,
+      "lig": "ELC"
     },
     "FC Volendam": {
       "played": 67,
+      "wins": 12,
+      "draws": 15,
+      "losses": 40,
       "points": 51,
       "gf": 68,
       "ga": 141,
       "over25": 42,
-      "btts": 41
+      "btts": 41,
+      "lig": "DED"
     },
     "SBV Vitesse": {
       "played": 34,
+      "wins": 6,
+      "draws": 6,
+      "losses": 22,
       "points": 24,
       "gf": 29,
       "ga": 74,
       "over25": 20,
-      "btts": 18
+      "btts": 18,
+      "lig": "DED"
     },
     "PSV": {
       "played": 104,
+      "wins": 82,
+      "draws": 12,
+      "losses": 10,
       "points": 258,
       "gf": 319,
       "ga": 108,
       "over25": 84,
-      "btts": 67
+      "btts": 67,
+      "lig": "DED"
     },
     "FC Utrecht": {
       "played": 104,
+      "wins": 45,
+      "draws": 30,
+      "losses": 29,
       "points": 165,
       "gf": 169,
       "ga": 143,
       "over25": 54,
-      "btts": 62
+      "btts": 62,
+      "lig": "DED"
     },
     "SC Heerenveen": {
       "played": 103,
+      "wins": 37,
+      "draws": 23,
+      "losses": 43,
       "points": 134,
       "gf": 155,
       "ga": 182,
       "over25": 67,
-      "btts": 60
+      "btts": 60,
+      "lig": "DED"
     },
     "RKC Waalwijk": {
       "played": 68,
+      "wins": 13,
+      "draws": 15,
+      "losses": 40,
       "points": 54,
       "gf": 82,
       "ga": 130,
       "over25": 41,
-      "btts": 39
+      "btts": 39,
+      "lig": "DED"
     },
     "AFC Ajax": {
       "played": 103,
+      "wins": 54,
+      "draws": 31,
+      "losses": 18,
       "points": 193,
       "gf": 207,
       "ga": 136,
       "over25": 68,
-      "btts": 66
+      "btts": 66,
+      "lig": "DED"
     },
     "Heracles Almelo": {
       "played": 101,
+      "wins": 23,
+      "draws": 21,
+      "losses": 57,
       "points": 90,
       "gf": 117,
       "ga": 220,
       "over25": 66,
-      "btts": 55
+      "btts": 55,
+      "lig": "DED"
     },
     "PEC Zwolle": {
       "played": 104,
+      "wins": 29,
+      "draws": 30,
+      "losses": 45,
       "points": 117,
       "gf": 135,
       "ga": 192,
       "over25": 59,
-      "btts": 66
+      "btts": 66,
+      "lig": "DED"
     },
     "Sparta Rotterdam": {
       "played": 104,
+      "wins": 36,
+      "draws": 27,
+      "losses": 41,
       "points": 135,
       "gf": 134,
       "ga": 155,
       "over25": 52,
-      "btts": 56
+      "btts": 56,
+      "lig": "DED"
     },
     "NEC": {
       "played": 103,
+      "wins": 42,
+      "draws": 29,
+      "losses": 32,
       "points": 155,
       "gf": 199,
       "ga": 151,
       "over25": 70,
-      "btts": 68
+      "btts": 68,
+      "lig": "DED"
     },
     "SBV Excelsior": {
       "played": 69,
+      "wins": 16,
+      "draws": 19,
+      "losses": 34,
       "points": 67,
       "gf": 95,
       "ga": 129,
       "over25": 49,
-      "btts": 44
+      "btts": 44,
+      "lig": "DED"
     },
     "Feyenoord Rotterdam": {
       "played": 104,
+      "wins": 66,
+      "draws": 23,
+      "losses": 15,
       "points": 221,
       "gf": 244,
       "ga": 112,
       "over25": 66,
-      "btts": 61
+      "btts": 61,
+      "lig": "DED"
     },
     "Fortuna Sittard": {
       "played": 104,
+      "wins": 32,
+      "draws": 26,
+      "losses": 46,
       "points": 122,
       "gf": 128,
       "ga": 176,
       "over25": 61,
-      "btts": 58
+      "btts": 58,
+      "lig": "DED"
     },
     "AZ": {
       "played": 104,
+      "wins": 52,
+      "draws": 26,
+      "losses": 26,
       "points": 182,
       "gf": 191,
       "ga": 125,
       "over25": 65,
-      "btts": 58
+      "btts": 58,
+      "lig": "DED"
     },
     "Go Ahead Eagles": {
       "played": 104,
+      "wins": 36,
+      "draws": 34,
+      "losses": 34,
       "points": 142,
       "gf": 166,
       "ga": 156,
       "over25": 61,
-      "btts": 58
+      "btts": 58,
+      "lig": "DED"
     },
     "Almere City": {
       "played": 68,
+      "wins": 11,
+      "draws": 23,
+      "losses": 34,
       "points": 56,
       "gf": 56,
       "ga": 123,
       "over25": 33,
-      "btts": 31
+      "btts": 31,
+      "lig": "DED"
     },
     "FC Twente '65": {
       "played": 103,
+      "wins": 52,
+      "draws": 28,
+      "losses": 23,
       "points": 184,
       "gf": 192,
       "ga": 122,
       "over25": 58,
-      "btts": 62
+      "btts": 62,
+      "lig": "DED"
     },
     "FC Groningen": {
       "played": 70,
+      "wins": 25,
+      "draws": 15,
+      "losses": 30,
       "points": 90,
       "gf": 94,
       "ga": 104,
       "over25": 38,
-      "btts": 39
+      "btts": 39,
+      "lig": "DED"
     },
     "NAC Breda": {
       "played": 66,
+      "wins": 13,
+      "draws": 19,
+      "losses": 34,
       "points": 58,
       "gf": 64,
       "ga": 113,
       "over25": 33,
-      "btts": 35
+      "btts": 35,
+      "lig": "DED"
     },
     "Willem II Tilburg": {
       "played": 36,
+      "wins": 6,
+      "draws": 8,
+      "losses": 22,
       "points": 26,
       "gf": 36,
       "ga": 64,
       "over25": 17,
-      "btts": 21
+      "btts": 21,
+      "lig": "DED"
     },
     "Telstar 1963": {
       "played": 35,
+      "wins": 9,
+      "draws": 10,
+      "losses": 16,
       "points": 37,
       "gf": 50,
       "ga": 58,
       "over25": 21,
-      "btts": 23
+      "btts": 23,
+      "lig": "DED"
     },
     "SC Cambuur-Leeuwarden": {
       "played": 3,
+      "wins": 0,
+      "draws": 0,
+      "losses": 3,
       "points": 0,
       "gf": 3,
       "ga": 12,
       "over25": 3,
-      "btts": 2
+      "btts": 2,
+      "lig": "DED"
     },
     "ADO Den Haag": {
       "played": 3,
+      "wins": 0,
+      "draws": 0,
+      "losses": 3,
       "points": 0,
       "gf": 2,
       "ga": 9,
       "over25": 2,
-      "btts": 2
+      "btts": 2,
+      "lig": "DED"
+    }
+  },
+  "league_standings": {
+    "FL1": {
+      "Stade Rennais 1901": {
+        "played": 34,
+        "wins": 17,
+        "draws": 9,
+        "losses": 8,
+        "points": 60,
+        "gf": 60,
+        "ga": 49,
+        "over25": 24,
+        "btts": 20
+      },
+      "Olympique de Marseille": {
+        "played": 34,
+        "wins": 18,
+        "draws": 5,
+        "losses": 11,
+        "points": 59,
+        "gf": 64,
+        "ga": 44,
+        "over25": 21,
+        "btts": 16
+      },
+      "Racing Club de Lens": {
+        "played": 34,
+        "wins": 22,
+        "draws": 4,
+        "losses": 8,
+        "points": 70,
+        "gf": 67,
+        "ga": 37,
+        "over25": 22,
+        "btts": 18
+      },
+      "Olympique Lyonnais": {
+        "played": 34,
+        "wins": 19,
+        "draws": 6,
+        "losses": 9,
+        "points": 63,
+        "gf": 55,
+        "ga": 36,
+        "over25": 18,
+        "btts": 17
+      },
+      "AS Monaco": {
+        "played": 34,
+        "wins": 17,
+        "draws": 6,
+        "losses": 11,
+        "points": 57,
+        "gf": 57,
+        "ga": 49,
+        "over25": 21,
+        "btts": 21
+      },
+      "Le Havre AC": {
+        "played": 34,
+        "wins": 6,
+        "draws": 14,
+        "losses": 14,
+        "points": 32,
+        "gf": 30,
+        "ga": 45,
+        "over25": 11,
+        "btts": 17
+      },
+      "OGC Nice": {
+        "played": 34,
+        "wins": 7,
+        "draws": 11,
+        "losses": 16,
+        "points": 32,
+        "gf": 37,
+        "ga": 60,
+        "over25": 17,
+        "btts": 20
+      },
+      "Toulouse": {
+        "played": 34,
+        "wins": 12,
+        "draws": 8,
+        "losses": 14,
+        "points": 44,
+        "gf": 47,
+        "ga": 48,
+        "over25": 18,
+        "btts": 16
+      },
+      "Stade Brestois 29": {
+        "played": 34,
+        "wins": 10,
+        "draws": 9,
+        "losses": 15,
+        "points": 39,
+        "gf": 44,
+        "ga": 56,
+        "over25": 18,
+        "btts": 16
+      },
+      "Lille OSC": {
+        "played": 34,
+        "wins": 19,
+        "draws": 7,
+        "losses": 8,
+        "points": 64,
+        "gf": 54,
+        "ga": 35,
+        "over25": 13,
+        "btts": 13
+      },
+      "AJ Auxerre": {
+        "played": 34,
+        "wins": 7,
+        "draws": 10,
+        "losses": 17,
+        "points": 31,
+        "gf": 34,
+        "ga": 49,
+        "over25": 16,
+        "btts": 15
+      },
+      "FC Lorient": {
+        "played": 34,
+        "wins": 11,
+        "draws": 13,
+        "losses": 10,
+        "points": 46,
+        "gf": 48,
+        "ga": 49,
+        "over25": 15,
+        "btts": 18
+      },
+      "FC Metz": {
+        "played": 33,
+        "wins": 3,
+        "draws": 7,
+        "losses": 23,
+        "points": 16,
+        "gf": 32,
+        "ga": 76,
+        "over25": 21,
+        "btts": 17
+      },
+      "RC Strasbourg Alsace": {
+        "played": 34,
+        "wins": 14,
+        "draws": 8,
+        "losses": 12,
+        "points": 50,
+        "gf": 53,
+        "ga": 47,
+        "over25": 22,
+        "btts": 21
+      },
+      "Angers SCO": {
+        "played": 34,
+        "wins": 9,
+        "draws": 8,
+        "losses": 17,
+        "points": 35,
+        "gf": 28,
+        "ga": 49,
+        "over25": 10,
+        "btts": 13
+      },
+      "Paris": {
+        "played": 34,
+        "wins": 10,
+        "draws": 12,
+        "losses": 12,
+        "points": 42,
+        "gf": 45,
+        "ga": 49,
+        "over25": 18,
+        "btts": 20
+      },
+      "FC Nantes": {
+        "played": 33,
+        "wins": 5,
+        "draws": 8,
+        "losses": 20,
+        "points": 23,
+        "gf": 29,
+        "ga": 52,
+        "over25": 15,
+        "btts": 15
+      },
+      "Paris Saint-Germain": {
+        "played": 34,
+        "wins": 24,
+        "draws": 5,
+        "losses": 5,
+        "points": 77,
+        "gf": 75,
+        "ga": 29,
+        "over25": 21,
+        "btts": 14
+      },
+      "Le Mans": {
+        "played": 1,
+        "wins": 0,
+        "draws": 1,
+        "losses": 0,
+        "points": 1,
+        "gf": 2,
+        "ga": 2,
+        "over25": 1,
+        "btts": 1
+      },
+      "ES Troyes AC": {
+        "played": 1,
+        "wins": 0,
+        "draws": 1,
+        "losses": 0,
+        "points": 1,
+        "gf": 0,
+        "ga": 0,
+        "over25": 0,
+        "btts": 0
+      }
+    },
+    "PPL": {
+      "Casa Pia AC": {
+        "played": 37,
+        "wins": 7,
+        "draws": 11,
+        "losses": 19,
+        "points": 32,
+        "gf": 32,
+        "ga": 67,
+        "over25": 17,
+        "btts": 16
+      },
+      "Sporting Clube de Portugal": {
+        "played": 36,
+        "wins": 26,
+        "draws": 8,
+        "losses": 2,
+        "points": 86,
+        "gf": 94,
+        "ga": 29,
+        "over25": 26,
+        "btts": 22
+      },
+      "CD Nacional": {
+        "played": 37,
+        "wins": 10,
+        "draws": 8,
+        "losses": 19,
+        "points": 38,
+        "gf": 41,
+        "ga": 48,
+        "over25": 15,
+        "btts": 17
+      },
+      "Gil Vicente": {
+        "played": 35,
+        "wins": 15,
+        "draws": 11,
+        "losses": 9,
+        "points": 56,
+        "gf": 50,
+        "ga": 35,
+        "over25": 17,
+        "btts": 16
+      },
+      "FC Arouca": {
+        "played": 37,
+        "wins": 14,
+        "draws": 6,
+        "losses": 17,
+        "points": 48,
+        "gf": 52,
+        "ga": 66,
+        "over25": 24,
+        "btts": 19
+      },
+      "AVS": {
+        "played": 34,
+        "wins": 4,
+        "draws": 11,
+        "losses": 19,
+        "points": 23,
+        "gf": 28,
+        "ga": 67,
+        "over25": 20,
+        "btts": 15
+      },
+      "FC Famalicão": {
+        "played": 36,
+        "wins": 14,
+        "draws": 12,
+        "losses": 10,
+        "points": 54,
+        "gf": 43,
+        "ga": 33,
+        "over25": 14,
+        "btts": 14
+      },
+      "CD Santa Clara": {
+        "played": 37,
+        "wins": 11,
+        "draws": 10,
+        "losses": 16,
+        "points": 43,
+        "gf": 36,
+        "ga": 43,
+        "over25": 13,
+        "btts": 15
+      },
+      "Sporting Clube de Braga": {
+        "played": 35,
+        "wins": 16,
+        "draws": 12,
+        "losses": 7,
+        "points": 60,
+        "gf": 66,
+        "ga": 38,
+        "over25": 24,
+        "btts": 20
+      },
+      "CD Tondela": {
+        "played": 34,
+        "wins": 6,
+        "draws": 10,
+        "losses": 18,
+        "points": 28,
+        "gf": 27,
+        "ga": 55,
+        "over25": 17,
+        "btts": 12
+      },
+      "Moreirense": {
+        "played": 36,
+        "wins": 12,
+        "draws": 7,
+        "losses": 17,
+        "points": 43,
+        "gf": 39,
+        "ga": 56,
+        "over25": 19,
+        "btts": 17
+      },
+      "FC Alverca": {
+        "played": 36,
+        "wins": 10,
+        "draws": 10,
+        "losses": 16,
+        "points": 40,
+        "gf": 38,
+        "ga": 58,
+        "over25": 19,
+        "btts": 21
+      },
+      "GD Estoril Praia": {
+        "played": 36,
+        "wins": 10,
+        "draws": 10,
+        "losses": 16,
+        "points": 40,
+        "gf": 54,
+        "ga": 59,
+        "over25": 20,
+        "btts": 20
+      },
+      "CF Estrela da Amadora": {
+        "played": 36,
+        "wins": 6,
+        "draws": 14,
+        "losses": 16,
+        "points": 32,
+        "gf": 42,
+        "ga": 60,
+        "over25": 20,
+        "btts": 18
+      },
+      "FC Porto": {
+        "played": 37,
+        "wins": 31,
+        "draws": 4,
+        "losses": 2,
+        "points": 97,
+        "gf": 72,
+        "ga": 18,
+        "over25": 19,
+        "btts": 13
+      },
+      "Vitória SC": {
+        "played": 37,
+        "wins": 13,
+        "draws": 6,
+        "losses": 18,
+        "points": 45,
+        "gf": 42,
+        "ga": 55,
+        "over25": 16,
+        "btts": 15
+      },
+      "Sport Lisboa e Benfica": {
+        "played": 35,
+        "wins": 23,
+        "draws": 12,
+        "losses": 0,
+        "points": 81,
+        "gf": 80,
+        "ga": 26,
+        "over25": 25,
+        "btts": 20
+      },
+      "Rio Ave": {
+        "played": 37,
+        "wins": 9,
+        "draws": 11,
+        "losses": 17,
+        "points": 38,
+        "gf": 37,
+        "ga": 61,
+        "over25": 21,
+        "btts": 18
+      },
+      "CS Marítimo": {
+        "played": 3,
+        "wins": 2,
+        "draws": 1,
+        "losses": 0,
+        "points": 7,
+        "gf": 5,
+        "ga": 3,
+        "over25": 2,
+        "btts": 2
+      },
+      "Académico de Viseu": {
+        "played": 3,
+        "wins": 0,
+        "draws": 2,
+        "losses": 1,
+        "points": 2,
+        "gf": 4,
+        "ga": 5,
+        "over25": 2,
+        "btts": 2
+      }
+    },
+    "TSL": {
+      "Gaziantep": {
+        "played": 33,
+        "wins": 9,
+        "draws": 10,
+        "losses": 14,
+        "points": 37,
+        "gf": 42,
+        "ga": 56,
+        "over25": 22,
+        "btts": 20
+      },
+      "Galatasaray": {
+        "played": 33,
+        "wins": 24,
+        "draws": 5,
+        "losses": 4,
+        "points": 77,
+        "gf": 77,
+        "ga": 29,
+        "over25": 23,
+        "btts": 19
+      },
+      "Samsunspor": {
+        "played": 33,
+        "wins": 12,
+        "draws": 12,
+        "losses": 9,
+        "points": 48,
+        "gf": 43,
+        "ga": 45,
+        "over25": 18,
+        "btts": 21
+      },
+      "Genclerbirligi": {
+        "played": 33,
+        "wins": 8,
+        "draws": 7,
+        "losses": 18,
+        "points": 31,
+        "gf": 33,
+        "ga": 47,
+        "over25": 17,
+        "btts": 17
+      },
+      "Antalyaspor": {
+        "played": 33,
+        "wins": 7,
+        "draws": 8,
+        "losses": 18,
+        "points": 29,
+        "gf": 32,
+        "ga": 55,
+        "over25": 17,
+        "btts": 17
+      },
+      "Kasimpasa": {
+        "played": 33,
+        "wins": 7,
+        "draws": 11,
+        "losses": 15,
+        "points": 32,
+        "gf": 32,
+        "ga": 49,
+        "over25": 15,
+        "btts": 18
+      },
+      "Rizespor": {
+        "played": 33,
+        "wins": 10,
+        "draws": 10,
+        "losses": 13,
+        "points": 40,
+        "gf": 44,
+        "ga": 50,
+        "over25": 19,
+        "btts": 18
+      },
+      "Goztep": {
+        "played": 33,
+        "wins": 14,
+        "draws": 13,
+        "losses": 6,
+        "points": 55,
+        "gf": 42,
+        "ga": 29,
+        "over25": 13,
+        "btts": 15
+      },
+      "Eyupspor": {
+        "played": 33,
+        "wins": 8,
+        "draws": 8,
+        "losses": 17,
+        "points": 32,
+        "gf": 30,
+        "ga": 45,
+        "over25": 15,
+        "btts": 14
+      },
+      "Konyaspor": {
+        "played": 33,
+        "wins": 10,
+        "draws": 10,
+        "losses": 13,
+        "points": 40,
+        "gf": 42,
+        "ga": 48,
+        "over25": 18,
+        "btts": 21
+      },
+      "Trabzonspor": {
+        "played": 33,
+        "wins": 20,
+        "draws": 9,
+        "losses": 4,
+        "points": 69,
+        "gf": 61,
+        "ga": 36,
+        "over25": 18,
+        "btts": 23
+      },
+      "Kocaelispor": {
+        "played": 33,
+        "wins": 9,
+        "draws": 10,
+        "losses": 14,
+        "points": 37,
+        "gf": 26,
+        "ga": 37,
+        "over25": 9,
+        "btts": 13
+      },
+      "Karagumruk": {
+        "played": 33,
+        "wins": 7,
+        "draws": 6,
+        "losses": 20,
+        "points": 27,
+        "gf": 29,
+        "ga": 53,
+        "over25": 15,
+        "btts": 15
+      },
+      "Alanyaspor": {
+        "played": 33,
+        "wins": 7,
+        "draws": 16,
+        "losses": 10,
+        "points": 37,
+        "gf": 40,
+        "ga": 39,
+        "over25": 15,
+        "btts": 20
+      },
+      "Fenerbahce": {
+        "played": 33,
+        "wins": 21,
+        "draws": 10,
+        "losses": 2,
+        "points": 73,
+        "gf": 74,
+        "ga": 34,
+        "over25": 21,
+        "btts": 20
+      },
+      "Besiktas": {
+        "played": 33,
+        "wins": 17,
+        "draws": 8,
+        "losses": 8,
+        "points": 59,
+        "gf": 57,
+        "ga": 38,
+        "over25": 19,
+        "btts": 19
+      },
+      "Buyuksehyr": {
+        "played": 33,
+        "wins": 15,
+        "draws": 9,
+        "losses": 9,
+        "points": 54,
+        "gf": 56,
+        "ga": 34,
+        "over25": 20,
+        "btts": 18
+      },
+      "Kayserispor": {
+        "played": 33,
+        "wins": 5,
+        "draws": 12,
+        "losses": 16,
+        "points": 27,
+        "gf": 25,
+        "ga": 61,
+        "over25": 16,
+        "btts": 16
+      }
+    },
+    "BL2": {
+      "Schalke 04": {
+        "played": 33,
+        "wins": 20,
+        "draws": 7,
+        "losses": 6,
+        "points": 67,
+        "gf": 49,
+        "ga": 31,
+        "over25": 16,
+        "btts": 16
+      },
+      "Hertha": {
+        "played": 33,
+        "wins": 14,
+        "draws": 9,
+        "losses": 10,
+        "points": 51,
+        "gf": 46,
+        "ga": 38,
+        "over25": 15,
+        "btts": 15
+      },
+      "Darmstadt": {
+        "played": 33,
+        "wins": 13,
+        "draws": 13,
+        "losses": 7,
+        "points": 52,
+        "gf": 57,
+        "ga": 43,
+        "over25": 19,
+        "btts": 21
+      },
+      "Bochum": {
+        "played": 33,
+        "wins": 10,
+        "draws": 11,
+        "losses": 12,
+        "points": 41,
+        "gf": 47,
+        "ga": 46,
+        "over25": 16,
+        "btts": 22
+      },
+      "Elversberg": {
+        "played": 33,
+        "wins": 17,
+        "draws": 8,
+        "losses": 8,
+        "points": 59,
+        "gf": 61,
+        "ga": 39,
+        "over25": 19,
+        "btts": 19
+      },
+      "Nurnberg": {
+        "played": 33,
+        "wins": 12,
+        "draws": 9,
+        "losses": 12,
+        "points": 45,
+        "gf": 44,
+        "ga": 42,
+        "over25": 17,
+        "btts": 20
+      },
+      "Karlsruhe": {
+        "played": 33,
+        "wins": 12,
+        "draws": 8,
+        "losses": 13,
+        "points": 44,
+        "gf": 52,
+        "ga": 62,
+        "over25": 25,
+        "btts": 20
+      },
+      "PreuÃen MÃ¼nster": {
+        "played": 33,
+        "wins": 6,
+        "draws": 12,
+        "losses": 15,
+        "points": 30,
+        "gf": 38,
+        "ga": 58,
+        "over25": 20,
+        "btts": 24
+      },
+      "Paderborn": {
+        "played": 33,
+        "wins": 17,
+        "draws": 8,
+        "losses": 8,
+        "points": 59,
+        "gf": 57,
+        "ga": 45,
+        "over25": 21,
+        "btts": 23
+      },
+      "Holstein Kiel": {
+        "played": 33,
+        "wins": 11,
+        "draws": 8,
+        "losses": 14,
+        "points": 41,
+        "gf": 43,
+        "ga": 46,
+        "over25": 17,
+        "btts": 20
+      },
+      "Bielefeld": {
+        "played": 33,
+        "wins": 9,
+        "draws": 9,
+        "losses": 15,
+        "points": 36,
+        "gf": 47,
+        "ga": 50,
+        "over25": 17,
+        "btts": 21
+      },
+      "Fortuna Dusseldorf": {
+        "played": 33,
+        "wins": 11,
+        "draws": 4,
+        "losses": 18,
+        "points": 37,
+        "gf": 33,
+        "ga": 50,
+        "over25": 18,
+        "btts": 18
+      },
+      "Greuther Furth": {
+        "played": 33,
+        "wins": 9,
+        "draws": 7,
+        "losses": 17,
+        "points": 34,
+        "gf": 46,
+        "ga": 68,
+        "over25": 22,
+        "btts": 21
+      },
+      "Dresden": {
+        "played": 33,
+        "wins": 10,
+        "draws": 8,
+        "losses": 15,
+        "points": 38,
+        "gf": 52,
+        "ga": 52,
+        "over25": 23,
+        "btts": 23
+      },
+      "Hannover": {
+        "played": 33,
+        "wins": 16,
+        "draws": 11,
+        "losses": 6,
+        "points": 59,
+        "gf": 57,
+        "ga": 41,
+        "over25": 22,
+        "btts": 21
+      },
+      "Kaiserslautern": {
+        "played": 33,
+        "wins": 15,
+        "draws": 4,
+        "losses": 14,
+        "points": 49,
+        "gf": 51,
+        "ga": 47,
+        "over25": 20,
+        "btts": 16
+      },
+      "Magdeburg": {
+        "played": 33,
+        "wins": 12,
+        "draws": 3,
+        "losses": 18,
+        "points": 39,
+        "gf": 52,
+        "ga": 57,
+        "over25": 18,
+        "btts": 16
+      },
+      "Braunschweig": {
+        "played": 33,
+        "wins": 10,
+        "draws": 7,
+        "losses": 16,
+        "points": 37,
+        "gf": 36,
+        "ga": 53,
+        "over25": 17,
+        "btts": 20
+      }
+    },
+    "ELC": {
+      "Birmingham City": {
+        "played": 48,
+        "wins": 17,
+        "draws": 15,
+        "losses": 16,
+        "points": 66,
+        "gf": 59,
+        "ga": 58,
+        "over25": 22,
+        "btts": 27
+      },
+      "Ipswich Town": {
+        "played": 46,
+        "wins": 23,
+        "draws": 15,
+        "losses": 8,
+        "points": 84,
+        "gf": 80,
+        "ga": 47,
+        "over25": 24,
+        "btts": 26
+      },
+      "Charlton Athletic": {
+        "played": 48,
+        "wins": 15,
+        "draws": 14,
+        "losses": 19,
+        "points": 59,
+        "gf": 48,
+        "ga": 60,
+        "over25": 20,
+        "btts": 27
+      },
+      "Watford": {
+        "played": 48,
+        "wins": 15,
+        "draws": 16,
+        "losses": 17,
+        "points": 61,
+        "gf": 56,
+        "ga": 67,
+        "over25": 23,
+        "btts": 29
+      },
+      "Coventry City": {
+        "played": 46,
+        "wins": 28,
+        "draws": 11,
+        "losses": 7,
+        "points": 95,
+        "gf": 97,
+        "ga": 45,
+        "over25": 29,
+        "btts": 27
+      },
+      "Hull City AFC": {
+        "played": 48,
+        "wins": 22,
+        "draws": 11,
+        "losses": 15,
+        "points": 77,
+        "gf": 72,
+        "ga": 66,
+        "over25": 30,
+        "btts": 30
+      },
+      "Southampton": {
+        "played": 50,
+        "wins": 24,
+        "draws": 15,
+        "losses": 11,
+        "points": 87,
+        "gf": 88,
+        "ga": 60,
+        "over25": 32,
+        "btts": 36
+      },
+      "Wrexham AFC": {
+        "played": 48,
+        "wins": 19,
+        "draws": 16,
+        "losses": 13,
+        "points": 73,
+        "gf": 71,
+        "ga": 67,
+        "over25": 23,
+        "btts": 32
+      },
+      "Middlesbrough": {
+        "played": 50,
+        "wins": 23,
+        "draws": 15,
+        "losses": 12,
+        "points": 84,
+        "gf": 76,
+        "ga": 52,
+        "over25": 28,
+        "btts": 29
+      },
+      "Swansea City AFC": {
+        "played": 48,
+        "wins": 19,
+        "draws": 11,
+        "losses": 18,
+        "points": 68,
+        "gf": 59,
+        "ga": 60,
+        "over25": 24,
+        "btts": 26
+      },
+      "Norwich City": {
+        "played": 48,
+        "wins": 19,
+        "draws": 8,
+        "losses": 21,
+        "points": 65,
+        "gf": 64,
+        "ga": 61,
+        "over25": 24,
+        "btts": 29
+      },
+      "Millwall": {
+        "played": 50,
+        "wins": 26,
+        "draws": 12,
+        "losses": 12,
+        "points": 90,
+        "gf": 69,
+        "ga": 51,
+        "over25": 23,
+        "btts": 23
+      },
+      "Oxford United": {
+        "played": 46,
+        "wins": 11,
+        "draws": 14,
+        "losses": 21,
+        "points": 47,
+        "gf": 45,
+        "ga": 59,
+        "over25": 21,
+        "btts": 24
+      },
+      "Portsmouth": {
+        "played": 48,
+        "wins": 15,
+        "draws": 13,
+        "losses": 20,
+        "points": 58,
+        "gf": 53,
+        "ga": 68,
+        "over25": 22,
+        "btts": 27
+      },
+      "Queens Park Rangers": {
+        "played": 48,
+        "wins": 17,
+        "draws": 11,
+        "losses": 20,
+        "points": 62,
+        "gf": 64,
+        "ga": 74,
+        "over25": 30,
+        "btts": 30
+      },
+      "Preston North End": {
+        "played": 48,
+        "wins": 15,
+        "draws": 15,
+        "losses": 18,
+        "points": 60,
+        "gf": 57,
+        "ga": 67,
+        "over25": 24,
+        "btts": 29
+      },
+      "Stoke City": {
+        "played": 48,
+        "wins": 15,
+        "draws": 10,
+        "losses": 23,
+        "points": 55,
+        "gf": 53,
+        "ga": 61,
+        "over25": 22,
+        "btts": 22
+      },
+      "Derby County": {
+        "played": 48,
+        "wins": 20,
+        "draws": 10,
+        "losses": 18,
+        "points": 70,
+        "gf": 70,
+        "ga": 63,
+        "over25": 26,
+        "btts": 32
+      },
+      "West Bromwich Albion": {
+        "played": 48,
+        "wins": 15,
+        "draws": 14,
+        "losses": 19,
+        "points": 59,
+        "gf": 53,
+        "ga": 60,
+        "over25": 23,
+        "btts": 25
+      },
+      "Blackburn Rovers": {
+        "played": 48,
+        "wins": 14,
+        "draws": 14,
+        "losses": 20,
+        "points": 56,
+        "gf": 46,
+        "ga": 59,
+        "over25": 20,
+        "btts": 24
+      },
+      "Sheffield United": {
+        "played": 48,
+        "wins": 18,
+        "draws": 8,
+        "losses": 22,
+        "points": 62,
+        "gf": 66,
+        "ga": 66,
+        "over25": 27,
+        "btts": 26
+      },
+      "Bristol City": {
+        "played": 48,
+        "wins": 17,
+        "draws": 12,
+        "losses": 19,
+        "points": 63,
+        "gf": 61,
+        "ga": 63,
+        "over25": 22,
+        "btts": 22
+      },
+      "Leicester City": {
+        "played": 46,
+        "wins": 12,
+        "draws": 16,
+        "losses": 18,
+        "points": 52,
+        "gf": 58,
+        "ga": 68,
+        "over25": 25,
+        "btts": 33
+      },
+      "Sheffield Wednesday": {
+        "played": 46,
+        "wins": 2,
+        "draws": 12,
+        "losses": 32,
+        "points": 18,
+        "gf": 29,
+        "ga": 89,
+        "over25": 24,
+        "btts": 22
+      },
+      "Wolverhampton Wanderers": {
+        "played": 2,
+        "wins": 1,
+        "draws": 1,
+        "losses": 0,
+        "points": 4,
+        "gf": 5,
+        "ga": 3,
+        "over25": 2,
+        "btts": 2
+      },
+      "Bolton Wanderers": {
+        "played": 2,
+        "wins": 1,
+        "draws": 1,
+        "losses": 0,
+        "points": 4,
+        "gf": 2,
+        "ga": 1,
+        "over25": 1,
+        "btts": 1
+      },
+      "Lincoln City": {
+        "played": 2,
+        "wins": 0,
+        "draws": 0,
+        "losses": 2,
+        "points": 0,
+        "gf": 2,
+        "ga": 5,
+        "over25": 2,
+        "btts": 2
+      },
+      "Burnley": {
+        "played": 2,
+        "wins": 0,
+        "draws": 1,
+        "losses": 1,
+        "points": 1,
+        "gf": 3,
+        "ga": 5,
+        "over25": 2,
+        "btts": 2
+      },
+      "West Ham United": {
+        "played": 2,
+        "wins": 0,
+        "draws": 1,
+        "losses": 1,
+        "points": 1,
+        "gf": 3,
+        "ga": 4,
+        "over25": 2,
+        "btts": 2
+      },
+      "Cardiff City": {
+        "played": 2,
+        "wins": 0,
+        "draws": 2,
+        "losses": 0,
+        "points": 2,
+        "gf": 3,
+        "ga": 3,
+        "over25": 1,
+        "btts": 2
+      }
+    },
+    "DED": {
+      "Fortuna Sittard": {
+        "played": 36,
+        "wins": 12,
+        "draws": 7,
+        "losses": 17,
+        "points": 43,
+        "gf": 54,
+        "ga": 66,
+        "over25": 25,
+        "btts": 28
+      },
+      "Go Ahead Eagles": {
+        "played": 36,
+        "wins": 10,
+        "draws": 15,
+        "losses": 11,
+        "points": 45,
+        "gf": 62,
+        "ga": 55,
+        "over25": 23,
+        "btts": 22
+      },
+      "NEC": {
+        "played": 35,
+        "wins": 16,
+        "draws": 11,
+        "losses": 8,
+        "points": 59,
+        "gf": 80,
+        "ga": 55,
+        "over25": 26,
+        "btts": 29
+      },
+      "SBV Excelsior": {
+        "played": 35,
+        "wins": 10,
+        "draws": 8,
+        "losses": 17,
+        "points": 38,
+        "gf": 45,
+        "ga": 56,
+        "over25": 22,
+        "btts": 22
+      },
+      "Feyenoord Rotterdam": {
+        "played": 36,
+        "wins": 20,
+        "draws": 9,
+        "losses": 7,
+        "points": 69,
+        "gf": 76,
+        "ga": 48,
+        "over25": 22,
+        "btts": 23
+      },
+      "NAC Breda": {
+        "played": 32,
+        "wins": 5,
+        "draws": 10,
+        "losses": 17,
+        "points": 25,
+        "gf": 30,
+        "ga": 55,
+        "over25": 16,
+        "btts": 15
+      },
+      "SC Heerenveen": {
+        "played": 35,
+        "wins": 15,
+        "draws": 9,
+        "losses": 11,
+        "points": 54,
+        "gf": 60,
+        "ga": 55,
+        "over25": 25,
+        "btts": 23
+      },
+      "FC Volendam": {
+        "played": 33,
+        "wins": 8,
+        "draws": 8,
+        "losses": 17,
+        "points": 32,
+        "gf": 34,
+        "ga": 53,
+        "over25": 19,
+        "btts": 19
+      },
+      "PSV": {
+        "played": 36,
+        "wins": 28,
+        "draws": 4,
+        "losses": 4,
+        "points": 88,
+        "gf": 105,
+        "ga": 48,
+        "over25": 31,
+        "btts": 28
+      },
+      "Sparta Rotterdam": {
+        "played": 36,
+        "wins": 13,
+        "draws": 8,
+        "losses": 15,
+        "points": 47,
+        "gf": 44,
+        "ga": 64,
+        "over25": 19,
+        "btts": 16
+      },
+      "PEC Zwolle": {
+        "played": 36,
+        "wins": 10,
+        "draws": 10,
+        "losses": 16,
+        "points": 40,
+        "gf": 47,
+        "ga": 74,
+        "over25": 22,
+        "btts": 24
+      },
+      "FC Twente '65": {
+        "played": 35,
+        "wins": 16,
+        "draws": 13,
+        "losses": 6,
+        "points": 61,
+        "gf": 61,
+        "ga": 37,
+        "over25": 17,
+        "btts": 22
+      },
+      "AFC Ajax": {
+        "played": 35,
+        "wins": 15,
+        "draws": 14,
+        "losses": 6,
+        "points": 59,
+        "gf": 66,
+        "ga": 43,
+        "over25": 21,
+        "btts": 24
+      },
+      "Telstar 1963": {
+        "played": 35,
+        "wins": 9,
+        "draws": 10,
+        "losses": 16,
+        "points": 37,
+        "gf": 50,
+        "ga": 58,
+        "over25": 21,
+        "btts": 23
+      },
+      "AZ": {
+        "played": 36,
+        "wins": 17,
+        "draws": 9,
+        "losses": 10,
+        "points": 60,
+        "gf": 63,
+        "ga": 49,
+        "over25": 22,
+        "btts": 22
+      },
+      "FC Groningen": {
+        "played": 36,
+        "wins": 15,
+        "draws": 6,
+        "losses": 15,
+        "points": 51,
+        "gf": 54,
+        "ga": 51,
+        "over25": 21,
+        "btts": 21
+      },
+      "FC Utrecht": {
+        "played": 36,
+        "wins": 14,
+        "draws": 9,
+        "losses": 13,
+        "points": 51,
+        "gf": 58,
+        "ga": 51,
+        "over25": 20,
+        "btts": 23
+      },
+      "Heracles Almelo": {
+        "played": 33,
+        "wins": 5,
+        "draws": 4,
+        "losses": 24,
+        "points": 19,
+        "gf": 34,
+        "ga": 83,
+        "over25": 23,
+        "btts": 16
+      },
+      "SC Cambuur-Leeuwarden": {
+        "played": 3,
+        "wins": 0,
+        "draws": 0,
+        "losses": 3,
+        "points": 0,
+        "gf": 3,
+        "ga": 12,
+        "over25": 3,
+        "btts": 2
+      },
+      "Willem II Tilburg": {
+        "played": 2,
+        "wins": 0,
+        "draws": 0,
+        "losses": 2,
+        "points": 0,
+        "gf": 2,
+        "ga": 8,
+        "over25": 2,
+        "btts": 2
+      },
+      "ADO Den Haag": {
+        "played": 3,
+        "wins": 0,
+        "draws": 0,
+        "losses": 3,
+        "points": 0,
+        "gf": 2,
+        "ga": 9,
+        "over25": 2,
+        "btts": 2
+      }
     }
   },
   "total_matches_count": 180,
   "kupon": {
     "maclar": [
       {
-        "ev": "SC Cambuur-Leeuwarden",
-        "dep": "FC Twente '65",
-        "tahmin": "Deplasman Kazanır",
-        "oran": 1.62,
-        "tarih": "2026-08-30T18:00:00Z",
-        "analiz": "🤖 <b>Yapay Zeka Analizi:</b> Ensemble modeli (Dixon-Coles + ELO + Purged LightGBM), <b>SC Cambuur-Leeuwarden</b> galibiyetine %38.4, beraberliğe %10.0, <b>FC Twente '65</b> galibiyetine %61.6 ihtimal vermektedir.<br><br>📊 <b>Gol ve Tempo Projeksiyonu:</b> Beklenen Gol (xG) hesabı Ev: 1.2 - Dep: 2.64 (Toplam 3.84 gol) göstermektedir. 2.5 Üst ihtimali %80.0, KG Var ihtimali %78.0 seviyesindedir.<br><br>🎯 <b>Stratejik Yol Haritası & Tavsiye:</b> Bu karşılaşmada <b>Deplasman Kazanır</b> bahsi %+ 26.6% matematiksel net değer (Edge) barındırmaktadır. Disiplinli Kelly sermaye yönetiminden %1.8 (90 TL) oranında katılım önerilir."
-      },
-      {
         "ev": "Bolton Wanderers",
         "dep": "Lincoln City",
         "tahmin": "Ev Sahibi Kazanır",
-        "oran": 2.55,
+        "oran": 2.56,
         "tarih": "2026-08-29T14:00:00Z",
-        "analiz": "🤖 <b>Yapay Zeka Analizi:</b> Ensemble modeli (Dixon-Coles + ELO + Purged LightGBM), <b>Bolton Wanderers</b> galibiyetine %70.5, beraberliğe %10.0, <b>Lincoln City</b> galibiyetine %29.5 ihtimal vermektedir.<br><br>📊 <b>Gol ve Tempo Projeksiyonu:</b> Beklenen Gol (xG) hesabı Ev: 1.93 - Dep: 0.68 (Toplam 2.61 gol) göstermektedir. 2.5 Üst ihtimali %57.4, KG Var ihtimali %65.9 seviyesindedir.<br><br>🎯 <b>Stratejik Yol Haritası & Tavsiye:</b> Bu karşılaşmada <b>Ev Sahibi Kazanır</b> bahsi %+ 25.5% matematiksel net değer (Edge) barındırmaktadır. Disiplinli Kelly sermaye yönetiminden %1.8 (90 TL) oranında katılım önerilir."
+        "analiz": "🤖 <b>Yapay Zeka Analizi:</b> Ensemble modeli (Dixon-Coles + ELO + Purged LightGBM), <b>Bolton Wanderers</b> galibiyetine %49.6, beraberliğe %20.5, <b>Lincoln City</b> galibiyetine %29.9 ihtimal vermektedir.<br>📐 <b>Bayesian Kalibrasyon:</b> Pinnacle piyasa olasılığı ile model tahmini %60/%40 oranında harmanlanmıştır.<br><br>📊 <b>Gol ve Tempo Projeksiyonu:</b> Beklenen Gol (xG) hesabı Ev: 1.93 - Dep: 0.68 (Toplam 2.61 gol) göstermektedir. 2.5 Üst ihtimali %57.4, KG Var ihtimali %65.9 seviyesindedir.<br><br>🎯 <b>Stratejik Yol Haritası & Tavsiye:</b> Bu karşılaşmada <b>Ev Sahibi Kazanır</b> bahsi %+10.5% matematiksel net değer (Edge) barındırmaktadır. Kelly sermaye yönetimi (Fractional %25): bakiyenin %4.3'i ile katılım önerilir."
       },
       {
-        "ev": "Rio Ave",
-        "dep": "Sporting Clube de Portugal",
-        "tahmin": "Deplasman Kazanır",
-        "oran": 1.72,
-        "tarih": "2026-08-28T19:15:00Z",
-        "analiz": "🤖 <b>Yapay Zeka Analizi:</b> Ensemble modeli (Dixon-Coles + ELO + Purged LightGBM), <b>Rio Ave</b> galibiyetine %41.9, beraberliğe %10.0, <b>Sporting Clube de Portugal</b> galibiyetine %58.1 ihtimal vermektedir.<br><br>📊 <b>Gol ve Tempo Projeksiyonu:</b> Beklenen Gol (xG) hesabı Ev: 1.05 - Dep: 1.88 (Toplam 2.93 gol) göstermektedir. 2.5 Üst ihtimali %64.5, KG Var ihtimali %78.0 seviyesindedir.<br><br>🎯 <b>Stratejik Yol Haritası & Tavsiye:</b> Bu karşılaşmada <b>Deplasman Kazanır</b> bahsi %+ 23.1% matematiksel net değer (Edge) barındırmaktadır. Disiplinli Kelly sermaye yönetiminden %1.8 (90 TL) oranında katılım önerilir."
+        "ev": "Stade Brestois 29",
+        "dep": "Toulouse",
+        "tahmin": "Ev Sahibi Kazanır",
+        "oran": 2.8,
+        "tarih": "2026-08-29T18:45:00Z",
+        "analiz": "🤖 <b>Yapay Zeka Analizi:</b> Ensemble modeli (Dixon-Coles + ELO + Purged LightGBM), <b>Stade Brestois 29</b> galibiyetine %42.2, beraberliğe %20.2, <b>Toulouse</b> galibiyetine %37.6 ihtimal vermektedir.<br>📐 <b>Bayesian Kalibrasyon:</b> Pinnacle piyasa olasılığı ile model tahmini %60/%40 oranında harmanlanmıştır.<br><br>📊 <b>Gol ve Tempo Projeksiyonu:</b> Beklenen Gol (xG) hesabı Ev: 1.54 - Dep: 1.24 (Toplam 2.78 gol) göstermektedir. 2.5 Üst ihtimali %61.2, KG Var ihtimali %78.0 seviyesindedir.<br><br>🎯 <b>Stratejik Yol Haritası & Tavsiye:</b> Bu karşılaşmada <b>Ev Sahibi Kazanır</b> bahsi %+6.5% matematiksel net değer (Edge) barındırmaktadır. Kelly sermaye yönetimi (Fractional %25): bakiyenin %2.5'i ile katılım önerilir."
+      },
+      {
+        "ev": "AS Monaco",
+        "dep": "Olympique de Marseille",
+        "tahmin": "Ev Sahibi Kazanır",
+        "oran": 2.65,
+        "tarih": "2026-08-30T18:45:00Z",
+        "analiz": "🤖 <b>Yapay Zeka Analizi:</b> Ensemble modeli (Dixon-Coles + ELO + Purged LightGBM), <b>AS Monaco</b> galibiyetine %43.5, beraberliğe %18.4, <b>Olympique de Marseille</b> galibiyetine %38.1 ihtimal vermektedir.<br>📐 <b>Bayesian Kalibrasyon:</b> Pinnacle piyasa olasılığı ile model tahmini %60/%40 oranında harmanlanmıştır.<br><br>📊 <b>Gol ve Tempo Projeksiyonu:</b> Beklenen Gol (xG) hesabı Ev: 1.73 - Dep: 1.42 (Toplam 3.15 gol) göstermektedir. 2.5 Üst ihtimali %69.3, KG Var ihtimali %78.0 seviyesindedir.<br><br>🎯 <b>Stratejik Yol Haritası & Tavsiye:</b> Bu karşılaşmada <b>Ev Sahibi Kazanır</b> bahsi %+5.8% matematiksel net değer (Edge) barındırmaktadır. Kelly sermaye yönetimi (Fractional %25): bakiyenin %2.3'i ile katılım önerilir."
       }
     ],
-    "toplam_oran": 7.11,
-    "kazanma_ihtimali": 25.2,
-    "beklenen_deger": 79.3
+    "toplam_oran": 19.0,
+    "kazanma_ihtimali": 9.1,
+    "beklenen_deger": 73.0
   },
   "finished_matches": [
     {

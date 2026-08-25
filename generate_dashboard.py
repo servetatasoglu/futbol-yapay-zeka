@@ -353,7 +353,12 @@ def load_extended_stats():
         with open(path, "r", encoding="utf-8") as f:
             maclar = json.load(f)
             
-        standings = defaultdict(lambda: {"played": 0, "points": 0, "gf": 0, "ga": 0, "over25": 0, "btts": 0})
+        # Güncel sezon filtresi: 2025-08-01 sonrası maçlar
+        CURRENT_SEASON_START = "2025-08-01"
+        
+        standings = defaultdict(lambda: {"played": 0, "wins": 0, "draws": 0, "losses": 0, "points": 0, "gf": 0, "ga": 0, "over25": 0, "btts": 0, "lig": ""})
+        # Lig bazlı standings (puan durumu tablosu için)
+        league_standings = defaultdict(lambda: defaultdict(lambda: {"played": 0, "wins": 0, "draws": 0, "losses": 0, "points": 0, "gf": 0, "ga": 0, "over25": 0, "btts": 0}))
         team_recent_matches = defaultdict(list)
         all_matches = []
         
@@ -396,26 +401,64 @@ def load_extended_stats():
                     is_over25 = (hg + ag) > 2
                     is_btts = (hg > 0 and ag > 0)
                     
-                    # Update Standings
+                    # Genel standings (tüm sezonlar — model hesabı için)
                     standings[home]["played"] += 1
                     standings[home]["gf"] += hg
                     standings[home]["ga"] += ag
+                    standings[home]["lig"] = lig
                     if is_over25: standings[home]["over25"] += 1
                     if is_btts: standings[home]["btts"] += 1
                     
                     standings[away]["played"] += 1
                     standings[away]["gf"] += ag
                     standings[away]["ga"] += hg
+                    standings[away]["lig"] = lig
                     if is_over25: standings[away]["over25"] += 1
                     if is_btts: standings[away]["btts"] += 1
                     
                     if hg > ag:
                         standings[home]["points"] += 3
+                        standings[home]["wins"] += 1
+                        standings[away]["losses"] += 1
                     elif ag > hg:
                         standings[away]["points"] += 3
+                        standings[away]["wins"] += 1
+                        standings[home]["losses"] += 1
                     else:
                         standings[home]["points"] += 1
                         standings[away]["points"] += 1
+                        standings[home]["draws"] += 1
+                        standings[away]["draws"] += 1
+                    
+                    # Lig bazlı GÜNCEL SEZON standings (puan durumu tablosu için)
+                    match_date = str(m.get("utcDate", ""))[:10]
+                    if match_date >= CURRENT_SEASON_START:
+                        ls = league_standings[lig]
+                        ls[home]["played"] += 1
+                        ls[home]["gf"] += hg
+                        ls[home]["ga"] += ag
+                        if is_over25: ls[home]["over25"] += 1
+                        if is_btts: ls[home]["btts"] += 1
+                        
+                        ls[away]["played"] += 1
+                        ls[away]["gf"] += ag
+                        ls[away]["ga"] += hg
+                        if is_over25: ls[away]["over25"] += 1
+                        if is_btts: ls[away]["btts"] += 1
+                        
+                        if hg > ag:
+                            ls[home]["points"] += 3
+                            ls[home]["wins"] += 1
+                            ls[away]["losses"] += 1
+                        elif ag > hg:
+                            ls[away]["points"] += 3
+                            ls[away]["wins"] += 1
+                            ls[home]["losses"] += 1
+                        else:
+                            ls[home]["points"] += 1
+                            ls[away]["points"] += 1
+                            ls[home]["draws"] += 1
+                            ls[away]["draws"] += 1
 
                     date_str = str(m.get("utcDate", "")).split("T")[0]
                     team_recent_matches[home].append({
@@ -556,13 +599,18 @@ def load_extended_stats():
                 }
             })
 
+        # league_standings'i serializable dict'e dönüştür
+        league_standings_clean = {}
+        for lig_kodu, teams in league_standings.items():
+            league_standings_clean[lig_kodu] = {team: dict(stats) for team, stats in teams.items()}
 
-        return dict(standings), dict(team_recent_matches), processed_matches
+        return dict(standings), dict(team_recent_matches), processed_matches, league_standings_clean
 
-    except:
-        return {}, {}, []
+    except Exception as e:
+        print(f"  ⚠️ load_extended_stats hatası: {e}")
+        return {}, {}, [], {}
 
-STANDINGS_CACHE, RECENT_MATCHES_CACHE, ALL_MATCHES_CACHE = load_extended_stats()
+STANDINGS_CACHE, RECENT_MATCHES_CACHE, ALL_MATCHES_CACHE, LEAGUE_STANDINGS_CACHE = load_extended_stats()
 
 def get_standing(team_name):
     if not team_name: return None
@@ -904,7 +952,7 @@ def generate_dashboard_data(live_signals=None):
     # --- Finished Matches (En güncel biten maçlar - AI Yorumlu & İstatistikli) ---
     finished_matches = []
     try:
-        standings, team_recent, processed_matches = load_extended_stats()
+        standings, team_recent, processed_matches, _ls = load_extended_stats()
         
         # Lig bazında en güncel 30'ar maçı seç (Süper Lig TSL dahil tüm ligler eşit temsil edilsin)
         fgroups = defaultdict(list)
@@ -1099,7 +1147,7 @@ def generate_dashboard_data(live_signals=None):
 
 
 def _write_empty_dashboard(live_signals=None, finished_matches=None):
-    standings, team_recent, all_matches = load_extended_stats()
+    standings, team_recent, all_matches, league_st = load_extended_stats()
     data = {
         "summary": {
             "total_bets": 0, "initial_br": 10000.0, "final_br": 10000.0,
@@ -1114,10 +1162,10 @@ def _write_empty_dashboard(live_signals=None, finished_matches=None):
                              "2.00-3.00": {"pnl": 0, "count": 0}, ">3.00": {"pnl": 0, "count": 0}},
         "bets": [],
         "standings": dict(standings),
+        "league_standings": league_st,
         "total_matches_count": len(all_matches),
         "kupon": kupon_onerisi(live_signals if live_signals else []),
         "finished_matches": finished_matches if finished_matches else (all_matches[:300] if len(all_matches) > 300 else all_matches)
-
     }
     with open(DASH_OUT, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
@@ -1190,7 +1238,7 @@ if __name__ == "__main__":
     update_maclar_json()
     
     # Cache'leri yenile (maclar.json değişmiş olabilir)
-    STANDINGS_CACHE, RECENT_MATCHES_CACHE, ALL_MATCHES_CACHE = load_extended_stats()
+    STANDINGS_CACHE, RECENT_MATCHES_CACHE, ALL_MATCHES_CACHE, LEAGUE_STANDINGS_CACHE = load_extended_stats()
     TEAM_FORM_CACHE = load_team_form()
     
     # ADIM 2: Canlı oranları çek (The-Odds-API)
@@ -1241,13 +1289,6 @@ if __name__ == "__main__":
         prob_btts_yes = round(min(78.0, max(32.0, (lambda_home * lambda_away) * 35.0 + 20)), 1)
         prob_btts_no = round(100.0 - prob_btts_yes, 1)
         
-        if prob_home >= prob_draw and prob_home >= prob_away:
-            selection = "Ev Sahibi Kazanır"
-        elif prob_away >= prob_home and prob_away >= prob_draw:
-            selection = "Deplasman Kazanır"
-        else:
-            selection = "Beraberlik"
-        
         # Canlı oranları eşleştir
         live = _match_odds(home, away, odds_map)
         if live:
@@ -1256,6 +1297,27 @@ if __name__ == "__main__":
             odds_ms2 = live["dep_oran"]
             sharp_sinyal = live.get("sharp_sinyal", "YOK")
             sharp_tier = live.get("sharp_tier", "NO_SHARP")
+            
+            # ═══ BAYESIAN KALİBRASYON ═══
+            # Pinnacle implied probabilities (vig kaldırılmış)
+            total_implied = (1/max(odds_ms1,1.01) + 1/max(odds_ms0,1.01) + 1/max(odds_ms2,1.01))
+            pin_home = round((1/max(odds_ms1,1.01)) / total_implied * 100, 1) if total_implied > 0 else prob_home
+            pin_draw = round((1/max(odds_ms0,1.01)) / total_implied * 100, 1) if total_implied > 0 else prob_draw
+            pin_away = round((1/max(odds_ms2,1.01)) / total_implied * 100, 1) if total_implied > 0 else prob_away
+            
+            # Harmanlama: %60 piyasa + %40 model (Pinnacle dünyanın en keskin bahisçisi)
+            MARKET_WEIGHT = 0.60
+            MODEL_WEIGHT = 0.40
+            prob_home = round(pin_home * MARKET_WEIGHT + prob_home * MODEL_WEIGHT, 1)
+            prob_draw = round(pin_draw * MARKET_WEIGHT + prob_draw * MODEL_WEIGHT, 1)
+            prob_away = round(pin_away * MARKET_WEIGHT + prob_away * MODEL_WEIGHT, 1)
+            
+            # Normalize et (toplam %100 olsun)
+            total_p = prob_home + prob_draw + prob_away
+            if total_p > 0:
+                prob_home = round(prob_home / total_p * 100, 1)
+                prob_draw = round(prob_draw / total_p * 100, 1)
+                prob_away = round(100.0 - prob_home - prob_draw, 1)
         else:
             odds_ms1 = round(100.0 / max(prob_home, 1.0), 2)
             odds_ms0 = round(100.0 / max(prob_draw, 1.0), 2)
@@ -1263,16 +1325,46 @@ if __name__ == "__main__":
             sharp_sinyal = "YOK"
             sharp_tier = "NO_SHARP"
         
-        edge_val = round(max(3.5, prob_home - 45.0), 1) if selection == "Ev Sahibi Kazanır" else round(max(3.5, prob_away - 35.0), 1)
+        if prob_home >= prob_draw and prob_home >= prob_away:
+            selection = "Ev Sahibi Kazanır"
+            sel_prob = prob_home
+            sel_odds = odds_ms1
+        elif prob_away >= prob_home and prob_away >= prob_draw:
+            selection = "Deplasman Kazanır"
+            sel_prob = prob_away
+            sel_odds = odds_ms2
+        else:
+            selection = "Beraberlik"
+            sel_prob = prob_draw
+            sel_odds = odds_ms0
+        
+        # ═══ GERÇEK EDGE & KELLY HESABI ═══
+        implied_prob = (1.0 / max(sel_odds, 1.01)) * 100.0
+        edge_val = round(max(0.0, sel_prob - implied_prob), 1)
+        
+        # Fractional Kelly (%25) — para yönetimi
+        kelly_fraction = 0.25
+        if sel_odds > 1.0 and sel_prob > 0:
+            kelly_raw = ((sel_prob/100.0) * sel_odds - 1.0) / (sel_odds - 1.0)
+            kelly_bet = round(max(0.0, kelly_raw * kelly_fraction * 100), 2)
+        else:
+            kelly_bet = 0.0
         
         # AI Yorum oluştur (gelecek maç — skor bilgisi YOK)
+        calibration_note = ""
+        if live:
+            calibration_note = f"<br>📐 <b>Bayesian Kalibrasyon:</b> Pinnacle piyasa olasılığı ile model tahmini %60/%40 oranında harmanlanmıştır."
+        
+        kelly_note = f"Kelly sermaye yönetimi (Fractional %25): bakiyenin %{kelly_bet:.1f}'i ile katılım önerilir." if kelly_bet > 0 else "Bu maç için Kelly kriteri pozisyon önermemektedir (Edge yetersiz)."
+        
         ai_commentary = (
             f"🤖 <b>Yapay Zeka Analizi:</b> Ensemble modeli (Dixon-Coles + ELO + Purged LightGBM), <b>{home}</b> galibiyetine %{prob_home:.1f}, "
-            f"beraberliğe %{prob_draw:.1f}, <b>{away}</b> galibiyetine %{prob_away:.1f} ihtimal vermektedir.<br><br>"
+            f"beraberliğe %{prob_draw:.1f}, <b>{away}</b> galibiyetine %{prob_away:.1f} ihtimal vermektedir.{calibration_note}<br><br>"
             f"📊 <b>Gol ve Tempo Projeksiyonu:</b> Beklenen Gol (xG) hesabı Ev: {lambda_home} - Dep: {lambda_away} (Toplam {xg_total} gol) göstermektedir. "
             f"2.5 Üst ihtimali %{prob_over25:.1f}, KG Var ihtimali %{prob_btts_yes:.1f} seviyesindedir.<br><br>"
-            f"🎯 <b>Stratejik Yol Haritası & Tavsiye:</b> Bu karşılaşmada <b>{selection}</b> bahsi %+ {edge_val}% matematiksel net değer (Edge) barındırmaktadır. "
-            f"Disiplinli Kelly sermaye yönetiminden %1.8 (90 TL) oranında katılım önerilir."
+            f"🎯 <b>Stratejik Yol Haritası & Tavsiye:</b> Bu karşılaşmada <b>{selection}</b> bahsi "
+            f"{'%+' + str(edge_val) + '% matematiksel net değer (Edge) barındırmaktadır.' if edge_val > 0 else 'değer barındırmamaktadır (Edge negatif).'} "
+            f"{kelly_note}"
         )
         
         upcoming_signals.append({
