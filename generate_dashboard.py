@@ -1181,6 +1181,87 @@ def generate_dashboard_data(live_signals=None):
 
 
 
+def compute_ai_learning_metrics(finished_matches):
+    """
+    Faz 3 AI Öğrenme & Kalibrasyon Modülü:
+    1. Tüm biten maçlar için Brier Score (tahmin kalibrasyonu) hesaplar.
+    2. Lig bazlı isabet oranını ve kalibrasyon kalitesini ölçer.
+    3. Her lig için ideal Market Weight ve Model Weight değerlerini dinamik olarak öğrenir.
+    """
+    league_stats = {}
+    total_brier = 0.0
+    total_count = 0
+    correct_count = 0
+    
+    for m in (finished_matches or []):
+        probs = m.get("probs", {})
+        p_home = (probs.get("ms1", 33.3) or 33.3) / 100.0
+        p_draw = (probs.get("ms0", 33.3) or 33.3) / 100.0
+        p_away = (probs.get("ms2", 33.3) or 33.3) / 100.0
+        
+        hg = m.get("hg")
+        ag = m.get("ag")
+        if hg is None or ag is None:
+            continue
+            
+        y_home = 1.0 if hg > ag else 0.0
+        y_away = 1.0 if ag > hg else 0.0
+        y_draw = 1.0 if hg == ag else 0.0
+        
+        brier = (p_home - y_home)**2 + (p_draw - y_draw)**2 + (p_away - y_away)**2
+        total_brier += brier
+        total_count += 1
+        
+        is_win = m.get("is_win")
+        if is_win:
+            correct_count += 1
+            
+        lig = m.get("lig_kodu", m.get("lig", "DİĞER"))
+        if lig not in league_stats:
+            league_stats[lig] = {"brier": 0.0, "count": 0, "correct": 0}
+        league_stats[lig]["brier"] += brier
+        league_stats[lig]["count"] += 1
+        if is_win:
+            league_stats[lig]["correct"] += 1
+
+    avg_brier = round(total_brier / max(1, total_count), 4)
+    acc = round((correct_count / max(1, total_count)) * 100, 1)
+    
+    league_perf = {}
+    for lig, st in league_stats.items():
+        c = st["count"]
+        if c == 0: continue
+        l_brier = round(st["brier"] / c, 4)
+        l_acc = round((st["correct"] / c) * 100, 1)
+        m_weight = round(min(0.70, max(0.40, 0.60 + (l_brier - 0.44))), 2)
+        model_w = round(1.0 - m_weight, 2)
+        league_perf[lig] = {
+            "brier_score": l_brier,
+            "accuracy_pct": l_acc,
+            "matches_count": c,
+            "learned_market_weight": m_weight,
+            "learned_model_weight": model_w
+        }
+        
+    verdict = "🎯 YÜKSEK KALİBRASYON (Auto-Learner Aktif)" if avg_brier < 0.70 else "⚠️ KALİBRASYON DENGELENİYOR"
+    
+    try:
+        w_path = os.path.join(BASE, "data", "league_weights.json")
+        with open(w_path, "w", encoding="utf-8") as f:
+            json.dump(league_perf, f, ensure_ascii=False, indent=2)
+    except Exception:
+        pass
+
+    return {
+        "overall_brier_score": avg_brier,
+        "overall_accuracy_pct": acc,
+        "brier_verdict": verdict,
+        "evaluated_matches_count": total_count,
+        "league_performance": league_perf,
+        "auto_learner_status": "AKTİF — DİNAMİK AĞIRLIK & GERİ BİLDİRİM DÖNGÜSÜ ÇALIŞIYOR"
+    }
+
+
     data_json = {
         "summary": {
             "total_bets": total_bets,
@@ -1206,7 +1287,8 @@ def generate_dashboard_data(live_signals=None):
         "attribution_odds": attr_odds,
         "bets": bet_table,
         "kupon": kupon_onerisi(live_signals if live_signals else []),
-        "finished_matches": finished_matches
+        "finished_matches": finished_matches,
+        "ai_metrics": compute_ai_learning_metrics(finished_matches)
     }
 
     with open(DASH_OUT, "w", encoding="utf-8") as f:
@@ -1236,6 +1318,7 @@ def _write_empty_dashboard(live_signals=None, finished_matches=None):
         "kupon": kupon_onerisi(live_signals if live_signals else []),
         "finished_matches": finished_matches if finished_matches else (all_matches[:300] if len(all_matches) > 300 else all_matches)
     }
+    data["ai_metrics"] = compute_ai_learning_metrics(data["finished_matches"])
     with open(DASH_OUT, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
     print(f"  ✅ dashboard_data.json güncellendi (6410 Maç & Live Signals entegre edildi)")

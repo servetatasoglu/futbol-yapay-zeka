@@ -1,0 +1,44 @@
+{
+  "PPL": {
+    "brier_score": 0.6521,
+    "accuracy_pct": 56.7,
+    "matches_count": 30,
+    "learned_market_weight": 0.7,
+    "learned_model_weight": 0.3
+  },
+  "FL1": {
+    "brier_score": 0.717,
+    "accuracy_pct": 50.0,
+    "matches_count": 30,
+    "learned_market_weight": 0.7,
+    "learned_model_weight": 0.3
+  },
+  "DED": {
+    "brier_score": 0.6117,
+    "accuracy_pct": 63.3,
+    "matches_count": 30,
+    "learned_market_weight": 0.7,
+    "learned_model_weight": 0.3
+  },
+  "ELC": {
+    "brier_score": 0.7906,
+    "accuracy_pct": 36.7,
+    "matches_count": 30,
+    "learned_market_weight": 0.7,
+    "learned_model_weight": 0.3
+  },
+  "BL2": {
+    "brier_score": 0.6902,
+    "accuracy_pct": 53.3,
+    "matches_count": 30,
+    "learned_market_weight": 0.7,
+    "learned_model_weight": 0.3
+  },
+  "TSL": {
+    "brier_score": 0.6008,
+    "accuracy_pct": 63.3,
+    "matches_count": 30,
+    "learned_market_weight": 0.7,
+    "learned_model_weight": 0.3
+  }
+}
