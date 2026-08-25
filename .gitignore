@@ -3,9 +3,9 @@
 # ============================================================
 
 # GİZLİ: API anahtarları ve token'lar
-.env
-.env.*
+# .env (Kullanıcı özel github reposunda saklıyor)
 !.env.example
+
 
 # Python
 __pycache__/
