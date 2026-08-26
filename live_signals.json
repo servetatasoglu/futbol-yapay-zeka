@@ -1,5 +1,509 @@
 [
   {
+    "date": "2026-08-29T11:30:00Z",
+    "lig": "ELC",
+    "ev": "Wolverhampton Wanderers",
+    "dep": "Stoke City",
+    "selection": "2.5 Alt",
+    "target_odds": 2.19,
+    "model_prob": 53.4,
+    "edge_pct": 16.9,
+    "edge_raw_pct": 16.9,
+    "fake_edge_score": 0.0,
+    "latency_seconds": 0,
+    "selected_bookmaker": "Pinnacle",
+    "execution_quality": {},
+    "recommended_stake_pct": 1.0,
+    "status": "RİSK FİLTRESİ (DEĞER YOK)",
+    "reasoning": "Model piyasadan %7.7 daha yüksek ihtimal veriyor. | Dengeli xG profili (Beklenti: 2.54 gol). | Sinyal tamamen modelin bulduğu matematiksel değere (Edge) dayanıyor.",
+    "odds": {
+      "ms1": 1.53,
+      "ms0": 4.6,
+      "ms2": 6.6,
+      "over25": 1.76,
+      "under25": 2.19,
+      "btts_yes": 0,
+      "btts_no": 0
+    },
+    "probs": {
+      "ms1": 64.0,
+      "ms0": 20.4,
+      "ms2": 15.6,
+      "over25": 46.6,
+      "under25": 53.4,
+      "btts_yes": 52.5,
+      "btts_no": 47.5
+    },
+    "xg": {
+      "ev": 1.33,
+      "dep": 1.21,
+      "toplam": 2.54
+    },
+    "sharp": {
+      "ms_sinyal": "DEP",
+      "ms_tier": "NO_SHARP",
+      "ou_sinyal": "YOK",
+      "ou_tier": "NO_SHARP",
+      "btts_sinyal": "YOK",
+      "btts_tier": "NO_SHARP"
+    },
+    "form": {
+      "ev_form": [
+        "D",
+        "W"
+      ],
+      "dep_form": [
+        "L",
+        "L",
+        "L",
+        "L",
+        "L"
+      ]
+    },
+    "opening_odds": {
+      "ms1": 0.0,
+      "ms2": 0.0
+    },
+    "extended_stats": {
+      "ev_standing": {
+        "played": 2,
+        "wins": 1,
+        "draws": 1,
+        "losses": 0,
+        "points": 4,
+        "gf": 5,
+        "ga": 3,
+        "over25": 2,
+        "btts": 2,
+        "lig": "ELC",
+        "recent": [
+          {
+            "date": "2026-08-22",
+            "opponent": "Preston North End",
+            "score": "3-1",
+            "result": "W",
+            "isHome": false
+          },
+          {
+            "date": "2026-08-14",
+            "opponent": "Blackburn Rovers",
+            "score": "2-2",
+            "result": "D",
+            "isHome": true
+          }
+        ]
+      },
+      "dep_standing": {
+        "played": 140,
+        "wins": 42,
+        "draws": 36,
+        "losses": 62,
+        "points": 162,
+        "gf": 147,
+        "ga": 183,
+        "over25": 59,
+        "btts": 62,
+        "lig": "ELC",
+        "recent": [
+          {
+            "date": "2026-08-22",
+            "opponent": "Southampton",
+            "score": "1-3",
+            "result": "L",
+            "isHome": false
+          },
+          {
+            "date": "2026-08-15",
+            "opponent": "Swansea City AFC",
+            "score": "1-2",
+            "result": "L",
+            "isHome": true
+          },
+          {
+            "date": "2026-05-02",
+            "opponent": "Bristol City",
+            "score": "0-2",
+            "result": "L",
+            "isHome": false
+          },
+          {
+            "date": "2026-04-25",
+            "opponent": "Portsmouth",
+            "score": "1-3",
+            "result": "L",
+            "isHome": true
+          },
+          {
+            "date": "2026-04-21",
+            "opponent": "Millwall",
+            "score": "1-3",
+            "result": "L",
+            "isHome": true
+          }
+        ]
+      },
+      "h2h": {
+        "matches": [],
+        "ev_wins": 0,
+        "dep_wins": 0,
+        "draws": 0,
+        "total": 0
+      }
+    }
+  },
+  {
+    "date": "2026-08-29T11:30:00Z",
+    "lig": "ELC",
+    "ev": "Middlesbrough",
+    "dep": "West Bromwich Albion",
+    "selection": "Deplasman Kazanır",
+    "target_odds": 4.91,
+    "model_prob": 28.1,
+    "edge_pct": 37.9,
+    "edge_raw_pct": 37.9,
+    "fake_edge_score": 0.0,
+    "latency_seconds": 0,
+    "selected_bookmaker": "Pinnacle",
+    "execution_quality": {},
+    "recommended_stake_pct": 1.0,
+    "status": "RİSK FİLTRESİ (DEĞER YOK)",
+    "reasoning": "Model piyasadan %7.7 daha yüksek ihtimal veriyor. | Dengeli xG profili (Beklenti: 2.52 gol). | Keskin bahisçiler (Sharp money) bu yönde pozisyon alıyor.",
+    "odds": {
+      "ms1": 1.82,
+      "ms0": 4.0,
+      "ms2": 4.91,
+      "over25": 1.85,
+      "under25": 2.02,
+      "btts_yes": 0,
+      "btts_no": 0
+    },
+    "probs": {
+      "ms1": 46.4,
+      "ms0": 25.5,
+      "ms2": 28.1,
+      "over25": 46.2,
+      "under25": 53.8,
+      "btts_yes": 52.2,
+      "btts_no": 47.8
+    },
+    "xg": {
+      "ev": 1.32,
+      "dep": 1.2,
+      "toplam": 2.52
+    },
+    "sharp": {
+      "ms_sinyal": "EV",
+      "ms_tier": "STRONG",
+      "ou_sinyal": "YOK",
+      "ou_tier": "NO_SHARP",
+      "btts_sinyal": "YOK",
+      "btts_tier": "NO_SHARP"
+    },
+    "form": {
+      "ev_form": [
+        "D",
+        "D",
+        "L",
+        "W",
+        "L"
+      ],
+      "dep_form": [
+        "W",
+        "D",
+        "L",
+        "W",
+        "W"
+      ]
+    },
+    "opening_odds": {
+      "ms1": 0.0,
+      "ms2": 0.0
+    },
+    "extended_stats": {
+      "ev_standing": {
+        "played": 142,
+        "wins": 61,
+        "draws": 34,
+        "losses": 47,
+        "points": 217,
+        "gf": 211,
+        "ga": 170,
+        "over25": 73,
+        "btts": 79,
+        "lig": "ELC",
+        "recent": [
+          {
+            "date": "2026-08-22",
+            "opponent": "Blackburn Rovers",
+            "score": "1-2",
+            "result": "L",
+            "isHome": false
+          },
+          {
+            "date": "2026-08-15",
+            "opponent": "Lincoln City",
+            "score": "2-1",
+            "result": "W",
+            "isHome": true
+          },
+          {
+            "date": "2026-05-12",
+            "opponent": "Southampton",
+            "score": "1-2",
+            "result": "L",
+            "isHome": false
+          },
+          {
+            "date": "2026-05-09",
+            "opponent": "Southampton",
+            "score": "0-0",
+            "result": "D",
+            "isHome": true
+          },
+          {
+            "date": "2026-05-02",
+            "opponent": "Wrexham AFC",
+            "score": "2-2",
+            "result": "D",
+            "isHome": false
+          }
+        ]
+      },
+      "dep_standing": {
+        "played": 142,
+        "wins": 51,
+        "draws": 46,
+        "losses": 45,
+        "points": 199,
+        "gf": 181,
+        "ga": 157,
+        "over25": 63,
+        "btts": 74,
+        "lig": "ELC",
+        "recent": [
+          {
+            "date": "2026-08-23",
+            "opponent": "Burnley",
+            "score": "3-1",
+            "result": "W",
+            "isHome": true
+          },
+          {
+            "date": "2026-08-15",
+            "opponent": "Norwich City",
+            "score": "2-1",
+            "result": "W",
+            "isHome": false
+          },
+          {
+            "date": "2026-05-02",
+            "opponent": "Sheffield Wednesday",
+            "score": "1-2",
+            "result": "L",
+            "isHome": false
+          },
+          {
+            "date": "2026-04-25",
+            "opponent": "Ipswich Town",
+            "score": "0-0",
+            "result": "D",
+            "isHome": true
+          },
+          {
+            "date": "2026-04-21",
+            "opponent": "Watford",
+            "score": "3-0",
+            "result": "W",
+            "isHome": true
+          }
+        ]
+      },
+      "h2h": {
+        "matches": [],
+        "ev_wins": 0,
+        "dep_wins": 0,
+        "draws": 0,
+        "total": 0
+      }
+    }
+  },
+  {
+    "date": "2026-08-29T11:30:00Z",
+    "lig": "ELC",
+    "ev": "Derby County",
+    "dep": "Swansea City",
+    "selection": "Ev Sahibi Kazanır",
+    "target_odds": 2.4,
+    "model_prob": 44.2,
+    "edge_pct": 6.0,
+    "edge_raw_pct": 6.0,
+    "fake_edge_score": 0.0,
+    "latency_seconds": 0,
+    "selected_bookmaker": "Pinnacle",
+    "execution_quality": {},
+    "recommended_stake_pct": 1.0,
+    "status": "RİSK FİLTRESİ (DEĞER YOK)",
+    "reasoning": "Model piyasadan %2.5 daha yüksek ihtimal veriyor. | Dengeli xG profili (Beklenti: 2.57 gol).",
+    "odds": {
+      "ms1": 2.4,
+      "ms0": 3.4,
+      "ms2": 3.35,
+      "over25": 2.16,
+      "under25": 1.75,
+      "btts_yes": 0,
+      "btts_no": 0
+    },
+    "probs": {
+      "ms1": 44.2,
+      "ms0": 25.7,
+      "ms2": 30.1,
+      "over25": 47.5,
+      "under25": 52.5,
+      "btts_yes": 53.3,
+      "btts_no": 46.7
+    },
+    "xg": {
+      "ev": 1.3,
+      "dep": 1.27,
+      "toplam": 2.57
+    },
+    "sharp": {
+      "ms_sinyal": "YOK",
+      "ms_tier": "NO_SHARP",
+      "ou_sinyal": "UNDER",
+      "ou_tier": "WEAK",
+      "btts_sinyal": "YOK",
+      "btts_tier": "NO_SHARP"
+    },
+    "form": {
+      "ev_form": [
+        "L",
+        "W",
+        "L",
+        "L",
+        "D"
+      ],
+      "dep_form": [
+        "W",
+        "D",
+        "W",
+        "W",
+        "D"
+      ]
+    },
+    "opening_odds": {
+      "ms1": 0.0,
+      "ms2": 0.0
+    },
+    "extended_stats": {
+      "ev_standing": {
+        "played": 94,
+        "wins": 33,
+        "draws": 21,
+        "losses": 40,
+        "points": 120,
+        "gf": 118,
+        "ga": 119,
+        "over25": 44,
+        "btts": 53,
+        "lig": "ELC",
+        "recent": [
+          {
+            "date": "2026-08-22",
+            "opponent": "Cardiff City",
+            "score": "2-2",
+            "result": "D",
+            "isHome": true
+          },
+          {
+            "date": "2026-08-15",
+            "opponent": "Charlton Athletic",
+            "score": "1-2",
+            "result": "L",
+            "isHome": false
+          },
+          {
+            "date": "2026-05-02",
+            "opponent": "Sheffield United",
+            "score": "1-2",
+            "result": "L",
+            "isHome": true
+          },
+          {
+            "date": "2026-04-25",
+            "opponent": "Queens Park Rangers",
+            "score": "3-2",
+            "result": "W",
+            "isHome": false
+          },
+          {
+            "date": "2026-04-21",
+            "opponent": "Norwich City",
+            "score": "1-2",
+            "result": "L",
+            "isHome": false
+          }
+        ]
+      },
+      "dep_standing": {
+        "played": 140,
+        "wins": 51,
+        "draws": 33,
+        "losses": 56,
+        "points": 186,
+        "gf": 169,
+        "ga": 181,
+        "over25": 71,
+        "btts": 72,
+        "lig": "ELC",
+        "recent": [
+          {
+            "date": "2026-08-22",
+            "opponent": "Sheffield United",
+            "score": "0-0",
+            "result": "D",
+            "isHome": true
+          },
+          {
+            "date": "2026-08-15",
+            "opponent": "Stoke City",
+            "score": "2-1",
+            "result": "W",
+            "isHome": false
+          },
+          {
+            "date": "2026-05-02",
+            "opponent": "Charlton Athletic",
+            "score": "3-1",
+            "result": "W",
+            "isHome": true
+          },
+          {
+            "date": "2026-04-25",
+            "opponent": "Norwich City",
+            "score": "1-1",
+            "result": "D",
+            "isHome": false
+          },
+          {
+            "date": "2026-04-21",
+            "opponent": "Queens Park Rangers",
+            "score": "2-1",
+            "result": "W",
+            "isHome": false
+          }
+        ]
+      },
+      "h2h": {
+        "matches": [],
+        "ev_wins": 0,
+        "dep_wins": 0,
+        "draws": 0,
+        "total": 0
+      }
+    }
+  },
+  {
     "date": "2026-08-28T19:15:00Z",
     "lig": "PPL",
     "ev": "Rio Ave",
@@ -27,8 +531,8 @@
     },
     "probs": {
       "ms1": 13.2,
-      "ms0": 19.6,
-      "ms2": 67.2,
+      "ms0": 19.5,
+      "ms2": 67.3,
       "over25": 55.2,
       "under25": 44.8,
       "btts_yes": 55.6,
@@ -112,6 +616,182 @@
         ]
       },
       "dep_standing": null,
+      "h2h": {
+        "matches": [],
+        "ev_wins": 0,
+        "dep_wins": 0,
+        "draws": 0,
+        "total": 0
+      }
+    }
+  },
+  {
+    "date": "2026-08-28T19:00:00Z",
+    "lig": "ELC",
+    "ev": "Wrexham AFC",
+    "dep": "Birmingham City",
+    "selection": "Ev Sahibi Kazanır",
+    "target_odds": 2.5,
+    "model_prob": 47.4,
+    "edge_pct": 18.4,
+    "edge_raw_pct": 18.4,
+    "fake_edge_score": 0.0,
+    "latency_seconds": 0,
+    "selected_bookmaker": "Pinnacle",
+    "execution_quality": {},
+    "recommended_stake_pct": 1.0,
+    "status": "RİSK FİLTRESİ (DEĞER YOK)",
+    "reasoning": "Model piyasadan %7.4 daha yüksek ihtimal veriyor. | Dengeli xG profili (Beklenti: 2.63 gol). | Sinyal tamamen modelin bulduğu matematiksel değere (Edge) dayanıyor.",
+    "odds": {
+      "ms1": 2.5,
+      "ms0": 3.5,
+      "ms2": 3.1,
+      "over25": 2.1,
+      "under25": 1.86,
+      "btts_yes": 0,
+      "btts_no": 0
+    },
+    "probs": {
+      "ms1": 47.4,
+      "ms0": 28.3,
+      "ms2": 24.3,
+      "over25": 49.0,
+      "under25": 51.0,
+      "btts_yes": 54.4,
+      "btts_no": 45.6
+    },
+    "xg": {
+      "ev": 1.33,
+      "dep": 1.3,
+      "toplam": 2.63
+    },
+    "sharp": {
+      "ms_sinyal": "YOK",
+      "ms_tier": "NO_SHARP",
+      "ou_sinyal": "YOK",
+      "ou_tier": "NO_SHARP",
+      "btts_sinyal": "YOK",
+      "btts_tier": "NO_SHARP"
+    },
+    "form": {
+      "ev_form": [
+        "W",
+        "L",
+        "D",
+        "D",
+        "D"
+      ],
+      "dep_form": [
+        "W",
+        "W",
+        "D",
+        "D",
+        "D"
+      ]
+    },
+    "opening_odds": {
+      "ms1": 0.0,
+      "ms2": 0.0
+    },
+    "extended_stats": {
+      "ev_standing": {
+        "played": 48,
+        "wins": 19,
+        "draws": 16,
+        "losses": 13,
+        "points": 73,
+        "gf": 71,
+        "ga": 67,
+        "over25": 23,
+        "btts": 32,
+        "lig": "ELC",
+        "recent": [
+          {
+            "date": "2026-08-22",
+            "opponent": "Watford",
+            "score": "1-1",
+            "result": "D",
+            "isHome": true
+          },
+          {
+            "date": "2026-08-17",
+            "opponent": "Cardiff City",
+            "score": "1-1",
+            "result": "D",
+            "isHome": false
+          },
+          {
+            "date": "2026-05-02",
+            "opponent": "Middlesbrough",
+            "score": "2-2",
+            "result": "D",
+            "isHome": true
+          },
+          {
+            "date": "2026-04-26",
+            "opponent": "Coventry City",
+            "score": "1-3",
+            "result": "L",
+            "isHome": false
+          },
+          {
+            "date": "2026-04-21",
+            "opponent": "Oxford United",
+            "score": "1-0",
+            "result": "W",
+            "isHome": false
+          }
+        ]
+      },
+      "dep_standing": {
+        "played": 94,
+        "wins": 30,
+        "draws": 26,
+        "losses": 38,
+        "points": 116,
+        "gf": 109,
+        "ga": 123,
+        "over25": 43,
+        "btts": 50,
+        "lig": "ELC",
+        "recent": [
+          {
+            "date": "2026-08-22",
+            "opponent": "Bristol City",
+            "score": "2-2",
+            "result": "D",
+            "isHome": true
+          },
+          {
+            "date": "2026-08-15",
+            "opponent": "Sheffield United",
+            "score": "0-0",
+            "result": "D",
+            "isHome": false
+          },
+          {
+            "date": "2026-05-02",
+            "opponent": "Portsmouth",
+            "score": "1-1",
+            "result": "D",
+            "isHome": false
+          },
+          {
+            "date": "2026-04-25",
+            "opponent": "Bristol City",
+            "score": "2-1",
+            "result": "W",
+            "isHome": true
+          },
+          {
+            "date": "2026-04-22",
+            "opponent": "Preston North End",
+            "score": "2-1",
+            "result": "W",
+            "isHome": true
+          }
+        ]
+      },
       "h2h": {
         "matches": [],
         "ev_wins": 0,
@@ -284,182 +964,6 @@
             "opponent": "Feyenoord Rotterdam",
             "score": "1-2",
             "result": "L",
-            "isHome": true
-          }
-        ]
-      },
-      "h2h": {
-        "matches": [],
-        "ev_wins": 0,
-        "dep_wins": 0,
-        "draws": 0,
-        "total": 0
-      }
-    }
-  },
-  {
-    "date": "2026-08-28T19:00:00Z",
-    "lig": "ELC",
-    "ev": "Wrexham AFC",
-    "dep": "Birmingham City",
-    "selection": "Ev Sahibi Kazanır",
-    "target_odds": 2.5,
-    "model_prob": 47.4,
-    "edge_pct": 18.6,
-    "edge_raw_pct": 18.6,
-    "fake_edge_score": 0.0,
-    "latency_seconds": 0,
-    "selected_bookmaker": "Pinnacle",
-    "execution_quality": {},
-    "recommended_stake_pct": 1.0,
-    "status": "RİSK FİLTRESİ (DEĞER YOK)",
-    "reasoning": "Model piyasadan %7.4 daha yüksek ihtimal veriyor. | Dengeli xG profili (Beklenti: 2.63 gol). | Sinyal tamamen modelin bulduğu matematiksel değere (Edge) dayanıyor.",
-    "odds": {
-      "ms1": 2.5,
-      "ms0": 3.5,
-      "ms2": 3.05,
-      "over25": 2.1,
-      "under25": 1.84,
-      "btts_yes": 0,
-      "btts_no": 0
-    },
-    "probs": {
-      "ms1": 47.4,
-      "ms0": 28.3,
-      "ms2": 24.2,
-      "over25": 49.0,
-      "under25": 51.0,
-      "btts_yes": 54.4,
-      "btts_no": 45.6
-    },
-    "xg": {
-      "ev": 1.33,
-      "dep": 1.3,
-      "toplam": 2.63
-    },
-    "sharp": {
-      "ms_sinyal": "YOK",
-      "ms_tier": "NO_SHARP",
-      "ou_sinyal": "YOK",
-      "ou_tier": "NO_SHARP",
-      "btts_sinyal": "YOK",
-      "btts_tier": "NO_SHARP"
-    },
-    "form": {
-      "ev_form": [
-        "W",
-        "L",
-        "D",
-        "D",
-        "D"
-      ],
-      "dep_form": [
-        "W",
-        "W",
-        "D",
-        "D",
-        "D"
-      ]
-    },
-    "opening_odds": {
-      "ms1": 0.0,
-      "ms2": 0.0
-    },
-    "extended_stats": {
-      "ev_standing": {
-        "played": 48,
-        "wins": 19,
-        "draws": 16,
-        "losses": 13,
-        "points": 73,
-        "gf": 71,
-        "ga": 67,
-        "over25": 23,
-        "btts": 32,
-        "lig": "ELC",
-        "recent": [
-          {
-            "date": "2026-08-22",
-            "opponent": "Watford",
-            "score": "1-1",
-            "result": "D",
-            "isHome": true
-          },
-          {
-            "date": "2026-08-17",
-            "opponent": "Cardiff City",
-            "score": "1-1",
-            "result": "D",
-            "isHome": false
-          },
-          {
-            "date": "2026-05-02",
-            "opponent": "Middlesbrough",
-            "score": "2-2",
-            "result": "D",
-            "isHome": true
-          },
-          {
-            "date": "2026-04-26",
-            "opponent": "Coventry City",
-            "score": "1-3",
-            "result": "L",
-            "isHome": false
-          },
-          {
-            "date": "2026-04-21",
-            "opponent": "Oxford United",
-            "score": "1-0",
-            "result": "W",
-            "isHome": false
-          }
-        ]
-      },
-      "dep_standing": {
-        "played": 94,
-        "wins": 30,
-        "draws": 26,
-        "losses": 38,
-        "points": 116,
-        "gf": 109,
-        "ga": 123,
-        "over25": 43,
-        "btts": 50,
-        "lig": "ELC",
-        "recent": [
-          {
-            "date": "2026-08-22",
-            "opponent": "Bristol City",
-            "score": "2-2",
-            "result": "D",
-            "isHome": true
-          },
-          {
-            "date": "2026-08-15",
-            "opponent": "Sheffield United",
-            "score": "0-0",
-            "result": "D",
-            "isHome": false
-          },
-          {
-            "date": "2026-05-02",
-            "opponent": "Portsmouth",
-            "score": "1-1",
-            "result": "D",
-            "isHome": false
-          },
-          {
-            "date": "2026-04-25",
-            "opponent": "Bristol City",
-            "score": "2-1",
-            "result": "W",
-            "isHome": true
-          },
-          {
-            "date": "2026-04-22",
-            "opponent": "Preston North End",
-            "score": "2-1",
-            "result": "W",
             "isHome": true
           }
         ]
