@@ -576,13 +576,15 @@ def run_pipeline(mock_mode=False):
                 continue
 
             market_p = 1.0 / oran if oran > 0 else 0
-            edge = (p_model - market_p) * oran
+            prob_edge = p_model - market_p
+            ev = (p_model * oran) - 1.0
+            edge = prob_edge  # True probability edge
 
             # Display için en iyi seçeneği her zaman kaydet
-            _d_score = (edge * 100.0) * confidence
+            _d_score = (ev * 100.0) * confidence
             if _d_score > display_score:
                 display_score = _d_score
-                display_option = (isim, oran, p_model, edge, aktif_tier)
+                display_option = (isim, oran, p_model, prob_edge, ev, aktif_tier)
 
             # --- SIKI KURUMSAL FİLTRELER (Sadece Bahis İçin) ---
             if oran < 1.30 or oran > 5.00:
@@ -590,25 +592,23 @@ def run_pipeline(mock_mode=False):
             if p_model < 0.30:
                 red_counter["model_p_dusuk"] = red_counter.get("model_p_dusuk", 0) + 1
                 continue
+            if ev <= 0.0:
+                red_counter["negative_ev"] = red_counter.get("negative_ev", 0) + 1
+                continue
             
-            # 🔧 DÜZELTİLDİ: Hard-coded 0.15 → config'den GLOBAL_MAX_EDGE * 1.5
-            # Eski 0.15 ile main.py'de bir ön filtre uygulanıyordu ama
-            # edge_validator.py GLOBAL_MAX_EDGE=0.08 ile çelişiyordu.
             try:
                 from config.settings import GLOBAL_MAX_EDGE as _GMAX
             except ImportError:
-                _GMAX = 0.12
-            if edge > _GMAX * 1.5:  # 0.12 * 1.5 = 0.18 — gerçek anlamda imkansız edge
+                _GMAX = 0.08
+            if edge > _GMAX * 1.5:
                 red_counter["edge_too_high"] = red_counter.get("edge_too_high", 0) + 1
                 continue
 
-            # 🆕 YENİ: Sharp çelişki filtresi
-            # Sharp para EV/DEP'e akarırken model beraberlik seçiyorsa bu bahis güvenilmez
+            # Sharp çelişki filtresi
             sharp_sinyal = c_pred.get("sharp_sinyal", c_pred.get("sharp_ms_sinyal", "YOK"))
             if isim == "Beraberlik" and sharp_sinyal in ("EV", "DEP"):
                 red_counter["sharp_celisik"] = red_counter.get("sharp_celisik", 0) + 1
                 continue
-            # Sharp EV varken DEP seçme, Sharp DEP varken EV seçme
             if isim == "Ev Sahibi Kazanır" and sharp_sinyal == "DEP" and aktif_tier in ("ELITE", "STRONG"):
                 red_counter["sharp_celisik"] = red_counter.get("sharp_celisik", 0) + 1
                 continue
@@ -624,27 +624,25 @@ def run_pipeline(mock_mode=False):
                 red_counter["edge_yetersiz"] += 1
                 continue
 
-            # 🔧 DÜZELTİLDİ: Önce "Alt/Yok" için extra edge buffer 
-            # Sharp sinyal yoksa 2.5 Alt ve KG Yok için ek %4 buffer iste
-            # (Bilinen Poisson bias: Under edge'leri genellikle yanlara çeker)
             if aktif_tier == "NO_SHARP" and isim in ("2.5 Alt", "KG Yok"):
                 if edge < min_edge + 0.04:
                     red_counter["nogoal_nosharpe"] = red_counter.get("nogoal_nosharpe", 0) + 1
                     continue
 
             _tb = {"ELITE": 1.40, "STRONG": 1.20, "WEAK": 1.05, "NO_SHARP": 1.00}.get(aktif_tier, 1.0)
-            bet_score = (edge * 100.0) * confidence * _tb
+            bet_score = (ev * 100.0) * confidence * _tb
 
             if bet_score > best_score:
                 best_score  = bet_score
-                best_option = (isim, oran, p_model, edge, aktif_tier)
+                best_option = (isim, oran, p_model, prob_edge, ev, aktif_tier)
 
         # Dashboard UI için Display Bet
         if display_option:
-            d_isim, d_oran, d_p_model, d_edge, d_aktif_tier = display_option
+            d_isim, d_oran, d_p_model, d_prob_edge, d_ev, d_aktif_tier = display_option
             d_obj = c_pred.copy()
             d_obj["tahmin"]       = d_isim
-            d_obj["edge"]         = round(d_edge, 4)
+            d_obj["edge"]         = round(d_prob_edge, 4)
+            d_obj["ev"]           = round(d_ev, 4)
             d_obj["oran"]         = d_oran
             d_obj["p_secim"]      = round(d_p_model, 4)
             d_obj["p_shrunk"]     = round(d_p_model, 4)

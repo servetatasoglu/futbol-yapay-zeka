@@ -152,6 +152,53 @@ def elo_hesapla(veri: dict) -> dict:
     return sonuc
 
 
+def elo_point_in_time_hesapla(veri: dict) -> dict:
+    """
+    Kronolojik olarak her maç öncesindeki (t < match_date) ELO değerlerini döndürür.
+    Future data leakage'ı %100 engeller.
+    
+    Returns:
+        {match_id: {"ev_elo": float, "dep_elo": float, "ev_mac": int, "dep_mac": int}}
+    """
+    elo_dict     = defaultdict(lambda: float(ELO_BASLANGIC))
+    mac_sayilari = defaultdict(int)
+    
+    tum_maclar = []
+    for lig_kodu, maclar in veri.items():
+        for mac in maclar:
+            m = dict(mac)
+            m["_lig_kodu"] = lig_kodu
+            tum_maclar.append(m)
+
+    tum_maclar.sort(key=lambda m: m.get("utcDate", ""))
+    
+    pit_records = {}
+    for mac in tum_maclar:
+        try:
+            m_id    = str(mac.get("id") or f"{mac.get('homeTeam',{}).get('name')}_{mac.get('awayTeam',{}).get('name')}_{mac.get('utcDate')}")
+            ev      = mac["homeTeam"]["name"]
+            dep     = mac["awayTeam"]["name"]
+            ev_gol  = mac["score"]["fullTime"]["home"]
+            dep_gol = mac["score"]["fullTime"]["away"]
+            lig     = mac["_lig_kodu"]
+        except (KeyError, TypeError):
+            continue
+
+        # Maç ÖNCESİNDEKİ ELO durumunu kaydet (Zero-Leakage)
+        pit_records[m_id] = {
+            "ev_elo": elo_dict[ev],
+            "dep_elo": elo_dict[dep],
+            "ev_mac": mac_sayilari[ev],
+            "dep_mac": mac_sayilari[dep]
+        }
+
+        # Maç BİTTİĞİNDE ELO'yu güncelle
+        if ev_gol is not None and dep_gol is not None:
+            elo_guncelle(elo_dict, lig, ev, dep, int(ev_gol), int(dep_gol), mac_sayilari)
+
+    return pit_records
+
+
 def elo_olasilik(ev_elo: float, dep_elo: float) -> dict:
     """
     İki takımın ELO değerlerinden maç sonucu olasılıklarını üretir.

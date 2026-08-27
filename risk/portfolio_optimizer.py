@@ -65,11 +65,10 @@ def _korelasyon_carpan(bets: list) -> float:
 
 def _portfolio_ev(bets: list) -> float:
     """
-    Portfolio-level expected value (sum of EV, penalized by correlation).
+    Portfolio-level expected value (sum of stake_size * EV, penalized by correlation).
     """
     total_ev = sum(
-        _ev_hesapla(b.get("olasilik", 0.5), b.get("oran", 2.0))
-        * b.get("efektif_edge", 0.03)
+        _ev_hesapla(b.get("olasilik", 0.5), b.get("oran", 2.0)) * b.get("size", b.get("kelly_size", 0.01))
         for b in bets
     )
     corr_pen = _korelasyon_carpan(bets)

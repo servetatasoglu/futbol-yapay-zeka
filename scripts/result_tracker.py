@@ -74,11 +74,11 @@ def _fetch_results_football_data(tarih: str) -> dict:
         url = (f"https://api.football-data.org/v4/competitions/{lig}/matches"
                f"?status=FINISHED&dateFrom={tarih}&dateTo={tarih}")
         try:
-            r = requests.get(url, headers=headers, timeout=15, verify=False)
+            r = requests.get(url, headers=headers, timeout=15)
             if r.status_code == 429:
                 logger.warning("Rate limit — 60s bekleniyor...")
                 import time; time.sleep(60)
-                r = requests.get(url, headers=headers, timeout=15, verify=False)
+                r = requests.get(url, headers=headers, timeout=15)
             if r.status_code != 200:
                 continue
             data = r.json()

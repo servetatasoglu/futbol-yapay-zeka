@@ -74,8 +74,8 @@ def _ev_hesapla(model_p: float, alinan_oran: float) -> float:
 def _oran_hareketi(acilis_oran: float, kapanis_oran: float) -> float:
     """
     Oran hareketi = (kapanış - açılış) / açılış
-    Pozitif: oran yükseldi (lehimize hareket)
-    Negatif: oran düştü (aleyhimize hareket = sharp bet karşı tarafta)
+    Negatif hareket (oranın düşmesi): Seçim lehimize kısaldı / piyasa destekledi (Pozitif CLV).
+    Pozitif hareket (oranın artması): Seçim aleyhimize uzadı / piyasa karşı çıktı (Negatif CLV).
     """
     if acilis_oran <= 1 or kapanis_oran <= 1:
         return 0.0

@@ -245,86 +245,130 @@ FEATURE_ISIMLERI = [
 ]
 
 
-def _veri_hazirla(ham_veri, istatistikler, elo_sonuclari):
-    from features.h2h_model import h2h_analiz
+def _veri_hazirla(ham_veri, istatistikler=None, elo_sonuclari=None):
+    """
+    Kronolojik ve Point-in-Time (Sıfır Gelecek Sızıntısı) Feature Hazırlığı.
+    Her maç için yalnızca o maç öncesinde (t < match_date) mevcut olan verileri kullanır.
+    """
+    from features.rolling_features import rolling_features_point_in_time
+    from features.elo import elo_point_in_time_hesapla
     from data.xg_proxy import xg_yukle, xg_ara
-    from features.rolling_features import rolling_features_uret
 
-    print("  📊 Rolling feature'lar hesaplanıyor (ev/dep ayrımı, SoS, xG trend)...")
-    rolling_db = rolling_features_uret(ham_veri, n_son=5)
-    print(f"  ✅ {len(rolling_db)} takım için rolling istatistik hazır")
-
+    print("  📊 Point-in-Time Feature üretimi başlatılıyor (Sıfır Sızıntı)...")
+    
+    # 1. Point-in-Time ELO ve Rolling Features hesapla
+    pit_elo = elo_point_in_time_hesapla(ham_veri)
+    pit_rolling = rolling_features_point_in_time(ham_veri, n_son=5)
     xg_db = xg_yukle()
+
+    # Tüm maçları birleştir ve KRONOLOJİK sırala
+    tum_maclar = []
+    for lig_kodu, maclar in ham_veri.items():
+        for mac in maclar:
+            m = dict(mac)
+            m["_lig_kodu"] = lig_kodu
+            tum_maclar.append(m)
+
+    tum_maclar.sort(key=lambda m: m.get("utcDate", ""))
+
     X, y = [], []
     atlalanlar = 0
 
-    for lig_kodu, maclar in ham_veri.items():
-        maclar_sirali = sorted(maclar, key=lambda m: m.get("utcDate", ""))
-        kumulatif     = defaultdict(list)
+    # Takım bazlı kümülatif geçmiş (gol, maç sayısı, h2h)
+    kumulatif_maclar = defaultdict(list)
+    kumulatif_h2h = defaultdict(list)
 
-        for mac in maclar_sirali:
-            try:
-                ev      = mac["homeTeam"]["name"]
-                dep     = mac["awayTeam"]["name"]
-                ev_gol  = int(mac["score"]["fullTime"]["home"])
-                dep_gol = int(mac["score"]["fullTime"]["away"])
-            except (KeyError, TypeError, ValueError):
-                atlalanlar += 1
-                continue
+    for mac in tum_maclar:
+        try:
+            m_id    = str(mac.get("id") or f"{mac.get('homeTeam',{}).get('name')}_{mac.get('awayTeam',{}).get('name')}_{mac.get('utcDate')}")
+            ev      = mac["homeTeam"]["name"]
+            dep     = mac["awayTeam"]["name"]
+            ev_gol  = int(mac["score"]["fullTime"]["home"])
+            dep_gol = int(mac["score"]["fullTime"]["away"])
+            lig_kodu = mac["_lig_kodu"]
+        except (KeyError, TypeError, ValueError):
+            atlalanlar += 1
+            continue
 
-            if ev_gol > dep_gol:    etiket = 2
-            elif ev_gol == dep_gol: etiket = 1
-            else:                   etiket = 0
+        if ev_gol > dep_gol:    etiket = 2
+        elif ev_gol == dep_gol: etiket = 1
+        else:                   etiket = 0
 
-            ev_ist  = istatistikler.get(ev,  {})
-            dep_ist = istatistikler.get(dep, {})
-            if not ev_ist or not dep_ist:
-                atlalanlar += 1
-                continue
-            if ev_ist.get("mac_sayisi", 0) < 5 or dep_ist.get("mac_sayisi", 0) < 5:
-                atlalanlar += 1
-                continue
+        # Takımın bu maçtan önceki maç sayısı kontrolü (min 3 maç)
+        ev_gecmis = kumulatif_maclar[ev]
+        dep_gecmis = kumulatif_maclar[dep]
+        if len(ev_gecmis) < 3 or len(dep_gecmis) < 3:
+            # Geçmiş maç verisini kümülatife ekle ve bir sonraki maça geç
+            kumulatif_maclar[ev].append({"attik": ev_gol, "yedik": dep_gol, "konum": "ev"})
+            kumulatif_maclar[dep].append({"attik": dep_gol, "yedik": ev_gol, "konum": "dep"})
+            h2h_key = f"{ev}|{dep}"
+            kumulatif_h2h[h2h_key].append((ev_gol, dep_gol))
+            atlalanlar += 1
+            continue
 
-            ev_elo  = elo_sonuclari.get(ev,  {}).get("elo", 1500)
-            dep_elo = elo_sonuclari.get(dep, {}).get("elo", 1500)
+        # Point-in-time ELO
+        elo_info = pit_elo.get(m_id, {"ev_elo": 1500.0, "dep_elo": 1500.0, "ev_mac": len(ev_gecmis), "dep_mac": len(dep_gecmis)})
+        ev_elo = elo_info["ev_elo"]
+        dep_elo = elo_info["dep_elo"]
 
-            ev_form  = _basit_form(kumulatif[ev][-10:])
-            dep_form = _basit_form(kumulatif[dep][-10:])
+        # Point-in-time Form
+        ev_form = _basit_form(ev_gecmis[-10:])
+        dep_form = _basit_form(dep_gecmis[-10:])
 
-            # Rolling feature'ları o ana kadar birikmiş geçmişten al
-            ev_rolling  = rolling_db.get(ev,  {})
-            dep_rolling = rolling_db.get(dep, {})
+        # Point-in-time Rolling Features
+        rol_info = pit_rolling.get(m_id, {"ev_rolling": {}, "dep_rolling": {}})
+        ev_rolling = rol_info["ev_rolling"]
+        dep_rolling = rol_info["dep_rolling"]
 
-            mac_h2h = {"h2h_ev_lambda": 1.0, "h2h_dep_lambda": 1.0, "h2h_mac": 0}
-            try:
-                h2h_s   = h2h_analiz(ev, dep, istatistikler, ham_veri)
-                mac_h2h = {
-                    "h2h_ev_lambda":  h2h_s.get("ev_lambda_d",  1.0),
-                    "h2h_dep_lambda": h2h_s.get("dep_lambda_d", 1.0),
-                    "h2h_mac":        h2h_s.get("mac_sayisi",   0),
-                }
-            except Exception:
-                pass
+        # Point-in-time dinamik istatistikler (Yalnızca geçmiş maçlardan)
+        ev_ist = {
+            "mac_sayisi": len(ev_gecmis),
+            "hucum_genel": sum(m["attik"] for m in ev_gecmis) / len(ev_gecmis),
+            "savunma_genel": sum(m["yedik"] for m in ev_gecmis) / len(ev_gecmis),
+            "ev_gol_ort": sum(m["attik"] for m in ev_gecmis if m["konum"] == "ev") / max(1, sum(1 for m in ev_gecmis if m["konum"] == "ev")),
+            "ev_yenilen_ort": sum(m["yedik"] for m in ev_gecmis if m["konum"] == "ev") / max(1, sum(1 for m in ev_gecmis if m["konum"] == "ev")),
+        }
+        dep_ist = {
+            "mac_sayisi": len(dep_gecmis),
+            "hucum_genel": sum(m["attik"] for m in dep_gecmis) / len(dep_gecmis),
+            "savunma_genel": sum(m["yedik"] for m in dep_gecmis) / len(dep_gecmis),
+            "dep_gol_ort": sum(m["attik"] for m in dep_gecmis if m["konum"] == "dep") / max(1, sum(1 for m in dep_gecmis if m["konum"] == "dep")),
+            "dep_yenilen_ort": sum(m["yedik"] for m in dep_gecmis if m["konum"] == "dep") / max(1, sum(1 for m in dep_gecmis if m["konum"] == "dep")),
+        }
 
-            try:
-                ev_xg_veri  = xg_ara(ev,  xg_db)
-                dep_xg_veri = xg_ara(dep, xg_db)
-                feat = _feature_uret(
-                    mac_h2h, ev_ist, dep_ist,
-                    ev_elo, dep_elo,
-                    ev_form, dep_form, lig_kodu,
-                    ev_xg_veri, dep_xg_veri,
-                    ev_rolling=ev_rolling, dep_rolling=dep_rolling
-                )
-                X.append(feat)
-                y.append(etiket)
-            except Exception:
-                atlalanlar += 1
-                continue
+        # Point-in-time H2H
+        h2h_key = f"{ev}|{dep}"
+        h2h_matches = kumulatif_h2h.get(h2h_key, [])
+        if h2h_matches:
+            mac_h2h = {
+                "h2h_ev_lambda": sum(h[0] for h in h2h_matches) / len(h2h_matches),
+                "h2h_dep_lambda": sum(h[1] for h in h2h_matches) / len(h2h_matches),
+                "h2h_mac": len(h2h_matches)
+            }
+        else:
+            mac_h2h = {"h2h_ev_lambda": 1.35, "h2h_dep_lambda": 1.35, "h2h_mac": 0}
 
-            kumulatif[ev].append({"attik": ev_gol,  "yedik": dep_gol})
-            kumulatif[dep].append({"attik": dep_gol, "yedik": ev_gol})
+        try:
+            ev_xg_veri = xg_ara(ev, xg_db)
+            dep_xg_veri = xg_ara(dep, xg_db)
+            feat = _feature_uret(
+                mac_h2h, ev_ist, dep_ist,
+                ev_elo, dep_elo,
+                ev_form, dep_form, lig_kodu,
+                ev_xg_veri, dep_xg_veri,
+                ev_rolling=ev_rolling, dep_rolling=dep_rolling
+            )
+            X.append(feat)
+            y.append(etiket)
+        except Exception:
+            atlalanlar += 1
 
+        # Maç bittiğinde kümülatife ekle
+        kumulatif_maclar[ev].append({"attik": ev_gol, "yedik": dep_gol, "konum": "ev"})
+        kumulatif_maclar[dep].append({"attik": dep_gol, "yedik": ev_gol, "konum": "dep"})
+        kumulatif_h2h[h2h_key].append((ev_gol, dep_gol))
+
+    print(f"  ✅ Toplam {len(X)} maç için sızıntısız kronolojik dataset oluşturuldu ({atlalanlar} yetersiz maç atlandı).")
     return np.array(X, dtype=np.float32), np.array(y, dtype=np.int32), atlalanlar
 
 

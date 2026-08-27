@@ -3,7 +3,7 @@ import time
 import requests
 import sqlite3
 import logging
-from datetime import datetime
+from datetime import datetime, timezone
 
 from dotenv import load_dotenv
 
@@ -26,6 +26,64 @@ def init_closing_odds_schema():
         pass # Columns already exist
     finally:
         conn.close()
+
+class LiveRadarEngine:
+    """
+    Live Radar Engine for querying real-time market lines.
+    Integrates with live odds feeds and returns standardized match payloads.
+    """
+    def __init__(self):
+        self.api_key = os.environ.get("ODDS_API_KEY")
+
+    def fetch_live_matches(self, preferred_bookmaker: str = "pinnacle") -> list:
+        """
+        Fetches live scheduled matches and formats them for the quantitative engine.
+        Returns empty list if no real data is available.
+        """
+        try:
+            from data.odds import canli_oranlar_cek
+            raw_odds = canli_oranlar_cek(gun=3, zorla_yenile=False)
+        except Exception as e:
+            logger.error(f"Error calling canli_oranlar_cek: {e}")
+            raw_odds = []
+
+        formatted = []
+        for m in raw_odds:
+            ev = m.get("ev")
+            dep = m.get("dep")
+            if not ev or not dep:
+                continue
+
+            ev_oran = float(m.get("ev_oran", 0.0) or 0.0)
+            ber_oran = float(m.get("ber_oran", 0.0) or 0.0)
+            dep_oran = float(m.get("dep_oran", 0.0) or 0.0)
+
+            if ev_oran <= 1.0 or dep_oran <= 1.0:
+                continue
+
+            formatted.append({
+                "ev": ev,
+                "dep": dep,
+                "date": m.get("mac_tarihi", datetime.now(timezone.utc).isoformat()),
+                "lig": m.get("lig", "?"),
+                "lig_isim": m.get("lig_isim", "Bilinmiyor"),
+                "sharp_tier": m.get("sharp_tier", "NO_SHARP"),
+                "pinnacle_var": m.get("pinnacle_var", False),
+                "kitap_sayisi": m.get("kitap_sayisi", 1),
+                "odds_current": {
+                    "Ev Sahibi Kazanır": ev_oran,
+                    "Beraberlik": ber_oran,
+                    "Deplasman Kazanır": dep_oran,
+                    "2.5 Üst": float(m.get("over25_oran", 0.0) or 0.0),
+                    "2.5 Alt": float(m.get("under25_oran", 0.0) or 0.0),
+                    "KG Var": float(m.get("btts_yes_oran", 0.0) or 0.0),
+                    "KG Yok": float(m.get("btts_no_oran", 0.0) or 0.0),
+                },
+                "kitap_oranlari": {
+                    preferred_bookmaker: (ev_oran, ber_oran, dep_oran)
+                }
+            })
+        return formatted
 
 def fetch_live_odds():
     """ 
@@ -50,8 +108,6 @@ def fetch_live_odds():
         parsed_odds = {}
         for match in data:
             home = match.get("home_team")
-            # We map it to something the system can search (the API gives text names)
-            # Find the Pinnacle bookmaker if exists, else take first
             bookmakers = match.get("bookmakers", [])
             if not bookmakers: continue
             
@@ -94,7 +150,6 @@ def update_closing_odds():
     
     for home_name, odds in odds_data.items():
         home_id = resolve_team_id(home_name)
-        # Sadece o gün olan / son 1 gün olan maçı update et.
         c.execute('''
             UPDATE matches 
             SET closing_odds_home = ?, closing_odds_draw = ?, closing_odds_away = ?
@@ -111,3 +166,4 @@ if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO)
     logger.info("Polling latest closing lines...")
     update_closing_odds()
+

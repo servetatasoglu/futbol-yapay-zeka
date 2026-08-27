@@ -151,10 +151,14 @@ def poisson_tahmin(ev_istatistik, dep_istatistik, lig_ortalamasi, lig_kodu,
         ev_kazan   /= toplam
         beraberlik /= toplam
         dep_kazan  /= toplam
+        bts_p      /= toplam
+        over15_p   /= toplam
+        over25_p   /= toplam
+        over35_p   /= toplam
 
     sirali_skorlar   = sorted(skor_matrisi.items(), key=lambda x: x[1], reverse=True)
     en_olasi_skorlar = [
-        {"skor": f"{hg}-{dg}", "olasilik": round(p, 4)}
+        {"skor": f"{hg}-{dg}", "olasilik": round(p / (toplam if toplam > 0 else 1.0), 4)}
         for (hg, dg), p in sirali_skorlar[:5]
     ]
 

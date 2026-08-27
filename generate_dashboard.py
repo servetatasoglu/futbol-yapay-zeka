@@ -114,48 +114,75 @@ def fetch_match_news(home, away):
 
 def fetch_upcoming_matches():
     """
-    Football-Data API'den gelecek 10 gündeki maçları çeker.
+    Football-Data API + The-Odds-API (odds_cache.json) kaynaklarını birleştirerek
+    gelecek tüm maçları çeker. Süper Lig, Ligue 1, Eredivisie vb. tüm aktif ligleri kapsar.
     VERİ SIZINTISI KORUMASI: Sadece fikstür bilgisi döner, skor alanları None olur.
     """
-    api_key = _get_api_key("football_data")
-    if not api_key:
-        print("  ⚠️ FOOTBALL_DATA_API_KEY bulunamadı, gelecek maçlar çekilemedi.")
-        return []
-
-    now = datetime.now(timezone.utc)
-    headers = {"X-Auth-Token": api_key}
     upcoming = []
-    
+    seen = set()
+
+    # 1. Football-Data API (varsa)
+    api_key = _get_api_key("football_data")
+    if api_key:
+        now = datetime.now(timezone.utc)
+        headers = {"X-Auth-Token": api_key}
+        try:
+            r = requests.get("https://api.football-data.org/v4/matches", headers=headers, params={
+                "dateFrom": now.strftime("%Y-%m-%d"),
+                "dateTo": (now + timedelta(days=10)).strftime("%Y-%m-%d"),
+            }, timeout=10)
+            if r.ok:
+                for m in r.json().get("matches", []):
+                    comp_code = m.get("competition", {}).get("code", "")
+                    if comp_code in LIG_KODLARI:
+                        status = m.get("status", "")
+                        if status in ("TIMED", "SCHEDULED", "IN_PLAY", "PAUSED", "LIVE"):
+                            home = clean_team_name(m.get("homeTeam", {}).get("name", ""))
+                            away = clean_team_name(m.get("awayTeam", {}).get("name", ""))
+                            date_str = m.get("utcDate", "")
+                            key = f"{home.lower()}|{away.lower()}|{str(date_str)[:10]}"
+                            if key not in seen and home and away:
+                                seen.add(key)
+                                upcoming.append({
+                                    "home": home,
+                                    "away": away,
+                                    "date": date_str,
+                                    "lig": comp_code,
+                                    "lig_isim": LIG_ISIMLERI.get(comp_code, comp_code),
+                                    "status": status,
+                                    "score": {"fullTime": {"home": None, "away": None}},
+                                })
+        except Exception as e:
+            print(f"  ⚠️ Football-Data API upcoming fetch error: {e}")
+
+    # 2. The-Odds-API / odds_cache (Tam kapsama)
     try:
-        r = requests.get("https://api.football-data.org/v4/matches", headers=headers, params={
-            "dateFrom": now.strftime("%Y-%m-%d"),
-            "dateTo": (now + timedelta(days=10)).strftime("%Y-%m-%d"),
-        }, timeout=15)
-        
-        if r.ok:
-            for m in r.json().get("matches", []):
-                comp_code = m.get("competition", {}).get("code", "")
-                if comp_code in LIG_KODLARI:
-                    status = m.get("status", "")
-                    # VERİ SIZINTISI KORUMASI: Sadece TIMED/SCHEDULED/LIVE maçları al
-                    if status in ("TIMED", "SCHEDULED", "IN_PLAY", "PAUSED", "LIVE"):
-                        upcoming.append({
-                            "home": clean_team_name(m.get("homeTeam", {}).get("name", "")),
-                            "away": clean_team_name(m.get("awayTeam", {}).get("name", "")),
-                            "date": m.get("utcDate", ""),
-                            "lig": comp_code,
-                            "lig_isim": LIG_ISIMLERI.get(comp_code, comp_code),
-                            "status": status,
-                            # SKOR ASLA YOK - gelecek maç
-                            "score": {"fullTime": {"home": None, "away": None}},
-                        })
-            print(f"  ✅ Gelecek maçlar: {len(upcoming)} maç çekildi (Football-Data API)")
-        else:
-            print(f"  ⚠️ Football-Data API hatası (upcoming): {r.status_code}")
+        from data.odds import canli_oranlar_cek
+        odds_list = canli_oranlar_cek()
+        for om in odds_list:
+            home = clean_team_name(om.get("ev", ""))
+            away = clean_team_name(om.get("dep", ""))
+            mac_tarihi = om.get("mac_tarihi", "")
+            date_part = str(mac_tarihi)[:10] if mac_tarihi else datetime.now(timezone.utc).strftime("%Y-%m-%d")
+            key = f"{home.lower()}|{away.lower()}|{date_part}"
+            if key not in seen and home and away:
+                seen.add(key)
+                lig_kodu = om.get("lig", "TSL")
+                upcoming.append({
+                    "home": home,
+                    "away": away,
+                    "date": mac_tarihi if mac_tarihi else datetime.now(timezone.utc).isoformat(),
+                    "lig": lig_kodu,
+                    "lig_isim": om.get("lig_isim", LIG_ISIMLERI.get(lig_kodu, lig_kodu)),
+                    "status": "TIMED",
+                    "score": {"fullTime": {"home": None, "away": None}},
+                })
     except Exception as e:
-        print(f"  ⚠️ Gelecek maç çekme hatası: {e}")
-    
+        print(f"  ⚠️ Odds upcoming fetch error: {e}")
+
+    print(f"  ✅ Gelecek maçlar: Toplam {len(upcoming)} gerçek maç bültende hazırlandı.")
     return upcoming
+
 
 
 def fetch_recent_finished():
@@ -342,6 +369,102 @@ def clean_team_name(name):
         name = name.replace(w, "")
     return name.strip()
 
+import unicodedata, re
+
+def _norm_team(s):
+    if not s: return ""
+    s = unicodedata.normalize('NFKD', str(s)).encode('ASCII', 'ignore').decode('utf-8').lower()
+    s = re.sub(r'\b(fc|cf|cd|rc|ud|ca|sv|vfl|vfb|tsv|spvgg|fk|sk|sc|afc|1\.|1|1901|1846|sad|ac|as|ss|us)\b', '', s)
+    return re.sub(r'[^a-z0-9]', '', s).strip()
+
+_TEAM_ALIASES = {
+    "rennes": "rennais",
+    "stade rennais": "rennais",
+    "basaksehir": "istanbul basaksehir",
+    "az alkmaar": "az",
+    "heidenheim": "1 fc heidenheim",
+    "cottbus": "energie cottbus",
+    "psg": "paris saint germain",
+    "paris sg": "paris saint germain",
+}
+
+def get_team_standings(standings_dict, team_name):
+    """
+    Takım ismini standings (puan durumu) sözlüğünde esnek (normalized/fuzzy) arayarak bulur.
+    """
+    if not team_name or not standings_dict:
+        return {"gf": 25, "ga": 20, "played": 18, "wins": 6, "draws": 5, "losses": 7, "points": 23}
+    
+    # 1. Birebir eşleşme
+    if team_name in standings_dict:
+        return standings_dict[team_name]
+    
+    # 2. Temizlenmiş isim eşleşmesi
+    clean_n = clean_team_name(team_name)
+    if clean_n in standings_dict:
+        return standings_dict[clean_n]
+        
+    # 3. Normalize edilmiş & takma isim eşleşmesi
+    tn_norm = _norm_team(team_name)
+    tn_alias = _TEAM_ALIASES.get(team_name.lower(), tn_norm)
+    
+    for k, v in standings_dict.items():
+        k_norm = _norm_team(k)
+        if tn_norm and k_norm:
+            if tn_norm == k_norm or tn_alias == k_norm:
+                return v
+            if len(tn_norm) >= 4 and len(k_norm) >= 4:
+                if tn_norm in k_norm or k_norm in tn_norm:
+                    return v
+                    
+    # Varsayılan (bulunamayan takımlar için)
+    return {"gf": 25, "ga": 20, "played": 18, "wins": 6, "draws": 5, "losses": 7, "points": 23}
+
+
+def _compute_poisson_probs(lambda_home: float, lambda_away: float) -> dict:
+    """
+    Beklenen gol (xG) değerlerine göre iki değişkenli (bivariate) Poisson dağılımı ile
+    1X2, 2.5 Üst/Alt ve KG Var/Yok matematiksel olasılıklarını hesaplar.
+    """
+    lam_h = max(0.2, float(lambda_home))
+    lam_a = max(0.2, float(lambda_away))
+    
+    p_h = [(lam_h ** k * math.exp(-lam_h)) / math.factorial(k) for k in range(11)]
+    p_a = [(lam_a ** k * math.exp(-lam_a)) / math.factorial(k) for k in range(11)]
+    
+    prob_home, prob_draw, prob_away, prob_over25 = 0.0, 0.0, 0.0, 0.0
+    for h in range(11):
+        for a in range(11):
+            p = p_h[h] * p_a[a]
+            if h > a: prob_home += p
+            elif h == a: prob_draw += p
+            else: prob_away += p
+            if (h + a) > 2.5: prob_over25 += p
+            
+    prob_btts_yes = (1.0 - math.exp(-lam_h)) * (1.0 - math.exp(-lam_a))
+    
+    p_ms1 = round(min(85.0, max(15.0, prob_home * 100)), 1)
+    p_ms0 = round(min(50.0, max(10.0, prob_draw * 100)), 1)
+    p_ms2 = round(min(85.0, max(15.0, prob_away * 100)), 1)
+    
+    tot = p_ms1 + p_ms0 + p_ms2
+    if tot > 0:
+        p_ms1 = round(p_ms1 / tot * 100, 1)
+        p_ms0 = round(p_ms0 / tot * 100, 1)
+        p_ms2 = round(100.0 - p_ms1 - p_ms0, 1)
+        
+    p_o25 = round(min(88.0, max(20.0, prob_over25 * 100)), 1)
+    p_u25 = round(100.0 - p_o25, 1)
+    p_btts_y = round(min(85.0, max(20.0, prob_btts_yes * 100)), 1)
+    p_btts_n = round(100.0 - p_btts_y, 1)
+    
+    return {
+        "ms1": p_ms1, "ms0": p_ms0, "ms2": p_ms2,
+        "over25": p_o25, "under25": p_u25,
+        "btts_yes": p_btts_y, "btts_no": p_btts_n
+    }
+
+
 def load_odds_hareket():
     path = os.path.join(BASE, "data", "odds_hareket.json")
     try:
@@ -422,12 +545,14 @@ def load_extended_stats():
         with open(path, "r", encoding="utf-8") as f:
             maclar = json.load(f)
             
-        # Güncel sezon filtresi: 2025-08-01 sonrası maçlar
-        CURRENT_SEASON_START = "2025-08-01"
+        # Güncel sezon filtresi: 2026-08-01 (güncel) ve 2025-08-01 (yedek)
+        CURRENT_SEASON_START = "2026-08-01"
+        RECENT_SEASON_START = "2025-08-01"
         
         standings = defaultdict(lambda: {"played": 0, "wins": 0, "draws": 0, "losses": 0, "points": 0, "gf": 0, "ga": 0, "over25": 0, "btts": 0, "lig": ""})
         # Lig bazlı standings (puan durumu tablosu için)
-        league_standings = defaultdict(lambda: defaultdict(lambda: {"played": 0, "wins": 0, "draws": 0, "losses": 0, "points": 0, "gf": 0, "ga": 0, "over25": 0, "btts": 0}))
+        league_standings_current = defaultdict(lambda: defaultdict(lambda: {"played": 0, "wins": 0, "draws": 0, "losses": 0, "points": 0, "gf": 0, "ga": 0, "over25": 0, "btts": 0}))
+        league_standings_recent = defaultdict(lambda: defaultdict(lambda: {"played": 0, "wins": 0, "draws": 0, "losses": 0, "points": 0, "gf": 0, "ga": 0, "over25": 0, "btts": 0}))
         team_recent_matches = defaultdict(list)
         all_matches = []
         
@@ -499,10 +624,15 @@ def load_extended_stats():
                         standings[home]["draws"] += 1
                         standings[away]["draws"] += 1
                     
-                    # Lig bazlı GÜNCEL SEZON standings (puan durumu tablosu için)
+                    # Lig bazlı standings biriktirme
                     match_date = str(m.get("utcDate", ""))[:10]
+                    target_dicts = []
                     if match_date >= CURRENT_SEASON_START:
-                        ls = league_standings[lig]
+                        target_dicts.append(league_standings_current[lig])
+                    if match_date >= RECENT_SEASON_START:
+                        target_dicts.append(league_standings_recent[lig])
+
+                    for ls in target_dicts:
                         ls[home]["played"] += 1
                         ls[home]["gf"] += hg
                         ls[home]["ga"] += ag
@@ -565,27 +695,27 @@ def load_extended_stats():
             hg = full_score.get("home")
             ag = full_score.get("away")
 
-            # Poisson beklenti tahmini (takım istatistiklerine dayalı)
-            st_home = standings.get(home, {"gf": 25, "ga": 20, "played": 18})
-            st_away = standings.get(away, {"gf": 20, "ga": 25, "played": 18})
+            # Poisson beklenti tahmini (takım istatistiklerine dayalı esnek arama)
+            st_home = get_team_standings(standings, home)
+            st_away = get_team_standings(standings, away)
             
-            p_home_gf = (st_home["gf"] / max(1, st_home["played"])) if st_home["played"] > 0 else 1.4
-            p_away_ga = (st_away["ga"] / max(1, st_away["played"])) if st_away["played"] > 0 else 1.3
-            p_away_gf = (st_away["gf"] / max(1, st_away["played"])) if st_away["played"] > 0 else 1.1
-            p_home_ga = (st_home["ga"] / max(1, st_home["played"])) if st_home["played"] > 0 else 1.2
+            p_home_gf = (st_home["gf"] / max(1, st_home["played"])) if st_home.get("played", 0) > 0 else 1.4
+            p_away_ga = (st_away["ga"] / max(1, st_away["played"])) if st_away.get("played", 0) > 0 else 1.3
+            p_away_gf = (st_away["gf"] / max(1, st_away["played"])) if st_away.get("played", 0) > 0 else 1.1
+            p_home_ga = (st_home["ga"] / max(1, st_home["played"])) if st_home.get("played", 0) > 0 else 1.2
 
             lambda_home = round(max(0.6, (p_home_gf + p_away_ga) / 2.0 * 1.1), 2)
             lambda_away = round(max(0.4, (p_away_gf + p_home_ga) / 2.0 * 0.9), 2)
 
-            # Basit Poisson dağılım hesabı
-            prob_home = min(75.0, max(20.0, round((lambda_home / (lambda_home + lambda_away)) * 100 * 0.75 + 15, 1)))
-            prob_away = min(75.0, max(15.0, round((lambda_away / (lambda_home + lambda_away)) * 100 * 0.75 + 10, 1)))
-            prob_draw = round(max(10.0, 100.0 - prob_home - prob_away), 1)
-
-            prob_over25 = round(min(80.0, max(30.0, (lambda_home + lambda_away) * 22.0)), 1)
-            prob_under25 = round(100.0 - prob_over25, 1)
-            prob_btts_yes = round(min(78.0, max(32.0, (lambda_home * lambda_away) * 35.0 + 20)), 1)
-            prob_btts_no = round(100.0 - prob_btts_yes, 1)
+            # Gerçek İki Değişkenli (Bivariate) Poisson Dağılım Hesabı
+            poisson_res = _compute_poisson_probs(lambda_home, lambda_away)
+            prob_home = poisson_res["ms1"]
+            prob_draw = poisson_res["ms0"]
+            prob_away = poisson_res["ms2"]
+            prob_over25 = poisson_res["over25"]
+            prob_under25 = poisson_res["under25"]
+            prob_btts_yes = poisson_res["btts_yes"]
+            prob_btts_no = poisson_res["btts_no"]
 
             # En yüksek tahmin
             if prob_home >= prob_draw and prob_home >= prob_away:
@@ -626,6 +756,14 @@ def load_extended_stats():
                 isabet_str = "🎯 Model Tam İsabet Sağladı (Doğru Tahmin)" if is_win else "❌ Model Yanıldı (Hatalı Tahmin)"
                 ai_commentary += f"<br><br>🏁 <b>Maç Sonu Sonuç İncelemesi:</b> Karşılaşma <b>{gercek_skor_str}</b> skoru ile tamamlandı. Yapay zeka tahmini (<b>{selection}</b>) {isabet_str}."
 
+            # Oranları olasılıklardan hesapla (eğer 0.0 ise)
+            odds_ms1 = round(100.0 / max(prob_home, 1.0), 2)
+            odds_ms0 = round(100.0 / max(prob_draw, 1.0), 2)
+            odds_ms2 = round(100.0 / max(prob_away, 1.0), 2)
+            odds_o25 = round(100.0 / max(prob_over25, 1.0), 2)
+            odds_u25 = round(100.0 / max(prob_under25, 1.0), 2)
+            odds_btts_y = round(100.0 / max(prob_btts_yes, 1.0), 2)
+            odds_btts_n = round(100.0 / max(prob_btts_no, 1.0), 2)
 
             processed_matches.append({
                 "ev": home,
@@ -647,16 +785,16 @@ def load_extended_stats():
                 "is_win": is_win,
                 "verification_badge": "🎯 İSABETLİ TAHMİN" if is_win else ("❌ MODEL YANILDI" if is_win is False else "⏳ BEKLİYOR"),
                 "edge_pct": edge_val,
-                "target_odds": round(100.0 / max(prob_home, 1.0), 2) if pred_type=="HOME" else round(100.0 / max(prob_away, 1.0), 2),
+                "target_odds": odds_ms1 if pred_type=="HOME" else (odds_ms2 if pred_type=="AWAY" else odds_ms0),
                 "probs": {
                     "ms1": prob_home, "ms0": prob_draw, "ms2": prob_away,
                     "over25": prob_over25, "under25": prob_under25,
                     "btts_yes": prob_btts_yes, "btts_no": prob_btts_no
                 },
                 "odds": {
-                    "ms1": round(100.0 / max(prob_home, 1.0), 2),
-                    "ms0": round(100.0 / max(prob_draw, 1.0), 2),
-                    "ms2": round(100.0 / max(prob_away, 1.0), 2)
+                    "ms1": odds_ms1, "ms0": odds_ms0, "ms2": odds_ms2,
+                    "over25": odds_o25, "under25": odds_u25,
+                    "btts_yes": odds_btts_y, "btts_no": odds_btts_n
                 },
                 "xg": {
                     "ev": lambda_home, "dep": lambda_away, "toplam": xg_total
@@ -668,10 +806,15 @@ def load_extended_stats():
                 }
             })
 
-        # league_standings'i serializable dict'e dönüştür
+        # league_standings'i serializable dict'e dönüştür (her lig için tam puan durumu garantisi)
         league_standings_clean = {}
-        for lig_kodu, teams in league_standings.items():
-            league_standings_clean[lig_kodu] = {team: dict(stats) for team, stats in teams.items()}
+        for lig_kodu in ["TSL", "FL1", "PPL", "BL2", "ELC", "DED"]:
+            curr = league_standings_current.get(lig_kodu, {})
+            if len(curr) >= 4:
+                league_standings_clean[lig_kodu] = {team: dict(stats) for team, stats in curr.items()}
+            else:
+                rec = league_standings_recent.get(lig_kodu, {})
+                league_standings_clean[lig_kodu] = {team: dict(stats) for team, stats in rec.items()}
 
         return dict(standings), dict(team_recent_matches), processed_matches, league_standings_clean
 
@@ -1286,6 +1429,7 @@ def compute_ai_learning_metrics(finished_matches):
         "attribution_league": attr_league,
         "attribution_odds": attr_odds,
         "bets": bet_table,
+        "live_signals": live_signals if live_signals else [],
         "kupon": kupon_onerisi(live_signals if live_signals else []),
         "finished_matches": finished_matches,
         "ai_metrics": compute_ai_learning_metrics(finished_matches)
@@ -1312,6 +1456,7 @@ def _write_empty_dashboard(live_signals=None, finished_matches=None):
         "attribution_odds": {"<1.50": {"pnl": 0, "count": 0}, "1.50-2.00": {"pnl": 0, "count": 0},
                              "2.00-3.00": {"pnl": 0, "count": 0}, ">3.00": {"pnl": 0, "count": 0}},
         "bets": [],
+        "live_signals": live_signals if live_signals else [],
         "standings": dict(standings),
         "league_standings": league_st,
         "total_matches_count": len(all_matches),
@@ -1416,30 +1561,27 @@ if __name__ == "__main__":
         date_str = m["date"]
         
         # İstatistik bazlı tahmin (VERİ SIZINTISI KORUMASI: skor bilgisi yok!)
-        st_home = STANDINGS_CACHE.get(home, {"gf": 25, "ga": 20, "played": 18})
-        st_away = STANDINGS_CACHE.get(away, {"gf": 20, "ga": 25, "played": 18})
+        st_home = get_team_standings(STANDINGS_CACHE, home)
+        st_away = get_team_standings(STANDINGS_CACHE, away)
         
-        if not isinstance(st_home, dict) or "gf" not in st_home:
-            st_home = {"gf": 25, "ga": 20, "played": 18}
-        if not isinstance(st_away, dict) or "gf" not in st_away:
-            st_away = {"gf": 20, "ga": 25, "played": 18}
-        
-        p_home_gf = (st_home["gf"] / max(1, st_home["played"])) if st_home["played"] > 0 else 1.4
-        p_away_ga = (st_away["ga"] / max(1, st_away["played"])) if st_away["played"] > 0 else 1.3
-        p_away_gf = (st_away["gf"] / max(1, st_away["played"])) if st_away["played"] > 0 else 1.1
-        p_home_ga = (st_home["ga"] / max(1, st_home["played"])) if st_home["played"] > 0 else 1.2
+        p_home_gf = (st_home["gf"] / max(1, st_home["played"])) if st_home.get("played", 0) > 0 else 1.4
+        p_away_ga = (st_away["ga"] / max(1, st_away["played"])) if st_away.get("played", 0) > 0 else 1.3
+        p_away_gf = (st_away["gf"] / max(1, st_away["played"])) if st_away.get("played", 0) > 0 else 1.1
+        p_home_ga = (st_home["ga"] / max(1, st_home["played"])) if st_home.get("played", 0) > 0 else 1.2
         
         lambda_home = round(max(0.6, (p_home_gf + p_away_ga) / 2.0 * 1.1), 2)
         lambda_away = round(max(0.4, (p_away_gf + p_home_ga) / 2.0 * 0.9), 2)
         xg_total = round(lambda_home + lambda_away, 2)
         
-        prob_home = min(75.0, max(20.0, round((lambda_home / (lambda_home + lambda_away)) * 100 * 0.75 + 15, 1)))
-        prob_away = min(75.0, max(15.0, round((lambda_away / (lambda_home + lambda_away)) * 100 * 0.75 + 10, 1)))
-        prob_draw = round(max(10.0, 100.0 - prob_home - prob_away), 1)
-        prob_over25 = round(min(80.0, max(30.0, (lambda_home + lambda_away) * 22.0)), 1)
-        prob_under25 = round(100.0 - prob_over25, 1)
-        prob_btts_yes = round(min(78.0, max(32.0, (lambda_home * lambda_away) * 35.0 + 20)), 1)
-        prob_btts_no = round(100.0 - prob_btts_yes, 1)
+        # Gerçek İki Değişkenli (Bivariate) Poisson Dağılım Hesabı
+        poisson_res = _compute_poisson_probs(lambda_home, lambda_away)
+        prob_home = poisson_res["ms1"]
+        prob_draw = poisson_res["ms0"]
+        prob_away = poisson_res["ms2"]
+        prob_over25 = poisson_res["over25"]
+        prob_under25 = poisson_res["under25"]
+        prob_btts_yes = poisson_res["btts_yes"]
+        prob_btts_no = poisson_res["btts_no"]
         
         # Canlı oranları eşleştir
         live = _match_odds(home, away, odds_map)
@@ -1519,14 +1661,20 @@ if __name__ == "__main__":
             f"{kelly_note}"
         )
         
+        # Oranları tamamla (piyasa oranı yoksa adil oran hesabı yap ki 'Oran: -' yazmasın)
+        o25_val = (live["over25"] if live and live.get("over25", 0) > 1.0 else round(100.0 / max(prob_over25, 1.0), 2))
+        u25_val = (live["under25"] if live and live.get("under25", 0) > 1.0 else round(100.0 / max(prob_under25, 1.0), 2))
+        btts_y_val = (live["btts_yes"] if live and live.get("btts_yes", 0) > 1.0 else round(100.0 / max(prob_btts_yes, 1.0), 2))
+        btts_n_val = (live["btts_no"] if live and live.get("btts_no", 0) > 1.0 else round(100.0 / max(prob_btts_no, 1.0), 2))
+
         upcoming_signals.append({
             "date": date_str,
             "lig": lig_isim,
             "ev": home,
             "dep": away,
             "selection": selection,
-            "target_odds": odds_ms1 if selection == "Ev Sahibi Kazanır" else odds_ms2,
-            "model_prob": prob_home if selection == "Ev Sahibi Kazanır" else prob_away,
+            "target_odds": odds_ms1 if selection == "Ev Sahibi Kazanır" else (odds_ms2 if selection == "Deplasman Kazanır" else odds_ms0),
+            "model_prob": prob_home if selection == "Ev Sahibi Kazanır" else (prob_away if selection == "Deplasman Kazanır" else prob_draw),
             "edge_pct": edge_val,
             "edge_raw_pct": edge_val,
             "status": "YAKLAŞAN MAÇ",
@@ -1536,8 +1684,8 @@ if __name__ == "__main__":
             "verification_badge": "⏳ OYNANACAK",
             "odds": {
                 "ms1": odds_ms1, "ms0": odds_ms0, "ms2": odds_ms2,
-                "over25": live["over25"] if live else 0, "under25": live["under25"] if live else 0,
-                "btts_yes": live["btts_yes"] if live else 0, "btts_no": live["btts_no"] if live else 0
+                "over25": o25_val, "under25": u25_val,
+                "btts_yes": btts_y_val, "btts_no": btts_n_val
             },
             "probs": {
                 "ms1": prob_home, "ms0": prob_draw, "ms2": prob_away,
@@ -1559,8 +1707,8 @@ if __name__ == "__main__":
                 "ms2": live.get("ilk_dep_oran", 0) if live else 0
             },
             "extended_stats": {
-                "ev_standing": get_standing(home),
-                "dep_standing": get_standing(away),
+                "ev_standing": get_team_standings(STANDINGS_CACHE, home),
+                "dep_standing": get_team_standings(STANDINGS_CACHE, away),
                 "h2h": get_h2h(home, away)
             },
             "news": fetch_match_news(home, away)
@@ -1581,29 +1729,26 @@ if __name__ == "__main__":
         hg = m.get("hg")
         ag = m.get("ag")
         
-        st_home = STANDINGS_CACHE.get(home, {"gf": 25, "ga": 20, "played": 18})
-        st_away = STANDINGS_CACHE.get(away, {"gf": 20, "ga": 25, "played": 18})
-        if not isinstance(st_home, dict) or "gf" not in st_home:
-            st_home = {"gf": 25, "ga": 20, "played": 18}
-        if not isinstance(st_away, dict) or "gf" not in st_away:
-            st_away = {"gf": 20, "ga": 25, "played": 18}
+        st_home = get_team_standings(STANDINGS_CACHE, home)
+        st_away = get_team_standings(STANDINGS_CACHE, away)
             
-        p_home_gf = (st_home["gf"] / max(1, st_home["played"])) if st_home["played"] > 0 else 1.4
-        p_away_ga = (st_away["ga"] / max(1, st_away["played"])) if st_away["played"] > 0 else 1.3
-        p_away_gf = (st_away["gf"] / max(1, st_away["played"])) if st_away["played"] > 0 else 1.1
-        p_home_ga = (st_home["ga"] / max(1, st_home["played"])) if st_home["played"] > 0 else 1.2
+        p_home_gf = (st_home["gf"] / max(1, st_home["played"])) if st_home.get("played", 0) > 0 else 1.4
+        p_away_ga = (st_away["ga"] / max(1, st_away["played"])) if st_away.get("played", 0) > 0 else 1.3
+        p_away_gf = (st_away["gf"] / max(1, st_away["played"])) if st_away.get("played", 0) > 0 else 1.1
+        p_home_ga = (st_home["ga"] / max(1, st_home["played"])) if st_home.get("played", 0) > 0 else 1.2
         
         lambda_home = round(max(0.6, (p_home_gf + p_away_ga) / 2.0 * 1.1), 2)
         lambda_away = round(max(0.4, (p_away_gf + p_home_ga) / 2.0 * 0.9), 2)
         xg_total = round(lambda_home + lambda_away, 2)
         
-        prob_home = min(75.0, max(20.0, round((lambda_home / (lambda_home + lambda_away)) * 100 * 0.75 + 15, 1)))
-        prob_away = min(75.0, max(15.0, round((lambda_away / (lambda_home + lambda_away)) * 100 * 0.75 + 10, 1)))
-        prob_draw = round(max(10.0, 100.0 - prob_home - prob_away), 1)
-        prob_over25 = round(min(80.0, max(30.0, (lambda_home + lambda_away) * 22.0)), 1)
-        prob_under25 = round(100.0 - prob_over25, 1)
-        prob_btts_yes = round(min(78.0, max(32.0, (lambda_home * lambda_away) * 35.0 + 20)), 1)
-        prob_btts_no = round(100.0 - prob_btts_yes, 1)
+        poisson_res = _compute_poisson_probs(lambda_home, lambda_away)
+        prob_home = poisson_res["ms1"]
+        prob_draw = poisson_res["ms0"]
+        prob_away = poisson_res["ms2"]
+        prob_over25 = poisson_res["over25"]
+        prob_under25 = poisson_res["under25"]
+        prob_btts_yes = poisson_res["btts_yes"]
+        prob_btts_no = poisson_res["btts_no"]
         
         if prob_home >= prob_draw and prob_home >= prob_away:
             selection = "Ev Sahibi Kazanır"
@@ -1636,6 +1781,14 @@ if __name__ == "__main__":
             isabet = "🎯 Model Tam İsabet Sağladı" if is_win else "❌ Model Yanıldı"
             ai_commentary += f"<br><br>🏁 <b>Maç Sonu:</b> <b>{gercek_skor_str}</b> skoru ile tamamlandı. ({isabet})"
         
+        odds_ms1 = round(100.0 / max(prob_home, 1.0), 2)
+        odds_ms0 = round(100.0 / max(prob_draw, 1.0), 2)
+        odds_ms2 = round(100.0 / max(prob_away, 1.0), 2)
+        odds_o25 = round(100.0 / max(prob_over25, 1.0), 2)
+        odds_u25 = round(100.0 / max(prob_under25, 1.0), 2)
+        odds_btts_y = round(100.0 / max(prob_btts_yes, 1.0), 2)
+        odds_btts_n = round(100.0 / max(prob_btts_no, 1.0), 2)
+
         recent_processed.append({
             "ev": home, "dep": away, "home": home, "away": away,
             "lig": m["lig_isim"], "lig_kodu": m["lig"],
@@ -1647,9 +1800,9 @@ if __name__ == "__main__":
             "is_win": is_win,
             "verification_badge": "🎯 İSABETLİ TAHMİN" if is_win else ("❌ MODEL YANILDI" if is_win is False else "⏳ BEKLİYOR"),
             "edge_pct": edge_val,
-            "target_odds": round(100.0 / max(prob_home, 1.0), 2),
+            "target_odds": odds_ms1 if pred_type=="HOME" else (odds_ms2 if pred_type=="AWAY" else odds_ms0),
             "probs": {"ms1": prob_home, "ms0": prob_draw, "ms2": prob_away, "over25": prob_over25, "under25": prob_under25, "btts_yes": prob_btts_yes, "btts_no": prob_btts_no},
-            "odds": {"ms1": round(100.0/max(prob_home,1),2), "ms0": round(100.0/max(prob_draw,1),2), "ms2": round(100.0/max(prob_away,1),2)},
+            "odds": {"ms1": odds_ms1, "ms0": odds_ms0, "ms2": odds_ms2, "over25": odds_o25, "under25": odds_u25, "btts_yes": odds_btts_y, "btts_no": odds_btts_n},
             "xg": {"ev": lambda_home, "dep": lambda_away, "toplam": xg_total},
             "sharp": {"ms_sinyal": "YOK", "ms_tier": "NO_SHARP"},
             "form": {"ev_form": get_form(TEAM_FORM_CACHE, home), "dep_form": get_form(TEAM_FORM_CACHE, away)},
