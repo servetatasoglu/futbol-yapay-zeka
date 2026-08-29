@@ -86,8 +86,33 @@ class IsotonicCalibrator:
 # Singleton instance
 calibrator_engine = IsotonicCalibrator()
 
-def apply_probability_pipeline(home_prob: float, draw_prob: float, away_prob: float) -> tuple:
+def apply_probability_pipeline(*args, **kwargs) -> dict:
     """
     Public API to calibrate probabilities. Ensures probabilities map accurately to historical results.
+    Accepts:
+      - (home_prob, draw_prob, away_prob)
+      - ([home_prob, draw_prob, away_prob])
+      - raw_probs=np.ndarray
     """
-    return calibrator_engine.predict_proba(home_prob, draw_prob, away_prob)
+    if "raw_probs" in kwargs:
+        p = kwargs["raw_probs"]
+        h, d, a = p[0], p[1], p[2]
+    elif len(args) == 1:
+        p = args[0]
+        if hasattr(p, '__len__') and len(p) == 3:
+            h, d, a = p[0], p[1], p[2]
+        else:
+            h, d, a = p, 0.28, 1.0 - p - 0.28
+    elif len(args) == 3:
+        h, d, a = args[0], args[1], args[2]
+    else:
+        h, d, a = 0.33, 0.34, 0.33
+
+    cal_h, cal_d, cal_a = calibrator_engine.predict_proba(float(h), float(d), float(a))
+    probs_arr = np.array([cal_h, cal_d, cal_a], dtype=np.float64)
+    return {
+        "probs": probs_arr,
+        "calibrated_tuple": (cal_h, cal_d, cal_a),
+        "calibration_used": calibrator_engine.is_fitted
+    }
+

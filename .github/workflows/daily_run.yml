@@ -1,45 +1,51 @@
-name: 🤖 Otomatik Futbol Analiz Botu
+name: 🤖 Production Futbol AI & Value Betting Pipeline
 
 on:
   schedule:
-    # Her gün sabah 09:00 UTC (Türkiye saatiyle 12:00) çalışır
+    # Her gün sabah 09:00 UTC (Türkiye 12:00)
     - cron: '0 9 * * *'
-    # Akşam 17:00 UTC (Türkiye 20:00) — ikinci tarama
+    # Akşam 17:00 UTC (Türkiye 20:00)
     - cron: '0 17 * * *'
-  workflow_dispatch: # GitHub üzerinden manuel tıklayarak çalıştırma butonu ekler
+  workflow_dispatch:
 
 permissions:
   contents: write
 
 jobs:
-  run-bot:
-    runs-on: ubuntu-latest # GitHub'ın ücretsiz Linux sunucusu
+  run-pipeline:
+    runs-on: ubuntu-latest
     env:
       FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
     steps:
-    - name: 📥 Kodları Github'dan Çek
+    - name: 📥 Kodları Checkout Et
       uses: actions/checkout@v4
 
-    - name: 🐍 Python Kurulumu
+    - name: 🐍 Python 3.11 Kurulumu
       uses: actions/setup-python@v5
       with:
-        python-version: '3.11' 
-        cache: 'pip' # Kütüphaneleri hızlı yüklemek için önbellek
+        python-version: '3.11'
+        cache: 'pip'
 
-    - name: 📦 Gereksinimleri (Kütüphaneleri) Yükle
+    - name: 📦 Bağımlılıkları Yükle
       run: |
         python -m pip install --upgrade pip
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+        pip install pytest
 
-    - name: 🔍 Sonuç Takibi (Önceki bahislerin sonuçlarını güncelle)
+    - name: 🧪 Kod Doğrulama & Test Suite
+      run: |
+        python -m compileall -q .
+        pytest -v tests/
+
+    - name: 🔍 Sonuç Takibi & Settlement
       env:
         FOOTBALL_DATA_API_KEY: ${{ secrets.FOOTBALL_DATA_API_KEY }}
         API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
       run: |
-        python scripts/result_tracker.py || echo "Result tracker bypass."
+        python scripts/result_tracker.py
 
-    - name: 🚀 Ana Pipeline Çalıştır
+    - name: 🚀 Ana Tahmin Motoru (Ensemble ML & Zero Leakage)
       env:
         FOOTBALL_DATA_API_KEY: ${{ secrets.FOOTBALL_DATA_API_KEY }}
         ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
@@ -50,25 +56,26 @@ jobs:
       run: |
         python main.py
 
-    - name: 📩 Telegram Mesajları Gönder
+    - name: 📩 Telegram Bildirimleri Gönder
       env:
         TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
         TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
       run: |
         python scripts/telegram_sender.py
 
-    - name: 📊 Performans Raporu Üret
+    - name: 📊 Performans & CLV Raporu
       run: |
-        python scripts/performance_report.py || echo "Report bypass."
+        python scripts/performance_report.py
 
-    - name: Run Dashboard Generator
+    - name: 📈 Dashboard HTML Üret
       run: |
-        python generate_report.py || echo "Dashboard bypass passed."
+        python generate_dashboard.py
         
-    - name: Commit and Push Results
+    - name: 💾 Sonuçları Commit ve Push Et
       run: |
-        git config --global user.name "AI Tahmin Bot"
-        git config --global user.email "bot@claod-futbol.ai"
-        git add logs/ data/clv_bet_log.json data/performance_report.json dashboard.html live_signals.json || true
-        git commit -m "🤖 Hafıza Güncellendi: AI Model ve Bankroll Logları" || echo "Yeni veri yok"
+        git config --global user.name "QuantBet AI Engine"
+        git config --global user.email "bot@quantbet.ai"
+        git add logs/ data/clv_bet_log.json data/performance_report.json data/football_advanced.db dashboard.html live_signals.json || true
+        git commit -m "🤖 [Pipeline Update] Model Logs, Settled Bets & Dashboard [skip ci]" || echo "Değişiklik yok"
         git push
+

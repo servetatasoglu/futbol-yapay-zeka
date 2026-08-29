@@ -33,7 +33,7 @@ SIGNALS_PATH = os.path.join(BASE_DIR, "live_signals.json")
 # ═══════════════════════════════════════════════════════
 
 MIN_EDGE = 0.0          # Edge > 0 olmalı
-MIN_CONFIDENCE = 20.0   # Confidence > 20
+MIN_CONFIDENCE = 0.20   # Confidence > 0.20 (20%)
 MAX_MESSAGE_LEN = 4000  # Telegram sınırı
 
 
@@ -43,6 +43,9 @@ def _confidence_filter(bet: dict) -> bool:
     if edge <= MIN_EDGE:
         return False
     confidence = bet.get("confidence", 0)
+    # Normalize confidence to [0.0, 1.0] scale
+    if confidence > 1.0:
+        confidence /= 100.0
     if confidence < MIN_CONFIDENCE:
         return False
     # Veri kalitesi

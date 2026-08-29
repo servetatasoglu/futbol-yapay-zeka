@@ -868,182 +868,8 @@ def _betexplorer_oranlar(gun: int, hareket_db: dict) -> list:
 #     (ELO + Poisson + Form hibrit — daha güvenilir tahmini oran)
 # ══════════════════════════════════════════════════════════════
 
-def _gelismis_elo_oran(ev_adi: str, dep_adi: str, elo_sonuclari: dict,
-                       istatistikler: dict, lig_ortalamalari: dict,
-                       lig_kodu: str) -> dict:
-    """
-    ELO + gol ortalaması + form birleşik model.
-    Tek ELO'ya göre çok daha gerçekçi oran üretir.
-    """
-    import math
-
-    ev_elo  = elo_sonuclari.get(ev_adi,  {}).get("elo", 1500)
-    dep_elo = elo_sonuclari.get(dep_adi, {}).get("elo", 1500)
-    fark = ev_elo - dep_elo + 65
-    ev_beklenti_elo  = 1 / (1 + 10 ** (-fark / 400))
-    dep_beklenti_elo = 1 - ev_beklenti_elo
-
-    ev_p_tahmin  = ev_beklenti_elo
-    dep_p_tahmin = dep_beklenti_elo
-    ber_p_tahmin = 0.26
-
-    ev_ist  = istatistikler.get(ev_adi, {})
-    dep_ist = istatistikler.get(dep_adi, {})
-
-    if ev_ist and dep_ist:
-        lig_ort     = lig_ortalamalari.get(lig_kodu, {})
-        lig_gol_ort = lig_ort.get("gol_ort", 1.4)
-
-        ev_hucum    = ev_ist.get("ev_gol_ort",    lig_gol_ort)
-        ev_savunma  = ev_ist.get("ev_yenilen_ort", lig_gol_ort)
-        dep_hucum   = dep_ist.get("dep_gol_ort",  lig_gol_ort)
-        dep_savunma = dep_ist.get("dep_yenilen_ort", lig_gol_ort)
-
-        lambda_ev  = ev_hucum  * dep_savunma / max(lig_gol_ort, 0.01)
-        lambda_dep = dep_hucum * ev_savunma  / max(lig_gol_ort, 0.01)
-
-        def poisson_p(lam, k):
-            return (lam**k * math.exp(-lam)) / math.factorial(k)
-
-        ev_kazanir = dep_kazanir = berabere = 0.0
-        for i in range(8):
-            for j in range(8):
-                p = poisson_p(lambda_ev, i) * poisson_p(lambda_dep, j)
-                if i > j:
-                    ev_kazanir += p
-                elif i < j:
-                    dep_kazanir += p
-                else:
-                    berabere += p
-
-        kalan = 1 - ev_kazanir - dep_kazanir - berabere
-        ev_kazanir  += kalan * 0.33
-        dep_kazanir += kalan * 0.33
-        berabere    += kalan * 0.34
-
-        ev_p_tahmin  = 0.5 * ev_beklenti_elo  + 0.5 * ev_kazanir
-        dep_p_tahmin = 0.5 * dep_beklenti_elo + 0.5 * dep_kazanir
-        ber_p_tahmin = max(0.10, min(0.38, berabere))
-
-    toplam = ev_p_tahmin + ber_p_tahmin + dep_p_tahmin
-    ev_p  = ev_p_tahmin  / toplam
-    ber_p = ber_p_tahmin / toplam
-    dep_p = dep_p_tahmin / toplam
-
-    marj = 1.05
-    return {
-        "ev_oran":     round(marj / ev_p,  2),
-        "ber_oran":    round(marj / ber_p, 2),
-        "dep_oran":    round(marj / dep_p, 2),
-        "fair_ev":     round(ev_p,  4),
-        "fair_ber":    round(ber_p, 4),
-        "fair_dep":    round(dep_p, 4),
-        "over_round":  round(marj,  4),
-        "kitap_marji": round((marj - 1) * 100, 2),
-    }
-
-
-def _football_data_yaklaşan_maclar(gun: int = 7) -> list:
-    if not FOOTBALL_DATA_API_KEY or FOOTBALL_DATA_API_KEY.startswith("BURAYA"):
-        return []
-
-    headers   = {"X-Auth-Token": FOOTBALL_DATA_API_KEY}
-    simdi     = datetime.now(timezone.utc)
-    date_from = simdi.strftime("%Y-%m-%d")
-    date_to   = (simdi + timedelta(days=gun)).strftime("%Y-%m-%d")
-
-    elo_sonuclari    = {}
-    istatistikler    = {}
-    lig_ortalamalari = {}
-    try:
-        from features.elo       import elo_hesapla
-        from features.team_stats import istatistik_hesapla, lig_ortalamasi_hesapla
-        from data.matches        import veri_yukle
-        ham_veri         = veri_yukle()
-        elo_sonuclari    = elo_hesapla(ham_veri)
-        istatistikler    = istatistik_hesapla()
-        lig_ortalamalari = lig_ortalamasi_hesapla(istatistikler)
-    except Exception:
-        pass
-
-    hareket_db = _hareket_yukle()
-    tum_maclar = []
-
-    for lig_kodu, bilgi in LIGLER.items():
-        if not bilgi.get("football_data", True):
-            continue
-        url = (
-            f"https://api.football-data.org/v4/competitions/{lig_kodu}/matches"
-            f"?status=SCHEDULED&dateFrom={date_from}&dateTo={date_to}"
-        )
-        try:
-            with warnings.catch_warnings():
-                warnings.simplefilter("ignore")
-                r = requests.get(url, headers=headers, verify=False, timeout=15)
-        except Exception:
-            continue
-        if r.status_code != 200:
-            continue
-        try:
-            maclar = r.json().get("matches", [])
-        except Exception:
-            continue
-
-        lig_mac = 0
-        for mac in maclar:
-            try:
-                ev_adi  = mac["homeTeam"]["name"]
-                dep_adi = mac["awayTeam"]["name"]
-                tarih   = mac.get("utcDate", "")
-            except (KeyError, TypeError):
-                continue
-
-            oran = _gelismis_elo_oran(
-                ev_adi, dep_adi,
-                elo_sonuclari, istatistikler,
-                lig_ortalamalari, lig_kodu
-            )
-
-            tum_maclar.append({
-                "ev": ev_adi, "dep": dep_adi,
-                "lig": lig_kodu, "lig_isim": bilgi["isim"],
-                "mac_tarihi": tarih,
-                "sharp": False, "kitap_sayisi": 0, "kitap_fark": 0,
-                "pinnacle_var": False, "sharp_ev_value": False, "sharp_dep_value": False,
-                "ev_hareket": 0, "dep_hareket": 0,
-                "sharp_sinyal": "YOK", "hareket_gucu": 0,
-                "ilk_ev_oran": oran["ev_oran"], "ilk_dep_oran": oran["dep_oran"],
-                **oran,
-            })
-            lig_mac += 1
-
-        if lig_mac > 0:
-            print(f"  📅 [Football-data] {bilgi['isim']}: {lig_mac} yaklaşan maç (hibrit model)")
-
-    return tum_maclar
-
-
 # ══════════════════════════════════════════════════════════════
-#  DEMO ORANLAR (son çare)
-# ══════════════════════════════════════════════════════════════
-
-def _demo_oranlar():
-    yarinki_tarih = (datetime.now(timezone.utc) + timedelta(days=1)).strftime("%Y-%m-%dT20:00:00Z")
-    return [
-        {"ev": "Arsenal FC", "dep": "Chelsea FC", "lig": "PL", "lig_isim": "Premier League",
-         "ev_oran": 2.10, "ber_oran": 3.40, "dep_oran": 3.20, "over_round": 1.04,
-         "kitap_marji": 4.0, "fair_ev": 0.46, "fair_ber": 0.28, "fair_dep": 0.30,
-         "mac_tarihi": yarinki_tarih, "sharp": False, "kitap_sayisi": 1, "kitap_fark": 0,
-         "pinnacle_var": False, "sharp_ev_value": False, "sharp_dep_value": False,
-         "ev_hareket": 0, "dep_hareket": 0, "sharp_sinyal": "YOK", "hareket_gucu": 0,
-         "ilk_ev_oran": 2.10, "ilk_dep_oran": 3.20},
-    ]
-
-
-
-# ══════════════════════════════════════════════════════════════
-# ══════════════════════════════════════════════════════════════
-#  6. SPORTMONKS (Yeni Entegrasyon)
+#  6. SPORTMONKS (Entegrasyon)
 # ══════════════════════════════════════════════════════════════
 
 SPORTMONKS_LIG_MAP = {
@@ -1065,9 +891,7 @@ def _sportmonks_oranlar(gun: int, hareket_db: dict) -> list:
         
         url = f"https://api.sportmonks.com/v3/football/fixtures?api_token={SPORTMONKS_API_KEY}&include=odds;participants;league&filters=fixtureLeagues:{sm_id}"
         try:
-            # Sportmonks v3: include parametreleri virgülle ayrılır
-            # filters: lig filtresi
-            r = requests.get(url, verify=False, timeout=20)
+            r = requests.get(url, timeout=20)
             if r.status_code != 200:
                 continue
             data = r.json().get("data", [])
@@ -1089,9 +913,7 @@ def _sportmonks_oranlar(gun: int, hareket_db: dict) -> list:
                 odds_data = fixture.get("odds", [])
                 ev_o = ber_o = dep_o = None
                 
-                # Sportmonks v3 odds yapısı nested olabilir
                 for market in odds_data:
-                    # Market ID 1 genelde Fulltime Result (1X2)
                     if market.get("market_id") == 1 or "Fulltime Result" in str(market.get("name")):
                         for selection in market.get("selections", []):
                             label = str(selection.get("label")).upper()
@@ -1102,8 +924,7 @@ def _sportmonks_oranlar(gun: int, hareket_db: dict) -> list:
                             elif label in ("X", "DRAW"): ber_o = val
                             elif label in ("2", "AWAY"): dep_o = val
                 
-                if ev_o and dep_o:
-                    ber_o = ber_o or 3.20
+                if ev_o and ber_o and dep_o:
                     toplam = (1/ev_o) + (1/ber_o) + (1/dep_o)
                     tum_maclar.append(_mac_satiri(
                         ev=ev_adi, dep=dep_adi, lig_kodu=lig_kodu, lig_isim=bilgi["isim"],
@@ -1120,17 +941,31 @@ def _sportmonks_oranlar(gun: int, hareket_db: dict) -> list:
     return tum_maclar
 
 
-#  ANA FONKSİYON
+# ══════════════════════════════════════════════════════════════
+#  ANA FONKSİYON — STRICT REAL DATA ONLY
 # ══════════════════════════════════════════════════════════════
 
 def canli_oranlar_cek(gun: int = None, zorla_yenile: bool = False) -> list:
+    """
+    Gerçek zamanlı piyasa oranlarını çeker.
+    STRICT RULE: Asla sentetik/mock/demo oran üretmez.
+    Eğer gerçek oran kaynağı bulunamazsa boş liste döner.
+    """
     if gun is None:
         gun = ODDS_GUN_PENCERESI
 
     if zorla_yenile:
         _cache_temizle()
     elif _cache_guncelse_mi():
-        return _cache_oku()
+        cached = _cache_oku()
+        # Filtrele: Geçmişte cache'e girmiş sentetik veya hibrit verileri temizle
+        real_cached = [
+            m for m in cached 
+            if m.get("kaynak") not in ("football-data-hibrit", "demo") 
+            and m.get("ber_oran") != 4.68
+        ]
+        if real_cached:
+            return real_cached
 
     hareket_db = _hareket_yukle()
 
@@ -1141,34 +976,21 @@ def canli_oranlar_cek(gun: int = None, zorla_yenile: bool = False) -> list:
         _cache_yaz(tum_maclar, kaynak="the-odds-api")
         return tum_maclar
 
-    # ── 2. SPORTMONKS (YENİ ÖNCELİK) ──────────────────────────
-    print("  ℹ️  The-Odds-API kullanılamıyor — Sportmonks deneniyor...")
+    # ── 2. SPORTMONKS ─────────────────────────────────────────
     tum_maclar = _sportmonks_oranlar(gun, hareket_db)
     if tum_maclar:
         _hareket_kaydet(hareket_db)
         _cache_yaz(tum_maclar, kaynak="sportmonks")
-        print(f"  ✅ Sportmonks: {len(tum_maclar)} maç oranı alındı")
         return tum_maclar
 
-    # ── 3. API-Football ──────────────────────────────────────
-
     # ── 3. Betexplorer (ücretsiz gerçek oranlar) ─────────────
-    print("  ℹ️  API-Football kullanılamıyor — Betexplorer deneniyor...")
     tum_maclar = _betexplorer_oranlar(gun, hareket_db)
     if tum_maclar:
         _hareket_kaydet(hareket_db)
         _cache_yaz(tum_maclar, kaynak="betexplorer")
-        print(f"  ✅ Betexplorer: {len(tum_maclar)} maç oranı alındı — cache'e kaydedildi")
         return tum_maclar
 
-    # ── 4. Football-data + Hibrit Model ──────────────────────
-    print("  ⚠️  Betexplorer kullanılamadı — football-data hibrit model deneniyor...")
-    fallback = _football_data_yaklaşan_maclar(gun)
-    if fallback:
-        print(f"  ✅ Fallback: {len(fallback)} yaklaşan maç (ELO+Poisson hibrit oranlarla)")
-        _cache_yaz(fallback, kaynak="football-data-hibrit")
-        return fallback
-
-    # ── 5. Demo ──────────────────────────────────────────────
-    print("  ⚠️  Tüm kaynaklar başarısız — demo oranlar kullanılıyor.")
-    return _demo_oranlar()
+    # ── HİÇBİR GERÇEK KAYNAK BULUNAMADI ──────────────────────
+    # HARD RULE: ASLA SENTETİK/DEMO ORAN DÖNME
+    print("  ℹ️  Gerçek piyasa oranı bulunamadı (Tüm API ve scraper kaynakları boş). NO_MARKET.")
+    return []

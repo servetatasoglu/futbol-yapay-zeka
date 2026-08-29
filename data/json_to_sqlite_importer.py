@@ -84,13 +84,11 @@ def backfill_data():
                 if not home_id or not away_id:
                     continue
 
-                # xG PROXY LOGIC (Temporary goal-based proxy until API integration)
-                h_xg = round(h_goals * 1.05 + 0.2, 2)
-                a_xg = round(a_goals * 1.05 + 0.2, 2)
-                
-                # PPDA proxy
-                h_ppda = 10.0
-                a_ppda = 10.0
+                # Real data integrity: Do NOT invent fake xG or dummy PPDA
+                h_xg = None
+                a_xg = None
+                h_ppda = None
+                a_ppda = None
 
                 c.execute('''
                     INSERT INTO matches (

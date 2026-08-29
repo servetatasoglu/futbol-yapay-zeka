@@ -84,25 +84,28 @@ def apply_overconfidence_fix(prob: float) -> float:
 
 def _tiered_overconfidence_fix(probs: np.ndarray) -> np.ndarray:
     """
-    Vektör bazlı overconfidence fix.
-    - max > 0.85 → tüm vektörü * 0.75 çarp (agresif)
-    - max > 0.75 → tüm vektörü * 0.85 çarp (orta)
-
-    BUG-8 DÜZELTMESİ: Fonksiyon scale sonrası normalize eder.
-    Pipeline'daki normalize adımı da çalışmaya devam eder (çift normalize
-    zararsız, ama koşullu erken çıkışlarda tutarsız değer üretilmesini engeller).
+    Vektör bazlı overconfidence shrinkage (Uniform Priora Doğru Daraltma).
+    Scalar çarpım yerine, ekstrem olasılıkları tekdüze dağılıma (1/K) doğru daraltır.
+    
+    - max > 0.85 → %25 uniform prior karışımı
+    - max > 0.75 → %15 uniform prior karışımı
     """
-    m = probs.max()
+    p = np.array(probs, dtype=np.float64).copy()
+    m = float(p.max())
+    k = float(len(p)) # 3 sınıflı için 3
+    uniform = 1.0 / max(k, 1.0)
+    
     if m > 0.85:
-        scaled = probs * 0.75
+        # %25 uniform prior karışımı (agresif overconfidence önleme)
+        p = 0.75 * p + 0.25 * uniform
     elif m > 0.75:
-        scaled = probs * 0.85
+        # %15 uniform prior karışımı (orta düzey overconfidence önleme)
+        p = 0.85 * p + 0.15 * uniform
     else:
-        return probs.copy()
+        return p
 
-    # Normalize — bu satır BUG-8 güvencesidir
-    s = scaled.sum()
-    return scaled / s if s > 1e-9 else scaled
+    s = p.sum()
+    return p / s if s > 1e-9 else p
 
 
 # ─────────────────────────────────────────────────────────────────────────────

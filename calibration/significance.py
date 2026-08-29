@@ -41,6 +41,30 @@ class StatisticalValidator:
             "confidence_interval": [round(lower_bound, 3), round(upper_bound, 3)],
             "mean_clv": round(original_mean, 3)
         }
+
+    @staticmethod
+    def bootstrap_edge_significance(edge_array: list, iterations: int = 1000) -> dict:
+        """
+        Bootstrap confidence interval for model probability edge.
+        """
+        if not edge_array or len(edge_array) < 10:
+            return {"p_value": 1.0, "is_significant": False, "confidence_interval": [0.0, 0.0], "mean_edge": 0.0}
+
+        arr = np.array(edge_array, dtype=np.float64)
+        n = len(arr)
+        bootstrap_means = [np.mean(np.random.choice(arr, size=n, replace=True)) for _ in range(iterations)]
+        bootstrap_means = np.array(bootstrap_means)
+
+        p_val = float(np.sum(bootstrap_means <= 0.0) / iterations)
+        lower = float(np.percentile(bootstrap_means, 2.5))
+        upper = float(np.percentile(bootstrap_means, 97.5))
+
+        return {
+            "p_value": round(p_val, 4),
+            "is_significant": p_val < 0.05,
+            "confidence_interval": [round(lower, 4), round(upper, 4)],
+            "mean_edge": round(float(np.mean(arr)), 4)
+        }
         
     @staticmethod
     def edge_reliability_score(expected_edges: list, achieved_clvs: list) -> float:

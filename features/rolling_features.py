@@ -132,119 +132,205 @@ def rolling_features_uret(ham_veri: dict, n_son: int = 5) -> dict:
         takim_gucu[ev]  += K * (sonuc_ev - ev_beklenti)
         takim_gucu[dep] += K * ((1 - sonuc_ev) - (1 - ev_beklenti))
     
-    # Her takım için rolling feature hesapla
-    sonuc: dict = {}
+def _hesapla_takim_rolling_tekil(mac_listesi: list, takim: str, takim_gucu_val: float, n_son: int = 5) -> dict:
+    """Tek bir takımın belirli bir andaki maç geçmişinden rolling metrikleri üretir."""
+    ev_maclar   = [(k, m) for k, m, _ in mac_listesi if k == "ev"]
+    dep_maclar  = [(k, m) for k, m, _ in mac_listesi if k == "dep"]
     
+    ev_son  = ev_maclar[-n_son:]
+    dep_son = dep_maclar[-n_son:]
+    tum_son5 = mac_listesi[-(n_son * 2):]
+    
+    # Ev istatistikleri
+    ev_gol_ort  = sum(m["ev_gol"] for _, m in ev_son) / max(len(ev_son), 1)
+    ev_yed_ort  = sum(m["dep_gol"] for _, m in ev_son) / max(len(ev_son), 1)
+    ev_puan_ort = sum(_puan(m["ev_gol"], m["dep_gol"], "ev") for _, m in ev_son) / max(len(ev_son), 1)
+    ev_clean    = sum(1 for _, m in ev_son if m["dep_gol"] == 0) / max(len(ev_son), 1)
+    ev_sos      = sum(m.get("rakip_guc", 1500) for _, m in ev_son) / max(len(ev_son), 1)
+    
+    # Deplasman istatistikleri
+    dep_gol_ort  = sum(m["dep_gol"] for _, m in dep_son) / max(len(dep_son), 1)
+    dep_yed_ort  = sum(m["ev_gol"] for _, m in dep_son) / max(len(dep_son), 1)
+    dep_puan_ort = sum(_puan(m["ev_gol"], m["dep_gol"], "dep") for _, m in dep_son) / max(len(dep_son), 1)
+    dep_clean    = sum(1 for _, m in dep_son if m["ev_gol"] == 0) / max(len(dep_son), 1)
+    dep_sos      = sum(m.get("rakip_guc", 1500) for _, m in dep_son) / max(len(dep_son), 1)
+    
+    # KG Var oranı (her iki taraf gol attı)
+    kg_var_5 = 0.0
+    if tum_son5:
+        kg = sum(1 for k, m, _ in tum_son5
+                 if (k == "ev"  and m["ev_gol"] >= 1 and m["dep_gol"] >= 1) or
+                    (k == "dep" and m["dep_gol"] >= 1 and m["ev_gol"] >= 1))
+        kg_var_5 = kg / len(tum_son5)
+    
+    # xG Over/Underperformance (gol - beklenen gol proxy)
+    gol_fark_listesi = []
+    for k, m, _ in tum_son5:
+        att = m["ev_gol"] if k == "ev" else m["dep_gol"]
+        beklenen = 1.35  # Lig ortalaması proxy
+        gol_fark_listesi.append(att - beklenen)
+    xg_diff_ort = sum(gol_fark_listesi) / max(len(gol_fark_listesi), 1)
+    
+    # Form tutarsızlığı (yüksek varyans = güvenilmez takım)
+    tum_goller = [m["ev_gol"] if k == "ev" else m["dep_gol"]
+                  for k, m, _ in tum_son5]
+    if len(tum_goller) >= 3:
+        ort = sum(tum_goller) / len(tum_goller)
+        var = sum((g - ort) ** 2 for g in tum_goller) / len(tum_goller)
+        tutarsizlik = math.sqrt(var)
+    else:
+        tutarsizlik = 1.0
+    
+    # Son maç şoku (-1: büyük kayıp, +1: büyük galibiyet)
+    son_mac_soku = 0.0
+    if mac_listesi:
+        k_son, m_son, _ = mac_listesi[-1]
+        att = m_son["ev_gol"] if k_son == "ev" else m_son["dep_gol"]
+        yed = m_son["dep_gol"] if k_son == "ev" else m_son["ev_gol"]
+        fark = att - yed
+        son_mac_soku = max(-1.0, min(1.0, fark / 3.0))
+    
+    # Trend: Son 3 maç vs önceki 3 maç puan farkı
+    trend = 0.0
+    if len(mac_listesi) >= 6:
+        son3 = mac_listesi[-3:]
+        prev3 = mac_listesi[-6:-3]
+        
+        def _puan_listesi(ml):
+            puanlar = []
+            for k, m, _ in ml:
+                p = _puan(m["ev_gol"], m["dep_gol"], k)
+                puanlar.append(p)
+            return puanlar
+        
+        son3_p  = sum(_puan_listesi(son3))  / 3
+        prev3_p = sum(_puan_listesi(prev3)) / 3
+        trend   = son3_p - prev3_p  # pozitif = yükselen form
+    
+    # SoS normalize (1500 = ortalama güç)
+    sos_ev_norm  = (ev_sos - 1500) / 200.0   # -1 ile +1 arasında
+    sos_dep_norm = (dep_sos - 1500) / 200.0
+    
+    return {
+        "ev_gol_ort5":     round(ev_gol_ort, 3),
+        "dep_gol_ort5":    round(dep_gol_ort, 3),
+        "ev_yenen_ort5":   round(ev_yed_ort, 3),
+        "dep_yenen_ort5":  round(dep_yed_ort, 3),
+        "ev_puan_ort5":    round(ev_puan_ort, 3),
+        "dep_puan_ort5":   round(dep_puan_ort, 3),
+        "ev_clean_sheet":  round(ev_clean, 3),
+        "dep_clean_sheet": round(dep_clean, 3),
+        "kg_var_ort5":     round(kg_var_5, 3),
+        "xg_diff_ort5":    round(xg_diff_ort, 3),
+        "form_tutarsizlik": round(tutarsizlik, 3),
+        "son_mac_soku":    round(son_mac_soku, 3),
+        "sos_ev_norm":     round(max(-2.0, min(2.0, sos_ev_norm)), 3),
+        "sos_dep_norm":    round(max(-2.0, min(2.0, sos_dep_norm)), 3),
+        "trend":           round(max(-3.0, min(3.0, trend)), 3),
+        "ev_mac_sayisi":   len(ev_maclar),
+        "dep_mac_sayisi":  len(dep_maclar),
+        "toplam_mac":      len(mac_listesi),
+        "takim_gucu":      round(takim_gucu_val, 1),
+    }
+
+
+def rolling_features_uret(ham_veri: dict, n_son: int = 5) -> dict:
+    """Tüm verinin güncel son durumundaki rolling metriklerini üretir."""
+    takim_maclar: dict = defaultdict(list)
+    tum_maclar = []
+    for lig_kodu, maclar in ham_veri.items():
+        for mac in maclar:
+            tarih = mac.get("utcDate", "")
+            tum_maclar.append((tarih, lig_kodu, mac))
+    
+    tum_maclar.sort(key=lambda x: x[0])
+    takim_gucu: dict = defaultdict(lambda: 1500.0)
+    
+    for tarih, lig_kodu, mac in tum_maclar:
+        try:
+            ev  = mac["homeTeam"]["name"]
+            dep = mac["awayTeam"]["name"]
+            ev_gol  = int(mac["score"]["fullTime"]["home"])
+            dep_gol = int(mac["score"]["fullTime"]["away"])
+        except (KeyError, TypeError, ValueError):
+            continue
+        
+        ev_guc_o  = takim_gucu[ev]
+        dep_guc_o = takim_gucu[dep]
+        
+        mac_bilgi = {"tarih": tarih, "ev_gol": ev_gol, "dep_gol": dep_gol, "lig": lig_kodu, "rakip_guc": dep_guc_o}
+        takim_maclar[ev].append(("ev", mac_bilgi, dep_guc_o))
+        
+        mac_bilgi_dep = {**mac_bilgi, "rakip_guc": ev_guc_o}
+        takim_maclar[dep].append(("dep", mac_bilgi_dep, ev_guc_o))
+        
+        K = 20
+        ev_beklenti = 1 / (1 + 10 ** ((dep_guc_o - ev_guc_o) / 400))
+        sonuc_ev = 1.0 if ev_gol > dep_gol else (0.5 if ev_gol == dep_gol else 0.0)
+        takim_gucu[ev]  += K * (sonuc_ev - ev_beklenti)
+        takim_gucu[dep] += K * ((1 - sonuc_ev) - (1 - ev_beklenti))
+    
+    sonuc = {}
     for takim, mac_listesi in takim_maclar.items():
-        ev_maclar   = [(k, m) for k, m, _ in mac_listesi if k == "ev"]
-        dep_maclar  = [(k, m) for k, m, _ in mac_listesi if k == "dep"]
-        tum_son     = mac_listesi[-10:]  # Son 10 maç (her konumdan)
-        
-        ev_son  = ev_maclar[-n_son:]
-        dep_son = dep_maclar[-n_son:]
-        tum_son5 = mac_listesi[-(n_son * 2):]
-        
-        def _ort(liste, key_fn, fallback=0.0):
-            vals = [key_fn(m) for _, m, _ in liste if key_fn(m) is not None]
-            return sum(vals) / len(vals) if vals else fallback
-        
-        def _ev_gol(m): return m.get("ev_gol", 0)
-        def _dep_gol(m): return m.get("dep_gol", 0)
-        
-        # Ev istatistikleri
-        ev_gol_ort  = sum(m["ev_gol"] for _, m in ev_son) / max(len(ev_son), 1)
-        ev_yed_ort  = sum(m["dep_gol"] for _, m in ev_son) / max(len(ev_son), 1)
-        ev_puan_ort = sum(_puan(m["ev_gol"], m["dep_gol"], "ev") for _, m in ev_son) / max(len(ev_son), 1)
-        ev_clean    = sum(1 for _, m in ev_son if m["dep_gol"] == 0) / max(len(ev_son), 1)
-        ev_sos      = sum(m.get("rakip_guc", 1500) for _, m in ev_son) / max(len(ev_son), 1500)
-        
-        # Deplasman istatistikleri
-        dep_gol_ort  = sum(m["dep_gol"] for _, m in dep_son) / max(len(dep_son), 1)
-        dep_yed_ort  = sum(m["ev_gol"] for _, m in dep_son) / max(len(dep_son), 1)
-        dep_puan_ort = sum(_puan(m["ev_gol"], m["dep_gol"], "dep") for _, m in dep_son) / max(len(dep_son), 1)
-        dep_clean    = sum(1 for _, m in dep_son if m["ev_gol"] == 0) / max(len(dep_son), 1)
-        dep_sos      = sum(m.get("rakip_guc", 1500) for _, m in dep_son) / max(len(dep_son), 1500)
-        
-        # KG Var oranı (her iki taraf gol attı)
-        kg_var_5 = 0.0
-        if tum_son5:
-            kg = sum(1 for k, m, _ in tum_son5
-                     if (k == "ev"  and m["ev_gol"] >= 1 and m["dep_gol"] >= 1) or
-                        (k == "dep" and m["dep_gol"] >= 1 and m["ev_gol"] >= 1))
-            kg_var_5 = kg / len(tum_son5)
-        
-        # xG Over/Underperformance (gol - beklenen gol)
-        # Proxy: Ortalama gol, lig ortalamasına kıyasla
-        gol_fark_listesi = []
-        for k, m, _ in tum_son5:
-            att = m["ev_gol"] if k == "ev" else m["dep_gol"]
-            beklenen = 1.35  # Lig ortalaması proxy
-            gol_fark_listesi.append(att - beklenen)
-        xg_diff_ort = sum(gol_fark_listesi) / max(len(gol_fark_listesi), 1)
-        
-        # Form tutarsızlığı (yüksek varyans = güvenilmez takım)
-        tum_goller = [m["ev_gol"] if k == "ev" else m["dep_gol"]
-                      for k, m, _ in tum_son5]
-        if len(tum_goller) >= 3:
-            ort = sum(tum_goller) / len(tum_goller)
-            var = sum((g - ort) ** 2 for g in tum_goller) / len(tum_goller)
-            tutarsizlik = math.sqrt(var)
-        else:
-            tutarsizlik = 1.0
-        
-        # Son maç şoku (-1: büyük kayıp, +1: büyük galibiyet)
-        son_mac_soku = 0.0
-        if mac_listesi:
-            k_son, m_son, _ = mac_listesi[-1]
-            att = m_son["ev_gol"] if k_son == "ev" else m_son["dep_gol"]
-            yed = m_son["dep_gol"] if k_son == "ev" else m_son["ev_gol"]
-            fark = att - yed
-            son_mac_soku = max(-1.0, min(1.0, fark / 3.0))
-        
-        # Trend: Son 3 maç vs önceki 3 maç puan farkı
-        trend = 0.0
-        if len(mac_listesi) >= 6:
-            son3 = mac_listesi[-3:]
-            prev3 = mac_listesi[-6:-3]
-            
-            def _puan_listesi(ml):
-                puanlar = []
-                for k, m, _ in ml:
-                    p = _puan(m["ev_gol"], m["dep_gol"], k)
-                    puanlar.append(p)
-                return puanlar
-            
-            son3_p  = sum(_puan_listesi(son3))  / 3
-            prev3_p = sum(_puan_listesi(prev3)) / 3
-            trend   = son3_p - prev3_p  # pozitif = yükselen form
-        
-        # SoS normalize (1500 = ortalama güç)
-        sos_ev_norm  = (ev_sos - 1500) / 200.0   # -1 ile +1 arasında
-        sos_dep_norm = (dep_sos - 1500) / 200.0
-        
-        sonuc[takim] = {
-            "ev_gol_ort5":     round(ev_gol_ort, 3),
-            "dep_gol_ort5":    round(dep_gol_ort, 3),
-            "ev_yenen_ort5":   round(ev_yed_ort, 3),
-            "dep_yenen_ort5":  round(dep_yed_ort, 3),
-            "ev_puan_ort5":    round(ev_puan_ort, 3),
-            "dep_puan_ort5":   round(dep_puan_ort, 3),
-            "ev_clean_sheet":  round(ev_clean, 3),
-            "dep_clean_sheet": round(dep_clean, 3),
-            "kg_var_ort5":     round(kg_var_5, 3),
-            "xg_diff_ort5":    round(xg_diff_ort, 3),
-            "form_tutarsizlik": round(tutarsizlik, 3),
-            "son_mac_soku":    round(son_mac_soku, 3),
-            "sos_ev_norm":     round(max(-2.0, min(2.0, sos_ev_norm)), 3),
-            "sos_dep_norm":    round(max(-2.0, min(2.0, sos_dep_norm)), 3),
-            "trend":           round(max(-3.0, min(3.0, trend)), 3),
-            "ev_mac_sayisi":   len(ev_maclar),
-            "dep_mac_sayisi":  len(dep_maclar),
-            "toplam_mac":      len(mac_listesi),
-            "takim_gucu":      round(takim_gucu[takim], 1),
-        }
-    
+        sonuc[takim] = _hesapla_takim_rolling_tekil(mac_listesi, takim, takim_gucu[takim], n_son)
     return sonuc
+
+
+def rolling_features_point_in_time(ham_veri: dict, n_son: int = 5) -> dict:
+    """
+    Her maç öncesindeki (t < match_date) ev ve dep rolling feature'larını sequential kaydeder.
+    FUTURE LEAKAGE'ı %100 engeller.
+    
+    Returns:
+        {match_id: {"ev_rolling": dict, "dep_rolling": dict}}
+    """
+    takim_maclar: dict = defaultdict(list)
+    tum_maclar = []
+    for lig_kodu, maclar in ham_veri.items():
+        for mac in maclar:
+            tarih = mac.get("utcDate", "")
+            tum_maclar.append((tarih, lig_kodu, mac))
+    
+    tum_maclar.sort(key=lambda x: x[0])
+    takim_gucu: dict = defaultdict(lambda: 1500.0)
+    pit_results = {}
+
+    for tarih, lig_kodu, mac in tum_maclar:
+        try:
+            m_id = str(mac.get("id") or f"{mac.get('homeTeam',{}).get('name')}_{mac.get('awayTeam',{}).get('name')}_{mac.get('utcDate')}")
+            ev   = mac["homeTeam"]["name"]
+            dep  = mac["awayTeam"]["name"]
+            ev_gol  = int(mac["score"]["fullTime"]["home"])
+            dep_gol = int(mac["score"]["fullTime"]["away"])
+        except (KeyError, TypeError, ValueError):
+            continue
+        
+        # 1. Maç ÖNCESİNDEKİ geçmişten rolling feature'ları üret (Zero Leakage)
+        ev_rol_pre = _hesapla_takim_rolling_tekil(takim_maclar[ev], ev, takim_gucu[ev], n_son)
+        dep_rol_pre = _hesapla_takim_rolling_tekil(takim_maclar[dep], dep, takim_gucu[dep], n_son)
+        
+        pit_results[m_id] = {
+            "ev_rolling": ev_rol_pre,
+            "dep_rolling": dep_rol_pre
+        }
+
+        # 2. Maç BİTTİĞİNDE geçmişe ekle
+        ev_guc_o  = takim_gucu[ev]
+        dep_guc_o = takim_gucu[dep]
+        
+        mac_bilgi = {"tarih": tarih, "ev_gol": ev_gol, "dep_gol": dep_gol, "lig": lig_kodu, "rakip_guc": dep_guc_o}
+        takim_maclar[ev].append(("ev", mac_bilgi, dep_guc_o))
+        
+        mac_bilgi_dep = {**mac_bilgi, "rakip_guc": ev_guc_o}
+        takim_maclar[dep].append(("dep", mac_bilgi_dep, ev_guc_o))
+        
+        K = 20
+        ev_beklenti = 1 / (1 + 10 ** ((dep_guc_o - ev_guc_o) / 400))
+        sonuc_ev = 1.0 if ev_gol > dep_gol else (0.5 if ev_gol == dep_gol else 0.0)
+        takim_gucu[ev]  += K * (sonuc_ev - ev_beklenti)
+        takim_gucu[dep] += K * ((1 - sonuc_ev) - (1 - ev_beklenti))
+
+    return pit_results
 
 
 def rolling_feature_vektoru(ev_takim: str, dep_takim: str,

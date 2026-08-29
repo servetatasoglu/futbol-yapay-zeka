@@ -81,11 +81,7 @@ def sync_recent_matches():
             home_goals = fixtures["goals"]["home"]
             away_goals = fixtures["goals"]["away"]
             
-            # NORMAL ŞARTLARDA: API-Football'dan topa sahip olma gibi ekstra veriler
-            # /fixtures/statistics endpointinden alınır. Hızlı işlem ve limit yememek için 
-            # şu anlık xG ve PPDA proxy formülleriyle dolduruluyor. Daha sonra bu kısıma 
-            # "statistics" fetch modülü eklenebilir.
-            
+            # Gerçek veri saklama: Eksik istatistikler için ASLA sahte/dummy veri üretme
             m = {
                 "match_id": match_id,
                 "date": yesterday,
@@ -93,19 +89,19 @@ def sync_recent_matches():
                 "away_team_id": away_team_id,
                 "home_goals": home_goals,
                 "away_goals": away_goals,
-                "home_xg": home_goals * 1.05,  # Dummy fallback
-                "away_xg": away_goals * 1.05,  # Dummy fallback
-                "home_possession": 50.0,
-                "away_possession": 50.0,
-                "home_shots": max(1, home_goals * 4),
-                "away_shots": max(1, away_goals * 4),
-                "home_shots_target": home_goals + 1,
-                "away_shots_target": away_goals + 1,
-                "home_ppda": 10.0,
-                "away_ppda": 10.0,
-                "weather_type": "Bilinmiyor",
-                "weather_temp": 15.0,
-                "referee_name": fixtures["fixture"]["referee"] or "Bilinmiyor"
+                "home_xg": None,
+                "away_xg": None,
+                "home_possession": None,
+                "away_possession": None,
+                "home_shots": None,
+                "away_shots": None,
+                "home_shots_target": None,
+                "away_shots_target": None,
+                "home_ppda": None,
+                "away_ppda": None,
+                "weather_type": None,
+                "weather_temp": None,
+                "referee_name": fixtures["fixture"].get("referee")
             }
             
             insert_match_data(m)
