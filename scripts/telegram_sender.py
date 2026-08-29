@@ -282,10 +282,45 @@ def _load_latest_bets() -> list:
 #  MAIN
 # ═══════════════════════════════════════════════════════
 
+def _format_kupon_message(kupon: dict) -> str:
+    """Dashboard'daki 'Günün Yapay Zeka Kombinesi' kuponunu hazırlar."""
+    if not kupon or not kupon.get("maclar") or len(kupon.get("maclar", [])) == 0:
+        return ""
+    
+    msg = (
+        "🏆 <b>QUANTBET AI — Gününün Akıllı Kombine Kuponu</b>\n"
+        "━━━━━━━━━━━━━━━━━━━━━━\n"
+    )
+    for m in kupon["maclar"]:
+        msg += (
+            f"⚽ <b>{m.get('ev')} vs {m.get('dep')}</b>\n"
+            f"📌 Tahmin: <b>{m.get('tahmin')}</b> | Oran: <b>{float(m.get('oran', 1.0)):.2f}</b>\n"
+            f"📅 Tarih: {str(m.get('tarih',''))[:10]}\n\n"
+        )
+    msg += (
+        "━━━━━━━━━━━━━━━━━━━━━━\n"
+        f"💰 Toplam Oran: <b>{float(kupon.get('toplam_oran', 1.0)):.2f}</b>\n"
+        f"🎯 Kazanma İhtimali: <b>%{kupon.get('kazanma_ihtimali', 0)}</b> | Edge: <b>+%{kupon.get('beklenen_deger', 0)}</b>\n"
+        "⚠️ <i>Bu kupon web panelindeki 'Günün Yapay Zeka Kombinesi' ile senkronizedir.</i>\n\n"
+    )
+    return msg
+
+
 def main():
     if not TELEGRAM_TOKEN or not TELEGRAM_CHAT_ID:
         print("Telegram anahtarları eksik. Çıkılıyor.")
         return
+
+    # 1. Kupon kontrolü (dashboard_data.json)
+    dash_path = os.path.join(BASE_DIR, "dashboard_data.json")
+    kupon_msg = ""
+    if os.path.exists(dash_path):
+        try:
+            with open(dash_path, "r", encoding="utf-8") as f:
+                dash_data = json.load(f)
+            kupon_msg = _format_kupon_message(dash_data.get("kupon"))
+        except Exception as e:
+            print(f"⚠️ Dashboard data okuma hatası: {e}")
 
     # Bahisleri yükle
     all_bets = _load_latest_bets()
@@ -308,13 +343,13 @@ def main():
     # Mesajı oluştur
     header = _format_header(len(filtered_bets), len(all_bets))
 
-    if not filtered_bets:
+    if not filtered_bets and not kupon_msg:
         # Fırsat yok mesajı
         message = header
         message += (
             "🔍 Sistem başarıyla piyasayı taradı.\n\n"
             "Sıkı filtreler (edge, güven, veri kalitesi) sonucu "
-            "şu an önerilen fırsat bulunamadı.\n\n"
+            "şu an önerilen tekli pozisyon bulunamadı.\n\n"
             f"<i>Toplam incelenen: {len(all_bets)} maç</i>"
         )
         send_telegram_message(message)
@@ -327,6 +362,9 @@ def main():
     # Mesajları oluştur (çok uzun olursa böl)
     messages = []
     current_msg = header
+
+    if kupon_msg:
+        current_msg += kupon_msg
 
     for bet in filtered_bets:
         bet_msg = _format_bet_message(bet)
