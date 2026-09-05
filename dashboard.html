@@ -1024,6 +1024,20 @@
 
             const matchMap = new Map();
             signalsToRender.forEach((m, idx) => {
+                // 🛡️ PİYASA FİYATLAMA FİLTRESİ (BOOKMAKER PRICING GATE):
+                // Bahis sitelerinden oranlanmamış (fiyatlanmamış) maçlar bültende gösterilmez!
+                if (activeTab === 'bulten') {
+                    const odds = m.odds || {};
+                    const ms1 = parseFloat(odds.ms1 || 0);
+                    const ms2 = parseFloat(odds.ms2 || 0);
+                    const target = parseFloat(m.target_odds || m.best_odds || 0);
+                    if ((ms1 <= 1.05 || ms2 <= 1.05) && target <= 1.05) {
+                        return; // Bahis büroları henüz oran açmamış, bültene dahil etme!
+                    }
+                    if (!m.ai_commentary && !m.reasoning) {
+                        return; // Model analizi henüz tamamlanmamışsa dahil etme!
+                    }
+                }
                 const key = m.ev + "_" + m.dep;
                 if(!matchMap.has(key)) matchMap.set(key, {...m, id: idx});
             });
@@ -1044,7 +1058,7 @@
             });
 
             if(Object.keys(grouped).length === 0) {
-                container.innerHTML = `<div class="p-8 text-center text-muted text-sm">Günün bülteninde analiz edilecek maç bulunmamaktadır.</div>`;
+                container.innerHTML = `<div class="p-8 text-center text-muted text-sm">Günün bülteninde piyasa tarafından oranlanmış ve analiz edilmiş maç bulunmamaktadır.</div>`;
                 return;
             }
 
@@ -1064,6 +1078,18 @@
 
             let html = '';
             let idCounter = 0;
+
+            if (activeTab === 'bulten') {
+                html += `
+                    <div class="p-3 bg-emerald-950/20 border-b mk-border text-emerald-400 text-xs flex flex-wrap items-center justify-between gap-2">
+                        <div class="flex items-center gap-2">
+                            <span class="text-sm">🛡️</span>
+                            <span><b>Piyasa Fiyatlama Güvencesi:</b> Bülten yalnızca bahis büroları tarafından resmi olarak oranlanmış ve yapay zeka modelimizce (Dixon-Coles + Purged LightGBM + ELO) analizi tamamlanmış maçları listeler. Oranı açılmamış maçlar listelenmez.</span>
+                        </div>
+                        <span class="text-[10px] font-black uppercase px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 border border-emerald-500/40">🟢 PİYASA ONAYLI (${allMatches.length} MAÇ)</span>
+                    </div>
+                `;
+            }
 
             for(const group of sortedLeagues) {
                 const meta = group.meta;

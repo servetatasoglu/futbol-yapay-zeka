@@ -30,6 +30,14 @@ LIG_ISIMLERI = {
     "BL2": "2. Bundesliga (DE)", "ELC": "Championship (UK)", "DED": "Eredivisie (NL)"
 }
 
+def _safe_float(val, default=0.0):
+    try:
+        if val is None or val == "":
+            return default
+        return float(val)
+    except (ValueError, TypeError):
+        return default
+
 def _get_api_key(name):
     """Safely get API key from config or environment."""
     try:
@@ -938,16 +946,37 @@ def generate_live_signals(executed_bets: list | None = None):
         try:
             with open(LIVE_OUT, "r", encoding="utf-8") as f:
                 sigs = json.load(f)
-                print(f"  ✅ Mevcut live_signals.json okundu ({len(sigs)} sinyal)")
-                return sigs
+                # 🛡️ PİYASA FİYATLAMA FİLTRESİ: Bahis sitelerince oranlanmamış veya model analizi yapılmamış maçları panele alma
+                valid_sigs = []
+                for s in sigs:
+                    odds = s.get("odds", {})
+                    ms1 = _safe_float(odds.get("ms1", 0))
+                    ms2 = _safe_float(odds.get("ms2", 0))
+                    target = _safe_float(s.get("target_odds", s.get("best_odds", 0)))
+                    # Piyasa fiyatlaması kontrolü (oranlar 1.05'ten büyük olmalı):
+                    if (ms1 <= 1.05 or ms2 <= 1.05) and target <= 1.05:
+                        continue
+                    # Model analizi kontrolü:
+                    if not s.get("ai_commentary") and not s.get("reasoning"):
+                        continue
+                    valid_sigs.append(s)
+                print(f"  ✅ Mevcut live_signals.json okundu ({len(valid_sigs)} piyasa fiyatlı sinyal)")
+                return valid_sigs
         except Exception:
             return []
 
     signals = []
     for b in executed_bets:
+        oran = _safe_float(b.get("oran_alinma", b.get("oran", b.get("best_odds", b.get("target_odds", 0)))))
+        ev_oran = _safe_float(b.get("ev_oran", b.get("odds", {}).get("ms1", 0)))
+        dep_oran = _safe_float(b.get("dep_oran", b.get("odds", {}).get("ms2", 0)))
+        
+        # 🛡️ PİYASA FİYATLAMA FİLTRESİ: Bahis büroları henüz oran açmamışsa panele kesinlikle dahil etme
+        if (ev_oran <= 1.05 or dep_oran <= 1.05) and oran <= 1.05:
+            continue
+
         edge_pct = round(b.get("edge", 0) * 100, 1)
         model_prob = round(b.get("model_p", b.get("p_secim", 0)) * 100, 1)
-        oran = b.get("oran_alinma", b.get("oran", b.get("best_odds", 0)))
         kelly_pct = round(b.get("kelly", b.get("size", 0.01)) * 100, 1)
         confidence = b.get("confidence", 0)
         tier = b.get("tier", b.get("aktif_tier", "NO_SHARP"))
@@ -1223,6 +1252,9 @@ def generate_dashboard_data(live_signals=None):
     Produce dashboard_data.json from the full CLV bet log.
     Uses live_signals for Bet of the Day (Kupon).
     """
+    if live_signals is None:
+        live_signals = generate_live_signals()
+
     db = _load_clv_db()
     bets = db.get("bahisler", [])
     raporlar = db.get("gunluk_raporlar", [])
