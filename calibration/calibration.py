@@ -33,40 +33,217 @@ class CalibrationError(RuntimeError):
 
 
 # ─────────────────────────────────────────────────────────────────────────────
-# 1. TRAIN
+# 1. TRAIN & EVALUATE
 # ─────────────────────────────────────────────────────────────────────────────
 
-def train_calibrator(X_probs, y_true, method="isotonic"):
+def calculate_calibration_metrics(y_true: np.ndarray, probs: np.ndarray, n_bins: int = 10) -> dict:
+    """
+    Kapsamlı kalibrasyon metrikleri:
+    - Brier score
+    - Log loss
+    - ECE (Expected Calibration Error)
+    - MCE (Maximum Calibration Error)
+    - Sınıf bazında güvenilirlik eğrisi (reliability bins)
+    """
+    arr1 = np.asarray(y_true)
+    arr2 = np.asarray(probs)
+    if len(arr1.shape) == 2 and arr1.shape[1] > 1 and len(arr2.shape) == 1:
+        probs = np.asarray(arr1, dtype=np.float64)
+        y_true = np.asarray(arr2, dtype=int)
+    else:
+        y_true = np.asarray(arr1, dtype=int)
+        probs = np.asarray(arr2, dtype=np.float64)
+
+    n_samples, n_classes = probs.shape
+
+    # One-hot encoded true vector
+    y_one_hot = np.zeros_like(probs)
+    for i, c in enumerate(y_true):
+        if 0 <= c < n_classes:
+            y_one_hot[i, c] = 1.0
+
+    # Multi-class Brier Score: mean squared error over classes
+    brier = float(np.mean(np.sum((probs - y_one_hot) ** 2, axis=1)))
+
+    # Log Loss
+    eps = 1e-12
+    p_clipped = np.clip(probs, eps, 1.0 - eps)
+    # Re-normalize rows after clipping
+    p_clipped = p_clipped / p_clipped.sum(axis=1, keepdims=True)
+    logloss = float(-np.mean(np.sum(y_one_hot * np.log(p_clipped), axis=1)))
+
+    # Multiclass ECE & MCE
+    confidences = np.max(probs, axis=1)
+    predictions = np.argmax(probs, axis=1)
+    accuracies = (predictions == y_true).astype(float)
+
+    bin_boundaries = np.linspace(0, 1, n_bins + 1)
+    ece = 0.0
+    mce = 0.0
+    reliability_bins = []
+
+    for i in range(n_bins):
+        bin_lower = bin_boundaries[i]
+        bin_upper = bin_boundaries[i + 1]
+        in_bin = (confidences > bin_lower) & (confidences <= bin_upper) if i > 0 else (confidences >= bin_lower) & (confidences <= bin_upper)
+        prop_in_bin = float(np.mean(in_bin))
+
+        if prop_in_bin > 0:
+            accuracy_in_bin = float(np.mean(accuracies[in_bin]))
+            avg_confidence_in_bin = float(np.mean(confidences[in_bin]))
+            bin_error = abs(avg_confidence_in_bin - accuracy_in_bin)
+            ece += bin_error * prop_in_bin
+            mce = max(mce, bin_error)
+            reliability_bins.append({
+                "bin_range": (round(bin_lower, 2), round(bin_upper, 2)),
+                "count": int(np.sum(in_bin)),
+                "avg_conf": round(avg_confidence_in_bin, 4),
+                "accuracy": round(accuracy_in_bin, 4),
+                "error": round(bin_error, 4)
+            })
+
+    return {
+        "brier_score": round(brier, 4),
+        "log_loss": round(logloss, 4),
+        "ece": round(float(ece), 4),
+        "mce": round(float(mce), 4),
+        "n_samples": n_samples,
+        "reliability_bins": reliability_bins
+    }
+
+
+evaluate_calibration_metrics = calculate_calibration_metrics
+
+
+class CalibratorDict(dict):
+    """Calibrator dictionary that also provides a scikit-learn compatible predict_proba interface."""
+
+    def predict_proba(self, probs: np.ndarray) -> np.ndarray:
+        probs_arr = np.array(probs, dtype=np.float64)
+        is_1d = (len(probs_arr.shape) == 1)
+        if is_1d:
+            probs_arr = probs_arr.reshape(1, -1)
+
+        n_classes = probs_arr.shape[1]
+        if self.get("_global_method") == "temperature":
+            T = float(self.get("_temperature", 1.0))
+            eps = 1e-7
+            logits = np.log(np.clip(probs_arr, eps, 1.0 - eps))
+            scaled = logits / max(T, 0.05)
+            exp_s = np.exp(scaled - np.max(scaled, axis=1, keepdims=True))
+            new_probs = exp_s / np.sum(exp_s, axis=1, keepdims=True)
+            return new_probs[0] if is_1d else new_probs
+
+        new_probs = np.zeros_like(probs_arr, dtype=np.float64)
+        for c in range(n_classes):
+            cal = self.get(c)
+            if not cal:
+                continue
+            model = cal["model"]
+            method = cal["method"]
+            probe_c = probs_arr[:, c]
+            if method == "isotonic":
+                new_probs[:, c] = model.predict(probe_c)
+            elif method == "platt":
+                new_probs[:, c] = model.predict_proba(probe_c.reshape(-1, 1))[:, 1]
+            elif method == "beta":
+                eps = 1e-6
+                pr = np.clip(probe_c, eps, 1.0 - eps)
+                feat = np.column_stack([np.log(pr), -np.log(1.0 - pr)])
+                new_probs[:, c] = model.predict_proba(feat)[:, 1]
+
+        row_sums = np.sum(new_probs, axis=1, keepdims=True)
+        row_sums[row_sums == 0] = 1.0
+        new_probs = new_probs / row_sums
+        return new_probs[0] if is_1d else new_probs
+
+
+def train_calibrator_oof(X_oof_probs: np.ndarray, y_true: np.ndarray, method: str = "isotonic") -> CalibratorDict:
+    """
+    YALNIZCA Out-Of-Fold (OOF) cross-validation tahminleri ile kalibratör eğitir.
+    In-sample eğitim sızıntısını kesinlikle engeller.
+    """
+    return train_calibrator(X_oof_probs, y_true, method=method, is_oof=True)
+
+
+def train_calibrator(X_probs, y_true, method="isotonic", is_oof=False):
     """
     X_probs: shape (n_samples, n_classes) — uncalibrated ensemble probs
     y_true : shape (n_samples,)           — integer class labels (0,1,2)
 
-    One-vs-Rest isotonic/platt — kaydedilir: data/calibrator.pkl
+    One-vs-Rest isotonic/platt/beta veya multi-class temperature scaling.
+    Kaydedilir: data/calibrator.pkl
     """
     if not _SKLEARN_VAR:
         raise CalibrationError("sklearn yok — isotonic kalibrasyon eğitilemez")
 
-    calibrators = {}
-    for c in range(X_probs.shape[1]):
-        y_c = (y_true == c).astype(int)
-        probe_c = X_probs[:, c]
+    X_probs = np.asarray(X_probs, dtype=np.float64)
+    y_true = np.asarray(y_true, dtype=int)
+    n_classes = X_probs.shape[1]
 
-        if method == "isotonic":
-            cal = IsotonicRegression(out_of_bounds="clip")
-            cal.fit(probe_c, y_c)
-        elif method == "platt":
-            cal = LogisticRegression()
-            cal.fit(probe_c.reshape(-1, 1), y_c)
-        else:
-            raise ValueError("Bilinmeyen kalibrasyon metodu: " + method)
+    calibrators = CalibratorDict()
+    calibrators["_metadata"] = {
+        "method": method,
+        "is_oof": is_oof,
+        "n_samples": len(y_true),
+        "timestamp": datetime.now(timezone.utc).isoformat()
+    }
 
-        calibrators[c] = {"model": cal, "method": method}
+    if method == "temperature":
+        # Global temperature optimization (NLL minimization)
+        from scipy.optimize import minimize
+        eps = 1e-7
+        logits = np.log(np.clip(X_probs, eps, 1.0 - eps))
+
+        def nll(T):
+            T = max(T[0], 0.05)
+            scaled = logits / T
+            exp_s = np.exp(scaled - np.max(scaled, axis=1, keepdims=True))
+            probs_s = exp_s / np.sum(exp_s, axis=1, keepdims=True)
+            y_one_hot = np.zeros_like(probs_s)
+            for i, c in enumerate(y_true):
+                y_one_hot[i, c] = 1.0
+            return -np.mean(np.sum(y_one_hot * np.log(np.clip(probs_s, eps, 1.0)), axis=1))
+
+        res = minimize(nll, [1.0], bounds=[(0.1, 5.0)], method="L-BFGS-B")
+        T_opt = float(res.x[0]) if res.success else 1.0
+        calibrators["_temperature"] = T_opt
+        calibrators["_global_method"] = "temperature"
+
+    elif method == "beta":
+        # Beta calibration: logistic on log(p) and log(1-p)
+        eps = 1e-6
+        for c in range(n_classes):
+            y_c = (y_true == c).astype(int)
+            probe_c = np.clip(X_probs[:, c], eps, 1.0 - eps)
+            feat = np.column_stack([np.log(probe_c), -np.log(1.0 - probe_c)])
+            cal = LogisticRegression(C=1.0)
+            cal.fit(feat, y_c)
+            calibrators[c] = {"model": cal, "method": "beta"}
+
+    else:
+        # One-vs-Rest isotonic or platt
+        for c in range(n_classes):
+            y_c = (y_true == c).astype(int)
+            probe_c = X_probs[:, c]
+
+            if method == "isotonic":
+                cal = IsotonicRegression(out_of_bounds="clip")
+                cal.fit(probe_c, y_c)
+            elif method == "platt":
+                cal = LogisticRegression()
+                cal.fit(probe_c.reshape(-1, 1), y_c)
+            else:
+                raise ValueError("Bilinmeyen kalibrasyon metodu: " + method)
+
+            calibrators[c] = {"model": cal, "method": method}
 
     os.makedirs(os.path.dirname(CALIBRATOR_PATH), exist_ok=True)
     with open(CALIBRATOR_PATH, "wb") as f:
         pickle.dump(calibrators, f)
 
     return calibrators
+
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -160,6 +337,16 @@ def _raw_apply_calibration(probs: np.ndarray) -> "np.ndarray | None":
     if is_1d:
         probs_arr = probs_arr.reshape(1, -1)
 
+    # Global method check (e.g. temperature scaling)
+    if calibrators.get("_global_method") == "temperature":
+        T = float(calibrators.get("_temperature", 1.0))
+        eps = 1e-7
+        logits = np.log(np.clip(probs_arr, eps, 1.0 - eps))
+        scaled = logits / max(T, 0.05)
+        exp_s = np.exp(scaled - np.max(scaled, axis=1, keepdims=True))
+        new_probs = exp_s / np.sum(exp_s, axis=1, keepdims=True)
+        return new_probs[0] if is_1d else new_probs
+
     n_classes = probs_arr.shape[1]
     new_probs = np.zeros_like(probs_arr, dtype=np.float64)
 
@@ -174,8 +361,14 @@ def _raw_apply_calibration(probs: np.ndarray) -> "np.ndarray | None":
             new_probs[:, c] = model.predict(probe_c)
         elif method == "platt":
             new_probs[:, c] = model.predict_proba(probe_c.reshape(-1, 1))[:, 1]
+        elif method == "beta":
+            eps = 1e-6
+            pr = np.clip(probe_c, eps, 1.0 - eps)
+            feat = np.column_stack([np.log(pr), -np.log(1.0 - pr)])
+            new_probs[:, c] = model.predict_proba(feat)[:, 1]
         else:
             return None
+
 
     # Isotonic dominant-class amplification guard:
     # Eğer isotonic herhangi bir sınıfı %90 üstüne itiyorsa etkiyi %50 karıştır

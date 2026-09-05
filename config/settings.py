@@ -47,14 +47,18 @@ MODEL_YENILEME_GUN     = 7     # GBM modeli 7 günde bir yenilenir (eskisi: 30)
 
 # ── Ligler ───────────────────────────────────────────────────
 LIGLER = {
-    # ✅ HEDEFLENEN ASİMETRİK / İKİNCİL PİYASALAR (GOL VE KG İÇİN)
+    "PL":  {"isim": "Premier League",    "odds_key": "soccer_epl",                    "football_data": True,  "api_football_id": 39},
+    "PD":  {"isim": "La Liga",           "odds_key": "soccer_spain_la_liga",          "football_data": True,  "api_football_id": 140},
+    "BL1": {"isim": "Bundesliga",        "odds_key": "soccer_germany_bundesliga",     "football_data": True,  "api_football_id": 78},
+    "SA":  {"isim": "Serie A",           "odds_key": "soccer_italy_serie_a",          "football_data": True,  "api_football_id": 135},
     "FL1": {"isim": "Ligue 1",           "odds_key": "soccer_france_ligue_one",       "football_data": True,  "api_football_id": 61},
     "PPL": {"isim": "Primeira Liga",     "odds_key": "soccer_portugal_primeira_liga", "football_data": True,  "api_football_id": 94},
-    "BSA": {"isim": "Brasileirao",       "odds_key": "soccer_brazil_campeonato",      "football_data": False, "api_football_id": 71},
+    "DED": {"isim": "Eredivisie",        "odds_key": "soccer_netherlands_eredivisie", "football_data": True,  "api_football_id": 88},
+    "ELC": {"isim": "Championship",      "odds_key": "soccer_efl_champ",              "football_data": True,  "api_football_id": 40},
+    "CL":  {"isim": "Champions League",  "odds_key": "soccer_uefa_champs_league",    "football_data": True,  "api_football_id": 2},
     "TSL": {"isim": "Süper Lig",         "odds_key": "soccer_turkey_super_league",    "football_data": False, "api_football_id": 203},
     "BL2": {"isim": "2. Bundesliga",     "odds_key": "soccer_germany_bundesliga2",    "football_data": False, "api_football_id": 79},
-    "ELC": {"isim": "Championship",      "odds_key": "soccer_efl_champ",              "football_data": True,  "api_football_id": 40},
-    "DED": {"isim": "Eredivisie",        "odds_key": "soccer_netherlands_eredivisie", "football_data": True,  "api_football_id": 88},
+    "BSA": {"isim": "Brasileirao",       "odds_key": "soccer_brazil_campeonato",      "football_data": False, "api_football_id": 71},
 }
 
 # ════════════════════════════════════════════════════════════════

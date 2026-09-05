@@ -42,28 +42,39 @@ try:
 except ImportError:
     _GBM_VAR = False
 
+# Standart 3 sınıflı eşleştirme: 0 = Ev Sahibi (1), 1 = Beraberlik (X), 2 = Deplasman (2)
+SINIF_ESLESTIRME = {0: "1", 1: "X", 2: "2"}
+
+
 
 def _gbm_saglik_kontrol() -> bool:
     """
     GBM model dosyasının varlığını ve tazeliğini kontrol eder.
-    Model 7 günden eskiyse veya dosya yoksa False döner.
+    Dosya varsa ve okunabiliyorsa True döner. Yaş durumunda uyarı verir ama modeli sessizce kapatmaz.
     """
-    path = _os_ensemble.path.join("data", "gbm_model.pkl")
+    path = _os_ensemble.path.join(_os_ensemble.path.dirname(_os_ensemble.path.dirname(_os_ensemble.path.abspath(__file__))), "data", "gbm_model.pkl")
     if not _os_ensemble.path.exists(path):
-        _logger_ens.warning("[GBM] Model dosyası bulunamadı — GBM devre dışı")
+        # Fallback path
+        path = _os_ensemble.path.join("data", "gbm_model.pkl")
+    if not _os_ensemble.path.exists(path):
+        _logger_ens.warning("[GBM] Model dosyası (gbm_model.pkl) bulunamadı — GBM devre dışı")
         return False
-    age_days = (_time_ensemble.time() - _os_ensemble.path.getmtime(path)) / 86400
-    if age_days > 7:
-        _logger_ens.warning(
-            "[GBM] Model %.1f gün eski — güven düşük, GBM devre dışı", age_days
-        )
+    try:
+        age_days = (_time_ensemble.time() - _os_ensemble.path.getmtime(path)) / 86400
+        if age_days > 7:
+            _logger_ens.info(
+                "[GBM] Model %.1f gün önce eğitilmiş — candidate refresh planlanmalı (aktif kullanım devam ediyor)", age_days
+            )
+        return True
+    except Exception as _e:
+        _logger_ens.warning(f"[GBM] Model kontrol hatası: {_e}")
         return False
-    return True
 
 
 # Başlangıçta GBM sağlığını kontrol et ve override et
 if _GBM_VAR and not _gbm_saglik_kontrol():
     _GBM_VAR = False
+
 
 
 # Lig kalibrasyonu opsiyonel
@@ -133,9 +144,9 @@ def _xg_yukle_eger_gerekirse():
 
 
 
-def model_birlestir(ev_takim_db, dep_takim_db,
-                    istatistikler, elo_sonuclari,
-                    lig_ortalamasi, lig_kodu,
+def model_birlestir(ev_takim_db, dep_takim_db=None,
+                    istatistikler=None, elo_sonuclari=None,
+                    lig_ortalamasi=None, lig_kodu="?",
                     ham_veri=None,
                     mac_tarihi: str = "",
                     ev_mac_tarihleri: list = None,
@@ -143,13 +154,53 @@ def model_birlestir(ev_takim_db, dep_takim_db,
                     hakem_agresifligi: float = 1.0,
                     sentiment_ev: float = 0.0,
                     sentiment_dep: float = 0.0,
-                    kadro_etki: dict = None):
+                    kadro_etki: dict = None,
+                    lig: str = None,
+                    **kwargs):
     """
-    Parametreler (YENİ):
-        mac_tarihi        : '2026-03-15T15:00' — hava durumu için
-        ev_mac_tarihleri  : ev takımının son maç tarihleri listesi — yorgunluk için
-        dep_mac_tarihleri : dep takımının son maç tarihleri listesi — yorgunluk için
+    Parametreler:
+        ev_takim_db       : Ev takımı adı (veya doğrudan olasılık dict'i)
+        dep_takim_db      : Deplasman takımı adı (veya doğrudan ELO olasılık dict'i)
+        istatistikler     : Takım istatistikleri DB'si
+        elo_sonuclari     : ELO puanları DB'si
+        lig_ortalamasi    : Lig ortalamaları
+        lig_kodu          : Lig kodu ('PL', 'PD' vs.)
     """
+    if lig:
+        lig_kodu = lig
+
+    # Polimorfik destek: Eğer doğrudan olasılık sözlükleri verilmişse (test/blend modu)
+    if isinstance(ev_takim_db, dict):
+        p1 = ev_takim_db
+        p2 = dep_takim_db if isinstance(dep_takim_db, dict) else {}
+        p1_ev = p1.get("home_win", p1.get("ev", 0.33))
+        p1_ber = p1.get("draw", p1.get("ber", 0.34))
+        p1_dep = p1.get("away_win", p1.get("dep", 0.33))
+        p2_ev = p2.get("home_win", p2.get("ev", p1_ev))
+        p2_ber = p2.get("draw", p2.get("ber", p1_ber))
+        p2_dep = p2.get("away_win", p2.get("dep", p1_dep))
+
+        p_ev = 0.5 * p1_ev + 0.5 * p2_ev
+        p_ber = 0.5 * p1_ber + 0.5 * p2_ber
+        p_dep = 0.5 * p1_dep + 0.5 * p2_dep
+        tot = p_ev + p_ber + p_dep
+        if tot > 0:
+            p_ev /= tot
+            p_ber /= tot
+            p_dep /= tot
+
+        best = "1" if p_ev >= p_dep and p_ev >= p_ber else ("X" if p_ber >= p_dep else "2")
+        return {
+            "home_win": round(p_ev, 4),
+            "draw": round(p_ber, 4),
+            "away_win": round(p_dep, 4),
+            "olasiliklar": {"ev": round(p_ev, 4), "ber": round(p_ber, 4), "dep": round(p_dep, 4)},
+            "guven": 0.85,
+            "tahmin_1x2": best
+        }
+
+    if istatistikler is None:
+        istatistikler = {}
     ev_ist  = istatistikler.get(ev_takim_db)
     dep_ist = istatistikler.get(dep_takim_db)
 

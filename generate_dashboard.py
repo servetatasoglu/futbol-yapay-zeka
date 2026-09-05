@@ -177,6 +177,9 @@ def fetch_upcoming_matches():
                     "status": "TIMED",
                     "score": {"fullTime": {"home": None, "away": None}},
                 })
+    except Exception as e:
+        print(f"  ⚠️ Odds upcoming fetch error: {e}")
+
     # 3. Her lig için eksik maç kontrolü (Her ligin bültende en az 4-5 maçı olsun)
     LEAGUE_TEAMS = {
         "TSL": [("Galatasaray", "Fenerbahçe"), ("Trabzonspor", "Beşiktaş"), ("Başakşehir", "Samsunspor"), ("Eyüpspor", "Göztepe"), ("Kasımpaşa", "Antalyaspor")],
@@ -585,11 +588,16 @@ def load_extended_stats():
         for lig, mac_list in maclar.items():
             lig_isim = {
                 "TSL": "Süper Lig (TR)",
+                "PL": "Premier League (UK)",
+                "PD": "La Liga (ES)",
+                "SA": "Serie A (IT)",
+                "BL1": "Bundesliga (DE)",
                 "FL1": "Ligue 1 (FR)",
                 "PPL": "Primeira Liga (PT)",
-                "BL2": "2. Bundesliga (DE)",
+                "DED": "Eredivisie (NL)",
                 "ELC": "Championship (UK)",
-                "DED": "Eredivisie (NL)"
+                "BL2": "2. Bundesliga (DE)",
+                "CL": "Champions League"
             }.get(lig, lig)
 
             for m in mac_list:
@@ -1129,227 +1137,6 @@ def kupon_onerisi(bets):
         "beklenen_deger": round(kombine_edge * 100, 1)
     }
 
-def generate_dashboard_data(live_signals=None):
-    """
-    Produce dashboard_data.json from the full CLV bet log.
-    Uses live_signals for Bet of the Day (Kupon).
-    """
-    db = _load_clv_db()
-    bets = db.get("bahisler", [])
-    raporlar = db.get("gunluk_raporlar", [])
-
-    # --- Load Predictions for Finished Matches ---
-    predictions_list = []
-    
-    # 1. Load from all_predictions_archive.json (New persistent archive)
-    try:
-        archive_path = os.path.join(BASE, "logs", "all_predictions_archive.json")
-        if os.path.exists(archive_path):
-            with open(archive_path, "r", encoding="utf-8") as f:
-                archive_data = json.load(f)
-                for key, p in archive_data.items():
-                    predictions_list.append({
-                        "ev": p.get("ev", "").lower(),
-                        "dep": p.get("dep", "").lower(),
-                        "tahmin": p.get("tahmin", ""),
-                        "date": p.get("date", "")
-                    })
-    except Exception as e:
-        print(f"  ⚠️ Error parsing archive: {e}")
-
-    # 2. Load from tahminler_log.csv (Legacy fallback)
-    try:
-        tahminler_path = os.path.join(BASE, "logs", "tahminler_log.csv")
-        if os.path.exists(tahminler_path):
-            with open(tahminler_path, "r", encoding="utf-8") as f:
-                header = next(f, None)
-                for line in f:
-                    parts = line.strip().split(",")
-                    if len(parts) > 35: # Make sure it has enough columns
-                        ev = clean_team_name(parts[1]).lower()
-                        dep = clean_team_name(parts[2]).lower()
-                        tahmin = parts[4]
-                        
-                        # Date is in format 09.03.2026 03:44 or 2026-03-09T...
-                        tarih_ham = parts[35] # MacTarihi column is index 35
-                        date_str = ""
-                        if "T" in tarih_ham:
-                            date_str = tarih_ham.split("T")[0]
-                        else:
-                            date_str = tarih_ham.split(" ")[0] # Fallback
-                            
-                        predictions_list.append({
-                            "ev": ev,
-                            "dep": dep,
-                            "tahmin": tahmin,
-                            "date": date_str
-                        })
-    except Exception as e:
-        print(f"  ⚠️ Error parsing predictions: {e}")
-
-    # --- Finished Matches (En güncel biten maçlar - AI Yorumlu & İstatistikli) ---
-    finished_matches = []
-    try:
-        standings, team_recent, processed_matches, _ls = load_extended_stats()
-        
-        # Lig bazında en güncel 30'ar maçı seç (Süper Lig TSL dahil tüm ligler eşit temsil edilsin)
-        fgroups = defaultdict(list)
-        for fm_item in processed_matches:
-            l_code = fm_item.get('lig_kodu', fm_item.get('lig', 'TSL'))
-            fgroups[l_code].append(fm_item)
-
-        balanced_finished = []
-        for l_code, m_lst in fgroups.items():
-            m_lst.sort(key=lambda x: str(x.get('tarih', '')), reverse=True)
-            balanced_finished.extend(m_lst[:30])
-
-        balanced_finished.sort(key=lambda x: str(x.get('tarih', '')), reverse=True)
-        finished_matches = balanced_finished
-
-    except Exception as e:
-        print(f"  ⚠️ Error parsing finished matches: {e}")
-
-        print(f"  ⚠️ Error parsing finished matches: {e}")
-
-    total_bets = len(bets)
-    if total_bets == 0:
-        # Empty state — write minimal valid JSON so dashboard doesn't crash
-        return _write_empty_dashboard(live_signals, finished_matches)
-
-    # --- Win/Loss (estimate from CLV if sonuc is None) ---
-    wins = [b for b in bets if b.get("sonuc") == "kazandi"]
-    losses = [b for b in bets if b.get("sonuc") == "kaybetti"]
-    resolved = len(wins) + len(losses)
-
-    # --- Edge & CLV arrays ---
-    edges = [b.get("edge", 0) for b in bets if b.get("edge")]
-    clv_vals = [b["clv"] for b in bets if b.get("clv") is not None and isinstance(b["clv"], (int, float))]
-    kelly_vals = [b.get("kelly", 0) for b in bets if b.get("kelly")]
-
-    avg_edge = float(np.mean(edges) * 100) if edges else 0
-    avg_clv = float(np.mean(clv_vals) * 100) if clv_vals else 0
-    avg_kelly = float(np.mean(kelly_vals) * 100) if kelly_vals else 0
-
-    # --- Simulated equity curve from edge-weighted Kelly ---
-    bankroll = 10000.0
-    equity_curve = [{"bet_index": 0, "bankroll": bankroll}]
-    peak = bankroll
-    max_dd = 0.0
-
-    for i, b in enumerate(bets):
-        edge = b.get("edge", 0)
-        oran = b.get("oran_alinma", 2.0)
-        size = b.get("kelly", 0.01)
-        sonuc = b.get("sonuc")
-
-        if sonuc == "kazandi":
-            bankroll += bankroll * size * (oran - 1)
-        elif sonuc == "kaybetti":
-            bankroll -= bankroll * size
-        # else: unresolved — bankroll stays flat
-
-        equity_curve.append({"bet_index": i + 1, "bankroll": round(bankroll, 2)})
-        if bankroll > peak:
-            peak = bankroll
-        dd = (peak - bankroll) / peak if peak > 0 else 0
-        if dd > max_dd:
-            max_dd = dd
-
-    final_br = bankroll
-    roi = ((final_br - 10000.0) / 10000.0) * 100
-    win_rate = (len(wins) / resolved * 100) if resolved > 0 else 0
-
-    # --- Verdict ---
-    # Institutional Grade Verification: Requires both positive CLV and statistical significance
-    if roi > 0 and avg_clv > 0 and p_value < 0.05:
-        verdict = "PROFITABLE (95% CI VERIFIED)"
-    elif roi > 0 and avg_clv > 0:
-        verdict = "PROFITABLE (AWAITING 95% CI)"
-    elif roi > 0:
-        verdict = "EDGE UNVERIFIED (NEGATIVE CLV)"
-    elif avg_clv > 0:
-        verdict = "POSITIVE EV (VARIANCE DOWN)"
-    else:
-        verdict = "SYSTEM BLEEDING (HALT TRADING)"
-
-    # --- League Attribution ---
-    league_data = defaultdict(lambda: {"pnl": 0.0, "clv_list": [], "count": 0})
-    for b in bets:
-        lig = b.get("lig", "?")
-        edge = b.get("edge", 0)
-        clv = b.get("clv")
-        league_data[lig]["count"] += 1
-        league_data[lig]["pnl"] += edge * b.get("kelly", 0.01) * 10000  # notional PNL
-        if clv is not None and isinstance(clv, (int, float)):
-            league_data[lig]["clv_list"].append(clv)
-
-    attr_league = {}
-    for lig, d in league_data.items():
-        attr_league[lig] = {
-            "pnl": round(d["pnl"], 2),
-            "clv": round(float(np.mean(d["clv_list"])) * 100, 2) if d["clv_list"] else 0,
-            "count": d["count"]
-        }
-
-    # --- Odds Range Attribution ---
-    odds_ranges = {"<1.50": {"pnl": 0.0, "count": 0}, "1.50-2.00": {"pnl": 0.0, "count": 0},
-                   "2.00-3.00": {"pnl": 0.0, "count": 0}, ">3.00": {"pnl": 0.0, "count": 0}}
-    for b in bets:
-        o = b.get("oran_alinma", 2.0)
-        edge = b.get("edge", 0)
-        pnl = edge * b.get("kelly", 0.01) * 10000
-        if o < 1.50:
-            rng = "<1.50"
-        elif o < 2.00:
-            rng = "1.50-2.00"
-        elif o < 3.00:
-            rng = "2.00-3.00"
-        else:
-            rng = ">3.00"
-        odds_ranges[rng]["pnl"] += pnl
-        odds_ranges[rng]["count"] += 1
-
-    attr_odds = {k: {"pnl": round(v["pnl"], 2), "count": v["count"]} for k, v in odds_ranges.items()}
-
-    # --- Statistics ---
-    p_value = _bootstrap_p_value(edges) if len(edges) >= 5 else 1.0
-    edge_reliability = _edge_reliability(edges, clv_vals) if clv_vals else 0.0
-    overfit_risk = "LOW" if roi < 50 else ("MODERATE" if roi < 150 else "HIGH")
-
-    # --- Bets table (last 100) ---
-    bet_table = []
-    for b in bets[-100:]:
-        sonuc = b.get("sonuc")
-        edge = b.get("edge", 0)
-        oran = b.get("oran_alinma", 2.0)
-        kelly = b.get("kelly", 0.01)
-        if sonuc == "kazandi":
-            pnl = kelly * 10000 * (oran - 1)
-            is_win = True
-        elif sonuc == "kaybetti":
-            pnl = -kelly * 10000
-            is_win = False
-        else:
-            # Henüz sonuçlanmamış bahis — pnl=0, pending
-            pnl = 0.0
-            is_win = None  # PENDING
-
-        bet_table.append({
-            "ev": clean_team_name(b.get("ev", "")),
-            "dep": clean_team_name(b.get("dep", "")),
-            "lig": b.get("lig", "?"),
-            "tahmin": b.get("tahmin", ""),
-            "best_odds": float(oran),
-            "edge": edge,
-            "clv_value": b.get("clv", 0) or 0,
-            "pnl": round(pnl, 2),
-            "is_win": is_win,
-            "gercek_skor": b.get("gercek_skor"),
-            "date": b.get("mac_tarihi") if b.get("mac_tarihi") else b.get("tarih", "")
-        })
-
-
-
 def compute_ai_learning_metrics(finished_matches):
     """
     Faz 3 AI Öğrenme & Kalibrasyon Modülü:
@@ -1431,6 +1218,223 @@ def compute_ai_learning_metrics(finished_matches):
     }
 
 
+def generate_dashboard_data(live_signals=None):
+    """
+    Produce dashboard_data.json from the full CLV bet log.
+    Uses live_signals for Bet of the Day (Kupon).
+    """
+    db = _load_clv_db()
+    bets = db.get("bahisler", [])
+    raporlar = db.get("gunluk_raporlar", [])
+
+    # --- Load Predictions for Finished Matches ---
+    predictions_list = []
+    
+    # 1. Load from all_predictions_archive.json (New persistent archive)
+    try:
+        archive_path = os.path.join(BASE, "logs", "all_predictions_archive.json")
+        if os.path.exists(archive_path):
+            with open(archive_path, "r", encoding="utf-8") as f:
+                archive_data = json.load(f)
+                for key, p in archive_data.items():
+                    predictions_list.append({
+                        "ev": p.get("ev", "").lower(),
+                        "dep": p.get("dep", "").lower(),
+                        "tahmin": p.get("tahmin", ""),
+                        "date": p.get("date", "")
+                    })
+    except Exception as e:
+        print(f"  ⚠️ Error parsing archive: {e}")
+
+    # 2. Load from tahminler_log.csv (Legacy fallback)
+    try:
+        tahminler_path = os.path.join(BASE, "logs", "tahminler_log.csv")
+        if os.path.exists(tahminler_path):
+            with open(tahminler_path, "r", encoding="utf-8") as f:
+                header = next(f, None)
+                for line in f:
+                    parts = line.strip().split(",")
+                    if len(parts) > 35: # Make sure it has enough columns
+                        ev = clean_team_name(parts[1]).lower()
+                        dep = clean_team_name(parts[2]).lower()
+                        tahmin = parts[4]
+                        
+                        # Date is in format 09.03.2026 03:44 or 2026-03-09T...
+                        tarih_ham = parts[35] # MacTarihi column is index 35
+                        date_str = ""
+                        if "T" in tarih_ham:
+                            date_str = tarih_ham.split("T")[0]
+                        else:
+                            date_str = tarih_ham.split(" ")[0] # Fallback
+                            
+                        predictions_list.append({
+                            "ev": ev,
+                            "dep": dep,
+                            "tahmin": tahmin,
+                            "date": date_str
+                        })
+    except Exception as e:
+        print(f"  ⚠️ Error parsing predictions: {e}")
+
+    # --- Finished Matches (En güncel biten maçlar - AI Yorumlu & İstatistikli) ---
+    finished_matches = []
+    try:
+        standings, team_recent, processed_matches, _ls = load_extended_stats()
+        
+        # Lig bazında en güncel 30'ar maçı seç (Süper Lig TSL dahil tüm ligler eşit temsil edilsin)
+        fgroups = defaultdict(list)
+        for fm_item in processed_matches:
+            l_code = fm_item.get('lig_kodu', fm_item.get('lig', 'TSL'))
+            fgroups[l_code].append(fm_item)
+
+        balanced_finished = []
+        for l_code, m_lst in fgroups.items():
+            m_lst.sort(key=lambda x: str(x.get('tarih', '')), reverse=True)
+            balanced_finished.extend(m_lst[:30])
+
+        balanced_finished.sort(key=lambda x: str(x.get('tarih', '')), reverse=True)
+        finished_matches = balanced_finished
+
+    except Exception as e:
+        print(f"  ⚠️ Error parsing finished matches: {e}")
+
+    total_bets = len(bets)
+    if total_bets == 0:
+        # Empty state — write minimal valid JSON so dashboard doesn't crash
+        return _write_empty_dashboard(live_signals, finished_matches)
+
+    # --- Win/Loss (estimate from CLV if sonuc is None) ---
+    wins = [b for b in bets if b.get("sonuc") == "kazandi"]
+    losses = [b for b in bets if b.get("sonuc") == "kaybetti"]
+    resolved = len(wins) + len(losses)
+
+    # --- Edge & CLV arrays ---
+    edges = [b.get("edge", 0) for b in bets if b.get("edge")]
+    clv_vals = [b["clv"] for b in bets if b.get("clv") is not None and isinstance(b["clv"], (int, float))]
+    kelly_vals = [b.get("kelly", 0) for b in bets if b.get("kelly")]
+
+    avg_edge = float(np.mean(edges) * 100) if edges else 0
+    avg_clv = float(np.mean(clv_vals) * 100) if clv_vals else 0
+    avg_kelly = float(np.mean(kelly_vals) * 100) if kelly_vals else 0
+
+    # --- Simulated equity curve from edge-weighted Kelly ---
+    bankroll = 10000.0
+    equity_curve = [{"bet_index": 0, "bankroll": bankroll}]
+    peak = bankroll
+    max_dd = 0.0
+
+    for i, b in enumerate(bets):
+        edge = b.get("edge", 0)
+        oran = b.get("oran_alinma", 2.0)
+        size = b.get("kelly", 0.01)
+        sonuc = b.get("sonuc")
+
+        if sonuc == "kazandi":
+            bankroll += bankroll * size * (oran - 1)
+        elif sonuc == "kaybetti":
+            bankroll -= bankroll * size
+        # else: unresolved — bankroll stays flat
+
+        equity_curve.append({"bet_index": i + 1, "bankroll": round(bankroll, 2)})
+        if bankroll > peak:
+            peak = bankroll
+        dd = (peak - bankroll) / peak if peak > 0 else 0
+        if dd > max_dd:
+            max_dd = dd
+
+    final_br = bankroll
+    roi = ((final_br - 10000.0) / 10000.0) * 100
+    win_rate = (len(wins) / resolved * 100) if resolved > 0 else 0
+
+    # --- Statistics (Computed before Verdict) ---
+    p_value = _bootstrap_p_value(edges) if len(edges) >= 5 else 1.0
+    edge_reliability = _edge_reliability(edges, clv_vals) if clv_vals else 0.0
+    overfit_risk = "LOW" if roi < 50 else ("MODERATE" if roi < 150 else "HIGH")
+
+    # --- Verdict ---
+    # Institutional Grade Verification: Requires both positive CLV and statistical significance
+    if roi > 0 and avg_clv > 0 and p_value < 0.05:
+        verdict = "PROFITABLE (95% CI VERIFIED)"
+    elif roi > 0 and avg_clv > 0:
+        verdict = "PROFITABLE (AWAITING 95% CI)"
+    elif roi > 0:
+        verdict = "EDGE UNVERIFIED (NEGATIVE CLV)"
+    elif avg_clv > 0:
+        verdict = "POSITIVE EV (VARIANCE DOWN)"
+    else:
+        verdict = "SYSTEM BLEEDING (HALT TRADING)"
+
+    # --- League Attribution ---
+    league_data = defaultdict(lambda: {"pnl": 0.0, "clv_list": [], "count": 0})
+    for b in bets:
+        lig = b.get("lig", "?")
+        edge = b.get("edge", 0)
+        clv = b.get("clv")
+        league_data[lig]["count"] += 1
+        league_data[lig]["pnl"] += edge * b.get("kelly", 0.01) * 10000  # notional PNL
+        if clv is not None and isinstance(clv, (int, float)):
+            league_data[lig]["clv_list"].append(clv)
+
+    attr_league = {}
+    for lig, d in league_data.items():
+        attr_league[lig] = {
+            "pnl": round(d["pnl"], 2),
+            "clv": round(float(np.mean(d["clv_list"])) * 100, 2) if d["clv_list"] else 0,
+            "count": d["count"]
+        }
+
+    # --- Odds Range Attribution ---
+    odds_ranges = {"<1.50": {"pnl": 0.0, "count": 0}, "1.50-2.00": {"pnl": 0.0, "count": 0},
+                   "2.00-3.00": {"pnl": 0.0, "count": 0}, ">3.00": {"pnl": 0.0, "count": 0}}
+    for b in bets:
+        o = b.get("oran_alinma", 2.0)
+        edge = b.get("edge", 0)
+        pnl = edge * b.get("kelly", 0.01) * 10000
+        if o < 1.50:
+            rng = "<1.50"
+        elif o < 2.00:
+            rng = "1.50-2.00"
+        elif o < 3.00:
+            rng = "2.00-3.00"
+        else:
+            rng = ">3.00"
+        odds_ranges[rng]["pnl"] += pnl
+        odds_ranges[rng]["count"] += 1
+
+    attr_odds = {k: {"pnl": round(v["pnl"], 2), "count": v["count"]} for k, v in odds_ranges.items()}
+
+    # --- Bets table (last 100) ---
+    bet_table = []
+    for b in bets[-100:]:
+        sonuc = b.get("sonuc")
+        edge = b.get("edge", 0)
+        oran = b.get("oran_alinma", 2.0)
+        kelly = b.get("kelly", 0.01)
+        if sonuc == "kazandi":
+            pnl = kelly * 10000 * (oran - 1)
+            is_win = True
+        elif sonuc == "kaybetti":
+            pnl = -kelly * 10000
+            is_win = False
+        else:
+            # Henüz sonuçlanmamış bahis — pnl=0, pending
+            pnl = 0.0
+            is_win = None  # PENDING
+
+        bet_table.append({
+            "ev": clean_team_name(b.get("ev", "")),
+            "dep": clean_team_name(b.get("dep", "")),
+            "lig": b.get("lig", "?"),
+            "tahmin": b.get("tahmin", ""),
+            "best_odds": float(oran),
+            "edge": edge,
+            "clv_value": b.get("clv", 0) or 0,
+            "pnl": round(pnl, 2),
+            "is_win": is_win,
+            "gercek_skor": b.get("gercek_skor"),
+            "date": b.get("mac_tarihi") if b.get("mac_tarihi") else b.get("tarih", "")
+        })
+
     data_json = {
         "summary": {
             "total_bets": total_bets,
@@ -1456,6 +1460,9 @@ def compute_ai_learning_metrics(finished_matches):
         "attribution_odds": attr_odds,
         "bets": bet_table,
         "live_signals": live_signals if live_signals else [],
+        "standings": dict(standings),
+        "league_standings": _ls,
+        "total_matches_count": len(processed_matches),
         "kupon": kupon_onerisi(live_signals if live_signals else []),
         "finished_matches": finished_matches,
         "ai_metrics": compute_ai_learning_metrics(finished_matches)

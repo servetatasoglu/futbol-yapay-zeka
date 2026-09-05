@@ -75,7 +75,8 @@ jobs:
       run: |
         git config --global user.name "QuantBet AI Engine"
         git config --global user.email "bot@quantbet.ai"
-        git add logs/ data/clv_bet_log.json data/performance_report.json data/football_advanced.db dashboard.html live_signals.json || true
+        git add logs/ data/clv_bet_log.json data/performance_report.json data/football_advanced.db data/calibrator.pkl dashboard.html live_signals.json || true
         git commit -m "🤖 [Pipeline Update] Model Logs, Settled Bets & Dashboard [skip ci]" || echo "Değişiklik yok"
-        git push
+        git pull --rebase origin main || true
+        git push origin main || git push || true
 

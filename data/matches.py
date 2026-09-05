@@ -259,8 +259,53 @@ def mac_verisi_cek():
 
 
 def veri_yukle() -> dict:
-    if not os.path.exists(DATA_PATH):
-        _ornek_veri_olustur()
+    """
+    Tüm liglerin maç verilerini yükler.
+    Eğer sezon_cache klasöründe dosyalar varsa, tüm sezonları eksiksiz birleştirir
+    ve maclar.json'ı senkronize tutar.
+    """
+    tum_maclar = {}
+    if os.path.exists(CACHE_DIR):
+        import glob
+        cache_dosyalari = glob.glob(os.path.join(CACHE_DIR, "*.json"))
+        if cache_dosyalari:
+            for cdosya in sorted(cache_dosyalari):
+                fname = os.path.basename(cdosya)
+                lig_kodu = fname.split("_")[0]
+                try:
+                    with open(cdosya, "r", encoding="utf-8") as f:
+                        cdata = json.load(f)
+                    maclar = cdata.get("maclar", [])
+                    if maclar:
+                        if lig_kodu not in tum_maclar:
+                            tum_maclar[lig_kodu] = []
+                        # ID veya (ev, dep, tarih) ile deduplicate
+                        mevcut_ids = {
+                            str(m.get("id") or f"{m.get('homeTeam',{}).get('name')}_{m.get('awayTeam',{}).get('name')}_{m.get('utcDate')}")
+                            for m in tum_maclar[lig_kodu]
+                        }
+                        for m in maclar:
+                            mid = str(m.get("id") or f"{m.get('homeTeam',{}).get('name')}_{m.get('awayTeam',{}).get('name')}_{m.get('utcDate')}")
+                            if mid not in mevcut_ids:
+                                tum_maclar[lig_kodu].append(m)
+                                mevcut_ids.add(mid)
+                except Exception as e:
+                    print(f"  ⚠️ Cache okuma hatası ({fname}): {e}")
+
+    if tum_maclar:
+        # maclar.json'ı güncelle
+        try:
+            with open(DATA_PATH, "w", encoding="utf-8") as f:
+                json.dump(tum_maclar, f, ensure_ascii=False, indent=2)
+        except Exception:
+            pass
+        return tum_maclar
+
+    if os.path.exists(DATA_PATH):
+        with open(DATA_PATH, "r", encoding="utf-8") as f:
+            return json.load(f)
+
+    _ornek_veri_olustur()
     with open(DATA_PATH, "r", encoding="utf-8") as f:
         return json.load(f)
 

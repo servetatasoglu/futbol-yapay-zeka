@@ -199,6 +199,43 @@ def elo_point_in_time_hesapla(veri: dict) -> dict:
     return pit_records
 
 
+def get_team_elo_point_in_time(veri: dict, takim_adi: str, cutoff_date: str = None) -> float:
+    """
+    Belirli bir takımın cutoff_date anındaki ELO puanını döndürür.
+    cutoff_date verilmezse en son ELO'yu döner.
+    """
+    elo_dict     = defaultdict(lambda: float(ELO_BASLANGIC))
+    mac_sayilari = defaultdict(int)
+
+    tum_maclar = []
+    for lig_kodu, maclar in veri.items():
+        for mac in maclar:
+            m = dict(mac)
+            m["_lig_kodu"] = lig_kodu
+            tum_maclar.append(m)
+
+    tum_maclar.sort(key=lambda m: m.get("utcDate", ""))
+
+    for mac in tum_maclar:
+        tarih = mac.get("utcDate", "")
+        if cutoff_date and tarih and tarih >= cutoff_date:
+            break
+
+        try:
+            ev      = mac["homeTeam"]["name"]
+            dep     = mac["awayTeam"]["name"]
+            ev_gol  = mac["score"]["fullTime"]["home"]
+            dep_gol = mac["score"]["fullTime"]["away"]
+            lig     = mac["_lig_kodu"]
+        except (KeyError, TypeError):
+            continue
+
+        if ev_gol is not None and dep_gol is not None:
+            elo_guncelle(elo_dict, lig, ev, dep, int(ev_gol), int(dep_gol), mac_sayilari)
+
+    return elo_dict[takim_adi]
+
+
 def elo_olasilik(ev_elo: float, dep_elo: float) -> dict:
     """
     İki takımın ELO değerlerinden maç sonucu olasılıklarını üretir.

@@ -1,42 +1,77 @@
 {
+  "SA": {
+    "brier_score": 0.5671,
+    "accuracy_pct": 56.7,
+    "matches_count": 30,
+    "learned_market_weight": 0.7,
+    "learned_model_weight": 0.3
+  },
+  "PD": {
+    "brier_score": 0.5963,
+    "accuracy_pct": 50.0,
+    "matches_count": 30,
+    "learned_market_weight": 0.7,
+    "learned_model_weight": 0.3
+  },
+  "TSL": {
+    "brier_score": 0.5756,
+    "accuracy_pct": 50.0,
+    "matches_count": 30,
+    "learned_market_weight": 0.7,
+    "learned_model_weight": 0.3
+  },
+  "BL1": {
+    "brier_score": 0.5636,
+    "accuracy_pct": 50.0,
+    "matches_count": 30,
+    "learned_market_weight": 0.7,
+    "learned_model_weight": 0.3
+  },
+  "PL": {
+    "brier_score": 0.5513,
+    "accuracy_pct": 73.3,
+    "matches_count": 30,
+    "learned_market_weight": 0.7,
+    "learned_model_weight": 0.3
+  },
   "PPL": {
-    "brier_score": 0.5797,
+    "brier_score": 0.58,
     "accuracy_pct": 60.0,
     "matches_count": 30,
     "learned_market_weight": 0.7,
     "learned_model_weight": 0.3
   },
   "FL1": {
-    "brier_score": 0.6155,
+    "brier_score": 0.6158,
     "accuracy_pct": 56.7,
     "matches_count": 30,
     "learned_market_weight": 0.7,
     "learned_model_weight": 0.3
   },
   "DED": {
-    "brier_score": 0.5441,
+    "brier_score": 0.5475,
     "accuracy_pct": 56.7,
     "matches_count": 30,
     "learned_market_weight": 0.7,
     "learned_model_weight": 0.3
   },
   "ELC": {
-    "brier_score": 0.6659,
+    "brier_score": 0.6658,
     "accuracy_pct": 36.7,
     "matches_count": 30,
     "learned_market_weight": 0.7,
     "learned_model_weight": 0.3
   },
   "BL2": {
-    "brier_score": 0.6248,
+    "brier_score": 0.6267,
     "accuracy_pct": 53.3,
     "matches_count": 30,
     "learned_market_weight": 0.7,
     "learned_model_weight": 0.3
   },
-  "TSL": {
-    "brier_score": 0.5641,
-    "accuracy_pct": 63.3,
+  "CL": {
+    "brier_score": 0.5494,
+    "accuracy_pct": 53.3,
     "matches_count": 30,
     "learned_market_weight": 0.7,
     "learned_model_weight": 0.3

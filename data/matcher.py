@@ -654,3 +654,55 @@ def eslestirme_raporu(mac_listesi: list, istatistikler: dict) -> dict:
 def eslestirme_orani_raporu(mac_listesi, istatistikler):
     r = eslestirme_raporu(mac_listesi, istatistikler)
     return r["eslesen"], r["toplam"], r["eslesmeyenler"]
+
+
+def odds_timestamp_gecerli_mi(odds_timestamp: str, kickoff_timestamp: str) -> bool:
+    """
+    Oran zaman damgasının maç başlama saatinden önce olup olmadığını doğrular.
+    Maç başladıktan sonra çekilen oranlar data leakage yaratır ve geçersizdir.
+    """
+    if not odds_timestamp or not kickoff_timestamp:
+        return False
+    try:
+        # ISO format standardizasyonu
+        o_str = str(odds_timestamp).replace("Z", "+00:00")
+        k_str = str(kickoff_timestamp).replace("Z", "+00:00")
+        from datetime import datetime
+        dt_odds = datetime.fromisoformat(o_str)
+        dt_kickoff = datetime.fromisoformat(k_str)
+        return dt_odds <= dt_kickoff
+    except Exception:
+        return str(odds_timestamp) <= str(kickoff_timestamp)
+
+
+def fikstur_tekillestir(fixtures: list) -> list:
+    """
+    Aynı gün ve aynı takımlara ait duplike fikstürleri tekilleştirir.
+    """
+    seen = set()
+    deduped = []
+    for f in fixtures:
+        ev = f.get("ev") or (f.get("homeTeam", {}).get("name") if isinstance(f.get("homeTeam"), dict) else "")
+        dep = f.get("dep") or (f.get("awayTeam", {}).get("name") if isinstance(f.get("awayTeam"), dict) else "")
+        tarih = str(f.get("tarih") or f.get("utcDate") or "")[:10]
+        key = f"{ev}|{dep}|{tarih}"
+        if key not in seen:
+            seen.add(key)
+            deduped.append(f)
+    return deduped
+
+
+def gelecek_mac_filtrele(fixtures: list, reference_time: str = None) -> list:
+    """
+    Geçmişte kalmış veya bitmiş maçları filtreler, sadece gelecekte oynanacak maçları döndürür.
+    """
+    from datetime import datetime
+    if not reference_time:
+        reference_time = datetime.now().strftime("%Y-%m-%dT%H:%M:%SZ")
+    
+    gelecek = []
+    for f in fixtures:
+        m_tarih = str(f.get("utcDate") or f.get("tarih") or "")
+        if m_tarih > reference_time:
+            gelecek.append(f)
+    return gelecek

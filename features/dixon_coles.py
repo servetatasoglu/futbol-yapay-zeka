@@ -2,12 +2,26 @@
 import math
 from collections import defaultdict
 
-def dinamik_rho_hesapla(lig_kodu: str, maclar: list) -> float:
+def dinamik_rho_hesapla(lig_kodu: str, maclar: list, cutoff_date: str = None) -> float:
     """
     Ligdeki son maçlara bakarak Dixon-Coles Bivariate Poisson `rho` katsayısını hesaplar.
-    Bu katsayı, ev sahibi ve deplasman golleri arasındaki korelasyonu (özellikle düşük skorlarda) modeller.
+    cutoff_date verilirse, yalnızca bu tarihten önceki maçlar kullanılır (Zero Leakage).
     """
-    if not maclar or len(maclar) < 50:
+    if not maclar:
+        from config.settings import LIG_RHO, LIG_RHO_VARSAYILAN
+        return LIG_RHO.get(lig_kodu, LIG_RHO_VARSAYILAN)
+
+    # Kronolojik sırala ve cutoff öncesi maçları filtrele
+    gecmis_maclar = []
+    for m in maclar:
+        tarih = m.get("utcDate", "")
+        if cutoff_date and tarih and tarih >= cutoff_date:
+            continue
+        gecmis_maclar.append(m)
+
+    gecmis_maclar.sort(key=lambda m: m.get("utcDate", ""))
+
+    if len(gecmis_maclar) < 50:
         from config.settings import LIG_RHO, LIG_RHO_VARSAYILAN
         return LIG_RHO.get(lig_kodu, LIG_RHO_VARSAYILAN)
 
@@ -21,12 +35,13 @@ def dinamik_rho_hesapla(lig_kodu: str, maclar: list) -> float:
     freq_01 = 0
     freq_11 = 0
 
-    for mac in maclar[-200:]: # Son 200 maç
+    for mac in gecmis_maclar[-200:]: # Son 200 maç
         try:
             hg = int(mac["score"]["fullTime"]["home"])
             dg = int(mac["score"]["fullTime"]["away"])
         except (KeyError, TypeError, ValueError):
             continue
+
             
         ev_gol_toplam += hg
         dep_gol_toplam += dg

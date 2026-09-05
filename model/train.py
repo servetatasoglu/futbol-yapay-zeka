@@ -74,12 +74,63 @@ def _ensemble_prob_matrix(X, modeller: dict) -> np.ndarray:
     return acc
 
 
-def train_calibrator_from_models(X, y, modeller: dict) -> bool:
-    """Ensemble olasılık matrisi ile isotonic kalibratörü kaydet."""
-    from calibration.calibration import train_calibrator
+def train_calibrator_from_models(X, y, modeller: dict, method: str = "isotonic") -> bool:
+    """
+    OOF (Out-of-Fold) tahminlerle kalibratör eğit.
 
-    acc = _ensemble_prob_matrix(X, modeller)
-    train_calibrator(acc, y, method="isotonic")
+    KRİTİK: In-sample tahminlerle kalibratör eğitmek data leakage'dir.
+    TimeSeriesSplit ile her fold'un validation kısmındaki ensemble tahminleri
+    toplanır ve calibrator YALNIZCA bu held-out tahminler üzerinden eğitilir.
+    """
+    from sklearn.model_selection import TimeSeriesSplit
+    from calibration.calibration import train_calibrator_oof
+
+    n_splits = 5
+    tscv = TimeSeriesSplit(n_splits=n_splits)
+
+    oof_probs = np.zeros((len(X), 3), dtype=np.float64)
+    oof_mask  = np.zeros(len(X), dtype=bool)
+
+    for fold_idx, (train_idx, val_idx) in enumerate(tscv.split(X)):
+        X_tr, y_tr = X[train_idx], y[train_idx]
+        X_val      = X[val_idx]
+
+        # Her model tipi için fold modeli eğit ve validation tahminleri topla
+        fold_preds = []
+        for isim, model in modeller.items():
+            try:
+                model_cls  = type(model)
+                fold_model = model_cls(**model.get_params())
+                fold_model.fit(X_tr, y_tr)
+
+                P    = fold_model.predict_proba(X_val)
+                cls  = getattr(fold_model, "classes_", np.array([0, 1, 2]))
+                pred = np.zeros((len(X_val), 3), dtype=np.float64)
+                for j in range(len(cls)):
+                    c = int(cls[j])
+                    if 0 <= c <= 2:
+                        pred[:, c] = P[:, j]
+                fold_preds.append(pred)
+            except Exception as e:
+                print(f"    ⚠️ OOF fold {fold_idx} model '{isim}' hatası: {e}")
+                continue
+
+        if fold_preds:
+            avg_pred = np.mean(fold_preds, axis=0)
+            oof_probs[val_idx] = avg_pred
+            oof_mask[val_idx]  = True
+
+    # Sadece OOF tahmin yapılan örnekleri kullan
+    valid_idx = np.where(oof_mask)[0]
+    if len(valid_idx) < 100:
+        print(f"  ⚠️ OOF kalibrasyon için yetersiz örnek: {len(valid_idx)}")
+        return False
+
+    oof_X = oof_probs[valid_idx]
+    oof_y = y[valid_idx]
+
+    print(f"  📊 OOF Kalibrasyon: {len(valid_idx)} örnek, {n_splits} fold, method={method}")
+    train_calibrator_oof(oof_X, oof_y, method=method)
     return True
 
 
@@ -243,6 +294,8 @@ FEATURE_ISIMLERI = [
     "rol_gol_toplam", "rol_yed_toplam",
     "rol_ev_avantaj_skoru",
 ]
+
+FEATURE_SUTUNLARI = FEATURE_ISIMLERI
 
 
 def _veri_hazirla(ham_veri, istatistikler=None, elo_sonuclari=None):

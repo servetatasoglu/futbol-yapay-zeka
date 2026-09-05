@@ -882,7 +882,10 @@ def run_pipeline(mock_mode=False):
             "ev": bet.get("ev",""), "dep": bet.get("dep",""),
             "tahmin": bet.get("tahmin",""),
             "mac_tarihi": bet.get("mac_tarihi",""),
-            "oran_alinma": bet.get("oran",0), "oran_kapanis": None,
+            "oran_alinma": bet.get("oran",0),
+            "oran_bahis": bet.get("oran",0),
+            "oran_kapanis": None,
+            "oran_closing": None,
             "edge": bet.get("edge",0),
             "model_p": bet.get("p_secim",0), "market_p": bet.get("market_p",0),
             "p_fark": bet.get("p_fark",0),
@@ -892,6 +895,9 @@ def run_pipeline(mock_mode=False):
             "confidence": bet.get("confidence",0),
             "lig": bet.get("lig",""), "sonuc": None, "clv": None,
             "analiz": bet.get("analiz", ""),
+            "model_version": "v4.0-institutional",
+            "feature_version": "v4.0-pit",
+            "calibrator_version": "v4.0-oof",
         })
 
     if yeni_eklenen < len(executed_bets):
@@ -1056,11 +1062,18 @@ def run_pipeline(mock_mode=False):
                 _closing = _odds.get("btts_yes_oran", 0)
             elif "KG Yok" in _tahmin or _tahmin == "BTTS_NO":
                 _closing = _odds.get("btts_no_oran", 0)
+            elif "Ev Sahibi" in _tahmin or _tahmin == "HOME":
+                _closing = _odds.get("ev_oran", 0)
+            elif "Beraberlik" in _tahmin or _tahmin == "DRAW":
+                _closing = _odds.get("ber_oran", 0)
+            elif "Deplasman" in _tahmin or _tahmin == "AWAY":
+                _closing = _odds.get("dep_oran", 0)
             else:
-                continue
+                continue  # Bilinmeyen tahmin tipi
             
             if _closing and _closing > 1.0:
                 _b["oran_kapanis"] = _closing
+                _b["oran_closing"] = _closing
                 _b["clv"] = round(_placed / _closing - 1, 4)
                 _clv_updated += 1
         

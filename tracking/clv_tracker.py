@@ -75,10 +75,15 @@ def bahis_kaydet(bahis: dict) -> None:
         "confidence":   bahis.get("confidence", 0),
         "kelly_size":   bahis.get("size", 0),
         "lig":          bahis.get("lig", "?"),
+        "oran_alinma":  bahis.get("oran_alinma", bahis.get("oran", 0)),
         # Closing odds — maç başlamadan önce doldurulacak
         "oran_closing": None,
+        "oran_kapanis": None,
         "clv":          None,
         "sonuc":        None,
+        "model_version": bahis.get("model_version", "v4.0-institutional"),
+        "feature_version": bahis.get("feature_version", "v4.0-pit"),
+        "calibrator_version": bahis.get("calibrator_version", "v4.0-oof"),
     }
     
     db["bahisler"].append(kayit)
@@ -107,29 +112,36 @@ def closing_odds_guncelle(ev: str, dep: str, closing_oranlar: dict) -> bool:
     for b in db["bahisler"]:
         if not _isim_esles(b.get("ev", ""), b.get("dep", "")):
             continue
-        if b["oran_closing"] is not None:
+        if b.get("oran_closing") is not None or b.get("oran_kapanis") is not None:
             continue  # Already has closing odds
 
         tahmin = str(b.get("tahmin", "")).strip()
         closing_oran = 0.0
 
-        if tahmin in ["Ev Sahibi Kazanır", "1"]:
+        if tahmin in ["Ev Sahibi Kazanır", "1", "Ev Sahibi", "HOME"]:
             closing_oran = closing_oranlar.get("ev", 0.0)
-        elif tahmin in ["Beraberlik", "X", "0"]:
+        elif tahmin in ["Beraberlik", "X", "0", "DRAW"]:
             closing_oran = closing_oranlar.get("ber", 0.0)
-        elif tahmin in ["Deplasman Kazanır", "2"]:
+        elif tahmin in ["Deplasman Kazanır", "2", "Deplasman", "AWAY"]:
             closing_oran = closing_oranlar.get("dep", 0.0)
-        elif "Üst" in tahmin or "Alt" in tahmin:
-            # Over/Under — use ev odds as proxy (no closing for O/U here)
-            closing_oran = closing_oranlar.get("ev", 0.0)
+        elif "2.5 Üst" in tahmin or "OVER" in tahmin:
+            closing_oran = closing_oranlar.get("over25_oran", closing_oranlar.get("over", 0.0))
+        elif "2.5 Alt" in tahmin or "UNDER" in tahmin:
+            closing_oran = closing_oranlar.get("under25_oran", closing_oranlar.get("under", 0.0))
+        elif "KG Var" in tahmin or "BTTS_YES" in tahmin:
+            closing_oran = closing_oranlar.get("btts_yes_oran", 0.0)
+        elif "KG Yok" in tahmin or "BTTS_NO" in tahmin:
+            closing_oran = closing_oranlar.get("btts_no_oran", 0.0)
         else:
             closing_oran = closing_oranlar.get("ev", 0.0)
 
         if closing_oran > 1.01:
             b["oran_closing"] = round(float(closing_oran), 3)
+            b["oran_kapanis"] = b["oran_closing"]
             # CLV = (odds_at_bet / closing_odds) - 1
             # Positive = we got better than closing line = real edge
-            clv_raw = (b["oran_bahis"] / closing_oran) - 1
+            oran_b = float(b.get("oran_bahis") or b.get("oran_alinma") or b.get("oran", 0.0))
+            clv_raw = (oran_b / closing_oran) - 1
             b["clv"] = round(clv_raw, 4)
 
             # v3.0: CLV decomposition
@@ -138,33 +150,31 @@ def closing_odds_guncelle(ev: str, dep: str, closing_oranlar: dict) -> bool:
             model_p  = b.get("model_p", 0)
             market_p = b.get("market_p", 0)
             if model_p > 0 and market_p > 0:
+                fair_closing = 1.0 / closing_oran
                 b["edge_clv"]   = round(model_p - market_p, 4)
-                b["timing_clv"] = round(clv_raw - (model_p - market_p), 4)
-            else:
-                b["edge_clv"]   = clv_raw
-                b["timing_clv"] = 0.0
+                b["timing_clv"] = round(fair_closing - market_p, 4)
 
-            guncellendi = True
             logger.info(
-                f"  CLV: {b['ev']} vs {b['dep']} [{tahmin}] "
-                f"bahis={b['oran_bahis']:.2f} kapanış={closing_oran:.2f} "
-                f"CLV={clv_raw*100:+.2f}%"
+                f"  📈 CLV Güncellendi: {b.get('ev')} vs {b.get('dep')} | "
+                f"bahis={oran_b:.2f} kapanış={closing_oran:.2f} "
+                f"→ CLV={b['clv']*100:+.2f}%"
             )
+            guncellendi = True
 
     if guncellendi:
         _kaydet(db)
     return guncellendi
 
 
-def sonuc_guncelle(ev: str, dep: str, sonuc: str) -> bool:
+def mac_sonucu_guncelle(ev: str, dep: str, sonuc: str) -> bool:
     """Maç sonucunu güncelle (ev/dep/ber)."""
     db = _yukle()
     guncellendi = False
     
     for b in db["bahisler"]:
-        if b["ev"] == ev and b["dep"] == dep and b["sonuc"] is None:
+        if b.get("ev") == ev and b.get("dep") == dep and b.get("sonuc") is None:
             # AUDIT FIX: Mandatory CLV Validation. If closing odds are missing, invalidate the bet.
-            if b.get("oran_closing") is None or b.get("clv") is None:
+            if (b.get("oran_closing") is None and b.get("oran_kapanis") is None) or b.get("clv") is None:
                 logger.warning(f"🚨 Bet {ev} vs {dep} missing closing odds! Marking as INVALID_NO_CLV.")
                 b["sonuc"] = "INVALID_NO_CLV"
             else:

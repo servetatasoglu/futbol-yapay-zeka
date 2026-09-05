@@ -194,17 +194,49 @@ def _fuzzy_match(bet_ev: str, bet_dep: str, sonuclar: dict) -> dict | None:
 #  SONUC→TAHMIN EŞLEŞTİRME
 # ═══════════════════════════════════════════════════════
 
-_TAHMIN_MAP = {
-    "Ev Sahibi Kazanır": "ev",
-    "Deplasman Kazanır": "dep",
-    "Beraberlik": "ber",
-}
+def _tahmin_tuttu_mu(tahmin: str, sonuc: str, ev_gol: int | None = None, dep_gol: int | None = None) -> bool | None:
+    """
+    Tahmin doğru mu?
+    1X2, Alt/Üst 2.5 ve KG Var/Yok marketlerini tam olarak değerlendirir.
+    Eğer gol sayısı gerektiren markette skor yoksa None döner.
+    """
+    t_clean = (tahmin or "").strip()
+    t_upper = t_clean.upper()
 
+    # 1. Alt / Üst 2.5 Marketleri
+    if "2.5 ÜST" in t_upper or "2.5 UST" in t_upper or t_upper in ("OVER", "OVER25", "2.5 OVER"):
+        if ev_gol is None or dep_gol is None:
+            return None
+        return (ev_gol + dep_gol) > 2.5
 
-def _tahmin_tuttu_mu(tahmin: str, sonuc: str) -> bool:
-    """Tahmin doğru mu?"""
-    beklenen = _TAHMIN_MAP.get(tahmin, "")
-    return beklenen == sonuc
+    if "2.5 ALT" in t_upper or t_upper in ("UNDER", "UNDER25", "2.5 UNDER"):
+        if ev_gol is None or dep_gol is None:
+            return None
+        return (ev_gol + dep_gol) < 2.5
+
+    # 2. Karşılıklı Gol (KG) Marketleri
+    if "KG VAR" in t_upper or t_upper in ("BTTS_YES", "BTTS YES", "KG_VAR"):
+        if ev_gol is None or dep_gol is None:
+            return None
+        return ev_gol > 0 and dep_gol > 0
+
+    if "KG YOK" in t_upper or t_upper in ("BTTS_NO", "BTTS NO", "KG_YOK"):
+        if ev_gol is None or dep_gol is None:
+            return None
+        return ev_gol == 0 or dep_gol == 0
+
+    # 3. 1X2 Maç Sonucu
+    if "EV SAHIBI" in t_upper or "EV SAHİBİ" in t_upper or t_upper in ("1", "HOME", "EV"):
+        return sonuc == "ev"
+
+    if "DEPLASMAN" in t_upper or t_upper in ("2", "AWAY", "DEP"):
+        return sonuc == "dep"
+
+    if "BERABERLIK" in t_upper or "BERABERLİK" in t_upper or t_upper in ("X", "DRAW", "BER"):
+        return sonuc == "ber"
+
+    # Bilinmeyen / desteklenmeyen tahmin formatı
+    return None
 
 
 # ═══════════════════════════════════════════════════════
@@ -291,14 +323,20 @@ def update_results(gun_sayisi: int = 7):
             continue
 
         sonuc = sonuc_data["sonuc"]
+        ev_gol = sonuc_data.get("ev_gol")
+        dep_gol = sonuc_data.get("dep_gol")
         tahmin = bet.get("tahmin", "")
-        tuttu = _tahmin_tuttu_mu(tahmin, sonuc)
+        tuttu = _tahmin_tuttu_mu(tahmin, sonuc, ev_gol=ev_gol, dep_gol=dep_gol)
+
+        if tuttu is None:
+            # Desteklenmeyen veya skor eksikliği nedeniyle henüz sonuçlandırılamayan bahis
+            continue
 
         # Güncelle
         bet["sonuc"] = "kazandi" if tuttu else "kaybetti"
         bet["gercek_sonuc"] = sonuc
-        bet["ev_gol"] = sonuc_data.get("ev_gol")
-        bet["dep_gol"] = sonuc_data.get("dep_gol")
+        bet["ev_gol"] = ev_gol
+        bet["dep_gol"] = dep_gol
 
         # Profit hesabı (1 birim bahis varsayımı)
         if tuttu:

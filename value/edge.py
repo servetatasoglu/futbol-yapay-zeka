@@ -116,20 +116,34 @@ KUPON_MAX_AYNI_LIG        = 1
 
 
 def value_hesapla(olasilik: float, oran: float, fair_p: float = None,
-                  lig_kodu: str = "") -> float:
+                  lig_kodu: str = "", over_round: float = None) -> float:
     """
-    v3.0: Bayesian Shrinkage Edge Calculation.
-    
-    Edge = p_shrunk - p_market
-    p_shrunk = α * p_model + (1-α) * p_market
+    v4.0: Vig-Normalized Fair Market Edge Calculation.
+
+    Edge = p_shrunk - p_fair_market
+    p_fair_market = (1/odds) / overround  (vig kaldırılmış gerçek piyasa olasılığı)
+    p_shrunk = α * p_model + (1-α) * p_fair_market
     α is league-efficiency-adjusted (more efficient market → more shrinkage)
-    
-    This replaces the old fixed 70/30 split with dynamic shrinkage.
+
+    KRİTİK:
+    - %20'nin üzerindeki edge → veri hatası/bad odds → NO BET (return 0.0)
+    - Oran <= 1.0 → NO BET
+    - Vig normalize edilmemiş ham implied probability kullanılMAZ
     """
     if oran <= 1.0:
         return 0.0
-    piyasa_olasilik = 1.0 / oran
-    
+
+    # Raw implied probability (vig dahil)
+    raw_implied = 1.0 / oran
+
+    # Vig-normalized fair market probability
+    if fair_p is not None and 0.0 < fair_p < 1.0:
+        p_market = fair_p  # Zaten vig normalize edilmiş
+    elif over_round is not None and over_round > 1.0:
+        p_market = raw_implied / over_round  # Vig'i kaldır
+    else:
+        p_market = raw_implied  # Fallback: vig yok varsay
+
     # Import shrinkage parameters from settings
     try:
         from config.settings import (
@@ -142,24 +156,30 @@ def value_hesapla(olasilik: float, oran: float, fair_p: float = None,
         LIG_VERIMLILIK_VARSAYILAN = 0.85
         LIG_MAX_EDGE = {}
         LIG_MAX_EDGE_VARSAYILAN = 0.05
-    
+
     # League-adjusted model weight
     # More efficient league → lower α → more trust in market
     league_eff = LIG_VERIMLILIK.get(lig_kodu, LIG_VERIMLILIK_VARSAYILAN)
-    alpha = SHRINKAGE_MODEL_WEIGHT * (1.0 - league_eff * 0.3)  # PL: 0.55*(1-0.285) = 0.393
+    alpha = SHRINKAGE_MODEL_WEIGHT * (1.0 - league_eff * 0.3)
     alpha = max(0.30, min(0.60, alpha))  # Clamp to [0.30, 0.60]
-    
-    if fair_p is not None and 0.0 < fair_p < 1.0:
-        p_shrunk = alpha * olasilik + (1.0 - alpha) * fair_p
-    else:
-        p_shrunk = alpha * olasilik + (1.0 - alpha) * piyasa_olasilik
-    
-    edge = p_shrunk - piyasa_olasilik
-    
+
+    p_shrunk = alpha * olasilik + (1.0 - alpha) * p_market
+    edge = p_shrunk - p_market
+
+    # KRİTİK: %20 üzeri edge → veri hatası veya bad odds → NO BET
+    if edge > 0.20:
+        import warnings as _w
+        _w.warn(
+            f"[value_bet] Aşırı edge tespit edildi: {edge:.3f} (>{0.20}) — "
+            f"muhtemelen veri hatası veya bad odds. NO BET.",
+            RuntimeWarning, stacklevel=2
+        )
+        return 0.0
+
     # League-specific max edge cap
     max_edge = LIG_MAX_EDGE.get(lig_kodu, LIG_MAX_EDGE_VARSAYILAN)
     edge = min(max_edge, edge)
-    
+
     return edge
 
 

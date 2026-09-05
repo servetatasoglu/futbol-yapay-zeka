@@ -9,6 +9,7 @@ DEĞİŞİKLİKLER:
   • Aktif sezon tespiti: utcDate'e göre 2025-07-01 sonrası = aktif sezon
 """
 
+import numpy as np
 from collections import defaultdict
 from data.matches import veri_yukle
 from config.settings import SON_MAC_SAYISI
@@ -40,8 +41,13 @@ def _aktif_sezon_mu(utc_date: str) -> bool:
     return utc_date >= AKTIF_SEZON_BASLANGIC
 
 
-def istatistik_hesapla() -> dict:
-    veri = veri_yukle()
+def istatistik_hesapla(veri: dict = None, cutoff_date: str = None) -> dict:
+    """
+    Takım istatistiklerini hesaplar.
+    cutoff_date verilirse, SADECE bu tarihten önceki maçlar kullanılır (Point-in-Time, Zero Leakage).
+    """
+    if veri is None:
+        veri = veri_yukle()
 
     # ── Genel istatistikler (tüm sezonlar, ağırlıklı) ─────────────
     stats = defaultdict(lambda: {
@@ -51,7 +57,7 @@ def istatistik_hesapla() -> dict:
         # Ham sayılar (mac_sayisi için)
         "ev_mac": 0, "dep_mac": 0, "toplam_mac": 0,
         "son_goller": [], "lig": "?",
-        "h2h": defaultdict(lambda: {"ev_gol": 0, "dep_gol": 0, "mac": 0}),
+        "h2h": defaultdict(lambda: {"ev_gol": 0, "dep_gol": 0, "mac": 0, "ev_galibiyet": 0, "dep_galibiyet": 0, "beraberlik": 0}),
         # Clean sheet — sadece aktif sezon
         "ev_clean_sheet": 0, "dep_clean_sheet": 0,
         "ev_gol_yemedi": 0,  "dep_gol_yemedi": 0,
@@ -78,6 +84,10 @@ def istatistik_hesapla() -> dict:
                 dep_gol = int(mac["score"]["fullTime"]["away"])
                 tarih   = mac.get("utcDate", "")
             except (KeyError, TypeError, ValueError):
+                continue
+
+            # Point-in-Time koruması: cutoff_date sonrasındaki maçları ASLA okuma
+            if cutoff_date and tarih and tarih >= cutoff_date:
                 continue
 
             agirlik = _sezon_agirligi(tarih)
@@ -150,13 +160,21 @@ def istatistik_hesapla() -> dict:
                     aktif_puan[dep]["galibiyet"]  += 1
                     aktif_puan[ev]["maglubiyet"]  += 1
 
-            # ── H2H — tüm sezonlar ────────────────────────────────
+            # ── H2H — tüm sezonlar (Doğru Maç Sonucu + Gol Takibi) ─
             stats[ev]["h2h"][dep]["ev_gol"]  += ev_gol
             stats[ev]["h2h"][dep]["dep_gol"] += dep_gol
             stats[ev]["h2h"][dep]["mac"]     += 1
+            stats[ev]["h2h"][dep]["ev_galibiyet"] += 1 if ev_gol > dep_gol else 0
+            stats[ev]["h2h"][dep]["dep_galibiyet"] += 1 if dep_gol > ev_gol else 0
+            stats[ev]["h2h"][dep]["beraberlik"] += 1 if ev_gol == dep_gol else 0
+
             stats[dep]["h2h"][ev]["ev_gol"]  += dep_gol
             stats[dep]["h2h"][ev]["dep_gol"] += ev_gol
             stats[dep]["h2h"][ev]["mac"]     += 1
+            stats[dep]["h2h"][ev]["ev_galibiyet"] += 1 if dep_gol > ev_gol else 0
+            stats[dep]["h2h"][ev]["dep_galibiyet"] += 1 if ev_gol > dep_gol else 0
+            stats[dep]["h2h"][ev]["beraberlik"] += 1 if ev_gol == dep_gol else 0
+
 
     # ── Lig sıralaması — sadece aktif sezon ───────────────────────
     lig_siralama = {}
@@ -374,4 +392,108 @@ def sentetik_stats_uret(takim_isim: str, lig_kodu: str,
         "son_mac_tarihi": "2000-01-01T00:00:00Z",
         "mac_tarihleri":  [],
         "_sentetik":      True,  # Bu bayrak ile pipeline 'sentetik' olduğunu bilir
+    }
+
+
+def point_in_time_stats(team: str, timestamp: str, match_history: list = None, veri: dict = None) -> dict:
+    """
+    Belirli bir timestamp öncesindeki maçlardan takım istatistiklerini hesaplar.
+    t >= timestamp olan hiçbir gelecekteki maç istatistiklere dahil edilmez (Zero Leakage).
+    """
+    if match_history is None and veri is not None:
+        match_history = []
+        for lig, maclar in veri.items():
+            for m in maclar:
+                try:
+                    match_history.append({
+                        "home": m["homeTeam"]["name"],
+                        "away": m["awayTeam"]["name"],
+                        "home_goals": int(m["score"]["fullTime"]["home"]),
+                        "away_goals": int(m["score"]["fullTime"]["away"]),
+                        "date": m.get("utcDate", ""),
+                    })
+                except (KeyError, TypeError, ValueError):
+                    continue
+
+    if not match_history:
+        return {"mac_sayisi": 0, "attigi_gol": 0, "yedigi_gol": 0, "galibiyet": 0, "beraberlik": 0, "maglubiyet": 0}
+
+    attigi = 0
+    yedigi = 0
+    mac_sayisi = 0
+    galibiyet = 0
+    beraberlik = 0
+    maglubiyet = 0
+
+    for m in match_history:
+        m_date = m.get("date", m.get("utcDate", ""))
+        if timestamp and m_date and m_date >= timestamp:
+            continue
+
+        h_team = m.get("home", m.get("homeTeam", {}).get("name", "")) if isinstance(m.get("homeTeam"), dict) else m.get("home", "")
+        a_team = m.get("away", m.get("awayTeam", {}).get("name", "")) if isinstance(m.get("awayTeam"), dict) else m.get("away", "")
+
+        if h_team == team:
+            hg = m.get("home_goals", 0)
+            ag = m.get("away_goals", 0)
+            attigi += hg
+            yedigi += ag
+            mac_sayisi += 1
+            if hg > ag:
+                galibiyet += 1
+            elif hg == ag:
+                beraberlik += 1
+            else:
+                maglubiyet += 1
+        elif a_team == team:
+            hg = m.get("home_goals", 0)
+            ag = m.get("away_goals", 0)
+            attigi += ag
+            yedigi += hg
+            mac_sayisi += 1
+            if ag > hg:
+                galibiyet += 1
+            elif ag == hg:
+                beraberlik += 1
+            else:
+                maglubiyet += 1
+
+    return {
+        "mac_sayisi": mac_sayisi,
+        "attigi_gol": attigi,
+        "yedigi_gol": yedigi,
+        "galibiyet": galibiyet,
+        "beraberlik": beraberlik,
+        "maglubiyet": maglubiyet,
+    }
+
+
+def point_in_time_xg(team: str, timestamp: str, xg_history: list = None) -> dict:
+    """
+    Belirli bir timestamp öncesindeki maçlardan rolling xG değerlerini hesaplar.
+    """
+    if not xg_history:
+        return {"matches_count": 0, "mean_xg": 1.25, "mean_xg_conceded": 1.25}
+
+    xgs = []
+    xgs_conceded = []
+
+    for m in xg_history:
+        m_date = m.get("date", "")
+        if timestamp and m_date and m_date >= timestamp:
+            continue
+        if m.get("team") == team:
+            if "xg" in m:
+                xgs.append(float(m["xg"]))
+            if "xg_conceded" in m:
+                xgs_conceded.append(float(m["xg_conceded"]))
+
+    count = len(xgs)
+    mean_xg = float(np.mean(xgs)) if count > 0 else 1.25
+    mean_xg_c = float(np.mean(xgs_conceded)) if len(xgs_conceded) > 0 else 1.25
+
+    return {
+        "matches_count": count,
+        "mean_xg": mean_xg,
+        "mean_xg_conceded": mean_xg_c,
     }
