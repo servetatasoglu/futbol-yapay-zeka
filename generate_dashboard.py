@@ -188,36 +188,30 @@ def fetch_upcoming_matches():
     except Exception as e:
         print(f"  ⚠️ Odds upcoming fetch error: {e}")
 
-    # 3. Her lig için eksik maç kontrolü (Her ligin bültende en az 4-5 maçı olsun)
-    LEAGUE_TEAMS = {
-        "TSL": [("Galatasaray", "Fenerbahçe"), ("Trabzonspor", "Beşiktaş"), ("Başakşehir", "Samsunspor"), ("Eyüpspor", "Göztepe"), ("Kasımpaşa", "Antalyaspor")],
-        "FL1": [("Lille", "Paris Saint Germain"), ("Strasbourg", "RC Lens"), ("Auxerre", "Angers"), ("Brest", "Toulouse"), ("Lyon", "Le Havre")],
-        "PPL": [("FC Porto", "Sporting CP"), ("Benfica", "Braga"), ("Vitória SC", "Santa Clara"), ("Famalicão", "Rio Ave"), ("Gil Vicente", "Moreirense")],
-        "BL2": [("Schalke 04", "Hamburg"), ("Hertha BSC", "Köln"), ("Hannover 96", "Düsseldorf"), ("Nürnberg", "Kaiserslautern"), ("Greuther Fürth", "Paderborn")],
-        "ELC": [("Leeds United", "Burnley"), ("Sunderland", "Sheffield United"), ("West Bromwich", "Coventry"), ("Middlesbrough", "Norwich"), ("Bolton", "Lincoln City")],
-        "DED": [("PSV Eindhoven", "Feyenoord"), ("Ajax", "AZ Alkmaar"), ("FC Twente", "Utrecht"), ("Go Ahead Eagles", "Heerenveen"), ("Sparta Rotterdam", "NEC Nijmegen")]
-    }
+    # 3. Gerçek Fikstür Entegrasyonu (Uydurma maçlar yerine %100 gerçek onaylı fikstür)
+    try:
+        from scripts.generate_real_upcoming_signals import REAL_UPCOMING_FIXTURES
+        for f in REAL_UPCOMING_FIXTURES:
+            home = clean_team_name(f.get("ev", ""))
+            away = clean_team_name(f.get("dep", ""))
+            date_str = f.get("date", "")
+            lig_kodu = f.get("lig_kodu", "TSL")
+            key = f"{home.lower()}|{away.lower()}|{date_str[:10]}"
+            if key not in seen and home and away:
+                seen.add(key)
+                upcoming.append({
+                    "home": home,
+                    "away": away,
+                    "date": date_str,
+                    "lig": lig_kodu,
+                    "lig_isim": f.get("lig", LIG_ISIMLERI.get(lig_kodu, lig_kodu)),
+                    "status": "TIMED",
+                    "score": {"fullTime": {"home": None, "away": None}},
+                })
+    except Exception as e:
+        print(f"  ⚠️ Gerçek fikstür entegrasyon hatası: {e}")
 
-    now = datetime.now(timezone.utc)
-    for lig_kodu, pairs in LEAGUE_TEAMS.items():
-        existing_in_lig = sum(1 for m in upcoming if m.get("lig") == lig_kodu)
-        if existing_in_lig < 4:
-            for idx, (home, away) in enumerate(pairs):
-                date_str = (now + timedelta(days=idx+2, hours=idx*3)).strftime("%Y-%m-%dT18:45:00Z")
-                key = f"{home.lower()}|{away.lower()}|{date_str[:10]}"
-                if key not in seen:
-                    seen.add(key)
-                    upcoming.append({
-                        "home": home,
-                        "away": away,
-                        "date": date_str,
-                        "lig": lig_kodu,
-                        "lig_isim": LIG_ISIMLERI.get(lig_kodu, lig_kodu),
-                        "status": "TIMED",
-                        "score": {"fullTime": {"home": None, "away": None}},
-                    })
-
-    print(f"  ✅ Gelecek maçlar: Toplam {len(upcoming)} maç bültende hazırlandı (6 Ligin tamamı kapsandı)")
+    print(f"  ✅ Gelecek maçlar: Toplam {len(upcoming)} maç bültende hazırlandı")
     return upcoming
 
 
@@ -988,6 +982,18 @@ def generate_live_signals(executed_bets: list | None = None):
         ev_clean = clean_team_name(b.get("ev", ""))
         dep_clean = clean_team_name(b.get("dep", ""))
         
+        # Sayısal değer kontrolü (takım adı yerine yanlışlıkla EV sayısı gelmesini engelle)
+        try:
+            float(ev_clean)
+            continue
+        except ValueError:
+            pass
+        try:
+            float(dep_clean)
+            continue
+        except ValueError:
+            pass
+        
         # Get Opening Odds
         match_date_str = str(mac_tarihi).split("T")[0]
         odd_key = f"{b.get('ev')}|{b.get('dep')}|{match_date_str}"
@@ -1101,7 +1107,8 @@ def generate_live_signals(executed_bets: list | None = None):
 
 def kupon_onerisi(bets):
     """
-    Bekleyen tahminler arasından en yüksek bet_score'lu 3 bağımsız maçtan kombine kupon oluşturur.
+    Bekleyen tahminler arasından en mantıklı, yüksek güvenli ve matematiksel değerli
+    3 bağımsız maçtan kombine kupon oluşturur.
     """
     def _safe_float(val):
         if val is None: return 0.0
@@ -1120,47 +1127,92 @@ def kupon_onerisi(bets):
         if "REJECTED" in status: continue
         oran = _safe_float(b.get("oran_alinma", b.get("oran", b.get("best_odds", b.get("target_odds", 0)))))
         prob = _get_prob(b)
-        if oran > 1.20 and prob > 0.35: # Min 35% probability for a Parlay leg
-            bekleyenler.append(b)
-    
-    # En yüksek bet_score'a göre (Eğer bet_score yoksa edge vb. kullanarak) sırala
-    bekleyenler.sort(key=lambda x: x.get("bet_score", x.get("edge", x.get("edge_pct", 0))), reverse=True)
+        ev_name = clean_team_name(str(b.get("ev", ""))).strip()
+        dep_name = clean_team_name(str(b.get("dep", ""))).strip()
+        
+        if not ev_name or not dep_name:
+            continue
+        # Sayısal veri kontrolü (EV float kalıntısı önleme)
+        try:
+            float(ev_name)
+            continue
+        except ValueError:
+            pass
+        try:
+            float(dep_name)
+            continue
+        except ValueError:
+            pass
+        
+        # Gerçekçi ve Güvenli Kupon Kriterleri:
+        # Tekil oran 1.25 ile 2.35 arasında, model olasılığı en az %45 olmalı.
+        if 1.25 <= oran <= 2.35 and prob >= 0.45:
+            bekleyenler.append((b, ev_name, dep_name, oran, prob))
+
+    # Eğer 2'den az maç bulunursa kriterleri makul düzeyde esnet
+    if len(bekleyenler) < 2:
+        bekleyenler = []
+        for b in bets:
+            if b.get("sonuc") is not None: continue
+            status = str(b.get("status", "")).upper()
+            if "REJECTED" in status: continue
+            oran = _safe_float(b.get("oran_alinma", b.get("oran", b.get("best_odds", b.get("target_odds", 0)))))
+            prob = _get_prob(b)
+            ev_name = clean_team_name(str(b.get("ev", ""))).strip()
+            dep_name = clean_team_name(str(b.get("dep", ""))).strip()
+            if not ev_name or not dep_name: continue
+            try:
+                float(ev_name)
+                continue
+            except ValueError:
+                pass
+            try:
+                float(dep_name)
+                continue
+            except ValueError:
+                pass
+            if 1.20 <= oran <= 2.60 and prob >= 0.38:
+                bekleyenler.append((b, ev_name, dep_name, oran, prob))
+
+    # Yüksek olasılık ve pozitif beklenti (prob * edge) sıralaması
+    bekleyenler.sort(
+        key=lambda item: item[4] * max(0.01, _safe_float(item[0].get("edge", item[0].get("edge_pct", 0)))),
+        reverse=True
+    )
     
     secilenler = []
     secilen_maclar = set()
     
-    for b in bekleyenler:
-        mac_key = f"{b.get('ev')}_{b.get('dep')}"
+    for item in bekleyenler:
+        b, ev_name, dep_name, oran, prob = item
+        mac_key = f"{ev_name.lower()}_{dep_name.lower()}"
         if mac_key not in secilen_maclar:
-            secilenler.append(b)
+            secilenler.append(item)
             secilen_maclar.add(mac_key)
         if len(secilenler) >= 3:
             break
             
     if len(secilenler) < 2:
-        return None # En az 2 maç olmalı
+        return None
         
     kombine_oran = 1.0
     kombine_p = 1.0
     
-    for b in secilenler:
-        oran = _safe_float(b.get("oran_alinma", b.get("oran", b.get("best_odds", b.get("target_odds", 1.0)))))
+    for b, ev_name, dep_name, oran, prob in secilenler:
         kombine_oran *= oran
-        prob = _safe_float(b.get("p_shrunk", b.get("model_p", b.get("model_prob", 50.0))))
-        if prob > 1: prob = prob / 100.0 # handle model_prob which is percentage
         kombine_p *= prob
         
-    kombine_edge = (kombine_p * kombine_oran) - 1
+    kombine_edge = (kombine_p * kombine_oran) - 1.0
     
     return {
         "maclar": [{
-            "ev": clean_team_name(b.get("ev")),
-            "dep": clean_team_name(b.get("dep")),
+            "ev": ev_name,
+            "dep": dep_name,
             "tahmin": b.get("tahmin", b.get("selection", "")),
-            "oran": _safe_float(b.get("oran_alinma", b.get("oran", b.get("best_odds", b.get("target_odds", 1.0))))),
+            "oran": oran,
             "tarih": b.get("mac_tarihi", b.get("tarih", b.get("date", ""))),
             "analiz": b.get("analiz", b.get("reasoning", "Model tarafından değerli (Value) olarak belirlendi."))
-        } for b in secilenler],
+        } for b, ev_name, dep_name, oran, prob in secilenler],
         "toplam_oran": round(kombine_oran, 2),
         "kazanma_ihtimali": round(kombine_p * 100, 1),
         "beklenen_deger": round(kombine_edge * 100, 1)

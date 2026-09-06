@@ -1,6 +1,6 @@
 {
   "summary": {
-    "total_bets": 5,
+    "total_bets": 1,
     "initial_br": 10000.0,
     "final_br": 10000.0,
     "roi": 0.0,
@@ -13,8 +13,8 @@
     "avg_clv_decay": 0.0
   },
   "statistics": {
-    "p_value": 0.0,
-    "clv_significant": true,
+    "p_value": 1.0,
+    "clv_significant": false,
     "edge_reliability": 0.0,
     "overfitting_risk": "LOW"
   },
@@ -26,29 +26,13 @@
     {
       "bet_index": 1,
       "bankroll": 10000.0
-    },
-    {
-      "bet_index": 2,
-      "bankroll": 10000.0
-    },
-    {
-      "bet_index": 3,
-      "bankroll": 10000.0
-    },
-    {
-      "bet_index": 4,
-      "bankroll": 10000.0
-    },
-    {
-      "bet_index": 5,
-      "bankroll": 10000.0
     }
   ],
   "attribution_league": {
     "?": {
-      "pnl": 20.0,
+      "pnl": 4.0,
       "clv": 0,
-      "count": 5
+      "count": 1
     }
   },
   "attribution_odds": {
@@ -61,8 +45,8 @@
       "count": 0
     },
     "2.00-3.00": {
-      "pnl": 20.0,
-      "count": 5
+      "pnl": 4.0,
+      "count": 1
     },
     ">3.00": {
       "pnl": 0.0,
@@ -82,58 +66,6 @@
       "is_win": null,
       "gercek_skor": null,
       "date": "2026-09-06T01:22"
-    },
-    {
-      "ev": "TeamX",
-      "dep": "TeamY",
-      "lig": "?",
-      "tahmin": "Ev Sahibi Kazanır",
-      "best_odds": 2.1,
-      "edge": 0.04,
-      "clv_value": 0,
-      "pnl": 0.0,
-      "is_win": null,
-      "gercek_skor": null,
-      "date": "2026-09-06T01:23"
-    },
-    {
-      "ev": "TeamX",
-      "dep": "TeamY",
-      "lig": "?",
-      "tahmin": "Ev Sahibi Kazanır",
-      "best_odds": 2.1,
-      "edge": 0.04,
-      "clv_value": 0,
-      "pnl": 0.0,
-      "is_win": null,
-      "gercek_skor": null,
-      "date": "2026-09-06T01:24"
-    },
-    {
-      "ev": "TeamX",
-      "dep": "TeamY",
-      "lig": "?",
-      "tahmin": "Ev Sahibi Kazanır",
-      "best_odds": 2.1,
-      "edge": 0.04,
-      "clv_value": 0,
-      "pnl": 0.0,
-      "is_win": null,
-      "gercek_skor": null,
-      "date": "2026-09-06T01:25"
-    },
-    {
-      "ev": "TeamX",
-      "dep": "TeamY",
-      "lig": "?",
-      "tahmin": "Ev Sahibi Kazanır",
-      "best_odds": 2.1,
-      "edge": 0.04,
-      "clv_value": 0,
-      "pnl": 0.0,
-      "is_win": null,
-      "gercek_skor": null,
-      "date": "2026-09-06T01:40"
     }
   ],
   "live_signals": [
@@ -7231,14 +7163,6 @@
   "kupon": {
     "maclar": [
       {
-        "ev": "Hollanda",
-        "dep": "Almanya",
-        "tahmin": "2.5 Üst",
-        "oran": 2.65,
-        "tarih": "2026-09-10T18:45:00Z",
-        "analiz": "🤖 <b>Yapay Zeka Analizi:</b> Ensemble modeli (Dixon-Coles + ELO + Purged LightGBM), <b>Hollanda</b> galibiyetine %42.8, beraberliğe %26.7, <b>Almanya</b> galibiyetine %30.5 ihtimal vermektedir.<br><br>📊 <b>Gol ve Tempo Projeksiyonu:</b> Beklenen Gol (xG) hesabı Ev: 1.38 - Dep: 1.12 (Toplam 2.5 gol) göstermektedir. 2.5 Üst ihtimali %45.6, KG Var ihtimali %50.4 seviyesindedir.<br><br>🎯 <b>Stratejik Yol Haritası & Tavsiye:</b> Bu karşılaşmada <b>2.5 Üst</b> bahsi %+ 20.8% matematiksel net değer (Edge) barındırmaktadır. Kelly sermaye yönetimi (Fractional %25): bakiyenin %0.1'i ile katılım önerilir."
-      },
-      {
         "ev": "Buyuksehyr",
         "dep": "Antalyaspor",
         "tahmin": "Ev Sahibi Kazanır",
@@ -7253,11 +7177,19 @@
         "oran": 2.05,
         "tarih": "2026-09-15T14:00:00Z",
         "analiz": "🤖 <b>Yapay Zeka Analizi:</b> Ensemble modeli (Dixon-Coles + ELO + Purged LightGBM), <b>Goztepe</b> galibiyetine %51.4, beraberliğe %24.5, <b>Bodrum FK</b> galibiyetine %24.1 ihtimal vermektedir.<br><br>📊 <b>Gol ve Tempo Projeksiyonu:</b> Beklenen Gol (xG) hesabı Ev: 1.65 - Dep: 1.05 (Toplam 2.7 gol) göstermektedir. 2.5 Üst ihtimali %50.6, KG Var ihtimali %52.5 seviyesindedir.<br><br>🎯 <b>Stratejik Yol Haritası & Tavsiye:</b> Bu karşılaşmada <b>Ev Sahibi Kazanır</b> bahsi %+ 5.4% matematiksel net değer (Edge) barındırmaktadır. Kelly sermaye yönetimi (Fractional %25): bakiyenin %0.1'i ile katılım önerilir."
+      },
+      {
+        "ev": "Fenerbahce",
+        "dep": "Alanyaspor",
+        "tahmin": "Ev Sahibi Kazanır",
+        "oran": 1.42,
+        "tarih": "2026-09-14T17:00:00Z",
+        "analiz": "🤖 <b>Yapay Zeka Analizi:</b> Ensemble modeli (Dixon-Coles + ELO + Purged LightGBM), <b>Fenerbahce</b> galibiyetine %62.0, beraberliğe %20.5, <b>Alanyaspor</b> galibiyetine %17.5 ihtimal vermektedir.<br><br>📊 <b>Gol ve Tempo Projeksiyonu:</b> Beklenen Gol (xG) hesabı Ev: 2.08 - Dep: 1.01 (Toplam 3.09 gol) göstermektedir. 2.5 Üst ihtimali %59.7, KG Var ihtimali %55.6 seviyesindedir.<br><br>🎯 <b>Stratejik Yol Haritası & Tavsiye:</b> Bu karşılaşmada <b>Ev Sahibi Kazanır</b> bahsi %+ 0.1% matematiksel net değer (Edge) barındırmaktadır. Kelly sermaye yönetimi (Fractional %25): bakiyenin %0.1'i ile katılım önerilir."
       }
     ],
-    "toplam_oran": 10.59,
-    "kazanma_ihtimali": 12.7,
-    "beklenen_deger": 34.6
+    "toplam_oran": 5.68,
+    "kazanma_ihtimali": 17.3,
+    "beklenen_deger": -2.0
   },
   "finished_matches": [
     {
