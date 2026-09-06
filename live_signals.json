@@ -1,1874 +1,1705 @@
 [
   {
-    "date": "2026-09-14T17:00:00Z",
-    "lig": "Süper Lig (TR)",
-    "lig_kodu": "TSL",
-    "ev": "Fenerbahce",
-    "dep": "Alanyaspor",
-    "selection": "Ev Sahibi Kazanır",
-    "target_odds": 1.42,
-    "model_prob": 62.0,
-    "edge_pct": 0.1,
-    "edge_raw_pct": 0.1,
-    "status": "YAKLAŞAN MAÇ",
-    "reasoning": "🤖 <b>Yapay Zeka Analizi:</b> Ensemble modeli (Dixon-Coles + ELO + Purged LightGBM), <b>Fenerbahce</b> galibiyetine %62.0, beraberliğe %20.5, <b>Alanyaspor</b> galibiyetine %17.5 ihtimal vermektedir.<br><br>📊 <b>Gol ve Tempo Projeksiyonu:</b> Beklenen Gol (xG) hesabı Ev: 2.08 - Dep: 1.01 (Toplam 3.09 gol) göstermektedir. 2.5 Üst ihtimali %59.7, KG Var ihtimali %55.6 seviyesindedir.<br><br>🎯 <b>Stratejik Yol Haritası & Tavsiye:</b> Bu karşılaşmada <b>Ev Sahibi Kazanır</b> bahsi %+ 0.1% matematiksel net değer (Edge) barındırmaktadır. Kelly sermaye yönetimi (Fractional %25): bakiyenin %0.1'i ile katılım önerilir.",
-    "ai_commentary": "🤖 <b>Yapay Zeka Analizi:</b> Ensemble modeli (Dixon-Coles + ELO + Purged LightGBM), <b>Fenerbahce</b> galibiyetine %62.0, beraberliğe %20.5, <b>Alanyaspor</b> galibiyetine %17.5 ihtimal vermektedir.<br><br>📊 <b>Gol ve Tempo Projeksiyonu:</b> Beklenen Gol (xG) hesabı Ev: 2.08 - Dep: 1.01 (Toplam 3.09 gol) göstermektedir. 2.5 Üst ihtimali %59.7, KG Var ihtimali %55.6 seviyesindedir.<br><br>🎯 <b>Stratejik Yol Haritası & Tavsiye:</b> Bu karşılaşmada <b>Ev Sahibi Kazanır</b> bahsi %+ 0.1% matematiksel net değer (Edge) barındırmaktadır. Kelly sermaye yönetimi (Fractional %25): bakiyenin %0.1'i ile katılım önerilir.",
-    "is_win": null,
-    "verification_badge": "⏳ OYNANACAK",
+    "date": "2026-09-07T18:45:00Z",
+    "lig": "SA",
+    "ev": "0.1441",
+    "dep": "Lazio",
+    "selection": "2.5 Üst",
+    "target_odds": 2.44,
+    "model_prob": 46.9,
+    "edge_pct": 5.9,
+    "edge_raw_pct": 5.9,
+    "fake_edge_score": 0.0,
+    "latency_seconds": 0,
+    "selected_bookmaker": "Pinnacle",
+    "execution_quality": {},
+    "recommended_stake_pct": 1.0,
+    "status": "RİSK FİLTRESİ (DEĞER YOK)",
+    "reasoning": "Model piyasadan %5.9 daha yüksek ihtimal veriyor. | Dengeli xG profili (Beklenti: 2.55 gol).",
     "odds": {
-      "ms1": 1.61,
-      "ms0": 4.88,
-      "ms2": 5.71,
-      "over25": 1.68,
-      "under25": 2.48,
-      "btts_yes": 1.8,
-      "btts_no": 2.25
+      "ms1": 3.02,
+      "ms0": 3.25,
+      "ms2": 2.82,
+      "over25": 2.44,
+      "under25": 1.67,
+      "btts_yes": 0,
+      "btts_no": 0
     },
     "probs": {
-      "ms1": 62.0,
-      "ms0": 20.5,
-      "ms2": 17.5,
-      "over25": 59.7,
-      "under25": 40.3,
-      "btts_yes": 55.6,
-      "btts_no": 44.4
-    },
-    "xg": {
-      "ev": 2.08,
-      "dep": 1.01,
-      "toplam": 3.09
-    },
-    "sharp": {
-      "ms_sinyal": "YOK",
-      "ms_tier": "NO_SHARP",
-      "ou_sinyal": "YOK",
-      "ou_tier": "NO_SHARP"
-    },
-    "form": {
-      "ev_form": [
-        "W",
-        "D",
-        "W",
-        "W",
-        "W"
-      ],
-      "dep_form": [
-        "D",
-        "L",
-        "D",
-        "W",
-        "D"
-      ]
-    },
-    "opening_odds": {
-      "ms1": 0,
-      "ms2": 0
-    },
-    "extended_stats": {
-      "ev_standing": {
-        "played": 3,
-        "wins": 2,
-        "draws": 1,
-        "losses": 0,
-        "points": 7,
-        "gf": 8,
-        "ga": 2,
-        "over25": 2,
-        "btts": 1
-      },
-      "dep_standing": {
-        "played": 3,
-        "wins": 0,
-        "draws": 2,
-        "losses": 1,
-        "points": 2,
-        "gf": 4,
-        "ga": 6,
-        "over25": 1,
-        "btts": 3
-      },
-      "h2h": {
-        "ev_wins": 0,
-        "dep_wins": 0,
-        "draws": 0,
-        "total": 0,
-        "matches": []
-      }
-    },
-    "news": []
-  },
-  {
-    "date": "2026-09-14T17:00:00Z",
-    "lig": "Süper Lig (TR)",
-    "lig_kodu": "TSL",
-    "ev": "Adana Demirspor",
-    "dep": "Galatasaray",
-    "selection": "Deplasman Kazanır",
-    "target_odds": 1.48,
-    "model_prob": 57.3,
-    "edge_pct": 0.1,
-    "edge_raw_pct": 0.1,
-    "status": "YAKLAŞAN MAÇ",
-    "reasoning": "🤖 <b>Yapay Zeka Analizi:</b> Ensemble modeli (Dixon-Coles + ELO + Purged LightGBM), <b>Adana Demirspor</b> galibiyetine %20.1, beraberliğe %22.6, <b>Galatasaray</b> galibiyetine %57.3 ihtimal vermektedir.<br><br>📊 <b>Gol ve Tempo Projeksiyonu:</b> Beklenen Gol (xG) hesabı Ev: 1.0 - Dep: 1.85 (Toplam 2.85 gol) göstermektedir. 2.5 Üst ihtimali %54.2, KG Var ihtimali %53.3 seviyesindedir.<br><br>🎯 <b>Stratejik Yol Haritası & Tavsiye:</b> Bu karşılaşmada <b>Deplasman Kazanır</b> bahsi %+ 0.1% matematiksel net değer (Edge) barındırmaktadır. Kelly sermaye yönetimi (Fractional %25): bakiyenin %0.1'i ile katılım önerilir.",
-    "ai_commentary": "🤖 <b>Yapay Zeka Analizi:</b> Ensemble modeli (Dixon-Coles + ELO + Purged LightGBM), <b>Adana Demirspor</b> galibiyetine %20.1, beraberliğe %22.6, <b>Galatasaray</b> galibiyetine %57.3 ihtimal vermektedir.<br><br>📊 <b>Gol ve Tempo Projeksiyonu:</b> Beklenen Gol (xG) hesabı Ev: 1.0 - Dep: 1.85 (Toplam 2.85 gol) göstermektedir. 2.5 Üst ihtimali %54.2, KG Var ihtimali %53.3 seviyesindedir.<br><br>🎯 <b>Stratejik Yol Haritası & Tavsiye:</b> Bu karşılaşmada <b>Deplasman Kazanır</b> bahsi %+ 0.1% matematiksel net değer (Edge) barındırmaktadır. Kelly sermaye yönetimi (Fractional %25): bakiyenin %0.1'i ile katılım önerilir.",
-    "is_win": null,
-    "verification_badge": "⏳ OYNANACAK",
-    "odds": {
-      "ms1": 4.98,
-      "ms0": 4.42,
-      "ms2": 1.75,
-      "over25": 1.85,
-      "under25": 2.18,
-      "btts_yes": 1.88,
-      "btts_no": 2.14
-    },
-    "probs": {
-      "ms1": 20.1,
-      "ms0": 22.6,
-      "ms2": 57.3,
-      "over25": 54.2,
-      "under25": 45.8,
-      "btts_yes": 53.3,
-      "btts_no": 46.7
-    },
-    "xg": {
-      "ev": 1.0,
-      "dep": 1.85,
-      "toplam": 2.85
-    },
-    "sharp": {
-      "ms_sinyal": "YOK",
-      "ms_tier": "NO_SHARP",
-      "ou_sinyal": "YOK",
-      "ou_tier": "NO_SHARP"
-    },
-    "form": {
-      "ev_form": [
-        "D",
-        "L",
-        "L"
-      ],
-      "dep_form": [
-        "W",
-        "W",
-        "W",
-        "W",
-        "L"
-      ]
-    },
-    "opening_odds": {
-      "ms1": 0,
-      "ms2": 0
-    },
-    "extended_stats": {
-      "ev_standing": {
-        "played": 3,
-        "wins": 0,
-        "draws": 1,
-        "losses": 2,
-        "points": 1,
-        "gf": 3,
-        "ga": 5,
-        "over25": 2,
-        "btts": 2
-      },
-      "dep_standing": {
-        "played": 3,
-        "wins": 3,
-        "draws": 0,
-        "losses": 0,
-        "points": 9,
-        "gf": 8,
-        "ga": 3,
-        "over25": 3,
-        "btts": 3
-      },
-      "h2h": {
-        "ev_wins": 0,
-        "dep_wins": 0,
-        "draws": 0,
-        "total": 0,
-        "matches": []
-      }
-    },
-    "news": []
-  },
-  {
-    "date": "2026-09-15T17:00:00Z",
-    "lig": "Süper Lig (TR)",
-    "lig_kodu": "TSL",
-    "ev": "Besiktas",
-    "dep": "Sivasspor",
-    "selection": "Ev Sahibi Kazanır",
-    "target_odds": 1.55,
-    "model_prob": 52.9,
-    "edge_pct": 0.1,
-    "edge_raw_pct": 0.1,
-    "status": "YAKLAŞAN MAÇ",
-    "reasoning": "🤖 <b>Yapay Zeka Analizi:</b> Ensemble modeli (Dixon-Coles + ELO + Purged LightGBM), <b>Besiktas</b> galibiyetine %52.9, beraberliğe %23.9, <b>Sivasspor</b> galibiyetine %23.2 ihtimal vermektedir.<br><br>📊 <b>Gol ve Tempo Projeksiyonu:</b> Beklenen Gol (xG) hesabı Ev: 1.71 - Dep: 1.05 (Toplam 2.76 gol) göstermektedir. 2.5 Üst ihtimali %52.1, KG Var ihtimali %53.2 seviyesindedir.<br><br>🎯 <b>Stratejik Yol Haritası & Tavsiye:</b> Bu karşılaşmada <b>Ev Sahibi Kazanır</b> bahsi %+ 0.1% matematiksel net değer (Edge) barındırmaktadır. Kelly sermaye yönetimi (Fractional %25): bakiyenin %0.1'i ile katılım önerilir.",
-    "ai_commentary": "🤖 <b>Yapay Zeka Analizi:</b> Ensemble modeli (Dixon-Coles + ELO + Purged LightGBM), <b>Besiktas</b> galibiyetine %52.9, beraberliğe %23.9, <b>Sivasspor</b> galibiyetine %23.2 ihtimal vermektedir.<br><br>📊 <b>Gol ve Tempo Projeksiyonu:</b> Beklenen Gol (xG) hesabı Ev: 1.71 - Dep: 1.05 (Toplam 2.76 gol) göstermektedir. 2.5 Üst ihtimali %52.1, KG Var ihtimali %53.2 seviyesindedir.<br><br>🎯 <b>Stratejik Yol Haritası & Tavsiye:</b> Bu karşılaşmada <b>Ev Sahibi Kazanır</b> bahsi %+ 0.1% matematiksel net değer (Edge) barındırmaktadır. Kelly sermaye yönetimi (Fractional %25): bakiyenin %0.1'i ile katılım önerilir.",
-    "is_win": null,
-    "verification_badge": "⏳ OYNANACAK",
-    "odds": {
-      "ms1": 1.89,
-      "ms0": 4.18,
-      "ms2": 4.31,
-      "over25": 1.92,
-      "under25": 2.09,
-      "btts_yes": 1.88,
-      "btts_no": 2.14
-    },
-    "probs": {
-      "ms1": 52.9,
-      "ms0": 23.9,
-      "ms2": 23.2,
-      "over25": 52.1,
-      "under25": 47.9,
+      "ms1": 34.0,
+      "ms0": 33.9,
+      "ms2": 32.1,
+      "over25": 46.9,
+      "under25": 53.1,
       "btts_yes": 53.2,
       "btts_no": 46.8
     },
     "xg": {
-      "ev": 1.71,
-      "dep": 1.05,
-      "toplam": 2.76
+      "ev": 1.3,
+      "dep": 1.25,
+      "toplam": 2.55
     },
     "sharp": {
       "ms_sinyal": "YOK",
       "ms_tier": "NO_SHARP",
-      "ou_sinyal": "YOK",
-      "ou_tier": "NO_SHARP"
+      "ou_sinyal": "UNDER",
+      "ou_tier": "STRONG",
+      "btts_sinyal": "YOK",
+      "btts_tier": "NO_SHARP"
     },
     "form": {
-      "ev_form": [
-        "W",
-        "W",
-        "L",
-        "W",
-        "D"
-      ],
+      "ev_form": [],
       "dep_form": [
-        "L",
         "D",
         "L",
-        "L",
-        "D"
+        "W",
+        "W",
+        "W"
       ]
     },
     "opening_odds": {
-      "ms1": 0,
-      "ms2": 0
+      "ms1": 0.0,
+      "ms2": 0.0
     },
     "extended_stats": {
-      "ev_standing": {
-        "played": 2,
-        "wins": 2,
-        "draws": 0,
-        "losses": 0,
-        "points": 6,
-        "gf": 6,
-        "ga": 2,
-        "over25": 1,
-        "btts": 1
-      },
+      "ev_standing": null,
       "dep_standing": {
-        "played": 2,
-        "wins": 0,
-        "draws": 1,
-        "losses": 1,
-        "points": 1,
-        "gf": 0,
-        "ga": 1,
-        "over25": 0,
-        "btts": 0
+        "played": 119,
+        "wins": 54,
+        "draws": 30,
+        "losses": 35,
+        "points": 192,
+        "gf": 154,
+        "ga": 128,
+        "over25": 49,
+        "btts": 54,
+        "lig": "SA",
+        "recent": [
+          {
+            "date": "2026-08-30",
+            "opponent": "GenoaC",
+            "score": "1-0",
+            "result": "W",
+            "isHome": true
+          },
+          {
+            "date": "2026-08-24",
+            "opponent": "Bologna 1909",
+            "score": "1-0",
+            "result": "W",
+            "isHome": false
+          },
+          {
+            "date": "2026-04-18",
+            "opponent": "SSC Napoli",
+            "score": "2-0",
+            "result": "W",
+            "isHome": false
+          },
+          {
+            "date": "2026-04-13",
+            "opponent": "ACF Fiorentina",
+            "score": "0-1",
+            "result": "L",
+            "isHome": false
+          },
+          {
+            "date": "2026-04-04",
+            "opponent": "Parma Calcio 1913",
+            "score": "1-1",
+            "result": "D",
+            "isHome": true
+          }
+        ]
       },
       "h2h": {
+        "matches": [],
         "ev_wins": 0,
         "dep_wins": 0,
         "draws": 0,
-        "total": 0,
-        "matches": []
+        "total": 0
       }
-    },
-    "news": []
+    }
   },
   {
-    "date": "2026-09-15T14:00:00Z",
-    "lig": "Süper Lig (TR)",
-    "lig_kodu": "TSL",
-    "ev": "Eyupspor",
-    "dep": "Trabzonspor",
+    "date": "2026-09-08T16:45:00Z",
+    "lig": "DED",
+    "ev": "1.5242",
+    "dep": "Excelsior",
     "selection": "Deplasman Kazanır",
-    "target_odds": 2.35,
-    "model_prob": 38.1,
-    "edge_pct": 0.1,
-    "edge_raw_pct": 0.1,
-    "status": "YAKLAŞAN MAÇ",
-    "reasoning": "🤖 <b>Yapay Zeka Analizi:</b> Ensemble modeli (Dixon-Coles + ELO + Purged LightGBM), <b>Eyupspor</b> galibiyetine %36.2, beraberliğe %25.7, <b>Trabzonspor</b> galibiyetine %38.1 ihtimal vermektedir.<br><br>📊 <b>Gol ve Tempo Projeksiyonu:</b> Beklenen Gol (xG) hesabı Ev: 1.34 - Dep: 1.38 (Toplam 2.72 gol) göstermektedir. 2.5 Üst ihtimali %51.1, KG Var ihtimali %55.2 seviyesindedir.<br><br>🎯 <b>Stratejik Yol Haritası & Tavsiye:</b> Bu karşılaşmada <b>Deplasman Kazanır</b> bahsi %+ 0.1% matematiksel net değer (Edge) barındırmaktadır. Kelly sermaye yönetimi (Fractional %25): bakiyenin %0.1'i ile katılım önerilir.",
-    "ai_commentary": "🤖 <b>Yapay Zeka Analizi:</b> Ensemble modeli (Dixon-Coles + ELO + Purged LightGBM), <b>Eyupspor</b> galibiyetine %36.2, beraberliğe %25.7, <b>Trabzonspor</b> galibiyetine %38.1 ihtimal vermektedir.<br><br>📊 <b>Gol ve Tempo Projeksiyonu:</b> Beklenen Gol (xG) hesabı Ev: 1.34 - Dep: 1.38 (Toplam 2.72 gol) göstermektedir. 2.5 Üst ihtimali %51.1, KG Var ihtimali %55.2 seviyesindedir.<br><br>🎯 <b>Stratejik Yol Haritası & Tavsiye:</b> Bu karşılaşmada <b>Deplasman Kazanır</b> bahsi %+ 0.1% matematiksel net değer (Edge) barındırmaktadır. Kelly sermaye yönetimi (Fractional %25): bakiyenin %0.1'i ile katılım önerilir.",
-    "is_win": null,
-    "verification_badge": "⏳ OYNANACAK",
+    "target_odds": 6.0,
+    "model_prob": 42.1,
+    "edge_pct": 25.4,
+    "edge_raw_pct": 25.4,
+    "fake_edge_score": 0.0,
+    "latency_seconds": 0,
+    "selected_bookmaker": "Pinnacle",
+    "execution_quality": {},
+    "recommended_stake_pct": 1.0,
+    "status": "RİSK FİLTRESİ (DEĞER YOK)",
+    "reasoning": "Model piyasadan %25.4 daha yüksek ihtimal veriyor. | Yüksek xG profili (Beklenti: 3.21 gol) → Bol pozisyonlu bir maç. | Piyasada bu tahmine hafif bir para akışı var.",
     "odds": {
-      "ms1": 2.76,
-      "ms0": 3.89,
-      "ms2": 2.62,
-      "over25": 1.96,
-      "under25": 2.04,
-      "btts_yes": 1.81,
-      "btts_no": 2.23
+      "ms1": 1.56,
+      "ms0": 5.0,
+      "ms2": 6.0,
+      "over25": 1.33,
+      "under25": 3.19,
+      "btts_yes": 0,
+      "btts_no": 0
     },
     "probs": {
-      "ms1": 36.2,
-      "ms0": 25.7,
-      "ms2": 38.1,
-      "over25": 51.1,
-      "under25": 48.9,
-      "btts_yes": 55.2,
-      "btts_no": 44.8
+      "ms1": 28.8,
+      "ms0": 29.1,
+      "ms2": 42.1,
+      "over25": 62.2,
+      "under25": 37.8,
+      "btts_yes": 64.1,
+      "btts_no": 35.9
     },
     "xg": {
-      "ev": 1.34,
-      "dep": 1.38,
-      "toplam": 2.72
+      "ev": 1.74,
+      "dep": 1.47,
+      "toplam": 3.21
+    },
+    "sharp": {
+      "ms_sinyal": "BER",
+      "ms_tier": "WEAK",
+      "ou_sinyal": "YOK",
+      "ou_tier": "NO_SHARP",
+      "btts_sinyal": "YOK",
+      "btts_tier": "NO_SHARP"
+    },
+    "form": {
+      "ev_form": [],
+      "dep_form": [
+        "D",
+        "W",
+        "L",
+        "W",
+        "W"
+      ]
+    },
+    "opening_odds": {
+      "ms1": 0.0,
+      "ms2": 0.0
+    },
+    "extended_stats": {
+      "ev_standing": null,
+      "dep_standing": {
+        "played": 71,
+        "wins": 18,
+        "draws": 19,
+        "losses": 34,
+        "points": 73,
+        "gf": 100,
+        "ga": 130,
+        "over25": 51,
+        "btts": 45,
+        "lig": "DED",
+        "recent": [
+          {
+            "date": "2026-09-05",
+            "opponent": "Willem II Tilburg",
+            "score": "3-0",
+            "result": "W",
+            "isHome": false
+          },
+          {
+            "date": "2026-08-29",
+            "opponent": "Sparta Rotterdam",
+            "score": "2-1",
+            "result": "W",
+            "isHome": true
+          },
+          {
+            "date": "2026-08-15",
+            "opponent": "PSV",
+            "score": "1-2",
+            "result": "L",
+            "isHome": true
+          },
+          {
+            "date": "2026-08-07",
+            "opponent": "SC Cambuur-Leeuwarden",
+            "score": "4-0",
+            "result": "W",
+            "isHome": false
+          },
+          {
+            "date": "2026-05-10",
+            "opponent": "FC Volendam",
+            "score": "1-1",
+            "result": "D",
+            "isHome": true
+          }
+        ]
+      },
+      "h2h": {
+        "matches": [],
+        "ev_wins": 0,
+        "dep_wins": 0,
+        "draws": 0,
+        "total": 0
+      }
+    }
+  },
+  {
+    "date": "2026-09-08T18:45:00Z",
+    "lig": "ELC",
+    "ev": "0.0984",
+    "dep": "Sheffield United",
+    "selection": "2.5 Alt",
+    "target_odds": 1.99,
+    "model_prob": 55.2,
+    "edge_pct": 5.0,
+    "edge_raw_pct": 5.0,
+    "fake_edge_score": 0.0,
+    "latency_seconds": 0,
+    "selected_bookmaker": "Pinnacle",
+    "execution_quality": {},
+    "recommended_stake_pct": 1.0,
+    "status": "RİSK FİLTRESİ (DEĞER YOK)",
+    "reasoning": "Model piyasadan %4.9 daha yüksek ihtimal veriyor. | Dengeli xG profili (Beklenti: 2.47 gol).",
+    "odds": {
+      "ms1": 3.25,
+      "ms0": 3.6,
+      "ms2": 2.4,
+      "over25": 1.94,
+      "under25": 1.99,
+      "btts_yes": 0,
+      "btts_no": 0
+    },
+    "probs": {
+      "ms1": 28.5,
+      "ms0": 29.2,
+      "ms2": 42.2,
+      "over25": 44.8,
+      "under25": 55.2,
+      "btts_yes": 51.0,
+      "btts_no": 49.0
+    },
+    "xg": {
+      "ev": 1.17,
+      "dep": 1.3,
+      "toplam": 2.47
     },
     "sharp": {
       "ms_sinyal": "YOK",
       "ms_tier": "NO_SHARP",
       "ou_sinyal": "YOK",
-      "ou_tier": "NO_SHARP"
+      "ou_tier": "NO_SHARP",
+      "btts_sinyal": "YOK",
+      "btts_tier": "NO_SHARP"
     },
     "form": {
-      "ev_form": [
-        "L",
-        "W",
-        "W",
-        "D",
-        "W"
-      ],
+      "ev_form": [],
       "dep_form": [
         "D",
         "D",
+        "D",
         "W",
+        "L"
+      ]
+    },
+    "opening_odds": {
+      "ms1": 0.0,
+      "ms2": 0.0
+    },
+    "extended_stats": {
+      "ev_standing": null,
+      "dep_standing": {
+        "played": 138,
+        "wins": 52,
+        "draws": 24,
+        "losses": 62,
+        "points": 180,
+        "gf": 177,
+        "ga": 215,
+        "over25": 76,
+        "btts": 70,
+        "lig": "PL",
+        "recent": [
+          {
+            "date": "2026-09-05",
+            "opponent": "Norwich City",
+            "score": "1-3",
+            "result": "L",
+            "isHome": true
+          },
+          {
+            "date": "2026-09-01",
+            "opponent": "Bolton Wanderers",
+            "score": "3-2",
+            "result": "W",
+            "isHome": true
+          },
+          {
+            "date": "2026-08-29",
+            "opponent": "Cardiff City",
+            "score": "2-2",
+            "result": "D",
+            "isHome": false
+          },
+          {
+            "date": "2026-08-22",
+            "opponent": "Swansea City AFC",
+            "score": "0-0",
+            "result": "D",
+            "isHome": false
+          },
+          {
+            "date": "2026-08-15",
+            "opponent": "Birmingham City",
+            "score": "0-0",
+            "result": "D",
+            "isHome": true
+          }
+        ]
+      },
+      "h2h": {
+        "matches": [],
+        "ev_wins": 0,
+        "dep_wins": 0,
+        "draws": 0,
+        "total": 0
+      }
+    }
+  },
+  {
+    "date": "2026-09-08T18:45:00Z",
+    "lig": "ELC",
+    "ev": "0.5987",
+    "dep": "Burnley",
+    "selection": "Deplasman Kazanır",
+    "target_odds": 3.8,
+    "model_prob": 42.1,
+    "edge_pct": 15.8,
+    "edge_raw_pct": 15.8,
+    "fake_edge_score": 0.0,
+    "latency_seconds": 0,
+    "selected_bookmaker": "Pinnacle",
+    "execution_quality": {},
+    "recommended_stake_pct": 1.0,
+    "status": "RİSK FİLTRESİ (DEĞER YOK)",
+    "reasoning": "Model piyasadan %15.8 daha yüksek ihtimal veriyor. | Dengeli xG profili (Beklenti: 2.59 gol). | Keskin bahisçiler (Sharp money) bu yönde pozisyon alıyor.",
+    "odds": {
+      "ms1": 2.12,
+      "ms0": 3.77,
+      "ms2": 3.8,
+      "over25": 1.82,
+      "under25": 2.1,
+      "btts_yes": 0,
+      "btts_no": 0
+    },
+    "probs": {
+      "ms1": 28.8,
+      "ms0": 29.1,
+      "ms2": 42.1,
+      "over25": 48.0,
+      "under25": 52.0,
+      "btts_yes": 53.2,
+      "btts_no": 46.8
+    },
+    "xg": {
+      "ev": 1.17,
+      "dep": 1.43,
+      "toplam": 2.59
+    },
+    "sharp": {
+      "ms_sinyal": "EV",
+      "ms_tier": "STRONG",
+      "ou_sinyal": "YOK",
+      "ou_tier": "NO_SHARP",
+      "btts_sinyal": "YOK",
+      "btts_tier": "NO_SHARP"
+    },
+    "form": {
+      "ev_form": [],
+      "dep_form": [
+        "D",
+        "L",
+        "L",
         "D",
         "L"
       ]
     },
     "opening_odds": {
-      "ms1": 0,
-      "ms2": 0
+      "ms1": 0.0,
+      "ms2": 0.0
     },
     "extended_stats": {
-      "ev_standing": {
-        "played": 4,
-        "wins": 2,
-        "draws": 1,
-        "losses": 1,
-        "points": 7,
-        "gf": 7,
-        "ga": 6,
-        "over25": 2,
-        "btts": 3
-      },
+      "ev_standing": null,
       "dep_standing": {
-        "played": 2,
-        "wins": 0,
-        "draws": 2,
-        "losses": 0,
-        "points": 2,
-        "gf": 1,
-        "ga": 1,
-        "over25": 0,
-        "btts": 1
+        "played": 123,
+        "wins": 37,
+        "draws": 35,
+        "losses": 51,
+        "points": 146,
+        "gf": 150,
+        "ga": 174,
+        "over25": 59,
+        "btts": 62,
+        "lig": "PL",
+        "recent": [
+          {
+            "date": "2026-09-05",
+            "opponent": "Bristol City",
+            "score": "1-2",
+            "result": "L",
+            "isHome": true
+          },
+          {
+            "date": "2026-09-02",
+            "opponent": "Middlesbrough",
+            "score": "1-1",
+            "result": "D",
+            "isHome": true
+          },
+          {
+            "date": "2026-08-29",
+            "opponent": "Norwich City",
+            "score": "1-4",
+            "result": "L",
+            "isHome": false
+          },
+          {
+            "date": "2026-08-23",
+            "opponent": "West Bromwich Albion",
+            "score": "1-3",
+            "result": "L",
+            "isHome": false
+          },
+          {
+            "date": "2026-08-16",
+            "opponent": "West Ham United",
+            "score": "2-2",
+            "result": "D",
+            "isHome": true
+          }
+        ]
       },
       "h2h": {
+        "matches": [],
         "ev_wins": 0,
         "dep_wins": 0,
         "draws": 0,
-        "total": 0,
-        "matches": []
+        "total": 0
       }
-    },
-    "news": []
+    }
   },
   {
-    "date": "2026-09-15T17:00:00Z",
-    "lig": "Süper Lig (TR)",
-    "lig_kodu": "TSL",
-    "ev": "Buyuksehyr",
-    "dep": "Antalyaspor",
-    "selection": "Ev Sahibi Kazanır",
-    "target_odds": 1.95,
-    "model_prob": 54.2,
-    "edge_pct": 5.7,
-    "edge_raw_pct": 5.7,
-    "status": "YAKLAŞAN MAÇ",
-    "reasoning": "🤖 <b>Yapay Zeka Analizi:</b> Ensemble modeli (Dixon-Coles + ELO + Purged LightGBM), <b>Buyuksehyr</b> galibiyetine %54.2, beraberliğe %23.5, <b>Antalyaspor</b> galibiyetine %22.3 ihtimal vermektedir.<br><br>📊 <b>Gol ve Tempo Projeksiyonu:</b> Beklenen Gol (xG) hesabı Ev: 1.76 - Dep: 1.04 (Toplam 2.8 gol) göstermektedir. 2.5 Üst ihtimali %53.1, KG Var ihtimali %53.5 seviyesindedir.<br><br>🎯 <b>Stratejik Yol Haritası & Tavsiye:</b> Bu karşılaşmada <b>Ev Sahibi Kazanır</b> bahsi %+ 5.7% matematiksel net değer (Edge) barındırmaktadır. Kelly sermaye yönetimi (Fractional %25): bakiyenin %0.1'i ile katılım önerilir.",
-    "ai_commentary": "🤖 <b>Yapay Zeka Analizi:</b> Ensemble modeli (Dixon-Coles + ELO + Purged LightGBM), <b>Buyuksehyr</b> galibiyetine %54.2, beraberliğe %23.5, <b>Antalyaspor</b> galibiyetine %22.3 ihtimal vermektedir.<br><br>📊 <b>Gol ve Tempo Projeksiyonu:</b> Beklenen Gol (xG) hesabı Ev: 1.76 - Dep: 1.04 (Toplam 2.8 gol) göstermektedir. 2.5 Üst ihtimali %53.1, KG Var ihtimali %53.5 seviyesindedir.<br><br>🎯 <b>Stratejik Yol Haritası & Tavsiye:</b> Bu karşılaşmada <b>Ev Sahibi Kazanır</b> bahsi %+ 5.7% matematiksel net değer (Edge) barındırmaktadır. Kelly sermaye yönetimi (Fractional %25): bakiyenin %0.1'i ile katılım önerilir.",
-    "is_win": null,
-    "verification_badge": "⏳ OYNANACAK",
+    "date": "2026-09-08T18:45:00Z",
+    "lig": "ELC",
+    "ev": "0.2248",
+    "dep": "Stoke City",
+    "selection": "2.5 Alt",
+    "target_odds": 2.33,
+    "model_prob": 52.6,
+    "edge_pct": 9.7,
+    "edge_raw_pct": 9.7,
+    "fake_edge_score": 0.0,
+    "latency_seconds": 0,
+    "selected_bookmaker": "Pinnacle",
+    "execution_quality": {},
+    "recommended_stake_pct": 1.0,
+    "status": "RİSK FİLTRESİ (DEĞER YOK)",
+    "reasoning": "Model piyasadan %9.6 daha yüksek ihtimal veriyor. | Dengeli xG profili (Beklenti: 2.57 gol).",
     "odds": {
-      "ms1": 1.85,
-      "ms0": 4.26,
-      "ms2": 4.48,
-      "over25": 1.88,
-      "under25": 2.13,
-      "btts_yes": 1.87,
-      "btts_no": 2.15
+      "ms1": 2.3,
+      "ms0": 3.85,
+      "ms2": 3.21,
+      "over25": 1.66,
+      "under25": 2.33,
+      "btts_yes": 0,
+      "btts_no": 0
     },
     "probs": {
-      "ms1": 54.2,
-      "ms0": 23.5,
-      "ms2": 22.3,
-      "over25": 53.1,
-      "under25": 46.9,
-      "btts_yes": 53.5,
-      "btts_no": 46.5
+      "ms1": 36.4,
+      "ms0": 27.0,
+      "ms2": 36.7,
+      "over25": 47.4,
+      "under25": 52.6,
+      "btts_yes": 53.2,
+      "btts_no": 46.8
     },
     "xg": {
-      "ev": 1.76,
-      "dep": 1.04,
-      "toplam": 2.8
+      "ev": 1.27,
+      "dep": 1.3,
+      "toplam": 2.57
     },
     "sharp": {
       "ms_sinyal": "YOK",
       "ms_tier": "NO_SHARP",
       "ou_sinyal": "YOK",
-      "ou_tier": "NO_SHARP"
+      "ou_tier": "NO_SHARP",
+      "btts_sinyal": "YOK",
+      "btts_tier": "NO_SHARP"
     },
     "form": {
-      "ev_form": [
-        "W",
-        "D",
-        "W",
-        "L",
-        "W"
-      ],
+      "ev_form": [],
       "dep_form": [
+        "L",
+        "L",
+        "L",
         "W",
-        "L",
-        "D",
-        "L",
-        "D"
+        "W"
       ]
     },
     "opening_odds": {
-      "ms1": 0,
-      "ms2": 0
+      "ms1": 0.0,
+      "ms2": 0.0
     },
     "extended_stats": {
-      "ev_standing": {
-        "played": 2,
-        "wins": 1,
-        "draws": 1,
-        "losses": 0,
-        "points": 4,
-        "gf": 5,
-        "ga": 3,
-        "over25": 1,
-        "btts": 2
-      },
+      "ev_standing": null,
       "dep_standing": {
-        "played": 3,
-        "wins": 1,
-        "draws": 1,
-        "losses": 1,
-        "points": 4,
-        "gf": 5,
-        "ga": 6,
-        "over25": 2,
-        "btts": 2
+        "played": 143,
+        "wins": 44,
+        "draws": 36,
+        "losses": 63,
+        "points": 168,
+        "gf": 153,
+        "ga": 187,
+        "over25": 61,
+        "btts": 63,
+        "lig": "ELC",
+        "recent": [
+          {
+            "date": "2026-09-05",
+            "opponent": "Charlton Athletic",
+            "score": "4-0",
+            "result": "W",
+            "isHome": true
+          },
+          {
+            "date": "2026-09-01",
+            "opponent": "Norwich City",
+            "score": "1-0",
+            "result": "W",
+            "isHome": true
+          },
+          {
+            "date": "2026-08-29",
+            "opponent": "Wolverhampton Wanderers",
+            "score": "1-4",
+            "result": "L",
+            "isHome": false
+          },
+          {
+            "date": "2026-08-22",
+            "opponent": "Southampton",
+            "score": "1-3",
+            "result": "L",
+            "isHome": false
+          },
+          {
+            "date": "2026-08-15",
+            "opponent": "Swansea City AFC",
+            "score": "1-2",
+            "result": "L",
+            "isHome": true
+          }
+        ]
       },
       "h2h": {
+        "matches": [],
         "ev_wins": 0,
         "dep_wins": 0,
         "draws": 0,
-        "total": 0,
-        "matches": []
+        "total": 0
       }
-    },
-    "news": []
+    }
   },
   {
-    "date": "2026-09-14T14:00:00Z",
-    "lig": "Süper Lig (TR)",
-    "lig_kodu": "TSL",
-    "ev": "Samsunspor",
-    "dep": "Konyaspor",
-    "selection": "Ev Sahibi Kazanır",
-    "target_odds": 2.1,
-    "model_prob": 46.0,
-    "edge_pct": 0.1,
-    "edge_raw_pct": 0.1,
-    "status": "YAKLAŞAN MAÇ",
-    "reasoning": "🤖 <b>Yapay Zeka Analizi:</b> Ensemble modeli (Dixon-Coles + ELO + Purged LightGBM), <b>Samsunspor</b> galibiyetine %46.0, beraberliğe %25.7, <b>Konyaspor</b> galibiyetine %28.3 ihtimal vermektedir.<br><br>📊 <b>Gol ve Tempo Projeksiyonu:</b> Beklenen Gol (xG) hesabı Ev: 1.5 - Dep: 1.12 (Toplam 2.62 gol) göstermektedir. 2.5 Üst ihtimali %48.7, KG Var ihtimali %52.3 seviyesindedir.<br><br>🎯 <b>Stratejik Yol Haritası & Tavsiye:</b> Bu karşılaşmada <b>Ev Sahibi Kazanır</b> bahsi %+ 0.1% matematiksel net değer (Edge) barındırmaktadır. Kelly sermaye yönetimi (Fractional %25): bakiyenin %0.1'i ile katılım önerilir.",
-    "ai_commentary": "🤖 <b>Yapay Zeka Analizi:</b> Ensemble modeli (Dixon-Coles + ELO + Purged LightGBM), <b>Samsunspor</b> galibiyetine %46.0, beraberliğe %25.7, <b>Konyaspor</b> galibiyetine %28.3 ihtimal vermektedir.<br><br>📊 <b>Gol ve Tempo Projeksiyonu:</b> Beklenen Gol (xG) hesabı Ev: 1.5 - Dep: 1.12 (Toplam 2.62 gol) göstermektedir. 2.5 Üst ihtimali %48.7, KG Var ihtimali %52.3 seviyesindedir.<br><br>🎯 <b>Stratejik Yol Haritası & Tavsiye:</b> Bu karşılaşmada <b>Ev Sahibi Kazanır</b> bahsi %+ 0.1% matematiksel net değer (Edge) barındırmaktadır. Kelly sermaye yönetimi (Fractional %25): bakiyenin %0.1'i ile katılım önerilir.",
-    "is_win": null,
-    "verification_badge": "⏳ OYNANACAK",
+    "date": "2026-09-08T18:45:00Z",
+    "lig": "ELC",
+    "ev": "0.5987",
+    "dep": "Preston North End",
+    "selection": "Deplasman Kazanır",
+    "target_odds": 3.8,
+    "model_prob": 42.1,
+    "edge_pct": 15.8,
+    "edge_raw_pct": 15.8,
+    "fake_edge_score": 0.0,
+    "latency_seconds": 0,
+    "selected_bookmaker": "Pinnacle",
+    "execution_quality": {},
+    "recommended_stake_pct": 1.0,
+    "status": "RİSK FİLTRESİ (DEĞER YOK)",
+    "reasoning": "Model piyasadan %15.8 daha yüksek ihtimal veriyor. | Dengeli xG profili (Beklenti: 2.58 gol). | Sinyal tamamen modelin bulduğu matematiksel değere (Edge) dayanıyor.",
     "odds": {
-      "ms1": 2.17,
-      "ms0": 3.89,
-      "ms2": 3.53,
-      "over25": 2.05,
-      "under25": 1.95,
-      "btts_yes": 1.91,
-      "btts_no": 2.1
+      "ms1": 2.14,
+      "ms0": 3.65,
+      "ms2": 3.8,
+      "over25": 1.97,
+      "under25": 1.98,
+      "btts_yes": 0,
+      "btts_no": 0
     },
     "probs": {
-      "ms1": 46.0,
-      "ms0": 25.7,
-      "ms2": 28.3,
-      "over25": 48.7,
-      "under25": 51.3,
-      "btts_yes": 52.3,
-      "btts_no": 47.7
+      "ms1": 28.8,
+      "ms0": 29.1,
+      "ms2": 42.1,
+      "over25": 47.6,
+      "under25": 52.4,
+      "btts_yes": 53.4,
+      "btts_no": 46.6
     },
     "xg": {
-      "ev": 1.5,
-      "dep": 1.12,
-      "toplam": 2.62
+      "ev": 1.29,
+      "dep": 1.28,
+      "toplam": 2.58
     },
     "sharp": {
       "ms_sinyal": "YOK",
       "ms_tier": "NO_SHARP",
-      "ou_sinyal": "YOK",
-      "ou_tier": "NO_SHARP"
+      "ou_sinyal": "OVER",
+      "ou_tier": "WEAK",
+      "btts_sinyal": "YOK",
+      "btts_tier": "NO_SHARP"
     },
     "form": {
-      "ev_form": [
-        "W",
-        "L",
-        "L",
-        "W",
-        "W"
-      ],
+      "ev_form": [],
       "dep_form": [
         "L",
         "L",
-        "W",
         "L",
-        "L"
+        "L",
+        "W"
       ]
     },
     "opening_odds": {
-      "ms1": 0,
-      "ms2": 0
+      "ms1": 0.0,
+      "ms2": 0.0
     },
     "extended_stats": {
-      "ev_standing": {
-        "played": 2,
-        "wins": 1,
-        "draws": 0,
-        "losses": 1,
-        "points": 3,
-        "gf": 1,
-        "ga": 2,
-        "over25": 0,
-        "btts": 0
-      },
+      "ev_standing": null,
       "dep_standing": {
-        "played": 3,
-        "wins": 1,
-        "draws": 0,
-        "losses": 2,
-        "points": 3,
-        "gf": 5,
-        "ga": 7,
-        "over25": 3,
-        "btts": 3
+        "played": 143,
+        "wins": 44,
+        "draws": 44,
+        "losses": 55,
+        "points": 176,
+        "gf": 164,
+        "ga": 198,
+        "over25": 75,
+        "btts": 83,
+        "lig": "ELC",
+        "recent": [
+          {
+            "date": "2026-09-05",
+            "opponent": "Blackburn Rovers",
+            "score": "2-1",
+            "result": "W",
+            "isHome": true
+          },
+          {
+            "date": "2026-09-01",
+            "opponent": "Bristol City",
+            "score": "1-3",
+            "result": "L",
+            "isHome": true
+          },
+          {
+            "date": "2026-08-29",
+            "opponent": "Charlton Athletic",
+            "score": "0-1",
+            "result": "L",
+            "isHome": false
+          },
+          {
+            "date": "2026-08-22",
+            "opponent": "Wolverhampton Wanderers",
+            "score": "1-3",
+            "result": "L",
+            "isHome": true
+          },
+          {
+            "date": "2026-08-15",
+            "opponent": "Bolton Wanderers",
+            "score": "1-2",
+            "result": "L",
+            "isHome": false
+          }
+        ]
       },
       "h2h": {
+        "matches": [],
         "ev_wins": 0,
         "dep_wins": 0,
         "draws": 0,
-        "total": 0,
-        "matches": []
+        "total": 0
       }
-    },
-    "news": []
+    }
   },
   {
-    "date": "2026-09-15T14:00:00Z",
-    "lig": "Süper Lig (TR)",
-    "lig_kodu": "TSL",
-    "ev": "Goztepe",
-    "dep": "Bodrum FK",
-    "selection": "Ev Sahibi Kazanır",
-    "target_odds": 2.05,
-    "model_prob": 51.4,
-    "edge_pct": 5.4,
-    "edge_raw_pct": 5.4,
-    "status": "YAKLAŞAN MAÇ",
-    "reasoning": "🤖 <b>Yapay Zeka Analizi:</b> Ensemble modeli (Dixon-Coles + ELO + Purged LightGBM), <b>Goztepe</b> galibiyetine %51.4, beraberliğe %24.5, <b>Bodrum FK</b> galibiyetine %24.1 ihtimal vermektedir.<br><br>📊 <b>Gol ve Tempo Projeksiyonu:</b> Beklenen Gol (xG) hesabı Ev: 1.65 - Dep: 1.05 (Toplam 2.7 gol) göstermektedir. 2.5 Üst ihtimali %50.6, KG Var ihtimali %52.5 seviyesindedir.<br><br>🎯 <b>Stratejik Yol Haritası & Tavsiye:</b> Bu karşılaşmada <b>Ev Sahibi Kazanır</b> bahsi %+ 5.4% matematiksel net değer (Edge) barındırmaktadır. Kelly sermaye yönetimi (Fractional %25): bakiyenin %0.1'i ile katılım önerilir.",
-    "ai_commentary": "🤖 <b>Yapay Zeka Analizi:</b> Ensemble modeli (Dixon-Coles + ELO + Purged LightGBM), <b>Goztepe</b> galibiyetine %51.4, beraberliğe %24.5, <b>Bodrum FK</b> galibiyetine %24.1 ihtimal vermektedir.<br><br>📊 <b>Gol ve Tempo Projeksiyonu:</b> Beklenen Gol (xG) hesabı Ev: 1.65 - Dep: 1.05 (Toplam 2.7 gol) göstermektedir. 2.5 Üst ihtimali %50.6, KG Var ihtimali %52.5 seviyesindedir.<br><br>🎯 <b>Stratejik Yol Haritası & Tavsiye:</b> Bu karşılaşmada <b>Ev Sahibi Kazanır</b> bahsi %+ 5.4% matematiksel net değer (Edge) barındırmaktadır. Kelly sermaye yönetimi (Fractional %25): bakiyenin %0.1'i ile katılım önerilir.",
-    "is_win": null,
-    "verification_badge": "⏳ OYNANACAK",
+    "date": "2026-09-08T18:45:00Z",
+    "lig": "ELC",
+    "ev": "0.7669",
+    "dep": "Swansea City",
+    "selection": "Deplasman Kazanır",
+    "target_odds": 4.2,
+    "model_prob": 42.1,
+    "edge_pct": 18.3,
+    "edge_raw_pct": 18.3,
+    "fake_edge_score": 0.0,
+    "latency_seconds": 0,
+    "selected_bookmaker": "Pinnacle",
+    "execution_quality": {},
+    "recommended_stake_pct": 1.0,
+    "status": "RİSK FİLTRESİ (DEĞER YOK)",
+    "reasoning": "Model piyasadan %18.3 daha yüksek ihtimal veriyor. | Dengeli xG profili (Beklenti: 2.70 gol). | Sinyal tamamen modelin bulduğu matematiksel değere (Edge) dayanıyor.",
     "odds": {
       "ms1": 1.95,
-      "ms0": 4.08,
-      "ms2": 4.15,
-      "over25": 1.98,
-      "under25": 2.02,
-      "btts_yes": 1.9,
-      "btts_no": 2.11
+      "ms0": 3.85,
+      "ms2": 4.2,
+      "over25": 1.82,
+      "under25": 2.08,
+      "btts_yes": 0,
+      "btts_no": 0
     },
     "probs": {
-      "ms1": 51.4,
-      "ms0": 24.5,
-      "ms2": 24.1,
+      "ms1": 28.8,
+      "ms0": 29.1,
+      "ms2": 42.1,
       "over25": 50.6,
       "under25": 49.4,
-      "btts_yes": 52.5,
-      "btts_no": 47.5
+      "btts_yes": 55.4,
+      "btts_no": 44.6
     },
     "xg": {
-      "ev": 1.65,
-      "dep": 1.05,
+      "ev": 1.47,
+      "dep": 1.23,
       "toplam": 2.7
     },
     "sharp": {
       "ms_sinyal": "YOK",
       "ms_tier": "NO_SHARP",
       "ou_sinyal": "YOK",
-      "ou_tier": "NO_SHARP"
+      "ou_tier": "NO_SHARP",
+      "btts_sinyal": "YOK",
+      "btts_tier": "NO_SHARP"
     },
     "form": {
-      "ev_form": [
-        "D",
-        "D",
-        "D"
-      ],
+      "ev_form": [],
       "dep_form": [
         "W",
+        "D",
+        "W",
+        "W",
+        "D"
+      ]
+    },
+    "opening_odds": {
+      "ms1": 0.0,
+      "ms2": 0.0
+    },
+    "extended_stats": {
+      "ev_standing": null,
+      "dep_standing": {
+        "played": 143,
+        "wins": 53,
+        "draws": 34,
+        "losses": 56,
+        "points": 193,
+        "gf": 174,
+        "ga": 181,
+        "over25": 72,
+        "btts": 72,
+        "lig": "ELC",
+        "recent": [
+          {
+            "date": "2026-09-05",
+            "opponent": "Wrexham AFC",
+            "score": "0-0",
+            "result": "D",
+            "isHome": true
+          },
+          {
+            "date": "2026-09-01",
+            "opponent": "Watford",
+            "score": "2-0",
+            "result": "W",
+            "isHome": true
+          },
+          {
+            "date": "2026-08-29",
+            "opponent": "Derby County",
+            "score": "3-0",
+            "result": "W",
+            "isHome": false
+          },
+          {
+            "date": "2026-08-22",
+            "opponent": "Sheffield United",
+            "score": "0-0",
+            "result": "D",
+            "isHome": true
+          },
+          {
+            "date": "2026-08-15",
+            "opponent": "Stoke City",
+            "score": "2-1",
+            "result": "W",
+            "isHome": false
+          }
+        ]
+      },
+      "h2h": {
+        "matches": [],
+        "ev_wins": 0,
+        "dep_wins": 0,
+        "draws": 0,
+        "total": 0
+      }
+    }
+  },
+  {
+    "date": "2026-09-08T19:00:00Z",
+    "lig": "ELC",
+    "ev": "0.6411",
+    "dep": "West Ham United",
+    "selection": "Ev Sahibi Kazanır",
+    "target_odds": 5.75,
+    "model_prob": 28.5,
+    "edge_pct": 11.2,
+    "edge_raw_pct": 11.2,
+    "fake_edge_score": 0.0,
+    "latency_seconds": 0,
+    "selected_bookmaker": "Pinnacle",
+    "execution_quality": {},
+    "recommended_stake_pct": 1.0,
+    "status": "RİSK FİLTRESİ (DEĞER YOK)",
+    "reasoning": "Model piyasadan %11.1 daha yüksek ihtimal veriyor. | Dengeli xG profili (Beklenti: 2.55 gol). | Sinyal tamamen modelin bulduğu matematiksel değere (Edge) dayanıyor.",
+    "odds": {
+      "ms1": 5.75,
+      "ms0": 4.4,
+      "ms2": 1.69,
+      "over25": 1.65,
+      "under25": 2.46,
+      "btts_yes": 0,
+      "btts_no": 0
+    },
+    "probs": {
+      "ms1": 28.5,
+      "ms0": 29.2,
+      "ms2": 42.2,
+      "over25": 46.9,
+      "under25": 53.1,
+      "btts_yes": 52.8,
+      "btts_no": 47.2
+    },
+    "xg": {
+      "ev": 1.3,
+      "dep": 1.25,
+      "toplam": 2.55
+    },
+    "sharp": {
+      "ms_sinyal": "YOK",
+      "ms_tier": "NO_SHARP",
+      "ou_sinyal": "OVER",
+      "ou_tier": "STRONG",
+      "btts_sinyal": "YOK",
+      "btts_tier": "NO_SHARP"
+    },
+    "form": {
+      "ev_form": [],
+      "dep_form": [
+        "D",
+        "L",
+        "D",
+        "W",
+        "W"
+      ]
+    },
+    "opening_odds": {
+      "ms1": 0.0,
+      "ms2": 0.0
+    },
+    "extended_stats": {
+      "ev_standing": null,
+      "dep_standing": {
+        "played": 114,
+        "wins": 35,
+        "draws": 31,
+        "losses": 48,
+        "points": 136,
+        "gf": 157,
+        "ga": 200,
+        "over25": 68,
+        "btts": 72,
+        "lig": "PL",
+        "recent": [
+          {
+            "date": "2026-09-05",
+            "opponent": "Derby County",
+            "score": "3-0",
+            "result": "W",
+            "isHome": true
+          },
+          {
+            "date": "2026-09-01",
+            "opponent": "Wolverhampton Wanderers",
+            "score": "4-2",
+            "result": "W",
+            "isHome": true
+          },
+          {
+            "date": "2026-08-29",
+            "opponent": "Watford",
+            "score": "1-1",
+            "result": "D",
+            "isHome": false
+          },
+          {
+            "date": "2026-08-22",
+            "opponent": "Charlton Athletic",
+            "score": "1-2",
+            "result": "L",
+            "isHome": true
+          },
+          {
+            "date": "2026-08-16",
+            "opponent": "Burnley",
+            "score": "2-2",
+            "result": "D",
+            "isHome": false
+          }
+        ]
+      },
+      "h2h": {
+        "matches": [],
+        "ev_wins": 0,
+        "dep_wins": 0,
+        "draws": 0,
+        "total": 0
+      }
+    }
+  },
+  {
+    "date": "2026-09-09T18:45:00Z",
+    "lig": "ELC",
+    "ev": "0.6828",
+    "dep": "Birmingham City",
+    "selection": "Deplasman Kazanır",
+    "target_odds": 4.0,
+    "model_prob": 42.1,
+    "edge_pct": 17.1,
+    "edge_raw_pct": 17.1,
+    "fake_edge_score": 0.0,
+    "latency_seconds": 0,
+    "selected_bookmaker": "Pinnacle",
+    "execution_quality": {},
+    "recommended_stake_pct": 1.0,
+    "status": "RİSK FİLTRESİ (DEĞER YOK)",
+    "reasoning": "Model piyasadan %17.1 daha yüksek ihtimal veriyor. | Dengeli xG profili (Beklenti: 2.58 gol). | Keskin bahisçiler (Sharp money) bu yönde pozisyon alıyor.",
+    "odds": {
+      "ms1": 2.06,
+      "ms0": 3.7,
+      "ms2": 4.0,
+      "over25": 1.83,
+      "under25": 2.02,
+      "btts_yes": 0,
+      "btts_no": 0
+    },
+    "probs": {
+      "ms1": 28.8,
+      "ms0": 29.1,
+      "ms2": 42.1,
+      "over25": 47.6,
+      "under25": 52.4,
+      "btts_yes": 53.4,
+      "btts_no": 46.6
+    },
+    "xg": {
+      "ev": 1.31,
+      "dep": 1.27,
+      "toplam": 2.58
+    },
+    "sharp": {
+      "ms_sinyal": "EV",
+      "ms_tier": "STRONG",
+      "ou_sinyal": "YOK",
+      "ou_tier": "NO_SHARP",
+      "btts_sinyal": "YOK",
+      "btts_tier": "NO_SHARP"
+    },
+    "form": {
+      "ev_form": [],
+      "dep_form": [
+        "D",
+        "D",
+        "W",
+        "D",
+        "D"
+      ]
+    },
+    "opening_odds": {
+      "ms1": 0.0,
+      "ms2": 0.0
+    },
+    "extended_stats": {
+      "ev_standing": null,
+      "dep_standing": {
+        "played": 97,
+        "wins": 31,
+        "draws": 28,
+        "losses": 38,
+        "points": 121,
+        "gf": 114,
+        "ga": 127,
+        "over25": 45,
+        "btts": 53,
+        "lig": "ELC",
+        "recent": [
+          {
+            "date": "2026-09-06",
+            "opponent": "Wolverhampton Wanderers",
+            "score": "2-2",
+            "result": "D",
+            "isHome": true
+          },
+          {
+            "date": "2026-09-01",
+            "opponent": "Southampton",
+            "score": "1-1",
+            "result": "D",
+            "isHome": true
+          },
+          {
+            "date": "2026-08-28",
+            "opponent": "Wrexham AFC",
+            "score": "2-1",
+            "result": "W",
+            "isHome": false
+          },
+          {
+            "date": "2026-08-22",
+            "opponent": "Bristol City",
+            "score": "2-2",
+            "result": "D",
+            "isHome": true
+          },
+          {
+            "date": "2026-08-15",
+            "opponent": "Sheffield United",
+            "score": "0-0",
+            "result": "D",
+            "isHome": false
+          }
+        ]
+      },
+      "h2h": {
+        "matches": [],
+        "ev_wins": 0,
+        "dep_wins": 0,
+        "draws": 0,
+        "total": 0
+      }
+    }
+  },
+  {
+    "date": "2026-09-09T18:45:00Z",
+    "lig": "ELC",
+    "ev": "0.0979",
+    "dep": "West Bromwich Albion",
+    "selection": "Deplasman Kazanır",
+    "target_odds": 2.6,
+    "model_prob": 42.2,
+    "edge_pct": 3.8,
+    "edge_raw_pct": 3.8,
+    "fake_edge_score": 0.0,
+    "latency_seconds": 0,
+    "selected_bookmaker": "Pinnacle",
+    "execution_quality": {},
+    "recommended_stake_pct": 1.0,
+    "status": "RİSK FİLTRESİ (DEĞER YOK)",
+    "reasoning": "Model piyasadan %3.8 daha yüksek ihtimal veriyor. | Dengeli xG profili (Beklenti: 2.53 gol).",
+    "odds": {
+      "ms1": 2.94,
+      "ms0": 3.55,
+      "ms2": 2.6,
+      "over25": 1.95,
+      "under25": 1.95,
+      "btts_yes": 0,
+      "btts_no": 0
+    },
+    "probs": {
+      "ms1": 28.5,
+      "ms0": 29.2,
+      "ms2": 42.2,
+      "over25": 46.4,
+      "under25": 53.6,
+      "btts_yes": 52.5,
+      "btts_no": 47.5
+    },
+    "xg": {
+      "ev": 1.27,
+      "dep": 1.26,
+      "toplam": 2.53
+    },
+    "sharp": {
+      "ms_sinyal": "YOK",
+      "ms_tier": "NO_SHARP",
+      "ou_sinyal": "UNDER",
+      "ou_tier": "STRONG",
+      "btts_sinyal": "YOK",
+      "btts_tier": "NO_SHARP"
+    },
+    "form": {
+      "ev_form": [],
+      "dep_form": [
+        "W",
+        "W",
+        "L",
+        "D",
+        "W"
+      ]
+    },
+    "opening_odds": {
+      "ms1": 0.0,
+      "ms2": 0.0
+    },
+    "extended_stats": {
+      "ev_standing": null,
+      "dep_standing": {
+        "played": 145,
+        "wins": 52,
+        "draws": 47,
+        "losses": 46,
+        "points": 203,
+        "gf": 184,
+        "ga": 161,
+        "over25": 64,
+        "btts": 76,
+        "lig": "ELC",
+        "recent": [
+          {
+            "date": "2026-09-05",
+            "opponent": "Watford",
+            "score": "1-0",
+            "result": "W",
+            "isHome": true
+          },
+          {
+            "date": "2026-09-02",
+            "opponent": "Charlton Athletic",
+            "score": "1-1",
+            "result": "D",
+            "isHome": true
+          },
+          {
+            "date": "2026-08-29",
+            "opponent": "Middlesbrough",
+            "score": "1-3",
+            "result": "L",
+            "isHome": false
+          },
+          {
+            "date": "2026-08-23",
+            "opponent": "Burnley",
+            "score": "3-1",
+            "result": "W",
+            "isHome": true
+          },
+          {
+            "date": "2026-08-15",
+            "opponent": "Norwich City",
+            "score": "2-1",
+            "result": "W",
+            "isHome": false
+          }
+        ]
+      },
+      "h2h": {
+        "matches": [],
+        "ev_wins": 0,
+        "dep_wins": 0,
+        "draws": 0,
+        "total": 0
+      }
+    }
+  },
+  {
+    "date": "2026-09-09T19:00:00Z",
+    "lig": "ELC",
+    "ev": "0.0261",
+    "dep": "Queens Park Rangers",
+    "selection": "Deplasman Kazanır",
+    "target_odds": 2.43,
+    "model_prob": 42.2,
+    "edge_pct": 1.1,
+    "edge_raw_pct": 1.1,
+    "fake_edge_score": 0.0,
+    "latency_seconds": 0,
+    "selected_bookmaker": "Pinnacle",
+    "execution_quality": {},
+    "recommended_stake_pct": 1.0,
+    "status": "RİSK FİLTRESİ (DEĞER YOK)",
+    "reasoning": "Model piyasadan %1.1 daha yüksek ihtimal veriyor. | Dengeli xG profili (Beklenti: 2.54 gol).",
+    "odds": {
+      "ms1": 3.3,
+      "ms0": 3.5,
+      "ms2": 2.43,
+      "over25": 1.98,
+      "under25": 1.88,
+      "btts_yes": 0,
+      "btts_no": 0
+    },
+    "probs": {
+      "ms1": 28.5,
+      "ms0": 29.2,
+      "ms2": 42.2,
+      "over25": 46.6,
+      "under25": 53.4,
+      "btts_yes": 52.6,
+      "btts_no": 47.4
+    },
+    "xg": {
+      "ev": 1.26,
+      "dep": 1.28,
+      "toplam": 2.54
+    },
+    "sharp": {
+      "ms_sinyal": "YOK",
+      "ms_tier": "NO_SHARP",
+      "ou_sinyal": "YOK",
+      "ou_tier": "NO_SHARP",
+      "btts_sinyal": "YOK",
+      "btts_tier": "NO_SHARP"
+    },
+    "form": {
+      "ev_form": [],
+      "dep_form": [
+        "W",
+        "D",
+        "W",
+        "W",
+        "L"
+      ]
+    },
+    "opening_odds": {
+      "ms1": 0.0,
+      "ms2": 0.0
+    },
+    "extended_stats": {
+      "ev_standing": null,
+      "dep_standing": {
+        "played": 143,
+        "wins": 48,
+        "draws": 36,
+        "losses": 59,
+        "points": 180,
+        "gf": 168,
+        "ga": 198,
+        "over25": 77,
+        "btts": 81,
+        "lig": "ELC",
+        "recent": [
+          {
+            "date": "2026-09-05",
+            "opponent": "Middlesbrough",
+            "score": "0-1",
+            "result": "L",
+            "isHome": true
+          },
+          {
+            "date": "2026-09-02",
+            "opponent": "Cardiff City",
+            "score": "2-1",
+            "result": "W",
+            "isHome": true
+          },
+          {
+            "date": "2026-08-29",
+            "opponent": "Blackburn Rovers",
+            "score": "2-1",
+            "result": "W",
+            "isHome": false
+          },
+          {
+            "date": "2026-08-22",
+            "opponent": "Bolton Wanderers",
+            "score": "0-0",
+            "result": "D",
+            "isHome": true
+          },
+          {
+            "date": "2026-08-15",
+            "opponent": "Portsmouth",
+            "score": "3-1",
+            "result": "W",
+            "isHome": false
+          }
+        ]
+      },
+      "h2h": {
+        "matches": [],
+        "ev_wins": 0,
+        "dep_wins": 0,
+        "draws": 0,
+        "total": 0
+      }
+    }
+  },
+  {
+    "date": "2026-09-08T16:45:00Z",
+    "lig": "CL",
+    "ev": "0.195",
+    "dep": "Aston Villa",
+    "selection": "2.5 Alt",
+    "target_odds": 2.25,
+    "model_prob": 53.1,
+    "edge_pct": 8.7,
+    "edge_raw_pct": 8.7,
+    "fake_edge_score": 0.0,
+    "latency_seconds": 0,
+    "selected_bookmaker": "Pinnacle",
+    "execution_quality": {},
+    "recommended_stake_pct": 1.0,
+    "status": "RİSK FİLTRESİ (DEĞER YOK)",
+    "reasoning": "Model piyasadan %8.7 daha yüksek ihtimal veriyor. | Dengeli xG profili (Beklenti: 2.55 gol). | Piyasada bu tahmine hafif bir para akışı var.",
+    "odds": {
+      "ms1": 2.84,
+      "ms0": 3.85,
+      "ms2": 2.6,
+      "over25": 1.74,
+      "under25": 2.25,
+      "btts_yes": 0,
+      "btts_no": 0
+    },
+    "probs": {
+      "ms1": 28.5,
+      "ms0": 29.2,
+      "ms2": 42.2,
+      "over25": 46.9,
+      "under25": 53.1,
+      "btts_yes": 53.3,
+      "btts_no": 46.7
+    },
+    "xg": {
+      "ev": 1.3,
+      "dep": 1.25,
+      "toplam": 2.55
+    },
+    "sharp": {
+      "ms_sinyal": "DEP",
+      "ms_tier": "WEAK",
+      "ou_sinyal": "YOK",
+      "ou_tier": "NO_SHARP",
+      "btts_sinyal": "YOK",
+      "btts_tier": "NO_SHARP"
+    },
+    "form": {
+      "ev_form": [],
+      "dep_form": [
+        "D",
+        "W",
+        "L",
+        "L",
+        "D"
+      ]
+    },
+    "opening_odds": {
+      "ms1": 0.0,
+      "ms2": 0.0
+    },
+    "extended_stats": {
+      "ev_standing": null,
+      "dep_standing": {
+        "played": 124,
+        "wins": 64,
+        "draws": 26,
+        "losses": 34,
+        "points": 218,
+        "gf": 204,
+        "ga": 170,
+        "over25": 75,
+        "btts": 71,
+        "lig": "PL",
+        "recent": [
+          {
+            "date": "2026-09-05",
+            "opponent": "Hull City AFC",
+            "score": "0-0",
+            "result": "D",
+            "isHome": false
+          },
+          {
+            "date": "2026-08-31",
+            "opponent": "Arsenal",
+            "score": "0-1",
+            "result": "L",
+            "isHome": true
+          },
+          {
+            "date": "2026-08-23",
+            "opponent": "Brighton & Hove Albion",
+            "score": "0-4",
+            "result": "L",
+            "isHome": false
+          },
+          {
+            "date": "2026-04-19",
+            "opponent": "Sunderland AFC",
+            "score": "4-3",
+            "result": "W",
+            "isHome": true
+          },
+          {
+            "date": "2026-04-12",
+            "opponent": "Nottingham Forest",
+            "score": "1-1",
+            "result": "D",
+            "isHome": false
+          }
+        ]
+      },
+      "h2h": {
+        "matches": [],
+        "ev_wins": 0,
+        "dep_wins": 0,
+        "draws": 0,
+        "total": 0
+      }
+    }
+  },
+  {
+    "date": "2026-09-08T19:00:00Z",
+    "lig": "CL",
+    "ev": "0.4963",
+    "dep": "Villarreal",
+    "selection": "Beraberlik",
+    "target_odds": 4.4,
+    "model_prob": 34.0,
+    "edge_pct": 11.3,
+    "edge_raw_pct": 11.3,
+    "fake_edge_score": 0.0,
+    "latency_seconds": 0,
+    "selected_bookmaker": "Pinnacle",
+    "execution_quality": {},
+    "recommended_stake_pct": 1.0,
+    "status": "RİSK FİLTRESİ (DEĞER YOK)",
+    "reasoning": "Model piyasadan %11.3 daha yüksek ihtimal veriyor. | Dengeli xG profili (Beklenti: 2.55 gol). | Piyasada bu tahmine hafif bir para akışı var.",
+    "odds": {
+      "ms1": 1.83,
+      "ms0": 4.4,
+      "ms2": 4.4,
+      "over25": 1.48,
+      "under25": 2.65,
+      "btts_yes": 0,
+      "btts_no": 0
+    },
+    "probs": {
+      "ms1": 37.0,
+      "ms0": 34.0,
+      "ms2": 29.0,
+      "over25": 46.9,
+      "under25": 53.1,
+      "btts_yes": 53.3,
+      "btts_no": 46.7
+    },
+    "xg": {
+      "ev": 1.3,
+      "dep": 1.25,
+      "toplam": 2.55
+    },
+    "sharp": {
+      "ms_sinyal": "EV",
+      "ms_tier": "WEAK",
+      "ou_sinyal": "YOK",
+      "ou_tier": "NO_SHARP",
+      "btts_sinyal": "YOK",
+      "btts_tier": "NO_SHARP"
+    },
+    "form": {
+      "ev_form": [],
+      "dep_form": [
+        "W",
+        "D",
+        "D",
         "L",
         "L"
       ]
     },
     "opening_odds": {
-      "ms1": 0,
-      "ms2": 0
+      "ms1": 0.0,
+      "ms2": 0.0
     },
     "extended_stats": {
-      "ev_standing": {
-        "played": 3,
-        "wins": 0,
-        "draws": 3,
-        "losses": 0,
-        "points": 3,
-        "gf": 3,
-        "ga": 3,
-        "over25": 1,
-        "btts": 2
-      },
+      "ev_standing": null,
       "dep_standing": {
-        "played": 3,
-        "wins": 1,
-        "draws": 0,
-        "losses": 2,
-        "points": 3,
-        "gf": 4,
-        "ga": 6,
-        "over25": 2,
-        "btts": 2
+        "played": 119,
+        "wins": 53,
+        "draws": 28,
+        "losses": 38,
+        "points": 187,
+        "gf": 203,
+        "ga": 178,
+        "over25": 76,
+        "btts": 80,
+        "lig": "PD",
+        "recent": [
+          {
+            "date": "2026-09-05",
+            "opponent": "RC Deportivo La Coruña",
+            "score": "2-3",
+            "result": "L",
+            "isHome": true
+          },
+          {
+            "date": "2026-08-28",
+            "opponent": "Deportivo Alavés",
+            "score": "0-1",
+            "result": "L",
+            "isHome": false
+          },
+          {
+            "date": "2026-08-23",
+            "opponent": "Club Atlético",
+            "score": "2-2",
+            "result": "D",
+            "isHome": false
+          },
+          {
+            "date": "2026-08-16",
+            "opponent": "Real Racing Club de Santander",
+            "score": "2-2",
+            "result": "D",
+            "isHome": false
+          },
+          {
+            "date": "2026-04-12",
+            "opponent": "Athletic Club",
+            "score": "2-1",
+            "result": "W",
+            "isHome": false
+          }
+        ]
       },
       "h2h": {
+        "matches": [],
         "ev_wins": 0,
         "dep_wins": 0,
         "draws": 0,
-        "total": 0,
-        "matches": []
+        "total": 0
       }
-    },
-    "news": []
+    }
   },
   {
-    "date": "2026-09-14T14:00:00Z",
-    "lig": "Süper Lig (TR)",
-    "lig_kodu": "TSL",
-    "ev": "Caykur Rizespor",
-    "dep": "Kasimpasa",
-    "selection": "Ev Sahibi Kazanır",
-    "target_odds": 2.25,
-    "model_prob": 33.2,
-    "edge_pct": 0.1,
-    "edge_raw_pct": 0.1,
-    "status": "YAKLAŞAN MAÇ",
-    "reasoning": "🤖 <b>Yapay Zeka Analizi:</b> Ensemble modeli (Dixon-Coles + ELO + Purged LightGBM), <b>Caykur Rizespor</b> galibiyetine %33.2, beraberliğe %23.3, <b>Kasimpasa</b> galibiyetine %43.5 ihtimal vermektedir.<br><br>📊 <b>Gol ve Tempo Projeksiyonu:</b> Beklenen Gol (xG) hesabı Ev: 1.47 - Dep: 1.71 (Toplam 3.18 gol) göstermektedir. 2.5 Üst ihtimali %61.6, KG Var ihtimali %63.1 seviyesindedir.<br><br>🎯 <b>Stratejik Yol Haritası & Tavsiye:</b> Bu karşılaşmada <b>Ev Sahibi Kazanır</b> bahsi %+ 0.1% matematiksel net değer (Edge) barındırmaktadır. Kelly sermaye yönetimi (Fractional %25): bakiyenin %0.1'i ile katılım önerilir.",
-    "ai_commentary": "🤖 <b>Yapay Zeka Analizi:</b> Ensemble modeli (Dixon-Coles + ELO + Purged LightGBM), <b>Caykur Rizespor</b> galibiyetine %33.2, beraberliğe %23.3, <b>Kasimpasa</b> galibiyetine %43.5 ihtimal vermektedir.<br><br>📊 <b>Gol ve Tempo Projeksiyonu:</b> Beklenen Gol (xG) hesabı Ev: 1.47 - Dep: 1.71 (Toplam 3.18 gol) göstermektedir. 2.5 Üst ihtimali %61.6, KG Var ihtimali %63.1 seviyesindedir.<br><br>🎯 <b>Stratejik Yol Haritası & Tavsiye:</b> Bu karşılaşmada <b>Ev Sahibi Kazanır</b> bahsi %+ 0.1% matematiksel net değer (Edge) barındırmaktadır. Kelly sermaye yönetimi (Fractional %25): bakiyenin %0.1'i ile katılım önerilir.",
-    "is_win": null,
-    "verification_badge": "⏳ OYNANACAK",
-    "odds": {
-      "ms1": 3.01,
-      "ms0": 4.29,
-      "ms2": 2.3,
-      "over25": 1.62,
-      "under25": 2.6,
-      "btts_yes": 1.58,
-      "btts_no": 2.71
-    },
-    "probs": {
-      "ms1": 33.2,
-      "ms0": 23.3,
-      "ms2": 43.5,
-      "over25": 61.6,
-      "under25": 38.4,
-      "btts_yes": 63.1,
-      "btts_no": 36.9
-    },
-    "xg": {
-      "ev": 1.47,
-      "dep": 1.71,
-      "toplam": 3.18
-    },
-    "sharp": {
-      "ms_sinyal": "YOK",
-      "ms_tier": "NO_SHARP",
-      "ou_sinyal": "YOK",
-      "ou_tier": "NO_SHARP"
-    },
-    "form": {
-      "ev_form": [
-        "L",
-        "W",
-        "D"
-      ],
-      "dep_form": [
-        "D",
-        "D",
-        "L",
-        "L",
-        "D"
-      ]
-    },
-    "opening_odds": {
-      "ms1": 0,
-      "ms2": 0
-    },
-    "extended_stats": {
-      "ev_standing": {
-        "played": 3,
-        "wins": 1,
-        "draws": 1,
-        "losses": 1,
-        "points": 4,
-        "gf": 3,
-        "ga": 7,
-        "over25": 2,
-        "btts": 2
-      },
-      "dep_standing": {
-        "played": 3,
-        "wins": 0,
-        "draws": 2,
-        "losses": 1,
-        "points": 2,
-        "gf": 5,
-        "ga": 6,
-        "over25": 2,
-        "btts": 3
-      },
-      "h2h": {
-        "ev_wins": 0,
-        "dep_wins": 0,
-        "draws": 0,
-        "total": 0,
-        "matches": []
-      }
-    },
-    "news": []
-  },
-  {
-    "date": "2026-09-09T18:45:00Z",
-    "lig": "UEFA Uluslar Ligi",
-    "lig_kodu": "CL",
-    "ev": "Turkiye",
-    "dep": "Izlanda",
-    "selection": "Ev Sahibi Kazanır",
-    "target_odds": 1.62,
-    "model_prob": 42.8,
-    "edge_pct": 0.1,
-    "edge_raw_pct": 0.1,
-    "status": "YAKLAŞAN MAÇ",
-    "reasoning": "🤖 <b>Yapay Zeka Analizi:</b> Ensemble modeli (Dixon-Coles + ELO + Purged LightGBM), <b>Turkiye</b> galibiyetine %42.8, beraberliğe %26.7, <b>Izlanda</b> galibiyetine %30.5 ihtimal vermektedir.<br><br>📊 <b>Gol ve Tempo Projeksiyonu:</b> Beklenen Gol (xG) hesabı Ev: 1.38 - Dep: 1.12 (Toplam 2.5 gol) göstermektedir. 2.5 Üst ihtimali %45.6, KG Var ihtimali %50.4 seviyesindedir.<br><br>🎯 <b>Stratejik Yol Haritası & Tavsiye:</b> Bu karşılaşmada <b>Ev Sahibi Kazanır</b> bahsi %+ 0.1% matematiksel net değer (Edge) barındırmaktadır. Kelly sermaye yönetimi (Fractional %25): bakiyenin %0.1'i ile katılım önerilir.",
-    "ai_commentary": "🤖 <b>Yapay Zeka Analizi:</b> Ensemble modeli (Dixon-Coles + ELO + Purged LightGBM), <b>Turkiye</b> galibiyetine %42.8, beraberliğe %26.7, <b>Izlanda</b> galibiyetine %30.5 ihtimal vermektedir.<br><br>📊 <b>Gol ve Tempo Projeksiyonu:</b> Beklenen Gol (xG) hesabı Ev: 1.38 - Dep: 1.12 (Toplam 2.5 gol) göstermektedir. 2.5 Üst ihtimali %45.6, KG Var ihtimali %50.4 seviyesindedir.<br><br>🎯 <b>Stratejik Yol Haritası & Tavsiye:</b> Bu karşılaşmada <b>Ev Sahibi Kazanır</b> bahsi %+ 0.1% matematiksel net değer (Edge) barındırmaktadır. Kelly sermaye yönetimi (Fractional %25): bakiyenin %0.1'i ile katılım önerilir.",
-    "is_win": null,
-    "verification_badge": "⏳ OYNANACAK",
-    "odds": {
-      "ms1": 2.34,
-      "ms0": 3.75,
-      "ms2": 3.28,
-      "over25": 2.19,
-      "under25": 1.84,
-      "btts_yes": 1.98,
-      "btts_no": 2.02
-    },
-    "probs": {
-      "ms1": 42.8,
-      "ms0": 26.7,
-      "ms2": 30.5,
-      "over25": 45.6,
-      "under25": 54.4,
-      "btts_yes": 50.4,
-      "btts_no": 49.6
-    },
-    "xg": {
-      "ev": 1.38,
-      "dep": 1.12,
-      "toplam": 2.5
-    },
-    "sharp": {
-      "ms_sinyal": "YOK",
-      "ms_tier": "NO_SHARP",
-      "ou_sinyal": "YOK",
-      "ou_tier": "NO_SHARP"
-    },
-    "form": {
-      "ev_form": [],
-      "dep_form": []
-    },
-    "opening_odds": {
-      "ms1": 0,
-      "ms2": 0
-    },
-    "extended_stats": {
-      "ev_standing": {
-        "played": 3,
-        "points": 6,
-        "gf": 5,
-        "ga": 3,
-        "over25": 2,
-        "btts": 2
-      },
-      "dep_standing": {
-        "played": 3,
-        "points": 4,
-        "gf": 4,
-        "ga": 4,
-        "over25": 1,
-        "btts": 2
-      },
-      "h2h": {
-        "ev_wins": 0,
-        "dep_wins": 0,
-        "draws": 0,
-        "total": 0,
-        "matches": []
-      }
-    },
-    "news": []
-  },
-  {
-    "date": "2026-09-09T18:45:00Z",
-    "lig": "UEFA Uluslar Ligi",
-    "lig_kodu": "CL",
-    "ev": "Fransa",
-    "dep": "Belcika",
-    "selection": "Ev Sahibi Kazanır",
-    "target_odds": 1.8,
-    "model_prob": 42.8,
-    "edge_pct": 0.1,
-    "edge_raw_pct": 0.1,
-    "status": "YAKLAŞAN MAÇ",
-    "reasoning": "🤖 <b>Yapay Zeka Analizi:</b> Ensemble modeli (Dixon-Coles + ELO + Purged LightGBM), <b>Fransa</b> galibiyetine %42.8, beraberliğe %26.7, <b>Belcika</b> galibiyetine %30.5 ihtimal vermektedir.<br><br>📊 <b>Gol ve Tempo Projeksiyonu:</b> Beklenen Gol (xG) hesabı Ev: 1.38 - Dep: 1.12 (Toplam 2.5 gol) göstermektedir. 2.5 Üst ihtimali %45.6, KG Var ihtimali %50.4 seviyesindedir.<br><br>🎯 <b>Stratejik Yol Haritası & Tavsiye:</b> Bu karşılaşmada <b>Ev Sahibi Kazanır</b> bahsi %+ 0.1% matematiksel net değer (Edge) barındırmaktadır. Kelly sermaye yönetimi (Fractional %25): bakiyenin %0.1'i ile katılım önerilir.",
-    "ai_commentary": "🤖 <b>Yapay Zeka Analizi:</b> Ensemble modeli (Dixon-Coles + ELO + Purged LightGBM), <b>Fransa</b> galibiyetine %42.8, beraberliğe %26.7, <b>Belcika</b> galibiyetine %30.5 ihtimal vermektedir.<br><br>📊 <b>Gol ve Tempo Projeksiyonu:</b> Beklenen Gol (xG) hesabı Ev: 1.38 - Dep: 1.12 (Toplam 2.5 gol) göstermektedir. 2.5 Üst ihtimali %45.6, KG Var ihtimali %50.4 seviyesindedir.<br><br>🎯 <b>Stratejik Yol Haritası & Tavsiye:</b> Bu karşılaşmada <b>Ev Sahibi Kazanır</b> bahsi %+ 0.1% matematiksel net değer (Edge) barındırmaktadır. Kelly sermaye yönetimi (Fractional %25): bakiyenin %0.1'i ile katılım önerilir.",
-    "is_win": null,
-    "verification_badge": "⏳ OYNANACAK",
-    "odds": {
-      "ms1": 2.34,
-      "ms0": 3.75,
-      "ms2": 3.28,
-      "over25": 2.19,
-      "under25": 1.84,
-      "btts_yes": 1.98,
-      "btts_no": 2.02
-    },
-    "probs": {
-      "ms1": 42.8,
-      "ms0": 26.7,
-      "ms2": 30.5,
-      "over25": 45.6,
-      "under25": 54.4,
-      "btts_yes": 50.4,
-      "btts_no": 49.6
-    },
-    "xg": {
-      "ev": 1.38,
-      "dep": 1.12,
-      "toplam": 2.5
-    },
-    "sharp": {
-      "ms_sinyal": "YOK",
-      "ms_tier": "NO_SHARP",
-      "ou_sinyal": "YOK",
-      "ou_tier": "NO_SHARP"
-    },
-    "form": {
-      "ev_form": [],
-      "dep_form": []
-    },
-    "opening_odds": {
-      "ms1": 0,
-      "ms2": 0
-    },
-    "extended_stats": {
-      "ev_standing": {
-        "played": 3,
-        "points": 6,
-        "gf": 5,
-        "ga": 3,
-        "over25": 2,
-        "btts": 2
-      },
-      "dep_standing": {
-        "played": 3,
-        "points": 4,
-        "gf": 4,
-        "ga": 4,
-        "over25": 1,
-        "btts": 2
-      },
-      "h2h": {
-        "ev_wins": 0,
-        "dep_wins": 0,
-        "draws": 0,
-        "total": 0,
-        "matches": []
-      }
-    },
-    "news": []
-  },
-  {
-    "date": "2026-09-10T18:45:00Z",
-    "lig": "UEFA Uluslar Ligi",
-    "lig_kodu": "CL",
-    "ev": "Hollanda",
-    "dep": "Almanya",
-    "selection": "2.5 Üst",
-    "target_odds": 2.65,
-    "model_prob": 45.6,
-    "edge_pct": 20.8,
-    "edge_raw_pct": 20.8,
-    "status": "YAKLAŞAN MAÇ",
-    "reasoning": "🤖 <b>Yapay Zeka Analizi:</b> Ensemble modeli (Dixon-Coles + ELO + Purged LightGBM), <b>Hollanda</b> galibiyetine %42.8, beraberliğe %26.7, <b>Almanya</b> galibiyetine %30.5 ihtimal vermektedir.<br><br>📊 <b>Gol ve Tempo Projeksiyonu:</b> Beklenen Gol (xG) hesabı Ev: 1.38 - Dep: 1.12 (Toplam 2.5 gol) göstermektedir. 2.5 Üst ihtimali %45.6, KG Var ihtimali %50.4 seviyesindedir.<br><br>🎯 <b>Stratejik Yol Haritası & Tavsiye:</b> Bu karşılaşmada <b>2.5 Üst</b> bahsi %+ 20.8% matematiksel net değer (Edge) barındırmaktadır. Kelly sermaye yönetimi (Fractional %25): bakiyenin %0.1'i ile katılım önerilir.",
-    "ai_commentary": "🤖 <b>Yapay Zeka Analizi:</b> Ensemble modeli (Dixon-Coles + ELO + Purged LightGBM), <b>Hollanda</b> galibiyetine %42.8, beraberliğe %26.7, <b>Almanya</b> galibiyetine %30.5 ihtimal vermektedir.<br><br>📊 <b>Gol ve Tempo Projeksiyonu:</b> Beklenen Gol (xG) hesabı Ev: 1.38 - Dep: 1.12 (Toplam 2.5 gol) göstermektedir. 2.5 Üst ihtimali %45.6, KG Var ihtimali %50.4 seviyesindedir.<br><br>🎯 <b>Stratejik Yol Haritası & Tavsiye:</b> Bu karşılaşmada <b>2.5 Üst</b> bahsi %+ 20.8% matematiksel net değer (Edge) barındırmaktadır. Kelly sermaye yönetimi (Fractional %25): bakiyenin %0.1'i ile katılım önerilir.",
-    "is_win": null,
-    "verification_badge": "⏳ OYNANACAK",
-    "odds": {
-      "ms1": 2.34,
-      "ms0": 3.75,
-      "ms2": 3.28,
-      "over25": 2.19,
-      "under25": 1.84,
-      "btts_yes": 1.98,
-      "btts_no": 2.02
-    },
-    "probs": {
-      "ms1": 42.8,
-      "ms0": 26.7,
-      "ms2": 30.5,
-      "over25": 45.6,
-      "under25": 54.4,
-      "btts_yes": 50.4,
-      "btts_no": 49.6
-    },
-    "xg": {
-      "ev": 1.38,
-      "dep": 1.12,
-      "toplam": 2.5
-    },
-    "sharp": {
-      "ms_sinyal": "YOK",
-      "ms_tier": "NO_SHARP",
-      "ou_sinyal": "YOK",
-      "ou_tier": "NO_SHARP"
-    },
-    "form": {
-      "ev_form": [],
-      "dep_form": []
-    },
-    "opening_odds": {
-      "ms1": 0,
-      "ms2": 0
-    },
-    "extended_stats": {
-      "ev_standing": {
-        "played": 3,
-        "points": 6,
-        "gf": 5,
-        "ga": 3,
-        "over25": 2,
-        "btts": 2
-      },
-      "dep_standing": {
-        "played": 3,
-        "points": 4,
-        "gf": 4,
-        "ga": 4,
-        "over25": 1,
-        "btts": 2
-      },
-      "h2h": {
-        "ev_wins": 0,
-        "dep_wins": 0,
-        "draws": 0,
-        "total": 0,
-        "matches": []
-      }
-    },
-    "news": []
-  },
-  {
-    "date": "2026-09-08T18:45:00Z",
-    "lig": "UEFA Uluslar Ligi",
-    "lig_kodu": "CL",
-    "ev": "Isvicre",
-    "dep": "Ispanya",
+    "date": "2026-09-08T19:00:00Z",
+    "lig": "CL",
+    "ev": "0.9332",
+    "dep": "Inter Milan",
     "selection": "Deplasman Kazanır",
-    "target_odds": 1.72,
-    "model_prob": 30.5,
-    "edge_pct": 0.1,
-    "edge_raw_pct": 0.1,
-    "status": "YAKLAŞAN MAÇ",
-    "reasoning": "🤖 <b>Yapay Zeka Analizi:</b> Ensemble modeli (Dixon-Coles + ELO + Purged LightGBM), <b>Isvicre</b> galibiyetine %42.8, beraberliğe %26.7, <b>Ispanya</b> galibiyetine %30.5 ihtimal vermektedir.<br><br>📊 <b>Gol ve Tempo Projeksiyonu:</b> Beklenen Gol (xG) hesabı Ev: 1.38 - Dep: 1.12 (Toplam 2.5 gol) göstermektedir. 2.5 Üst ihtimali %45.6, KG Var ihtimali %50.4 seviyesindedir.<br><br>🎯 <b>Stratejik Yol Haritası & Tavsiye:</b> Bu karşılaşmada <b>Deplasman Kazanır</b> bahsi %+ 0.1% matematiksel net değer (Edge) barındırmaktadır. Kelly sermaye yönetimi (Fractional %25): bakiyenin %0.1'i ile katılım önerilir.",
-    "ai_commentary": "🤖 <b>Yapay Zeka Analizi:</b> Ensemble modeli (Dixon-Coles + ELO + Purged LightGBM), <b>Isvicre</b> galibiyetine %42.8, beraberliğe %26.7, <b>Ispanya</b> galibiyetine %30.5 ihtimal vermektedir.<br><br>📊 <b>Gol ve Tempo Projeksiyonu:</b> Beklenen Gol (xG) hesabı Ev: 1.38 - Dep: 1.12 (Toplam 2.5 gol) göstermektedir. 2.5 Üst ihtimali %45.6, KG Var ihtimali %50.4 seviyesindedir.<br><br>🎯 <b>Stratejik Yol Haritası & Tavsiye:</b> Bu karşılaşmada <b>Deplasman Kazanır</b> bahsi %+ 0.1% matematiksel net değer (Edge) barındırmaktadır. Kelly sermaye yönetimi (Fractional %25): bakiyenin %0.1'i ile katılım önerilir.",
-    "is_win": null,
-    "verification_badge": "⏳ OYNANACAK",
+    "target_odds": 5.5,
+    "model_prob": 35.1,
+    "edge_pct": 17.0,
+    "edge_raw_pct": 17.0,
+    "fake_edge_score": 0.0,
+    "latency_seconds": 0,
+    "selected_bookmaker": "Pinnacle",
+    "execution_quality": {},
+    "recommended_stake_pct": 1.0,
+    "status": "RİSK FİLTRESİ (DEĞER YOK)",
+    "reasoning": "Model piyasadan %17.0 daha yüksek ihtimal veriyor. | Dengeli xG profili (Beklenti: 2.55 gol). | Sinyal tamamen modelin bulduğu matematiksel değere (Edge) dayanıyor.",
     "odds": {
-      "ms1": 2.34,
-      "ms0": 3.75,
-      "ms2": 3.28,
-      "over25": 2.19,
-      "under25": 1.84,
-      "btts_yes": 1.98,
-      "btts_no": 2.02
+      "ms1": 1.67,
+      "ms0": 4.7,
+      "ms2": 5.5,
+      "over25": 1.53,
+      "under25": 2.65,
+      "btts_yes": 0,
+      "btts_no": 0
     },
     "probs": {
-      "ms1": 42.8,
-      "ms0": 26.7,
-      "ms2": 30.5,
-      "over25": 45.6,
-      "under25": 54.4,
-      "btts_yes": 50.4,
-      "btts_no": 49.6
+      "ms1": 30.5,
+      "ms0": 34.4,
+      "ms2": 35.1,
+      "over25": 46.9,
+      "under25": 53.1,
+      "btts_yes": 53.3,
+      "btts_no": 46.7
     },
     "xg": {
-      "ev": 1.38,
-      "dep": 1.12,
-      "toplam": 2.5
+      "ev": 1.3,
+      "dep": 1.25,
+      "toplam": 2.55
     },
     "sharp": {
       "ms_sinyal": "YOK",
       "ms_tier": "NO_SHARP",
       "ou_sinyal": "YOK",
-      "ou_tier": "NO_SHARP"
+      "ou_tier": "NO_SHARP",
+      "btts_sinyal": "YOK",
+      "btts_tier": "NO_SHARP"
     },
     "form": {
       "ev_form": [],
       "dep_form": []
     },
     "opening_odds": {
-      "ms1": 0,
-      "ms2": 0
+      "ms1": 0.0,
+      "ms2": 0.0
     },
     "extended_stats": {
-      "ev_standing": {
-        "played": 3,
-        "points": 6,
-        "gf": 5,
-        "ga": 3,
-        "over25": 2,
-        "btts": 2
-      },
-      "dep_standing": {
-        "played": 3,
-        "points": 4,
-        "gf": 4,
-        "ga": 4,
-        "over25": 1,
-        "btts": 2
-      },
+      "ev_standing": null,
+      "dep_standing": null,
       "h2h": {
+        "matches": [],
         "ev_wins": 0,
         "dep_wins": 0,
         "draws": 0,
-        "total": 0,
-        "matches": []
+        "total": 0
       }
-    },
-    "news": []
+    }
   },
   {
-    "date": "2026-09-08T18:45:00Z",
-    "lig": "UEFA Uluslar Ligi",
-    "lig_kodu": "CL",
-    "ev": "Portekiz",
-    "dep": "Iskocya",
+    "date": "2026-09-08T19:00:00Z",
+    "lig": "CL",
+    "ev": "0.4114",
+    "dep": "Manchester City",
     "selection": "Ev Sahibi Kazanır",
-    "target_odds": 1.3,
-    "model_prob": 42.8,
-    "edge_pct": 0.1,
-    "edge_raw_pct": 0.1,
-    "status": "YAKLAŞAN MAÇ",
-    "reasoning": "🤖 <b>Yapay Zeka Analizi:</b> Ensemble modeli (Dixon-Coles + ELO + Purged LightGBM), <b>Portekiz</b> galibiyetine %42.8, beraberliğe %26.7, <b>Iskocya</b> galibiyetine %30.5 ihtimal vermektedir.<br><br>📊 <b>Gol ve Tempo Projeksiyonu:</b> Beklenen Gol (xG) hesabı Ev: 1.38 - Dep: 1.12 (Toplam 2.5 gol) göstermektedir. 2.5 Üst ihtimali %45.6, KG Var ihtimali %50.4 seviyesindedir.<br><br>🎯 <b>Stratejik Yol Haritası & Tavsiye:</b> Bu karşılaşmada <b>Ev Sahibi Kazanır</b> bahsi %+ 0.1% matematiksel net değer (Edge) barındırmaktadır. Kelly sermaye yönetimi (Fractional %25): bakiyenin %0.1'i ile katılım önerilir.",
-    "ai_commentary": "🤖 <b>Yapay Zeka Analizi:</b> Ensemble modeli (Dixon-Coles + ELO + Purged LightGBM), <b>Portekiz</b> galibiyetine %42.8, beraberliğe %26.7, <b>Iskocya</b> galibiyetine %30.5 ihtimal vermektedir.<br><br>📊 <b>Gol ve Tempo Projeksiyonu:</b> Beklenen Gol (xG) hesabı Ev: 1.38 - Dep: 1.12 (Toplam 2.5 gol) göstermektedir. 2.5 Üst ihtimali %45.6, KG Var ihtimali %50.4 seviyesindedir.<br><br>🎯 <b>Stratejik Yol Haritası & Tavsiye:</b> Bu karşılaşmada <b>Ev Sahibi Kazanır</b> bahsi %+ 0.1% matematiksel net değer (Edge) barındırmaktadır. Kelly sermaye yönetimi (Fractional %25): bakiyenin %0.1'i ile katılım önerilir.",
-    "is_win": null,
-    "verification_badge": "⏳ OYNANACAK",
+    "target_odds": 4.9,
+    "model_prob": 28.8,
+    "edge_pct": 8.4,
+    "edge_raw_pct": 8.4,
+    "fake_edge_score": 0.0,
+    "latency_seconds": 0,
+    "selected_bookmaker": "Pinnacle",
+    "execution_quality": {},
+    "recommended_stake_pct": 1.0,
+    "status": "RİSK FİLTRESİ (DEĞER YOK)",
+    "reasoning": "Model piyasadan %8.4 daha yüksek ihtimal veriyor. | Dengeli xG profili (Beklenti: 2.52 gol).",
     "odds": {
-      "ms1": 2.34,
-      "ms0": 3.75,
-      "ms2": 3.28,
-      "over25": 2.19,
-      "under25": 1.84,
-      "btts_yes": 1.98,
-      "btts_no": 2.02
+      "ms1": 4.9,
+      "ms0": 4.2,
+      "ms2": 1.8,
+      "over25": 1.71,
+      "under25": 2.28,
+      "btts_yes": 0,
+      "btts_no": 0
     },
     "probs": {
-      "ms1": 42.8,
-      "ms0": 26.7,
-      "ms2": 30.5,
-      "over25": 45.6,
-      "under25": 54.4,
-      "btts_yes": 50.4,
-      "btts_no": 49.6
+      "ms1": 28.8,
+      "ms0": 29.1,
+      "ms2": 42.1,
+      "over25": 46.0,
+      "under25": 54.0,
+      "btts_yes": 50.9,
+      "btts_no": 49.1
     },
     "xg": {
-      "ev": 1.38,
-      "dep": 1.12,
-      "toplam": 2.5
+      "ev": 1.5,
+      "dep": 1.01,
+      "toplam": 2.52
     },
     "sharp": {
       "ms_sinyal": "YOK",
       "ms_tier": "NO_SHARP",
       "ou_sinyal": "YOK",
-      "ou_tier": "NO_SHARP"
-    },
-    "form": {
-      "ev_form": [],
-      "dep_form": []
-    },
-    "opening_odds": {
-      "ms1": 0,
-      "ms2": 0
-    },
-    "extended_stats": {
-      "ev_standing": {
-        "played": 3,
-        "points": 6,
-        "gf": 5,
-        "ga": 3,
-        "over25": 2,
-        "btts": 2
-      },
-      "dep_standing": {
-        "played": 3,
-        "points": 4,
-        "gf": 4,
-        "ga": 4,
-        "over25": 1,
-        "btts": 2
-      },
-      "h2h": {
-        "ev_wins": 0,
-        "dep_wins": 0,
-        "draws": 0,
-        "total": 0,
-        "matches": []
-      }
-    },
-    "news": []
-  },
-  {
-    "date": "2026-09-10T18:45:00Z",
-    "lig": "UEFA Uluslar Ligi",
-    "lig_kodu": "CL",
-    "ev": "Ingiltere",
-    "dep": "Finlandiya",
-    "selection": "Ev Sahibi Kazanır",
-    "target_odds": 1.18,
-    "model_prob": 42.8,
-    "edge_pct": 0.1,
-    "edge_raw_pct": 0.1,
-    "status": "YAKLAŞAN MAÇ",
-    "reasoning": "🤖 <b>Yapay Zeka Analizi:</b> Ensemble modeli (Dixon-Coles + ELO + Purged LightGBM), <b>Ingiltere</b> galibiyetine %42.8, beraberliğe %26.7, <b>Finlandiya</b> galibiyetine %30.5 ihtimal vermektedir.<br><br>📊 <b>Gol ve Tempo Projeksiyonu:</b> Beklenen Gol (xG) hesabı Ev: 1.38 - Dep: 1.12 (Toplam 2.5 gol) göstermektedir. 2.5 Üst ihtimali %45.6, KG Var ihtimali %50.4 seviyesindedir.<br><br>🎯 <b>Stratejik Yol Haritası & Tavsiye:</b> Bu karşılaşmada <b>Ev Sahibi Kazanır</b> bahsi %+ 0.1% matematiksel net değer (Edge) barındırmaktadır. Kelly sermaye yönetimi (Fractional %25): bakiyenin %0.1'i ile katılım önerilir.",
-    "ai_commentary": "🤖 <b>Yapay Zeka Analizi:</b> Ensemble modeli (Dixon-Coles + ELO + Purged LightGBM), <b>Ingiltere</b> galibiyetine %42.8, beraberliğe %26.7, <b>Finlandiya</b> galibiyetine %30.5 ihtimal vermektedir.<br><br>📊 <b>Gol ve Tempo Projeksiyonu:</b> Beklenen Gol (xG) hesabı Ev: 1.38 - Dep: 1.12 (Toplam 2.5 gol) göstermektedir. 2.5 Üst ihtimali %45.6, KG Var ihtimali %50.4 seviyesindedir.<br><br>🎯 <b>Stratejik Yol Haritası & Tavsiye:</b> Bu karşılaşmada <b>Ev Sahibi Kazanır</b> bahsi %+ 0.1% matematiksel net değer (Edge) barındırmaktadır. Kelly sermaye yönetimi (Fractional %25): bakiyenin %0.1'i ile katılım önerilir.",
-    "is_win": null,
-    "verification_badge": "⏳ OYNANACAK",
-    "odds": {
-      "ms1": 2.34,
-      "ms0": 3.75,
-      "ms2": 3.28,
-      "over25": 2.19,
-      "under25": 1.84,
-      "btts_yes": 1.98,
-      "btts_no": 2.02
-    },
-    "probs": {
-      "ms1": 42.8,
-      "ms0": 26.7,
-      "ms2": 30.5,
-      "over25": 45.6,
-      "under25": 54.4,
-      "btts_yes": 50.4,
-      "btts_no": 49.6
-    },
-    "xg": {
-      "ev": 1.38,
-      "dep": 1.12,
-      "toplam": 2.5
-    },
-    "sharp": {
-      "ms_sinyal": "YOK",
-      "ms_tier": "NO_SHARP",
-      "ou_sinyal": "YOK",
-      "ou_tier": "NO_SHARP"
-    },
-    "form": {
-      "ev_form": [],
-      "dep_form": []
-    },
-    "opening_odds": {
-      "ms1": 0,
-      "ms2": 0
-    },
-    "extended_stats": {
-      "ev_standing": {
-        "played": 3,
-        "points": 6,
-        "gf": 5,
-        "ga": 3,
-        "over25": 2,
-        "btts": 2
-      },
-      "dep_standing": {
-        "played": 3,
-        "points": 4,
-        "gf": 4,
-        "ga": 4,
-        "over25": 1,
-        "btts": 2
-      },
-      "h2h": {
-        "ev_wins": 0,
-        "dep_wins": 0,
-        "draws": 0,
-        "total": 0,
-        "matches": []
-      }
-    },
-    "news": []
-  },
-  {
-    "date": "2026-09-15T13:00:00Z",
-    "lig": "Premier League (UK)",
-    "lig_kodu": "PL",
-    "ev": "Tottenham Hotspur FC",
-    "dep": "Arsenal FC",
-    "selection": "Deplasman Kazanır",
-    "target_odds": 2.3,
-    "model_prob": 44.4,
-    "edge_pct": 2.1,
-    "edge_raw_pct": 2.1,
-    "status": "YAKLAŞAN MAÇ",
-    "reasoning": "🤖 <b>Yapay Zeka Analizi:</b> Ensemble modeli (Dixon-Coles + ELO + Purged LightGBM), <b>Tottenham Hotspur FC</b> galibiyetine %31.7, beraberliğe %23.9, <b>Arsenal FC</b> galibiyetine %44.4 ihtimal vermektedir.<br><br>📊 <b>Gol ve Tempo Projeksiyonu:</b> Beklenen Gol (xG) hesabı Ev: 1.37 - Dep: 1.66 (Toplam 3.03 gol) göstermektedir. 2.5 Üst ihtimali %58.3, KG Var ihtimali %60.4 seviyesindedir.<br><br>🎯 <b>Stratejik Yol Haritası & Tavsiye:</b> Bu karşılaşmada <b>Deplasman Kazanır</b> bahsi %+ 2.1% matematiksel net değer (Edge) barındırmaktadır. Kelly sermaye yönetimi (Fractional %25): bakiyenin %0.1'i ile katılım önerilir.",
-    "ai_commentary": "🤖 <b>Yapay Zeka Analizi:</b> Ensemble modeli (Dixon-Coles + ELO + Purged LightGBM), <b>Tottenham Hotspur FC</b> galibiyetine %31.7, beraberliğe %23.9, <b>Arsenal FC</b> galibiyetine %44.4 ihtimal vermektedir.<br><br>📊 <b>Gol ve Tempo Projeksiyonu:</b> Beklenen Gol (xG) hesabı Ev: 1.37 - Dep: 1.66 (Toplam 3.03 gol) göstermektedir. 2.5 Üst ihtimali %58.3, KG Var ihtimali %60.4 seviyesindedir.<br><br>🎯 <b>Stratejik Yol Haritası & Tavsiye:</b> Bu karşılaşmada <b>Deplasman Kazanır</b> bahsi %+ 2.1% matematiksel net değer (Edge) barındırmaktadır. Kelly sermaye yönetimi (Fractional %25): bakiyenin %0.1'i ile katılım önerilir.",
-    "is_win": null,
-    "verification_badge": "⏳ OYNANACAK",
-    "odds": {
-      "ms1": 3.15,
-      "ms0": 4.18,
-      "ms2": 2.25,
-      "over25": 1.72,
-      "under25": 2.4,
-      "btts_yes": 1.66,
-      "btts_no": 2.53
-    },
-    "probs": {
-      "ms1": 31.7,
-      "ms0": 23.9,
-      "ms2": 44.4,
-      "over25": 58.3,
-      "under25": 41.7,
-      "btts_yes": 60.4,
-      "btts_no": 39.6
-    },
-    "xg": {
-      "ev": 1.37,
-      "dep": 1.66,
-      "toplam": 3.03
-    },
-    "sharp": {
-      "ms_sinyal": "YOK",
-      "ms_tier": "NO_SHARP",
-      "ou_sinyal": "YOK",
-      "ou_tier": "NO_SHARP"
-    },
-    "form": {
-      "ev_form": [],
-      "dep_form": []
-    },
-    "opening_odds": {
-      "ms1": 0,
-      "ms2": 0
-    },
-    "extended_stats": {
-      "ev_standing": {
-        "played": 3,
-        "points": 6,
-        "gf": 5,
-        "ga": 3,
-        "over25": 2,
-        "btts": 2
-      },
-      "dep_standing": {
-        "played": 3,
-        "points": 4,
-        "gf": 4,
-        "ga": 4,
-        "over25": 1,
-        "btts": 2
-      },
-      "h2h": {
-        "ev_wins": 0,
-        "dep_wins": 0,
-        "draws": 0,
-        "total": 0,
-        "matches": []
-      }
-    },
-    "news": []
-  },
-  {
-    "date": "2026-09-14T14:00:00Z",
-    "lig": "Premier League (UK)",
-    "lig_kodu": "PL",
-    "ev": "Manchester City FC",
-    "dep": "Brentford FC",
-    "selection": "Ev Sahibi Kazanır",
-    "target_odds": 1.25,
-    "model_prob": 56.8,
-    "edge_pct": 0.1,
-    "edge_raw_pct": 0.1,
-    "status": "YAKLAŞAN MAÇ",
-    "reasoning": "🤖 <b>Yapay Zeka Analizi:</b> Ensemble modeli (Dixon-Coles + ELO + Purged LightGBM), <b>Manchester City FC</b> galibiyetine %56.8, beraberliğe %21.2, <b>Brentford FC</b> galibiyetine %22.0 ihtimal vermektedir.<br><br>📊 <b>Gol ve Tempo Projeksiyonu:</b> Beklenen Gol (xG) hesabı Ev: 2.04 - Dep: 1.2 (Toplam 3.24 gol) göstermektedir. 2.5 Üst ihtimali %62.8, KG Var ihtimali %60.8 seviyesindedir.<br><br>🎯 <b>Stratejik Yol Haritası & Tavsiye:</b> Bu karşılaşmada <b>Ev Sahibi Kazanır</b> bahsi %+ 0.1% matematiksel net değer (Edge) barındırmaktadır. Kelly sermaye yönetimi (Fractional %25): bakiyenin %0.1'i ile katılım önerilir.",
-    "ai_commentary": "🤖 <b>Yapay Zeka Analizi:</b> Ensemble modeli (Dixon-Coles + ELO + Purged LightGBM), <b>Manchester City FC</b> galibiyetine %56.8, beraberliğe %21.2, <b>Brentford FC</b> galibiyetine %22.0 ihtimal vermektedir.<br><br>📊 <b>Gol ve Tempo Projeksiyonu:</b> Beklenen Gol (xG) hesabı Ev: 2.04 - Dep: 1.2 (Toplam 3.24 gol) göstermektedir. 2.5 Üst ihtimali %62.8, KG Var ihtimali %60.8 seviyesindedir.<br><br>🎯 <b>Stratejik Yol Haritası & Tavsiye:</b> Bu karşılaşmada <b>Ev Sahibi Kazanır</b> bahsi %+ 0.1% matematiksel net değer (Edge) barındırmaktadır. Kelly sermaye yönetimi (Fractional %25): bakiyenin %0.1'i ile katılım önerilir.",
-    "is_win": null,
-    "verification_badge": "⏳ OYNANACAK",
-    "odds": {
-      "ms1": 1.76,
-      "ms0": 4.72,
-      "ms2": 4.55,
-      "over25": 1.59,
-      "under25": 2.69,
-      "btts_yes": 1.64,
-      "btts_no": 2.55
-    },
-    "probs": {
-      "ms1": 56.8,
-      "ms0": 21.2,
-      "ms2": 22.0,
-      "over25": 62.8,
-      "under25": 37.2,
-      "btts_yes": 60.8,
-      "btts_no": 39.2
-    },
-    "xg": {
-      "ev": 2.04,
-      "dep": 1.2,
-      "toplam": 3.24
-    },
-    "sharp": {
-      "ms_sinyal": "YOK",
-      "ms_tier": "NO_SHARP",
-      "ou_sinyal": "YOK",
-      "ou_tier": "NO_SHARP"
-    },
-    "form": {
-      "ev_form": [],
-      "dep_form": []
-    },
-    "opening_odds": {
-      "ms1": 0,
-      "ms2": 0
-    },
-    "extended_stats": {
-      "ev_standing": {
-        "played": 3,
-        "points": 6,
-        "gf": 5,
-        "ga": 3,
-        "over25": 2,
-        "btts": 2
-      },
-      "dep_standing": {
-        "played": 3,
-        "points": 4,
-        "gf": 4,
-        "ga": 4,
-        "over25": 1,
-        "btts": 2
-      },
-      "h2h": {
-        "ev_wins": 0,
-        "dep_wins": 0,
-        "draws": 0,
-        "total": 0,
-        "matches": []
-      }
-    },
-    "news": []
-  },
-  {
-    "date": "2026-09-14T14:00:00Z",
-    "lig": "Premier League (UK)",
-    "lig_kodu": "PL",
-    "ev": "Liverpool FC",
-    "dep": "Nottingham Forest FC",
-    "selection": "Ev Sahibi Kazanır",
-    "target_odds": 1.32,
-    "model_prob": 56.9,
-    "edge_pct": 0.1,
-    "edge_raw_pct": 0.1,
-    "status": "YAKLAŞAN MAÇ",
-    "reasoning": "🤖 <b>Yapay Zeka Analizi:</b> Ensemble modeli (Dixon-Coles + ELO + Purged LightGBM), <b>Liverpool FC</b> galibiyetine %56.9, beraberliğe %22.0, <b>Nottingham Forest FC</b> galibiyetine %21.1 ihtimal vermektedir.<br><br>📊 <b>Gol ve Tempo Projeksiyonu:</b> Beklenen Gol (xG) hesabı Ev: 1.93 - Dep: 1.09 (Toplam 3.02 gol) göstermektedir. 2.5 Üst ihtimali %58.1, KG Var ihtimali %56.7 seviyesindedir.<br><br>🎯 <b>Stratejik Yol Haritası & Tavsiye:</b> Bu karşılaşmada <b>Ev Sahibi Kazanır</b> bahsi %+ 0.1% matematiksel net değer (Edge) barındırmaktadır. Kelly sermaye yönetimi (Fractional %25): bakiyenin %0.1'i ile katılım önerilir.",
-    "ai_commentary": "🤖 <b>Yapay Zeka Analizi:</b> Ensemble modeli (Dixon-Coles + ELO + Purged LightGBM), <b>Liverpool FC</b> galibiyetine %56.9, beraberliğe %22.0, <b>Nottingham Forest FC</b> galibiyetine %21.1 ihtimal vermektedir.<br><br>📊 <b>Gol ve Tempo Projeksiyonu:</b> Beklenen Gol (xG) hesabı Ev: 1.93 - Dep: 1.09 (Toplam 3.02 gol) göstermektedir. 2.5 Üst ihtimali %58.1, KG Var ihtimali %56.7 seviyesindedir.<br><br>🎯 <b>Stratejik Yol Haritası & Tavsiye:</b> Bu karşılaşmada <b>Ev Sahibi Kazanır</b> bahsi %+ 0.1% matematiksel net değer (Edge) barındırmaktadır. Kelly sermaye yönetimi (Fractional %25): bakiyenin %0.1'i ile katılım önerilir.",
-    "is_win": null,
-    "verification_badge": "⏳ OYNANACAK",
-    "odds": {
-      "ms1": 1.76,
-      "ms0": 4.55,
-      "ms2": 4.74,
-      "over25": 1.72,
-      "under25": 2.39,
-      "btts_yes": 1.76,
-      "btts_no": 2.31
-    },
-    "probs": {
-      "ms1": 56.9,
-      "ms0": 22.0,
-      "ms2": 21.1,
-      "over25": 58.1,
-      "under25": 41.9,
-      "btts_yes": 56.7,
-      "btts_no": 43.3
-    },
-    "xg": {
-      "ev": 1.93,
-      "dep": 1.09,
-      "toplam": 3.02
-    },
-    "sharp": {
-      "ms_sinyal": "YOK",
-      "ms_tier": "NO_SHARP",
-      "ou_sinyal": "YOK",
-      "ou_tier": "NO_SHARP"
-    },
-    "form": {
-      "ev_form": [],
-      "dep_form": []
-    },
-    "opening_odds": {
-      "ms1": 0,
-      "ms2": 0
-    },
-    "extended_stats": {
-      "ev_standing": {
-        "played": 3,
-        "points": 6,
-        "gf": 5,
-        "ga": 3,
-        "over25": 2,
-        "btts": 2
-      },
-      "dep_standing": {
-        "played": 3,
-        "points": 4,
-        "gf": 4,
-        "ga": 4,
-        "over25": 1,
-        "btts": 2
-      },
-      "h2h": {
-        "ev_wins": 0,
-        "dep_wins": 0,
-        "draws": 0,
-        "total": 0,
-        "matches": []
-      }
-    },
-    "news": []
-  },
-  {
-    "date": "2026-09-14T11:30:00Z",
-    "lig": "Premier League (UK)",
-    "lig_kodu": "PL",
-    "ev": "Southampton FC",
-    "dep": "Manchester United FC",
-    "selection": "Deplasman Kazanır",
-    "target_odds": 1.75,
-    "model_prob": 31.8,
-    "edge_pct": 0.1,
-    "edge_raw_pct": 0.1,
-    "status": "YAKLAŞAN MAÇ",
-    "reasoning": "🤖 <b>Yapay Zeka Analizi:</b> Ensemble modeli (Dixon-Coles + ELO + Purged LightGBM), <b>Southampton FC</b> galibiyetine %44.1, beraberliğe %24.1, <b>Manchester United FC</b> galibiyetine %31.8 ihtimal vermektedir.<br><br>📊 <b>Gol ve Tempo Projeksiyonu:</b> Beklenen Gol (xG) hesabı Ev: 1.63 - Dep: 1.35 (Toplam 2.98 gol) göstermektedir. 2.5 Üst ihtimali %57.2, KG Var ihtimali %59.6 seviyesindedir.<br><br>🎯 <b>Stratejik Yol Haritası & Tavsiye:</b> Bu karşılaşmada <b>Deplasman Kazanır</b> bahsi %+ 0.1% matematiksel net değer (Edge) barındırmaktadır. Kelly sermaye yönetimi (Fractional %25): bakiyenin %0.1'i ile katılım önerilir.",
-    "ai_commentary": "🤖 <b>Yapay Zeka Analizi:</b> Ensemble modeli (Dixon-Coles + ELO + Purged LightGBM), <b>Southampton FC</b> galibiyetine %44.1, beraberliğe %24.1, <b>Manchester United FC</b> galibiyetine %31.8 ihtimal vermektedir.<br><br>📊 <b>Gol ve Tempo Projeksiyonu:</b> Beklenen Gol (xG) hesabı Ev: 1.63 - Dep: 1.35 (Toplam 2.98 gol) göstermektedir. 2.5 Üst ihtimali %57.2, KG Var ihtimali %59.6 seviyesindedir.<br><br>🎯 <b>Stratejik Yol Haritası & Tavsiye:</b> Bu karşılaşmada <b>Deplasman Kazanır</b> bahsi %+ 0.1% matematiksel net değer (Edge) barındırmaktadır. Kelly sermaye yönetimi (Fractional %25): bakiyenin %0.1'i ile katılım önerilir.",
-    "is_win": null,
-    "verification_badge": "⏳ OYNANACAK",
-    "odds": {
-      "ms1": 2.27,
-      "ms0": 4.15,
-      "ms2": 3.14,
-      "over25": 1.75,
-      "under25": 2.34,
-      "btts_yes": 1.68,
-      "btts_no": 2.48
-    },
-    "probs": {
-      "ms1": 44.1,
-      "ms0": 24.1,
-      "ms2": 31.8,
-      "over25": 57.2,
-      "under25": 42.8,
-      "btts_yes": 59.6,
-      "btts_no": 40.4
-    },
-    "xg": {
-      "ev": 1.63,
-      "dep": 1.35,
-      "toplam": 2.98
-    },
-    "sharp": {
-      "ms_sinyal": "YOK",
-      "ms_tier": "NO_SHARP",
-      "ou_sinyal": "YOK",
-      "ou_tier": "NO_SHARP"
-    },
-    "form": {
-      "ev_form": [],
-      "dep_form": []
-    },
-    "opening_odds": {
-      "ms1": 0,
-      "ms2": 0
-    },
-    "extended_stats": {
-      "ev_standing": {
-        "played": 3,
-        "points": 6,
-        "gf": 5,
-        "ga": 3,
-        "over25": 2,
-        "btts": 2
-      },
-      "dep_standing": {
-        "played": 3,
-        "points": 4,
-        "gf": 4,
-        "ga": 4,
-        "over25": 1,
-        "btts": 2
-      },
-      "h2h": {
-        "ev_wins": 0,
-        "dep_wins": 0,
-        "draws": 0,
-        "total": 0,
-        "matches": []
-      }
-    },
-    "news": []
-  },
-  {
-    "date": "2026-09-14T16:30:00Z",
-    "lig": "Premier League (UK)",
-    "lig_kodu": "PL",
-    "ev": "Aston Villa FC",
-    "dep": "Everton FC",
-    "selection": "Ev Sahibi Kazanır",
-    "target_odds": 1.58,
-    "model_prob": 49.2,
-    "edge_pct": 0.1,
-    "edge_raw_pct": 0.1,
-    "status": "YAKLAŞAN MAÇ",
-    "reasoning": "🤖 <b>Yapay Zeka Analizi:</b> Ensemble modeli (Dixon-Coles + ELO + Purged LightGBM), <b>Aston Villa FC</b> galibiyetine %49.2, beraberliğe %24.7, <b>Everton FC</b> galibiyetine %26.1 ihtimal vermektedir.<br><br>📊 <b>Gol ve Tempo Projeksiyonu:</b> Beklenen Gol (xG) hesabı Ev: 1.62 - Dep: 1.11 (Toplam 2.73 gol) göstermektedir. 2.5 Üst ihtimali %51.4, KG Var ihtimali %53.8 seviyesindedir.<br><br>🎯 <b>Stratejik Yol Haritası & Tavsiye:</b> Bu karşılaşmada <b>Ev Sahibi Kazanır</b> bahsi %+ 0.1% matematiksel net değer (Edge) barındırmaktadır. Kelly sermaye yönetimi (Fractional %25): bakiyenin %0.1'i ile katılım önerilir.",
-    "ai_commentary": "🤖 <b>Yapay Zeka Analizi:</b> Ensemble modeli (Dixon-Coles + ELO + Purged LightGBM), <b>Aston Villa FC</b> galibiyetine %49.2, beraberliğe %24.7, <b>Everton FC</b> galibiyetine %26.1 ihtimal vermektedir.<br><br>📊 <b>Gol ve Tempo Projeksiyonu:</b> Beklenen Gol (xG) hesabı Ev: 1.62 - Dep: 1.11 (Toplam 2.73 gol) göstermektedir. 2.5 Üst ihtimali %51.4, KG Var ihtimali %53.8 seviyesindedir.<br><br>🎯 <b>Stratejik Yol Haritası & Tavsiye:</b> Bu karşılaşmada <b>Ev Sahibi Kazanır</b> bahsi %+ 0.1% matematiksel net değer (Edge) barındırmaktadır. Kelly sermaye yönetimi (Fractional %25): bakiyenin %0.1'i ile katılım önerilir.",
-    "is_win": null,
-    "verification_badge": "⏳ OYNANACAK",
-    "odds": {
-      "ms1": 2.03,
-      "ms0": 4.05,
-      "ms2": 3.83,
-      "over25": 1.95,
-      "under25": 2.06,
-      "btts_yes": 1.86,
-      "btts_no": 2.16
-    },
-    "probs": {
-      "ms1": 49.2,
-      "ms0": 24.7,
-      "ms2": 26.1,
-      "over25": 51.4,
-      "under25": 48.6,
-      "btts_yes": 53.8,
-      "btts_no": 46.2
-    },
-    "xg": {
-      "ev": 1.62,
-      "dep": 1.11,
-      "toplam": 2.73
-    },
-    "sharp": {
-      "ms_sinyal": "YOK",
-      "ms_tier": "NO_SHARP",
-      "ou_sinyal": "YOK",
-      "ou_tier": "NO_SHARP"
-    },
-    "form": {
-      "ev_form": [],
-      "dep_form": []
-    },
-    "opening_odds": {
-      "ms1": 0,
-      "ms2": 0
-    },
-    "extended_stats": {
-      "ev_standing": {
-        "played": 3,
-        "points": 6,
-        "gf": 5,
-        "ga": 3,
-        "over25": 2,
-        "btts": 2
-      },
-      "dep_standing": {
-        "played": 3,
-        "points": 4,
-        "gf": 4,
-        "ga": 4,
-        "over25": 1,
-        "btts": 2
-      },
-      "h2h": {
-        "ev_wins": 0,
-        "dep_wins": 0,
-        "draws": 0,
-        "total": 0,
-        "matches": []
-      }
-    },
-    "news": []
-  },
-  {
-    "date": "2026-09-14T19:00:00Z",
-    "lig": "Premier League (UK)",
-    "lig_kodu": "PL",
-    "ev": "AFC Bournemouth",
-    "dep": "Chelsea FC",
-    "selection": "Deplasman Kazanır",
-    "target_odds": 2.05,
-    "model_prob": 35.4,
-    "edge_pct": 0.1,
-    "edge_raw_pct": 0.1,
-    "status": "YAKLAŞAN MAÇ",
-    "reasoning": "🤖 <b>Yapay Zeka Analizi:</b> Ensemble modeli (Dixon-Coles + ELO + Purged LightGBM), <b>AFC Bournemouth</b> galibiyetine %40.7, beraberliğe %23.9, <b>Chelsea FC</b> galibiyetine %35.4 ihtimal vermektedir.<br><br>📊 <b>Gol ve Tempo Projeksiyonu:</b> Beklenen Gol (xG) hesabı Ev: 1.6 - Dep: 1.48 (Toplam 3.08 gol) göstermektedir. 2.5 Üst ihtimali %59.4, KG Var ihtimali %61.6 seviyesindedir.<br><br>🎯 <b>Stratejik Yol Haritası & Tavsiye:</b> Bu karşılaşmada <b>Deplasman Kazanır</b> bahsi %+ 0.1% matematiksel net değer (Edge) barındırmaktadır. Kelly sermaye yönetimi (Fractional %25): bakiyenin %0.1'i ile katılım önerilir.",
-    "ai_commentary": "🤖 <b>Yapay Zeka Analizi:</b> Ensemble modeli (Dixon-Coles + ELO + Purged LightGBM), <b>AFC Bournemouth</b> galibiyetine %40.7, beraberliğe %23.9, <b>Chelsea FC</b> galibiyetine %35.4 ihtimal vermektedir.<br><br>📊 <b>Gol ve Tempo Projeksiyonu:</b> Beklenen Gol (xG) hesabı Ev: 1.6 - Dep: 1.48 (Toplam 3.08 gol) göstermektedir. 2.5 Üst ihtimali %59.4, KG Var ihtimali %61.6 seviyesindedir.<br><br>🎯 <b>Stratejik Yol Haritası & Tavsiye:</b> Bu karşılaşmada <b>Deplasman Kazanır</b> bahsi %+ 0.1% matematiksel net değer (Edge) barındırmaktadır. Kelly sermaye yönetimi (Fractional %25): bakiyenin %0.1'i ile katılım önerilir.",
-    "is_win": null,
-    "verification_badge": "⏳ OYNANACAK",
-    "odds": {
-      "ms1": 2.46,
-      "ms0": 4.18,
-      "ms2": 2.82,
-      "over25": 1.68,
-      "under25": 2.46,
-      "btts_yes": 1.62,
-      "btts_no": 2.6
-    },
-    "probs": {
-      "ms1": 40.7,
-      "ms0": 23.9,
-      "ms2": 35.4,
-      "over25": 59.4,
-      "under25": 40.6,
-      "btts_yes": 61.6,
-      "btts_no": 38.4
-    },
-    "xg": {
-      "ev": 1.6,
-      "dep": 1.48,
-      "toplam": 3.08
-    },
-    "sharp": {
-      "ms_sinyal": "YOK",
-      "ms_tier": "NO_SHARP",
-      "ou_sinyal": "YOK",
-      "ou_tier": "NO_SHARP"
-    },
-    "form": {
-      "ev_form": [
-        "D",
-        "W",
-        "W",
-        "D",
-        "D"
-      ],
-      "dep_form": []
-    },
-    "opening_odds": {
-      "ms1": 0,
-      "ms2": 0
-    },
-    "extended_stats": {
-      "ev_standing": {
-        "played": 110,
-        "wins": 39,
-        "draws": 36,
-        "losses": 35,
-        "points": 153,
-        "gf": 164,
-        "ga": 165,
-        "over25": 68,
-        "btts": 69,
-        "lig": "PL"
-      },
-      "dep_standing": {
-        "played": 3,
-        "points": 4,
-        "gf": 4,
-        "ga": 4,
-        "over25": 1,
-        "btts": 2
-      },
-      "h2h": {
-        "ev_wins": 0,
-        "dep_wins": 0,
-        "draws": 0,
-        "total": 0,
-        "matches": []
-      }
-    },
-    "news": []
-  },
-  {
-    "date": "2026-09-14T19:00:00Z",
-    "lig": "La Liga (ES)",
-    "lig_kodu": "PD",
-    "ev": "Real Sociedad de Fútbol",
-    "dep": "Real Madrid CF",
-    "selection": "Deplasman Kazanır",
-    "target_odds": 1.7,
-    "model_prob": 44.1,
-    "edge_pct": 0.1,
-    "edge_raw_pct": 0.1,
-    "status": "YAKLAŞAN MAÇ",
-    "reasoning": "🤖 <b>Yapay Zeka Analizi:</b> Ensemble modeli (Dixon-Coles + ELO + Purged LightGBM), <b>Real Sociedad de Fútbol</b> galibiyetine %30.9, beraberliğe %25.0, <b>Real Madrid CF</b> galibiyetine %44.1 ihtimal vermektedir.<br><br>📊 <b>Gol ve Tempo Projeksiyonu:</b> Beklenen Gol (xG) hesabı Ev: 1.25 - Dep: 1.54 (Toplam 2.79 gol) göstermektedir. 2.5 Üst ihtimali %52.8, KG Var ihtimali %56.1 seviyesindedir.<br><br>🎯 <b>Stratejik Yol Haritası & Tavsiye:</b> Bu karşılaşmada <b>Deplasman Kazanır</b> bahsi %+ 0.1% matematiksel net değer (Edge) barındırmaktadır. Kelly sermaye yönetimi (Fractional %25): bakiyenin %0.1'i ile katılım önerilir.",
-    "ai_commentary": "🤖 <b>Yapay Zeka Analizi:</b> Ensemble modeli (Dixon-Coles + ELO + Purged LightGBM), <b>Real Sociedad de Fútbol</b> galibiyetine %30.9, beraberliğe %25.0, <b>Real Madrid CF</b> galibiyetine %44.1 ihtimal vermektedir.<br><br>📊 <b>Gol ve Tempo Projeksiyonu:</b> Beklenen Gol (xG) hesabı Ev: 1.25 - Dep: 1.54 (Toplam 2.79 gol) göstermektedir. 2.5 Üst ihtimali %52.8, KG Var ihtimali %56.1 seviyesindedir.<br><br>🎯 <b>Stratejik Yol Haritası & Tavsiye:</b> Bu karşılaşmada <b>Deplasman Kazanır</b> bahsi %+ 0.1% matematiksel net değer (Edge) barındırmaktadır. Kelly sermaye yönetimi (Fractional %25): bakiyenin %0.1'i ile katılım önerilir.",
-    "is_win": null,
-    "verification_badge": "⏳ OYNANACAK",
-    "odds": {
-      "ms1": 3.24,
-      "ms0": 4.0,
-      "ms2": 2.27,
-      "over25": 1.89,
-      "under25": 2.12,
-      "btts_yes": 1.78,
-      "btts_no": 2.28
-    },
-    "probs": {
-      "ms1": 30.9,
-      "ms0": 25.0,
-      "ms2": 44.1,
-      "over25": 52.8,
-      "under25": 47.2,
-      "btts_yes": 56.1,
-      "btts_no": 43.9
-    },
-    "xg": {
-      "ev": 1.25,
-      "dep": 1.54,
-      "toplam": 2.79
-    },
-    "sharp": {
-      "ms_sinyal": "YOK",
-      "ms_tier": "NO_SHARP",
-      "ou_sinyal": "YOK",
-      "ou_tier": "NO_SHARP"
-    },
-    "form": {
-      "ev_form": [],
-      "dep_form": []
-    },
-    "opening_odds": {
-      "ms1": 0,
-      "ms2": 0
-    },
-    "extended_stats": {
-      "ev_standing": {
-        "played": 3,
-        "points": 6,
-        "gf": 5,
-        "ga": 3,
-        "over25": 2,
-        "btts": 2
-      },
-      "dep_standing": {
-        "played": 3,
-        "points": 4,
-        "gf": 4,
-        "ga": 4,
-        "over25": 1,
-        "btts": 2
-      },
-      "h2h": {
-        "ev_wins": 0,
-        "dep_wins": 0,
-        "draws": 0,
-        "total": 0,
-        "matches": []
-      }
-    },
-    "news": []
-  },
-  {
-    "date": "2026-09-15T14:15:00Z",
-    "lig": "La Liga (ES)",
-    "lig_kodu": "PD",
-    "ev": "Girona FC",
-    "dep": "FC Barcelona",
-    "selection": "Deplasman Kazanır",
-    "target_odds": 1.85,
-    "model_prob": 45.5,
-    "edge_pct": 0.1,
-    "edge_raw_pct": 0.1,
-    "status": "YAKLAŞAN MAÇ",
-    "reasoning": "🤖 <b>Yapay Zeka Analizi:</b> Ensemble modeli (Dixon-Coles + ELO + Purged LightGBM), <b>Girona FC</b> galibiyetine %31.5, beraberliğe %23.0, <b>FC Barcelona</b> galibiyetine %45.5 ihtimal vermektedir.<br><br>📊 <b>Gol ve Tempo Projeksiyonu:</b> Beklenen Gol (xG) hesabı Ev: 1.45 - Dep: 1.78 (Toplam 3.23 gol) göstermektedir. 2.5 Üst ihtimali %62.6, KG Var ihtimali %63.6 seviyesindedir.<br><br>🎯 <b>Stratejik Yol Haritası & Tavsiye:</b> Bu karşılaşmada <b>Deplasman Kazanır</b> bahsi %+ 0.1% matematiksel net değer (Edge) barındırmaktadır. Kelly sermaye yönetimi (Fractional %25): bakiyenin %0.1'i ile katılım önerilir.",
-    "ai_commentary": "🤖 <b>Yapay Zeka Analizi:</b> Ensemble modeli (Dixon-Coles + ELO + Purged LightGBM), <b>Girona FC</b> galibiyetine %31.5, beraberliğe %23.0, <b>FC Barcelona</b> galibiyetine %45.5 ihtimal vermektedir.<br><br>📊 <b>Gol ve Tempo Projeksiyonu:</b> Beklenen Gol (xG) hesabı Ev: 1.45 - Dep: 1.78 (Toplam 3.23 gol) göstermektedir. 2.5 Üst ihtimali %62.6, KG Var ihtimali %63.6 seviyesindedir.<br><br>🎯 <b>Stratejik Yol Haritası & Tavsiye:</b> Bu karşılaşmada <b>Deplasman Kazanır</b> bahsi %+ 0.1% matematiksel net değer (Edge) barındırmaktadır. Kelly sermaye yönetimi (Fractional %25): bakiyenin %0.1'i ile katılım önerilir.",
-    "is_win": null,
-    "verification_badge": "⏳ OYNANACAK",
-    "odds": {
-      "ms1": 3.17,
-      "ms0": 4.35,
-      "ms2": 2.2,
-      "over25": 1.6,
-      "under25": 2.67,
-      "btts_yes": 1.57,
-      "btts_no": 2.75
-    },
-    "probs": {
-      "ms1": 31.5,
-      "ms0": 23.0,
-      "ms2": 45.5,
-      "over25": 62.6,
-      "under25": 37.4,
-      "btts_yes": 63.6,
-      "btts_no": 36.4
-    },
-    "xg": {
-      "ev": 1.45,
-      "dep": 1.78,
-      "toplam": 3.23
-    },
-    "sharp": {
-      "ms_sinyal": "YOK",
-      "ms_tier": "NO_SHARP",
-      "ou_sinyal": "YOK",
-      "ou_tier": "NO_SHARP"
+      "ou_tier": "NO_SHARP",
+      "btts_sinyal": "YOK",
+      "btts_tier": "NO_SHARP"
     },
     "form": {
       "ev_form": [],
@@ -1881,678 +1712,1179 @@
       ]
     },
     "opening_odds": {
-      "ms1": 0,
-      "ms2": 0
+      "ms1": 0.0,
+      "ms2": 0.0
     },
     "extended_stats": {
-      "ev_standing": {
-        "played": 3,
-        "points": 6,
-        "gf": 5,
-        "ga": 3,
-        "over25": 2,
-        "btts": 2
-      },
+      "ev_standing": null,
       "dep_standing": {
-        "played": 146,
-        "wins": 105,
-        "draws": 17,
-        "losses": 24,
-        "points": 332,
-        "gf": 366,
-        "ga": 173,
-        "over25": 107,
-        "btts": 92,
-        "lig": "PD"
+        "played": 142,
+        "wins": 89,
+        "draws": 26,
+        "losses": 27,
+        "points": 293,
+        "gf": 309,
+        "ga": 160,
+        "over25": 93,
+        "btts": 82,
+        "lig": "PL",
+        "recent": [
+          {
+            "date": "2026-09-05",
+            "opponent": "Coventry City",
+            "score": "1-0",
+            "result": "W",
+            "isHome": true
+          },
+          {
+            "date": "2026-08-28",
+            "opponent": "Crystal Palace",
+            "score": "4-1",
+            "result": "W",
+            "isHome": false
+          },
+          {
+            "date": "2026-08-23",
+            "opponent": "AFC Bournemouth",
+            "score": "2-1",
+            "result": "W",
+            "isHome": true
+          },
+          {
+            "date": "2026-04-22",
+            "opponent": "Burnley",
+            "score": "1-0",
+            "result": "W",
+            "isHome": false
+          },
+          {
+            "date": "2026-04-19",
+            "opponent": "Arsenal",
+            "score": "2-1",
+            "result": "W",
+            "isHome": true
+          }
+        ]
       },
       "h2h": {
+        "matches": [],
         "ev_wins": 0,
         "dep_wins": 0,
         "draws": 0,
-        "total": 0,
-        "matches": []
+        "total": 0
       }
-    },
-    "news": []
+    }
   },
   {
-    "date": "2026-09-15T19:00:00Z",
-    "lig": "La Liga (ES)",
-    "lig_kodu": "PD",
-    "ev": "Club Atlético de Madrid",
-    "dep": "Valencia CF",
-    "selection": "Ev Sahibi Kazanır",
-    "target_odds": 1.45,
-    "model_prob": 55.9,
-    "edge_pct": 0.1,
-    "edge_raw_pct": 0.1,
-    "status": "YAKLAŞAN MAÇ",
-    "reasoning": "🤖 <b>Yapay Zeka Analizi:</b> Ensemble modeli (Dixon-Coles + ELO + Purged LightGBM), <b>Club Atlético de Madrid</b> galibiyetine %55.9, beraberliğe %22.9, <b>Valencia CF</b> galibiyetine %21.2 ihtimal vermektedir.<br><br>📊 <b>Gol ve Tempo Projeksiyonu:</b> Beklenen Gol (xG) hesabı Ev: 1.82 - Dep: 1.03 (Toplam 2.85 gol) göstermektedir. 2.5 Üst ihtimali %54.2, KG Var ihtimali %53.9 seviyesindedir.<br><br>🎯 <b>Stratejik Yol Haritası & Tavsiye:</b> Bu karşılaşmada <b>Ev Sahibi Kazanır</b> bahsi %+ 0.1% matematiksel net değer (Edge) barındırmaktadır. Kelly sermaye yönetimi (Fractional %25): bakiyenin %0.1'i ile katılım önerilir.",
-    "ai_commentary": "🤖 <b>Yapay Zeka Analizi:</b> Ensemble modeli (Dixon-Coles + ELO + Purged LightGBM), <b>Club Atlético de Madrid</b> galibiyetine %55.9, beraberliğe %22.9, <b>Valencia CF</b> galibiyetine %21.2 ihtimal vermektedir.<br><br>📊 <b>Gol ve Tempo Projeksiyonu:</b> Beklenen Gol (xG) hesabı Ev: 1.82 - Dep: 1.03 (Toplam 2.85 gol) göstermektedir. 2.5 Üst ihtimali %54.2, KG Var ihtimali %53.9 seviyesindedir.<br><br>🎯 <b>Stratejik Yol Haritası & Tavsiye:</b> Bu karşılaşmada <b>Ev Sahibi Kazanır</b> bahsi %+ 0.1% matematiksel net değer (Edge) barındırmaktadır. Kelly sermaye yönetimi (Fractional %25): bakiyenin %0.1'i ile katılım önerilir.",
-    "is_win": null,
-    "verification_badge": "⏳ OYNANACAK",
+    "date": "2026-09-09T16:45:00Z",
+    "lig": "CL",
+    "ev": "10.7796",
+    "dep": "Feyenoord",
+    "selection": "Deplasman Kazanır",
+    "target_odds": 28.0,
+    "model_prob": 42.1,
+    "edge_pct": 38.5,
+    "edge_raw_pct": 38.5,
+    "fake_edge_score": 0.0,
+    "latency_seconds": 0,
+    "selected_bookmaker": "Pinnacle",
+    "execution_quality": {},
+    "recommended_stake_pct": 1.0,
+    "status": "RİSK FİLTRESİ (DEĞER YOK)",
+    "reasoning": "Model piyasadan %38.5 daha yüksek ihtimal veriyor. | Dengeli xG profili (Beklenti: 2.96 gol). | Piyasada bu tahmine hafif bir para akışı var.",
     "odds": {
-      "ms1": 1.79,
-      "ms0": 4.37,
-      "ms2": 4.72,
-      "over25": 1.85,
-      "under25": 2.18,
-      "btts_yes": 1.86,
-      "btts_no": 2.17
+      "ms1": 1.13,
+      "ms0": 13.5,
+      "ms2": 28.0,
+      "over25": 1.2,
+      "under25": 4.8,
+      "btts_yes": 0,
+      "btts_no": 0
     },
     "probs": {
-      "ms1": 55.9,
-      "ms0": 22.9,
-      "ms2": 21.2,
-      "over25": 54.2,
-      "under25": 45.8,
-      "btts_yes": 53.9,
-      "btts_no": 46.1
+      "ms1": 28.8,
+      "ms0": 29.1,
+      "ms2": 42.1,
+      "over25": 56.7,
+      "under25": 43.3,
+      "btts_yes": 60.2,
+      "btts_no": 39.8
     },
     "xg": {
-      "ev": 1.82,
-      "dep": 1.03,
+      "ev": 1.32,
+      "dep": 1.64,
+      "toplam": 2.96
+    },
+    "sharp": {
+      "ms_sinyal": "EV",
+      "ms_tier": "WEAK",
+      "ou_sinyal": "YOK",
+      "ou_tier": "NO_SHARP",
+      "btts_sinyal": "YOK",
+      "btts_tier": "NO_SHARP"
+    },
+    "form": {
+      "ev_form": [],
+      "dep_form": [
+        "W",
+        "D",
+        "W",
+        "D",
+        "W"
+      ]
+    },
+    "opening_odds": {
+      "ms1": 0.0,
+      "ms2": 0.0
+    },
+    "extended_stats": {
+      "ev_standing": null,
+      "dep_standing": {
+        "played": 124,
+        "wins": 74,
+        "draws": 26,
+        "losses": 24,
+        "points": 248,
+        "gf": 279,
+        "ga": 151,
+        "over25": 81,
+        "btts": 75,
+        "lig": "DED",
+        "recent": [
+          {
+            "date": "2026-09-05",
+            "opponent": "NEC",
+            "score": "3-1",
+            "result": "W",
+            "isHome": false
+          },
+          {
+            "date": "2026-08-30",
+            "opponent": "ADO Den Haag",
+            "score": "2-2",
+            "result": "D",
+            "isHome": true
+          },
+          {
+            "date": "2026-08-23",
+            "opponent": "SC Cambuur-Leeuwarden",
+            "score": "5-2",
+            "result": "W",
+            "isHome": false
+          },
+          {
+            "date": "2026-08-16",
+            "opponent": "Go Ahead Eagles",
+            "score": "2-2",
+            "result": "D",
+            "isHome": true
+          },
+          {
+            "date": "2026-08-09",
+            "opponent": "Sparta Rotterdam",
+            "score": "1-0",
+            "result": "W",
+            "isHome": false
+          }
+        ]
+      },
+      "h2h": {
+        "matches": [],
+        "ev_wins": 0,
+        "dep_wins": 0,
+        "draws": 0,
+        "total": 0
+      }
+    }
+  },
+  {
+    "date": "2026-09-09T19:00:00Z",
+    "lig": "CL",
+    "ev": "0.3557",
+    "dep": "Arsenal",
+    "selection": "Ev Sahibi Kazanır",
+    "target_odds": 4.75,
+    "model_prob": 28.5,
+    "edge_pct": 7.5,
+    "edge_raw_pct": 7.5,
+    "fake_edge_score": 0.0,
+    "latency_seconds": 0,
+    "selected_bookmaker": "Pinnacle",
+    "execution_quality": {},
+    "recommended_stake_pct": 1.0,
+    "status": "RİSK FİLTRESİ (DEĞER YOK)",
+    "reasoning": "Model piyasadan %7.5 daha yüksek ihtimal veriyor. | Dengeli xG profili (Beklenti: 2.55 gol).",
+    "odds": {
+      "ms1": 4.75,
+      "ms0": 3.85,
+      "ms2": 1.88,
+      "over25": 2.04,
+      "under25": 1.91,
+      "btts_yes": 0,
+      "btts_no": 0
+    },
+    "probs": {
+      "ms1": 28.5,
+      "ms0": 29.2,
+      "ms2": 42.2,
+      "over25": 46.9,
+      "under25": 53.1,
+      "btts_yes": 53.3,
+      "btts_no": 46.7
+    },
+    "xg": {
+      "ev": 1.3,
+      "dep": 1.25,
+      "toplam": 2.55
+    },
+    "sharp": {
+      "ms_sinyal": "YOK",
+      "ms_tier": "NO_SHARP",
+      "ou_sinyal": "UNDER",
+      "ou_tier": "STRONG",
+      "btts_sinyal": "YOK",
+      "btts_tier": "NO_SHARP"
+    },
+    "form": {
+      "ev_form": [],
+      "dep_form": [
+        "D",
+        "L",
+        "W",
+        "W",
+        "W"
+      ]
+    },
+    "opening_odds": {
+      "ms1": 0.0,
+      "ms2": 0.0
+    },
+    "extended_stats": {
+      "ev_standing": null,
+      "dep_standing": {
+        "played": 148,
+        "wins": 96,
+        "draws": 32,
+        "losses": 20,
+        "points": 320,
+        "gf": 310,
+        "ga": 115,
+        "over25": 82,
+        "btts": 71,
+        "lig": "PL",
+        "recent": [
+          {
+            "date": "2026-09-06",
+            "opponent": "Chelsea",
+            "score": "2-1",
+            "result": "W",
+            "isHome": true
+          },
+          {
+            "date": "2026-08-31",
+            "opponent": "Aston Villa",
+            "score": "1-0",
+            "result": "W",
+            "isHome": false
+          },
+          {
+            "date": "2026-08-21",
+            "opponent": "Coventry City",
+            "score": "3-0",
+            "result": "W",
+            "isHome": true
+          },
+          {
+            "date": "2026-04-19",
+            "opponent": "Manchester City",
+            "score": "1-2",
+            "result": "L",
+            "isHome": false
+          },
+          {
+            "date": "2026-04-15",
+            "opponent": "Sporting Clube de Portugal",
+            "score": "0-0",
+            "result": "D",
+            "isHome": true
+          }
+        ]
+      },
+      "h2h": {
+        "matches": [],
+        "ev_wins": 0,
+        "dep_wins": 0,
+        "draws": 0,
+        "total": 0
+      }
+    }
+  },
+  {
+    "date": "2026-09-09T19:00:00Z",
+    "lig": "CL",
+    "ev": "1.1456",
+    "dep": "Atlético Madrid",
+    "selection": "Deplasman Kazanır",
+    "target_odds": 5.1,
+    "model_prob": 42.1,
+    "edge_pct": 22.5,
+    "edge_raw_pct": 22.5,
+    "fake_edge_score": 0.0,
+    "latency_seconds": 0,
+    "selected_bookmaker": "Pinnacle",
+    "execution_quality": {},
+    "recommended_stake_pct": 1.0,
+    "status": "RİSK FİLTRESİ (DEĞER YOK)",
+    "reasoning": "Model piyasadan %22.5 daha yüksek ihtimal veriyor. | Dengeli xG profili (Beklenti: 2.55 gol). | Keskin bahisçiler (Sharp money) bu yönde pozisyon alıyor.",
+    "odds": {
+      "ms1": 1.76,
+      "ms0": 4.28,
+      "ms2": 5.1,
+      "over25": 1.65,
+      "under25": 2.48,
+      "btts_yes": 0,
+      "btts_no": 0
+    },
+    "probs": {
+      "ms1": 28.8,
+      "ms0": 29.1,
+      "ms2": 42.1,
+      "over25": 46.9,
+      "under25": 53.1,
+      "btts_yes": 53.3,
+      "btts_no": 46.7
+    },
+    "xg": {
+      "ev": 1.3,
+      "dep": 1.25,
+      "toplam": 2.55
+    },
+    "sharp": {
+      "ms_sinyal": "EV",
+      "ms_tier": "STRONG",
+      "ou_sinyal": "OVER",
+      "ou_tier": "STRONG",
+      "btts_sinyal": "YOK",
+      "btts_tier": "NO_SHARP"
+    },
+    "form": {
+      "ev_form": [],
+      "dep_form": []
+    },
+    "opening_odds": {
+      "ms1": 0.0,
+      "ms2": 0.0
+    },
+    "extended_stats": {
+      "ev_standing": null,
+      "dep_standing": null,
+      "h2h": {
+        "matches": [],
+        "ev_wins": 0,
+        "dep_wins": 0,
+        "draws": 0,
+        "total": 0
+      }
+    }
+  },
+  {
+    "date": "2026-09-09T19:00:00Z",
+    "lig": "CL",
+    "ev": "0.8157",
+    "dep": "Galatasaray",
+    "selection": "Deplasman Kazanır",
+    "target_odds": 4.3,
+    "model_prob": 42.2,
+    "edge_pct": 19.0,
+    "edge_raw_pct": 19.0,
+    "fake_edge_score": 0.0,
+    "latency_seconds": 0,
+    "selected_bookmaker": "Pinnacle",
+    "execution_quality": {},
+    "recommended_stake_pct": 1.0,
+    "status": "RİSK FİLTRESİ (DEĞER YOK)",
+    "reasoning": "Model piyasadan %19.0 daha yüksek ihtimal veriyor. | Dengeli xG profili (Beklenti: 2.85 gol). | Keskin bahisçiler (Sharp money) bu yönde pozisyon alıyor.",
+    "odds": {
+      "ms1": 1.91,
+      "ms0": 4.0,
+      "ms2": 4.3,
+      "over25": 1.7,
+      "under25": 2.38,
+      "btts_yes": 0,
+      "btts_no": 0
+    },
+    "probs": {
+      "ms1": 28.5,
+      "ms0": 29.2,
+      "ms2": 42.2,
+      "over25": 54.3,
+      "under25": 45.7,
+      "btts_yes": 56.3,
+      "btts_no": 43.7
+    },
+    "xg": {
+      "ev": 1.75,
+      "dep": 1.1,
+      "toplam": 2.85
+    },
+    "sharp": {
+      "ms_sinyal": "EV",
+      "ms_tier": "STRONG",
+      "ou_sinyal": "OVER",
+      "ou_tier": "STRONG",
+      "btts_sinyal": "YOK",
+      "btts_tier": "NO_SHARP"
+    },
+    "form": {
+      "ev_form": [],
+      "dep_form": [
+        "D",
+        "W",
+        "W",
+        "L",
+        "W"
+      ]
+    },
+    "opening_odds": {
+      "ms1": 0.0,
+      "ms2": 0.0
+    },
+    "extended_stats": {
+      "ev_standing": null,
+      "dep_standing": {
+        "played": 107,
+        "wins": 87,
+        "draws": 13,
+        "losses": 7,
+        "points": 274,
+        "gf": 260,
+        "ga": 86,
+        "over25": 72,
+        "btts": 59,
+        "lig": "TSL",
+        "recent": [
+          {
+            "date": "2026-05-09",
+            "opponent": "Antalyaspor",
+            "score": "4-2",
+            "result": "W",
+            "isHome": true
+          },
+          {
+            "date": "2026-05-02",
+            "opponent": "Samsunspor",
+            "score": "1-4",
+            "result": "L",
+            "isHome": false
+          },
+          {
+            "date": "2026-04-26",
+            "opponent": "Fenerbahce",
+            "score": "3-0",
+            "result": "W",
+            "isHome": true
+          },
+          {
+            "date": "2026-04-18",
+            "opponent": "Genclerbirligi",
+            "score": "2-1",
+            "result": "W",
+            "isHome": false
+          },
+          {
+            "date": "2026-04-12",
+            "opponent": "Kocaelispor",
+            "score": "1-1",
+            "result": "D",
+            "isHome": true
+          }
+        ]
+      },
+      "h2h": {
+        "matches": [],
+        "ev_wins": 0,
+        "dep_wins": 0,
+        "draws": 0,
+        "total": 0
+      }
+    }
+  },
+  {
+    "date": "2026-09-08T12:00:00Z",
+    "lig": "DED",
+    "ev": "0.4727",
+    "dep": "Go Ahead Eagles",
+    "selection": "Beraberlik",
+    "target_odds": 4.31,
+    "model_prob": 34.2,
+    "edge_pct": 11.0,
+    "edge_raw_pct": 11.0,
+    "fake_edge_score": 0.0,
+    "latency_seconds": 0,
+    "selected_bookmaker": "Pinnacle",
+    "execution_quality": {},
+    "recommended_stake_pct": 1.0,
+    "status": "RİSK FİLTRESİ (DEĞER YOK)",
+    "reasoning": "Model piyasadan %11.0 daha yüksek ihtimal veriyor. | Yüksek xG profili (Beklenti: 3.15 gol) → Bol pozisyonlu bir maç. | Keskin bahisçiler (Sharp money) bu yönde pozisyon alıyor.",
+    "odds": {
+      "ms1": 2.04,
+      "ms0": 4.31,
+      "ms2": 3.25,
+      "over25": 1.33,
+      "under25": 3.1,
+      "btts_yes": 0,
+      "btts_no": 0
+    },
+    "probs": {
+      "ms1": 34.3,
+      "ms0": 34.2,
+      "ms2": 31.5,
+      "over25": 61.0,
+      "under25": 39.0,
+      "btts_yes": 63.5,
+      "btts_no": 36.5
+    },
+    "xg": {
+      "ev": 1.57,
+      "dep": 1.58,
+      "toplam": 3.15
+    },
+    "sharp": {
+      "ms_sinyal": "DEP",
+      "ms_tier": "STRONG",
+      "ou_sinyal": "YOK",
+      "ou_tier": "NO_SHARP",
+      "btts_sinyal": "YOK",
+      "btts_tier": "NO_SHARP"
+    },
+    "form": {
+      "ev_form": [],
+      "dep_form": [
+        "L",
+        "W",
+        "D",
+        "W",
+        "L"
+      ]
+    },
+    "opening_odds": {
+      "ms1": 0.0,
+      "ms2": 0.0
+    },
+    "extended_stats": {
+      "ev_standing": null,
+      "dep_standing": {
+        "played": 105,
+        "wins": 36,
+        "draws": 34,
+        "losses": 35,
+        "points": 142,
+        "gf": 168,
+        "ga": 161,
+        "over25": 62,
+        "btts": 59,
+        "lig": "DED",
+        "recent": [
+          {
+            "date": "2026-08-29",
+            "opponent": "AZ",
+            "score": "2-5",
+            "result": "L",
+            "isHome": false
+          },
+          {
+            "date": "2026-08-23",
+            "opponent": "ADO Den Haag",
+            "score": "3-1",
+            "result": "W",
+            "isHome": true
+          },
+          {
+            "date": "2026-08-16",
+            "opponent": "Feyenoord Rotterdam",
+            "score": "2-2",
+            "result": "D",
+            "isHome": false
+          },
+          {
+            "date": "2026-08-08",
+            "opponent": "Willem II Tilburg",
+            "score": "4-1",
+            "result": "W",
+            "isHome": true
+          },
+          {
+            "date": "2026-05-10",
+            "opponent": "PSV",
+            "score": "1-4",
+            "result": "L",
+            "isHome": true
+          }
+        ]
+      },
+      "h2h": {
+        "matches": [],
+        "ev_wins": 0,
+        "dep_wins": 0,
+        "draws": 0,
+        "total": 0
+      }
+    }
+  },
+  {
+    "date": "2026-09-09T19:00:00Z",
+    "lig": "CL",
+    "ev": "13.3277",
+    "dep": "ŠK Slovan Bratislava",
+    "selection": "Deplasman Kazanır",
+    "target_odds": 50.0,
+    "model_prob": 28.7,
+    "edge_pct": 26.7,
+    "edge_raw_pct": 26.7,
+    "fake_edge_score": 0.0,
+    "latency_seconds": 0,
+    "selected_bookmaker": "Pinnacle",
+    "execution_quality": {},
+    "recommended_stake_pct": 1.0,
+    "status": "RİSK FİLTRESİ (DEĞER YOK)",
+    "reasoning": "Model piyasadan %26.7 daha yüksek ihtimal veriyor. | Dengeli xG profili (Beklenti: 2.76 gol). | Keskin bahisçiler (Sharp money) bu yönde pozisyon alıyor.",
+    "odds": {
+      "ms1": 1.07,
+      "ms0": 24.0,
+      "ms2": 50.0,
+      "over25": 1.24,
+      "under25": 4.33,
+      "btts_yes": 0,
+      "btts_no": 0
+    },
+    "probs": {
+      "ms1": 37.5,
+      "ms0": 33.9,
+      "ms2": 28.7,
+      "over25": 52.1,
+      "under25": 47.9,
+      "btts_yes": 55.5,
+      "btts_no": 44.5
+    },
+    "xg": {
+      "ev": 1.65,
+      "dep": 1.11,
+      "toplam": 2.76
+    },
+    "sharp": {
+      "ms_sinyal": "EV",
+      "ms_tier": "STRONG",
+      "ou_sinyal": "YOK",
+      "ou_tier": "NO_SHARP",
+      "btts_sinyal": "YOK",
+      "btts_tier": "NO_SHARP"
+    },
+    "form": {
+      "ev_form": [],
+      "dep_form": [
+        "L",
+        "L",
+        "L",
+        "L",
+        "L"
+      ]
+    },
+    "opening_odds": {
+      "ms1": 0.0,
+      "ms2": 0.0
+    },
+    "extended_stats": {
+      "ev_standing": null,
+      "dep_standing": {
+        "played": 8,
+        "wins": 0,
+        "draws": 0,
+        "losses": 8,
+        "points": 0,
+        "gf": 7,
+        "ga": 27,
+        "over25": 7,
+        "btts": 6,
+        "lig": "CL",
+        "recent": [
+          {
+            "date": "2025-01-29",
+            "opponent": "FC Bayern München",
+            "score": "1-3",
+            "result": "L",
+            "isHome": false
+          },
+          {
+            "date": "2025-01-21",
+            "opponent": "VfB Stuttgart",
+            "score": "1-3",
+            "result": "L",
+            "isHome": true
+          },
+          {
+            "date": "2024-12-11",
+            "opponent": "Club Atlético",
+            "score": "1-3",
+            "result": "L",
+            "isHome": false
+          },
+          {
+            "date": "2024-11-26",
+            "opponent": "AC Milan",
+            "score": "2-3",
+            "result": "L",
+            "isHome": true
+          },
+          {
+            "date": "2024-11-05",
+            "opponent": "GNK Dinamo Zagreb",
+            "score": "1-4",
+            "result": "L",
+            "isHome": true
+          }
+        ]
+      },
+      "h2h": {
+        "matches": [],
+        "ev_wins": 0,
+        "dep_wins": 0,
+        "draws": 0,
+        "total": 0
+      }
+    }
+  },
+  {
+    "date": "2026-09-09T19:45:00Z",
+    "lig": "PPL",
+    "ev": "3.852",
+    "dep": "Benfica",
+    "selection": "Ev Sahibi Kazanır",
+    "target_odds": 17.0,
+    "model_prob": 28.5,
+    "edge_pct": 22.7,
+    "edge_raw_pct": 22.7,
+    "fake_edge_score": 0.0,
+    "latency_seconds": 0,
+    "selected_bookmaker": "Pinnacle",
+    "execution_quality": {},
+    "recommended_stake_pct": 1.0,
+    "status": "RİSK FİLTRESİ (DEĞER YOK)",
+    "reasoning": "Model piyasadan %22.7 daha yüksek ihtimal veriyor. | Dengeli xG profili (Beklenti: 2.81 gol). | Keskin bahisçiler (Sharp money) bu yönde pozisyon alıyor.",
+    "odds": {
+      "ms1": 17.0,
+      "ms0": 7.74,
+      "ms2": 1.2,
+      "over25": 1.44,
+      "under25": 2.7,
+      "btts_yes": 0,
+      "btts_no": 0
+    },
+    "probs": {
+      "ms1": 28.5,
+      "ms0": 29.2,
+      "ms2": 42.2,
+      "over25": 53.4,
+      "under25": 46.6,
+      "btts_yes": 54.7,
+      "btts_no": 45.3
+    },
+    "xg": {
+      "ev": 1.04,
+      "dep": 1.77,
+      "toplam": 2.81
+    },
+    "sharp": {
+      "ms_sinyal": "DEP",
+      "ms_tier": "STRONG",
+      "ou_sinyal": "YOK",
+      "ou_tier": "NO_SHARP",
+      "btts_sinyal": "YOK",
+      "btts_tier": "NO_SHARP"
+    },
+    "form": {
+      "ev_form": [],
+      "dep_form": [
+        "D",
+        "D",
+        "W",
+        "W",
+        "W"
+      ]
+    },
+    "opening_odds": {
+      "ms1": 0.0,
+      "ms2": 0.0
+    },
+    "extended_stats": {
+      "ev_standing": null,
+      "dep_standing": {
+        "played": 133,
+        "wins": 84,
+        "draws": 25,
+        "losses": 24,
+        "points": 277,
+        "gf": 285,
+        "ga": 128,
+        "over25": 85,
+        "btts": 66,
+        "lig": "PPL",
+        "recent": [
+          {
+            "date": "2026-09-05",
+            "opponent": "CS Marítimo",
+            "score": "3-0",
+            "result": "W",
+            "isHome": false
+          },
+          {
+            "date": "2026-08-31",
+            "opponent": "GD Estoril Praia",
+            "score": "2-1",
+            "result": "W",
+            "isHome": true
+          },
+          {
+            "date": "2026-08-17",
+            "opponent": "Casa Pia AC",
+            "score": "7-0",
+            "result": "W",
+            "isHome": false
+          },
+          {
+            "date": "2026-08-09",
+            "opponent": "Académico de Viseu",
+            "score": "2-2",
+            "result": "D",
+            "isHome": true
+          },
+          {
+            "date": "2026-05-11",
+            "opponent": "Sporting Clube de Braga",
+            "score": "2-2",
+            "result": "D",
+            "isHome": true
+          }
+        ]
+      },
+      "h2h": {
+        "matches": [],
+        "ev_wins": 0,
+        "dep_wins": 0,
+        "draws": 0,
+        "total": 0
+      }
+    }
+  },
+  {
+    "date": "2026-09-07T16:30:00Z",
+    "lig": "SA",
+    "ev": "0.4413",
+    "dep": "Lecce",
+    "selection": "Deplasman Kazanır",
+    "target_odds": 4.5,
+    "model_prob": 32.0,
+    "edge_pct": 9.8,
+    "edge_raw_pct": 9.8,
+    "fake_edge_score": 0.0,
+    "latency_seconds": 0,
+    "selected_bookmaker": "Pinnacle",
+    "execution_quality": {},
+    "recommended_stake_pct": 1.0,
+    "status": "RİSK FİLTRESİ (DEĞER YOK)",
+    "reasoning": "Model piyasadan %9.8 daha yüksek ihtimal veriyor. | Dengeli xG profili (Beklenti: 2.55 gol).",
+    "odds": {
+      "ms1": 2.1,
+      "ms0": 3.29,
+      "ms2": 4.5,
+      "over25": 2.55,
+      "under25": 1.64,
+      "btts_yes": 0,
+      "btts_no": 0
+    },
+    "probs": {
+      "ms1": 34.1,
+      "ms0": 33.9,
+      "ms2": 32.0,
+      "over25": 46.9,
+      "under25": 53.1,
+      "btts_yes": 53.2,
+      "btts_no": 46.8
+    },
+    "xg": {
+      "ev": 1.3,
+      "dep": 1.25,
+      "toplam": 2.55
+    },
+    "sharp": {
+      "ms_sinyal": "YOK",
+      "ms_tier": "NO_SHARP",
+      "ou_sinyal": "YOK",
+      "ou_tier": "NO_SHARP",
+      "btts_sinyal": "YOK",
+      "btts_tier": "NO_SHARP"
+    },
+    "form": {
+      "ev_form": [],
+      "dep_form": [
+        "L",
+        "L",
+        "D",
+        "W",
+        "L"
+      ]
+    },
+    "opening_odds": {
+      "ms1": 0.0,
+      "ms2": 0.0
+    },
+    "extended_stats": {
+      "ev_standing": null,
+      "dep_standing": {
+        "played": 111,
+        "wins": 24,
+        "draws": 31,
+        "losses": 56,
+        "points": 103,
+        "gf": 83,
+        "ga": 162,
+        "over25": 42,
+        "btts": 44,
+        "lig": "SA",
+        "recent": [
+          {
+            "date": "2026-08-31",
+            "opponent": "AS Roma",
+            "score": "0-4",
+            "result": "L",
+            "isHome": true
+          },
+          {
+            "date": "2026-08-23",
+            "opponent": "Venezia",
+            "score": "2-0",
+            "result": "W",
+            "isHome": false
+          },
+          {
+            "date": "2026-04-20",
+            "opponent": "ACF Fiorentina",
+            "score": "1-1",
+            "result": "D",
+            "isHome": true
+          },
+          {
+            "date": "2026-04-12",
+            "opponent": "Bologna 1909",
+            "score": "0-2",
+            "result": "L",
+            "isHome": false
+          },
+          {
+            "date": "2026-04-06",
+            "opponent": "Atalanta BC",
+            "score": "0-3",
+            "result": "L",
+            "isHome": true
+          }
+        ]
+      },
+      "h2h": {
+        "matches": [],
+        "ev_wins": 0,
+        "dep_wins": 0,
+        "draws": 0,
+        "total": 0
+      }
+    }
+  },
+  {
+    "date": "2026-09-07T17:00:00Z",
+    "lig": "PD",
+    "ev": "0.3832",
+    "dep": "Celta Vigo",
+    "selection": "2.5 Üst",
+    "target_odds": 2.95,
+    "model_prob": 46.9,
+    "edge_pct": 13.0,
+    "edge_raw_pct": 13.0,
+    "fake_edge_score": 0.0,
+    "latency_seconds": 0,
+    "selected_bookmaker": "Pinnacle",
+    "execution_quality": {},
+    "recommended_stake_pct": 1.0,
+    "status": "RİSK FİLTRESİ (DEĞER YOK)",
+    "reasoning": "Model piyasadan %13.0 daha yüksek ihtimal veriyor. | Dengeli xG profili (Beklenti: 2.55 gol). | Sinyal tamamen modelin bulduğu matematiksel değere (Edge) dayanıyor.",
+    "odds": {
+      "ms1": 2.58,
+      "ms0": 2.97,
+      "ms2": 3.6,
+      "over25": 2.95,
+      "under25": 1.4,
+      "btts_yes": 0,
+      "btts_no": 0
+    },
+    "probs": {
+      "ms1": 32.5,
+      "ms0": 32.5,
+      "ms2": 35.0,
+      "over25": 46.9,
+      "under25": 53.1,
+      "btts_yes": 53.3,
+      "btts_no": 46.7
+    },
+    "xg": {
+      "ev": 1.3,
+      "dep": 1.25,
+      "toplam": 2.55
+    },
+    "sharp": {
+      "ms_sinyal": "YOK",
+      "ms_tier": "NO_SHARP",
+      "ou_sinyal": "YOK",
+      "ou_tier": "NO_SHARP",
+      "btts_sinyal": "YOK",
+      "btts_tier": "NO_SHARP"
+    },
+    "form": {
+      "ev_form": [],
+      "dep_form": []
+    },
+    "opening_odds": {
+      "ms1": 0.0,
+      "ms2": 0.0
+    },
+    "extended_stats": {
+      "ev_standing": null,
+      "dep_standing": null,
+      "h2h": {
+        "matches": [],
+        "ev_wins": 0,
+        "dep_wins": 0,
+        "draws": 0,
+        "total": 0
+      }
+    }
+  },
+  {
+    "date": "2026-09-07T19:15:00Z",
+    "lig": "PPL",
+    "ev": "0.2089",
+    "dep": "Arouca",
+    "selection": "Beraberlik",
+    "target_odds": 3.6,
+    "model_prob": 33.6,
+    "edge_pct": 5.8,
+    "edge_raw_pct": 5.8,
+    "fake_edge_score": 0.0,
+    "latency_seconds": 0,
+    "selected_bookmaker": "Pinnacle",
+    "execution_quality": {},
+    "recommended_stake_pct": 1.0,
+    "status": "RİSK FİLTRESİ (DEĞER YOK)",
+    "reasoning": "Model piyasadan %5.8 daha yüksek ihtimal veriyor. | Dengeli xG profili (Beklenti: 2.85 gol).",
+    "odds": {
+      "ms1": 2.42,
+      "ms0": 3.6,
+      "ms2": 3.2,
+      "over25": 1.92,
+      "under25": 1.99,
+      "btts_yes": 0,
+      "btts_no": 0
+    },
+    "probs": {
+      "ms1": 32.6,
+      "ms0": 33.6,
+      "ms2": 33.8,
+      "over25": 54.3,
+      "under25": 45.7,
+      "btts_yes": 58.8,
+      "btts_no": 41.2
+    },
+    "xg": {
+      "ev": 1.42,
+      "dep": 1.44,
       "toplam": 2.85
     },
     "sharp": {
       "ms_sinyal": "YOK",
       "ms_tier": "NO_SHARP",
-      "ou_sinyal": "YOK",
-      "ou_tier": "NO_SHARP"
+      "ou_sinyal": "OVER",
+      "ou_tier": "WEAK",
+      "btts_sinyal": "YOK",
+      "btts_tier": "NO_SHARP"
     },
     "form": {
       "ev_form": [],
-      "dep_form": []
-    },
-    "opening_odds": {
-      "ms1": 0,
-      "ms2": 0
-    },
-    "extended_stats": {
-      "ev_standing": {
-        "played": 3,
-        "points": 6,
-        "gf": 5,
-        "ga": 3,
-        "over25": 2,
-        "btts": 2
-      },
-      "dep_standing": {
-        "played": 3,
-        "points": 4,
-        "gf": 4,
-        "ga": 4,
-        "over25": 1,
-        "btts": 2
-      },
-      "h2h": {
-        "ev_wins": 0,
-        "dep_wins": 0,
-        "draws": 0,
-        "total": 0,
-        "matches": []
-      }
-    },
-    "news": []
-  },
-  {
-    "date": "2026-09-15T18:45:00Z",
-    "lig": "Serie A (IT)",
-    "lig_kodu": "SA",
-    "ev": "AC Monza",
-    "dep": "FC Internazionale Milano",
-    "selection": "Deplasman Kazanır",
-    "target_odds": 1.48,
-    "model_prob": 53.6,
-    "edge_pct": 0.1,
-    "edge_raw_pct": 0.1,
-    "status": "YAKLAŞAN MAÇ",
-    "reasoning": "🤖 <b>Yapay Zeka Analizi:</b> Ensemble modeli (Dixon-Coles + ELO + Purged LightGBM), <b>AC Monza</b> galibiyetine %22.0, beraberliğe %24.4, <b>FC Internazionale Milano</b> galibiyetine %53.6 ihtimal vermektedir.<br><br>📊 <b>Gol ve Tempo Projeksiyonu:</b> Beklenen Gol (xG) hesabı Ev: 0.97 - Dep: 1.66 (Toplam 2.63 gol) göstermektedir. 2.5 Üst ihtimali %48.9, KG Var ihtimali %50.3 seviyesindedir.<br><br>🎯 <b>Stratejik Yol Haritası & Tavsiye:</b> Bu karşılaşmada <b>Deplasman Kazanır</b> bahsi %+ 0.1% matematiksel net değer (Edge) barındırmaktadır. Kelly sermaye yönetimi (Fractional %25): bakiyenin %0.1'i ile katılım önerilir.",
-    "ai_commentary": "🤖 <b>Yapay Zeka Analizi:</b> Ensemble modeli (Dixon-Coles + ELO + Purged LightGBM), <b>AC Monza</b> galibiyetine %22.0, beraberliğe %24.4, <b>FC Internazionale Milano</b> galibiyetine %53.6 ihtimal vermektedir.<br><br>📊 <b>Gol ve Tempo Projeksiyonu:</b> Beklenen Gol (xG) hesabı Ev: 0.97 - Dep: 1.66 (Toplam 2.63 gol) göstermektedir. 2.5 Üst ihtimali %48.9, KG Var ihtimali %50.3 seviyesindedir.<br><br>🎯 <b>Stratejik Yol Haritası & Tavsiye:</b> Bu karşılaşmada <b>Deplasman Kazanır</b> bahsi %+ 0.1% matematiksel net değer (Edge) barındırmaktadır. Kelly sermaye yönetimi (Fractional %25): bakiyenin %0.1'i ile katılım önerilir.",
-    "is_win": null,
-    "verification_badge": "⏳ OYNANACAK",
-    "odds": {
-      "ms1": 4.55,
-      "ms0": 4.1,
-      "ms2": 1.87,
-      "over25": 2.04,
-      "under25": 1.96,
-      "btts_yes": 1.99,
-      "btts_no": 2.01
-    },
-    "probs": {
-      "ms1": 22.0,
-      "ms0": 24.4,
-      "ms2": 53.6,
-      "over25": 48.9,
-      "under25": 51.1,
-      "btts_yes": 50.3,
-      "btts_no": 49.7
-    },
-    "xg": {
-      "ev": 0.97,
-      "dep": 1.66,
-      "toplam": 2.63
-    },
-    "sharp": {
-      "ms_sinyal": "YOK",
-      "ms_tier": "NO_SHARP",
-      "ou_sinyal": "YOK",
-      "ou_tier": "NO_SHARP"
-    },
-    "form": {
-      "ev_form": [
-        "L",
-        "L",
-        "W",
-        "L",
-        "L"
-      ],
-      "dep_form": [
-        "W",
-        "D",
-        "W",
-        "W",
-        "W"
-      ]
-    },
-    "opening_odds": {
-      "ms1": 0,
-      "ms2": 0
-    },
-    "extended_stats": {
-      "ev_standing": {
-        "played": 76,
-        "wins": 14,
-        "draws": 21,
-        "losses": 41,
-        "points": 63,
-        "gf": 67,
-        "ga": 120,
-        "over25": 34,
-        "btts": 37,
-        "lig": "SA"
-      },
-      "dep_standing": {
-        "played": 144,
-        "wins": 98,
-        "draws": 26,
-        "losses": 20,
-        "points": 320,
-        "gf": 305,
-        "ga": 126,
-        "over25": 79,
-        "btts": 64,
-        "lig": "SA"
-      },
-      "h2h": {
-        "ev_wins": 0,
-        "dep_wins": 0,
-        "draws": 0,
-        "total": 0,
-        "matches": []
-      }
-    },
-    "news": []
-  },
-  {
-    "date": "2026-09-14T16:00:00Z",
-    "lig": "Serie A (IT)",
-    "lig_kodu": "SA",
-    "ev": "Empoli FC",
-    "dep": "Juventus FC",
-    "selection": "Deplasman Kazanır",
-    "target_odds": 1.72,
-    "model_prob": 46.3,
-    "edge_pct": 0.1,
-    "edge_raw_pct": 0.1,
-    "status": "YAKLAŞAN MAÇ",
-    "reasoning": "🤖 <b>Yapay Zeka Analizi:</b> Ensemble modeli (Dixon-Coles + ELO + Purged LightGBM), <b>Empoli FC</b> galibiyetine %26.4, beraberliğe %27.3, <b>Juventus FC</b> galibiyetine %46.3 ihtimal vermektedir.<br><br>📊 <b>Gol ve Tempo Projeksiyonu:</b> Beklenen Gol (xG) hesabı Ev: 0.97 - Dep: 1.38 (Toplam 2.35 gol) göstermektedir. 2.5 Üst ihtimali %41.7, KG Var ihtimali %46.5 seviyesindedir.<br><br>🎯 <b>Stratejik Yol Haritası & Tavsiye:</b> Bu karşılaşmada <b>Deplasman Kazanır</b> bahsi %+ 0.1% matematiksel net değer (Edge) barındırmaktadır. Kelly sermaye yönetimi (Fractional %25): bakiyenin %0.1'i ile katılım önerilir.",
-    "ai_commentary": "🤖 <b>Yapay Zeka Analizi:</b> Ensemble modeli (Dixon-Coles + ELO + Purged LightGBM), <b>Empoli FC</b> galibiyetine %26.4, beraberliğe %27.3, <b>Juventus FC</b> galibiyetine %46.3 ihtimal vermektedir.<br><br>📊 <b>Gol ve Tempo Projeksiyonu:</b> Beklenen Gol (xG) hesabı Ev: 0.97 - Dep: 1.38 (Toplam 2.35 gol) göstermektedir. 2.5 Üst ihtimali %41.7, KG Var ihtimali %46.5 seviyesindedir.<br><br>🎯 <b>Stratejik Yol Haritası & Tavsiye:</b> Bu karşılaşmada <b>Deplasman Kazanır</b> bahsi %+ 0.1% matematiksel net değer (Edge) barındırmaktadır. Kelly sermaye yönetimi (Fractional %25): bakiyenin %0.1'i ile katılım önerilir.",
-    "is_win": null,
-    "verification_badge": "⏳ OYNANACAK",
-    "odds": {
-      "ms1": 3.79,
-      "ms0": 3.66,
-      "ms2": 2.16,
-      "over25": 2.4,
-      "under25": 1.72,
-      "btts_yes": 2.15,
-      "btts_no": 1.87
-    },
-    "probs": {
-      "ms1": 26.4,
-      "ms0": 27.3,
-      "ms2": 46.3,
-      "over25": 41.7,
-      "under25": 58.3,
-      "btts_yes": 46.5,
-      "btts_no": 53.5
-    },
-    "xg": {
-      "ev": 0.97,
-      "dep": 1.38,
-      "toplam": 2.35
-    },
-    "sharp": {
-      "ms_sinyal": "YOK",
-      "ms_tier": "NO_SHARP",
-      "ou_sinyal": "YOK",
-      "ou_tier": "NO_SHARP"
-    },
-    "form": {
-      "ev_form": [],
-      "dep_form": []
-    },
-    "opening_odds": {
-      "ms1": 0,
-      "ms2": 0
-    },
-    "extended_stats": {
-      "ev_standing": {
-        "played": 3,
-        "points": 6,
-        "gf": 5,
-        "ga": 3,
-        "over25": 2,
-        "btts": 2
-      },
-      "dep_standing": {
-        "played": 3,
-        "points": 4,
-        "gf": 4,
-        "ga": 4,
-        "over25": 1,
-        "btts": 2
-      },
-      "h2h": {
-        "ev_wins": 0,
-        "dep_wins": 0,
-        "draws": 0,
-        "total": 0,
-        "matches": []
-      }
-    },
-    "news": []
-  },
-  {
-    "date": "2026-09-14T18:45:00Z",
-    "lig": "Serie A (IT)",
-    "lig_kodu": "SA",
-    "ev": "AC Milan",
-    "dep": "Venezia FC",
-    "selection": "Ev Sahibi Kazanır",
-    "target_odds": 1.35,
-    "model_prob": 56.8,
-    "edge_pct": 0.1,
-    "edge_raw_pct": 0.1,
-    "status": "YAKLAŞAN MAÇ",
-    "reasoning": "🤖 <b>Yapay Zeka Analizi:</b> Ensemble modeli (Dixon-Coles + ELO + Purged LightGBM), <b>AC Milan</b> galibiyetine %56.8, beraberliğe %23.8, <b>Venezia FC</b> galibiyetine %19.4 ihtimal vermektedir.<br><br>📊 <b>Gol ve Tempo Projeksiyonu:</b> Beklenen Gol (xG) hesabı Ev: 1.71 - Dep: 0.89 (Toplam 2.6 gol) göstermektedir. 2.5 Üst ihtimali %48.2, KG Var ihtimali %48.3 seviyesindedir.<br><br>🎯 <b>Stratejik Yol Haritası & Tavsiye:</b> Bu karşılaşmada <b>Ev Sahibi Kazanır</b> bahsi %+ 0.1% matematiksel net değer (Edge) barındırmaktadır. Kelly sermaye yönetimi (Fractional %25): bakiyenin %0.1'i ile katılım önerilir.",
-    "ai_commentary": "🤖 <b>Yapay Zeka Analizi:</b> Ensemble modeli (Dixon-Coles + ELO + Purged LightGBM), <b>AC Milan</b> galibiyetine %56.8, beraberliğe %23.8, <b>Venezia FC</b> galibiyetine %19.4 ihtimal vermektedir.<br><br>📊 <b>Gol ve Tempo Projeksiyonu:</b> Beklenen Gol (xG) hesabı Ev: 1.71 - Dep: 0.89 (Toplam 2.6 gol) göstermektedir. 2.5 Üst ihtimali %48.2, KG Var ihtimali %48.3 seviyesindedir.<br><br>🎯 <b>Stratejik Yol Haritası & Tavsiye:</b> Bu karşılaşmada <b>Ev Sahibi Kazanır</b> bahsi %+ 0.1% matematiksel net değer (Edge) barındırmaktadır. Kelly sermaye yönetimi (Fractional %25): bakiyenin %0.1'i ile katılım önerilir.",
-    "is_win": null,
-    "verification_badge": "⏳ OYNANACAK",
-    "odds": {
-      "ms1": 1.76,
-      "ms0": 4.2,
-      "ms2": 5.15,
-      "over25": 2.07,
-      "under25": 1.93,
-      "btts_yes": 2.07,
-      "btts_no": 1.93
-    },
-    "probs": {
-      "ms1": 56.8,
-      "ms0": 23.8,
-      "ms2": 19.4,
-      "over25": 48.2,
-      "under25": 51.8,
-      "btts_yes": 48.3,
-      "btts_no": 51.7
-    },
-    "xg": {
-      "ev": 1.71,
-      "dep": 0.89,
-      "toplam": 2.6
-    },
-    "sharp": {
-      "ms_sinyal": "YOK",
-      "ms_tier": "NO_SHARP",
-      "ou_sinyal": "YOK",
-      "ou_tier": "NO_SHARP"
-    },
-    "form": {
-      "ev_form": [
-        "L",
-        "D",
-        "W",
-        "L",
-        "L"
-      ],
-      "dep_form": []
-    },
-    "opening_odds": {
-      "ms1": 0,
-      "ms2": 0
-    },
-    "extended_stats": {
-      "ev_standing": {
-        "played": 127,
-        "wins": 66,
-        "draws": 31,
-        "losses": 30,
-        "points": 229,
-        "gf": 208,
-        "ga": 144,
-        "over25": 74,
-        "btts": 72,
-        "lig": "SA"
-      },
-      "dep_standing": {
-        "played": 3,
-        "points": 4,
-        "gf": 4,
-        "ga": 4,
-        "over25": 1,
-        "btts": 2
-      },
-      "h2h": {
-        "ev_wins": 0,
-        "dep_wins": 0,
-        "draws": 0,
-        "total": 0,
-        "matches": []
-      }
-    },
-    "news": []
-  },
-  {
-    "date": "2026-09-14T16:30:00Z",
-    "lig": "Bundesliga (DE)",
-    "lig_kodu": "BL1",
-    "ev": "Holstein Kiel",
-    "dep": "FC Bayern München",
-    "selection": "Deplasman Kazanır",
-    "target_odds": 1.22,
-    "model_prob": 50.6,
-    "edge_pct": 0.1,
-    "edge_raw_pct": 0.1,
-    "status": "YAKLAŞAN MAÇ",
-    "reasoning": "🤖 <b>Yapay Zeka Analizi:</b> Ensemble modeli (Dixon-Coles + ELO + Purged LightGBM), <b>Holstein Kiel</b> galibiyetine %27.9, beraberliğe %21.5, <b>FC Bayern München</b> galibiyetine %50.6 ihtimal vermektedir.<br><br>📊 <b>Gol ve Tempo Projeksiyonu:</b> Beklenen Gol (xG) hesabı Ev: 1.47 - Dep: 2.03 (Toplam 3.5 gol) göstermektedir. 2.5 Üst ihtimali %67.9, KG Var ihtimali %66.9 seviyesindedir.<br><br>🎯 <b>Stratejik Yol Haritası & Tavsiye:</b> Bu karşılaşmada <b>Deplasman Kazanır</b> bahsi %+ 0.1% matematiksel net değer (Edge) barındırmaktadır. Kelly sermaye yönetimi (Fractional %25): bakiyenin %0.1'i ile katılım önerilir.",
-    "ai_commentary": "🤖 <b>Yapay Zeka Analizi:</b> Ensemble modeli (Dixon-Coles + ELO + Purged LightGBM), <b>Holstein Kiel</b> galibiyetine %27.9, beraberliğe %21.5, <b>FC Bayern München</b> galibiyetine %50.6 ihtimal vermektedir.<br><br>📊 <b>Gol ve Tempo Projeksiyonu:</b> Beklenen Gol (xG) hesabı Ev: 1.47 - Dep: 2.03 (Toplam 3.5 gol) göstermektedir. 2.5 Üst ihtimali %67.9, KG Var ihtimali %66.9 seviyesindedir.<br><br>🎯 <b>Stratejik Yol Haritası & Tavsiye:</b> Bu karşılaşmada <b>Deplasman Kazanır</b> bahsi %+ 0.1% matematiksel net değer (Edge) barındırmaktadır. Kelly sermaye yönetimi (Fractional %25): bakiyenin %0.1'i ile katılım önerilir.",
-    "is_win": null,
-    "verification_badge": "⏳ OYNANACAK",
-    "odds": {
-      "ms1": 3.58,
-      "ms0": 4.65,
-      "ms2": 1.98,
-      "over25": 1.47,
-      "under25": 3.12,
-      "btts_yes": 1.49,
-      "btts_no": 3.02
-    },
-    "probs": {
-      "ms1": 27.9,
-      "ms0": 21.5,
-      "ms2": 50.6,
-      "over25": 67.9,
-      "under25": 32.1,
-      "btts_yes": 66.9,
-      "btts_no": 33.1
-    },
-    "xg": {
-      "ev": 1.47,
-      "dep": 2.03,
-      "toplam": 3.5
-    },
-    "sharp": {
-      "ms_sinyal": "YOK",
-      "ms_tier": "NO_SHARP",
-      "ou_sinyal": "YOK",
-      "ou_tier": "NO_SHARP"
-    },
-    "form": {
-      "ev_form": [
-        "L",
-        "W",
-        "W",
-        "W",
-        "W"
-      ],
       "dep_form": [
         "W",
         "W",
         "W",
-        "W",
+        "L",
         "W"
       ]
     },
     "opening_odds": {
-      "ms1": 0,
-      "ms2": 0
+      "ms1": 0.0,
+      "ms2": 0.0
     },
     "extended_stats": {
-      "ev_standing": {
-        "played": 101,
-        "wins": 38,
-        "draws": 20,
-        "losses": 43,
-        "points": 134,
-        "gf": 157,
-        "ga": 165,
-        "over25": 62,
-        "btts": 63,
-        "lig": "BL2"
-      },
+      "ev_standing": null,
       "dep_standing": {
-        "played": 137,
-        "wins": 100,
-        "draws": 19,
-        "losses": 18,
-        "points": 319,
-        "gf": 395,
-        "ga": 153,
-        "over25": 112,
-        "btts": 83,
-        "lig": "CL"
-      },
-      "h2h": {
-        "ev_wins": 0,
-        "dep_wins": 0,
-        "draws": 0,
-        "total": 0,
-        "matches": []
-      }
-    },
-    "news": []
-  },
-  {
-    "date": "2026-09-13T18:30:00Z",
-    "lig": "Bundesliga (DE)",
-    "lig_kodu": "BL1",
-    "ev": "Borussia Dortmund",
-    "dep": "1. FC Heidenheim 1846",
-    "selection": "Ev Sahibi Kazanır",
-    "target_odds": 1.4,
-    "model_prob": 60.0,
-    "edge_pct": 0.1,
-    "edge_raw_pct": 0.1,
-    "status": "YAKLAŞAN MAÇ",
-    "reasoning": "🤖 <b>Yapay Zeka Analizi:</b> Ensemble modeli (Dixon-Coles + ELO + Purged LightGBM), <b>Borussia Dortmund</b> galibiyetine %60.0, beraberliğe %20.4, <b>1. FC Heidenheim 1846</b> galibiyetine %19.6 ihtimal vermektedir.<br><br>📊 <b>Gol ve Tempo Projeksiyonu:</b> Beklenen Gol (xG) hesabı Ev: 2.13 - Dep: 1.14 (Toplam 3.27 gol) göstermektedir. 2.5 Üst ihtimali %63.4, KG Var ihtimali %59.9 seviyesindedir.<br><br>🎯 <b>Stratejik Yol Haritası & Tavsiye:</b> Bu karşılaşmada <b>Ev Sahibi Kazanır</b> bahsi %+ 0.1% matematiksel net değer (Edge) barındırmaktadır. Kelly sermaye yönetimi (Fractional %25): bakiyenin %0.1'i ile katılım önerilir.",
-    "ai_commentary": "🤖 <b>Yapay Zeka Analizi:</b> Ensemble modeli (Dixon-Coles + ELO + Purged LightGBM), <b>Borussia Dortmund</b> galibiyetine %60.0, beraberliğe %20.4, <b>1. FC Heidenheim 1846</b> galibiyetine %19.6 ihtimal vermektedir.<br><br>📊 <b>Gol ve Tempo Projeksiyonu:</b> Beklenen Gol (xG) hesabı Ev: 2.13 - Dep: 1.14 (Toplam 3.27 gol) göstermektedir. 2.5 Üst ihtimali %63.4, KG Var ihtimali %59.9 seviyesindedir.<br><br>🎯 <b>Stratejik Yol Haritası & Tavsiye:</b> Bu karşılaşmada <b>Ev Sahibi Kazanır</b> bahsi %+ 0.1% matematiksel net değer (Edge) barındırmaktadır. Kelly sermaye yönetimi (Fractional %25): bakiyenin %0.1'i ile katılım önerilir.",
-    "is_win": null,
-    "verification_badge": "⏳ OYNANACAK",
-    "odds": {
-      "ms1": 1.67,
-      "ms0": 4.9,
-      "ms2": 5.1,
-      "over25": 1.58,
-      "under25": 2.73,
-      "btts_yes": 1.67,
-      "btts_no": 2.49
-    },
-    "probs": {
-      "ms1": 60.0,
-      "ms0": 20.4,
-      "ms2": 19.6,
-      "over25": 63.4,
-      "under25": 36.6,
-      "btts_yes": 59.9,
-      "btts_no": 40.1
-    },
-    "xg": {
-      "ev": 2.13,
-      "dep": 1.14,
-      "toplam": 3.27
-    },
-    "sharp": {
-      "ms_sinyal": "YOK",
-      "ms_tier": "NO_SHARP",
-      "ou_sinyal": "YOK",
-      "ou_tier": "NO_SHARP"
-    },
-    "form": {
-      "ev_form": [
-        "W",
-        "L",
-        "L",
-        "W",
-        "W"
-      ],
-      "dep_form": []
-    },
-    "opening_odds": {
-      "ms1": 0,
-      "ms2": 0
-    },
-    "extended_stats": {
-      "ev_standing": {
-        "played": 136,
-        "wins": 74,
-        "draws": 29,
-        "losses": 33,
-        "points": 251,
-        "gf": 272,
-        "ga": 176,
-        "over25": 83,
-        "btts": 79,
-        "lig": "CL"
-      },
-      "dep_standing": {
-        "played": 3,
-        "points": 4,
-        "gf": 4,
-        "ga": 4,
-        "over25": 1,
-        "btts": 2
-      },
-      "h2h": {
-        "ev_wins": 0,
-        "dep_wins": 0,
-        "draws": 0,
-        "total": 0,
-        "matches": []
-      }
-    },
-    "news": []
-  },
-  {
-    "date": "2026-09-14T13:30:00Z",
-    "lig": "Bundesliga (DE)",
-    "lig_kodu": "BL1",
-    "ev": "TSG 1899 Hoffenheim",
-    "dep": "Bayer 04 Leverkusen",
-    "selection": "Deplasman Kazanır",
-    "target_odds": 1.55,
-    "model_prob": 42.4,
-    "edge_pct": 0.1,
-    "edge_raw_pct": 0.1,
-    "status": "YAKLAŞAN MAÇ",
-    "reasoning": "🤖 <b>Yapay Zeka Analizi:</b> Ensemble modeli (Dixon-Coles + ELO + Purged LightGBM), <b>TSG 1899 Hoffenheim</b> galibiyetine %34.9, beraberliğe %22.7, <b>Bayer 04 Leverkusen</b> galibiyetine %42.4 ihtimal vermektedir.<br><br>📊 <b>Gol ve Tempo Projeksiyonu:</b> Beklenen Gol (xG) hesabı Ev: 1.59 - Dep: 1.77 (Toplam 3.36 gol) göstermektedir. 2.5 Üst ihtimali %65.2, KG Var ihtimali %66.0 seviyesindedir.<br><br>🎯 <b>Stratejik Yol Haritası & Tavsiye:</b> Bu karşılaşmada <b>Deplasman Kazanır</b> bahsi %+ 0.1% matematiksel net değer (Edge) barındırmaktadır. Kelly sermaye yönetimi (Fractional %25): bakiyenin %0.1'i ile katılım önerilir.",
-    "ai_commentary": "🤖 <b>Yapay Zeka Analizi:</b> Ensemble modeli (Dixon-Coles + ELO + Purged LightGBM), <b>TSG 1899 Hoffenheim</b> galibiyetine %34.9, beraberliğe %22.7, <b>Bayer 04 Leverkusen</b> galibiyetine %42.4 ihtimal vermektedir.<br><br>📊 <b>Gol ve Tempo Projeksiyonu:</b> Beklenen Gol (xG) hesabı Ev: 1.59 - Dep: 1.77 (Toplam 3.36 gol) göstermektedir. 2.5 Üst ihtimali %65.2, KG Var ihtimali %66.0 seviyesindedir.<br><br>🎯 <b>Stratejik Yol Haritası & Tavsiye:</b> Bu karşılaşmada <b>Deplasman Kazanır</b> bahsi %+ 0.1% matematiksel net değer (Edge) barındırmaktadır. Kelly sermaye yönetimi (Fractional %25): bakiyenin %0.1'i ile katılım önerilir.",
-    "is_win": null,
-    "verification_badge": "⏳ OYNANACAK",
-    "odds": {
-      "ms1": 2.87,
-      "ms0": 4.41,
-      "ms2": 2.36,
-      "over25": 1.53,
-      "under25": 2.87,
-      "btts_yes": 1.52,
-      "btts_no": 2.94
-    },
-    "probs": {
-      "ms1": 34.9,
-      "ms0": 22.7,
-      "ms2": 42.4,
-      "over25": 65.2,
-      "under25": 34.8,
-      "btts_yes": 66.0,
-      "btts_no": 34.0
-    },
-    "xg": {
-      "ev": 1.59,
-      "dep": 1.77,
-      "toplam": 3.36
-    },
-    "sharp": {
-      "ms_sinyal": "YOK",
-      "ms_tier": "NO_SHARP",
-      "ou_sinyal": "YOK",
-      "ou_tier": "NO_SHARP"
-    },
-    "form": {
-      "ev_form": [
-        "W",
-        "D",
-        "L",
-        "L",
-        "D"
-      ],
-      "dep_form": [
-        "W",
-        "L",
-        "W",
-        "W",
-        "D"
-      ]
-    },
-    "opening_odds": {
-      "ms1": 0,
-      "ms2": 0
-    },
-    "extended_stats": {
-      "ev_standing": {
-        "played": 98,
-        "wins": 36,
+        "played": 106,
+        "wins": 37,
         "draws": 24,
-        "losses": 38,
-        "points": 132,
-        "gf": 171,
-        "ga": 178,
-        "over25": 68,
-        "btts": 72,
-        "lig": "BL1"
-      },
-      "dep_standing": {
-        "played": 121,
-        "wins": 72,
-        "draws": 31,
-        "losses": 18,
-        "points": 247,
-        "gf": 255,
-        "ga": 139,
-        "over25": 73,
-        "btts": 68,
-        "lig": "CL"
+        "losses": 45,
+        "points": 135,
+        "gf": 143,
+        "ga": 166,
+        "over25": 63,
+        "btts": 57,
+        "lig": "PPL",
+        "recent": [
+          {
+            "date": "2026-08-29",
+            "opponent": "CS Marítimo",
+            "score": "2-1",
+            "result": "W",
+            "isHome": true
+          },
+          {
+            "date": "2026-08-23",
+            "opponent": "FC Porto",
+            "score": "0-2",
+            "result": "L",
+            "isHome": false
+          },
+          {
+            "date": "2026-08-16",
+            "opponent": "Moreirense",
+            "score": "4-0",
+            "result": "W",
+            "isHome": true
+          },
+          {
+            "date": "2026-08-08",
+            "opponent": "Vitória SC",
+            "score": "1-0",
+            "result": "W",
+            "isHome": false
+          },
+          {
+            "date": "2026-05-16",
+            "opponent": "CD Tondela",
+            "score": "3-1",
+            "result": "W",
+            "isHome": true
+          }
+        ]
       },
       "h2h": {
+        "matches": [],
         "ev_wins": 0,
         "dep_wins": 0,
         "draws": 0,
-        "total": 0,
-        "matches": []
+        "total": 0
       }
-    },
-    "news": []
+    }
   }
 ]
