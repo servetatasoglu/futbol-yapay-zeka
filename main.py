@@ -656,7 +656,7 @@ def run_pipeline(mock_mode=False):
             d_obj["confidence"]   = round(confidence * 100, 2)
             d_obj["veri_kaynak"]  = "MARKET_DRIVEN_GOALS"
             d_obj["analiz"]       = analiz_metni_uret(
-                d_isim, d_p_model, 1.0 / d_oran if d_oran > 0 else 0, d_edge, d_aktif_tier,
+                d_isim, d_p_model, 1.0 / d_oran if d_oran > 0 else 0, d_prob_edge, d_aktif_tier,
                 c_pred.get("lambda_top", 0), 0.0
             )
             d_obj["zaman"] = datetime.now().strftime("%Y-%m-%dT%H:%M")
@@ -669,7 +669,7 @@ def run_pipeline(mock_mode=False):
         if not best_option:
             continue
 
-        isim, oran, p_model, edge, aktif_tier = best_option
+        isim, oran, p_model, edge, ev, aktif_tier = best_option
 
         bet_obj = c_pred.copy()
         bet_obj["tahmin"]       = isim
