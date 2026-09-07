@@ -430,5 +430,149 @@
     "dep": "Arouca",
     "tahmin": "Beraberlik",
     "date": "2026-09-07"
+  },
+  "Estoril_Arouca_2026-09-07": {
+    "ev": "Estoril",
+    "dep": "Arouca",
+    "tahmin": "Beraberlik",
+    "date": "2026-09-07"
+  },
+  "Blackburn Rovers_Sheffield United_2026-09-08": {
+    "ev": "Blackburn Rovers",
+    "dep": "Sheffield United",
+    "tahmin": "2.5 Alt",
+    "date": "2026-09-08"
+  },
+  "Wrexham AFC_Burnley_2026-09-08": {
+    "ev": "Wrexham AFC",
+    "dep": "Burnley",
+    "tahmin": "Deplasman Kazanır",
+    "date": "2026-09-08"
+  },
+  "Cardiff City_Stoke City_2026-09-08": {
+    "ev": "Cardiff City",
+    "dep": "Stoke City",
+    "tahmin": "Deplasman Kazanır",
+    "date": "2026-09-08"
+  },
+  "Watford_Preston North End_2026-09-08": {
+    "ev": "Watford",
+    "dep": "Preston North End",
+    "tahmin": "Deplasman Kazanır",
+    "date": "2026-09-08"
+  },
+  "Southampton_Swansea City_2026-09-08": {
+    "ev": "Southampton",
+    "dep": "Swansea City",
+    "tahmin": "Deplasman Kazanır",
+    "date": "2026-09-08"
+  },
+  "Bolton Wanderers_West Ham United_2026-09-08": {
+    "ev": "Bolton Wanderers",
+    "dep": "West Ham United",
+    "tahmin": "Ev Sahibi Kazanır",
+    "date": "2026-09-08"
+  },
+  "Norwich City_Birmingham City_2026-09-09": {
+    "ev": "Norwich City",
+    "dep": "Birmingham City",
+    "tahmin": "Deplasman Kazanır",
+    "date": "2026-09-09"
+  },
+  "Derby County_West Bromwich Albion_2026-09-09": {
+    "ev": "Derby County",
+    "dep": "West Bromwich Albion",
+    "tahmin": "Deplasman Kazanır",
+    "date": "2026-09-09"
+  },
+  "Charlton Athletic_Queens Park Rangers_2026-09-09": {
+    "ev": "Charlton Athletic",
+    "dep": "Queens Park Rangers",
+    "tahmin": "Deplasman Kazanır",
+    "date": "2026-09-09"
+  },
+  "Moreirense_Benfica_2026-09-09": {
+    "ev": "Moreirense",
+    "dep": "Benfica",
+    "tahmin": "Ev Sahibi Kazanır",
+    "date": "2026-09-09"
+  },
+  "Club Brugge_Aston Villa_2026-09-08": {
+    "ev": "Club Brugge",
+    "dep": "Aston Villa",
+    "tahmin": "2.5 Alt",
+    "date": "2026-09-08"
+  },
+  "Real Madrid_Inter Milan_2026-09-08": {
+    "ev": "Real Madrid",
+    "dep": "Inter Milan",
+    "tahmin": "Deplasman Kazanır",
+    "date": "2026-09-08"
+  },
+  "Borussia Dortmund_Villarreal_2026-09-08": {
+    "ev": "Borussia Dortmund",
+    "dep": "Villarreal",
+    "tahmin": "Deplasman Kazanır",
+    "date": "2026-09-08"
+  },
+  "Porto_Manchester City_2026-09-08": {
+    "ev": "Porto",
+    "dep": "Manchester City",
+    "tahmin": "Ev Sahibi Kazanır",
+    "date": "2026-09-08"
+  },
+  "Barcelona_Feyenoord_2026-09-09": {
+    "ev": "Barcelona",
+    "dep": "Feyenoord",
+    "tahmin": "Deplasman Kazanır",
+    "date": "2026-09-09"
+  },
+  "Napoli_Arsenal_2026-09-09": {
+    "ev": "Napoli",
+    "dep": "Arsenal",
+    "tahmin": "Ev Sahibi Kazanır",
+    "date": "2026-09-09"
+  },
+  "Liverpool_Atlético Madrid_2026-09-09": {
+    "ev": "Liverpool",
+    "dep": "Atlético Madrid",
+    "tahmin": "Deplasman Kazanır",
+    "date": "2026-09-09"
+  },
+  "Sporting Lisbon_Galatasaray_2026-09-09": {
+    "ev": "Sporting Lisbon",
+    "dep": "Galatasaray",
+    "tahmin": "Deplasman Kazanır",
+    "date": "2026-09-09"
+  },
+  "Paris Saint Germain_ŠK Slovan Bratislava_2026-09-09": {
+    "ev": "Paris Saint Germain",
+    "dep": "ŠK Slovan Bratislava",
+    "tahmin": "Deplasman Kazanır",
+    "date": "2026-09-09"
+  },
+  "NEC Nijmegen_Excelsior_2026-09-08": {
+    "ev": "NEC Nijmegen",
+    "dep": "Excelsior",
+    "tahmin": "Deplasman Kazanır",
+    "date": "2026-09-08"
+  },
+  "Cagliari_Lecce_2026-09-07": {
+    "ev": "Cagliari",
+    "dep": "Lecce",
+    "tahmin": "Deplasman Kazanır",
+    "date": "2026-09-07"
+  },
+  "Udinese_Lazio_2026-09-07": {
+    "ev": "Udinese",
+    "dep": "Lazio",
+    "tahmin": "2.5 Üst",
+    "date": "2026-09-07"
+  },
+  "Getafe_Celta Vigo_2026-09-07": {
+    "ev": "Getafe",
+    "dep": "Celta Vigo",
+    "tahmin": "2.5 Üst",
+    "date": "2026-09-07"
   }
 }
