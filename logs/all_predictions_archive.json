@@ -452,7 +452,7 @@
   "Cardiff City_Stoke City_2026-09-08": {
     "ev": "Cardiff City",
     "dep": "Stoke City",
-    "tahmin": "Deplasman Kazanır",
+    "tahmin": "2.5 Alt",
     "date": "2026-09-08"
   },
   "Watford_Preston North End_2026-09-08": {
@@ -512,7 +512,7 @@
   "Borussia Dortmund_Villarreal_2026-09-08": {
     "ev": "Borussia Dortmund",
     "dep": "Villarreal",
-    "tahmin": "Deplasman Kazanır",
+    "tahmin": "Beraberlik",
     "date": "2026-09-08"
   },
   "Porto_Manchester City_2026-09-08": {
@@ -574,5 +574,35 @@
     "dep": "Celta Vigo",
     "tahmin": "2.5 Üst",
     "date": "2026-09-07"
+  },
+  "CF Estrela_Braga_2026-09-10": {
+    "ev": "CF Estrela",
+    "dep": "Braga",
+    "tahmin": "Ev Sahibi Kazanır",
+    "date": "2026-09-10"
+  },
+  "PSV Eindhoven_Shakhtar Donetsk_2026-09-10": {
+    "ev": "PSV Eindhoven",
+    "dep": "Shakhtar Donetsk",
+    "tahmin": "Deplasman Kazanır",
+    "date": "2026-09-10"
+  },
+  "Fenerbahce_AS Roma_2026-09-10": {
+    "ev": "Fenerbahce",
+    "dep": "AS Roma",
+    "tahmin": "Ev Sahibi Kazanır",
+    "date": "2026-09-10"
+  },
+  "Bayern Munich_Bodø/Glimt_2026-09-10": {
+    "ev": "Bayern Munich",
+    "dep": "Bodø/Glimt",
+    "tahmin": "Deplasman Kazanır",
+    "date": "2026-09-10"
+  },
+  "Como_RB Leipzig_2026-09-10": {
+    "ev": "Como",
+    "dep": "RB Leipzig",
+    "tahmin": "Beraberlik",
+    "date": "2026-09-10"
   }
 }
