@@ -1,57 +1,63 @@
 [
   {
-    "date": "2026-09-08T16:45:00Z",
-    "lig": "DED",
-    "ev": "NEC Nijmegen",
-    "dep": "Excelsior",
+    "date": "2026-09-08T18:45:00Z",
+    "lig": "ELC",
+    "ev": "Cardiff City",
+    "dep": "Stoke City",
     "selection": "Deplasman Kazanır",
-    "target_odds": 5.75,
-    "model_prob": 42.1,
-    "edge_pct": 24.7,
-    "edge_raw_pct": 24.7,
+    "target_odds": 3.6,
+    "model_prob": 36.7,
+    "edge_pct": 8.9,
+    "edge_raw_pct": 8.9,
     "fake_edge_score": 0.0,
     "latency_seconds": 0,
     "selected_bookmaker": "Pinnacle",
     "execution_quality": {},
     "recommended_stake_pct": 1.0,
     "status": "RİSK FİLTRESİ (DEĞER YOK)",
-    "reasoning": "Model piyasadan %24.7 daha yüksek ihtimal veriyor. | Yüksek xG profili (Beklenti: 3.21 gol) → Bol pozisyonlu bir maç. | Piyasada bu tahmine hafif bir para akışı var.",
+    "reasoning": "Model piyasadan %8.9 daha yüksek ihtimal veriyor. | Dengeli xG profili (Beklenti: 2.57 gol).",
     "odds": {
-      "ms1": 1.63,
-      "ms0": 4.75,
-      "ms2": 5.75,
-      "over25": 1.38,
-      "under25": 3.0,
+      "ms1": 2.16,
+      "ms0": 3.8,
+      "ms2": 3.6,
+      "over25": 1.62,
+      "under25": 2.32,
       "btts_yes": 0,
       "btts_no": 0
     },
     "probs": {
-      "ms1": 28.8,
-      "ms0": 29.1,
-      "ms2": 42.1,
-      "over25": 62.2,
-      "under25": 37.8,
-      "btts_yes": 64.1,
-      "btts_no": 35.9
+      "ms1": 36.2,
+      "ms0": 27.1,
+      "ms2": 36.7,
+      "over25": 47.4,
+      "under25": 52.6,
+      "btts_yes": 53.2,
+      "btts_no": 46.8
     },
     "xg": {
-      "ev": 1.74,
-      "dep": 1.47,
-      "toplam": 3.21
+      "ev": 1.27,
+      "dep": 1.3,
+      "toplam": 2.57
     },
     "sharp": {
-      "ms_sinyal": "BER",
-      "ms_tier": "WEAK",
+      "ms_sinyal": "YOK",
+      "ms_tier": "NO_SHARP",
       "ou_sinyal": "YOK",
       "ou_tier": "NO_SHARP",
       "btts_sinyal": "YOK",
       "btts_tier": "NO_SHARP"
     },
     "form": {
-      "ev_form": [],
-      "dep_form": [
+      "ev_form": [
         "D",
-        "W",
+        "D",
+        "D",
+        "L",
+        "L"
+      ],
+      "dep_form": [
+        "L",
+        "L",
         "L",
         "W",
         "W"
@@ -62,52 +68,100 @@
       "ms2": 0.0
     },
     "extended_stats": {
-      "ev_standing": null,
-      "dep_standing": {
-        "played": 71,
-        "wins": 18,
-        "draws": 19,
-        "losses": 34,
-        "points": 73,
-        "gf": 100,
-        "ga": 130,
-        "over25": 51,
-        "btts": 45,
-        "lig": "DED",
+      "ev_standing": {
+        "played": 97,
+        "wins": 28,
+        "draws": 25,
+        "losses": 44,
+        "points": 109,
+        "gf": 107,
+        "ga": 152,
+        "over25": 47,
+        "btts": 52,
+        "lig": "ELC",
         "recent": [
           {
             "date": "2026-09-05",
-            "opponent": "Willem II Tilburg",
-            "score": "3-0",
-            "result": "W",
+            "opponent": "Portsmouth",
+            "score": "0-2",
+            "result": "L",
+            "isHome": false
+          },
+          {
+            "date": "2026-09-02",
+            "opponent": "Queens Park Rangers",
+            "score": "1-2",
+            "result": "L",
             "isHome": false
           },
           {
             "date": "2026-08-29",
-            "opponent": "Sparta Rotterdam",
-            "score": "2-1",
-            "result": "W",
+            "opponent": "Sheffield United",
+            "score": "2-2",
+            "result": "D",
             "isHome": true
           },
           {
-            "date": "2026-08-15",
-            "opponent": "PSV",
-            "score": "1-2",
-            "result": "L",
-            "isHome": true
-          },
-          {
-            "date": "2026-08-07",
-            "opponent": "SC Cambuur-Leeuwarden",
-            "score": "4-0",
-            "result": "W",
+            "date": "2026-08-22",
+            "opponent": "Derby County",
+            "score": "2-2",
+            "result": "D",
             "isHome": false
           },
           {
-            "date": "2026-05-10",
-            "opponent": "FC Volendam",
+            "date": "2026-08-17",
+            "opponent": "Wrexham AFC",
             "score": "1-1",
             "result": "D",
+            "isHome": true
+          }
+        ]
+      },
+      "dep_standing": {
+        "played": 143,
+        "wins": 44,
+        "draws": 36,
+        "losses": 63,
+        "points": 168,
+        "gf": 153,
+        "ga": 187,
+        "over25": 61,
+        "btts": 63,
+        "lig": "ELC",
+        "recent": [
+          {
+            "date": "2026-09-05",
+            "opponent": "Charlton Athletic",
+            "score": "4-0",
+            "result": "W",
+            "isHome": true
+          },
+          {
+            "date": "2026-09-01",
+            "opponent": "Norwich City",
+            "score": "1-0",
+            "result": "W",
+            "isHome": true
+          },
+          {
+            "date": "2026-08-29",
+            "opponent": "Wolverhampton Wanderers",
+            "score": "1-4",
+            "result": "L",
+            "isHome": false
+          },
+          {
+            "date": "2026-08-22",
+            "opponent": "Southampton",
+            "score": "1-3",
+            "result": "L",
+            "isHome": false
+          },
+          {
+            "date": "2026-08-15",
+            "opponent": "Swansea City AFC",
+            "score": "1-2",
+            "result": "L",
             "isHome": true
           }
         ]
@@ -127,23 +181,23 @@
     "ev": "Watford",
     "dep": "Preston North End",
     "selection": "Deplasman Kazanır",
-    "target_odds": 3.7,
+    "target_odds": 3.65,
     "model_prob": 42.1,
-    "edge_pct": 15.0,
-    "edge_raw_pct": 15.0,
+    "edge_pct": 14.7,
+    "edge_raw_pct": 14.7,
     "fake_edge_score": 0.0,
     "latency_seconds": 0,
     "selected_bookmaker": "Pinnacle",
     "execution_quality": {},
     "recommended_stake_pct": 1.0,
     "status": "RİSK FİLTRESİ (DEĞER YOK)",
-    "reasoning": "Model piyasadan %15.0 daha yüksek ihtimal veriyor. | Dengeli xG profili (Beklenti: 2.58 gol). | Sinyal tamamen modelin bulduğu matematiksel değere (Edge) dayanıyor.",
+    "reasoning": "Model piyasadan %14.7 daha yüksek ihtimal veriyor. | Dengeli xG profili (Beklenti: 2.58 gol). | Sinyal tamamen modelin bulduğu matematiksel değere (Edge) dayanıyor.",
     "odds": {
-      "ms1": 2.18,
+      "ms1": 2.2,
       "ms0": 3.65,
-      "ms2": 3.7,
-      "over25": 1.97,
-      "under25": 2.0,
+      "ms2": 3.65,
+      "over25": 1.96,
+      "under25": 2.02,
       "btts_yes": 0,
       "btts_no": 0
     },
@@ -164,8 +218,8 @@
     "sharp": {
       "ms_sinyal": "YOK",
       "ms_tier": "NO_SHARP",
-      "ou_sinyal": "YOK",
-      "ou_tier": "NO_SHARP",
+      "ou_sinyal": "OVER",
+      "ou_tier": "WEAK",
       "btts_sinyal": "YOK",
       "btts_tier": "NO_SHARP"
     },
@@ -303,23 +357,23 @@
     "ev": "Southampton",
     "dep": "Swansea City",
     "selection": "Deplasman Kazanır",
-    "target_odds": 4.2,
+    "target_odds": 4.4,
     "model_prob": 42.1,
-    "edge_pct": 18.3,
-    "edge_raw_pct": 18.3,
+    "edge_pct": 19.3,
+    "edge_raw_pct": 19.3,
     "fake_edge_score": 0.0,
     "latency_seconds": 0,
     "selected_bookmaker": "Pinnacle",
     "execution_quality": {},
     "recommended_stake_pct": 1.0,
     "status": "RİSK FİLTRESİ (DEĞER YOK)",
-    "reasoning": "Model piyasadan %18.3 daha yüksek ihtimal veriyor. | Dengeli xG profili (Beklenti: 2.70 gol). | Sinyal tamamen modelin bulduğu matematiksel değere (Edge) dayanıyor.",
+    "reasoning": "Model piyasadan %19.3 daha yüksek ihtimal veriyor. | Dengeli xG profili (Beklenti: 2.70 gol). | Piyasada bu tahmine hafif bir para akışı var.",
     "odds": {
-      "ms1": 1.95,
-      "ms0": 3.85,
-      "ms2": 4.2,
-      "over25": 1.81,
-      "under25": 2.08,
+      "ms1": 1.9,
+      "ms0": 3.95,
+      "ms2": 4.4,
+      "over25": 1.76,
+      "under25": 2.1,
       "btts_yes": 0,
       "btts_no": 0
     },
@@ -338,8 +392,8 @@
       "toplam": 2.7
     },
     "sharp": {
-      "ms_sinyal": "YOK",
-      "ms_tier": "NO_SHARP",
+      "ms_sinyal": "EV",
+      "ms_tier": "WEAK",
       "ou_sinyal": "YOK",
       "ou_tier": "NO_SHARP",
       "btts_sinyal": "YOK",
@@ -474,6 +528,358 @@
     }
   },
   {
+    "date": "2026-09-08T18:45:00Z",
+    "lig": "ELC",
+    "ev": "Blackburn Rovers",
+    "dep": "Sheffield United",
+    "selection": "2.5 Alt",
+    "target_odds": 2.04,
+    "model_prob": 55.2,
+    "edge_pct": 6.2,
+    "edge_raw_pct": 6.2,
+    "fake_edge_score": 0.0,
+    "latency_seconds": 0,
+    "selected_bookmaker": "Pinnacle",
+    "execution_quality": {},
+    "recommended_stake_pct": 1.0,
+    "status": "RİSK FİLTRESİ (DEĞER YOK)",
+    "reasoning": "Model piyasadan %6.2 daha yüksek ihtimal veriyor. | Dengeli xG profili (Beklenti: 2.47 gol).",
+    "odds": {
+      "ms1": 3.2,
+      "ms0": 3.55,
+      "ms2": 2.46,
+      "over25": 1.95,
+      "under25": 2.04,
+      "btts_yes": 0,
+      "btts_no": 0
+    },
+    "probs": {
+      "ms1": 28.5,
+      "ms0": 29.2,
+      "ms2": 42.2,
+      "over25": 44.8,
+      "under25": 55.2,
+      "btts_yes": 51.0,
+      "btts_no": 49.0
+    },
+    "xg": {
+      "ev": 1.17,
+      "dep": 1.3,
+      "toplam": 2.47
+    },
+    "sharp": {
+      "ms_sinyal": "YOK",
+      "ms_tier": "NO_SHARP",
+      "ou_sinyal": "YOK",
+      "ou_tier": "NO_SHARP",
+      "btts_sinyal": "YOK",
+      "btts_tier": "NO_SHARP"
+    },
+    "form": {
+      "ev_form": [
+        "D",
+        "W",
+        "L",
+        "D",
+        "L"
+      ],
+      "dep_form": [
+        "D",
+        "D",
+        "D",
+        "W",
+        "L"
+      ]
+    },
+    "opening_odds": {
+      "ms1": 0.0,
+      "ms2": 0.0
+    },
+    "extended_stats": {
+      "ev_standing": {
+        "played": 143,
+        "wins": 47,
+        "draws": 35,
+        "losses": 61,
+        "points": 176,
+        "gf": 161,
+        "ga": 185,
+        "over25": 69,
+        "btts": 71,
+        "lig": "ELC",
+        "recent": [
+          {
+            "date": "2026-09-05",
+            "opponent": "Preston North End",
+            "score": "1-2",
+            "result": "L",
+            "isHome": false
+          },
+          {
+            "date": "2026-09-01",
+            "opponent": "Lincoln City",
+            "score": "0-0",
+            "result": "D",
+            "isHome": false
+          },
+          {
+            "date": "2026-08-29",
+            "opponent": "Queens Park Rangers",
+            "score": "1-2",
+            "result": "L",
+            "isHome": true
+          },
+          {
+            "date": "2026-08-22",
+            "opponent": "Middlesbrough",
+            "score": "2-1",
+            "result": "W",
+            "isHome": true
+          },
+          {
+            "date": "2026-08-14",
+            "opponent": "Wolverhampton Wanderers",
+            "score": "2-2",
+            "result": "D",
+            "isHome": false
+          }
+        ]
+      },
+      "dep_standing": {
+        "played": 138,
+        "wins": 52,
+        "draws": 24,
+        "losses": 62,
+        "points": 180,
+        "gf": 177,
+        "ga": 215,
+        "over25": 76,
+        "btts": 70,
+        "lig": "PL",
+        "recent": [
+          {
+            "date": "2026-09-05",
+            "opponent": "Norwich City",
+            "score": "1-3",
+            "result": "L",
+            "isHome": true
+          },
+          {
+            "date": "2026-09-01",
+            "opponent": "Bolton Wanderers",
+            "score": "3-2",
+            "result": "W",
+            "isHome": true
+          },
+          {
+            "date": "2026-08-29",
+            "opponent": "Cardiff City",
+            "score": "2-2",
+            "result": "D",
+            "isHome": false
+          },
+          {
+            "date": "2026-08-22",
+            "opponent": "Swansea City AFC",
+            "score": "0-0",
+            "result": "D",
+            "isHome": false
+          },
+          {
+            "date": "2026-08-15",
+            "opponent": "Birmingham City",
+            "score": "0-0",
+            "result": "D",
+            "isHome": true
+          }
+        ]
+      },
+      "h2h": {
+        "matches": [],
+        "ev_wins": 0,
+        "dep_wins": 0,
+        "draws": 0,
+        "total": 0
+      }
+    }
+  },
+  {
+    "date": "2026-09-09T18:45:00Z",
+    "lig": "ELC",
+    "ev": "Norwich City",
+    "dep": "Birmingham City",
+    "selection": "Deplasman Kazanır",
+    "target_odds": 4.1,
+    "model_prob": 42.1,
+    "edge_pct": 17.7,
+    "edge_raw_pct": 17.7,
+    "fake_edge_score": 0.0,
+    "latency_seconds": 0,
+    "selected_bookmaker": "Pinnacle",
+    "execution_quality": {},
+    "recommended_stake_pct": 1.0,
+    "status": "RİSK FİLTRESİ (DEĞER YOK)",
+    "reasoning": "Model piyasadan %17.7 daha yüksek ihtimal veriyor. | Dengeli xG profili (Beklenti: 2.58 gol). | Keskin bahisçiler (Sharp money) bu yönde pozisyon alıyor.",
+    "odds": {
+      "ms1": 2.02,
+      "ms0": 3.9,
+      "ms2": 4.1,
+      "over25": 1.79,
+      "under25": 2.1,
+      "btts_yes": 0,
+      "btts_no": 0
+    },
+    "probs": {
+      "ms1": 28.8,
+      "ms0": 29.1,
+      "ms2": 42.1,
+      "over25": 47.6,
+      "under25": 52.4,
+      "btts_yes": 53.4,
+      "btts_no": 46.6
+    },
+    "xg": {
+      "ev": 1.31,
+      "dep": 1.27,
+      "toplam": 2.58
+    },
+    "sharp": {
+      "ms_sinyal": "EV",
+      "ms_tier": "STRONG",
+      "ou_sinyal": "YOK",
+      "ou_tier": "NO_SHARP",
+      "btts_sinyal": "YOK",
+      "btts_tier": "NO_SHARP"
+    },
+    "form": {
+      "ev_form": [
+        "L",
+        "L",
+        "W",
+        "L",
+        "W"
+      ],
+      "dep_form": [
+        "D",
+        "D",
+        "W",
+        "D",
+        "D"
+      ]
+    },
+    "opening_odds": {
+      "ms1": 0.0,
+      "ms2": 0.0
+    },
+    "extended_stats": {
+      "ev_standing": {
+        "played": 145,
+        "wins": 56,
+        "draws": 34,
+        "losses": 55,
+        "points": 202,
+        "gf": 221,
+        "ga": 200,
+        "over25": 79,
+        "btts": 90,
+        "lig": "ELC",
+        "recent": [
+          {
+            "date": "2026-09-05",
+            "opponent": "Sheffield United",
+            "score": "3-1",
+            "result": "W",
+            "isHome": false
+          },
+          {
+            "date": "2026-09-01",
+            "opponent": "Stoke City",
+            "score": "0-1",
+            "result": "L",
+            "isHome": false
+          },
+          {
+            "date": "2026-08-29",
+            "opponent": "Burnley",
+            "score": "4-1",
+            "result": "W",
+            "isHome": true
+          },
+          {
+            "date": "2026-08-22",
+            "opponent": "Millwall",
+            "score": "0-3",
+            "result": "L",
+            "isHome": false
+          },
+          {
+            "date": "2026-08-15",
+            "opponent": "West Bromwich Albion",
+            "score": "1-2",
+            "result": "L",
+            "isHome": true
+          }
+        ]
+      },
+      "dep_standing": {
+        "played": 97,
+        "wins": 31,
+        "draws": 28,
+        "losses": 38,
+        "points": 121,
+        "gf": 114,
+        "ga": 127,
+        "over25": 45,
+        "btts": 53,
+        "lig": "ELC",
+        "recent": [
+          {
+            "date": "2026-09-06",
+            "opponent": "Wolverhampton Wanderers",
+            "score": "2-2",
+            "result": "D",
+            "isHome": true
+          },
+          {
+            "date": "2026-09-01",
+            "opponent": "Southampton",
+            "score": "1-1",
+            "result": "D",
+            "isHome": true
+          },
+          {
+            "date": "2026-08-28",
+            "opponent": "Wrexham AFC",
+            "score": "2-1",
+            "result": "W",
+            "isHome": false
+          },
+          {
+            "date": "2026-08-22",
+            "opponent": "Bristol City",
+            "score": "2-2",
+            "result": "D",
+            "isHome": true
+          },
+          {
+            "date": "2026-08-15",
+            "opponent": "Sheffield United",
+            "score": "0-0",
+            "result": "D",
+            "isHome": false
+          }
+        ]
+      },
+      "h2h": {
+        "matches": [],
+        "ev_wins": 0,
+        "dep_wins": 0,
+        "draws": 0,
+        "total": 0
+      }
+    }
+  },
+  {
     "date": "2026-09-08T19:00:00Z",
     "lig": "ELC",
     "ev": "Bolton Wanderers",
@@ -494,8 +900,8 @@
       "ms1": 5.6,
       "ms0": 4.4,
       "ms2": 1.67,
-      "over25": 1.6,
-      "under25": 2.35,
+      "over25": 1.55,
+      "under25": 2.38,
       "btts_yes": 0,
       "btts_no": 0
     },
@@ -652,201 +1058,25 @@
   {
     "date": "2026-09-09T18:45:00Z",
     "lig": "ELC",
-    "ev": "Norwich City",
-    "dep": "Birmingham City",
-    "selection": "Deplasman Kazanır",
-    "target_odds": 3.93,
-    "model_prob": 42.1,
-    "edge_pct": 16.6,
-    "edge_raw_pct": 16.6,
-    "fake_edge_score": 0.0,
-    "latency_seconds": 0,
-    "selected_bookmaker": "Pinnacle",
-    "execution_quality": {},
-    "recommended_stake_pct": 1.0,
-    "status": "RİSK FİLTRESİ (DEĞER YOK)",
-    "reasoning": "Model piyasadan %16.6 daha yüksek ihtimal veriyor. | Dengeli xG profili (Beklenti: 2.58 gol). | Keskin bahisçiler (Sharp money) bu yönde pozisyon alıyor.",
-    "odds": {
-      "ms1": 2.07,
-      "ms0": 3.8,
-      "ms2": 3.93,
-      "over25": 1.85,
-      "under25": 2.04,
-      "btts_yes": 0,
-      "btts_no": 0
-    },
-    "probs": {
-      "ms1": 28.8,
-      "ms0": 29.1,
-      "ms2": 42.1,
-      "over25": 47.6,
-      "under25": 52.4,
-      "btts_yes": 53.4,
-      "btts_no": 46.6
-    },
-    "xg": {
-      "ev": 1.31,
-      "dep": 1.27,
-      "toplam": 2.58
-    },
-    "sharp": {
-      "ms_sinyal": "EV",
-      "ms_tier": "STRONG",
-      "ou_sinyal": "YOK",
-      "ou_tier": "NO_SHARP",
-      "btts_sinyal": "YOK",
-      "btts_tier": "NO_SHARP"
-    },
-    "form": {
-      "ev_form": [
-        "L",
-        "L",
-        "W",
-        "L",
-        "W"
-      ],
-      "dep_form": [
-        "D",
-        "D",
-        "W",
-        "D",
-        "D"
-      ]
-    },
-    "opening_odds": {
-      "ms1": 0.0,
-      "ms2": 0.0
-    },
-    "extended_stats": {
-      "ev_standing": {
-        "played": 145,
-        "wins": 56,
-        "draws": 34,
-        "losses": 55,
-        "points": 202,
-        "gf": 221,
-        "ga": 200,
-        "over25": 79,
-        "btts": 90,
-        "lig": "ELC",
-        "recent": [
-          {
-            "date": "2026-09-05",
-            "opponent": "Sheffield United",
-            "score": "3-1",
-            "result": "W",
-            "isHome": false
-          },
-          {
-            "date": "2026-09-01",
-            "opponent": "Stoke City",
-            "score": "0-1",
-            "result": "L",
-            "isHome": false
-          },
-          {
-            "date": "2026-08-29",
-            "opponent": "Burnley",
-            "score": "4-1",
-            "result": "W",
-            "isHome": true
-          },
-          {
-            "date": "2026-08-22",
-            "opponent": "Millwall",
-            "score": "0-3",
-            "result": "L",
-            "isHome": false
-          },
-          {
-            "date": "2026-08-15",
-            "opponent": "West Bromwich Albion",
-            "score": "1-2",
-            "result": "L",
-            "isHome": true
-          }
-        ]
-      },
-      "dep_standing": {
-        "played": 97,
-        "wins": 31,
-        "draws": 28,
-        "losses": 38,
-        "points": 121,
-        "gf": 114,
-        "ga": 127,
-        "over25": 45,
-        "btts": 53,
-        "lig": "ELC",
-        "recent": [
-          {
-            "date": "2026-09-06",
-            "opponent": "Wolverhampton Wanderers",
-            "score": "2-2",
-            "result": "D",
-            "isHome": true
-          },
-          {
-            "date": "2026-09-01",
-            "opponent": "Southampton",
-            "score": "1-1",
-            "result": "D",
-            "isHome": true
-          },
-          {
-            "date": "2026-08-28",
-            "opponent": "Wrexham AFC",
-            "score": "2-1",
-            "result": "W",
-            "isHome": false
-          },
-          {
-            "date": "2026-08-22",
-            "opponent": "Bristol City",
-            "score": "2-2",
-            "result": "D",
-            "isHome": true
-          },
-          {
-            "date": "2026-08-15",
-            "opponent": "Sheffield United",
-            "score": "0-0",
-            "result": "D",
-            "isHome": false
-          }
-        ]
-      },
-      "h2h": {
-        "matches": [],
-        "ev_wins": 0,
-        "dep_wins": 0,
-        "draws": 0,
-        "total": 0
-      }
-    }
-  },
-  {
-    "date": "2026-09-09T18:45:00Z",
-    "lig": "ELC",
     "ev": "Derby County",
     "dep": "West Bromwich Albion",
-    "selection": "Deplasman Kazanır",
-    "target_odds": 2.55,
-    "model_prob": 42.2,
-    "edge_pct": 3.0,
-    "edge_raw_pct": 3.0,
+    "selection": "2.5 Alt",
+    "target_odds": 1.97,
+    "model_prob": 53.6,
+    "edge_pct": 2.8,
+    "edge_raw_pct": 2.8,
     "fake_edge_score": 0.0,
     "latency_seconds": 0,
     "selected_bookmaker": "Pinnacle",
     "execution_quality": {},
     "recommended_stake_pct": 1.0,
     "status": "RİSK FİLTRESİ (DEĞER YOK)",
-    "reasoning": "Model piyasadan %3.0 daha yüksek ihtimal veriyor. | Dengeli xG profili (Beklenti: 2.53 gol). | Piyasada bu tahmine hafif bir para akışı var.",
+    "reasoning": "Model piyasadan %2.8 daha yüksek ihtimal veriyor. | Dengeli xG profili (Beklenti: 2.53 gol). | Piyasada bu tahmine hafif bir para akışı var.",
     "odds": {
-      "ms1": 3.1,
-      "ms0": 3.6,
-      "ms2": 2.55,
-      "over25": 1.99,
+      "ms1": 3.2,
+      "ms0": 3.55,
+      "ms2": 2.47,
+      "over25": 1.96,
       "under25": 1.97,
       "btts_yes": 0,
       "btts_no": 0
@@ -866,10 +1096,10 @@
       "toplam": 2.53
     },
     "sharp": {
-      "ms_sinyal": "DEP",
-      "ms_tier": "WEAK",
+      "ms_sinyal": "YOK",
+      "ms_tier": "NO_SHARP",
       "ou_sinyal": "UNDER",
-      "ou_tier": "STRONG",
+      "ou_tier": "WEAK",
       "btts_sinyal": "YOK",
       "btts_tier": "NO_SHARP"
     },
@@ -1006,24 +1236,24 @@
     "lig": "ELC",
     "ev": "Charlton Athletic",
     "dep": "Queens Park Rangers",
-    "selection": "Deplasman Kazanır",
-    "target_odds": 2.43,
-    "model_prob": 42.2,
-    "edge_pct": 1.1,
-    "edge_raw_pct": 1.1,
+    "selection": "2.5 Alt",
+    "target_odds": 1.96,
+    "model_prob": 53.3,
+    "edge_pct": 2.3,
+    "edge_raw_pct": 2.3,
     "fake_edge_score": 0.0,
     "latency_seconds": 0,
     "selected_bookmaker": "Pinnacle",
     "execution_quality": {},
     "recommended_stake_pct": 1.0,
     "status": "RİSK FİLTRESİ (DEĞER YOK)",
-    "reasoning": "Model piyasadan %1.1 daha yüksek ihtimal veriyor. | Dengeli xG profili (Beklenti: 2.54 gol).",
+    "reasoning": "Model piyasadan %2.3 daha yüksek ihtimal veriyor. | Dengeli xG profili (Beklenti: 2.54 gol). | Piyasada bu tahmine hafif bir para akışı var.",
     "odds": {
       "ms1": 3.35,
       "ms0": 3.5,
       "ms2": 2.43,
-      "over25": 2.0,
-      "under25": 1.91,
+      "over25": 1.98,
+      "under25": 1.96,
       "btts_yes": 0,
       "btts_no": 0
     },
@@ -1042,8 +1272,8 @@
       "toplam": 2.54
     },
     "sharp": {
-      "ms_sinyal": "YOK",
-      "ms_tier": "NO_SHARP",
+      "ms_sinyal": "DEP",
+      "ms_tier": "WEAK",
       "ou_sinyal": "YOK",
       "ou_tier": "NO_SHARP",
       "btts_sinyal": "YOK",
@@ -1178,204 +1408,28 @@
     }
   },
   {
-    "date": "2026-09-08T18:45:00Z",
-    "lig": "ELC",
-    "ev": "Blackburn Rovers",
-    "dep": "Sheffield United",
-    "selection": "2.5 Alt",
-    "target_odds": 2.0,
-    "model_prob": 55.2,
-    "edge_pct": 5.2,
-    "edge_raw_pct": 5.2,
-    "fake_edge_score": 0.0,
-    "latency_seconds": 0,
-    "selected_bookmaker": "Pinnacle",
-    "execution_quality": {},
-    "recommended_stake_pct": 1.0,
-    "status": "RİSK FİLTRESİ (DEĞER YOK)",
-    "reasoning": "Model piyasadan %5.2 daha yüksek ihtimal veriyor. | Dengeli xG profili (Beklenti: 2.47 gol).",
-    "odds": {
-      "ms1": 3.1,
-      "ms0": 3.55,
-      "ms2": 2.46,
-      "over25": 1.94,
-      "under25": 2.0,
-      "btts_yes": 0,
-      "btts_no": 0
-    },
-    "probs": {
-      "ms1": 28.5,
-      "ms0": 29.2,
-      "ms2": 42.2,
-      "over25": 44.8,
-      "under25": 55.2,
-      "btts_yes": 51.0,
-      "btts_no": 49.0
-    },
-    "xg": {
-      "ev": 1.17,
-      "dep": 1.3,
-      "toplam": 2.47
-    },
-    "sharp": {
-      "ms_sinyal": "YOK",
-      "ms_tier": "NO_SHARP",
-      "ou_sinyal": "YOK",
-      "ou_tier": "NO_SHARP",
-      "btts_sinyal": "YOK",
-      "btts_tier": "NO_SHARP"
-    },
-    "form": {
-      "ev_form": [
-        "D",
-        "W",
-        "L",
-        "D",
-        "L"
-      ],
-      "dep_form": [
-        "D",
-        "D",
-        "D",
-        "W",
-        "L"
-      ]
-    },
-    "opening_odds": {
-      "ms1": 0.0,
-      "ms2": 0.0
-    },
-    "extended_stats": {
-      "ev_standing": {
-        "played": 143,
-        "wins": 47,
-        "draws": 35,
-        "losses": 61,
-        "points": 176,
-        "gf": 161,
-        "ga": 185,
-        "over25": 69,
-        "btts": 71,
-        "lig": "ELC",
-        "recent": [
-          {
-            "date": "2026-09-05",
-            "opponent": "Preston North End",
-            "score": "1-2",
-            "result": "L",
-            "isHome": false
-          },
-          {
-            "date": "2026-09-01",
-            "opponent": "Lincoln City",
-            "score": "0-0",
-            "result": "D",
-            "isHome": false
-          },
-          {
-            "date": "2026-08-29",
-            "opponent": "Queens Park Rangers",
-            "score": "1-2",
-            "result": "L",
-            "isHome": true
-          },
-          {
-            "date": "2026-08-22",
-            "opponent": "Middlesbrough",
-            "score": "2-1",
-            "result": "W",
-            "isHome": true
-          },
-          {
-            "date": "2026-08-14",
-            "opponent": "Wolverhampton Wanderers",
-            "score": "2-2",
-            "result": "D",
-            "isHome": false
-          }
-        ]
-      },
-      "dep_standing": {
-        "played": 138,
-        "wins": 52,
-        "draws": 24,
-        "losses": 62,
-        "points": 180,
-        "gf": 177,
-        "ga": 215,
-        "over25": 76,
-        "btts": 70,
-        "lig": "PL",
-        "recent": [
-          {
-            "date": "2026-09-05",
-            "opponent": "Norwich City",
-            "score": "1-3",
-            "result": "L",
-            "isHome": true
-          },
-          {
-            "date": "2026-09-01",
-            "opponent": "Bolton Wanderers",
-            "score": "3-2",
-            "result": "W",
-            "isHome": true
-          },
-          {
-            "date": "2026-08-29",
-            "opponent": "Cardiff City",
-            "score": "2-2",
-            "result": "D",
-            "isHome": false
-          },
-          {
-            "date": "2026-08-22",
-            "opponent": "Swansea City AFC",
-            "score": "0-0",
-            "result": "D",
-            "isHome": false
-          },
-          {
-            "date": "2026-08-15",
-            "opponent": "Birmingham City",
-            "score": "0-0",
-            "result": "D",
-            "isHome": true
-          }
-        ]
-      },
-      "h2h": {
-        "matches": [],
-        "ev_wins": 0,
-        "dep_wins": 0,
-        "draws": 0,
-        "total": 0
-      }
-    }
-  },
-  {
     "date": "2026-09-08T16:45:00Z",
     "lig": "CL",
     "ev": "Club Brugge",
     "dep": "Aston Villa",
     "selection": "2.5 Alt",
-    "target_odds": 2.25,
+    "target_odds": 2.32,
     "model_prob": 53.1,
-    "edge_pct": 8.7,
-    "edge_raw_pct": 8.7,
+    "edge_pct": 10.0,
+    "edge_raw_pct": 10.0,
     "fake_edge_score": 0.0,
     "latency_seconds": 0,
     "selected_bookmaker": "Pinnacle",
     "execution_quality": {},
     "recommended_stake_pct": 1.0,
     "status": "RİSK FİLTRESİ (DEĞER YOK)",
-    "reasoning": "Model piyasadan %8.7 daha yüksek ihtimal veriyor. | Dengeli xG profili (Beklenti: 2.55 gol).",
+    "reasoning": "Model piyasadan %10.0 daha yüksek ihtimal veriyor. | Dengeli xG profili (Beklenti: 2.55 gol). | Sinyal tamamen modelin bulduğu matematiksel değere (Edge) dayanıyor.",
     "odds": {
-      "ms1": 2.8,
-      "ms0": 3.72,
-      "ms2": 2.68,
-      "over25": 1.79,
-      "under25": 2.25,
+      "ms1": 2.63,
+      "ms0": 3.75,
+      "ms2": 2.82,
+      "over25": 1.7,
+      "under25": 2.32,
       "btts_yes": 0,
       "btts_no": 0
     },
@@ -1530,211 +1584,35 @@
     }
   },
   {
-    "date": "2026-09-09T19:45:00Z",
-    "lig": "PPL",
-    "ev": "Moreirense",
-    "dep": "Benfica",
-    "selection": "Ev Sahibi Kazanır",
-    "target_odds": 20.0,
-    "model_prob": 28.5,
-    "edge_pct": 23.5,
-    "edge_raw_pct": 23.5,
-    "fake_edge_score": 0.0,
-    "latency_seconds": 0,
-    "selected_bookmaker": "Pinnacle",
-    "execution_quality": {},
-    "recommended_stake_pct": 1.0,
-    "status": "RİSK FİLTRESİ (DEĞER YOK)",
-    "reasoning": "Model piyasadan %23.5 daha yüksek ihtimal veriyor. | Dengeli xG profili (Beklenti: 2.81 gol). | Keskin bahisçiler (Sharp money) bu yönde pozisyon alıyor.",
-    "odds": {
-      "ms1": 20.0,
-      "ms0": 8.8,
-      "ms2": 1.2,
-      "over25": 1.49,
-      "under25": 2.58,
-      "btts_yes": 0,
-      "btts_no": 0
-    },
-    "probs": {
-      "ms1": 28.5,
-      "ms0": 29.2,
-      "ms2": 42.2,
-      "over25": 53.4,
-      "under25": 46.6,
-      "btts_yes": 54.7,
-      "btts_no": 45.3
-    },
-    "xg": {
-      "ev": 1.04,
-      "dep": 1.77,
-      "toplam": 2.81
-    },
-    "sharp": {
-      "ms_sinyal": "DEP",
-      "ms_tier": "ELITE",
-      "ou_sinyal": "YOK",
-      "ou_tier": "NO_SHARP",
-      "btts_sinyal": "YOK",
-      "btts_tier": "NO_SHARP"
-    },
-    "form": {
-      "ev_form": [
-        "L",
-        "D",
-        "L",
-        "W",
-        "L"
-      ],
-      "dep_form": [
-        "D",
-        "D",
-        "W",
-        "W",
-        "W"
-      ]
-    },
-    "opening_odds": {
-      "ms1": 0.0,
-      "ms2": 0.0
-    },
-    "extended_stats": {
-      "ev_standing": {
-        "played": 106,
-        "wins": 39,
-        "draws": 24,
-        "losses": 43,
-        "points": 141,
-        "gf": 119,
-        "ga": 143,
-        "over25": 50,
-        "btts": 49,
-        "lig": "PPL",
-        "recent": [
-          {
-            "date": "2026-09-04",
-            "opponent": "FC Porto",
-            "score": "1-2",
-            "result": "L",
-            "isHome": false
-          },
-          {
-            "date": "2026-08-30",
-            "opponent": "Casa Pia AC",
-            "score": "1-0",
-            "result": "W",
-            "isHome": false
-          },
-          {
-            "date": "2026-08-16",
-            "opponent": "FC Arouca",
-            "score": "0-4",
-            "result": "L",
-            "isHome": false
-          },
-          {
-            "date": "2026-08-09",
-            "opponent": "Sporting Clube de Braga",
-            "score": "2-2",
-            "result": "D",
-            "isHome": true
-          },
-          {
-            "date": "2026-05-16",
-            "opponent": "AVS",
-            "score": "0-1",
-            "result": "L",
-            "isHome": true
-          }
-        ]
-      },
-      "dep_standing": {
-        "played": 133,
-        "wins": 84,
-        "draws": 25,
-        "losses": 24,
-        "points": 277,
-        "gf": 285,
-        "ga": 128,
-        "over25": 85,
-        "btts": 66,
-        "lig": "PPL",
-        "recent": [
-          {
-            "date": "2026-09-05",
-            "opponent": "CS Marítimo",
-            "score": "3-0",
-            "result": "W",
-            "isHome": false
-          },
-          {
-            "date": "2026-08-31",
-            "opponent": "GD Estoril Praia",
-            "score": "2-1",
-            "result": "W",
-            "isHome": true
-          },
-          {
-            "date": "2026-08-17",
-            "opponent": "Casa Pia AC",
-            "score": "7-0",
-            "result": "W",
-            "isHome": false
-          },
-          {
-            "date": "2026-08-09",
-            "opponent": "Académico de Viseu",
-            "score": "2-2",
-            "result": "D",
-            "isHome": true
-          },
-          {
-            "date": "2026-05-11",
-            "opponent": "Sporting Clube de Braga",
-            "score": "2-2",
-            "result": "D",
-            "isHome": true
-          }
-        ]
-      },
-      "h2h": {
-        "matches": [],
-        "ev_wins": 0,
-        "dep_wins": 0,
-        "draws": 0,
-        "total": 0
-      }
-    }
-  },
-  {
     "date": "2026-09-08T19:00:00Z",
     "lig": "CL",
     "ev": "Borussia Dortmund",
     "dep": "Villarreal",
-    "selection": "Beraberlik",
+    "selection": "Deplasman Kazanır",
     "target_odds": 4.3,
-    "model_prob": 34.1,
-    "edge_pct": 10.9,
-    "edge_raw_pct": 10.9,
+    "model_prob": 42.1,
+    "edge_pct": 18.8,
+    "edge_raw_pct": 18.8,
     "fake_edge_score": 0.0,
     "latency_seconds": 0,
     "selected_bookmaker": "Pinnacle",
     "execution_quality": {},
     "recommended_stake_pct": 1.0,
     "status": "RİSK FİLTRESİ (DEĞER YOK)",
-    "reasoning": "Model piyasadan %10.9 daha yüksek ihtimal veriyor. | Dengeli xG profili (Beklenti: 2.55 gol). | Sinyal tamamen modelin bulduğu matematiksel değere (Edge) dayanıyor.",
+    "reasoning": "Model piyasadan %18.8 daha yüksek ihtimal veriyor. | Dengeli xG profili (Beklenti: 2.55 gol). | Sinyal tamamen modelin bulduğu matematiksel değere (Edge) dayanıyor.",
     "odds": {
-      "ms1": 1.86,
-      "ms0": 4.3,
+      "ms1": 1.88,
+      "ms0": 4.2,
       "ms2": 4.3,
       "over25": 1.48,
-      "under25": 2.65,
+      "under25": 2.75,
       "btts_yes": 0,
       "btts_no": 0
     },
     "probs": {
-      "ms1": 37.0,
-      "ms0": 34.1,
-      "ms2": 28.8,
+      "ms1": 28.8,
+      "ms0": 29.1,
+      "ms2": 42.1,
       "over25": 46.9,
       "under25": 53.1,
       "btts_yes": 53.3,
@@ -1882,554 +1760,26 @@
     }
   },
   {
-    "date": "2026-09-10T19:15:00Z",
-    "lig": "PPL",
-    "ev": "CF Estrela",
-    "dep": "Braga",
-    "selection": "Ev Sahibi Kazanır",
-    "target_odds": 5.0,
-    "model_prob": 28.6,
-    "edge_pct": 8.6,
-    "edge_raw_pct": 8.6,
-    "fake_edge_score": 0.0,
-    "latency_seconds": 0,
-    "selected_bookmaker": "Pinnacle",
-    "execution_quality": {},
-    "recommended_stake_pct": 1.0,
-    "status": "RİSK FİLTRESİ (DEĞER YOK)",
-    "reasoning": "Model piyasadan %8.6 daha yüksek ihtimal veriyor. | Dengeli xG profili (Beklenti: 2.73 gol).",
-    "odds": {
-      "ms1": 5.0,
-      "ms0": 3.75,
-      "ms2": 1.8,
-      "over25": 2.0,
-      "under25": 1.85,
-      "btts_yes": 0,
-      "btts_no": 0
-    },
-    "probs": {
-      "ms1": 28.6,
-      "ms0": 29.0,
-      "ms2": 42.4,
-      "over25": 51.3,
-      "under25": 48.7,
-      "btts_yes": 55.2,
-      "btts_no": 44.8
-    },
-    "xg": {
-      "ev": 1.14,
-      "dep": 1.59,
-      "toplam": 2.73
-    },
-    "sharp": {
-      "ms_sinyal": "YOK",
-      "ms_tier": "NO_SHARP",
-      "ou_sinyal": "YOK",
-      "ou_tier": "NO_SHARP",
-      "btts_sinyal": "YOK",
-      "btts_tier": "NO_SHARP"
-    },
-    "form": {
-      "ev_form": [
-        "D",
-        "D",
-        "D",
-        "W",
-        "D"
-      ],
-      "dep_form": [
-        "D",
-        "D",
-        "D",
-        "W",
-        "W"
-      ]
-    },
-    "opening_odds": {
-      "ms1": 0.0,
-      "ms2": 0.0
-    },
-    "extended_stats": {
-      "ev_standing": {
-        "played": 106,
-        "wins": 21,
-        "draws": 35,
-        "losses": 50,
-        "points": 98,
-        "gf": 104,
-        "ga": 167,
-        "over25": 49,
-        "btts": 48,
-        "lig": "PPL",
-        "recent": [
-          {
-            "date": "2026-09-05",
-            "opponent": "FC Famalicão",
-            "score": "2-2",
-            "result": "D",
-            "isHome": true
-          },
-          {
-            "date": "2026-08-30",
-            "opponent": "CD Nacional",
-            "score": "3-2",
-            "result": "W",
-            "isHome": false
-          },
-          {
-            "date": "2026-08-15",
-            "opponent": "FC Alverca",
-            "score": "2-2",
-            "result": "D",
-            "isHome": false
-          },
-          {
-            "date": "2026-08-08",
-            "opponent": "Sporting Clube de Portugal",
-            "score": "2-2",
-            "result": "D",
-            "isHome": true
-          },
-          {
-            "date": "2026-05-16",
-            "opponent": "Sporting Clube de Braga",
-            "score": "2-2",
-            "result": "D",
-            "isHome": false
-          }
-        ]
-      },
-      "dep_standing": {
-        "played": 111,
-        "wins": 59,
-        "draws": 27,
-        "losses": 25,
-        "points": 204,
-        "gf": 201,
-        "ga": 131,
-        "over25": 69,
-        "btts": 66,
-        "lig": "PPL",
-        "recent": [
-          {
-            "date": "2026-09-05",
-            "opponent": "FC Alverca",
-            "score": "2-1",
-            "result": "W",
-            "isHome": false
-          },
-          {
-            "date": "2026-08-31",
-            "opponent": "Vitória SC",
-            "score": "1-0",
-            "result": "W",
-            "isHome": true
-          },
-          {
-            "date": "2026-08-09",
-            "opponent": "Moreirense",
-            "score": "2-2",
-            "result": "D",
-            "isHome": false
-          },
-          {
-            "date": "2026-05-16",
-            "opponent": "CF Estrela da Amadora",
-            "score": "2-2",
-            "result": "D",
-            "isHome": true
-          },
-          {
-            "date": "2026-05-11",
-            "opponent": "Sport Lisboa e Benfica",
-            "score": "2-2",
-            "result": "D",
-            "isHome": false
-          }
-        ]
-      },
-      "h2h": {
-        "matches": [],
-        "ev_wins": 0,
-        "dep_wins": 0,
-        "draws": 0,
-        "total": 0
-      }
-    }
-  },
-  {
-    "date": "2026-09-08T18:45:00Z",
-    "lig": "ELC",
-    "ev": "Wrexham AFC",
-    "dep": "Burnley",
-    "selection": "Deplasman Kazanır",
-    "target_odds": 3.7,
-    "model_prob": 42.1,
-    "edge_pct": 15.0,
-    "edge_raw_pct": 15.0,
-    "fake_edge_score": 0.0,
-    "latency_seconds": 0,
-    "selected_bookmaker": "Pinnacle",
-    "execution_quality": {},
-    "recommended_stake_pct": 1.0,
-    "status": "RİSK FİLTRESİ (DEĞER YOK)",
-    "reasoning": "Model piyasadan %15.0 daha yüksek ihtimal veriyor. | Dengeli xG profili (Beklenti: 2.59 gol). | Sinyal tamamen modelin bulduğu matematiksel değere (Edge) dayanıyor.",
-    "odds": {
-      "ms1": 2.12,
-      "ms0": 3.77,
-      "ms2": 3.7,
-      "over25": 1.9,
-      "under25": 2.1,
-      "btts_yes": 0,
-      "btts_no": 0
-    },
-    "probs": {
-      "ms1": 28.8,
-      "ms0": 29.1,
-      "ms2": 42.1,
-      "over25": 48.0,
-      "under25": 52.0,
-      "btts_yes": 53.2,
-      "btts_no": 46.8
-    },
-    "xg": {
-      "ev": 1.17,
-      "dep": 1.43,
-      "toplam": 2.59
-    },
-    "sharp": {
-      "ms_sinyal": "YOK",
-      "ms_tier": "NO_SHARP",
-      "ou_sinyal": "UNDER",
-      "ou_tier": "ELITE",
-      "btts_sinyal": "YOK",
-      "btts_tier": "NO_SHARP"
-    },
-    "form": {
-      "ev_form": [
-        "D",
-        "D",
-        "L",
-        "W",
-        "D"
-      ],
-      "dep_form": [
-        "D",
-        "L",
-        "L",
-        "D",
-        "L"
-      ]
-    },
-    "opening_odds": {
-      "ms1": 0.0,
-      "ms2": 0.0
-    },
-    "extended_stats": {
-      "ev_standing": {
-        "played": 51,
-        "wins": 20,
-        "draws": 17,
-        "losses": 14,
-        "points": 77,
-        "gf": 75,
-        "ga": 69,
-        "over25": 25,
-        "btts": 33,
-        "lig": "ELC",
-        "recent": [
-          {
-            "date": "2026-09-05",
-            "opponent": "Swansea City AFC",
-            "score": "0-0",
-            "result": "D",
-            "isHome": false
-          },
-          {
-            "date": "2026-09-02",
-            "opponent": "Millwall",
-            "score": "3-0",
-            "result": "W",
-            "isHome": false
-          },
-          {
-            "date": "2026-08-28",
-            "opponent": "Birmingham City",
-            "score": "1-2",
-            "result": "L",
-            "isHome": true
-          },
-          {
-            "date": "2026-08-22",
-            "opponent": "Watford",
-            "score": "1-1",
-            "result": "D",
-            "isHome": true
-          },
-          {
-            "date": "2026-08-17",
-            "opponent": "Cardiff City",
-            "score": "1-1",
-            "result": "D",
-            "isHome": false
-          }
-        ]
-      },
-      "dep_standing": {
-        "played": 123,
-        "wins": 37,
-        "draws": 35,
-        "losses": 51,
-        "points": 146,
-        "gf": 150,
-        "ga": 174,
-        "over25": 59,
-        "btts": 62,
-        "lig": "PL",
-        "recent": [
-          {
-            "date": "2026-09-05",
-            "opponent": "Bristol City",
-            "score": "1-2",
-            "result": "L",
-            "isHome": true
-          },
-          {
-            "date": "2026-09-02",
-            "opponent": "Middlesbrough",
-            "score": "1-1",
-            "result": "D",
-            "isHome": true
-          },
-          {
-            "date": "2026-08-29",
-            "opponent": "Norwich City",
-            "score": "1-4",
-            "result": "L",
-            "isHome": false
-          },
-          {
-            "date": "2026-08-23",
-            "opponent": "West Bromwich Albion",
-            "score": "1-3",
-            "result": "L",
-            "isHome": false
-          },
-          {
-            "date": "2026-08-16",
-            "opponent": "West Ham United",
-            "score": "2-2",
-            "result": "D",
-            "isHome": true
-          }
-        ]
-      },
-      "h2h": {
-        "matches": [],
-        "ev_wins": 0,
-        "dep_wins": 0,
-        "draws": 0,
-        "total": 0
-      }
-    }
-  },
-  {
-    "date": "2026-09-08T18:45:00Z",
-    "lig": "ELC",
-    "ev": "Cardiff City",
-    "dep": "Stoke City",
-    "selection": "2.5 Alt",
-    "target_odds": 2.35,
-    "model_prob": 52.6,
-    "edge_pct": 10.0,
-    "edge_raw_pct": 10.0,
-    "fake_edge_score": 0.0,
-    "latency_seconds": 0,
-    "selected_bookmaker": "Pinnacle",
-    "execution_quality": {},
-    "recommended_stake_pct": 1.0,
-    "status": "RİSK FİLTRESİ (DEĞER YOK)",
-    "reasoning": "Model piyasadan %10.0 daha yüksek ihtimal veriyor. | Dengeli xG profili (Beklenti: 2.57 gol). | Piyasada bu tahmine hafif bir para akışı var.",
-    "odds": {
-      "ms1": 2.24,
-      "ms0": 3.85,
-      "ms2": 3.35,
-      "over25": 1.61,
-      "under25": 2.35,
-      "btts_yes": 0,
-      "btts_no": 0
-    },
-    "probs": {
-      "ms1": 36.3,
-      "ms0": 27.0,
-      "ms2": 36.7,
-      "over25": 47.4,
-      "under25": 52.6,
-      "btts_yes": 53.2,
-      "btts_no": 46.8
-    },
-    "xg": {
-      "ev": 1.27,
-      "dep": 1.3,
-      "toplam": 2.57
-    },
-    "sharp": {
-      "ms_sinyal": "EV",
-      "ms_tier": "WEAK",
-      "ou_sinyal": "YOK",
-      "ou_tier": "NO_SHARP",
-      "btts_sinyal": "YOK",
-      "btts_tier": "NO_SHARP"
-    },
-    "form": {
-      "ev_form": [
-        "D",
-        "D",
-        "D",
-        "L",
-        "L"
-      ],
-      "dep_form": [
-        "L",
-        "L",
-        "L",
-        "W",
-        "W"
-      ]
-    },
-    "opening_odds": {
-      "ms1": 0.0,
-      "ms2": 0.0
-    },
-    "extended_stats": {
-      "ev_standing": {
-        "played": 97,
-        "wins": 28,
-        "draws": 25,
-        "losses": 44,
-        "points": 109,
-        "gf": 107,
-        "ga": 152,
-        "over25": 47,
-        "btts": 52,
-        "lig": "ELC",
-        "recent": [
-          {
-            "date": "2026-09-05",
-            "opponent": "Portsmouth",
-            "score": "0-2",
-            "result": "L",
-            "isHome": false
-          },
-          {
-            "date": "2026-09-02",
-            "opponent": "Queens Park Rangers",
-            "score": "1-2",
-            "result": "L",
-            "isHome": false
-          },
-          {
-            "date": "2026-08-29",
-            "opponent": "Sheffield United",
-            "score": "2-2",
-            "result": "D",
-            "isHome": true
-          },
-          {
-            "date": "2026-08-22",
-            "opponent": "Derby County",
-            "score": "2-2",
-            "result": "D",
-            "isHome": false
-          },
-          {
-            "date": "2026-08-17",
-            "opponent": "Wrexham AFC",
-            "score": "1-1",
-            "result": "D",
-            "isHome": true
-          }
-        ]
-      },
-      "dep_standing": {
-        "played": 143,
-        "wins": 44,
-        "draws": 36,
-        "losses": 63,
-        "points": 168,
-        "gf": 153,
-        "ga": 187,
-        "over25": 61,
-        "btts": 63,
-        "lig": "ELC",
-        "recent": [
-          {
-            "date": "2026-09-05",
-            "opponent": "Charlton Athletic",
-            "score": "4-0",
-            "result": "W",
-            "isHome": true
-          },
-          {
-            "date": "2026-09-01",
-            "opponent": "Norwich City",
-            "score": "1-0",
-            "result": "W",
-            "isHome": true
-          },
-          {
-            "date": "2026-08-29",
-            "opponent": "Wolverhampton Wanderers",
-            "score": "1-4",
-            "result": "L",
-            "isHome": false
-          },
-          {
-            "date": "2026-08-22",
-            "opponent": "Southampton",
-            "score": "1-3",
-            "result": "L",
-            "isHome": false
-          },
-          {
-            "date": "2026-08-15",
-            "opponent": "Swansea City AFC",
-            "score": "1-2",
-            "result": "L",
-            "isHome": true
-          }
-        ]
-      },
-      "h2h": {
-        "matches": [],
-        "ev_wins": 0,
-        "dep_wins": 0,
-        "draws": 0,
-        "total": 0
-      }
-    }
-  },
-  {
     "date": "2026-09-08T19:00:00Z",
     "lig": "CL",
     "ev": "Real Madrid",
     "dep": "Inter Milan",
     "selection": "Deplasman Kazanır",
-    "target_odds": 5.5,
-    "model_prob": 35.1,
-    "edge_pct": 16.9,
-    "edge_raw_pct": 16.9,
+    "target_odds": 5.7,
+    "model_prob": 35.2,
+    "edge_pct": 17.6,
+    "edge_raw_pct": 17.6,
     "fake_edge_score": 0.0,
     "latency_seconds": 0,
     "selected_bookmaker": "Pinnacle",
     "execution_quality": {},
     "recommended_stake_pct": 1.0,
     "status": "RİSK FİLTRESİ (DEĞER YOK)",
-    "reasoning": "Model piyasadan %16.9 daha yüksek ihtimal veriyor. | Dengeli xG profili (Beklenti: 2.55 gol). | Sinyal tamamen modelin bulduğu matematiksel değere (Edge) dayanıyor.",
+    "reasoning": "Model piyasadan %17.6 daha yüksek ihtimal veriyor. | Dengeli xG profili (Beklenti: 2.55 gol). | Sinyal tamamen modelin bulduğu matematiksel değere (Edge) dayanıyor.",
     "odds": {
-      "ms1": 1.67,
-      "ms0": 4.7,
-      "ms2": 5.5,
+      "ms1": 1.63,
+      "ms0": 4.65,
+      "ms2": 5.7,
       "over25": 1.44,
       "under25": 2.82,
       "btts_yes": 0,
@@ -2438,7 +1788,7 @@
     "probs": {
       "ms1": 30.6,
       "ms0": 34.3,
-      "ms2": 35.1,
+      "ms2": 35.2,
       "over25": 46.9,
       "under25": 53.1,
       "btts_yes": 53.3,
@@ -2537,23 +1887,23 @@
     "ev": "Porto",
     "dep": "Manchester City",
     "selection": "Ev Sahibi Kazanır",
-    "target_odds": 5.2,
+    "target_odds": 5.5,
     "model_prob": 28.8,
-    "edge_pct": 9.6,
-    "edge_raw_pct": 9.6,
+    "edge_pct": 10.6,
+    "edge_raw_pct": 10.6,
     "fake_edge_score": 0.0,
     "latency_seconds": 0,
     "selected_bookmaker": "Pinnacle",
     "execution_quality": {},
     "recommended_stake_pct": 1.0,
     "status": "RİSK FİLTRESİ (DEĞER YOK)",
-    "reasoning": "Model piyasadan %9.6 daha yüksek ihtimal veriyor. | Dengeli xG profili (Beklenti: 2.52 gol).",
+    "reasoning": "Model piyasadan %10.6 daha yüksek ihtimal veriyor. | Dengeli xG profili (Beklenti: 2.52 gol). | Sinyal tamamen modelin bulduğu matematiksel değere (Edge) dayanıyor.",
     "odds": {
-      "ms1": 5.2,
-      "ms0": 4.2,
-      "ms2": 1.8,
-      "over25": 1.76,
-      "under25": 2.3,
+      "ms1": 5.5,
+      "ms0": 4.3,
+      "ms2": 1.71,
+      "over25": 1.71,
+      "under25": 2.38,
       "btts_yes": 0,
       "btts_no": 0
     },
@@ -2713,23 +2063,23 @@
     "ev": "Barcelona",
     "dep": "Feyenoord",
     "selection": "Deplasman Kazanır",
-    "target_odds": 32.0,
+    "target_odds": 30.03,
     "model_prob": 42.1,
-    "edge_pct": 38.9,
-    "edge_raw_pct": 38.9,
+    "edge_pct": 38.7,
+    "edge_raw_pct": 38.7,
     "fake_edge_score": 0.0,
     "latency_seconds": 0,
     "selected_bookmaker": "Pinnacle",
     "execution_quality": {},
     "recommended_stake_pct": 1.0,
     "status": "RİSK FİLTRESİ (DEĞER YOK)",
-    "reasoning": "Model piyasadan %38.9 daha yüksek ihtimal veriyor. | Dengeli xG profili (Beklenti: 2.96 gol). | Piyasada bu tahmine hafif bir para akışı var.",
+    "reasoning": "Model piyasadan %38.7 daha yüksek ihtimal veriyor. | Dengeli xG profili (Beklenti: 2.96 gol). | Sinyal tamamen modelin bulduğu matematiksel değere (Edge) dayanıyor.",
     "odds": {
       "ms1": 1.13,
       "ms0": 14.5,
-      "ms2": 32.0,
-      "over25": 1.18,
-      "under25": 5.0,
+      "ms2": 30.03,
+      "over25": 1.17,
+      "under25": 5.2,
       "btts_yes": 0,
       "btts_no": 0
     },
@@ -2748,8 +2098,8 @@
       "toplam": 2.96
     },
     "sharp": {
-      "ms_sinyal": "EV",
-      "ms_tier": "WEAK",
+      "ms_sinyal": "YOK",
+      "ms_tier": "NO_SHARP",
       "ou_sinyal": "YOK",
       "ou_tier": "NO_SHARP",
       "btts_sinyal": "YOK",
@@ -2889,23 +2239,23 @@
     "ev": "Napoli",
     "dep": "Arsenal",
     "selection": "Ev Sahibi Kazanır",
-    "target_odds": 5.3,
+    "target_odds": 5.5,
     "model_prob": 28.5,
-    "edge_pct": 9.7,
-    "edge_raw_pct": 9.7,
+    "edge_pct": 10.4,
+    "edge_raw_pct": 10.4,
     "fake_edge_score": 0.0,
     "latency_seconds": 0,
     "selected_bookmaker": "Pinnacle",
     "execution_quality": {},
     "recommended_stake_pct": 1.0,
     "status": "RİSK FİLTRESİ (DEĞER YOK)",
-    "reasoning": "Model piyasadan %9.7 daha yüksek ihtimal veriyor. | Dengeli xG profili (Beklenti: 2.55 gol). | Piyasada bu tahmine hafif bir para akışı var.",
+    "reasoning": "Model piyasadan %10.4 daha yüksek ihtimal veriyor. | Dengeli xG profili (Beklenti: 2.55 gol). | Sinyal tamamen modelin bulduğu matematiksel değere (Edge) dayanıyor.",
     "odds": {
-      "ms1": 5.3,
-      "ms0": 3.85,
-      "ms2": 1.82,
+      "ms1": 5.5,
+      "ms0": 3.9,
+      "ms2": 1.78,
       "over25": 2.02,
-      "under25": 1.92,
+      "under25": 1.93,
       "btts_yes": 0,
       "btts_no": 0
     },
@@ -2924,8 +2274,8 @@
       "toplam": 2.55
     },
     "sharp": {
-      "ms_sinyal": "DEP",
-      "ms_tier": "WEAK",
+      "ms_sinyal": "YOK",
+      "ms_tier": "NO_SHARP",
       "ou_sinyal": "YOK",
       "ou_tier": "NO_SHARP",
       "btts_sinyal": "YOK",
@@ -3065,22 +2415,22 @@
     "ev": "Liverpool",
     "dep": "Atlético Madrid",
     "selection": "Deplasman Kazanır",
-    "target_odds": 5.0,
+    "target_odds": 5.1,
     "model_prob": 42.1,
-    "edge_pct": 22.1,
-    "edge_raw_pct": 22.1,
+    "edge_pct": 22.5,
+    "edge_raw_pct": 22.5,
     "fake_edge_score": 0.0,
     "latency_seconds": 0,
     "selected_bookmaker": "Pinnacle",
     "execution_quality": {},
     "recommended_stake_pct": 1.0,
     "status": "RİSK FİLTRESİ (DEĞER YOK)",
-    "reasoning": "Model piyasadan %22.1 daha yüksek ihtimal veriyor. | Dengeli xG profili (Beklenti: 2.55 gol). | Sinyal tamamen modelin bulduğu matematiksel değere (Edge) dayanıyor.",
+    "reasoning": "Model piyasadan %22.5 daha yüksek ihtimal veriyor. | Dengeli xG profili (Beklenti: 2.55 gol). | Sinyal tamamen modelin bulduğu matematiksel değere (Edge) dayanıyor.",
     "odds": {
       "ms1": 1.76,
-      "ms0": 4.28,
-      "ms2": 5.0,
-      "over25": 1.63,
+      "ms0": 4.21,
+      "ms2": 5.1,
+      "over25": 1.64,
       "under25": 2.42,
       "btts_yes": 0,
       "btts_no": 0
@@ -3187,22 +2537,22 @@
     "ev": "Sporting Lisbon",
     "dep": "Galatasaray",
     "selection": "Deplasman Kazanır",
-    "target_odds": 4.5,
+    "target_odds": 4.42,
     "model_prob": 42.2,
-    "edge_pct": 20.0,
-    "edge_raw_pct": 20.0,
+    "edge_pct": 19.6,
+    "edge_raw_pct": 19.6,
     "fake_edge_score": 0.0,
     "latency_seconds": 0,
     "selected_bookmaker": "Pinnacle",
     "execution_quality": {},
     "recommended_stake_pct": 1.0,
     "status": "RİSK FİLTRESİ (DEĞER YOK)",
-    "reasoning": "Model piyasadan %20.0 daha yüksek ihtimal veriyor. | Dengeli xG profili (Beklenti: 2.85 gol). | Piyasada bu tahmine hafif bir para akışı var.",
+    "reasoning": "Model piyasadan %19.6 daha yüksek ihtimal veriyor. | Dengeli xG profili (Beklenti: 2.85 gol). | Piyasada bu tahmine hafif bir para akışı var.",
     "odds": {
-      "ms1": 1.86,
+      "ms1": 1.89,
       "ms0": 4.0,
-      "ms2": 4.5,
-      "over25": 1.66,
+      "ms2": 4.42,
+      "over25": 1.67,
       "under25": 2.36,
       "btts_yes": 0,
       "btts_no": 0
@@ -3304,128 +2654,6 @@
     }
   },
   {
-    "date": "2026-09-10T16:45:00Z",
-    "lig": "CL",
-    "ev": "PSV Eindhoven",
-    "dep": "Shakhtar Donetsk",
-    "selection": "Deplasman Kazanır",
-    "target_odds": 7.5,
-    "model_prob": 33.9,
-    "edge_pct": 20.5,
-    "edge_raw_pct": 20.5,
-    "fake_edge_score": 0.0,
-    "latency_seconds": 0,
-    "selected_bookmaker": "Pinnacle",
-    "execution_quality": {},
-    "recommended_stake_pct": 1.0,
-    "status": "RİSK FİLTRESİ (DEĞER YOK)",
-    "reasoning": "Model piyasadan %20.5 daha yüksek ihtimal veriyor. | Yüksek xG profili (Beklenti: 3.19 gol) → Bol pozisyonlu bir maç. | Sinyal tamamen modelin bulduğu matematiksel değere (Edge) dayanıyor.",
-    "odds": {
-      "ms1": 1.45,
-      "ms0": 5.5,
-      "ms2": 7.5,
-      "over25": 1.44,
-      "under25": 2.85,
-      "btts_yes": 0,
-      "btts_no": 0
-    },
-    "probs": {
-      "ms1": 34.5,
-      "ms0": 31.6,
-      "ms2": 33.9,
-      "over25": 61.8,
-      "under25": 38.2,
-      "btts_yes": 62.5,
-      "btts_no": 37.5
-    },
-    "xg": {
-      "ev": 1.92,
-      "dep": 1.27,
-      "toplam": 3.19
-    },
-    "sharp": {
-      "ms_sinyal": "YOK",
-      "ms_tier": "NO_SHARP",
-      "ou_sinyal": "YOK",
-      "ou_tier": "NO_SHARP",
-      "btts_sinyal": "YOK",
-      "btts_tier": "NO_SHARP"
-    },
-    "form": {
-      "ev_form": [],
-      "dep_form": [
-        "W",
-        "L",
-        "L",
-        "W",
-        "L"
-      ]
-    },
-    "opening_odds": {
-      "ms1": 0.0,
-      "ms2": 0.0
-    },
-    "extended_stats": {
-      "ev_standing": null,
-      "dep_standing": {
-        "played": 14,
-        "wins": 5,
-        "draws": 1,
-        "losses": 8,
-        "points": 16,
-        "gf": 18,
-        "ga": 28,
-        "over25": 9,
-        "btts": 8,
-        "lig": "CL",
-        "recent": [
-          {
-            "date": "2025-01-29",
-            "opponent": "Borussia Dortmund",
-            "score": "1-3",
-            "result": "L",
-            "isHome": false
-          },
-          {
-            "date": "2025-01-22",
-            "opponent": "Stade Brestois 29",
-            "score": "2-0",
-            "result": "W",
-            "isHome": true
-          },
-          {
-            "date": "2024-12-10",
-            "opponent": "FC Bayern München",
-            "score": "1-5",
-            "result": "L",
-            "isHome": true
-          },
-          {
-            "date": "2024-11-27",
-            "opponent": "PSV",
-            "score": "2-3",
-            "result": "L",
-            "isHome": false
-          },
-          {
-            "date": "2024-11-06",
-            "opponent": "BSC Young Boys",
-            "score": "2-1",
-            "result": "W",
-            "isHome": true
-          }
-        ]
-      },
-      "h2h": {
-        "matches": [],
-        "ev_wins": 0,
-        "dep_wins": 0,
-        "draws": 0,
-        "total": 0
-      }
-    }
-  },
-  {
     "date": "2026-09-09T19:00:00Z",
     "lig": "CL",
     "ev": "Paris Saint Germain",
@@ -3444,7 +2672,7 @@
     "reasoning": "Model piyasadan %26.8 daha yüksek ihtimal veriyor. | Dengeli xG profili (Beklenti: 2.76 gol). | Piyasada bu tahmine hafif bir para akışı var.",
     "odds": {
       "ms1": 1.06,
-      "ms0": 25.0,
+      "ms0": 24.0,
       "ms2": 55.0,
       "over25": 1.2,
       "under25": 4.6,
@@ -3607,29 +2835,29 @@
     "ev": "Fenerbahce",
     "dep": "AS Roma",
     "selection": "Ev Sahibi Kazanır",
-    "target_odds": 3.5,
+    "target_odds": 3.45,
     "model_prob": 36.4,
-    "edge_pct": 7.8,
-    "edge_raw_pct": 7.8,
+    "edge_pct": 7.4,
+    "edge_raw_pct": 7.4,
     "fake_edge_score": 0.0,
     "latency_seconds": 0,
     "selected_bookmaker": "Pinnacle",
     "execution_quality": {},
     "recommended_stake_pct": 1.0,
     "status": "RİSK FİLTRESİ (DEĞER YOK)",
-    "reasoning": "Model piyasadan %7.8 daha yüksek ihtimal veriyor. | Dengeli xG profili (Beklenti: 2.55 gol).",
+    "reasoning": "Model piyasadan %7.4 daha yüksek ihtimal veriyor. | Dengeli xG profili (Beklenti: 2.55 gol).",
     "odds": {
-      "ms1": 3.5,
+      "ms1": 3.45,
       "ms0": 3.63,
-      "ms2": 2.26,
-      "over25": 1.82,
-      "under25": 2.18,
+      "ms2": 2.28,
+      "over25": 1.84,
+      "under25": 2.24,
       "btts_yes": 0,
       "btts_no": 0
     },
     "probs": {
       "ms1": 36.4,
-      "ms0": 34.2,
+      "ms0": 34.3,
       "ms2": 29.4,
       "over25": 46.9,
       "under25": 53.1,
@@ -3645,7 +2873,7 @@
       "ms_sinyal": "YOK",
       "ms_tier": "NO_SHARP",
       "ou_sinyal": "OVER",
-      "ou_tier": "STRONG",
+      "ou_tier": "ELITE",
       "btts_sinyal": "YOK",
       "btts_tier": "NO_SHARP"
     },
@@ -3778,6 +3006,128 @@
     }
   },
   {
+    "date": "2026-09-10T16:45:00Z",
+    "lig": "CL",
+    "ev": "PSV Eindhoven",
+    "dep": "Shakhtar Donetsk",
+    "selection": "Deplasman Kazanır",
+    "target_odds": 7.4,
+    "model_prob": 33.9,
+    "edge_pct": 20.4,
+    "edge_raw_pct": 20.4,
+    "fake_edge_score": 0.0,
+    "latency_seconds": 0,
+    "selected_bookmaker": "Pinnacle",
+    "execution_quality": {},
+    "recommended_stake_pct": 1.0,
+    "status": "RİSK FİLTRESİ (DEĞER YOK)",
+    "reasoning": "Model piyasadan %20.4 daha yüksek ihtimal veriyor. | Yüksek xG profili (Beklenti: 3.19 gol) → Bol pozisyonlu bir maç. | Sinyal tamamen modelin bulduğu matematiksel değere (Edge) dayanıyor.",
+    "odds": {
+      "ms1": 1.48,
+      "ms0": 5.4,
+      "ms2": 7.4,
+      "over25": 1.44,
+      "under25": 2.78,
+      "btts_yes": 0,
+      "btts_no": 0
+    },
+    "probs": {
+      "ms1": 34.6,
+      "ms0": 31.5,
+      "ms2": 33.9,
+      "over25": 61.8,
+      "under25": 38.2,
+      "btts_yes": 62.5,
+      "btts_no": 37.5
+    },
+    "xg": {
+      "ev": 1.92,
+      "dep": 1.27,
+      "toplam": 3.19
+    },
+    "sharp": {
+      "ms_sinyal": "YOK",
+      "ms_tier": "NO_SHARP",
+      "ou_sinyal": "YOK",
+      "ou_tier": "NO_SHARP",
+      "btts_sinyal": "YOK",
+      "btts_tier": "NO_SHARP"
+    },
+    "form": {
+      "ev_form": [],
+      "dep_form": [
+        "W",
+        "L",
+        "L",
+        "W",
+        "L"
+      ]
+    },
+    "opening_odds": {
+      "ms1": 0.0,
+      "ms2": 0.0
+    },
+    "extended_stats": {
+      "ev_standing": null,
+      "dep_standing": {
+        "played": 14,
+        "wins": 5,
+        "draws": 1,
+        "losses": 8,
+        "points": 16,
+        "gf": 18,
+        "ga": 28,
+        "over25": 9,
+        "btts": 8,
+        "lig": "CL",
+        "recent": [
+          {
+            "date": "2025-01-29",
+            "opponent": "Borussia Dortmund",
+            "score": "1-3",
+            "result": "L",
+            "isHome": false
+          },
+          {
+            "date": "2025-01-22",
+            "opponent": "Stade Brestois 29",
+            "score": "2-0",
+            "result": "W",
+            "isHome": true
+          },
+          {
+            "date": "2024-12-10",
+            "opponent": "FC Bayern München",
+            "score": "1-5",
+            "result": "L",
+            "isHome": true
+          },
+          {
+            "date": "2024-11-27",
+            "opponent": "PSV",
+            "score": "2-3",
+            "result": "L",
+            "isHome": false
+          },
+          {
+            "date": "2024-11-06",
+            "opponent": "BSC Young Boys",
+            "score": "2-1",
+            "result": "W",
+            "isHome": true
+          }
+        ]
+      },
+      "h2h": {
+        "matches": [],
+        "ev_wins": 0,
+        "dep_wins": 0,
+        "draws": 0,
+        "total": 0
+      }
+    }
+  },
+  {
     "date": "2026-09-10T19:00:00Z",
     "lig": "CL",
     "ev": "Bayern Munich",
@@ -3799,7 +3149,7 @@
       "ms0": 13.5,
       "ms2": 25.0,
       "over25": 1.15,
-      "under25": 5.9,
+      "under25": 5.55,
       "btts_yes": 0,
       "btts_no": 0
     },
@@ -3906,7 +3256,7 @@
     "dep": "RB Leipzig",
     "selection": "Beraberlik",
     "target_odds": 4.1,
-    "model_prob": 35.2,
+    "model_prob": 35.1,
     "edge_pct": 10.8,
     "edge_raw_pct": 10.8,
     "fake_edge_score": 0.0,
@@ -3915,18 +3265,18 @@
     "execution_quality": {},
     "recommended_stake_pct": 1.0,
     "status": "RİSK FİLTRESİ (DEĞER YOK)",
-    "reasoning": "Model piyasadan %10.8 daha yüksek ihtimal veriyor. | Dengeli xG profili (Beklenti: 2.55 gol). | Piyasada bu tahmine hafif bir para akışı var.",
+    "reasoning": "Model piyasadan %10.8 daha yüksek ihtimal veriyor. | Dengeli xG profili (Beklenti: 2.55 gol). | Sinyal tamamen modelin bulduğu matematiksel değere (Edge) dayanıyor.",
     "odds": {
-      "ms1": 1.96,
+      "ms1": 1.9,
       "ms0": 4.1,
       "ms2": 4.2,
-      "over25": 1.63,
+      "over25": 1.61,
       "under25": 2.46,
       "btts_yes": 0,
       "btts_no": 0
     },
     "probs": {
-      "ms1": 33.8,
+      "ms1": 34.0,
       "ms0": 35.2,
       "ms2": 30.9,
       "over25": 46.9,
@@ -3940,8 +3290,8 @@
       "toplam": 2.55
     },
     "sharp": {
-      "ms_sinyal": "EV",
-      "ms_tier": "WEAK",
+      "ms_sinyal": "YOK",
+      "ms_tier": "NO_SHARP",
       "ou_sinyal": "YOK",
       "ou_tier": "NO_SHARP",
       "btts_sinyal": "YOK",
@@ -4063,6 +3413,656 @@
             "score": "2-1",
             "result": "W",
             "isHome": false
+          }
+        ]
+      },
+      "h2h": {
+        "matches": [],
+        "ev_wins": 0,
+        "dep_wins": 0,
+        "draws": 0,
+        "total": 0
+      }
+    }
+  },
+  {
+    "date": "2026-09-10T19:15:00Z",
+    "lig": "PPL",
+    "ev": "CF Estrela",
+    "dep": "Braga",
+    "selection": "Ev Sahibi Kazanır",
+    "target_odds": 5.4,
+    "model_prob": 28.6,
+    "edge_pct": 10.1,
+    "edge_raw_pct": 10.1,
+    "fake_edge_score": 0.0,
+    "latency_seconds": 0,
+    "selected_bookmaker": "Pinnacle",
+    "execution_quality": {},
+    "recommended_stake_pct": 1.0,
+    "status": "RİSK FİLTRESİ (DEĞER YOK)",
+    "reasoning": "Model piyasadan %10.1 daha yüksek ihtimal veriyor. | Dengeli xG profili (Beklenti: 2.73 gol). | Sinyal tamamen modelin bulduğu matematiksel değere (Edge) dayanıyor.",
+    "odds": {
+      "ms1": 5.4,
+      "ms0": 3.9,
+      "ms2": 1.8,
+      "over25": 2.03,
+      "under25": 1.82,
+      "btts_yes": 0,
+      "btts_no": 0
+    },
+    "probs": {
+      "ms1": 28.6,
+      "ms0": 29.0,
+      "ms2": 42.4,
+      "over25": 51.3,
+      "under25": 48.7,
+      "btts_yes": 55.2,
+      "btts_no": 44.8
+    },
+    "xg": {
+      "ev": 1.14,
+      "dep": 1.59,
+      "toplam": 2.73
+    },
+    "sharp": {
+      "ms_sinyal": "YOK",
+      "ms_tier": "NO_SHARP",
+      "ou_sinyal": "YOK",
+      "ou_tier": "NO_SHARP",
+      "btts_sinyal": "YOK",
+      "btts_tier": "NO_SHARP"
+    },
+    "form": {
+      "ev_form": [
+        "D",
+        "D",
+        "D",
+        "W",
+        "D"
+      ],
+      "dep_form": [
+        "D",
+        "D",
+        "D",
+        "W",
+        "W"
+      ]
+    },
+    "opening_odds": {
+      "ms1": 0.0,
+      "ms2": 0.0
+    },
+    "extended_stats": {
+      "ev_standing": {
+        "played": 106,
+        "wins": 21,
+        "draws": 35,
+        "losses": 50,
+        "points": 98,
+        "gf": 104,
+        "ga": 167,
+        "over25": 49,
+        "btts": 48,
+        "lig": "PPL",
+        "recent": [
+          {
+            "date": "2026-09-05",
+            "opponent": "FC Famalicão",
+            "score": "2-2",
+            "result": "D",
+            "isHome": true
+          },
+          {
+            "date": "2026-08-30",
+            "opponent": "CD Nacional",
+            "score": "3-2",
+            "result": "W",
+            "isHome": false
+          },
+          {
+            "date": "2026-08-15",
+            "opponent": "FC Alverca",
+            "score": "2-2",
+            "result": "D",
+            "isHome": false
+          },
+          {
+            "date": "2026-08-08",
+            "opponent": "Sporting Clube de Portugal",
+            "score": "2-2",
+            "result": "D",
+            "isHome": true
+          },
+          {
+            "date": "2026-05-16",
+            "opponent": "Sporting Clube de Braga",
+            "score": "2-2",
+            "result": "D",
+            "isHome": false
+          }
+        ]
+      },
+      "dep_standing": {
+        "played": 111,
+        "wins": 59,
+        "draws": 27,
+        "losses": 25,
+        "points": 204,
+        "gf": 201,
+        "ga": 131,
+        "over25": 69,
+        "btts": 66,
+        "lig": "PPL",
+        "recent": [
+          {
+            "date": "2026-09-05",
+            "opponent": "FC Alverca",
+            "score": "2-1",
+            "result": "W",
+            "isHome": false
+          },
+          {
+            "date": "2026-08-31",
+            "opponent": "Vitória SC",
+            "score": "1-0",
+            "result": "W",
+            "isHome": true
+          },
+          {
+            "date": "2026-08-09",
+            "opponent": "Moreirense",
+            "score": "2-2",
+            "result": "D",
+            "isHome": false
+          },
+          {
+            "date": "2026-05-16",
+            "opponent": "CF Estrela da Amadora",
+            "score": "2-2",
+            "result": "D",
+            "isHome": true
+          },
+          {
+            "date": "2026-05-11",
+            "opponent": "Sport Lisboa e Benfica",
+            "score": "2-2",
+            "result": "D",
+            "isHome": false
+          }
+        ]
+      },
+      "h2h": {
+        "matches": [],
+        "ev_wins": 0,
+        "dep_wins": 0,
+        "draws": 0,
+        "total": 0
+      }
+    }
+  },
+  {
+    "date": "2026-09-08T18:45:00Z",
+    "lig": "ELC",
+    "ev": "Wrexham AFC",
+    "dep": "Burnley",
+    "selection": "Deplasman Kazanır",
+    "target_odds": 3.85,
+    "model_prob": 42.1,
+    "edge_pct": 16.1,
+    "edge_raw_pct": 16.1,
+    "fake_edge_score": 0.0,
+    "latency_seconds": 0,
+    "selected_bookmaker": "Pinnacle",
+    "execution_quality": {},
+    "recommended_stake_pct": 1.0,
+    "status": "RİSK FİLTRESİ (DEĞER YOK)",
+    "reasoning": "Model piyasadan %16.1 daha yüksek ihtimal veriyor. | Dengeli xG profili (Beklenti: 2.59 gol). | Sinyal tamamen modelin bulduğu matematiksel değere (Edge) dayanıyor.",
+    "odds": {
+      "ms1": 2.1,
+      "ms0": 3.7,
+      "ms2": 3.85,
+      "over25": 1.99,
+      "under25": 2.0,
+      "btts_yes": 0,
+      "btts_no": 0
+    },
+    "probs": {
+      "ms1": 28.8,
+      "ms0": 29.1,
+      "ms2": 42.1,
+      "over25": 48.0,
+      "under25": 52.0,
+      "btts_yes": 53.2,
+      "btts_no": 46.8
+    },
+    "xg": {
+      "ev": 1.17,
+      "dep": 1.43,
+      "toplam": 2.59
+    },
+    "sharp": {
+      "ms_sinyal": "YOK",
+      "ms_tier": "NO_SHARP",
+      "ou_sinyal": "UNDER",
+      "ou_tier": "WEAK",
+      "btts_sinyal": "YOK",
+      "btts_tier": "NO_SHARP"
+    },
+    "form": {
+      "ev_form": [
+        "D",
+        "D",
+        "L",
+        "W",
+        "D"
+      ],
+      "dep_form": [
+        "D",
+        "L",
+        "L",
+        "D",
+        "L"
+      ]
+    },
+    "opening_odds": {
+      "ms1": 0.0,
+      "ms2": 0.0
+    },
+    "extended_stats": {
+      "ev_standing": {
+        "played": 51,
+        "wins": 20,
+        "draws": 17,
+        "losses": 14,
+        "points": 77,
+        "gf": 75,
+        "ga": 69,
+        "over25": 25,
+        "btts": 33,
+        "lig": "ELC",
+        "recent": [
+          {
+            "date": "2026-09-05",
+            "opponent": "Swansea City AFC",
+            "score": "0-0",
+            "result": "D",
+            "isHome": false
+          },
+          {
+            "date": "2026-09-02",
+            "opponent": "Millwall",
+            "score": "3-0",
+            "result": "W",
+            "isHome": false
+          },
+          {
+            "date": "2026-08-28",
+            "opponent": "Birmingham City",
+            "score": "1-2",
+            "result": "L",
+            "isHome": true
+          },
+          {
+            "date": "2026-08-22",
+            "opponent": "Watford",
+            "score": "1-1",
+            "result": "D",
+            "isHome": true
+          },
+          {
+            "date": "2026-08-17",
+            "opponent": "Cardiff City",
+            "score": "1-1",
+            "result": "D",
+            "isHome": false
+          }
+        ]
+      },
+      "dep_standing": {
+        "played": 123,
+        "wins": 37,
+        "draws": 35,
+        "losses": 51,
+        "points": 146,
+        "gf": 150,
+        "ga": 174,
+        "over25": 59,
+        "btts": 62,
+        "lig": "PL",
+        "recent": [
+          {
+            "date": "2026-09-05",
+            "opponent": "Bristol City",
+            "score": "1-2",
+            "result": "L",
+            "isHome": true
+          },
+          {
+            "date": "2026-09-02",
+            "opponent": "Middlesbrough",
+            "score": "1-1",
+            "result": "D",
+            "isHome": true
+          },
+          {
+            "date": "2026-08-29",
+            "opponent": "Norwich City",
+            "score": "1-4",
+            "result": "L",
+            "isHome": false
+          },
+          {
+            "date": "2026-08-23",
+            "opponent": "West Bromwich Albion",
+            "score": "1-3",
+            "result": "L",
+            "isHome": false
+          },
+          {
+            "date": "2026-08-16",
+            "opponent": "West Ham United",
+            "score": "2-2",
+            "result": "D",
+            "isHome": true
+          }
+        ]
+      },
+      "h2h": {
+        "matches": [],
+        "ev_wins": 0,
+        "dep_wins": 0,
+        "draws": 0,
+        "total": 0
+      }
+    }
+  },
+  {
+    "date": "2026-09-09T19:45:00Z",
+    "lig": "PPL",
+    "ev": "Moreirense",
+    "dep": "Benfica",
+    "selection": "Ev Sahibi Kazanır",
+    "target_odds": 18.0,
+    "model_prob": 28.5,
+    "edge_pct": 23.0,
+    "edge_raw_pct": 23.0,
+    "fake_edge_score": 0.0,
+    "latency_seconds": 0,
+    "selected_bookmaker": "Pinnacle",
+    "execution_quality": {},
+    "recommended_stake_pct": 1.0,
+    "status": "RİSK FİLTRESİ (DEĞER YOK)",
+    "reasoning": "Model piyasadan %23.0 daha yüksek ihtimal veriyor. | Dengeli xG profili (Beklenti: 2.81 gol). | Keskin bahisçiler (Sharp money) bu yönde pozisyon alıyor.",
+    "odds": {
+      "ms1": 18.0,
+      "ms0": 8.0,
+      "ms2": 1.2,
+      "over25": 1.49,
+      "under25": 2.52,
+      "btts_yes": 0,
+      "btts_no": 0
+    },
+    "probs": {
+      "ms1": 28.5,
+      "ms0": 29.2,
+      "ms2": 42.2,
+      "over25": 53.4,
+      "under25": 46.6,
+      "btts_yes": 54.7,
+      "btts_no": 45.3
+    },
+    "xg": {
+      "ev": 1.04,
+      "dep": 1.77,
+      "toplam": 2.81
+    },
+    "sharp": {
+      "ms_sinyal": "DEP",
+      "ms_tier": "STRONG",
+      "ou_sinyal": "YOK",
+      "ou_tier": "NO_SHARP",
+      "btts_sinyal": "YOK",
+      "btts_tier": "NO_SHARP"
+    },
+    "form": {
+      "ev_form": [
+        "L",
+        "D",
+        "L",
+        "W",
+        "L"
+      ],
+      "dep_form": [
+        "D",
+        "D",
+        "W",
+        "W",
+        "W"
+      ]
+    },
+    "opening_odds": {
+      "ms1": 0.0,
+      "ms2": 0.0
+    },
+    "extended_stats": {
+      "ev_standing": {
+        "played": 106,
+        "wins": 39,
+        "draws": 24,
+        "losses": 43,
+        "points": 141,
+        "gf": 119,
+        "ga": 143,
+        "over25": 50,
+        "btts": 49,
+        "lig": "PPL",
+        "recent": [
+          {
+            "date": "2026-09-04",
+            "opponent": "FC Porto",
+            "score": "1-2",
+            "result": "L",
+            "isHome": false
+          },
+          {
+            "date": "2026-08-30",
+            "opponent": "Casa Pia AC",
+            "score": "1-0",
+            "result": "W",
+            "isHome": false
+          },
+          {
+            "date": "2026-08-16",
+            "opponent": "FC Arouca",
+            "score": "0-4",
+            "result": "L",
+            "isHome": false
+          },
+          {
+            "date": "2026-08-09",
+            "opponent": "Sporting Clube de Braga",
+            "score": "2-2",
+            "result": "D",
+            "isHome": true
+          },
+          {
+            "date": "2026-05-16",
+            "opponent": "AVS",
+            "score": "0-1",
+            "result": "L",
+            "isHome": true
+          }
+        ]
+      },
+      "dep_standing": {
+        "played": 133,
+        "wins": 84,
+        "draws": 25,
+        "losses": 24,
+        "points": 277,
+        "gf": 285,
+        "ga": 128,
+        "over25": 85,
+        "btts": 66,
+        "lig": "PPL",
+        "recent": [
+          {
+            "date": "2026-09-05",
+            "opponent": "CS Marítimo",
+            "score": "3-0",
+            "result": "W",
+            "isHome": false
+          },
+          {
+            "date": "2026-08-31",
+            "opponent": "GD Estoril Praia",
+            "score": "2-1",
+            "result": "W",
+            "isHome": true
+          },
+          {
+            "date": "2026-08-17",
+            "opponent": "Casa Pia AC",
+            "score": "7-0",
+            "result": "W",
+            "isHome": false
+          },
+          {
+            "date": "2026-08-09",
+            "opponent": "Académico de Viseu",
+            "score": "2-2",
+            "result": "D",
+            "isHome": true
+          },
+          {
+            "date": "2026-05-11",
+            "opponent": "Sporting Clube de Braga",
+            "score": "2-2",
+            "result": "D",
+            "isHome": true
+          }
+        ]
+      },
+      "h2h": {
+        "matches": [],
+        "ev_wins": 0,
+        "dep_wins": 0,
+        "draws": 0,
+        "total": 0
+      }
+    }
+  },
+  {
+    "date": "2026-09-08T16:45:00Z",
+    "lig": "DED",
+    "ev": "NEC Nijmegen",
+    "dep": "Excelsior",
+    "selection": "Deplasman Kazanır",
+    "target_odds": 5.2,
+    "model_prob": 42.1,
+    "edge_pct": 22.8,
+    "edge_raw_pct": 22.8,
+    "fake_edge_score": 0.0,
+    "latency_seconds": 0,
+    "selected_bookmaker": "Pinnacle",
+    "execution_quality": {},
+    "recommended_stake_pct": 1.0,
+    "status": "RİSK FİLTRESİ (DEĞER YOK)",
+    "reasoning": "Model piyasadan %22.8 daha yüksek ihtimal veriyor. | Yüksek xG profili (Beklenti: 3.21 gol) → Bol pozisyonlu bir maç. | Sinyal tamamen modelin bulduğu matematiksel değere (Edge) dayanıyor.",
+    "odds": {
+      "ms1": 1.69,
+      "ms0": 4.4,
+      "ms2": 5.2,
+      "over25": 1.47,
+      "under25": 2.62,
+      "btts_yes": 0,
+      "btts_no": 0
+    },
+    "probs": {
+      "ms1": 28.8,
+      "ms0": 29.1,
+      "ms2": 42.1,
+      "over25": 62.2,
+      "under25": 37.8,
+      "btts_yes": 64.1,
+      "btts_no": 35.9
+    },
+    "xg": {
+      "ev": 1.74,
+      "dep": 1.47,
+      "toplam": 3.21
+    },
+    "sharp": {
+      "ms_sinyal": "YOK",
+      "ms_tier": "NO_SHARP",
+      "ou_sinyal": "YOK",
+      "ou_tier": "NO_SHARP",
+      "btts_sinyal": "YOK",
+      "btts_tier": "NO_SHARP"
+    },
+    "form": {
+      "ev_form": [],
+      "dep_form": [
+        "D",
+        "W",
+        "L",
+        "W",
+        "W"
+      ]
+    },
+    "opening_odds": {
+      "ms1": 0.0,
+      "ms2": 0.0
+    },
+    "extended_stats": {
+      "ev_standing": null,
+      "dep_standing": {
+        "played": 71,
+        "wins": 18,
+        "draws": 19,
+        "losses": 34,
+        "points": 73,
+        "gf": 100,
+        "ga": 130,
+        "over25": 51,
+        "btts": 45,
+        "lig": "DED",
+        "recent": [
+          {
+            "date": "2026-09-05",
+            "opponent": "Willem II Tilburg",
+            "score": "3-0",
+            "result": "W",
+            "isHome": false
+          },
+          {
+            "date": "2026-08-29",
+            "opponent": "Sparta Rotterdam",
+            "score": "2-1",
+            "result": "W",
+            "isHome": true
+          },
+          {
+            "date": "2026-08-15",
+            "opponent": "PSV",
+            "score": "1-2",
+            "result": "L",
+            "isHome": true
+          },
+          {
+            "date": "2026-08-07",
+            "opponent": "SC Cambuur-Leeuwarden",
+            "score": "4-0",
+            "result": "W",
+            "isHome": false
+          },
+          {
+            "date": "2026-05-10",
+            "opponent": "FC Volendam",
+            "score": "1-1",
+            "result": "D",
+            "isHome": true
           }
         ]
       },

@@ -452,7 +452,7 @@
   "Cardiff City_Stoke City_2026-09-08": {
     "ev": "Cardiff City",
     "dep": "Stoke City",
-    "tahmin": "2.5 Alt",
+    "tahmin": "Deplasman Kazanır",
     "date": "2026-09-08"
   },
   "Watford_Preston North End_2026-09-08": {
@@ -482,13 +482,13 @@
   "Derby County_West Bromwich Albion_2026-09-09": {
     "ev": "Derby County",
     "dep": "West Bromwich Albion",
-    "tahmin": "Deplasman Kazanır",
+    "tahmin": "2.5 Alt",
     "date": "2026-09-09"
   },
   "Charlton Athletic_Queens Park Rangers_2026-09-09": {
     "ev": "Charlton Athletic",
     "dep": "Queens Park Rangers",
-    "tahmin": "Deplasman Kazanır",
+    "tahmin": "2.5 Alt",
     "date": "2026-09-09"
   },
   "Moreirense_Benfica_2026-09-09": {
@@ -512,7 +512,7 @@
   "Borussia Dortmund_Villarreal_2026-09-08": {
     "ev": "Borussia Dortmund",
     "dep": "Villarreal",
-    "tahmin": "Beraberlik",
+    "tahmin": "Deplasman Kazanır",
     "date": "2026-09-08"
   },
   "Porto_Manchester City_2026-09-08": {
