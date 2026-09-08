@@ -604,5 +604,29 @@
     "dep": "RB Leipzig",
     "tahmin": "Beraberlik",
     "date": "2026-09-10"
+  },
+  "Venezia_Fiorentina_2026-09-11": {
+    "ev": "Venezia",
+    "dep": "Fiorentina",
+    "tahmin": "Beraberlik",
+    "date": "2026-09-11"
+  },
+  "West Ham United_Wrexham AFC_2026-09-11": {
+    "ev": "West Ham United",
+    "dep": "Wrexham AFC",
+    "tahmin": "Deplasman Kazanır",
+    "date": "2026-09-11"
+  },
+  "Sevilla_Valencia_2026-09-11": {
+    "ev": "Sevilla",
+    "dep": "Valencia",
+    "tahmin": "Deplasman Kazanır",
+    "date": "2026-09-11"
+  },
+  "Rennes_Marseille_2026-09-11": {
+    "ev": "Rennes",
+    "dep": "Marseille",
+    "tahmin": "Deplasman Kazanır",
+    "date": "2026-09-11"
   }
 }
