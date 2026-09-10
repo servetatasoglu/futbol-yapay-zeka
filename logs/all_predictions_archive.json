@@ -590,7 +590,7 @@
   "Fenerbahce_AS Roma_2026-09-10": {
     "ev": "Fenerbahce",
     "dep": "AS Roma",
-    "tahmin": "Ev Sahibi Kazanır",
+    "tahmin": "Beraberlik",
     "date": "2026-09-10"
   },
   "Bayern Munich_Bodø/Glimt_2026-09-10": {
@@ -824,7 +824,7 @@
   "Torku Konyaspor_Trabzonspor_2026-09-12": {
     "ev": "Torku Konyaspor",
     "dep": "Trabzonspor",
-    "tahmin": "Beraberlik",
+    "tahmin": "2.5 Alt",
     "date": "2026-09-12"
   },
   "FC St. Pauli_VfL Wolfsburg_2026-09-12": {
@@ -832,5 +832,35 @@
     "dep": "VfL Wolfsburg",
     "tahmin": "2.5 Alt",
     "date": "2026-09-12"
+  },
+  "Lecce_Monza_2026-09-13": {
+    "ev": "Lecce",
+    "dep": "Monza",
+    "tahmin": "Deplasman Kazanır",
+    "date": "2026-09-13"
+  },
+  "Excelsior_FC Utrecht_2026-09-13": {
+    "ev": "Excelsior",
+    "dep": "FC Utrecht",
+    "tahmin": "Deplasman Kazanır",
+    "date": "2026-09-13"
+  },
+  "Sheffield United_Wolverhampton Wanderers_2026-09-13": {
+    "ev": "Sheffield United",
+    "dep": "Wolverhampton Wanderers",
+    "tahmin": "2.5 Alt",
+    "date": "2026-09-13"
+  },
+  "Samsunspor_Çorum FK_2026-09-12": {
+    "ev": "Samsunspor",
+    "dep": "Çorum FK",
+    "tahmin": "Deplasman Kazanır",
+    "date": "2026-09-12"
+  },
+  "1. Heidenheim_Holstein Kiel_2026-09-13": {
+    "ev": "1. Heidenheim",
+    "dep": "Holstein Kiel",
+    "tahmin": "Deplasman Kazanır",
+    "date": "2026-09-13"
   }
 }
