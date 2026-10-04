@@ -1,5 +1,5 @@
 {
-  "rapor_tarihi": "2026-10-03 19:46",
+  "rapor_tarihi": "2026-10-04 14:39",
   "ozet": {
     "toplam_bahis": 1,
     "sonuclu": 0,
@@ -62,12 +62,7 @@
   },
   "veri_tazeligi": {
     "maclar_json": {
-      "son_guncelleme": "2026-10-03 19:45",
-      "saat_once": 0.0,
-      "taze": true
-    },
-    "odds_cache": {
-      "son_guncelleme": "2026-10-03 19:45",
+      "son_guncelleme": "2026-10-04 14:39",
       "saat_once": 0.0,
       "taze": true
     }
