@@ -48,13 +48,15 @@ def load_pinnacle_historical_odds(force_reload: bool = False) -> dict:
         _PINNACLE_CACHE = {}
         return _PINNACLE_CACHE
 
-    csv_files = glob.glob(os.path.join(PINNACLE_DIR, "*_*.csv"))
+    csv_files = glob.glob(os.path.join(PINNACLE_DIR, "*.csv"))
     if not csv_files:
         logger.warning(f"Pinnacle CSV dosyaları bulunamadı: {PINNACLE_DIR}")
         _PINNACLE_CACHE = {}
         return _PINNACLE_CACHE
 
     pinn_by_date = defaultdict(list)
+    # FIX [P0-07]: Canonical fixture dedup set
+    seen_fixtures = set()
 
     for fpath in sorted(csv_files):
         try:
@@ -81,68 +83,96 @@ def load_pinnacle_historical_odds(force_reload: bool = False) -> dict:
                 if not h_raw or not a_raw:
                     continue
 
+                h_clean = _clean_team_name(h_raw)
+                a_clean = _clean_team_name(a_raw)
+                fixture_key = (d_norm, h_clean, a_clean)
+                if fixture_key in seen_fixtures:
+                    continue  # FIX [P0-07]: Skip duplicate fixture across overlapping CSVs
+
                 # Pre-match Pinnacle odds
                 psh = float(row.get("PSH", 0) or 0)
                 psd = float(row.get("PSD", 0) or 0)
                 psa = float(row.get("PSA", 0) or 0)
 
-                # Fallback to B365 or Max if PS missing
-                if psh <= 1.0:
-                    psh = float(row.get("AvgH", 0) or row.get("B365H", 0) or 0)
-                if psd <= 1.0:
-                    psd = float(row.get("AvgD", 0) or row.get("B365D", 0) or 0)
-                if psa <= 1.0:
-                    psa = float(row.get("AvgA", 0) or row.get("B365A", 0) or 0)
+                # FIX [P0-05]: Never disguise B365 or Avg as Pinnacle odds!
+                # If true Pinnacle odds (PSH/PSD/PSA) are missing, reject as Pinnacle data.
+                if psh <= 1.0 or psd <= 1.0 or psa <= 1.0:
+                    continue
 
                 # Closing Pinnacle odds
                 psch = float(row.get("PSCH", 0) or 0)
                 pscd = float(row.get("PSCD", 0) or 0)
                 psca = float(row.get("PSCA", 0) or 0)
 
-                if psch <= 1.0:
-                    psch = float(row.get("AvgCH", 0) or row.get("B365CH", 0) or psh)
-                if pscd <= 1.0:
-                    pscd = float(row.get("AvgCD", 0) or row.get("B365CD", 0) or psd)
-                if psca <= 1.0:
-                    psca = float(row.get("AvgCA", 0) or row.get("B365CA", 0) or psa)
+                # FIX [P0-05]: If closing is missing, leave as 0.0 — DO NOT fallback to opening psh or B365
+                if psch <= 1.0 or pscd <= 1.0 or psca <= 1.0:
+                    psch = 0.0
+                    pscd = 0.0
+                    psca = 0.0
 
-                if psh > 1.0 and psa > 1.0:
-                    pinn_by_date[d_norm].append({
-                        "home": h_raw,
-                        "away": a_raw,
-                        "home_clean": _clean_team_name(h_raw),
-                        "away_clean": _clean_team_name(a_raw),
-                        "psh": psh,
-                        "psd": psd,
-                        "psa": psa,
-                        "psch": psch,
-                        "pscd": pscd,
-                        "psca": psca,
-                        "fthg": row.get("FTHG"),
-                        "ftag": row.get("FTAG"),
-                        "ftr": str(row.get("FTR", "")).upper()
-                    })
+                seen_fixtures.add(fixture_key)
+                pinn_by_date[d_norm].append({
+                    "home": h_raw,
+                    "away": a_raw,
+                    "home_clean": h_clean,
+                    "away_clean": a_clean,
+                    "psh": psh,
+                    "psd": psd,
+                    "psa": psa,
+                    "psch": psch,
+                    "pscd": pscd,
+                    "psca": psca,
+                    "fthg": row.get("FTHG"),
+                    "ftag": row.get("FTAG"),
+                    "ftr": str(row.get("FTR", "")).upper()
+                })
         except Exception as e:
             logger.debug(f"Pinnacle CSV okuma hatası {os.path.basename(fpath)}: {e}")
 
     _PINNACLE_CACHE = pinn_by_date
-    logger.info(f"Gerçek Pinnacle veritabanı yüklendi: {len(pinn_by_date)} farklı maç tarihi")
+    logger.info(f"Gerçek Pinnacle veritabanı yüklendi: {len(seen_fixtures)} tekil maç, {len(pinn_by_date)} farklı tarih")
     return _PINNACLE_CACHE
 
 
 def _clean_team_name(name: str) -> str:
-    """Takım ismini fuzzy eşleşme için normalize eder."""
-    n = str(name).lower()
-    for s in [" fc", " afc", " cf", " cd", " sc", " ud", " ssc", " ac"]:
+    """Takım ismini normalize eder."""
+    import unicodedata, re
+    if not name:
+        return ""
+    n = unicodedata.normalize('NFKD', str(name)).encode('ASCII', 'ignore').decode('utf-8').lower()
+    for s in [" de madrid", " de barcelona", " balompie", " fc", " afc", " cf", " cd", " sc", " ud", " ssc", " ac", " rc", " sad"]:
         n = n.replace(s, "")
-    n = n.replace(".", "").replace("-", " ").replace("'", "").strip()
-    return n
+    n = re.sub(r'[^a-z0-9 ]', ' ', n)
+    return " ".join(n.split())
+
+
+def _team_matches(t1: str, t2: str) -> bool:
+    """
+    FIX [P0-11]: Güvenli takım ismi eşleştirme.
+    Substring/prefix matching kaldırıldı (Paris != Parma, Liverpool != Livorno).
+    """
+    if not t1 or not t2:
+        return False
+    if t1 == t2:
+        return True
+    words1 = set(t1.split())
+    words2 = set(t2.split())
+    if len(words1) >= 2 and words1.issubset(words2):
+        return True
+    if len(words2) >= 2 and words2.issubset(words1):
+        return True
+    if (t1 in t2 or t2 in t1) and min(len(t1), len(t2)) >= 6:
+        # Full word boundary check
+        if f" {t1} " in f" {t2} " or f" {t2} " in f" {t1} ":
+            return True
+    return False
 
 
 def match_pinnacle_odds(pinn_db: dict, match_date: str, ev_takim: str, dep_takim: str) -> dict | None:
     """
     Verilen maç için gerçek Pinnacle oranlarını bulur.
-    Tarih toleransı: Aynı gün veya +-1 gün.
+    FIX [P0-06]: +-1 gün toleransı KALDIRILDI. Sadece aynı gün (exact date).
+    FIX [P0-11]: 5-karakter prefix eşleştirmesi KALDIRILDI.
     """
     if not pinn_db or not match_date:
         return None
@@ -151,26 +181,12 @@ def match_pinnacle_odds(pinn_db: dict, match_date: str, ev_takim: str, dep_takim
     ev_c = _clean_team_name(ev_takim)
     dep_c = _clean_team_name(dep_takim)
 
-    # 1. Aynı gün ara
     cands = pinn_db.get(d_base, [])
     for c in cands:
         ch = c["home_clean"]
         ca = c["away_clean"]
-        if (ch in ev_c or ev_c in ch or ch[:5] == ev_c[:5]) and (ca in dep_c or dep_c in ca or ca[:5] == dep_c[:5]):
+        if _team_matches(ch, ev_c) and _team_matches(ca, dep_c):
             return c
-
-    # 2. Tolerans +-1 gün
-    try:
-        dt = datetime.strptime(d_base, "%Y-%m-%d")
-        for delta in [-1, 1]:
-            d_alt = (dt + pd.Timedelta(days=delta)).strftime("%Y-%m-%d")
-            for c in pinn_db.get(d_alt, []):
-                ch = c["home_clean"]
-                ca = c["away_clean"]
-                if (ch in ev_c or ev_c in ch or ch[:5] == ev_c[:5]) and (ca in dep_c or dep_c in ca or ca[:5] == dep_c[:5]):
-                    return c
-    except Exception:
-        pass
 
     return None
 
@@ -268,6 +284,43 @@ def run_walk_forward_backtest(
     burn_in = min(300, len(all_matches) // 4)
     eval_matches = all_matches[burn_in:]
 
+    # FIX [P0-03]: Fold-local calibrator trained strictly on pre-evaluation burn-in window
+    # Zero leakage: never uses the global calibrator.pkl from disk
+    local_calibrator = None
+    try:
+        from calibration.calibration import train_calibrator
+        burn_in_probs = []
+        burn_in_labels = []
+        for b_mac in all_matches[:burn_in]:
+            try:
+                bm_id = str(b_mac.get("id") or f"{b_mac.get('homeTeam',{}).get('name')}_{b_mac.get('awayTeam',{}).get('name')}_{b_mac.get('utcDate')}")
+                b_hg = int(b_mac["score"]["fullTime"]["home"])
+                b_dg = int(b_mac["score"]["fullTime"]["away"])
+            except Exception:
+                continue
+            b_act_int = 0 if b_hg > b_dg else (1 if b_hg == b_dg else 2)
+            b_elo_info = pit_elo.get(bm_id, {"ev_elo": 1500.0, "dep_elo": 1500.0})
+            b_fark = (b_elo_info["ev_elo"] + 65.0) - b_elo_info["dep_elo"]
+            b_p_h = 1.0 / (1.0 + 10.0 ** (-b_fark / 400.0))
+            b_denge = abs(b_fark) / 400.0
+            b_p_d = 0.27 * math.exp(-b_denge * 1.2)
+            b_p_a = (1.0 - b_p_d) * (1.0 - b_p_h)
+            b_p_h *= (1.0 - b_p_d)
+            b_tot = b_p_h + b_p_d + b_p_a
+            burn_in_probs.append([b_p_h / b_tot, b_p_d / b_tot, b_p_a / b_tot])
+            burn_in_labels.append(b_act_int)
+
+        if len(burn_in_labels) >= 50:
+            local_calibrator = train_calibrator(
+                np.array(burn_in_probs),
+                np.array(burn_in_labels),
+                method="isotonic",
+                save_to_disk=False
+            )
+            logger.info(f"Fold-local calibrator eğitildi: {len(burn_in_labels)} burn-in maçı üzerinden (disk'e yazılmadı)")
+    except Exception as _cal_ex:
+        logger.debug(f"Burn-in local calibration skipped: {_cal_ex}")
+
     bankroll = initial_bankroll
     peak_bankroll = initial_bankroll
     max_drawdown = 0.0
@@ -306,10 +359,11 @@ def run_walk_forward_backtest(
         hg = int(hg)
         dg = int(dg)
         actual_outcome = "HOME" if hg > dg else ("DRAW" if hg == dg else "AWAY")
-        actual_int = 2 if hg > dg else (1 if hg == dg else 0)
-        actual_vector = [1.0 if actual_outcome == "AWAY" else 0.0,
+        # FIX [P1-01]: Canonical class indexing: 0 = HOME, 1 = DRAW, 2 = AWAY
+        actual_int = 0 if hg > dg else (1 if hg == dg else 2)
+        actual_vector = [1.0 if actual_outcome == "HOME" else 0.0,
                          1.0 if actual_outcome == "DRAW" else 0.0,
-                         1.0 if actual_outcome == "HOME" else 0.0]
+                         1.0 if actual_outcome == "AWAY" else 0.0]
 
         # 1. Point-in-Time ELO Olasılıkları
         elo_info = pit_elo.get(m_id, {"ev_elo": 1500.0, "dep_elo": 1500.0})
@@ -321,7 +375,7 @@ def run_walk_forward_backtest(
         p_home_elo *= (1.0 - p_draw_elo)
         tot_elo = p_home_elo + p_draw_elo + p_away_elo
         p_home_elo, p_draw_elo, p_away_elo = p_home_elo / tot_elo, p_draw_elo / tot_elo, p_away_elo / tot_elo
-        elo_vec = [p_away_elo, p_draw_elo, p_home_elo]
+        elo_vec = [p_home_elo, p_draw_elo, p_away_elo]
 
         # 2. Point-in-Time Poisson Olasılıkları
         l_stat = cum_lig_stats[lig]
@@ -339,19 +393,19 @@ def run_walk_forward_backtest(
                 elif h == a: pd_ += p
                 else: pa += p
         tot_p = ph + pd_ + pa
-        pois_vec = [pa / tot_p, pd_ / tot_p, ph / tot_p]
+        pois_vec = [ph / tot_p, pd_ / tot_p, pa / tot_p]
 
-        # 3. Model Ensemble (Point-in-Time Calibrated)
+        # 3. Model Baseline (Point-in-Time Calibrated)
         raw_home = 0.55 * p_home_elo + 0.45 * (ph / tot_p)
         raw_draw = 0.40 * p_draw_elo + 0.60 * (pd_ / tot_p)
         raw_away = 0.55 * p_away_elo + 0.45 * (pa / tot_p)
         raw_tot = raw_home + raw_draw + raw_away
-        raw_vec = np.array([raw_away / raw_tot, raw_draw / raw_tot, raw_home / raw_tot])
+        raw_vec = np.array([raw_home / raw_tot, raw_draw / raw_tot, raw_away / raw_tot])
 
-        # Kalibrasyon pipeline
-        cal_res = apply_probability_pipeline(raw_vec)
-        model_prob_vec = cal_res["probs"] # [p_away, p_draw, p_home]
-        p_away_m, p_draw_m, p_home_m = model_prob_vec[0], model_prob_vec[1], model_prob_vec[2]
+        # Kalibrasyon pipeline (FIX [P0-03]: fold-local calibrator)
+        cal_res = apply_probability_pipeline(raw_vec, calibrator_model=local_calibrator)
+        model_prob_vec = cal_res["probs"] # [p_home, p_draw, p_away]
+        p_home_m, p_draw_m, p_away_m = model_prob_vec[0], model_prob_vec[1], model_prob_vec[2]
 
         # 4. Gerçek Pinnacle Oranlarını Eşle
         pinn_match = match_pinnacle_odds(pinn_db, m_date, ev, dep)
@@ -370,7 +424,7 @@ def run_walk_forward_backtest(
             fair_h = (1.0 / odds_h) / overround
             fair_d = (1.0 / odds_d) / overround
             fair_a = (1.0 / odds_a) / overround
-            market_vec = [fair_a, fair_d, fair_h]
+            market_vec = [fair_h, fair_d, fair_a]
         else:
             if use_real_odds_only:
                 rejection_reasons["missing_real_pinnacle_odds"] += 1
@@ -384,12 +438,12 @@ def run_walk_forward_backtest(
                 fair_h, fair_d, fair_a = 0.333, 0.333, 0.333
                 market_vec = [0.333, 0.333, 0.333]
 
-        # Baseline listelerine kaydet
-        model_preds.append([p_away_m, p_draw_m, p_home_m])
+        # Baseline listelerine kaydet: [HOME=0, DRAW=1, AWAY=2]
+        model_preds.append([p_home_m, p_draw_m, p_away_m])
         market_preds.append(market_vec)
         elo_preds.append(elo_vec)
         poisson_preds.append(pois_vec)
-        prior_preds.append([0.28, 0.26, 0.46]) # Historical league prior
+        prior_preds.append([0.46, 0.26, 0.28]) # Historical league prior: HOME=46%, DRAW=26%, AWAY=28%
         actual_labels.append(actual_int)
 
         # 5. Value Bet Karar Motoru
@@ -495,8 +549,10 @@ def run_walk_forward_backtest(
         total_pnl = sum(b["pnl"] for b in bets)
         win_count = sum(1 for b in bets if b["won"])
         win_rate = win_count / total_bets
-        roi = (total_pnl / initial_bankroll) * 100.0
+        # FIX [Fix 19.1]: ROI is standard betting yield (total_pnl / total_staked)
         yield_pct = (total_pnl / max(total_staked, 1.0)) * 100.0
+        roi = yield_pct
+        bankroll_growth_pct = (total_pnl / initial_bankroll) * 100.0
         avg_clv = float(np.mean(clv_list)) if clv_list else 0.0
         pos_clv_pct = float(np.mean([c > 0 for c in clv_list])) * 100.0 if clv_list else 0.0
 
@@ -508,12 +564,13 @@ def run_walk_forward_backtest(
         else:
             sharpe, sortino = 0.0, 0.0
     else:
-        total_staked = total_pnl = win_count = win_rate = roi = yield_pct = avg_clv = pos_clv_pct = sharpe = sortino = 0.0
+        total_staked = total_pnl = win_count = win_rate = roi = yield_pct = bankroll_growth_pct = avg_clv = pos_clv_pct = sharpe = sortino = 0.0
 
     report = {
         "status": "success",
         "validation_type": "purged_walk_forward_oos",
         "odds_source": "real_pinnacle_historical",
+        "model_type": "elo_poisson_baseline",  # FIX [P0-02]: Truthful labeling, not ML ensemble
         "total_evaluated_matches": len(eval_matches),
         "matches_with_real_pinnacle": len(actual_labels),
         "total_bets": total_bets,
@@ -521,9 +578,11 @@ def run_walk_forward_backtest(
         "win_rate": round(win_rate, 4),
         "initial_bankroll": initial_bankroll,
         "final_bankroll": round(bankroll, 2),
+        "total_staked": round(total_staked, 2),
         "total_pnl": round(total_pnl, 2),
         "roi_pct": round(roi, 2),
         "yield_pct": round(yield_pct, 2),
+        "bankroll_growth_pct": round(bankroll_growth_pct, 2),
         "max_drawdown_pct": round(max_drawdown * 100.0, 2),
         "sharpe_ratio": round(sharpe, 2),
         "sortino_ratio": round(sortino, 2),
@@ -539,7 +598,7 @@ def run_walk_forward_backtest(
             "league_prior": m_prior,
             "elo_model": m_elo,
             "poisson_model": m_pois,
-            "new_calibrated_ensemble": m_model
+            "elo_poisson_baseline": m_model  # FIX [P0-02]: Explicit truthful baseline label
         }
     }
 

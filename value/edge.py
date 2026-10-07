@@ -144,43 +144,8 @@ def value_hesapla(olasilik: float, oran: float, fair_p: float = None,
     else:
         p_market = raw_implied  # Fallback: vig yok varsay
 
-    # Import shrinkage parameters from settings
-    try:
-        from config.settings import (
-            SHRINKAGE_MODEL_WEIGHT, LIG_VERIMLILIK,
-            LIG_VERIMLILIK_VARSAYILAN, LIG_MAX_EDGE, LIG_MAX_EDGE_VARSAYILAN
-        )
-    except ImportError:
-        SHRINKAGE_MODEL_WEIGHT = 0.55
-        LIG_VERIMLILIK = {}
-        LIG_VERIMLILIK_VARSAYILAN = 0.85
-        LIG_MAX_EDGE = {}
-        LIG_MAX_EDGE_VARSAYILAN = 0.05
-
-    # League-adjusted model weight
-    # More efficient league → lower α → more trust in market
-    league_eff = LIG_VERIMLILIK.get(lig_kodu, LIG_VERIMLILIK_VARSAYILAN)
-    alpha = SHRINKAGE_MODEL_WEIGHT * (1.0 - league_eff * 0.3)
-    alpha = max(0.30, min(0.60, alpha))  # Clamp to [0.30, 0.60]
-
-    p_shrunk = alpha * olasilik + (1.0 - alpha) * p_market
-    edge = p_shrunk - p_market
-
-    # KRİTİK: %20 üzeri edge → veri hatası veya bad odds → NO BET
-    if edge > 0.20:
-        import warnings as _w
-        _w.warn(
-            f"[value_bet] Aşırı edge tespit edildi: {edge:.3f} (>{0.20}) — "
-            f"muhtemelen veri hatası veya bad odds. NO BET.",
-            RuntimeWarning, stacklevel=2
-        )
-        return 0.0
-
-    # League-specific max edge cap
-    max_edge = LIG_MAX_EDGE.get(lig_kodu, LIG_MAX_EDGE_VARSAYILAN)
-    edge = min(max_edge, edge)
-
-    return edge
+    from value.value_engine import calculate_model_market_edge
+    return calculate_model_market_edge(p_model=olasilik, fair_p=p_market, lig_kodu=lig_kodu)
 
 
 def _ci_genislik(ci: tuple) -> float:

@@ -66,9 +66,17 @@ def _korelasyon_carpan(bets: list) -> float:
 def _portfolio_ev(bets: list) -> float:
     """
     Portfolio-level expected value (sum of stake_size * EV, penalized by correlation).
+
+    FIX [P0-09]: Bet objects use field 'p_secim', NOT 'olasilik'.
+    Previous code always defaulted to 0.5 probability, making portfolio
+    selection completely wrong. Now reads correct field with fallback chain.
     """
     total_ev = sum(
-        _ev_hesapla(b.get("olasilik", 0.5), b.get("oran", 2.0)) * b.get("size", b.get("kelly_size", 0.01))
+        _ev_hesapla(
+            # Correct field priority: p_secim → olasilik → expected_value inverse → 0.5 emergency
+            b.get("p_secim", b.get("olasilik", b.get("model_p", 0.5))),
+            b.get("oran", 2.0)
+        ) * b.get("size", b.get("kelly_size", 0.01))
         for b in bets
     )
     corr_pen = _korelasyon_carpan(bets)

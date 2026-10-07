@@ -35,6 +35,7 @@ jobs:
 
     - name: 🧪 Kod Doğrulama & Test Suite
       run: |
+        set -e
         python -m compileall -q .
         pytest -v tests/
 

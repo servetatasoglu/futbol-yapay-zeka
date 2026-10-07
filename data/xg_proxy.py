@@ -24,7 +24,7 @@ Yöntem: Dixon-Coles regresyon tabanlı attack/defence rating
 """
 
 import os, sys, json, math
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from collections import defaultdict
 
 BASE_DIR    = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -38,19 +38,28 @@ def _agirlik(gun_fark: int) -> float:
     return math.exp(-gun_fark / 365.0)
 
 
-def _dixon_coles_hesapla(maclar: list, lig_kodu: str) -> dict:
+def _dixon_coles_hesapla(maclar: list, lig_kodu: str, cutoff_date: str = None) -> dict:
     """
     Iterative Dixon-Coles attack/defence rating hesabı.
     1000+ maçlık veriyle ~Understat xG'ye yakın sonuç verir.
+    FIX [P0-04]: Point-in-time calculation with optional cutoff_date to prevent future leakage.
     """
     if not maclar:
         return {}
 
-    bugun = datetime.utcnow()
-    gecerli = [m for m in maclar if m.get("status") == "FINISHED"]
-    
+    if cutoff_date:
+        ref_date = datetime.strptime(str(cutoff_date)[:10], "%Y-%m-%d")
+        cutoff_str = str(cutoff_date)[:10]
+        gecerli = [
+            m for m in maclar
+            if m.get("status") == "FINISHED" and m.get("utcDate", "9999")[:10] < cutoff_str
+        ]
+    else:
+        ref_date = datetime.now(timezone.utc).replace(tzinfo=None)
+        gecerli = [m for m in maclar if m.get("status") == "FINISHED"]
+
     # Son 3 yıl (çok eski maçlar modeli kirletir)
-    sinir = (bugun - timedelta(days=3 * 365)).strftime("%Y-%m-%d")
+    sinir = (ref_date - timedelta(days=3 * 365)).strftime("%Y-%m-%d")
     gecerli = [m for m in gecerli 
                if m.get("utcDate", "9999")[:10] >= sinir]
 
@@ -75,7 +84,7 @@ def _dixon_coles_hesapla(maclar: list, lig_kodu: str) -> dict:
         
         try:
             tarih   = mac.get("utcDate", "")[:10]
-            gun_fark = (bugun - datetime.strptime(tarih, "%Y-%m-%d")).days
+            gun_fark = max(0, (ref_date - datetime.strptime(tarih, "%Y-%m-%d")).days)
             ag = _agirlik(gun_fark)
         except Exception:
             ag = 0.5
@@ -145,12 +154,13 @@ def _dixon_coles_hesapla(maclar: list, lig_kodu: str) -> dict:
     return takimlar
 
 
-def xg_proxy_hesapla(maclar_db: dict = None) -> dict:
+def xg_proxy_hesapla(maclar_db: dict = None, cutoff_date: str = None) -> dict:
     """
-    Tüm ligler için xG proxy hesapla ve cache'e yaz.
+    Tüm ligler için xG proxy hesapla.
     
     Args:
         maclar_db: {lig_kodu: [maç_listesi]} — None ise dosyadan yüklenir
+        cutoff_date: "YYYY-MM-DD" point-in-time sınırı (backtest için geleceği sızdırmaz)
     
     Returns:
         {takim_adi: {xg, xga, xg_diff, xg_rank, mac, lig, kaynak}}
@@ -163,41 +173,49 @@ def xg_proxy_hesapla(maclar_db: dict = None) -> dict:
 
     tum_takimlar = {}
     for lig_kodu, maclar in maclar_db.items():
-        lig_takimlari = _dixon_coles_hesapla(maclar, lig_kodu)
+        lig_takimlari = _dixon_coles_hesapla(maclar, lig_kodu, cutoff_date=cutoff_date)
         tum_takimlar.update(lig_takimlari)
-        if lig_takimlari:
-            print(f"  📊 xG proxy [{lig_kodu}]: {len(lig_takimlari)} takım")
 
-    # Cache'e yaz
-    os.makedirs(os.path.dirname(XG_CACHE), exist_ok=True)
-    with open(XG_CACHE, "w", encoding="utf-8") as f:
-        json.dump({
-            "zaman": __import__("time").time(),
-            "takimlar": tum_takimlar,
-            "toplam": len(tum_takimlar)
-        }, f, ensure_ascii=False, indent=2)
+    # FIX [P0-04]: Sadece canlı (cutoff belirtilmemiş) çalışmalarda disk cache'e yaz
+    if cutoff_date is None:
+        os.makedirs(os.path.dirname(XG_CACHE), exist_ok=True)
+        with open(XG_CACHE, "w", encoding="utf-8") as f:
+            json.dump({
+                "zaman": __import__("time").time(),
+                "takimlar": tum_takimlar,
+                "toplam": len(tum_takimlar)
+            }, f, ensure_ascii=False, indent=2)
 
-    print(f"  ✅ xG proxy toplamı: {len(tum_takimlar)} takım → {XG_CACHE}")
     return tum_takimlar
 
 
 def xg_ara(takim_adi: str, xg_db: dict) -> dict | None:
-    """xG veritabanında takım ara — fuzzy match dahil."""
+    """xG veritabanında takım ara — güvenli tam ve kelime bazlı eşleşme."""
     if not xg_db or not takim_adi:
         return None
     if takim_adi in xg_db:
         return xg_db[takim_adi]
     
-    takim_norm = takim_adi.lower().replace("fc ", "").replace(" fc", "").strip()
+    def _clean(t):
+        import unicodedata, re
+        t = unicodedata.normalize('NFKD', str(t)).encode('ASCII', 'ignore').decode('utf-8').lower()
+        for noise in [" fc", " afc", " cf", " cd", " sc", " ud", " ac"]:
+            t = t.replace(noise, "")
+        t = re.sub(r'[^a-z0-9 ]', ' ', t)
+        return " ".join(t.split())
+
+    t_norm = _clean(takim_adi)
     for db_isim, veri in xg_db.items():
-        db_norm = db_isim.lower().replace("fc ", "").replace(" fc", "").strip()
-        # Tam eşleşme
-        if takim_norm == db_norm:
+        db_norm = _clean(db_isim)
+        if t_norm == db_norm:
             return veri
-        # Prefix eşleşmesi (Manchester City → Manchester)
-        if (len(takim_norm) >= 4 and db_norm.startswith(takim_norm[:4])):
+        words_t = set(t_norm.split())
+        words_db = set(db_norm.split())
+        if len(words_t) >= 2 and words_t.issubset(words_db):
             return veri
-        if (len(db_norm) >= 4 and takim_norm.startswith(db_norm[:4])):
+        if len(words_db) >= 2 and words_db.issubset(words_t):
+            return veri
+        if min(len(t_norm), len(db_norm)) >= 6 and (f" {t_norm} " in f" {db_norm} " or f" {db_norm} " in f" {t_norm} "):
             return veri
     return None
 

@@ -312,9 +312,11 @@ def run_pipeline(mock_mode=False):
         logger.info(f"[GATE] Sharpe: {sharpe_g['sebep']}")
         logger.info(f"[GATE] CLV   : {clv_g['sebep']}")
         if not sharpe_g["gecti"]:
-            logger.warning("[GATE] SHARPE GATE BAŞARISIZ — Paper Mode aktif: Sinyal üretimine devam ediliyor.")
+            logger.warning("[GATE] SHARPE GATE BAŞARISIZ — Execution bloke, Paper Mode aktif.")
+            _system_blocked = True
         if not clv_g["gecti"]:
-            logger.warning("[GATE] CLV GATE BAŞARISIZ — Paper Mode aktif: Sinyal üretimine devam ediliyor.")
+            logger.warning("[GATE] CLV GATE BAŞARISIZ — Execution bloke, Paper Mode aktif.")
+            _system_blocked = True
     except Exception as _gate_ex:
         logger.warning(f"[GATE] Gate kontrolü atlandı: {_gate_ex}")
 
@@ -552,14 +554,25 @@ def run_pipeline(mock_mode=False):
         btts_tier   = c_pred.get("btts_sharp_tier", "NO_SHARP")
         h2h_tier    = c_pred.get("sharp_tier",      "NO_SHARP")
 
+        # FIX [P0-08]: Vig-normalized market fair probabilities via canonical value_engine
+        from value.value_engine import (
+            calculate_market_fair_probability,
+            calculate_two_way_fair_probability,
+            calculate_model_market_edge,
+            calculate_expected_value,
+        )
+        fair_h, fair_d, fair_a = calculate_market_fair_probability(ev_oran, ber_oran, dep_oran)
+        fair_o25, fair_u25 = calculate_two_way_fair_probability(o25_oran, u25_oran)
+        fair_b_yes, fair_b_no = calculate_two_way_fair_probability(b_yes_oran, b_no_oran)
+
         opsiyonlar = [
-            ("Ev Sahibi Kazanır", ev_oran, p_ev, h2h_tier),
-            ("Beraberlik",        ber_oran, p_ber, h2h_tier),
-            ("Deplasman Kazanır", dep_oran, p_dep, h2h_tier),
-            ("2.5 Üst", o25_oran,   p_o25,   ou_tier   if ou_sinyal   == "OVER"     else h2h_tier),
-            ("2.5 Alt", u25_oran,   p_u25,   ou_tier   if ou_sinyal   == "UNDER"    else h2h_tier),
-            ("KG Var",  b_yes_oran, p_b_yes, btts_tier if btts_sinyal == "BTTS_YES" else h2h_tier),
-            ("KG Yok",  b_no_oran,  p_b_no,  btts_tier if btts_sinyal == "BTTS_NO"  else h2h_tier),
+            ("Ev Sahibi Kazanır", ev_oran, p_ev, fair_h, h2h_tier),
+            ("Beraberlik",        ber_oran, p_ber, fair_d, h2h_tier),
+            ("Deplasman Kazanır", dep_oran, p_dep, fair_a, h2h_tier),
+            ("2.5 Üst", o25_oran,   p_o25,   fair_o25,   ou_tier   if ou_sinyal   == "OVER"     else h2h_tier),
+            ("2.5 Alt", u25_oran,   p_u25,   fair_u25,   ou_tier   if ou_sinyal   == "UNDER"    else h2h_tier),
+            ("KG Var",  b_yes_oran, p_b_yes, fair_b_yes, btts_tier if btts_sinyal == "BTTS_YES" else h2h_tier),
+            ("KG Yok",  b_no_oran,  p_b_no,  fair_b_no,  btts_tier if btts_sinyal == "BTTS_NO"  else h2h_tier),
         ]
 
         # FIX-3: Build composite confidence once per match
@@ -571,20 +584,20 @@ def run_pipeline(mock_mode=False):
         display_option = None
         display_score = -999.0
 
-        for isim, oran, p_model, aktif_tier in opsiyonlar:
+        for isim, oran, p_model, fair_p, aktif_tier in opsiyonlar:
             if oran <= 1.0 or _is_fake_odds(oran):
                 continue
 
-            market_p = 1.0 / oran if oran > 0 else 0
-            prob_edge = p_model - market_p
-            ev = (p_model * oran) - 1.0
-            edge = prob_edge  # True probability edge
+            market_p = fair_p
+            edge = calculate_model_market_edge(p_model, fair_p, lig_kodu=lig)
+            prob_edge = edge
+            ev = calculate_expected_value(p_model, oran)
 
             # Display için en iyi seçeneği her zaman kaydet
             _d_score = (ev * 100.0) * confidence
             if _d_score > display_score:
                 display_score = _d_score
-                display_option = (isim, oran, p_model, prob_edge, ev, aktif_tier)
+                display_option = (isim, oran, p_model, fair_p, prob_edge, ev, aktif_tier)
 
             # --- SIKI KURUMSAL FİLTRELER (Sadece Bahis İçin) ---
             if oran < 1.30 or oran > 5.00:
@@ -634,11 +647,11 @@ def run_pipeline(mock_mode=False):
 
             if bet_score > best_score:
                 best_score  = bet_score
-                best_option = (isim, oran, p_model, prob_edge, ev, aktif_tier)
+                best_option = (isim, oran, p_model, fair_p, prob_edge, ev, aktif_tier)
 
         # Dashboard UI için Display Bet
         if display_option:
-            d_isim, d_oran, d_p_model, d_prob_edge, d_ev, d_aktif_tier = display_option
+            d_isim, d_oran, d_p_model, d_fair_p, d_prob_edge, d_ev, d_aktif_tier = display_option
             d_obj = c_pred.copy()
             d_obj["tahmin"]       = d_isim
             d_obj["edge"]         = round(d_prob_edge, 4)
@@ -648,8 +661,8 @@ def run_pipeline(mock_mode=False):
             d_obj["oran"]         = d_oran
             d_obj["p_secim"]      = round(d_p_model, 4)
             d_obj["p_shrunk"]     = round(d_p_model, 4)
-            d_obj["market_p"]     = round(1.0 / d_oran, 4) if d_oran > 0 else 0
-            d_obj["p_fark"]       = round(d_p_model - (1.0 / d_oran if d_oran > 0 else 0), 4)
+            d_obj["market_p"]     = round(d_fair_p, 4)
+            d_obj["p_fark"]       = round(d_p_model - d_fair_p, 4)
             d_obj["overround"]    = round(c_pred.get("over_round", 1.05), 4)
             d_obj["uncertainty"]  = round(1.0 - confidence, 4)
             d_obj["sharp_uyumlu"] = d_aktif_tier in ("ELITE", "STRONG")
@@ -658,7 +671,7 @@ def run_pipeline(mock_mode=False):
             d_obj["confidence"]   = round(confidence * 100, 2)
             d_obj["veri_kaynak"]  = "MARKET_DRIVEN_GOALS"
             d_obj["analiz"]       = analiz_metni_uret(
-                d_isim, d_p_model, 1.0 / d_oran if d_oran > 0 else 0, d_prob_edge, d_aktif_tier,
+                d_isim, d_p_model, d_fair_p, d_prob_edge, d_aktif_tier,
                 c_pred.get("lambda_top", 0), 0.0
             )
             d_obj["zaman"] = datetime.now().strftime("%Y-%m-%dT%H:%M")
@@ -671,7 +684,7 @@ def run_pipeline(mock_mode=False):
         if not best_option:
             continue
 
-        isim, oran, p_model, edge, ev, aktif_tier = best_option
+        isim, oran, p_model, fair_p, edge, ev, aktif_tier = best_option
 
         bet_obj = c_pred.copy()
         bet_obj["tahmin"]       = isim
@@ -679,8 +692,8 @@ def run_pipeline(mock_mode=False):
         bet_obj["oran"]         = oran
         bet_obj["p_secim"]      = round(p_model, 4)
         bet_obj["p_shrunk"]     = round(p_model, 4)
-        bet_obj["market_p"]     = round(1.0 / oran, 4) if oran > 0 else 0
-        bet_obj["p_fark"]       = round(p_model - (1.0 / oran if oran > 0 else 0), 4)
+        bet_obj["market_p"]     = round(fair_p, 4)
+        bet_obj["p_fark"]       = round(p_model - fair_p, 4)
         bet_obj["overround"]    = round(c_pred.get("over_round", 1.05), 4)
         bet_obj["uncertainty"]  = round(1.0 - confidence, 4)
         bet_obj["sharp_uyumlu"] = aktif_tier in ("ELITE", "STRONG")
@@ -733,12 +746,21 @@ def run_pipeline(mock_mode=False):
 
     # ─── v3.0: PORTFOLIO OPTIMIZER ────────────────────────────────────
     # Select optimal correlated-adjusted subset (max 3 bets, max 1 per league).
+    # FIX [P0-10]: bankroll is read from canonical source now (later in function)
+    # We use a pre-read value here to avoid circular dependency.
+    _port_bankroll = 5000.0  # Will be overridden by canonical bankroll read below
+    try:
+        from risk.bankroll import get_current_bankroll as _gbr
+        _port_bankroll = _gbr()
+    except Exception:
+        pass
+
     if value_bets:
         try:
             from risk.portfolio_optimizer import optimize_portfolio
             port_result = optimize_portfolio(
                 candidate_bets=value_bets,
-                bankroll=1000.0,
+                bankroll=_port_bankroll,
             )
             value_bets = port_result["secilen_bahisler"]
             _port_rejected = port_result["red_edilenler"]
@@ -801,8 +823,18 @@ def run_pipeline(mock_mode=False):
         logger.warning(f"  ⚠️ Execution engine başlatılırken hata: {e}")
         
     final_executed = []
-    bankroll = 1000.0
-    
+    # FIX [P0-10]: Read canonical bankroll from persistent state, NOT hardcoded 1000.0
+    # config/settings.py::BANKROLL_BASLANGIC = 5000, risk/bankroll.py::BASLANGIC_KASA = 5000
+    # main.py had a conflicting hardcoded 1000.0 here — now unified.
+    try:
+        from risk.bankroll import get_current_bankroll
+        bankroll = get_current_bankroll()
+    except Exception as _bk_ex:
+        from config.settings import BANKROLL_BASLANGIC
+        bankroll = BANKROLL_BASLANGIC
+        logger.warning(f"  ⚠️ Bankroll state okunamadı, settings.py default kullanılıyor ({bankroll}): {_bk_ex}")
+
+
     for bet in value_bets:
         if _EXEC_ENGINE_VAR:
             try:
@@ -1016,83 +1048,23 @@ def run_pipeline(mock_mode=False):
     except Exception as _re:
         logger.warning(f"  ⚠️ Result Resolver çalışamadı: {_re}")
 
-    # ─── CLV AUTO-FETCH — Geçmiş bahisler için closing odds hesapla ────
+    # ─── CLV SYNC — Gerçek pre-kickoff closing odds ile güncelleme ────
+    # FIX [P0-01]: Kaldırıldı: odds_cache.json (canlı/güncel oranlar) kapanış oranı DEĞİLDİR.
+    # Closing odds sadece maç başlamadan önce (pre-kickoff) data/closing_odds.py tarafından
+    # toplanan snapshot'lardan (odds_cache_closing.json) beslenmelidir.
     try:
-        _clv_updated = 0
-        CLV_LOG_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data", "clv_bet_log.json")
-        with open(CLV_LOG_PATH, "r", encoding="utf-8") as f:
-            _clv_db = _json.load(f)
-        
-        # Mevcut odds cache'inden güncel oranları al
-        _odds_cache_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data", "odds_cache.json")
-        _current_odds = {}
-        if os.path.exists(_odds_cache_path):
-            with open(_odds_cache_path, "r", encoding="utf-8") as f:
-                _oc = _json.load(f)
-            for _m in _oc.get("maclar", []):
-                _key = f"{_m.get('ev','')}|{_m.get('dep','')}"
-                _current_odds[_key] = {
-                    "ev_oran": _m.get("ev_oran", 0),
-                    "ber_oran": _m.get("ber_oran", 0),
-                    "dep_oran": _m.get("dep_oran", 0),
-                    "over25_oran": _m.get("over25_oran", 0),
-                    "under25_oran": _m.get("under25_oran", 0),
-                    "btts_yes_oran": _m.get("btts_yes_oran", 0),
-                    "btts_no_oran": _m.get("btts_no_oran", 0),
-                }
-        
-        for _b in _clv_db.get("bahisler", []):
-            if _b.get("clv") is not None:
-                continue  # Zaten CLV hesaplanmış
-            
-            _bkey = f"{_b.get('ev','')}|{_b.get('dep','')}"
-            _odds = _current_odds.get(_bkey)
-            if not _odds:
-                continue
-            
-            _tahmin = _b.get("tahmin", "")
-            _placed = _b.get("oran_alinma", 0)
-            if not _placed or _placed <= 1.0:
-                continue
-            
-            # Tahmin tipine göre closing oran seç
-            if "2.5 Üst" in _tahmin or _tahmin == "OVER":
-                _closing = _odds.get("over25_oran", 0)
-            elif "2.5 Alt" in _tahmin or _tahmin == "UNDER":
-                _closing = _odds.get("under25_oran", 0)
-            elif "KG Var" in _tahmin or _tahmin == "BTTS_YES":
-                _closing = _odds.get("btts_yes_oran", 0)
-            elif "KG Yok" in _tahmin or _tahmin == "BTTS_NO":
-                _closing = _odds.get("btts_no_oran", 0)
-            elif "Ev Sahibi" in _tahmin or _tahmin == "HOME":
-                _closing = _odds.get("ev_oran", 0)
-            elif "Beraberlik" in _tahmin or _tahmin == "DRAW":
-                _closing = _odds.get("ber_oran", 0)
-            elif "Deplasman" in _tahmin or _tahmin == "AWAY":
-                _closing = _odds.get("dep_oran", 0)
+        from data.closing_odds import _load_cache as _load_closing_cache, _clv_tracker_guncelle
+        _c_cache = _load_closing_cache()
+        if _c_cache:
+            _clv_updated = _clv_tracker_guncelle(_c_cache)
+            if _clv_updated > 0:
+                logger.info(f"  ✅ CLV: {_clv_updated} bahis meşru pre-kickoff closing snapshot ile güncellendi")
             else:
-                continue  # Bilinmeyen tahmin tipi
-            
-            if _closing and _closing > 1.0:
-                _b["oran_kapanis"] = _closing
-                _b["oran_closing"] = _closing
-                _b["clv"] = round(_placed / _closing - 1, 4)
-                _clv_updated += 1
-        
-        if _clv_updated > 0:
-            with open(CLV_LOG_PATH, "w", encoding="utf-8") as f:
-                _json.dump(_clv_db, f, ensure_ascii=False, indent=2)
-            
-            # CLV özet raporu
-            _all_clv = [b["clv"] for b in _clv_db["bahisler"] if b.get("clv") is not None]
-            _avg_clv = sum(_all_clv) / len(_all_clv) if _all_clv else 0
-            _pct_pos = sum(1 for c in _all_clv if c > 0) / len(_all_clv) * 100 if _all_clv else 0
-            logger.info(f"  📊 CLV Auto-Update: {_clv_updated} bahis güncellendi")
-            logger.info(f"  📊 CLV Özet: Ort={_avg_clv*100:+.2f}% | Pozitif={_pct_pos:.0f}% | N={len(_all_clv)}")
+                logger.info("  ℹ️  CLV: Kapanış snapshot'ı bekleyen yeni bahis yok")
         else:
-            logger.info(f"  ℹ️  CLV: Güncellenecek bahis yok")
+            logger.info("  ℹ️  CLV: Henüz kayıtlı closing snapshot cache bulunamadı")
     except Exception as _clv_ex:
-        logger.warning(f"  ⚠️ CLV Auto-Fetch hatası: {_clv_ex}")
+        logger.warning(f"  ⚠️ CLV güncelleme hatası: {_clv_ex}")
 
     # ─── DASHBOARD DATA GENERATION ─────────────────────────────────────
     try:

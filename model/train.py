@@ -343,9 +343,11 @@ def _veri_hazirla(ham_veri, istatistikler=None, elo_sonuclari=None):
             atlalanlar += 1
             continue
 
-        if ev_gol > dep_gol:    etiket = 2
+        # FIX [P1-01]: Canonical class indexing across entire codebase:
+        # 0 = HOME (1), 1 = DRAW (X), 2 = AWAY (2)
+        if ev_gol > dep_gol:    etiket = 0
         elif ev_gol == dep_gol: etiket = 1
-        else:                   etiket = 0
+        else:                   etiket = 2
 
         # Takımın bu maçtan önceki maç sayısı kontrolü (min 3 maç)
         ev_gecmis = kumulatif_maclar[ev]
@@ -648,6 +650,13 @@ def egit(ham_veri: dict, istatistikler: dict,
         "dogruluk":   ort_dogruluk,
         "mac_sayisi": len(X),
         "tip":        list(modeller.keys()),
+        # FIX [P1-07]: Institutional model artifact metadata
+        "created_at": datetime.now(timezone.utc).isoformat(),
+        "model_version": "v4.0-institutional",
+        "feature_version": "v4.0-pit",
+        "features": FEATURE_ISIMLERI,
+        "classes": [0, 1, 2],
+        "class_names": ["HOME", "DRAW", "AWAY"],
     }
     with open(MODEL_DOSYASI, "wb") as f:
         pickle.dump(meta, f)
@@ -704,7 +713,8 @@ def tahmin_yap(ev_ist, dep_ist, ev_elo, dep_elo,
             p       = model.predict_proba(feat_np)[0]
             classes = list(model.classes_) if hasattr(model, "classes_") else [0, 1, 2]
             p_map   = dict(zip(classes, p))
-            probalar.append([p_map.get(2, 0.33), p_map.get(1, 0.33), p_map.get(0, 0.33)])
+            # FIX [P1-01]: Canonical class order: [0=HOME, 1=DRAW, 2=AWAY]
+            probalar.append([p_map.get(0, 0.33), p_map.get(1, 0.33), p_map.get(2, 0.33)])
         except Exception:
             continue
 

@@ -33,7 +33,7 @@ TIMELINE_AKTIF = True   # Set False to disable timeline integration
 # ── Collection window ─────────────────────────────────────────────
 # Poll windows: matches within this many hours before kickoff
 CLOSING_WINDOW_H = 4.0   # Start collecting closing odds 4h before kickoff
-CLOSING_CUTOFF_H = -0.5  # Stop 30min after kickoff (avoids in-play odds)
+CLOSING_CUTOFF_H = 0.0   # FIX [P0-12]: Stop strictly at kickoff (0h); never capture in-play odds
 
 # ── Sharp bookmakers in priority order ───────────────────────────
 SHARP_PRIORITY = ["pinnacle", "betfair_ex_eu", "betfair", "matchbook"]

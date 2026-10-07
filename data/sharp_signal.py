@@ -1,28 +1,35 @@
 # data/sharp_signal.py
 """
-Sharp Money Sinyal Üreteci — Cross-Sectional Analiz
+Piyasa Fiyat Farkı Sinyali — Cross-Sectional Analiz
 ════════════════════════════════════════════════════════════════════
-SORUN:
-  odds_movement.py zaman serisi tabanlı → ama cache 6 saat olduğu için
-  açılış ve kapanış oranı aynı → hareket=0 → sharp_sinyal="YOK" (hep!)
+AÇIKLAMA:
+  Bu modül "sharp money" değil, PINNACLE-SOFT PRICE DISCREPANCY hesaplar.
+  Pinnacle'ın implied probability'si soft kitaplardan anlamlı ölçüde
+  yüksekse bu tarafta piyasa konsensüs farkı vardır.
 
-ÇÖZÜM:
-  Zaman serisine gerek YOK. Aynı anda birden fazla bahisçi oranı var.
-  Pinnacle (sharp kitap) vs soft kitaplar (bet365, unibet, bwin)
-  arasındaki implied probability farkını hesapla.
+  Bu fark gerçek "sharp money" akışının dolaylı bir proxy'sidir;
+  ancak doğrudan kanıtı değildir. Live betting volume, bet timing,
+  account flagging bilgisi olmadan gerçek sharp money teyit edilemez.
 
-  Pinnacle bir tarafa daha düşük oran (= daha yüksek olasılık) veriyorsa,
-  o taraf "sharp money" tarafıdır.
+SORUN (odds_movement.py):
+  Zaman serisi tabanlı hareket hesabı cache 6 saat olduğu için
+  açılış ve kapanış oranı aynı gelir → hareket=0 → sinyal="YOK" (hep!).
+  Bu modül bunun yerine anlık cross-sectional fark kullanır.
 
 MANTIK:
-  1. Pinnacle implied prob hesapla (vig-free)
-  2. Soft kitaplar ortalaması hesapla (vig-free)
+  1. Pinnacle implied prob hesapla (vig-free normalizasyon)
+  2. Soft kitaplar ağırlıksız ortalamasını hesapla (vig-free)
   3. Fark = Pinnacle_prob - Soft_prob
-  4. Fark > +%2 → o taraf sharp side
+  4. Fark > %0.8 (WEAK), %1.2 (STRONG), %2.0 (ELITE) → tier belirlenir
 
-AUDIT BULGUSU:
-  Sharp uyumlu tahminler %63.1 isabet (%44'e karşı)
-  → Bu modül audit'in keşfettiği en güçlü sinyali CANLIYA taşır.
+DİKKAT - DOĞRULANMAMIŞ CLAIM:
+  Eski kodda "Sharp uyumlu tahminler %63.1 isabet" iddiası vardı.
+  Bu rakam kod ile test edilmemiş, bir markdown audit'ten kopyalanmıştır.
+  OTORITE OLARAK KABUL EDİLMEZ. Gerçek out-of-sample backtest yapılmalıdır.
+
+  Gerçek walk-forward sonuçları (backtesting/walk_forward.py):
+  - Model yield: -3.12% | CLV: -1.13% | Sharpe: -0.77
+  - Bu sinyal mevcut backtest'e entegre edilmemiştir.
 
 KULLANIM:
   from data.sharp_signal import sharp_sinyal_hesapla

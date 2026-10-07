@@ -158,21 +158,21 @@ class CalibratorDict(dict):
         return new_probs[0] if is_1d else new_probs
 
 
-def train_calibrator_oof(X_oof_probs: np.ndarray, y_true: np.ndarray, method: str = "isotonic") -> CalibratorDict:
+def train_calibrator_oof(X_oof_probs: np.ndarray, y_true: np.ndarray, method: str = "isotonic", save_to_disk: bool = True) -> CalibratorDict:
     """
     YALNIZCA Out-Of-Fold (OOF) cross-validation tahminleri ile kalibratör eğitir.
     In-sample eğitim sızıntısını kesinlikle engeller.
     """
-    return train_calibrator(X_oof_probs, y_true, method=method, is_oof=True)
+    return train_calibrator(X_oof_probs, y_true, method=method, is_oof=True, save_to_disk=save_to_disk)
 
 
-def train_calibrator(X_probs, y_true, method="isotonic", is_oof=False):
+def train_calibrator(X_probs, y_true, method="isotonic", is_oof=False, save_to_disk: bool = True):
     """
     X_probs: shape (n_samples, n_classes) — uncalibrated ensemble probs
     y_true : shape (n_samples,)           — integer class labels (0,1,2)
 
     One-vs-Rest isotonic/platt/beta veya multi-class temperature scaling.
-    Kaydedilir: data/calibrator.pkl
+    Kaydedilir: data/calibrator.pkl (save_to_disk=True ise)
     """
     if not _SKLEARN_VAR:
         raise CalibrationError("sklearn yok — isotonic kalibrasyon eğitilemez")
@@ -238,9 +238,10 @@ def train_calibrator(X_probs, y_true, method="isotonic", is_oof=False):
 
             calibrators[c] = {"model": cal, "method": method}
 
-    os.makedirs(os.path.dirname(CALIBRATOR_PATH), exist_ok=True)
-    with open(CALIBRATOR_PATH, "wb") as f:
-        pickle.dump(calibrators, f)
+    if save_to_disk:
+        os.makedirs(os.path.dirname(CALIBRATOR_PATH), exist_ok=True)
+        with open(CALIBRATOR_PATH, "wb") as f:
+            pickle.dump(calibrators, f)
 
     return calibrators
 
@@ -289,17 +290,24 @@ def _tiered_overconfidence_fix(probs: np.ndarray) -> np.ndarray:
 # 3. CALIBRATION TRUST GUARD
 # ─────────────────────────────────────────────────────────────────────────────
 
-def _is_calibration_trustworthy(probs_before: np.ndarray) -> bool:
+def _is_calibration_trustworthy(probs_before: np.ndarray, calibrator_model: "CalibratorDict | None" = None) -> bool:
     """
-    calibrator.pkl'yi kullanmadan önce güvenilirlik kontrolü.
+    calibrator'ı kullanmadan önce güvenilirlik kontrolü.
     False döndürürse apply_calibration çağrısı SKIP edilir.
-
-    Kontroller:
-      1. Dosya var mı?
-      2. Çok eski mi? (> _CAL_MAX_AGE_DAYS)
-      3. Dry-run: kalibre edilmiş max, raw max'ı _CAL_AMPLIFICATION_THRESHOLD kadar artırıyor mu?
-         → artırıyorsa trustworthy=False
     """
+    if calibrator_model is not None:
+        try:
+            cal_result = _raw_apply_calibration(probs_before, calibrator_model=calibrator_model)
+            if cal_result is None:
+                return False
+            raw_max = float(probs_before.max())
+            cal_max = float(cal_result.max())
+            if cal_max > raw_max + _CAL_AMPLIFICATION_THRESHOLD:
+                return False
+            return True
+        except Exception:
+            return False
+
     if not os.path.exists(CALIBRATOR_PATH):
         return False
 
@@ -322,15 +330,18 @@ def _is_calibration_trustworthy(probs_before: np.ndarray) -> bool:
     return True
 
 
-def _raw_apply_calibration(probs: np.ndarray) -> "np.ndarray | None":
+def _raw_apply_calibration(probs: np.ndarray, calibrator_model: "CalibratorDict | None" = None) -> "np.ndarray | None":
     """Dahili — trust check ve diğer yerlerde kullanmak için pure calibration."""
-    if not _SKLEARN_VAR or not os.path.exists(CALIBRATOR_PATH):
+    if calibrator_model is not None:
+        calibrators = calibrator_model
+    elif not _SKLEARN_VAR or not os.path.exists(CALIBRATOR_PATH):
         return None
-    try:
-        with open(CALIBRATOR_PATH, "rb") as f:
-            calibrators = pickle.load(f)
-    except Exception:
-        return None
+    else:
+        try:
+            with open(CALIBRATOR_PATH, "rb") as f:
+                calibrators = pickle.load(f)
+        except Exception:
+            return None
 
     probs_arr = np.array(probs, dtype=np.float64)
     is_1d = len(probs_arr.shape) == 1
@@ -405,7 +416,7 @@ def apply_calibration(probs):
 # 4. ANA PIPELINE  (raw → overconf → calibrate → safe_cap → normalize)
 # ─────────────────────────────────────────────────────────────────────────────
 
-def apply_probability_pipeline(raw_probs: np.ndarray) -> dict:
+def apply_probability_pipeline(raw_probs: np.ndarray, calibrator_model: "CalibratorDict | None" = None) -> dict:
     """
     Tam probability pipeline. Döndürür:
     {
@@ -435,8 +446,8 @@ def apply_probability_pipeline(raw_probs: np.ndarray) -> dict:
 
     # Adım 2: Calibration (sadece güvenilirse)
     cal_used = False
-    if _is_calibration_trustworthy(probs):
-        cal_result = _raw_apply_calibration(probs)
+    if _is_calibration_trustworthy(probs, calibrator_model=calibrator_model):
+        cal_result = _raw_apply_calibration(probs, calibrator_model=calibrator_model)
         if cal_result is not None:
             probs = np.array(cal_result, dtype=np.float64)
             cal_used = True
